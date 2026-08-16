@@ -1,0 +1,46 @@
+{
+  "name": "Assura Nursing Care",
+  "short_name": "Assura",
+  "description": "Professional Nursing, Wherever You Need It. Private home nursing in Bukit Mertajam and nearby areas.",
+  "lang": "en-MY",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#040D1A",
+  "theme_color": "#07182B",
+  "icons": [
+    {
+      "src": "home-nursing-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "home-nursing-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "home-nursing-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a visit",
+      "short_name": "Book",
+      "url": "./book.html",
+      "description": "Go straight to the booking form"
+    },
+    {
+      "name": "WhatsApp us",
+      "short_name": "WhatsApp",
+      "url": "./book.html#booking-form",
+      "description": "Ask a question"
+    }
+  ]
+}
