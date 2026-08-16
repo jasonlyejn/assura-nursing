@@ -1,6 +1,6 @@
 name = "assura-staff"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = "app/public"
+pages_build_output_dir = "public"
 
 # Bind your D1 database. Create it once, then paste the id here:
 #   wrangler d1 create assura
