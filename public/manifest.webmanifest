@@ -1,0 +1,22 @@
+{
+  "name": "Assura Case Management",
+  "short_name": "Assura Case",
+  "description": "Case management for Assura Nursing Care — intake, cases, MEWS charting, quotes and billing.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1f33",
+  "theme_color": "#0C3054",
+  "lang": "en",
+  "categories": ["medical", "productivity", "business"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Cases", "url": "/?go=cases" },
+    { "name": "Escalations", "url": "/?go=escalations" }
+  ]
+}

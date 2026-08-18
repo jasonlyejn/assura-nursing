@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fix the database — Assura</title>
+<style>
+  :root{--navy:#0C3054;--blue:#186084;--line:#dbe4ec;--muted:#69809a}
+  *{box-sizing:border-box}
+  body{margin:0;background:#eef3f9;color:var(--navy);font-family:'Helvetica Neue',Arial,sans-serif;padding:18px}
+  .wrap{max-width:560px;margin:0 auto}
+  .card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 22px rgba(12,48,84,.09);margin-bottom:14px}
+  h1{font-size:1.2rem;margin:0 0 4px}
+  p.sub{color:var(--muted);font-size:.88rem;margin:0 0 14px;line-height:1.5}
+  input{width:100%;font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;margin:8px 0}
+  button{width:100%;padding:14px;border:none;border-radius:10px;background:var(--navy);color:#fff;
+    font:inherit;font-weight:800;cursor:pointer;margin-top:8px}
+  button.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  button:disabled{opacity:.5}
+  .row{display:flex;gap:9px;padding:7px 0;border-bottom:1px solid var(--line);font-size:.88rem;align-items:flex-start}
+  .row:last-child{border-bottom:none}
+  .ok{color:#1d6b3f;font-weight:800}
+  .bad{color:#c0392b;font-weight:800}
+  .why{display:block;color:var(--muted);font-size:.76rem}
+  .msg{padding:11px 13px;border-radius:10px;font-size:.86rem;margin:10px 0;line-height:1.5}
+  .msg.good{background:#e8f3ec;color:#1d6b3f}
+  .msg.warn{background:#fdf0e3;color:#a9611b}
+  .msg.err{background:#fde2e2;color:#c0392b}
+  a{color:var(--blue)}
+</style>
+</head>
+<body><div class="wrap">
+
+<div class="card">
+  <h1>Fix the database</h1>
+  <p class="sub">Use this if the app shows <b>Request failed (500)</b>.
+    It checks what the app needs, adds anything missing, and is safe to run any time.</p>
+  <div id="signin">
+    <input id="pin" type="password" inputmode="numeric" placeholder="Your admin PIN" autocomplete="off">
+    <button id="btnIn">Sign in</button>
+  </div>
+  <div id="tools" style="display:none">
+    <button id="btnFix">🔧 Update database</button>
+    <button class="alt" id="btnCheck">Run the check again</button>
+    <button class="alt" id="btnApp">← Back to the app</button>
+  </div>
+  <div id="msg"></div>
+</div>
+
+<div class="card" id="results" style="display:none">
+  <h1 style="font-size:1rem">What the app needs</h1>
+  <div id="list"></div>
+</div>
+
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const say = (text, kind) => { $('msg').innerHTML = '<div class="msg ' + (kind||'good') + '">' + text + '</div>'; };
+
+async function api(path, method) {
+  const r = await fetch(path, { method: method || 'GET', credentials: 'include',
+    headers: { 'content-type': 'application/json' } });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.error || ('Request failed (' + r.status + ')'));
+  return d;
+}
+
+$('btnIn').onclick = async () => {
+  const pin = $('pin').value.trim();
+  if (!pin) return;
+  $('btnIn').disabled = true;
+  try {
+    const r = await fetch('/api/auth/login', { method: 'POST', credentials: 'include',
+      headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pin }) });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(d.error || 'Could not sign in');
+    $('signin').style.display = 'none';
+    $('tools').style.display = 'block';
+    say('Signed in as <b>' + (d.user ? d.user.name : 'admin') + '</b>. Checking…');
+    check();
+  } catch (e) {
+    say(e.message + '<br><br>If this says <i>no such column</i>, the database is behind the app — '
+      + 'that is exactly what the button below fixes, but you must be able to sign in first. '
+      + 'Tell Claude what this message says.', 'err');
+    $('btnIn').disabled = false;
+  }
+};
+
+async function check() {
+  try {
+    const d = await api('/api/diag');
+    $('results').style.display = 'block';
+    $('list').innerHTML =
+      d.broken.map((b) => '<div class="row"><span class="bad">✗</span><span><b>' + b.page
+        + '</b><span class="why">' + b.problem + '</span></span></div>').join('')
+      + d.ok.map((o) => '<div class="row"><span class="ok">✓</span><span>' + o + '</span></div>').join('');
+    if (d.healthy) say('✅ Everything is in place. The app should work — reload it.', 'good');
+    else say('⚠ ' + d.broken.length + ' thing(s) missing. Press <b>Update database</b>.', 'warn');
+  } catch (e) { say(e.message, 'err'); }
+}
+
+$('btnCheck').onclick = check;
+
+$('btnFix').onclick = async () => {
+  $('btnFix').disabled = true;
+  say('Updating…');
+  try {
+    const d = await api('/api/migrate', 'POST');
+    say('Done — ' + d.summary
+      + (d.applied.length ? '<br><br>Added: ' + d.applied.join(', ') : '')
+      + (d.failed.length ? '<br><br><b>Could not do:</b> ' + d.failed.join('; ') : ''),
+      d.failed.length ? 'warn' : 'good');
+    check();
+  } catch (e) { say(e.message, 'err'); }
+  $('btnFix').disabled = false;
+};
+
+$('btnApp').onclick = () => { location.href = '/'; };
+
+// already signed in?
+api('/api/auth/me').then((d) => {
+  if (d.authed && d.user && d.user.role === 'admin') {
+    $('signin').style.display = 'none';
+    $('tools').style.display = 'block';
+    check();
+  }
+}).catch(() => {});
+</script>
+</body>
+</html>

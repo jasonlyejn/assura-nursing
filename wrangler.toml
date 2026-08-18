@@ -1,0 +1,9 @@
+name = "assura-staff"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "public"
+
+# Your D1 database — already filled in.
+[[d1_databases]]
+binding = "DB"
+database_name = "assura"
+database_id = "4cdc4847-e173-48b9-8afb-5cfe13f325f2"

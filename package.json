@@ -1,0 +1,22 @@
+{
+  "name": "assura-nursing-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler pages dev public",
+    "deploy": "npm run build && wrangler pages deploy public",
+    "db:schema": "wrangler d1 execute assura --file=db/schema.sql",
+    "db:seed": "wrangler d1 execute assura --file=db/seed.sql",
+    "db:schema:local": "wrangler d1 execute assura --local --file=db/schema.sql",
+    "db:seed:local": "wrangler d1 execute assura --local --file=db/seed.sql"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1",
+    "wrangler": "^3.114.17"
+  }
+}
