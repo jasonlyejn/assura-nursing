@@ -430,3 +430,22 @@ table.mar tr.stopped{opacity:.45}
 .permlist .chk span{display:block}
 .permlist .chk b{display:block;font-size:.86rem}
 .permlist .chk em{font-style:normal;font-size:.74rem;color:var(--muted)}
+
+/* --- MAR: standard hospital chart look ---------------------------------- */
+.marhead{display:flex;gap:0;border:2px solid var(--navy);border-radius:6px;overflow:hidden;margin:8px 0 12px}
+.marhead .mh1{flex:1;padding:8px 12px;border-right:1px solid var(--line);min-width:0}
+.marhead .mh1:last-child{border-right:none}
+.marhead .lbl{display:block;font-size:.6rem;font-weight:800;letter-spacing:1px;color:var(--muted)}
+.marhead .mh1 b{font-size:.92rem;text-transform:uppercase}
+.marhead .allergy{background:#fde2e2}
+.marhead .allergy b,.marhead .allergy .lbl{color:#c0392b}
+table.mar .mnum{width:34px;background:#f6f9fc;font-weight:800;color:var(--muted);vertical-align:top}
+table.mar .mname b{text-transform:uppercase;letter-spacing:.2px}
+table.mar .mmeta i{font-style:normal;display:inline-block;background:#eef4fb;color:var(--blue-dark);
+  border-radius:4px;padding:1px 6px;margin:2px 4px 0 0;font-size:.66rem;font-weight:700;text-transform:uppercase}
+.marlegend{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px;padding:9px 12px;
+  border:1px solid var(--line);border-radius:8px;background:#fbfdff;font-size:.74rem;color:var(--muted)}
+.marlegend b{font-size:.64rem;letter-spacing:1px;color:var(--navy)}
+.marlegend i{font-style:normal;font-weight:800;color:var(--blue-dark);background:#eef4fb;
+  border-radius:4px;padding:1px 6px;margin-right:4px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.marlegend em{flex-basis:100%;font-style:normal;font-size:.72rem}

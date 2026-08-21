@@ -78,26 +78,29 @@ export default function Meds({ caseObj, me, onBack }) {
   return (
     <div className="card">
       <button className="link" onClick={onBack}>← Back</button>
-      <h2>Medication chart {pt.name ? '— ' + pt.name : ''}</h2>
-      <div className="medhead">
-        <span><b>Name:</b> {pt.name || '—'}</span>
-        <span className={pt.allergies ? 'allergy' : ''}>
-          <b>Allergies:</b> {pt.allergies || 'None known'}</span>
+      <h2>Medication Administration Record</h2>
+      <div className="marhead">
+        <div className="mh1"><span className="lbl">PATIENT</span><b>{pt.name || '—'}</b></div>
+        <div className={'mh1 ' + (pt.allergies ? 'allergy' : '')}>
+          <span className="lbl">ALLERGIES</span>
+          <b>{pt.allergies || 'NIL KNOWN'}</b></div>
+        <div className="mh1"><span className="lbl">CHART</span>
+          <b>{tab === 'regular' ? 'REGULAR' : tab === 'stat' ? 'STAT / ONCE ONLY' : 'PRN / WHEN REQUIRED'}</b></div>
       </div>
       {status && <p className="status">{status}</p>}
 
       <div className="signbar">
         <span className="sigchip">{myInitials}</span>
-        <span className="muted">Doses you sign are recorded under your initials.</span>
+        <span className="muted">Doses are recorded under your initials.</span>
       </div>
 
       <div className="tabs">
         <button className={tab === 'regular' ? 'on' : ''} onClick={() => { setTab('regular'); setF(blank('regular')); }}>
           Regular</button>
         <button className={tab === 'stat' ? 'on' : ''} onClick={() => { setTab('stat'); setF(blank('stat')); }}>
-          STAT</button>
+          STAT / Once only</button>
         <button className={tab === 'prn' ? 'on' : ''} onClick={() => { setTab('prn'); setF(blank('prn')); }}>
-          PRN (when necessary)</button>
+          PRN / When required</button>
       </div>
 
       {tab === 'regular' && (
@@ -110,13 +113,13 @@ export default function Meds({ caseObj, me, onBack }) {
       )}
 
       <button className="ghost wide" onClick={() => setAdding(!adding)}>
-        {adding ? '▾ Cancel' : '＋ Add a medication'}</button>
+        {adding ? '▾ Cancel' : '＋ Add medication'}</button>
 
       {adding && (
         <div className="hoform">
           <div className="f"><label>Medication</label>
             <input value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })}
-              placeholder="e.g. Metformin 二甲双胍" /></div>
+              placeholder="e.g. Metformin" /></div>
           <div className="grid3">
             <div className="f"><label>Dose</label>
               <input value={f.dose} onChange={(e) => setF({ ...f, dose: e.target.value })} placeholder="500mg" /></div>
@@ -163,19 +166,23 @@ export default function Meds({ caseObj, me, onBack }) {
         <div className="rosgrid marwrap">
           <table className="mar">
             <thead><tr>
-              <th className="mname">Medication</th><th className="mslot">Time</th>
+              <th className="mnum">NO</th><th className="mname">PRESCRIBED MEDICATION</th><th className="mslot">TIME</th>
               {days.map((d, i) => <th key={d}><span>{DAYS[i]}</span>{fmt(d)}</th>)}
             </tr></thead>
             <tbody>
-              {list.map((m) => {
+              {list.map((m, mi) => {
                 const slots = (m.times || '').split(',').filter(Boolean);
                 const rows = slots.length ? slots : ['DOSE'];
                 return rows.map((slot, si) => (
                   <tr key={m.id + slot} className={m.active ? '' : 'stopped'}>
+                    {si === 0 && <td className="mnum" rowSpan={rows.length}>{mi + 1}</td>}
                     {si === 0 && (
                       <td className="mname" rowSpan={rows.length}>
                         <b>{m.name}</b>
-                        <span className="mmeta">{[m.dose, m.route, m.frequency].filter(Boolean).join(' · ')}</span>
+                        <span className="mmeta">
+                          {m.dose ? <i>{m.dose}</i> : null}
+                          {m.route ? <i>{m.route}</i> : null}
+                          {m.frequency ? <i>{m.frequency}</i> : null}</span>
                         {m.notes ? <span className="mnote">{m.notes}</span> : null}
                         <button className="link xs" onClick={() => stopMed(m)}>
                           {m.active ? 'stop' : 'resume'}</button>
@@ -239,8 +246,15 @@ export default function Meds({ caseObj, me, onBack }) {
         );
       })}
 
-      <p className="hint">Tap a box to sign. Tap again to change it: initials = given,
-        R = refused, O = omitted, X = not available, S = self-administered.</p>
+      <div className="marlegend">
+        <b>CODES</b>
+        <span><i>AB</i> initials = administered</span>
+        <span><i>R</i> refused</span>
+        <span><i>O</i> omitted</span>
+        <span><i>X</i> not available</span>
+        <span><i>S</i> self-administered</span>
+        <em>Tap a box to sign. Tap again to change the code.</em>
+      </div>
     </div>
   );
 }
