@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../api.js';
+import { itemIcon } from '../itemIcon.js';
 
 const UNIT = { procedure: 'visit', session: 'session', hour: 'hour', day: 'day',
                shift: 'shift', tiered: 'hour', week: 'week' };
@@ -93,7 +94,7 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
     }
     if (note.trim()) { L.push(''); L.push(note.trim()); }
     L.push('');
-    L.push('Reply *YES* to confirm and we will arrange your nurse. 回复 *YES* 即可安排护士。');
+    L.push('Reply *YES* to confirm and we will arrange your nurse or caregiver. 回复 *YES* 即可为您安排专业护士或护理人员。');
     L.push('');
     L.push('Assura Nursing Care · assuranursing.com');
     return L.join('\n');
@@ -144,12 +145,38 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
     } catch (e) { flash(e.message); }
   }
 
+  async function broadcastJob() {
+    if (!c) return;
+    const clientPay = total;
+    const commPct = 20;
+    const nurseWage = Math.round(clientPay * 0.8 * 100) / 100;
+    const title = `${c.care_type === 'procedure' ? 'Procedure' : 'Home Care'} · ${c.name}`;
+    const area = (c.address || '').split(',').slice(-2).join(', ').trim() || 'Penang';
+    try {
+      await api.createBroadcast({
+        case_id: caseId,
+        title,
+        area,
+        care_type: lines.map((l) => l.label).join(', ') || 'Home Nursing',
+        schedule: isInv ? 'Active Care Schedule' : 'Quoted Schedule',
+        client_payment: clientPay,
+        commission_pct: commPct,
+        custom_nurse_wage: nurseWage,
+        notes: note || 'Follow clinical nursing SOP.',
+      });
+      flash(`✓ Broadcasted to team! Nurse Payout: RM ${nurseWage.toFixed(2)} (Client: RM ${clientPay.toFixed(2)} - 20% Comm)`);
+    } catch (e) {
+      flash(e.message);
+    }
+  }
+
   const needle = q.trim().toLowerCase();
   const itemHits = needle
     ? items.filter((i) => i.prepare_by !== 'family' &&
         ((i.code || '').toLowerCase().includes(needle) ||
          (i.name || '').toLowerCase().includes(needle) ||
-         (i.brand || '').toLowerCase().includes(needle))).slice(0, 12)
+         (i.brand || '').toLowerCase().includes(needle) ||
+         (i.size || '').toLowerCase().includes(needle))).slice(0, 16)
     : [];
 
   return (
@@ -175,14 +202,24 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
         </div>
       ))}
 
-      <h3 className="qh">Supplies (optional)</h3>
-      <input className="search" placeholder="🔍 Search an item to add… e.g. Mepilex, Fr16, gauze"
+      <h3 className="qh">Supplies & Consumables (optional)</h3>
+      <input className="search" placeholder="🔍 Search item… e.g. Terumo, 30G, 16Fr, Silicone, Aquacel, Mepilex"
         value={q} onChange={(e) => setQ(e.target.value)} />
       {itemHits.map((it) => (
-        <div className="row qrow" key={it.id}>
-          <div className="row-main">
+        <div className="row qrow" key={it.id} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          {it.image ? (
+            <img src={it.image} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '6px', flex: '0 0 auto' }} />
+          ) : (
+            <span style={{ width: '38px', height: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eef6ff', borderRadius: '6px', flex: '0 0 auto' }}
+              dangerouslySetInnerHTML={{ __html: itemIcon(it) }} />
+          )}
+          <div className="row-main" style={{ flex: 1, minWidth: 0 }}>
             <b>{it.name}</b>
-            <span className="rate">{it.code} · {it.size || it.uom} · RM{it.price}</span>
+            <div className="meta" style={{ fontSize: '0.76rem', color: 'var(--muted)', display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '2px' }}>
+              {it.brand && <span style={{ color: 'var(--blue-dark)', fontWeight: 700 }}>{it.brand}</span>}
+              {it.size && <span style={{ background: '#eaf2fb', color: '#0d3a54', padding: '1px 6px', borderRadius: '4px', fontWeight: 600 }}>{it.size}</span>}
+              <span>RM{it.price} / {it.uom || 'EACH'}</span>
+            </div>
           </div>
           <input className="num" type="number" min="0" placeholder="0"
             value={pickedItems[it.id] || ''}
@@ -192,8 +229,12 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
       {Object.entries(pickedItems).filter(([, v]) => num(v) > 0).map(([id, v]) => {
         const it = items.find((x) => x.id === id); if (!it) return null;
         return <div className="row qrow chosen" key={'c' + id}>
-          <div className="row-main"><b>{it.name}</b><span className="rate">added</span></div>
-          <input className="num" type="number" min="0" value={v}
+          <div className="row-main">
+            <b>{it.name}</b>
+            <span className="rate">{it.size || it.brand || it.code} · RM{it.price} × {v} = {money(num(it.price) * num(v))}</span>
+          </div>
+          <input className="num" type="number" min="0"
+            value={pickedItems[id] || ''}
             onChange={(e) => setPickedItems({ ...pickedItems, [id]: e.target.value })} />
         </div>;
       })}
@@ -250,6 +291,9 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
           : <>
               <button className="pri" onClick={sendWhatsApp} disabled={!lines.length}>
                 💬 Send quote on WhatsApp</button>
+              <button className="ghost" onClick={broadcastJob} disabled={!lines.length} title="Broadcast job notification to all nurses (80% wage / 20% company commission)">
+                📢 Broadcast to Nurses (RM {(total * 0.8).toFixed(2)})
+              </button>
               <button className="ghost" onClick={saveQuote} disabled={!lines.length}>Save only</button>
             </>}
       </div>

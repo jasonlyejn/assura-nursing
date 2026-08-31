@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../api.js';
+import LangSelector from '../components/LangSelector.jsx';
+import { useI18n } from '../i18n.js';
 
 const GROUPS = [
   ['About you', [['name', 'Full name'], ['ic', 'IC / passport no'],
@@ -102,6 +104,14 @@ export default function MyProfile({ onDone }) {
         </div>
       )}
 
+      <div style={{ background: '#f8fafc', border: '1px solid var(--line)', borderRadius: '12px', padding: '14px', margin: '14px 0' }}>
+        <h3 style={{ margin: '0 0 4px', fontSize: '0.95rem', color: 'var(--navy)' }}>🌐 Preferred Interface Language (界面首选语言)</h3>
+        <p className="muted" style={{ margin: '0 0 10px', fontSize: '0.8rem' }}>
+          Select your preferred language for clinical records, navigation, and notifications.
+        </p>
+        <LangSelector />
+      </div>
+
       {GROUPS.map(([g, fields]) => (
         <div key={g}>
           <h3 className="qh">{g}</h3>
@@ -139,6 +149,41 @@ export default function MyProfile({ onDone }) {
           onChange={(e) => setPin({ ...pin, b: e.target.value.replace(/\D/g, '') })} /></div>
       <button className="ghost wide" onClick={changePin}
         disabled={busy || !pin.current || pin.a.length < 4}>Change PIN</button>
+
+      <div style={{ marginTop: '20px', padding: '14px', background: '#f8fafc', border: '1.5px solid #cbd5e1', borderRadius: '10px' }}>
+        <h4 style={{ margin: '0 0 6px', color: '#0d3a54', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          📱 Download Assura Clinical Apps (客户端下载)
+        </h4>
+        <p className="muted" style={{ margin: '0 0 10px', fontSize: '0.78rem' }}>
+          Install Assura directly onto your Android phone or Windows PC for fast access, push updates, and offline resilience.
+        </p>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          <a
+            href="/AssuraStaff-Windows.zip"
+            download="AssuraStaff-Windows.zip"
+            className="btn ghost xs"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
+          >
+            💻 Download Windows App (.ZIP 绿色版)
+          </a>
+          <a
+            href="/AssuraStaff.exe"
+            download="AssuraStaff.exe"
+            className="btn ghost xs"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
+          >
+            🖥️ Download Windows (.EXE)
+          </a>
+          <a
+            href="/AssuraStaff.apk"
+            download="AssuraStaff.apk"
+            className="btn ghost xs"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
+          >
+            📱 Download Android Phone (.APK)
+          </a>
+        </div>
+      </div>
 
       {history.length > 0 && <>
         <h3 className="qh">Past requests</h3>

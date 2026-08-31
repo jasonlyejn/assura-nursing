@@ -11,6 +11,18 @@ const BASES = [
   ['week', 'per week 每周'],
 ];
 
+const BRANDS = [
+  'Terumo', 'Terumo Agani', 'BD', 'BD Venflon', 'BD Ultra-Fine', 'BD PosiFlush',
+  'Mölnlycke Mepilex', 'ConvaTec Aquacel', 'ConvaTec Kaltostat', 'ConvaTec Duoderm',
+  'ConvaTec Sur-Fit', 'Teleflex Rusch', '3M', '3M Tegaderm', '3M Micropore',
+  '3M Transpore', '3M Coban', 'Smith & Nephew', 'B. Braun', 'Coloplast',
+  'Coloplast SenSura', 'Coloplast Brava', 'Hollister', 'Accu-Chek', 'Ascensia Contour',
+  'Ain Medicare', 'Urgo Medical', 'BSN Medical', 'Top Glove', 'Hartalega',
+  'Ansell Gammex', 'Bode Sterillium', 'Betadine', 'CaviWipes / Clinell', 'Medtronic Shiley',
+];
+
+const UOMS = ['EACH', 'PACK', 'SET', 'BOTTLE', 'ROLL', 'TUBE', 'VIAL', 'TIN', 'PAIR', 'BOX', 'UNIT'];
+
 export default function Rates() {
   const [tab, setTab] = useState('services');
   const [services, setServices] = useState(null);
@@ -20,8 +32,12 @@ export default function Rates() {
   const [q, setQ] = useState('');
   const [cat, setCat] = useState('');
   const [adding, setAdding] = useState(false);
-  const [nu, setNu] = useState({ code: '', category: '', name: '', brand: '', size: '',
-                                 uom: 'EACH', price: '', prepare_by: 'staff', order_ahead: false });
+  const [editingId, setEditingId] = useState(null);
+  const [bulkEdit, setBulkEdit] = useState(false);
+  const [nu, setNu] = useState({
+    code: '', category: '', name: '', brand: '', size: '',
+    uom: 'EACH', price: '', prepare_by: 'staff', order_ahead: false, spec: '',
+  });
 
   const cats = [...new Set((items || []).map((i) => i.category || 'UNCATEGORISED'))].sort();
   const needle = q.trim().toLowerCase();
@@ -30,7 +46,8 @@ export default function Rates() {
     (!needle || (i.code || '').toLowerCase().includes(needle)
              || (i.name || '').toLowerCase().includes(needle)
              || (i.brand || '').toLowerCase().includes(needle)
-             || (i.size || '').toLowerCase().includes(needle)));
+             || (i.size || '').toLowerCase().includes(needle)
+             || (i.category || '').toLowerCase().includes(needle)));
   const groups = [...shown.reduce((m, i) => {
     const k = i.category || 'UNCATEGORISED';
     if (!m.has(k)) m.set(k, []);
@@ -88,7 +105,7 @@ export default function Rates() {
       await api.addItem(nu);
       const d = await api.getItems();
       setItems(d.items);
-      setNu({ code: '', category: '', name: '', brand: '', size: '', uom: 'EACH', price: '', prepare_by: 'staff', order_ahead: false });
+      setNu({ code: '', category: '', name: '', brand: '', size: '', uom: 'EACH', price: '', prepare_by: 'staff', order_ahead: false, spec: '' });
       setAdding(false);
       flash('✓ Item added');
     } catch (e) { flash(e.message); }
@@ -114,7 +131,7 @@ export default function Rates() {
     catch (e) { flash(e.message); }
   }
   async function saveItems() {
-    try { await api.putItems(items); flash('✓ Items saved'); }
+    try { await api.putItems(items); flash('✓ All items, brands & sizes saved successfully'); }
     catch (e) { flash(e.message); }
   }
   async function saveSettings() {
@@ -135,6 +152,17 @@ export default function Rates() {
 
       {status && <p className="status">{status}</p>}
 
+      {/* Datalists for Quick Autocompletion */}
+      <datalist id="brandlist">
+        {BRANDS.map((b) => <option key={b} value={b} />)}
+      </datalist>
+      <datalist id="uomlist">
+        {UOMS.map((u) => <option key={u} value={u} />)}
+      </datalist>
+      <datalist id="catlist">
+        {cats.map((c) => <option key={c} value={c} />)}
+      </datalist>
+
       {tab === 'services' && (services
         ? <>
             {services.map((s) => (
@@ -142,6 +170,9 @@ export default function Rates() {
                 <div className="row-main">
                   <b>{s.name_en}</b><span className="zh">{s.name_zh}</span>
                 </div>
+                <label className="chk" title="Check if this rate is a starting rate / quoted upon assessment" style={{ fontSize: '0.78rem', color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <input type="checkbox" checked={!!s.plus} onChange={(e) => setSvc(s.id, { plus: e.target.checked ? 1 : 0 })} /> from/起
+                </label>
                 <select value={s.basis} onChange={(e) => setSvc(s.id, { basis: e.target.value })}>
                   {BASES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
                 </select>
@@ -160,51 +191,60 @@ export default function Rates() {
 
       {tab === 'items' && (items
         ? <>
-            <p className="hint">Each item has a code, brand, size and unit. Search any of them. Prices are starting points — edit to match your supplier. Tap a picture to snap a photo of the real product.
-               Family-supplied items are never charged.</p>
+            <p className="hint">
+              Each item has an editable code, brand, size, unit and price. Tap <b>"✏️ Edit Brand &amp; Size"</b> to customize, or tap the picture to upload a product photo.
+            </p>
 
-            <div className="itembar">
-              <input className="search" placeholder="🔍 Search code, name, brand or size…  e.g. WND001 / Mepilex / Fr16"
-                value={q} onChange={(e) => setQ(e.target.value)} />
-              <select value={cat} onChange={(e) => setCat(e.target.value)}>
+            <div className="itembar" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '12px' }}>
+              <input className="search" placeholder="🔍 Search code, name, brand or size…  e.g. Terumo / Mepilex / Fr16 / 21G"
+                value={q} onChange={(e) => setQ(e.target.value)} style={{ flex: '1 1 200px' }} />
+              <select value={cat} onChange={(e) => setCat(e.target.value)} style={{ flex: '0 0 auto' }}>
                 <option value="">All categories ({items.length})</option>
                 {cats.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
-              <button className="ghost" onClick={() => setAdding((v) => !v)}>
-                {adding ? 'Cancel' : '＋ New item'}</button>
+              <button
+                className={bulkEdit ? 'pri sm' : 'ghost sm'}
+                onClick={() => setBulkEdit(!bulkEdit)}
+                style={{ flex: '0 0 auto', margin: 0 }}
+              >
+                {bulkEdit ? '✓ Done Editing Brands' : '✏️ Edit All Brands & Sizes'}
+              </button>
+              <button className="ghost sm" onClick={() => setAdding((v) => !v)} style={{ flex: '0 0 auto', margin: 0 }}>
+                {adding ? 'Cancel' : '＋ New item'}
+              </button>
             </div>
 
             {adding && (
-              <div className="newitem">
+              <div className="newitem" style={{ background: '#f8fafc', border: '1.5px solid var(--blue)', borderRadius: '12px', padding: '14px', marginBottom: '16px' }}>
+                <h3 style={{ margin: '0 0 10px', fontSize: '1rem', color: 'var(--navy)' }}>＋ Add New Consumable Item</h3>
                 <div className="grid3">
                   <div className="f"><label>Item code</label>
-                    <input value={nu.code} placeholder="e.g. WND012"
+                    <input value={nu.code} placeholder="e.g. WND025"
                       onChange={(e) => setNu({ ...nu, code: e.target.value.toUpperCase() })} /></div>
                   <div className="f"><label>Category</label>
-                    <input list="catlist" value={nu.category} placeholder="e.g. WOUND CARE"
-                      onChange={(e) => setNu({ ...nu, category: e.target.value.toUpperCase() })} />
-                    <datalist id="catlist">{cats.map((c) => <option key={c} value={c} />)}</datalist></div>
-                  <div className="f"><label>Unit</label>
+                    <input list="catlist" value={nu.category} placeholder="e.g. ADVANCED WOUND CARE"
+                      onChange={(e) => setNu({ ...nu, category: e.target.value.toUpperCase() })} /></div>
+                  <div className="f"><label>Unit (UOM)</label>
                     <input list="uomlist" value={nu.uom}
-                      onChange={(e) => setNu({ ...nu, uom: e.target.value.toUpperCase() })} />
-                    <datalist id="uomlist">
-                      {['EACH','PACK','SET','BOTTLE','ROLL','TUBE','VIAL','TIN','PAIR','BOX','UNIT']
-                        .map((u) => <option key={u} value={u} />)}</datalist></div>
+                      onChange={(e) => setNu({ ...nu, uom: e.target.value.toUpperCase() })} /></div>
                 </div>
-                <div className="f"><label>Item name (English 中文)</label>
-                  <input value={nu.name} placeholder="e.g. Silver dressing 银离子敷料"
+                <div className="f"><label>Item Name (English &amp; 中文)</label>
+                  <input value={nu.name} placeholder="e.g. Aquacel Foam Adhesive 银离子泡沫敷料"
                     onChange={(e) => setNu({ ...nu, name: e.target.value })} /></div>
                 <div className="grid2">
-                  <div className="f"><label>Brand (optional)</label>
-                    <input value={nu.brand} placeholder="e.g. Mepilex"
+                  <div className="f"><label>Brand</label>
+                    <input list="brandlist" value={nu.brand} placeholder="e.g. ConvaTec / Mölnlycke / Terumo"
                       onChange={(e) => setNu({ ...nu, brand: e.target.value })} /></div>
-                  <div className="f"><label>Size (optional)</label>
-                    <input value={nu.size} placeholder="e.g. 10x10cm / Fr16 / 22G"
+                  <div className="f"><label>Size / French / Gauge</label>
+                    <input value={nu.size} placeholder="e.g. 10x10cm / Fr16 / 21G / 500ml"
                       onChange={(e) => setNu({ ...nu, size: e.target.value })} /></div>
                 </div>
+                <div className="f"><label>Clinical Specification / Notes (Optional)</label>
+                  <input value={nu.spec} placeholder="e.g. For exuding wounds, antibacterial barrier"
+                    onChange={(e) => setNu({ ...nu, spec: e.target.value })} /></div>
                 <div className="grid3">
                   <div className="f"><label>Price (RM)</label>
-                    <input type="number" value={nu.price}
+                    <input type="number" value={nu.price} placeholder="0.00"
                       onChange={(e) => setNu({ ...nu, price: e.target.value })} /></div>
                   <div className="f"><label>Supplied by</label>
                     <select value={nu.prepare_by}
@@ -217,56 +257,159 @@ export default function Rates() {
                       <option value="0">No</option><option value="1">Yes</option>
                     </select></div>
                 </div>
-                <button className="pri" onClick={addItem}>Add item</button>
+                <button className="pri wide" onClick={addItem}>Add item to catalog</button>
               </div>
             )}
 
             {shown.length === 0 && <p className="muted">No item matches that.</p>}
 
             {groups.map(([g, list]) => (
-              <div key={g}>
-                <div className="catrow">{g} <span>({list.length})</span></div>
-                {list.map((it) => (
-                  <div className={'row item' + (it.active === 0 ? ' off' : '')} key={it.id}>
-                    <button className="pic" title={it.image ? 'Change photo' : 'Add a photo of this item'}
-                      onClick={() => pickPhoto(it.id)}>
-                      {it.image
-                        ? <img src={it.image} alt="" />
-                        : <span className="ico" dangerouslySetInnerHTML={{ __html: itemIcon(it) }} />}
-                      <span className="cam">{it.image ? '↻' : '＋'}</span>
-                    </button>
-                    {it.image && <button className="rmpic" title="Remove photo"
-                      onClick={() => clearPhoto(it.id)}>✕</button>}
-                    <span className="code">{it.code || '—'}</span>
-                    <div className="row-main"><b>{it.name}</b>
-                      <span className="meta">
-                        {it.brand ? <em className="brand">{it.brand}</em> : null}
-                        {it.size ? <em className="size">{it.size}</em> : null}
-                      </span>
-                      {it.spec ? <span className="spec">{it.spec}</span> : null}</div>
-                    <span className="uom">{it.uom || 'EACH'}</span>
-                    <span className="rm">RM</span>
-                    <input className="num" type="number" value={it.price}
-                      onChange={(e) => setItem(it.id, { price: e.target.value })} />
-                    <div className="seg">
-                      <button className={it.prepare_by !== 'family' ? 'on' : ''}
-                        onClick={() => setItem(it.id, { prepare_by: 'staff' })}>Staff</button>
-                      <button className={it.prepare_by === 'family' ? 'on' : ''}
-                        onClick={() => setItem(it.id, { prepare_by: 'family' })}>Family</button>
+              <div key={g} style={{ marginBottom: '18px' }}>
+                <div className="catrow" style={{ fontSize: '0.86rem', fontWeight: 800, color: 'var(--blue-dark)', borderBottom: '2px solid var(--line)', paddingBottom: '4px', marginBottom: '8px' }}>
+                  {g} <span>({list.length})</span>
+                </div>
+                {list.map((it) => {
+                  const isEditing = editingId === it.id || bulkEdit;
+                  return (
+                    <div className={'item-card' + (it.active === 0 ? ' off' : '')} key={it.id}>
+                      {/* Top Row: Thumbnail + Code + Name + Edit Toggle */}
+                      <div className="item-head">
+                        <div className="item-thumb-wrap">
+                          <button className="pic-btn" title={it.image ? 'Change photo' : 'Add photo'}
+                            onClick={() => pickPhoto(it.id)}>
+                            {it.image
+                              ? <img src={it.image} alt="" className="item-img" />
+                              : <span className="ico" dangerouslySetInnerHTML={{ __html: itemIcon(it) }} />}
+                            <span className="cam-badge">{it.image ? '↻' : '＋'}</span>
+                          </button>
+                          {it.image && <button className="rmpic-btn" title="Remove photo"
+                            onClick={() => clearPhoto(it.id)}>✕</button>}
+                        </div>
+                        
+                        <div className="item-info">
+                          <div className="item-title-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                            <div style={{ flex: 1 }}>
+                              <span className="item-code">{it.code || '—'}</span>
+                              {!isEditing ? (
+                                <b className="item-name" style={{ marginLeft: '6px' }}>{it.name}</b>
+                              ) : (
+                                <input
+                                  value={it.name}
+                                  onChange={(e) => setItem(it.id, { name: e.target.value })}
+                                  style={{ marginTop: '4px', width: '100%', fontSize: '0.88rem', fontWeight: 700 }}
+                                  placeholder="Item Name"
+                                />
+                              )}
+                            </div>
+                            {!bulkEdit && (
+                              <button
+                                className="link xs"
+                                onClick={() => setEditingId(editingId === it.id ? null : it.id)}
+                                style={{ color: 'var(--blue)', fontWeight: 700, padding: '2px 6px', margin: 0 }}
+                              >
+                                {editingId === it.id ? '✓ Done' : '✏️ Edit'}
+                              </button>
+                            )}
+                          </div>
+
+                          {/* Brand & Size Chips (Display Mode) */}
+                          {!isEditing ? (
+                            <div className="item-chips">
+                              {it.brand && (
+                                <span className="chip-brand" title="Tap Edit to change brand">
+                                  {it.brand}
+                                </span>
+                              )}
+                              {it.size && (
+                                <span className="chip-size" title="Tap Edit to change size">
+                                  {it.size}
+                                </span>
+                              )}
+                              {!it.brand && !it.size && (
+                                <span style={{ fontSize: '0.72rem', color: 'var(--muted)', fontStyle: 'italic' }}>
+                                  No brand/size specified (Tap ✏️ Edit)
+                                </span>
+                              )}
+                            </div>
+                          ) : (
+                            /* Inline Brand & Size Inputs (Edit Mode) */
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '6px', marginTop: '6px' }}>
+                              <div>
+                                <label style={{ fontSize: '0.68rem', fontWeight: 700, color: 'var(--muted)', display: 'block' }}>Brand (品牌)</label>
+                                <input
+                                  list="brandlist"
+                                  value={it.brand || ''}
+                                  placeholder="e.g. Terumo / 3M"
+                                  onChange={(e) => setItem(it.id, { brand: e.target.value })}
+                                  style={{ fontSize: '0.8rem', padding: '4px 6px' }}
+                                />
+                              </div>
+                              <div>
+                                <label style={{ fontSize: '0.68rem', fontWeight: 700, color: 'var(--muted)', display: 'block' }}>Size (规格/尺寸)</label>
+                                <input
+                                  value={it.size || ''}
+                                  placeholder="e.g. 10x10cm / Fr16"
+                                  onChange={(e) => setItem(it.id, { size: e.target.value })}
+                                  style={{ fontSize: '0.8rem', padding: '4px 6px' }}
+                                />
+                              </div>
+                              <div>
+                                <label style={{ fontSize: '0.68rem', fontWeight: 700, color: 'var(--muted)', display: 'block' }}>Unit (单位)</label>
+                                <input
+                                  list="uomlist"
+                                  value={it.uom || 'EACH'}
+                                  onChange={(e) => setItem(it.id, { uom: e.target.value.toUpperCase() })}
+                                  style={{ fontSize: '0.8rem', padding: '4px 6px' }}
+                                />
+                              </div>
+                              <div>
+                                <label style={{ fontSize: '0.68rem', fontWeight: 700, color: 'var(--muted)', display: 'block' }}>Code (编号)</label>
+                                <input
+                                  value={it.code || ''}
+                                  onChange={(e) => setItem(it.id, { code: e.target.value.toUpperCase() })}
+                                  style={{ fontSize: '0.8rem', padding: '4px 6px' }}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Bottom Controls: Price, UOM, Supplied By, Checkboxes */}
+                      <div className="item-controls">
+                        <div className="price-box">
+                          <span className="uom-tag">{it.uom || 'EACH'}</span>
+                          <span className="rm-tag">RM</span>
+                          <input className="price-input" type="number" step="0.5" value={it.price}
+                            onChange={(e) => setItem(it.id, { price: e.target.value })} />
+                        </div>
+                        <div className="seg-compact">
+                          <button className={it.prepare_by !== 'family' ? 'on' : ''}
+                            onClick={() => setItem(it.id, { prepare_by: 'staff' })}>Staff</button>
+                          <button className={it.prepare_by === 'family' ? 'on' : ''}
+                            onClick={() => setItem(it.id, { prepare_by: 'family' })}>Family</button>
+                        </div>
+                        <div className="item-toggles">
+                          <label className="chk-pill" title="Must be ordered / prepared before the visit">
+                            <input type="checkbox" checked={!!it.order_ahead}
+                              onChange={(e) => setItem(it.id, { order_ahead: e.target.checked })} />
+                            <span>ahead</span>
+                          </label>
+                          <label className="chk-pill" title="Uncheck to hide from billing">
+                            <input type="checkbox" checked={it.active !== 0}
+                              onChange={(e) => setItem(it.id, { active: e.target.checked ? 1 : 0 })} />
+                            <span>on</span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <label className="chk" title="Must be ordered / prepared before the visit">
-                      <input type="checkbox" checked={!!it.order_ahead}
-                        onChange={(e) => setItem(it.id, { order_ahead: e.target.checked })} /> ahead
-                    </label>
-                    <label className="chk" title="Uncheck to hide from billing">
-                      <input type="checkbox" checked={it.active !== 0}
-                        onChange={(e) => setItem(it.id, { active: e.target.checked ? 1 : 0 })} /> on
-                    </label>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             ))}
-            <button className="pri" onClick={saveItems}>Save items</button>
+            <button className="pri" onClick={saveItems} style={{ position: 'sticky', bottom: '12px', zIndex: 10, boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
+              💾 Save All Items, Brands &amp; Sizes
+            </button>
           </>
         : <p className="muted">Loading…</p>)}
 
@@ -278,7 +421,6 @@ export default function Rates() {
               <Field label="Sunday / public holiday (RM)" k="publicHol" s={settings} set={setSettings} />
               <Field label="Free travel radius (km)" k="travelFreeKm" s={settings} set={setSettings} />
               <Field label="Travel beyond that (RM/km)" k="travelPerKm" s={settings} set={setSettings} />
-              <Field label="Long-term deposit (RM)" k="depositLongTerm" s={settings} set={setSettings} />
             </div>
             <button className="pri" onClick={saveSettings}>Save charges</button>
           </>

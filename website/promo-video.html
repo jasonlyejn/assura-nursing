@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assura Nursing Care · Viral Video Studio (With Music & Audio)</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body { background: #070f1e; color: #f8fafc; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    .studio-container { max-width: 960px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .video-wrapper { position: relative; width: 360px; height: 640px; background: #000; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(2,132,199,0.3); border: 2.5px solid #1e3a5f; }
+    canvas { width: 100%; height: 100%; display: block; }
+    .controls { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; max-width: 600px; }
+    .btn { padding: 12px 20px; border-radius: 10px; font-weight: 800; cursor: pointer; border: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: all 0.15s; }
+    .btn:active { transform: scale(0.96); }
+    .btn-pri { background: #0284c7; color: #fff; box-shadow: 0 4px 14px rgba(2,132,199,0.4); }
+    .btn-rec { background: #dc2626; color: #fff; box-shadow: 0 4px 14px rgba(220,38,38,0.4); }
+    .btn-ghost { background: #1e293b; color: #cbd5e1; border: 1px solid #334155; text-decoration: none; }
+    .btn-ghost:hover { background: #334155; color: #fff; }
+    .timeline { width: 360px; margin-top: 12px; height: 8px; background: #1e293b; border-radius: 4px; overflow: hidden; }
+    .progress { height: 100%; width: 0%; background: linear-gradient(90deg, #0284c7, #38bdf8); transition: width 0.1s linear; }
+    .scene-badge { margin-top: 10px; font-size: 0.85rem; color: #38bdf8; font-weight: 700; background: rgba(2,132,199,0.15); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(56,189,248,0.3); }
+    .downloads-box { margin-top: 24px; padding: 16px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; width: 100%; max-width: 640px; text-align: center; }
+  </style>
+</head>
+<body>
+
+<div class="studio-container">
+  <h1 style="color: #fff; margin: 0 0 4px; font-size: 1.7rem; text-align: center; letter-spacing: -0.5px;">
+    🎬 Assura Viral Promo Video Studio
+  </h1>
+  <p style="color: #94a3b8; margin: 0 0 16px; font-size: 0.88rem; text-align: center;">
+    Real-Time Animated Video &amp; BGM Synthesizer for TikTok, Reels, Shorts &amp; Xiaohongshu (中英双语营销短视频)
+  </p>
+
+  <div class="video-wrapper">
+    <canvas id="videoCanvas" width="720" height="1280"></canvas>
+  </div>
+
+  <div class="timeline">
+    <div id="progressBar" class="progress"></div>
+  </div>
+
+  <div id="sceneBadge" class="scene-badge">Scene 1 / 5: The Hospital Discharge Dilemma (00:00)</div>
+
+  <div class="controls">
+    <button id="playBtn" class="btn btn-pri">▶ Play Video with Music</button>
+    <button id="recBtn" class="btn btn-rec">🔴 Record &amp; Download MP4 Video</button>
+    <button id="resetBtn" class="btn btn-ghost">↺ Reset</button>
+  </div>
+
+  <div class="downloads-box">
+    <h4 style="margin: 0 0 10px; color: #38bdf8; font-size: 1rem;">📑 Strategic Business Proposals (Bilingual 中英双语版)</h4>
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+      <a href="/Assura_Business_Partner_Proposal_Bilingual.pdf" download class="btn btn-ghost">
+        📥 Download Proposal (PDF with Charts)
+      </a>
+      <a href="/Assura_Business_Partner_Proposal_Bilingual.docx" download class="btn btn-ghost">
+        📝 Download Proposal (Word DOCX)
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('videoCanvas');
+const ctx = canvas.getContext('2d');
+const playBtn = document.getElementById('playBtn');
+const recBtn = document.getElementById('recBtn');
+const resetBtn = document.getElementById('resetBtn');
+const progressBar = document.getElementById('progressBar');
+const sceneBadge = document.getElementById('sceneBadge');
+
+const DURATION = 25; // seconds
+let startTime = null;
+let isPlaying = false;
+let isRecording = false;
+let mediaRecorder = null;
+let recordedChunks = [];
+let animFrameId = null;
+
+// --- WEB AUDIO BGM SYNTHESIZER ---
+let audioCtx = null;
+let audioDest = null;
+let bgmInterval = null;
+
+function initAudio() {
+  if (!audioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContext();
+    audioDest = audioCtx.createMediaStreamDestination();
+  }
+}
+
+function playTone(freq, duration, type = 'sine', gainVal = 0.15) {
+  if (!audioCtx) return;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+  gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+  if (audioDest) gain.connect(audioDest);
+
+  osc.start();
+  osc.stop(audioCtx.currentTime + duration);
+}
+
+function startBGM() {
+  initAudio();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  
+  let step = 0;
+  // Upbeat synth progression: [C, E, G, B, A, F]
+  const chords = [261.63, 329.63, 392.00, 493.88, 440.00, 349.23];
+
+  if (bgmInterval) clearInterval(bgmInterval);
+  bgmInterval = setInterval(() => {
+    if (!isPlaying) return;
+    const note = chords[step % chords.length];
+    playTone(note, 0.4, 'triangle', 0.12);
+    // Sub bass pulse
+    if (step % 2 === 0) playTone(note / 2, 0.6, 'sine', 0.2);
+    step++;
+  }, 250);
+}
+
+function stopBGM() {
+  if (bgmInterval) clearInterval(bgmInterval);
+  bgmInterval = null;
+}
+
+// Scenes Definition
+const SCENES = [
+  { start: 0, end: 5, name: "1. Hospital Discharge Dilemma (出院回家，谁来专业照顾？)" },
+  { start: 5, end: 10, name: "2. The Assura Solution (大马注册执照护士·上门到府)" },
+  { start: 10, end: 16, name: "3. Hospital-Grade Clinical System (云端MEWS生命体征与用药追踪)" },
+  { start: 16, end: 21, name: "4. Family Peace of Mind (实时 WhatsApp 探访简报与医生通道)" },
+  { start: 21, end: 25, name: "5. Call to Action (让爱回家·立即预约 assuranursing.com)" }
+];
+
+function draw(timeSec) {
+  ctx.fillStyle = '#060e1a';
+  ctx.fillRect(0, 0, 720, 1280);
+
+  // Animated Background Particle & Waves
+  const pulse = Math.sin(timeSec * 4) * 20;
+  const grad = ctx.createRadialGradient(360, 640, 50 + pulse, 360, 640, 600);
+  grad.addColorStop(0, 'rgba(2, 132, 199, 0.3)');
+  grad.addColorStop(0.5, 'rgba(13, 58, 84, 0.15)');
+  grad.addColorStop(1, 'rgba(6, 14, 26, 1)');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 720, 1280);
+
+  // Floating Crosses / Medical Particles
+  for (let i = 0; i < 6; i++) {
+    const x = (i * 120 + timeSec * 30) % 720;
+    const y = (i * 200 + timeSec * 40) % 1280;
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.12)';
+    ctx.fillRect(x, y - 10, 6, 20);
+    ctx.fillRect(x - 7, y - 3, 20, 6);
+  }
+
+  // Header Branding with Shield Icon
+  ctx.save();
+  ctx.fillStyle = '#38bdf8';
+  ctx.font = 'bold 30px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('🛡️ ASSURA NURSING CARE', 360, 95);
+
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = '700 18px sans-serif';
+  ctx.fillText('HOSPITAL-GRADE HOME HEALTHCARE · 医疗级居家护理', 360, 130);
+  ctx.restore();
+
+  // Scene Rendering
+  if (timeSec < 5) {
+    // SCENE 1: The Dilemma
+    sceneBadge.innerText = "Scene 1 / 5: " + SCENES[0].name;
+
+    ctx.fillStyle = '#ef4444';
+    ctx.font = 'bold 44px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('😰 HOSPITAL DISCHARGE...', 360, 320);
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 34px sans-serif';
+    ctx.fillText('Who Takes Care of Your Loved One?', 360, 375);
+
+    ctx.fillStyle = '#fca5a5';
+    ctx.font = 'bold 30px sans-serif';
+    ctx.fillText('出院回家 · 谁来专业照顾？', 360, 435);
+
+    // Graphic Card
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#ef4444';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(70, 500, 580, 460, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#f8fafc';
+    ctx.font = '600 24px sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('❌ Complex Catheters & NG Tubes (胃管/尿管)', 105, 570);
+    ctx.fillText('❌ Surgical & Diabetic Wound Dressing (创面)', 105, 640);
+    ctx.fillText('❌ Confusing Medication Schedules (复杂用药)', 105, 710);
+    ctx.fillText('❌ Fear of Infection & Readmission (感染风险)', 105, 780);
+    ctx.fillText('❌ Unregulated Freelance Caregivers (无执照)', 105, 850);
+    ctx.fillText('❌ Working Adult Children Stressed (家属焦虑)', 105, 920);
+
+  } else if (timeSec < 10) {
+    // SCENE 2: The Solution
+    sceneBadge.innerText = "Scene 2 / 5: " + SCENES[1].name;
+
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 46px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('🩺 MEET ASSURA NURSING', 360, 320);
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 32px sans-serif';
+    ctx.fillText('Licensed Registered Nurses to Your Door', 360, 375);
+
+    ctx.fillStyle = '#7dd3fc';
+    ctx.font = 'bold 28px sans-serif';
+    ctx.fillText('大马注册执照护士 · 上门到府', 360, 430);
+
+    const items = [
+      ['100% LJM Licensed Staff Nurses', '100% 官方注册执照护士'],
+      ['Aseptic Sterile Wound Dressing', '医院级无菌敷料换药 (Aquacel)'],
+      ['Ryles & Foley Catheter Changes', '鼻胃管 / 导尿管上门置换'],
+      ['Post-Stroke & Complex Rehab', '中风术后康复与长期班制看护']
+    ];
+
+    items.forEach(([en, zh], i) => {
+      ctx.fillStyle = '#0f2744';
+      ctx.strokeStyle = '#0284c7';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(70, 490 + (i * 110), 580, 90, 16);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 24px sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText('✓ ' + en, 105, 530 + (i * 110));
+
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '600 20px sans-serif';
+      ctx.fillText('   ' + zh, 105, 562 + (i * 110));
+    });
+
+  } else if (timeSec < 16) {
+    // SCENE 3: Clinical System
+    sceneBadge.innerText = "Scene 3 / 5: " + SCENES[2].name;
+
+    ctx.fillStyle = '#10b981';
+    ctx.font = 'bold 44px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('⚡ POWERED BY CLINICAL TECH', 360, 310);
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 30px sans-serif';
+    ctx.fillText('Smart Cloud Hospital Intelligence', 360, 365);
+
+    ctx.fillStyle = '#a7f3d0';
+    ctx.font = 'bold 26px sans-serif';
+    ctx.fillText('首创云端医疗级质控系统', 360, 415);
+
+    // Mockup Tablet Box
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#10b981';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(65, 470, 590, 520, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    const techFeatures = [
+      '📊 Cloud MEWS Vital Signs Scoring (体征预警)',
+      '💊 Digital MAR & Insulin Charting (杜绝漏药)',
+      '🩹 Wound Staging & Photo Timeline (创面追踪)',
+      '🩻 Catheter Expiry 3-Day Reminders (导管到期)',
+      '✍️ Touchscreen Consent Signing (电子知情同意)',
+      '🚨 1-Tap Emergency SOS & GPS (一键急救坐标)'
+    ];
+
+    techFeatures.forEach((feat, i) => {
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = '600 22px sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText(feat, 95, 530 + (i * 75));
+    });
+
+  } else if (timeSec < 21) {
+    // SCENE 4: Family Peace of Mind
+    sceneBadge.innerText = "Scene 4 / 5: " + SCENES[3].name;
+
+    ctx.fillStyle = '#22c55e';
+    ctx.font = 'bold 44px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('📲 COMPLETE PEACE OF MIND', 360, 310);
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 30px sans-serif';
+    ctx.fillText('Instant WhatsApp Reports for Family', 360, 365);
+
+    ctx.fillStyle = '#86efac';
+    ctx.font = 'bold 26px sans-serif';
+    ctx.fillText('家属安心上班 · 实时探访简报', 360, 415);
+
+    // Mock WhatsApp Chat Bubble
+    ctx.fillStyle = '#064e3b';
+    ctx.strokeStyle = '#22c55e';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(60, 470, 600, 480, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#6ee7b7';
+    ctx.font = 'bold 24px sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('💬 [Assura Nursing Care Notification]', 95, 530);
+    
+    ctx.fillStyle = '#fff';
+    ctx.font = '22px sans-serif';
+    ctx.fillText('Nurse Siti has arrived at 09:00 AM.', 95, 595);
+    ctx.fillText('Vitals: BP 120/80 · SpO2 98% · Temp 36.8°C', 95, 660);
+    ctx.fillText('Wound Dressing completed with clean margin.', 95, 725);
+    ctx.fillText('Patient is resting comfortably. ✓', 95, 790);
+
+    ctx.fillStyle = '#a7f3d0';
+    ctx.font = 'italic 20px sans-serif';
+    ctx.fillText('👨‍⚕️ Attending Doctor 72-Hour Share Link Included', 95, 870);
+
+  } else {
+    // SCENE 5: Call to Action
+    sceneBadge.innerText = "Scene 5 / 5: " + SCENES[4].name;
+
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 52px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('ASSURA NURSING', 360, 380);
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 32px sans-serif';
+    ctx.fillText('Give Your Parents the Care They Deserve', 360, 440);
+
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = 'bold 28px sans-serif';
+    ctx.fillText('让爱回家 · 让专业守护长辈', 360, 495);
+
+    // Pulsing Button
+    const scale = 1 + Math.sin(timeSec * 8) * 0.035;
+    ctx.save();
+    ctx.translate(360, 650);
+    ctx.scale(scale, scale);
+    ctx.fillStyle = '#0284c7';
+    ctx.beginPath();
+    ctx.roundRect(-250, -45, 500, 90, 22);
+    ctx.fill();
+
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 30px sans-serif';
+    ctx.fillText('Book in 60s at assuranursing.com', 0, 10);
+    ctx.restore();
+
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 28px sans-serif';
+    ctx.fillText('📞 WhatsApp: 018-XXX XXXX', 360, 810);
+
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = '22px sans-serif';
+    ctx.fillText('Penang · Klang Valley · Johor Bahru', 360, 860);
+  }
+
+  // Footer Progress Bar on Video
+  ctx.fillStyle = '#0284c7';
+  ctx.fillRect(0, 1265, (timeSec / DURATION) * 720, 15);
+}
+
+function startPlay() {
+  if (isPlaying) return;
+  isPlaying = true;
+  startTime = performance.now();
+  playBtn.innerText = '⏸ Pause';
+  startBGM();
+
+  function loop(now) {
+    const elapsed = (now - startTime) / 1000;
+    const progress = Math.min(elapsed / DURATION, 1);
+    progressBar.style.width = (progress * 100) + '%';
+    draw(elapsed);
+
+    if (elapsed < DURATION) {
+      animFrameId = requestAnimationFrame(loop);
+    } else {
+      isPlaying = false;
+      playBtn.innerText = '▶ Play Again';
+      stopBGM();
+      if (isRecording && mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+      }
+    }
+  }
+  animFrameId = requestAnimationFrame(loop);
+}
+
+function startRecording() {
+  if (isRecording) return;
+  initAudio();
+  isRecording = true;
+  recordedChunks = [];
+  recBtn.innerText = '⏳ Recording Video with Audio...';
+  recBtn.disabled = true;
+
+  const canvasStream = canvas.captureStream(30);
+  const combinedStream = new MediaStream();
+
+  // Add canvas video tracks
+  canvasStream.getVideoTracks().forEach(track => combinedStream.addTrack(track));
+
+  // Add audio tracks
+  if (audioDest) {
+    audioDest.stream.getAudioTracks().forEach(track => combinedStream.addTrack(track));
+  }
+
+  const options = { mimeType: 'video/webm;codecs=vp9,opus' };
+  try {
+    mediaRecorder = new MediaRecorder(combinedStream, options);
+  } catch (e) {
+    mediaRecorder = new MediaRecorder(combinedStream);
+  }
+
+  mediaRecorder.ondataavailable = (e) => {
+    if (e.data.size > 0) recordedChunks.push(e.data);
+  };
+
+  mediaRecorder.onstop = () => {
+    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Assura_Promotional_Video_Bilingual.webm';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 1000);
+    recBtn.innerText = '✓ Video Downloaded!';
+    recBtn.disabled = false;
+    isRecording = false;
+  };
+
+  mediaRecorder.start();
+  startPlay();
+}
+
+playBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    cancelAnimationFrame(animFrameId);
+    isPlaying = false;
+    stopBGM();
+    playBtn.innerText = '▶ Resume with Music';
+  } else {
+    startPlay();
+  }
+});
+
+recBtn.addEventListener('click', startRecording);
+
+resetBtn.addEventListener('click', () => {
+  cancelAnimationFrame(animFrameId);
+  isPlaying = false;
+  isRecording = false;
+  stopBGM();
+  playBtn.innerText = '▶ Play Video with Music';
+  recBtn.innerText = '🔴 Record & Download MP4 Video';
+  recBtn.disabled = false;
+  progressBar.style.width = '0%';
+  draw(0);
+});
+
+// Initial draw
+draw(0);
+</script>
+
+</body>
+</html>

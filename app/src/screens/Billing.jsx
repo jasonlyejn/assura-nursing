@@ -172,7 +172,9 @@ export default function Billing({ me }) {
   // ---- list ----
   return (
     <div className="card">
-      <h2>Billing</h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h2>Billing & Financials</h2>
+      </div>
       {status && <p className="status">{status}</p>}
       <div className="tiles4">
         <div className="dtile"><b>{money(sum.outstanding || 0)}</b><span>Outstanding</span></div>

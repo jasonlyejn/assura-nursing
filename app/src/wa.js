@@ -24,4 +24,28 @@ export const msg = {
   followup: (name) =>
     `Hi${name ? ' ' + name : ''}, checking in from ${BIZ} 🌿 How is everything since our last visit? Let us know if you'd like to arrange the next one. `
     + `\n\n您好${name ? ' ' + name : ''}，${BIZ} 关心您。自上次上门后一切可好？如需安排下次探访，请告诉我们。`,
+  assignNurse: (nurseName, patientName, address, careType, notes) =>
+    `🚨 *${BIZ} — New Case Assignment*\n\n`
+    + `Hi ${nurseName || 'Nurse'}, a new case has been assigned to you:\n`
+    + `• *Patient:* ${patientName || 'Patient'}\n`
+    + (careType ? `• *Care Type:* ${careType}\n` : '')
+    + (address ? `• *Location:* ${address}\n` : '')
+    + (notes ? `• *Needs/Notes:* ${notes}\n` : '')
+    + `\n👉 Please open your Assura Staff App or login at https://staff.assuranursing.com to review and record vitals / shift reports.`,
+  rosterShift: (nurseName, shiftDate, shift, patientName, address) =>
+    `🗓 *${BIZ} — Shift Scheduled*\n\n`
+    + `Hi ${nurseName || 'Nurse'}, you have a shift scheduled:\n`
+    + `• *Date:* ${shiftDate}\n`
+    + `• *Shift:* ${shift}\n`
+    + (patientName ? `• *Patient:* ${patientName}\n` : '')
+    + (address ? `• *Location:* ${address}\n` : '')
+    + `\n👉 View your full roster at https://staff.assuranursing.com`,
+  requestStatus: (staffName, requestType, status, note) =>
+    `📝 *${BIZ} — Request ${status.toUpperCase()}*\n\n`
+    + `Hi ${staffName}, your request for *${requestType}* has been *${status}* by the supervisor.`
+    + (note ? `\n• *Note:* ${note}` : '')
+    + `\n\n👉 Login to check details at https://staff.assuranursing.com`,
+  profileApproved: (staffName) =>
+    `✅ *${BIZ} — Profile Changes Approved*\n\n`
+    + `Hi ${staffName}, your updated profile and banking details have been reviewed and approved.`,
 };

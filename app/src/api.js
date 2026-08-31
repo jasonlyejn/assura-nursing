@@ -5,15 +5,24 @@ const opts = (method, body) => ({
   ...(body ? { body: JSON.stringify(body) } : {}),
 });
 async function call(path, method = 'GET', body) {
-  const res = await fetch(path, opts(method, body));
-  const data = await res.json().catch(() => ({}));
+  const res = await fetch(path, opts(method, body)).catch((err) => {
+    throw new Error('Network error: ' + err.message);
+  });
+  const text = await res.text().catch(() => '');
+  let data = {};
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch (_) {
+    data = { error: `Server error (${res.status}): ${text.slice(0, 120) || res.statusText || 'Invalid JSON response'}` };
+  }
   if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
   return data;
 }
 export const api = {
   me: () => call('/api/auth/me'),
+  setupStatus: () => call('/api/auth/setup'),
   setup: (name, pin) => call('/api/auth/setup', 'POST', { name, pin }),
-  login: (pin) => call('/api/auth/login', 'POST', { pin }),
+  login: (pin, email) => call('/api/auth/login', 'POST', { pin, email }),
   logout: () => call('/api/auth/logout', 'POST'),
   // rates
   getServices: () => call('/api/services'),
@@ -82,4 +91,32 @@ export const api = {
   putMews: (caseId, data, rev) => call('/api/mews/' + caseId, 'PUT', { data, rev }),
   getEscalations: (all) => call('/api/escalations' + (all ? '?all=1' : '')),
   ackEscalation: (id) => call('/api/escalations/' + id, 'PATCH', { action: 'ack' }),
+  navCounts: () => call('/api/dashboard'),
+  // Notifications
+  getNotifications: () => call('/api/notifications'),
+  markNotificationRead: (id) => call('/api/notifications', 'POST', { id }),
+  markNotificationsRead: (idOrAll) => call('/api/notifications', 'POST', typeof idOrAll === 'string' ? { id: idOrAll } : { all: true }),
+  // Visits & Clock-In/Out
+  getVisits: (caseId) => call('/api/visits' + (caseId ? '?case_id=' + caseId : '')),
+  getActiveVisit: () => call('/api/visits?active=1'),
+  clockIn: (case_id, lat, lng, notes) => call('/api/visits', 'POST', { action: 'clock_in', case_id, lat, lng, notes }),
+  clockOut: (id, care_summary, notes) => call('/api/visits', 'POST', { action: 'clock_out', id, care_summary, notes }),
+  // Wound Care
+  getWounds: (caseId) => call('/api/wounds/' + caseId),
+  addWound: (caseId, body) => call('/api/wounds/' + caseId, 'POST', body),
+  deleteWound: (id) => call('/api/wounds/' + id, 'DELETE'),
+  // Insulin & Blood Glucose Tracking
+  getInsulin: (caseId, from = '', to = '') => call('/api/insulin/' + caseId + (from && to ? `?from=${from}&to=${to}` : '')),
+  addInsulin: (caseId, body) => call('/api/insulin/' + caseId, 'POST', body),
+  // Analytics
+  getAnalytics: () => call('/api/analytics'),
+  // Case Broadcasts & Nurse Applications (20% Commission Shield)
+  getBroadcasts: (status = '') => call('/api/broadcasts' + (status ? '?status=' + status : '')),
+  createBroadcast: (body) => call('/api/broadcasts', 'POST', body),
+  applyBroadcast: (broadcast_id, note = '') => call('/api/broadcasts/apply', 'POST', { broadcast_id, note }),
+  decideBroadcast: (broadcast_id, staff_id) => call('/api/broadcasts/decide', 'POST', { broadcast_id, staff_id }),
+  // Doctor Share Link (72-hour PIN Access)
+  createDoctorShare: (case_id, pin, doctor_name = '', doctor_phone = '') => call('/api/share/doctor', 'POST', { case_id, pin, doctor_name, doctor_phone }),
 };
+
+

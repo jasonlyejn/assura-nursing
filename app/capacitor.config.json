@@ -1,0 +1,10 @@
+{
+  "appId": "com.assuranursing.staff",
+  "appName": "Assura Case Management",
+  "webDir": "public",
+  "server": {
+    "url": "https://staff.assuranursing.com",
+    "cleartext": false,
+    "androidScheme": "https"
+  }
+}

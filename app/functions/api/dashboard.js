@@ -7,15 +7,15 @@ export async function onRequestGet(context) {
   if (!user) return bad('Not signed in', 401);
   const db = context.env.DB;
   const all = can(user, 'allCases');
+  const isMgr = can(user, 'staff') || can(user, 'assign') || user.role === 'admin';
   const today = todayMY();
   const q = (sql, ...b) => db.prepare(sql).bind(...b).all().then((r) => r.results || []).catch(() => []);
-  const one = (sql, ...b) => db.prepare(sql).bind(...b).first().catch(() => null);
 
   // scope: office roles see everything, field staff see their own cases
   const mineOnly = all ? '' : ' AND c.assigned_staff_id = ?';
   const mineBind = all ? [] : [user.sid];
 
-  const [cases, duty, escalations, todayHo, quotes, intake, myShifts, myReqs] = await Promise.all([
+  const [cases, duty, escalations, todayHo, quotes, intake, myShifts, myReqs, pendingChanges, pendingApps] = await Promise.all([
     // active cases + their latest handover (that's the practical vitals summary)
     q(`SELECT c.id, c.status, p.name, p.care_type,
               s.name AS nurse,
@@ -81,6 +81,20 @@ export async function onRequestGet(context) {
          FROM staff_requests WHERE staff_id=? OR (? = 1 AND status='pending')
         ORDER BY CASE status WHEN 'pending' THEN 0 ELSE 1 END, created_at DESC LIMIT 10`,
       user.sid, can(user, 'assign') ? 1 : 0),
+
+    // Pending Staff Profile Approvals (Managers/Admin only)
+    isMgr ? q(`SELECT id, staff_id, staff_name, fields, before, note, requested_at
+                 FROM staff_changes WHERE status='pending'
+                ORDER BY requested_at DESC LIMIT 10`) : [],
+
+    // Pending Case Applications (Managers/Admin only)
+    isMgr ? q(`SELECT a.id, a.broadcast_id, a.staff_id, a.status, a.applied_at,
+                      b.title AS broadcast_title, s.name AS staff_name
+                 FROM case_applications a
+                 JOIN case_broadcasts b ON b.id = a.broadcast_id
+                 JOIN staff s ON s.id = a.staff_id
+                WHERE a.status = 'pending'
+                ORDER BY a.applied_at DESC LIMIT 10`) : [],
   ]);
 
   // cases with nobody rostered today (office view only)
@@ -91,6 +105,14 @@ export async function onRequestGet(context) {
   // cases with no report yet today
   const noReport = cases.filter((c) => c.last_report !== today).map((c) => c.name);
 
+  const parseJsonSafe = (s) => { try { return JSON.parse(s || '{}'); } catch (_) { return {}; } };
+
+  const parsedChanges = pendingChanges.map((c) => ({
+    ...c,
+    fields: parseJsonSafe(c.fields),
+    before: parseJsonSafe(c.before),
+  }));
+
   const stats = {
     active: cases.length,
     onDuty: duty.length,
@@ -99,14 +121,20 @@ export async function onRequestGet(context) {
     unsigned: todayHo.filter((h) => !h.ack_at).length,
     intake: intake.length,
     quotes: quotes.length,
+    pendingChanges: parsedChanges.length,
+    pendingApps: pendingApps.length,
   };
 
   stats.myShifts = myShifts.length;
   stats.pendingReq = myReqs.filter((r) => r.status === 'pending' && r.staff_id !== user.sid).length;
 
-  return json({ today, all, stats, cases, duty, escalations,
-                handovers: todayHo, quotes, intake, unrostered, noReport,
-                myShifts, myRequests: myReqs });
+  return json({
+    today, all, stats, cases, duty, escalations,
+    handovers: todayHo, quotes, intake, unrostered, noReport,
+    myShifts, myRequests: myReqs,
+    pendingChanges: parsedChanges,
+    pendingApps,
+  });
 }
 
 function todayMY() {

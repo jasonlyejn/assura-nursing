@@ -3,6 +3,16 @@ import { json, bad } from '../_lib/respond.js';
 import { randomSaltHex, hashPin } from '../_lib/crypto.js';
 import { signSession, cookie } from '../_lib/session.js';
 
+export async function onRequestGet(context) {
+  const { env } = context;
+  try {
+    const row = await env.DB.prepare('SELECT COUNT(*) AS n FROM staff').first();
+    return json({ needsSetup: (row?.n || 0) === 0 });
+  } catch (err) {
+    return json({ needsSetup: false });
+  }
+}
+
 export async function onRequestPost(context) {
   const { env, request } = context;
   const row = await env.DB.prepare('SELECT COUNT(*) AS n FROM staff').first();

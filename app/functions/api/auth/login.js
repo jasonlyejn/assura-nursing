@@ -1,16 +1,24 @@
-// PIN sign-in. PINs are unique, so we check the entered PIN against each active
-// staff record and sign a session for the first match.
+// Sign-in supporting Email / Username + PIN, or direct quick PIN.
 import { json, bad } from '../_lib/respond.js';
 import { hashPin, timingSafeEqual } from '../_lib/crypto.js';
 import { signSession, cookie } from '../_lib/session.js';
 
 export async function onRequestPost(context) {
   const { env, request } = context;
-  const { pin } = await request.json().catch(() => ({}));
-  if (!/^\d{4,8}$/.test(pin || '')) return bad('Enter your PIN');
+  const b = await request.json().catch(() => ({}));
+  const pin = (b.pin || '').toString().trim();
+  const identifier = (b.email || b.identifier || '').toString().trim().toLowerCase();
 
-  const { results } = await env.DB
-    .prepare('SELECT id,name,role,perms,pin_salt,pin_hash,must_change_pin FROM staff WHERE active=1').all();
+  if (!pin) return bad('Enter your PIN / Password');
+
+  let query = 'SELECT id,name,email,role,perms,pin_salt,pin_hash,must_change_pin FROM staff WHERE active=1';
+  let binds = [];
+  if (identifier) {
+    query += ' AND (LOWER(email)=? OR LOWER(name)=? OR phone=?)';
+    binds = [identifier, identifier, identifier];
+  }
+
+  const { results } = await env.DB.prepare(query).bind(...binds).all();
 
   for (const s of results || []) {
     const h = await hashPin(pin, s.pin_salt);
@@ -26,7 +34,7 @@ export async function onRequestPost(context) {
       );
     }
   }
-  return bad('PIN not recognised', 401);
+  return bad(identifier ? 'Invalid email or PIN' : 'PIN not recognised', 401);
 }
 
 function parsePerms(v) {

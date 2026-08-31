@@ -7,6 +7,7 @@
 // configured) verifies a Cloudflare Turnstile token. On success it can also
 // email you a "new booking" alert via Resend.
 import { json, bad } from './_lib/respond.js';
+import { notifyAdmins, notifyAllStaff } from './_lib/notify.js';
 
 const ALLOWED = [
   'https://assuranursing.com',
@@ -119,9 +120,15 @@ export async function onRequestPost(context) {
     ).bind(cid, pid, 'intake', 'per_visit', 'web', now),
   ]);
 
-  // Send the email alert without making the visitor wait for it.
-  if (context.waitUntil) context.waitUntil(emailAlert(env, name, phone, notes));
-  else await emailAlert(env, name, phone, notes);
+  // Send in-app notification alerts to Admins and all Staff
+  const alertAction = async () => {
+    await emailAlert(env, name, phone, notes);
+    await notifyAdmins(env, '🌐 New Web Booking Received', `New booking: ${name} (${phone}) in ${b.area || 'Penang'}. Tap to review & assign.`, 'case_intake', cid);
+    await notifyAllStaff(env, '📢 New Open Case Available', `New visit request in ${b.area || 'Penang'} (${name}). View case to request slot!`, 'open_case', cid);
+  };
+
+  if (context.waitUntil) context.waitUntil(alertAction());
+  else await alertAction();
 
   return json({ ok: true, case_id: cid }, { headers: cors });
 }

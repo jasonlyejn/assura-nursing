@@ -5,6 +5,8 @@ import { requireUser } from '../_lib/auth.js';
 const SELECT = `
   SELECT c.id, c.status, c.billing_mode, c.assigned_staff_id, c.source, c.created_at, c.closed_at, c.close_reason,
          p.id AS patient_id, p.name, p.phone, p.address, p.age, p.care_type, p.minor, p.notes,
+         p.case_brief, p.things_to_aware, p.things_to_do, p.medical_history, p.devices_tubes,
+         p.mobility_status, p.feeding_regimen, p.emergency_contacts,
          s.name AS assigned_name
   FROM cases c
   JOIN patients p ON p.id = c.patient_id
@@ -16,10 +18,20 @@ export async function onRequestGet(context) {
   const url = new URL(context.request.url);
   const status = url.searchParams.get('status');
   const mine = url.searchParams.get('mine');
+  const all = url.searchParams.get('all');
+  const roster = url.searchParams.get('roster');
 
   let sql = SELECT, binds = [], where = [];
-  if (mine === '1' || !can(r.user, 'allCases')) { where.push('c.assigned_staff_id = ?'); binds.push(r.user.sid); }
-  if (status) { where.push('c.status = ?'); binds.push(status); }
+  if (mine === '1' || (!can(r.user, 'allCases') && all !== '1' && roster !== '1')) {
+    where.push('c.assigned_staff_id = ?');
+    binds.push(r.user.sid);
+  }
+  if (status === 'active') {
+    where.push("c.status IN ('active', 'assigned', 'accepted')");
+  } else if (status) {
+    where.push('c.status = ?');
+    binds.push(status);
+  }
   if (where.length) sql += ' WHERE ' + where.join(' AND ');
   sql += ' ORDER BY c.created_at DESC';
 

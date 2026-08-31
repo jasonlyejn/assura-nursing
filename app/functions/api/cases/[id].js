@@ -1,12 +1,15 @@
 import { json, bad } from '../_lib/respond.js';
-import { requireUser, requireAdmin } from '../_lib/auth.js';
+import { requireUser, requireAdmin, can } from '../_lib/auth.js';
 import { audit } from '../_lib/audit.js';
+import { createNotification } from '../_lib/notify.js';
 
 export async function onRequestGet(context) {
   const r = await requireUser(context);
   if (r.error) return r.error;
   const row = await context.env.DB.prepare(
     `SELECT c.*, p.name, p.phone, p.address, p.age, p.sex, p.care_type, p.minor, p.notes,
+            p.allergies, p.case_brief, p.things_to_aware, p.things_to_do, p.medical_history,
+            p.devices_tubes, p.mobility_status, p.feeding_regimen, p.emergency_contacts,
             s.name AS assigned_name
      FROM cases c JOIN patients p ON p.id=c.patient_id
      LEFT JOIN staff s ON s.id=c.assigned_staff_id WHERE c.id=?`
@@ -16,13 +19,38 @@ export async function onRequestGet(context) {
   return json({ case: row });
 }
 
-// Actions: accept | assign | decline | activate | close  (+ billing_mode)
+// Actions: accept | assign | decline | activate | close | billing | update_assessment
 export async function onRequestPatch(context) {
   const r = await requireUser(context);
   if (r.error) return r.error;
   const id = context.params.id;
   const b = await context.request.json().catch(() => ({}));
   const env = context.env;
+
+  // Case patient assessment & summary update
+  if (b.action === 'update_assessment' || b.action === 'update_summary') {
+    const c = await env.DB.prepare('SELECT patient_id FROM cases WHERE id=?').bind(id).first();
+    if (!c) return bad('Case not found', 404);
+
+    const fields = [
+      'case_brief', 'things_to_aware', 'things_to_do', 'medical_history',
+      'devices_tubes', 'mobility_status', 'feeding_regimen', 'emergency_contacts',
+      'allergies', 'notes',
+    ];
+    const sets = [], binds = [];
+    for (const f of fields) {
+      if (f in b) {
+        sets.push(`${f} = ?`);
+        binds.push(b[f] !== null && b[f] !== undefined ? String(b[f]).trim() : null);
+      }
+    }
+    if (sets.length > 0) {
+      binds.push(c.patient_id);
+      await env.DB.prepare(`UPDATE patients SET ${sets.join(', ')} WHERE id=?`).bind(...binds).run();
+      await audit(env, r.user.sid, 'case_assessment_updated', 'case', id);
+    }
+    return json({ ok: true });
+  }
 
   // decline / assign / accept / close are admin decisions
   const adminActions = ['accept', 'assign', 'decline', 'close', 'billing'];  // need 'assign' capability
@@ -55,5 +83,24 @@ export async function onRequestPatch(context) {
   }
   await env.DB.prepare(sql).bind(...binds).run();
   await audit(env, r.user.sid, 'case_' + b.action, 'case', id);
+
+  if (b.action === 'assign' && b.staff_id) {
+    const caseRow = await env.DB.prepare(
+      `SELECT p.name AS patient_name FROM cases c
+       JOIN patients p ON p.id = c.patient_id
+       WHERE c.id = ?`
+    ).bind(id).first();
+    const patientName = caseRow ? caseRow.patient_name : 'a patient';
+
+    await createNotification(
+      env,
+      b.staff_id,
+      'New Case Assigned',
+      `You have been assigned to care for ${patientName}. Please review the case details and schedule your visits.`,
+      'case',
+      `case:${id}`
+    );
+  }
+
   return json({ ok: true });
 }

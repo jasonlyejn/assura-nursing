@@ -1,9 +1,9 @@
 // Assura Case Management — offline shell.
 // Caches the app itself so it opens without signal; live data still needs a
 // connection (the API is never cached, so you never see stale patient data).
-const SHELL = 'assura-shell-v5';
+const SHELL = 'assura-shell-v9-pwa-install';
 const FILES = ['/', '/index.html', '/app.js', '/styles.css', '/logo.png',
-               '/icon-192.png', '/icon-512.png', '/manifest.webmanifest'];
+               '/icon-192.png', '/icon-512.png', '/manifest.json', '/manifest.webmanifest'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
