@@ -335,13 +335,23 @@ export default function Handover({ caseObj, me, onBack }) {
   }
 
   return (
-    <div className="card">
-      <button className="link" onClick={onBack}>← Back</button>
-      <h2>Shift Handover {caseObj && caseObj.name ? '— ' + caseObj.name : ''}</h2>
-      <p className="muted">
-        Fill this at the end of your shift. Vitals auto-sync from MEWS chart, and quick dropdowns help you document observations in seconds.
-      </p>
-      {status && <p className="status">{status}</p>}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{caseObj && caseObj.name ? caseObj.name : 'Patient'}</span>
+          <span className="case-view-tag">📋 Shift Handover</span>
+        </div>
+      </div>
+
+      <div className="card">
+        <h2 style={{ margin: '0 0 6px' }}>Shift Handover {caseObj && caseObj.name ? '— ' + caseObj.name : ''}</h2>
+        <p className="muted" style={{ margin: '0 0 12px', fontSize: '0.84rem' }}>
+          Fill this at the end of your shift. Vitals auto-sync from MEWS chart, and quick dropdowns help you document observations in seconds.
+        </p>
+        {status && <p className="status">{status}</p>}
 
       {(() => {
         const order = ['AM', 'PM', 'NIGHT'];
@@ -505,6 +515,7 @@ export default function Handover({ caseObj, me, onBack }) {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

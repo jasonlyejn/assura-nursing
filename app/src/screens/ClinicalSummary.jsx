@@ -102,19 +102,24 @@ export default function ClinicalSummary({ caseObj, me, onBack }) {
   }
 
   return (
-    <div style={{ maxWidth: '850px', margin: '0 auto' }}>
-      <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
-        <button className="ghost" onClick={onBack}>
-          ← Back to Case
+    <div>
+      <div className="case-subbar no-print">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
         </button>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <button className="sec" onClick={() => setShareModal(true)} style={{ width: 'auto', padding: '8px 16px', fontWeight: 700, color: '#0d3a54', border: '1.5px solid #0d3a54' }}>
-            🩺 Share with Doctor (72-hr Link)
-          </button>
-          <button className="pri" onClick={() => window.print()} style={{ width: 'auto', padding: '8px 20px' }}>
-            🖨️ Print / Save PDF Medical Report
-          </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{caseObj.patient_name || caseObj.name || 'Patient'}</span>
+          <span className="case-view-tag">🩺 Clinical Summary</span>
         </div>
+      </div>
+
+      <div className="no-print" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
+        <button className="sec" onClick={() => setShareModal(true)} style={{ width: 'auto', padding: '8px 16px', fontWeight: 700, color: '#0d3a54', border: '1.5px solid #0d3a54' }}>
+          🩺 Share with Doctor (72-hr Link)
+        </button>
+        <button className="pri" onClick={() => window.print()} style={{ width: 'auto', padding: '8px 20px' }}>
+          🖨️ Print / Save PDF Medical Report
+        </button>
       </div>
 
       {shareModal && (

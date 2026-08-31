@@ -180,11 +180,23 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
     : [];
 
   return (
-    <div className="card">
-      <button className="link" onClick={onBack}>← Back</button>
-      <h2>{isInv ? 'Invoice' : 'Quote'} {c ? '— ' + c.name : ''}</h2>
-      <p className="muted">{isInv ? 'Tick what was actually done, then raise the invoice.' : 'Tick what the patient needs, then send it on WhatsApp.'}</p>
-      {status && <p className="status">{status}</p>}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{c ? c.name : 'Patient'}</span>
+          <span className="case-view-tag">{isInv ? '💵 Invoice' : '💬 Quote'}</span>
+        </div>
+      </div>
+
+      <div className="card">
+        <h2 style={{ margin: '0 0 6px' }}>{isInv ? 'Invoice' : 'Quote'} {c ? '— ' + c.name : ''}</h2>
+        <p className="muted" style={{ margin: '0 0 12px', fontSize: '0.84rem' }}>
+          {isInv ? 'Tick what was actually done, then raise the invoice.' : 'Tick what the patient needs, then send it on WhatsApp.'}
+        </p>
+        {status && <p className="status">{status}</p>}
 
       <h3 className="qh">Services</h3>
       {services.map((s) => (
@@ -309,6 +321,7 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
           </div>
         ))}
       </>}
+    </div>
     </div>
   );
 }

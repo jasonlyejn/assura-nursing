@@ -125,9 +125,19 @@ export default function StaffProfile({ id, roles, onBack, onChanged, meId }) {
   }
 
   return (
-    <div className="card">
-      <button className="link" onClick={onBack}>← All staff</button>
-      {status && <p className="status">{status}</p>}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Staff List</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{s.name || 'Staff Member'}</span>
+          <span className="case-view-tag">👤 Staff Profile</span>
+        </div>
+      </div>
+
+      <div className="card">
+        {status && <p className="status">{status}</p>}
 
       <div className="sp-head">
         <button className="sp-photo" onClick={pickPhoto} title="Add a photo">
@@ -220,6 +230,7 @@ export default function StaffProfile({ id, roles, onBack, onChanged, meId }) {
       </div>
       <p className="hint">Inactive staff can't sign in but all their records stay. Delete only works
         for someone with no cases or visits.</p>
+    </div>
     </div>
   );
 }

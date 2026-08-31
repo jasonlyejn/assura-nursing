@@ -88,19 +88,60 @@ function InstallButton() {
       </button>
 
       {modal && (
-        <div className="modal-backdrop" style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1200, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }}>
-          <div className="card" style={{ maxWidth: '440px', width: '100%', padding: '24px', borderRadius: '12px' }}>
+        <div
+          className="modal-backdrop"
+          onClick={(e) => { if (e.target === e.currentTarget) setModal(false); }}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(7, 25, 45, 0.7)',
+            backdropFilter: 'blur(6px)',
+            WebkitBackdropFilter: 'blur(6px)',
+            zIndex: 1200,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 'calc(16px + env(safe-area-inset-top, 0px)) 16px calc(16px + env(safe-area-inset-bottom, 0px)) 16px',
+            overflowY: 'auto',
+            boxSizing: 'border-box'
+          }}
+        >
+          <div
+            className="card"
+            style={{
+              maxWidth: '440px',
+              width: '100%',
+              maxHeight: '85vh',
+              overflowY: 'auto',
+              padding: '20px',
+              borderRadius: '16px',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.35)',
+              border: '1px solid rgba(56, 189, 248, 0.3)',
+              margin: 'auto',
+              background: '#ffffff'
+            }}
+          >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-              <h3 style={{ margin: 0, color: 'var(--navy)' }}>📲 Install &amp; Download Staff App</h3>
-              <button className="ghost" onClick={() => setModal(false)} style={{ fontSize: '18px', padding: '0 6px' }}>✕</button>
+              <h3 style={{ margin: 0, color: 'var(--navy)', fontSize: '1.1rem', fontWeight: 800 }}>
+                📲 Install &amp; Download Staff App
+              </h3>
+              <button
+                className="ghost"
+                onClick={() => setModal(false)}
+                style={{ fontSize: '16px', padding: '4px 10px', borderRadius: '8px', cursor: 'pointer' }}
+                aria-label="Close"
+              >
+                ✕
+              </button>
             </div>
-            <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '16px' }}>
+            <p style={{ fontSize: '0.82rem', color: 'var(--muted)', marginBottom: '16px', lineHeight: 1.4 }}>
               Install the official Assura Staff Portal on your Phone or Windows Desktop PC for fast access without opening a browser tab.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <button
                 className="pri"
+                style={{ marginTop: 0 }}
                 onClick={async () => {
                   if (prompt || window.__assuraInstallPrompt) {
                     const p = prompt || window.__assuraInstallPrompt;
@@ -121,7 +162,7 @@ function InstallButton() {
                 href="/AssuraStaff.apk"
                 download="AssuraStaff.apk"
                 className="sec"
-                style={{ textDecoration: 'none', textAlign: 'center', padding: '10px', background: '#eef6ff', color: '#0d3a54', border: '1px solid #b3cfe9', borderRadius: '8px', fontWeight: 700 }}
+                style={{ textDecoration: 'none', textAlign: 'center', padding: '11px', background: '#eef6ff', color: '#0d3a54', border: '1px solid #b3cfe9', borderRadius: '10px', fontWeight: 700, fontSize: '0.86rem' }}
               >
                 🤖 Download Android Mobile App (.APK)
               </a>
@@ -130,7 +171,7 @@ function InstallButton() {
                 href="/AssuraStaff.exe"
                 download="AssuraStaff.exe"
                 className="sec"
-                style={{ textDecoration: 'none', textAlign: 'center', padding: '10px', background: '#f8fafc', color: '#334155', border: '1px solid #cbd5e1', borderRadius: '8px', fontWeight: 700 }}
+                style={{ textDecoration: 'none', textAlign: 'center', padding: '11px', background: '#f8fafc', color: '#334155', border: '1px solid #cbd5e1', borderRadius: '10px', fontWeight: 700, fontSize: '0.86rem' }}
               >
                 💻 Download Windows Desktop App (.EXE)
               </a>
@@ -139,7 +180,7 @@ function InstallButton() {
                 href="/AssuraStaff-Windows.zip"
                 download="AssuraStaff-Windows.zip"
                 className="sec"
-                style={{ textDecoration: 'none', textAlign: 'center', padding: '10px', background: '#f8fafc', color: '#334155', border: '1px solid #cbd5e1', borderRadius: '8px', fontWeight: 700 }}
+                style={{ textDecoration: 'none', textAlign: 'center', padding: '11px', background: '#f8fafc', color: '#334155', border: '1px solid #cbd5e1', borderRadius: '10px', fontWeight: 700, fontSize: '0.86rem' }}
               >
                 📦 Download Windows App (.ZIP)
               </a>

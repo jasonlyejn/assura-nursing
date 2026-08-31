@@ -56,10 +56,20 @@ export default function Chat({ caseObj, me, onBack }) {
   }
 
   return (
-    <div className="card chatcard">
-      <button className="link" onClick={onBack}>← Back</button>
-      <h2>Chat {caseObj && caseObj.name ? '— ' + caseObj.name : ''}</h2>
-      {status && <p className="status">{status}</p>}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{caseObj && caseObj.name ? caseObj.name : 'Patient'}</span>
+          <span className="case-view-tag">💬 Case Chat</span>
+        </div>
+      </div>
+
+      <div className="card chatcard">
+        <h2 style={{ margin: '0 0 8px' }}>Chat {caseObj && caseObj.name ? '— ' + caseObj.name : ''}</h2>
+        {status && <p className="status">{status}</p>}
 
       <div className="chattabs">
         {TABS.map(([k, label]) => (
@@ -106,6 +116,7 @@ export default function Chat({ caseObj, me, onBack }) {
                 Log what family said</button>
             </>}
       </div>
+    </div>
     </div>
   );
 }

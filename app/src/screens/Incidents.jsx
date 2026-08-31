@@ -102,20 +102,33 @@ export default function Incidents({ me, onBack }) {
   }
 
   return (
-    <div className="card">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-        <div>
-          {onBack && <button className="link" onClick={onBack}>← Back</button>}
-          <h2 style={{ margin: '4px 0 0' }}>🚨 Clinical Incident &amp; Fall Reporting</h2>
-          <p className="muted" style={{ margin: '2px 0 0' }}>
-            Document patient falls, injuries, tube dislodgements, and emergencies according to PHFSA clinical standards.
-          </p>
+    <div>
+      {onBack && (
+        <div className="case-subbar">
+          <button className="case-back-btn" onClick={onBack}>
+            <span>←</span> <b>Back to Care</b>
+          </button>
+          <div className="case-subbar-info">
+            <span className="case-view-tag" style={{ background: '#fee2e2', color: '#991b1b', borderColor: '#fca5a5' }}>
+              🚨 Incidents &amp; Safety
+            </span>
+          </div>
         </div>
+      )}
 
-        <button className="danger sm" onClick={() => setShowNew(!showNew)} style={{ margin: 0 }}>
-          {showNew ? '✕ Cancel' : '🚨 Report New Incident (报告意外)'}
-        </button>
-      </div>
+      <div className="card">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <div>
+            <h2 style={{ margin: '4px 0 0' }}>🚨 Clinical Incident &amp; Fall Reporting</h2>
+            <p className="muted" style={{ margin: '2px 0 0', fontSize: '0.84rem' }}>
+              Document patient falls, injuries, tube dislodgements, and emergencies according to PHFSA clinical standards.
+            </p>
+          </div>
+
+          <button className="danger sm" onClick={() => setShowNew(!showNew)} style={{ margin: 0 }}>
+            {showNew ? '✕ Cancel' : '🚨 Report New Incident (报告意外)'}
+          </button>
+        </div>
 
       {status && <p className="status" style={{ marginTop: '10px' }}>{status}</p>}
 
@@ -244,6 +257,7 @@ export default function Incidents({ me, onBack }) {
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 }

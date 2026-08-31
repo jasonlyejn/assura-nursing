@@ -1,0 +1,45 @@
+{
+  "name": "Assura Staff Portal",
+  "short_name": "Assura Staff",
+  "id": "/",
+  "description": "Clinical Case Management & Home Nursing Staff Portal for Assura Care.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d1f33",
+  "theme_color": "#0C3054",
+  "lang": "en",
+  "categories": ["medical", "productivity", "business"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Active Cases", "url": "/?go=cases" },
+    { "name": "Roster & Shifts", "url": "/?go=roster" },
+    { "name": "MEWS Vitals", "url": "/?go=mews" }
+  ]
+}

@@ -55,7 +55,8 @@ async function start(){
   let info;
   try{
     const r = await fetch('/api/feedback/'+token);
-    info = await r.json();
+    const text = await r.text().catch(() => '');
+    try { info = text ? JSON.parse(text) : {}; } catch (_) { info = { error: `Server response (${r.status})` }; }
     if(!r.ok) throw new Error(info.error||'Link not valid');
   }catch(e){ wrap.innerHTML = '<p class="err">'+e.message+'</p>'; return; }
 
@@ -117,7 +118,9 @@ async function send(){
   try{
     const r = await fetch('/api/feedback/'+token, {
       method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify(body) });
-    const d = await r.json();
+    const text = await r.text().catch(() => '');
+    let d = {};
+    try { d = text ? JSON.parse(text) : {}; } catch (_) { d = { error: `Server error (${r.status})` }; }
     if(!r.ok) throw new Error(d.error||'Could not send');
     thanks(false);
   }catch(e){

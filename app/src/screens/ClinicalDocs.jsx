@@ -193,20 +193,30 @@ export default function ClinicalDocs({ caseId, onBack, me }) {
   }
 
   return (
-    <div className="card">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-        <div>
-          <button className="link" onClick={onBack}>← Back to Cases</button>
-          <h2 style={{ margin: '4px 0 0' }}>📁 Clinical Documentation &amp; Assessments</h2>
-          <div style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>
-            Patient: <b>{c ? c.name : '…'}</b> {c?.age ? `(${c.age}yo)` : ''}
-          </div>
-        </div>
-
-        <button className="pri sm" onClick={() => setShowAdd(!showAdd)} style={{ margin: 0 }}>
-          {showAdd ? '✕ Close Form' : '＋ New Clinical Assessment'}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
         </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{c ? c.name : 'Patient'} {c?.age ? `(${c.age}yo)` : ''}</span>
+          <span className="case-view-tag">📁 Clinical Docs</span>
+        </div>
       </div>
+
+      <div className="card">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <div>
+            <h2 style={{ margin: 0 }}>📁 Clinical Documentation &amp; Assessments</h2>
+            <div style={{ fontSize: '0.85rem', color: 'var(--muted)', marginTop: '2px' }}>
+              Patient: <b>{c ? c.name : '…'}</b> {c?.age ? `(${c.age}yo)` : ''}
+            </div>
+          </div>
+
+          <button className="pri sm" onClick={() => setShowAdd(!showAdd)} style={{ margin: 0 }}>
+            {showAdd ? '✕ Close Form' : '＋ New Clinical Assessment'}
+          </button>
+        </div>
 
       {/* PATIENT BRIEF & SUMMARY CARD (1ST PAGE VIEW) */}
       {c && <div style={{ marginTop: '12px' }}><PatientSummaryCard patient={c} caseId={caseId} onUpdated={load} /></div>}
@@ -1111,6 +1121,7 @@ export default function ClinicalDocs({ caseId, onBack, me }) {
           </div>
         );
       })()}
+    </div>
     </div>
   );
 }

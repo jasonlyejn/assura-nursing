@@ -21,16 +21,24 @@ export default function Mews({ caseObj, onBack }) {
   });
   const src = '/mews.html?' + q.toString();
   return (
-    <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', borderBottom: '1px solid #e2e8ef' }}>
-        <button className="link" onClick={onBack}>← Back to cases</button>
-        <b style={{ color: '#0C3054' }}>MEWS chart · {caseObj.name}</b>
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{caseObj.name || caseObj.patient_name || 'Patient'}</span>
+          <span className="case-view-tag">📈 MEWS Chart</span>
+        </div>
       </div>
-      <iframe
-        title="MEWS chart"
-        src={src}
-        style={{ width: '100%', height: 'calc(100vh - 150px)', minHeight: 520, border: 0, display: 'block' }}
-      />
+
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <iframe
+          title="MEWS chart"
+          src={src}
+          style={{ width: '100%', height: 'calc(100vh - 160px)', minHeight: 560, border: 0, display: 'block' }}
+        />
+      </div>
     </div>
   );
 }

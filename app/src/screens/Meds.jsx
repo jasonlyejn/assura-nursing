@@ -251,18 +251,29 @@ export default function Meds({ caseObj, me, onBack }) {
   const activeScale = calculateSlidingScale(insForm.glucose);
 
   return (
-    <div className="card">
-      <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-        <button className="link" onClick={onBack}>← Back to Cases</button>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <button
-            className={tab === 'print' ? 'pri sm' : 'ghost sm'}
-            onClick={() => setTab(tab === 'print' ? 'regular' : 'print')}
-          >
-            🖨️ {tab === 'print' ? 'Back to Digital Chart' : 'Printable Bedside MAR'}
-          </button>
+    <div>
+      <div className="case-subbar no-print">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
+        </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{pt.name || caseObj.name || 'Patient'}</span>
+          <span className="case-view-tag">💊 Medication &amp; MAR</span>
         </div>
       </div>
+
+      <div className="card">
+        <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+          <b style={{ color: 'var(--navy)', fontSize: '1rem' }}>💊 Medication Administration Record (MAR)</b>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button
+              className={tab === 'print' ? 'pri sm' : 'ghost sm'}
+              onClick={() => setTab(tab === 'print' ? 'regular' : 'print')}
+            >
+              🖨️ {tab === 'print' ? 'Back to Digital Chart' : 'Printable Bedside MAR'}
+            </button>
+          </div>
+        </div>
 
       {/* Patient Allergy & Safety Banner */}
       <div className="marhead">
@@ -824,6 +835,7 @@ export default function Meds({ caseObj, me, onBack }) {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

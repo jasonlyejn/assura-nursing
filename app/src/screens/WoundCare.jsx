@@ -106,25 +106,33 @@ export default function WoundCare({ caseObj, me, onBack }) {
   }
 
   return (
-    <div className="card" style={{ maxWidth: '850px', margin: '0 auto' }}>
-      <div className="head-row" style={{ marginBottom: '14px' }}>
-        <div>
-          <button className="ghost small" onClick={onBack} style={{ marginBottom: '6px' }}>
-            ← Back to Case
-          </button>
-          <h2>🩹 Wound Assessment & Photo Timeline</h2>
-          <div className="muted" style={{ fontSize: '0.84rem' }}>
-            Patient: <b>{caseObj.patient_name || caseObj.name}</b> · Case #{caseObj.case_no || caseObj.id}
-          </div>
-        </div>
-        <button
-          className="ghost"
-          onClick={() => setAdding(!adding)}
-          style={{ background: adding ? '#f0f4f8' : 'var(--blue)', color: adding ? 'inherit' : '#fff' }}
-        >
-          {adding ? '✕ Cancel' : '➕ New Assessment'}
+    <div>
+      <div className="case-subbar">
+        <button className="case-back-btn" onClick={onBack}>
+          <span>←</span> <b>Back to Cases</b>
         </button>
+        <div className="case-subbar-info">
+          <span className="case-patient-name">{caseObj.patient_name || caseObj.name || 'Patient'}</span>
+          <span className="case-view-tag">🩹 Wound Care</span>
+        </div>
       </div>
+
+      <div className="card">
+        <div className="head-row" style={{ marginBottom: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <div>
+            <h2 style={{ margin: 0 }}>🩹 Wound Assessment &amp; Photo Timeline</h2>
+            <div className="muted" style={{ fontSize: '0.84rem', marginTop: '2px' }}>
+              Patient: <b>{caseObj.patient_name || caseObj.name}</b> · Case #{caseObj.case_no || caseObj.id}
+            </div>
+          </div>
+          <button
+            className="pri sm"
+            onClick={() => setAdding(!adding)}
+            style={{ margin: 0 }}
+          >
+            {adding ? '✕ Cancel' : '➕ New Assessment'}
+          </button>
+        </div>
 
       {err && <div className="err" style={{ marginBottom: '10px' }}>{err}</div>}
 
@@ -414,6 +422,7 @@ export default function WoundCare({ caseObj, me, onBack }) {
           })}
         </div>
       )}
+    </div>
     </div>
   );
 }

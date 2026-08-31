@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor & Specialist Clinical Summary · Assura Nursing Care</title>
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <style>
+    :root {
+      --primary: #0d3a54;
+      --accent: #0284c7;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --green: #16a34a;
+      --red: #dc2626;
+      --amber: #d97706;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 16px; min-height: 100vh; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .header { background: var(--primary); color: #fff; padding: 18px 22px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(13,58,84,0.15); }
+    .header-logo { display: flex; align-items: center; gap: 12px; }
+    .header-logo img { height: 42px; width: auto; }
+    .badge-doc { background: #38bdf8; color: #082f49; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; }
+    
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid var(--line); padding-bottom: 8px; }
+    
+    .pin-gate { max-width: 400px; margin: 80px auto; text-align: center; }
+    .pin-gate input { width: 100%; font-size: 1.5rem; letter-spacing: 6px; text-align: center; padding: 12px; border: 2px solid var(--accent); border-radius: 10px; margin: 16px 0; }
+    .btn { background: var(--primary); color: #fff; border: none; padding: 12px 24px; font-size: 1rem; font-weight: 700; border-radius: 8px; cursor: pointer; width: 100%; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.9; }
+
+    .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .vitals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 10px; }
+    .vital-box { background: #f0f7ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px; text-align: center; }
+    .vital-box .label { font-size: 0.72rem; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+    .vital-box .val { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: 2px; }
+
+    .allergy-alert { background: #fef2f2; border: 1.5px solid #fecaca; color: #991b1b; padding: 10px 14px; border-radius: 8px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.88rem; }
+    th { background: #f1f5f9; text-align: left; padding: 8px 10px; font-weight: 700; color: var(--muted); border-bottom: 1px solid var(--line); }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--line); }
+
+    .wound-card { background: #fdfaf6; border: 1px solid #fed7aa; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+    .wound-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
+    .footer { text-align: center; font-size: 0.75rem; color: var(--muted); margin: 30px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- PIN Gate Modal -->
+    <div id="pinGate" class="card pin-gate">
+      <img src="logo.png" alt="Assura Logo" style="height: 48px; margin-bottom: 12px;">
+      <h2>Doctor Access Verification</h2>
+      <p style="font-size: 0.85rem; color: var(--muted); margin-top: 4px;">
+        This is a confidential 72-hour clinical referral record. Please enter the 4-digit security PIN provided by the nursing team.
+      </p>
+      <input type="password" id="pinInput" maxlength="6" placeholder="••••" autofocus>
+      <button class="btn" onclick="verifyPin()">Unlock Clinical Record</button>
+      <p id="errMsg" style="color: var(--red); font-size: 0.82rem; margin-top: 10px; display: none;"></p>
+    </div>
+
+    <!-- Clinical Dashboard (Visible after PIN verification) -->
+    <div id="dashboard" style="display: none;">
+      <div class="header">
+        <div class="header-logo">
+          <img src="logo.png" alt="Assura Logo">
+          <div>
+            <h2 style="font-size: 1.15rem;">Assura Nursing Care</h2>
+            <div style="font-size: 0.75rem; opacity: 0.85;">Doctor &amp; Specialist Clinical Share</div>
+          </div>
+        </div>
+        <span class="badge-doc">🩺 ATTENDING PHYSICIAN ACCESS</span>
+      </div>
+
+      <!-- Patient Demographics & Allergy Alert -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+          <h2 id="patientName" style="color: var(--primary); font-size: 1.4rem;">Patient Name</h2>
+          <span id="patientMeta" style="color: var(--muted); font-size: 0.9rem;">Age / Sex / Care Type</span>
+        </div>
+        <div id="allergyBox" class="allergy-alert" style="margin-top: 12px; display: none;">
+          ⚠️ <b>ALLERGY ALERT:</b> <span id="allergyText">None</span>
+        </div>
+        <div id="patientNotes" style="font-size: 0.85rem; color: #334155; margin-top: 8px; background: #f8fafc; padding: 8px 12px; border-radius: 6px;">
+          <b>Clinical Care Summary:</b> <span id="notesText"></span>
+        </div>
+      </div>
+
+      <!-- Official MEWS Vitals Scoring Chart (Matching Clinical Standard) -->
+      <div class="card" style="padding: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+          <h3 style="margin: 0; border: none; padding: 0;">📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)</h3>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button id="wprev" class="btn" style="padding: 6px 12px; font-size: 0.8rem; width: auto;" onclick="prevDocWeek()">◀ Prev</button>
+            <span id="docWeekLbl" style="font-weight: 800; font-size: 0.85rem; color: var(--primary);">Week 1</span>
+            <button id="wnext" class="btn" style="padding: 6px 12px; font-size: 0.8rem; width: auto;" onclick="nextDocWeek()">Next ▶</button>
+            <button class="btn" style="padding: 6px 14px; font-size: 0.8rem; width: auto; background: var(--accent);" onclick="window.print()">🖨 Print Chart</button>
+          </div>
+        </div>
+
+        <div id="mewsChartContainer" style="overflow-x: auto; background: #fff; border: 1px solid #000; padding: 8px; border-radius: 6px;">
+          <div style="text-align: center; color: var(--muted); padding: 20px;">Loading full MEWS chart…</div>
+        </div>
+      </div>
+
+      <!-- Active Medication Administration Record (MAR) -->
+      <div class="card">
+        <h3>💊 Active Prescriptions &amp; Administration</h3>
+        <table id="medsTable">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Dose / Route</th>
+              <th>Frequency</th>
+              <th>Times</th>
+              <th>Indication</th>
+            </tr>
+          </thead>
+          <tbody id="medsBody">
+            <tr><td colspan="5" style="color: var(--muted); text-align: center;">No active medications recorded.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Blood Glucose & Insulin Logs -->
+      <div class="card">
+        <h3>💉 Blood Glucose &amp; Insulin Administration</h3>
+        <table id="glucoseTable">
+          <thead>
+            <tr>
+              <th>Date &amp; Time</th>
+              <th>Meal Slot</th>
+              <th>Reading (mmol/L)</th>
+              <th>Insulin Dose</th>
+              <th>Site</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="glucoseBody">
+            <tr><td colspan="6" style="color: var(--muted); text-align: center;">No glucose logs available.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Wound Healing & Staging Gallery -->
+      <div class="card">
+        <h3>🩹 Wound Healing &amp; Tissue Assessment</h3>
+        <div id="woundGallery">
+          <p style="color: var(--muted); font-size: 0.85rem;">No active wound records.</p>
+        </div>
+      </div>
+
+      <!-- Laboratory Results & Longitudinal Blood Test Tracker -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+          <h3 style="margin:0;border:none;padding:0;">🧪 Laboratory Results &amp; Serial Blood Test Matrix (检验单与血气追踪)</h3>
+          <span id="labAlertPill" style="display:none;font-size:0.75rem;font-weight:800;background:#fee2e2;color:#b91c1c;padding:3px 8px;border-radius:12px;border:1px solid #f87171;">
+            🚨 Critical Lab Values Found
+          </span>
+        </div>
+        <div id="labMatrixContainer">
+          <p style="color: var(--muted); font-size: 0.85rem;">No laboratory or ABG records uploaded.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Assessments & Progress Notes -->
+      <div class="card">
+        <h3>📁 Clinical Assessments &amp; Nursing Notes</h3>
+        <div id="docsList">
+          <p style="color: var(--muted); font-size: 0.85rem;">No additional clinical documents.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        © 2026 Assura Nursing Care · Confidential Medical Record · PDPA Protected · 72-Hour Security Token
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('t') || '';
+    let globalDocData = null;
+    let docCurrentWeek = 0;
+
+    function b(t,min,max,score,ews){return{t,min,max,score,ews};}
+    const SECT=[
+     {key:'resp',sym:'✗',name:'RESPIRATION RATE',sub:'BREATH /MIN',plot:'✗',bands:[
+       b('≥36',36,Infinity,3,3),b('25 - 35',25,36,2,2),b('21 - 24',21,25,1,1),b('12 - 20',12,21,0,0),
+       b('9 - 11',9,12,1,1),b('5 - 8',5,9,2,2),b('≤ 4',-Infinity,5,3,3)]},
+     {key:'spo2a',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 1 · SPO2 (%)',plot:'●',scale:1,bands:[
+       b('≥ 96',96,Infinity,0,0),b('94 - 95',94,96,1,1),b('90 - 93',90,94,2,2),b('≤ 89',-Infinity,90,3,3)]},
+     {key:'spo2b',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 2 · SPO2 (%) — (use scale 2 when SPO2 target in range of 88-92% for Respiratory failure / COPD)',plot:'●',scale:2,bands:[
+       b('≥97 on O2',97,Infinity,3,3),b('95 - 96 on O2',95,97,2,2),b('≥93 - 94 on O2 / ≥93 RA',88,95,0,0),
+       b('86 - 87',86,88,1,1),b('84 - 85',84,86,2,2),b('≤ 83',-Infinity,84,3,3)]},
+     {key:'o2',sym:'',name:'ROOM AIR / OXYGEN',sub:'',plot:'',type:'o2',bands:[
+       b('RA= ROOM AIR',null,null,0,0),b('O2 L/MIN',null,null,2,2),b('DEVICE',null,null,null,null)]},
+     {key:'bp',sym:'▲▼',name:'BLOOD PRESSURE (mmHg)',sub:'▲ SBP scored · ▼ DBP · NIBP',plot:'▲▼',type:'bp',bands:[
+       b('≥ 220',220,Infinity,3,3),b('201 - 219',201,220,3,null),b('191 - 200',191,201,3,null),b('181 - 190',181,191,3,null),
+       b('171 - 180',171,181,2,2),b('161 - 170',161,171,2,null),b('151 - 160',151,161,1,1),b('141 - 150',141,151,1,null),
+       b('131 - 140',131,141,0,0),b('121 - 130',121,131,0,null),b('111 - 120',111,121,0,null),b('101 - 110',101,111,0,null),
+       b('91 - 100',91,101,1,1),b('81 - 90',81,91,2,2),b('≤ 80',-Infinity,81,3,3)]},
+     {key:'hr',sym:'●',name:'HEART RATE (bpm)',sub:'',plot:'●',symcol:'#d40000',bands:[
+       b('≥ 131',130,Infinity,3,3),b('111 - 130',111,130,2,2),b('81 - 110',81,111,0,0),
+       b('61 - 80',61,81,0,null),b('41 - 60',41,61,2,2),b('≤ 40',-Infinity,41,3,3)]},
+     {key:'temp',sym:'○',name:'CORE BODY TEMPERATURE °C',sub:'',plot:'○',bands:[
+       b('≥ 40°C',40.0,Infinity,3,3),b('39 - 39.9°C',39.0,40.0,3,null),b('38 - 38.9°C',38.0,39.0,2,2),
+       b('37.5 - 37.9°C',37.5,38.0,1,1),b('37.0 - 37.4°C',37.0,37.5,0,0),b('36.0 - 36.9°C',36.0,37.0,0,null),
+       b('35.0 - 35.9°C',35.0,36.0,1,1),b('34.0 - 34.9°C',34.0,35.0,2,2),b('≤ 34°C',-Infinity,34.0,3,3)]},
+    ];
+    const SCOREKEYS=['resp','spo2a','spo2b','o2','bp','hr','temp'];
+    const NOTES=[
+     ['pain','PAIN SCORE','0 - 10 ( MILD TO SEVERE )'],
+     ['hgt','RANDOM HEMOGLUCOSE TEST','4.0 - 8.0 mmol/L'],
+     ['fluidin','FLUIDS INTAKE VOLUME','TOTAL MLS PER SHIFT (TARGET INTAKE: ________)'],
+     ['urine','URINE OUTPUT VOLUME','MLS IF ON CBD (1-2 MLS/KG/H)'],
+     ['bowel','BOWEL STATUS','INDICATED DAYS OF BNO (BNO < 3 DAYS)'],
+     ['stool','STOOL TYPES','S= SOFT, H= HARD, L= LOOSE, W= WATERLY'],
+     ['hygiene','PERSONAL HYGIENE','( SPONGING, SHOWER, ORAL CARE )'],
+     ['fbal','FLUIDS BALANCE',''],
+     ['wound','WOUND CARE','C= CLEAN, I= INFECTED, S= SLOUGH, H= HEALING, R= TO REVIEW'],
+     ['staff','STAFF INITIAL',''],
+    ];
+
+    async function verifyPin() {
+      const pin = document.getElementById('pinInput').value.trim();
+      const errMsg = document.getElementById('errMsg');
+      errMsg.style.display = 'none';
+
+      if (!pin) {
+        errMsg.innerText = 'Please enter your 4-digit PIN.';
+        errMsg.style.display = 'block';
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/share/doctor?token=${encodeURIComponent(token)}&pin=${encodeURIComponent(pin)}`);
+        const text = await res.text().catch(() => '');
+        let data = {};
+        try { data = text ? JSON.parse(text) : {}; } catch (_) {
+          data = { error: `Server error (${res.status}): ${text.slice(0, 100) || res.statusText || 'Unable to connect'}` };
+        }
+        if (!res.ok) throw new Error(data.error || 'Failed to verify PIN');
+
+        globalDocData = data;
+        document.getElementById('pinGate').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        renderDashboard(data);
+      } catch (e) {
+        errMsg.innerText = e.message;
+        errMsg.style.display = 'block';
+      }
+    }
+
+    function esc(s){return(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+    function cls(sc){return sc===3?'s3':sc===2?'s2':sc===1?'s1':'s0';}
+
+    function renderDocMewsChart() {
+      const d = globalDocData;
+      if (!d) return;
+      const mews = d.mews && d.mews.data ? d.mews.data : { header: {}, cols: [] };
+      const p = d.patient || {};
+      const cols = mews.cols || [];
+      const PER = 14;
+      const totalWeeks = Math.max(1, Math.ceil(cols.length / PER));
+      if (docCurrentWeek >= totalWeeks) docCurrentWeek = totalWeeks - 1;
+      if (docCurrentWeek < 0) docCurrentWeek = 0;
+
+      const s = docCurrentWeek * PER;
+      const curColIdxs = [];
+      for (let i = s; i < s + PER; i++) {
+        curColIdxs.push(i);
+      }
+
+      // Date range label
+      const activeCols = curColIdxs.map(i => cols[i]).filter(c => c && c.date);
+      let dateRange = '';
+      if (activeCols.length) {
+        const d1 = activeCols[0].date;
+        const d2 = activeCols[activeCols.length - 1].date;
+        dateRange = d1 === d2 ? ` (${d1})` : ` (${d1} – ${d2})`;
+      }
+      document.getElementById('docWeekLbl').innerText = `Week ${docCurrentWeek + 1}${dateRange}`;
+      document.getElementById('wprev').disabled = (docCurrentWeek === 0);
+      document.getElementById('wnext').disabled = (docCurrentWeek >= totalWeeks - 1);
+
+      // Render Header
+      let h = `
+        <div class="mews-head" style="display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #0C3054;padding-bottom:6px;margin-bottom:8px;">
+          <img src="/logo.png" alt="Assura Logo" style="height:42px;">
+          <h2 style="font-size:16px;color:#0C3054;font-weight:800;letter-spacing:0.5px;margin:0;">MEWS VITALS SIGN SCORING CHART</h2>
+          <div style="font-size:10px;color:#0C3054;font-weight:700;">Assura Nursing Care</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px 12px;font-size:10.5px;margin-bottom:8px;font-weight:700;">
+          <div style="border-bottom:1px solid #555;padding:2px 0;">NAME: <b>${esc(p.name || mews.header?.name || '—')}</b></div>
+          <div style="border-bottom:1px solid #555;padding:2px 0;">ROOM NO: <b>${esc(mews.header?.room || '—')}</b></div>
+          <div style="border-bottom:1px solid #555;padding:2px 0;">PAGE: <b>${esc(mews.header?.page || (docCurrentWeek + 1))}</b></div>
+          <div style="border-bottom:1px solid #555;padding:2px 0;grid-column:span 2;">REMARKS: <b>${esc(mews.header?.remarks || p.allergies ? 'Allergies: ' + p.allergies : '—')}</b></div>
+          <div style="border-bottom:1px solid #555;padding:2px 0;">PATIENT WEIGHT: <b>${esc(mews.header?.weight || '—')}</b></div>
+          <div style="border-bottom:1px solid #555;padding:2px 0;grid-column:span 3;">DIAGNOSIS: <b>${esc(mews.header?.dx || p.notes || '—')}</b></div>
+        </div>
+
+        <table class="mewstbl" style="width:100%;border-collapse:collapse;font-size:9.5px;table-layout:fixed;">
+          <colgroup>
+            <col style="width:138px;">
+            <col style="width:72px;">
+            <col style="width:44px;" span="14">
+            <col style="width:26px;">
+            <col style="width:78px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="pname" colspan="2" style="background:#0C3054;color:#fff;font-size:10px;padding:3px 6px;text-align:left;letter-spacing:0.4px;">7-DAY CLINICAL SHEET</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 1</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 2</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 3</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 4</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 5</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 6</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#d0e6f8;color:#0C3054;font-size:9.5px;font-weight:800;padding:2px;">DAY 7</th>
+              <th class="colh" colspan="2" style="border:1px solid #000;background:#0C3054;color:#fff;font-size:9.5px;font-weight:800;padding:2px;">EWS</th>
+            </tr>
+            <tr>
+              <th class="pname" style="background:#f4f7fa;border:1px solid #000;padding:3px 5px;font-size:9.5px;text-align:left;color:#0C3054;">MONTH / YEAR</th>
+              <th class="colh" style="background:#82BAE4;color:#0C3054;border:1px solid #000;font-size:9px;padding:2px;text-align:center;">DATE<br>TIME</th>
+      `;
+
+      curColIdxs.forEach(c => {
+        const col = cols[c] || {};
+        h += `<th class="colh" style="background:#82BAE4;color:#0C3054;border:1px solid #000;font-size:9px;padding:2px 0;overflow:hidden;">
+          <div style="font-weight:800;font-size:8.5px;">${esc(col.date || '')}</div>
+          <div style="font-size:8px;font-weight:700;">${esc(col.time || '')}</div>
+        </th>`;
+      });
+      h += `<th class="colh ews" style="background:#82BAE4;color:#0C3054;border:1px solid #000;font-size:9px;overflow:hidden;">EWS</th><th class="colh" style="background:#82BAE4;color:#0C3054;border:1px solid #000;font-size:9px;overflow:hidden;">PARAMETERS</th></tr></thead><tbody>`;
+
+      // Render SECTIONS
+      SECT.forEach(sec => {
+        sec.bands.forEach((bd, bi) => {
+          h += `<tr class="${bi===0?'grp':''}" style="${bi===0?'border-top:2px solid #000;':''}">`;
+          if (bi === 0) {
+            h += `<td class="pname" rowspan="${sec.bands.length}" style="background:#f4f7fa;border:1px solid #000;padding:2px 4px;font-weight:800;font-size:9.5px;vertical-align:middle;text-align:left;line-height:1.15;word-break:break-word;overflow:hidden;">
+              <span style="${sec.symcol?('color:'+sec.symcol):'color:#0C3054'};margin-right:2px;font-size:11px;">${esc(sec.plot||'')}</span>
+              ${esc(sec.name)}
+              ${sec.sub ? `<span style="display:block;font-size:7.8px;color:#333;font-weight:600;margin-top:1px;">${esc(sec.sub)}</span>` : ''}
+            </td>`;
+          }
+          h += `<td class="bandlbl" style="border:1px solid #000;background:#fff;padding:1px 3px;text-align:right;font-size:8.5px;font-weight:600;line-height:1.1;overflow:hidden;word-break:break-word;">${esc(bd.t)}</td>`;
+
+          const isText = (bd.score == null);
+          curColIdxs.forEach(c => {
+            const col = cols[c] || {};
+            const colMarks = col.marks || {};
+            const colReadings = col.readings || {};
+            const colNotes = col.notes || {};
+
+            if (isText) {
+              const dv = esc(colNotes[sec.key] || '');
+              h += `<td class="data" style="border:1px solid #000;background:#fff;font-size:8.5px;text-align:center;overflow:hidden;padding:1px 0;">${dv}</td>`;
+              return;
+            }
+
+            let marked = false, disp = '';
+            if (sec.type === 'bp') {
+              const ms = colMarks.bp, md = colMarks.bp_dia, rs = colReadings.bp, rd = colReadings.bp_dia;
+              const parts = [];
+              if (ms === bi) parts.push('▲' + (rs != null ? esc(rs) : ''));
+              if (md === bi) parts.push('▼' + (rd != null ? esc(rd) : ''));
+              if (parts.length > 0) {
+                marked = true;
+                disp = parts.length > 1 ? `<span style="font-size:7.5px;letter-spacing:-0.5px;">${parts.join(' ')}</span>` : parts[0];
+              }
+            } else {
+              const mi = colMarks[sec.key], rd = colReadings[sec.key];
+              if (mi === bi) {
+                marked = true;
+                const sy = sec.plot || '●';
+                const syh = sec.symcol ? `<span style="color:${sec.symcol}">${sy}</span>` : sy;
+                disp = syh + (rd != null && rd !== '' ? `<span style="font-size:8px;font-weight:700;">${esc(rd)}</span>` : '');
+              }
+            }
+
+            const bgCol = bd.score === 3 ? '#F6A0A0' : bd.score === 2 ? '#F9BC6B' : bd.score === 1 ? '#FDFBA3' : '#ffffff';
+            h += `<td class="cell" style="border:1px solid #000;background:${bgCol};text-align:center;font-size:8.5px;font-weight:700;overflow:hidden;padding:0;${marked?'box-shadow:inset 0 0 0 2px #0C3054;':''}"><div style="min-height:16px;display:flex;align-items:center;justify-content:center;line-height:1;overflow:hidden;white-space:nowrap;">${disp}</div></td>`;
+          });
+
+          const bgColEws = bd.score === 3 ? '#F6A0A0' : bd.score === 2 ? '#F9BC6B' : bd.score === 1 ? '#FDFBA3' : '#ffffff';
+          h += `<td class="ews" style="border:1px solid #000;background:${bgColEws};font-weight:800;font-size:9px;text-align:center;overflow:hidden;">${bd.ews==null?'':bd.ews}</td>`;
+          h += `<td class="bandlbl" style="border:1px solid #000;background:#fff;padding:1px 3px;font-size:8.5px;text-align:right;font-weight:600;line-height:1.1;overflow:hidden;word-break:break-word;">${esc(bd.t)}</td>`;
+          h += `</tr>`;
+        });
+      });
+
+      // TOTAL EWS ROW
+      h += `<tr class="totalrow" style="background:#82BAE4;color:#0C3054;font-weight:800;border-top:2px solid #000;">
+        <td class="totlbl" colspan="2" style="background:#82BAE4;color:#0C3054;border:1px solid #000;padding:4px 6px;text-align:left;font-size:10.5px;font-weight:800;">TOTAL EWS SCORE</td>`;
+      curColIdxs.forEach(c => {
+        const col = cols[c] || {};
+        let t = 0, any = false;
+        SCOREKEYS.forEach(k => {
+          const s = SECT.find(x => x.key === k);
+          const mi = col.marks ? col.marks[k] : null;
+          if (s && mi != null && s.bands[mi] && s.bands[mi].score != null) {
+            t += s.bands[mi].score;
+            any = true;
+          }
+        });
+        const cc = t >= 5 ? 'background:#F6A0A0;color:#900;' : t >= 3 ? 'background:#F9BC6B;' : t >= 1 ? 'background:#FDFBA3;' : 'background:#fff;';
+        h += `<td class="tot" style="border:1px solid #000;${any ? cc : 'background:#fff;'}font-weight:800;font-size:10px;text-align:center;padding:2px 0;">${any ? t : ''}</td>`;
+      });
+      h += `<td class="totlbl" colspan="2" style="background:#82BAE4;color:#0C3054;border:1px solid #000;padding:4px 6px;text-align:right;font-size:10.5px;font-weight:800;">TOTAL EWS</td></tr>`;
+
+      // Render NOTES & NURSING OBSERVATIONS
+      NOTES.forEach(row => {
+        const k = row[0], title = row[1], sub = row[2];
+        h += `<tr>
+          <td class="pname" style="background:#f4f7fa;border:1px solid #000;padding:2px 4px;font-weight:800;font-size:9px;vertical-align:middle;text-align:left;line-height:1.1;overflow:hidden;word-break:break-word;">
+            ${esc(title)}${sub ? `<span style="display:block;font-size:7.5px;color:#555;font-weight:500;">${esc(sub)}</span>` : ''}
+          </td>
+          <td style="border:1px solid #000;background:#fff;"></td>`;
+
+        curColIdxs.forEach(c => {
+          const col = cols[c] || {};
+          const colNotes = col.notes || {};
+          const val = esc(colNotes[k] || '');
+          h += `<td class="data" style="border:1px solid #000;background:#fff;font-size:8.5px;text-align:center;font-weight:700;overflow:hidden;padding:1px 0;">${val}</td>`;
+        });
+
+        h += `<td colspan="2" style="border:1px solid #000;background:#fff;"></td></tr>`;
+      });
+
+      h += `</tbody></table>`;
+
+      // Ventilator Section if patient has ventilator observations
+      if (mews.ventLogs && mews.ventLogs.length) {
+        const aw = mews.airway || {};
+        h += `
+          <div style="margin-top:16px;border:1.5px solid #0284c7;border-radius:8px;overflow:hidden;background:#fff;">
+            <div style="background:#0284c7;color:#fff;padding:6px 10px;font-size:12px;font-weight:800;display:flex;justify-content:space-between;align-items:center;">
+              <span>🫁 Mechanical Ventilation Flowsheet (机械通气监测记录)</span>
+              <span style="font-size:10px;font-weight:600;">Airway: ${esc(aw.type||'ETT')} ${esc(aw.size||'7.5')}mm (${esc(aw.depth||'21cm')}) · Cuff: 20-30 cmH₂O</span>
+            </div>
+            <div style="overflow-x:auto;">
+              <table style="width:100%;border-collapse:collapse;font-size:9.5px;text-align:center;">
+                <thead>
+                  <tr style="background:#f0f9ff;color:#0369a1;font-weight:700;">
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Time</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Mode</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Vt (Set/Exp)</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">RR (Set/Tot)</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">FiO₂</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">PEEP</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">PIP</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Pplat</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">PS</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Cuff</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Suction / Sputum</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">ABG</th>
+                    <th style="padding:4px;border:1px solid #cbd5e1;">Staff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${mews.ventLogs.map(l => `
+                    <tr>
+                      <td style="padding:3px;border:1px solid #cbd5e1;font-weight:700;">${esc(l.time||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;font-weight:800;color:#0369a1;">${esc(l.mode||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.vt||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.rr||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;font-weight:700;">${l.fio2 ? (esc(l.fio2)+'%') : ''}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.peep||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;${parseFloat(l.pip)>=30?'color:#dc2626;font-weight:800;':''}">${esc(l.pip||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.pplat||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.ps||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.cuff||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.suction||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.abg||'')}</td>
+                      <td style="padding:3px;border:1px solid #cbd5e1;">${esc(l.staff||'')}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      }
+
+      // Legend Footer
+      h += `
+        <div style="display:flex;justify-content:space-between;font-size:8.5px;font-weight:600;color:#333;margin-top:8px;border-top:1px solid #ccc;padding-top:4px;flex-wrap:wrap;gap:8px;">
+          <div><b>Stool Types:</b> S = Soft, H = Hard, L = Loose, W = Watery · <b>Intervene if BNO &gt; 3 days</b></div>
+          <div><b>Wound Care:</b> C = Clean, I = Infected, S = Slough, H = Healing, R = To Review</div>
+          <div><b>Plot Symbols:</b> ✗ Resp &nbsp;● SpO2 &nbsp;▲ SBP ▼ DBP &nbsp;<span style="color:#d40000">●</span> HR &nbsp;○ Temp</div>
+        </div>
+      `;
+
+      document.getElementById('mewsChartContainer').innerHTML = h;
+    }
+
+    function prevDocWeek() {
+      if (docCurrentWeek > 0) {
+        docCurrentWeek--;
+        renderDocMewsChart();
+      }
+    }
+
+    function nextDocWeek() {
+      docCurrentWeek++;
+      renderDocMewsChart();
+    }
+
+    function renderDashboard(d) {
+      // Patient Demographics
+      const p = d.patient || {};
+      document.getElementById('patientName').innerText = p.name || 'Patient';
+      document.getElementById('patientMeta').innerText = `${p.age ? p.age + ' yrs · ' : ''}${p.sex || ''} · ${p.care_type === 'procedure' ? 'Procedure Visit' : 'Home Nursing Care'}`;
+      if (p.allergies) {
+        document.getElementById('allergyBox').style.display = 'flex';
+        document.getElementById('allergyText').innerText = p.allergies;
+      }
+      if (p.notes) {
+        document.getElementById('notesText').innerText = p.notes;
+      }
+
+      // Render Full MEWS Chart
+      renderDocMewsChart();
+
+      // Medications
+      if (d.medications && d.medications.length) {
+        document.getElementById('medsBody').innerHTML = d.medications.map(m => `
+          <tr>
+            <td><b>${m.name}</b></td>
+            <td>${m.dose || '—'} · ${m.route || 'Oral'}</td>
+            <td>${m.frequency || 'Daily'}</td>
+            <td>${m.times || '—'}</td>
+            <td>${m.indication || '—'}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Glucose Logs
+      if (d.glucose_logs && d.glucose_logs.length) {
+        document.getElementById('glucoseBody').innerHTML = d.glucose_logs.map(g => `
+          <tr>
+            <td>${g.date} ${g.time || ''}</td>
+            <td><span style="font-weight:700; text-transform:capitalize;">${g.meal_slot}</span></td>
+            <td><b style="color: ${g.glucose_reading > 10 ? 'var(--amber)' : g.glucose_reading < 4 ? 'var(--red)' : 'var(--green)'}">${Number(g.glucose_reading).toFixed(1)}</b></td>
+            <td>${g.insulin_units ? g.insulin_units + ' units (' + (g.insulin_brand || '') + ')' : '—'}</td>
+            <td>${g.injection_site || '—'}</td>
+            <td>${g.notes || '—'}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Wounds
+      if (d.wounds && d.wounds.length) {
+        document.getElementById('woundGallery').innerHTML = d.wounds.map(w => `
+          <div class="wound-card">
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              ${w.photo ? `<img src="${w.photo}" class="wound-img" alt="Wound photo">` : ''}
+              <div style="flex: 1;">
+                <b style="color: var(--primary); font-size: 1rem;">${w.location || 'Wound'} — Stage ${w.stage || 'N/A'}</b>
+                <div style="font-size: 0.8rem; color: var(--muted); margin-top: 3px;">
+                  Size: <b>${w.size || '—'}</b> · Exudate: <b>${w.exudate || '—'}</b> · Bed: <b>${w.tissue_type || '—'}</b>
+                </div>
+                <div style="font-size: 0.82rem; margin-top: 6px;"><b>Dressing Plan:</b> ${w.dressing_plan || 'Standard aseptic dressing'}</div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Laboratory & ABG Results
+      const labDocs = (d.clinical_docs || []).filter(doc => doc.doc_type === 'lab_results' || (doc.doc_type === 'uploaded_file' && doc.content && doc.content.readings && Object.keys(doc.content.readings).length > 0));
+      if (labDocs.length) {
+        let allCrits = [];
+        const columns = labDocs.sort((a,b)=>(a.created_at||0)-(b.created_at||0)).map((ld, i) => {
+          const c = ld.content || {};
+          const dt = c.test_date || (ld.created_at ? new Date(ld.created_at).toLocaleDateString('en-GB') : '—');
+          const tm = c.test_time || (ld.created_at ? new Date(ld.created_at).toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit'}) : '');
+          return {
+            id: ld.id,
+            title: ld.title || `Test #${i+1}`,
+            dateStr: `${dt} ${tm}`.trim(),
+            readings: c.readings || {},
+            notes: c.notes || '',
+            attachment: ld.attachment_url || ''
+          };
+        });
+
+        // Collect all keys
+        const allKeys = new Set();
+        columns.forEach(col => Object.keys(col.readings).forEach(k => allKeys.add(k)));
+
+        const LAB_REF = {
+          ph: { name: 'pH (酸碱度)', unit: '', min: 7.35, max: 7.45, critLow: 7.20, critHigh: 7.60 },
+          paco2: { name: 'PaCO₂ (二氧化碳分压)', unit: 'mmHg', min: 35, max: 45, critLow: 20, critHigh: 60 },
+          pao2: { name: 'PaO₂ (氧分压)', unit: 'mmHg', min: 80, max: 100, critLow: 60, critHigh: null },
+          hco3: { name: 'HCO₃⁻ (碳酸氢根)', unit: 'mmol/L', min: 22, max: 26, critLow: 10, critHigh: 40 },
+          be: { name: 'Base Excess (BE 碱剩余)', unit: 'mmol/L', min: -2.0, max: 2.0, critLow: -10.0, critHigh: 10.0 },
+          sao2: { name: 'SaO₂ (血氧饱和度)', unit: '%', min: 95, max: 100, critLow: 88, critHigh: null },
+          lactate: { name: 'Lactate (血乳酸)', unit: 'mmol/L', min: 0.5, max: 2.0, critLow: null, critHigh: 4.0 },
+          pf_ratio: { name: 'P/F Ratio (PaO₂/FiO₂)', unit: 'mmHg', min: 300, max: 500, critLow: 200, critHigh: null },
+          hb: { name: 'Hemoglobin (Hb 血红蛋白)', unit: 'g/dL', min: 12.0, max: 16.0, critLow: 7.0, critHigh: 20.0 },
+          wbc: { name: 'White Blood Cell (WBC 白细胞)', unit: '×10⁹/L', min: 4.0, max: 11.0, critLow: 2.0, critHigh: 30.0 },
+          plt: { name: 'Platelets (PLT 血小板)', unit: '×10⁹/L', min: 150, max: 400, critLow: 50, critHigh: 1000 },
+          hct: { name: 'Hematocrit (HCT 红细胞比容)', unit: '%', min: 36, max: 48, critLow: 21, critHigh: 60 },
+          k: { name: 'Potassium (K⁺ 钾)', unit: 'mmol/L', min: 3.5, max: 5.0, critLow: 2.8, critHigh: 6.0 },
+          na: { name: 'Sodium (Na⁺ 钠)', unit: 'mmol/L', min: 135, max: 145, critLow: 120, critHigh: 160 },
+          creat: { name: 'Serum Creatinine (肌酐)', unit: 'µmol/L', min: 50, max: 110, critLow: null, critHigh: 350 },
+          urea: { name: 'Blood Urea (尿素氮)', unit: 'mmol/L', min: 2.5, max: 7.1, critLow: null, critHigh: 20.0 },
+          egfr: { name: 'eGFR (肾小球滤过率)', unit: 'mL/min', min: 60, max: 120, critLow: 15, critHigh: null },
+          ca: { name: 'Total Calcium (Ca²⁺ 钙)', unit: 'mmol/L', min: 2.15, max: 2.55, critLow: 1.75, critHigh: 3.00 },
+          mg: { name: 'Magnesium (Mg²⁺ 镁)', unit: 'mmol/L', min: 0.70, max: 1.05, critLow: 0.50, critHigh: 1.80 },
+          t_bili: { name: 'Total Bilirubin (总胆红素)', unit: 'µmol/L', min: 3, max: 21, critLow: null, critHigh: 80 },
+          alt: { name: 'ALT / SGPT (谷丙转氨酶)', unit: 'U/L', min: 7, max: 56, critLow: null, critHigh: 500 },
+          ast: { name: 'AST / SGOT (谷草转氨酶)', unit: 'U/L', min: 10, max: 40, critLow: null, critHigh: 500 },
+          alb: { name: 'Albumin (白蛋白)', unit: 'g/L', min: 35, max: 50, critLow: 20, critHigh: null },
+          inr: { name: 'INR (国际标准化比值)', unit: '', min: 0.8, max: 1.2, critLow: null, critHigh: 4.5 },
+          pt: { name: 'PT (凝血酶原时间)', unit: 's', min: 11.0, max: 13.5, critLow: null, critHigh: 30.0 },
+          aptt: { name: 'APTT (部分凝血活酶时间)', unit: 's', min: 25.0, max: 35.0, critLow: null, critHigh: 70.0 },
+          d_dimer: { name: 'D-Dimer (D-二聚体)', unit: 'µg/mL', min: 0.0, max: 0.50, critLow: null, critHigh: 5.0 },
+          trop: { name: 'Troponin I/T (肌钙蛋白)', unit: 'ng/mL', min: 0.0, max: 0.04, critLow: null, critHigh: 0.04 },
+          crp: { name: 'hs-CRP (C反应蛋白)', unit: 'mg/L', min: 0.0, max: 5.0, critLow: null, critHigh: 50.0 },
+          pct: { name: 'Procalcitonin (降钙素原)', unit: 'ng/mL', min: 0.0, max: 0.25, critLow: null, critHigh: 2.0 },
+          rbs: { name: 'Random Blood Glucose', unit: 'mmol/L', min: 4.0, max: 8.0, critLow: 3.0, critHigh: 20.0 }
+        };
+
+        function evalParam(k, raw) {
+          if (raw === '' || raw == null) return null;
+          const num = typeof raw === 'number' ? raw : parseFloat(String(raw).replace(/[^0-9.-]/g, ''));
+          if (isNaN(num)) return { val: raw, bg: '#fff', color: '#000', badge: '' };
+          const def = LAB_REF[k] || { unit: '', min: null, max: null };
+          if (def.critLow != null && num <= def.critLow) return { val: num, bg: '#fee2e2', color: '#b91c1c', badge: '🚨 CRIT LOW', isCrit: true };
+          if (def.critHigh != null && num >= def.critHigh) return { val: num, bg: '#fee2e2', color: '#b91c1c', badge: '🚨 CRIT HIGH', isCrit: true };
+          if (def.min != null && num < def.min) return { val: num, bg: '#fef3c7', color: '#b45309', badge: '↓ LOW' };
+          if (def.max != null && num > def.max) return { val: num, bg: '#fef3c7', color: '#b45309', badge: '↑ HIGH' };
+          return { val: num, bg: '#dcfce7', color: '#166534', badge: '✓ NORMAL' };
+        }
+
+        let matrixHtml = `<div style="overflow-x:auto;border:1px solid #cbd5e1;border-radius:6px;">
+          <table style="width:100%;border-collapse:collapse;font-size:9.5px;text-align:center;">
+            <thead>
+              <tr style="background:#0f2b48;color:#fff;text-align:left;">
+                <th style="padding:6px 8px;border-right:1px solid #1e40af;position:sticky;left:0;background:#0f2b48;z-index:2;min-width:140px;">Parameter</th>
+                <th style="padding:6px 4px;border-right:1px solid #1e40af;text-align:center;width:50px;">Unit</th>
+                <th style="padding:6px 6px;border-right:1px solid #1e40af;text-align:center;width:80px;">Standard Ref</th>
+                ${columns.map((c, idx) => `<th style="padding:6px 8px;border-right:1px solid #1e40af;text-align:center;min-width:90px;">
+                  <div style="font-weight:800;">${esc(c.title)}</div>
+                  <div style="font-size:8px;opacity:0.85;">${esc(c.dateStr)}</div>
+                </th>`).join('')}
+                ${columns.length >= 2 ? `<th style="padding:6px 8px;text-align:center;width:90px;background:#0369a1;">Serial Delta</th>` : ''}
+              </tr>
+            </thead>
+            <tbody>`;
+
+        Array.from(allKeys).forEach(k => {
+          const def = LAB_REF[k] || { name: k, unit: '—', min: '—', max: '—' };
+          const rowVals = columns.map(c => evalParam(k, c.readings[k]));
+          const activeNums = rowVals.filter(v => v && typeof v.val === 'number');
+          let deltaTxt = '—';
+          if (activeNums.length >= 2) {
+            const p = activeNums[activeNums.length - 2].val;
+            const cur = activeNums[activeNums.length - 1].val;
+            const diff = cur - p;
+            const dir = diff > 0 ? '▲ +' : diff < 0 ? '▼ ' : '= ';
+            deltaTxt = `<span style="font-weight:800;color:${diff>0?'#dc2626':diff<0?'#2563eb':'#64748b'};">${dir}${diff.toFixed(2)}</span>`;
+          }
+
+          matrixHtml += `<tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:5px 8px;text-align:left;font-weight:700;border-right:1px solid #e2e8f0;position:sticky;left:0;background:#fff;z-index:1;">${esc(def.name||k)}</td>
+            <td style="padding:5px 4px;font-size:8.5px;color:#64748b;border-right:1px solid #e2e8f0;">${esc(def.unit||'')}</td>
+            <td style="padding:5px 4px;font-size:8.5px;color:#64748b;border-right:1px solid #e2e8f0;">${def.min!=null?def.min:'—'} – ${def.max!=null?def.max:'—'}</td>
+            ${rowVals.map(v => {
+              if (!v) return `<td style="padding:5px 8px;color:#cbd5e1;border-right:1px solid #e2e8f0;">—</td>`;
+              if (v.isCrit) allCrits.push(`${def.name || k}: ${v.val} ${def.unit || ''}`);
+              return `<td style="padding:5px 8px;background:${v.bg};border-right:1px solid #e2e8f0;">
+                <div style="font-weight:800;color:${v.color};font-size:10px;">${v.val}</div>
+                <div style="font-size:7.5px;font-weight:800;color:${v.color};">${v.badge}</div>
+              </td>`;
+            }).join('')}
+            ${columns.length >= 2 ? `<td style="padding:5px 8px;background:#f8fafc;">${deltaTxt}</td>` : ''}
+          </tr>`;
+        });
+
+        matrixHtml += `</tbody></table></div>`;
+
+        if (allCrits.length > 0) {
+          document.getElementById('labAlertPill').style.display = 'inline-block';
+          matrixHtml = `<div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:11px;color:#991b1b;">
+            <b>🚨 URGENT CLINICAL ATTENTION:</b> Found critical values: <b>${esc(allCrits.join(' · '))}</b>. Please review with patient care directives.
+          </div>` + matrixHtml;
+        }
+
+        document.getElementById('labMatrixContainer').innerHTML = matrixHtml;
+      }
+
+      // Clinical Documents (excluding pure lab duplicate entries)
+      const otherDocs = (d.clinical_docs || []).filter(doc => doc.doc_type !== 'lab_results');
+      if (otherDocs.length) {
+        document.getElementById('docsList').innerHTML = otherDocs.map(doc => `
+          <div style="background: #f8fafc; border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between;">
+              <b style="color: var(--primary);">${esc(doc.title)}</b>
+              <span style="font-size: 0.72rem; color: var(--muted);">${new Date(doc.created_at).toLocaleDateString('en-MY')}</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #334155; margin-top: 4px;">
+              ${typeof doc.content === 'object' ? esc(JSON.stringify(doc.content).replace(/[{"}]/g, ' ').slice(0, 150)) : esc(doc.content)}
+            </div>
+            ${doc.attachment_url ? `<div style="margin-top:4px;"><a href="${esc(doc.attachment_url)}" target="_blank" style="color:var(--accent);font-size:0.78rem;font-weight:700;">📎 View Attachment</a></div>` : ''}
+          </div>
+        `).join('');
+      }
+    }
+  </script>
+</body>
+</html>

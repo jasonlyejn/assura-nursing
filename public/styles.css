@@ -575,6 +575,82 @@ button:active, .navbtn:active, .topbar-btn:active, .tab:active, .tile:active {
   }
 }
 
+/* --- Universal Case / Subfolder Navigation Bar --- */
+.case-subbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 14px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.case-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #0d3a54 0%, #186084 100%);
+  color: #ffffff !important;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(13, 58, 84, 0.25);
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.case-back-btn:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(2, 132, 199, 0.3);
+}
+
+.case-back-btn:active {
+  transform: scale(0.96);
+}
+
+.case-subbar-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.case-patient-name {
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.case-view-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #bae6fd;
+}
+
 /* ==========================================================================
    Comprehensive Responsive & Mobile Viewport Rules (Edge-to-Edge Fluidity)
    ========================================================================== */
@@ -770,6 +846,22 @@ button:active, .navbtn:active, .topbar-btn:active, .tab:active, .tile:active {
   .pbtns {
     justify-content: flex-start;
     width: 100%;
+  }
+  .case-subbar {
+    padding: 8px 10px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+  .case-back-btn {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
+  .case-patient-name {
+    font-size: 0.82rem;
+  }
+  .case-view-tag {
+    font-size: 0.68rem;
+    padding: 1px 6px;
   }
 }
 
