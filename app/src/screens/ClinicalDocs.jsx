@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { api } from '../api.js';
 import { createSpeechRecognizer } from '../dictation.jsx';
 import PatientSummaryCard from '../components/PatientSummaryCard.jsx';
+import PatientAssessmentForm from '../components/PatientAssessmentForm.jsx';
 import {
   LAB_PANELS,
   getParamDef,
@@ -12,6 +13,7 @@ import {
 } from '../labReference.js';
 
 const DOC_TYPES = [
+  ['admission_assessment', '📋 Comprehensive Clinical Admission Assessment (综合入院评估表)'],
   ['lab_results', '🧪 Laboratory Results & ABG (检验单与血气)'],
   ['progress_notes', '📝 Progress Notes (护理病程记录)'],
   ['doctors_orders', '🩺 Doctor\'s Order (医嘱执行记录)'],
@@ -71,7 +73,9 @@ export default function ClinicalDocs({ caseId, onBack, me }) {
     setEditingDocId(null);
     let initialContent = {};
 
-    if (type === 'lab_results') {
+    if (type === 'admission_assessment') {
+      initialContent = {};
+    } else if (type === 'lab_results') {
       initialContent = {
         panel_id: 'abg',
         test_date: new Date().toISOString().split('T')[0],
@@ -237,7 +241,27 @@ export default function ClinicalDocs({ caseId, onBack, me }) {
             </select>
           </div>
 
-          {activeForm && (
+          {activeForm && activeForm.doc_type === 'admission_assessment' && (
+            <div style={{ marginTop: '12px' }}>
+              <PatientAssessmentForm
+                caseObj={c}
+                caseId={caseId}
+                me={me}
+                existingContent={activeForm.content}
+                onSave={() => {
+                  setShowAdd(false);
+                  setActiveForm(null);
+                  load();
+                }}
+                onCancel={() => {
+                  setShowAdd(false);
+                  setActiveForm(null);
+                }}
+              />
+            </div>
+          )}
+
+          {activeForm && activeForm.doc_type !== 'admission_assessment' && (
             <div>
               <div className="f"><label>Document Title</label>
                 <input value={activeForm.title} onChange={(e) => setActiveForm({ ...activeForm, title: e.target.value })} /></div>
@@ -911,6 +935,27 @@ export default function ClinicalDocs({ caseId, onBack, me }) {
                                     ) : (
                                       <a href={d.attachment_url} target="_blank" rel="noopener noreferrer" className="link">📄 View Attached Lab Report Document</a>
                                     )}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })()}
+
+                          {d.doc_type === 'admission_assessment' && (() => {
+                            const c = d.content || {};
+                            return (
+                              <div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '8px', marginBottom: '8px' }}>
+                                  <div style={{ background: '#f1f5f9', padding: '6px 8px', borderRadius: '6px' }}><b>🩺 Conditions:</b><br />{(c.medical_conditions || []).join(', ') || 'None'}</div>
+                                  <div style={{ background: '#f1f5f9', padding: '6px 8px', borderRadius: '6px' }}><b>🚶 Mobility:</b><br />{c.mobility_status || '—'}</div>
+                                  <div style={{ background: '#faf5ff', padding: '6px 8px', borderRadius: '6px', border: '1px solid #e9d5ff' }}><b>🩹 Braden Skin Risk:</b><br /><b style={{ color: '#7e22ce' }}>{c.braden_risk_level || '—'}</b></div>
+                                  <div style={{ background: '#fef2f2', padding: '6px 8px', borderRadius: '6px', border: '1px solid #fecaca' }}><b>⚡ Fall Risk:</b><br /><b style={{ color: '#b91c1c' }}>{c.fall_risk_category || '—'}</b></div>
+                                  <div style={{ background: '#f0f9ff', padding: '6px 8px', borderRadius: '6px', border: '1px solid #bae6fd' }}><b>🩸 Baseline BP / HR:</b><br />{c.vital_bp_sys ? `${c.vital_bp_sys}/${c.vital_bp_dia} mmHg · ${c.vital_hr} bpm` : '—'}</div>
+                                  <div style={{ background: '#f0fdf4', padding: '6px 8px', borderRadius: '6px', border: '1px solid #bbf7d0' }}><b>📊 SpO2 / Glucose:</b><br />{c.vital_spo2 ? `${c.vital_spo2}% · ${c.vital_glucose || '—'} mmol/L` : '—'}</div>
+                                </div>
+                                {c.additional_medical_notes && (
+                                  <div style={{ marginTop: '4px', fontSize: '0.78rem', color: '#475569' }}>
+                                    <b>Notes / Directives:</b> {c.additional_medical_notes}
                                   </div>
                                 )}
                               </div>

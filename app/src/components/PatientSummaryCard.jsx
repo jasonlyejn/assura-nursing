@@ -3,6 +3,7 @@ import { api } from '../api.js';
 import TubesTracker from './TubesTracker.jsx';
 import ConsentModal from './ConsentModal.jsx';
 import ClinicalFormsModal from './ClinicalFormsModal.jsx';
+import PatientAssessmentForm from './PatientAssessmentForm.jsx';
 import SosModal from './SosModal.jsx';
 
 export default function PatientSummaryCard({ patient, caseId, onUpdated, readonly = false, me }) {
@@ -11,6 +12,7 @@ export default function PatientSummaryCard({ patient, caseId, onUpdated, readonl
   const [showConsent, setShowConsent] = useState(false);
   const [consentInitialTab, setConsentInitialTab] = useState('sign');
   const [showClinicalForms, setShowClinicalForms] = useState(false);
+  const [showAdmissionModal, setShowAdmissionModal] = useState(false);
   const [clinicalFormsTab, setClinicalFormsTab] = useState('braden');
   const [showSos, setShowSos] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -141,6 +143,13 @@ export default function PatientSummaryCard({ patient, caseId, onUpdated, readonl
                 ✍️ Consents &amp; DNR ({consentsList.length})
                 {pendingVo.length > 0 && ` 🚨 VO (${pendingVo.length})`}
                 {pendingApprovals.length > 0 && ` · 🟡 ${pendingApprovals.length}`}
+              </button>
+              <button
+                className="ghost xs"
+                onClick={() => setShowAdmissionModal(true)}
+                style={{ fontWeight: 700, color: '#0369a1', background: '#f0f9ff', borderColor: '#0284c7' }}
+              >
+                📋 Admission Assessment
               </button>
               <button
                 className="ghost xs"
@@ -366,6 +375,49 @@ export default function PatientSummaryCard({ patient, caseId, onUpdated, readonl
           }}
           me={me}
         />
+      )}
+
+      {showAdmissionModal && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(15, 23, 42, 0.75)',
+            backdropFilter: 'blur(4px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '16px',
+            overflowY: 'auto',
+          }}
+          onClick={(e) => { if (e.target === e.currentTarget) setShowAdmissionModal(false); }}
+        >
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: '16px',
+              maxWidth: '960px',
+              width: '100%',
+              maxHeight: '92vh',
+              overflowY: 'auto',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              padding: '16px',
+            }}
+          >
+            <PatientAssessmentForm
+              caseObj={p}
+              caseId={caseId}
+              me={me}
+              onSave={() => {
+                flash('✓ Admission Assessment saved!');
+                setShowAdmissionModal(false);
+                onUpdated && onUpdated();
+              }}
+              onCancel={() => setShowAdmissionModal(false)}
+            />
+          </div>
+        </div>
       )}
 
       {showClinicalForms && (
