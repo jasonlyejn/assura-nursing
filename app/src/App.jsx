@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { api } from './api.js';
 import { useI18n } from './i18n.js';
 import LangSelector from './components/LangSelector.jsx';
@@ -97,7 +97,7 @@ function InstallButton() {
             background: 'rgba(7, 25, 45, 0.7)',
             backdropFilter: 'blur(6px)',
             WebkitBackdropFilter: 'blur(6px)',
-            zIndex: 1200,
+            zIndex: 2147483647,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -649,3 +649,4 @@ export default function App() {
     </div>
   );
 }
+

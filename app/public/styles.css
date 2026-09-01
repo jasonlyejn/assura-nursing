@@ -876,3 +876,34 @@ button:active, .navbtn:active, .topbar-btn:active, .tab:active, .tile:active {
 
 
 
+
+/* ==========================================================================
+   PERMANENT MODAL OVERLAY STACKING FIX (BRINGS ALL POPUPS TO FRONT)
+   ========================================================================== */
+.modal-overlay, .modal-backdrop, [role="dialog"], .dialog-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important; /* Maximum 32-bit integer */
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(6px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+}
+
+.modal, .modal-card, .dialog-box {
+  position: relative !important;
+  z-index: 2147483647 !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  margin: auto !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Ensure navigation bars never slice over modals */
+header, nav, .header, .nav, .top-nav, .case-subbar {
+  z-index: 50 !important;
+}
