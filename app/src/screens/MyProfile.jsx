@@ -61,7 +61,8 @@ export default function MyProfile({ onDone }) {
 
   async function pickPhoto() {
     const inp = document.createElement('input');
-    inp.type = 'file'; inp.accept = 'image/*'; inp.capture = 'user';
+    inp.type = 'file';
+    inp.accept = 'image/*';
     inp.onchange = async () => {
       const f = inp.files && inp.files[0]; if (!f) return;
       try {
@@ -150,37 +151,38 @@ export default function MyProfile({ onDone }) {
       <button className="ghost wide" onClick={changePin}
         disabled={busy || !pin.current || pin.a.length < 4}>Change PIN</button>
 
-      <div style={{ marginTop: '20px', padding: '14px', background: '#f8fafc', border: '1.5px solid #cbd5e1', borderRadius: '10px' }}>
-        <h4 style={{ margin: '0 0 6px', color: '#0d3a54', display: 'flex', alignItems: 'center', gap: '6px' }}>
-          📱 Download Assura Clinical Apps (客户端下载)
+      <div style={{ marginTop: '20px', padding: '16px', background: '#f0f9ff', border: '1.5px solid #0284c7', borderRadius: '12px' }}>
+        <h4 style={{ margin: '0 0 4px', color: '#0d3a54', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          📱 Download Assura Staff App &amp; APK (客户端与安装包)
         </h4>
-        <p className="muted" style={{ margin: '0 0 10px', fontSize: '0.78rem' }}>
-          Install Assura directly onto your Android phone or Windows PC for fast access, push updates, and offline resilience.
+        <p className="muted" style={{ margin: '0 0 12px', fontSize: '0.82rem', lineHeight: 1.45 }}>
+          Install Assura directly onto your Android phone or Windows PC for fast offline access, sliding scale charts, and home visits.
         </p>
-        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '8px' }}>
           <a
-            href="/AssuraStaff-Windows.zip"
-            download="AssuraStaff-Windows.zip"
-            className="btn ghost xs"
-            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
+            href="/AssuraStaff.apk"
+            download="AssuraStaff.apk"
+            className="pri sm"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', fontWeight: 800 }}
           >
-            💻 Download Windows App (.ZIP 绿色版)
+            🤖 Download Android APK
+          </a>
+          <a
+            href="/download.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sec sm"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', fontWeight: 700, background: '#fff', color: '#0369a1', border: '1.5px solid #0284c7' }}
+          >
+            📖 Download Portal &amp; Guide
           </a>
           <a
             href="/AssuraStaff.exe"
             download="AssuraStaff.exe"
-            className="btn ghost xs"
-            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
+            className="ghost sm"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', fontWeight: 700 }}
           >
-            🖥️ Download Windows (.EXE)
-          </a>
-          <a
-            href="/AssuraStaff.apk"
-            download="AssuraStaff.apk"
-            className="btn ghost xs"
-            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}
-          >
-            📱 Download Android Phone (.APK)
+            💻 Windows PC (.EXE)
           </a>
         </div>
       </div>

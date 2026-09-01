@@ -34,6 +34,7 @@ export default function Rates() {
   const [adding, setAdding] = useState(false);
   const [editingId, setEditingId] = useState(null);
   const [bulkEdit, setBulkEdit] = useState(false);
+  const [photoModalItem, setPhotoModalItem] = useState(null);
   const [nu, setNu] = useState({
     code: '', category: '', name: '', brand: '', size: '',
     uom: 'EACH', price: '', prepare_by: 'staff', order_ahead: false, spec: '',
@@ -62,12 +63,12 @@ export default function Rates() {
       fr.onload = () => {
         const im = new Image();
         im.onload = () => {
-          const max = 200;
+          const max = 300;
           const sc = Math.min(1, max / Math.max(im.width, im.height));
           const c = document.createElement('canvas');
           c.width = Math.round(im.width * sc); c.height = Math.round(im.height * sc);
           c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
-          res(c.toDataURL('image/jpeg', 0.62));
+          res(c.toDataURL('image/jpeg', 0.7));
         };
         im.onerror = rej; im.src = fr.result;
       };
@@ -75,9 +76,13 @@ export default function Rates() {
     });
   }
 
-  async function pickPhoto(id) {
+  function triggerFileInput(id, fromCamera = false) {
     const inp = document.createElement('input');
-    inp.type = 'file'; inp.accept = 'image/*'; inp.capture = 'environment';
+    inp.type = 'file';
+    inp.accept = 'image/*';
+    if (fromCamera) {
+      inp.capture = 'environment';
+    }
     inp.onchange = async () => {
       const f = inp.files && inp.files[0];
       if (!f) return;
@@ -85,8 +90,11 @@ export default function Rates() {
         const img = await compress(f);
         await api.putItemImage(id, img);
         setItems((s2) => s2.map((x) => (x.id === id ? { ...x, image: img } : x)));
-        flash('✓ Photo saved');
-      } catch (e) { flash('Could not save that photo'); }
+        flash('✓ Item picture saved successfully');
+        setPhotoModalItem(null);
+      } catch (e) {
+        flash('Could not save that photo');
+      }
     };
     inp.click();
   }
@@ -96,6 +104,7 @@ export default function Rates() {
       await api.putItemImage(id, null);
       setItems((s2) => s2.map((x) => (x.id === id ? { ...x, image: null } : x)));
       flash('Photo removed');
+      setPhotoModalItem(null);
     } catch (e) { flash(e.message); }
   }
 
@@ -275,8 +284,8 @@ export default function Rates() {
                       {/* Top Row: Thumbnail + Code + Name + Edit Toggle */}
                       <div className="item-head">
                         <div className="item-thumb-wrap">
-                          <button className="pic-btn" title={it.image ? 'Change photo' : 'Add photo'}
-                            onClick={() => pickPhoto(it.id)}>
+                          <button className="pic-btn" title={it.image ? 'Change photo (Camera / Album)' : 'Add photo (Camera / Album)'}
+                            onClick={() => setPhotoModalItem(it)}>
                             {it.image
                               ? <img src={it.image} alt="" className="item-img" />
                               : <span className="ico" dangerouslySetInnerHTML={{ __html: itemIcon(it) }} />}
@@ -425,6 +434,84 @@ export default function Rates() {
             <button className="pri" onClick={saveSettings}>Save charges</button>
           </>
         : <p className="muted">Loading…</p>)}
+
+      {/* PHOTO PICKER MODAL (CAMERA OR ALBUM) */}
+      {photoModalItem && (
+        <div
+          className="modal-backdrop"
+          onClick={(e) => { if (e.target === e.currentTarget) setPhotoModalItem(null); }}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(7, 25, 45, 0.7)',
+            backdropFilter: 'blur(6px)',
+            WebkitBackdropFilter: 'blur(6px)',
+            zIndex: 1200,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px',
+            boxSizing: 'border-box',
+          }}
+        >
+          <div
+            className="card"
+            style={{
+              maxWidth: '400px',
+              width: '100%',
+              padding: '20px',
+              borderRadius: '16px',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.35)',
+              border: '1px solid rgba(56, 189, 248, 0.3)',
+              margin: 'auto',
+              background: '#ffffff',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+              <b style={{ color: 'var(--navy)', fontSize: '1rem' }}>📷 Item Photo · {photoModalItem.name}</b>
+              <button className="ghost" onClick={() => setPhotoModalItem(null)} style={{ fontSize: '16px', padding: '2px 8px' }}>✕</button>
+            </div>
+
+            {photoModalItem.image && (
+              <div style={{ textAlign: 'center', marginBottom: '14px' }}>
+                <img src={photoModalItem.image} alt="" style={{ height: '120px', width: '120px', objectFit: 'cover', borderRadius: '12px', border: '2px solid var(--line)' }} />
+              </div>
+            )}
+
+            <p style={{ fontSize: '0.84rem', color: 'var(--muted)', margin: '0 0 16px', textAlign: 'center', lineHeight: 1.4 }}>
+              Upload item packaging, box, or consumable picture for nurse visual reference during home visits.
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <button
+                className="pri"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '12px', fontWeight: 700, margin: 0 }}
+                onClick={() => triggerFileInput(photoModalItem.id, false)}
+              >
+                🖼️ Choose from Photo Album / Gallery
+              </button>
+
+              <button
+                className="sec"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '12px', fontWeight: 700, background: '#f8fafc', border: '1.5px solid #cbd5e1', color: '#0d3a54', borderRadius: '10px', margin: 0 }}
+                onClick={() => triggerFileInput(photoModalItem.id, true)}
+              >
+                📷 Take Photo with Camera
+              </button>
+
+              {photoModalItem.image && (
+                <button
+                  className="ghost"
+                  style={{ color: '#dc2626', fontWeight: 700, marginTop: '4px', textAlign: 'center' }}
+                  onClick={() => { clearPhoto(photoModalItem.id); setPhotoModalItem(null); }}
+                >
+                  🗑️ Remove Current Photo
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

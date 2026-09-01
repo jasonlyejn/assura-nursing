@@ -205,6 +205,42 @@ export default function Dashboard({ me, onOpenMews, onOpenHand, onOpenChat, goTo
           </div>
         ))}
       </div>
+
+      {/* --- APP DOWNLOAD & APK INSTALLATION QUICK CARD --- */}
+      <div className="card" style={{ background: 'linear-gradient(135deg, #07192d 0%, #0c2b48 100%)', color: '#fff', border: '1px solid rgba(56, 189, 248, 0.3)', padding: '16px 20px', borderRadius: '16px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+              OFFICIAL CLINICAL APP DISTRIBUTION
+            </div>
+            <h3 style={{ margin: '3px 0 0', color: '#fff', fontSize: '1.08rem', fontWeight: 800 }}>
+              📲 Install Assura Staff App on Phone or PC
+            </h3>
+            <p style={{ margin: '4px 0 0', fontSize: '0.82rem', color: '#94a3b8', lineHeight: 1.4 }}>
+              Download the Android APK or open the download portal for offline bedside care and real-time alerts.
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <a
+              href="/AssuraStaff.apk"
+              download="AssuraStaff.apk"
+              className="pri sm"
+              style={{ textDecoration: 'none', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', fontWeight: 800, padding: '8px 14px', borderRadius: '10px' }}
+            >
+              🤖 Download Android .APK
+            </a>
+            <a
+              href="/download.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sec sm"
+              style={{ textDecoration: 'none', background: 'rgba(255, 255, 255, 0.12)', color: '#fff', border: '1px solid rgba(255, 255, 255, 0.25)', fontWeight: 700, padding: '8px 14px', borderRadius: '10px' }}
+            >
+              📖 Download Portal &amp; Guide ➔
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

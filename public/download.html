@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1f33" />
+  <title>Download Assura Nursing & Staff App · Android APK & Desktop</title>
+  <link rel="icon" type="image/png" href="/icon-192.png" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <style>
+    :root {
+      --navy: #0d1f33;
+      --blue: #0284c7;
+      --blue-dark: #0369a1;
+      --paper: #f8fafc;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --ok: #16a34a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #eef4fb;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: linear-gradient(135deg, #07192d 0%, #0c2b48 50%, #082035 100%);
+      color: #fff;
+      padding: 28px 20px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .logo {
+      height: 52px;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 2px 8px rgba(56,189,248,0.3));
+    }
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+    }
+    .header p {
+      color: #94a3b8;
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      margin: -16px auto 30px;
+      padding: 0 16px;
+      flex: 1;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px 20px;
+      margin-bottom: 16px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    }
+    .badge-primary {
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin: 6px 0 16px;
+      line-height: 1.45;
+    }
+    .btn-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .dl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+    }
+    .dl-btn:active {
+      transform: scale(0.98);
+    }
+    .dl-btn-apk {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }
+    .dl-btn-apk:hover {
+      filter: brightness(1.08);
+    }
+    .dl-btn-pwa {
+      background: #0d1f33;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(13, 31, 51, 0.25);
+    }
+    .dl-btn-exe {
+      background: #f8fafc;
+      color: #1e293b;
+      border-color: #cbd5e1;
+    }
+    .dl-btn-exe:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+    .btn-main-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-icon {
+      font-size: 1.4rem;
+    }
+    .btn-text {
+      text-align: left;
+    }
+    .btn-title {
+      display: block;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .btn-subtitle {
+      display: block;
+      font-size: 0.74rem;
+      opacity: 0.85;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .btn-action-tag {
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.2);
+    }
+    .guide-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      border: 1px solid var(--line);
+    }
+    .guide-box h4 {
+      font-size: 0.85rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .guide-box ol {
+      padding-left: 20px;
+      font-size: 0.8rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .guide-box li {
+      margin-bottom: 4px;
+    }
+    .back-home {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.88rem;
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .back-home:hover {
+      background: #f1f5f9;
+    }
+    .foot {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="/"><img src="/logo.png?v=8" alt="Assura Logo" class="logo" /></a>
+    <h1>Download Official Apps</h1>
+    <p>Android Mobile APKs · Windows Desktop App · Progressive Web App</p>
+  </header>
+
+  <main class="container">
+    <!-- STAFF PORTAL APP CARD -->
+    <div class="card">
+      <span class="badge-primary">👩‍⚕️ Clinical Nurses &amp; Office Staff</span>
+      <h2>📱 Assura Staff Portal App</h2>
+      <p class="card-desc">
+        Dedicated clinical case management app for attending nurses, supervisors, and admins. Supports offline MAR, sliding scale insulin, GPS home visits, and instant shift handovers.
+      </p>
+
+      <div class="btn-grid">
+        <a href="/AssuraStaff.apk" download="AssuraStaff.apk" class="dl-btn dl-btn-apk">
+          <div class="btn-main-content">
+            <span class="btn-icon">🤖</span>
+            <div class="btn-text">
+              <span class="btn-title">Download Android App (.APK)</span>
+              <span class="btn-subtitle">Direct APK Download · v8.0 · 23.7 MB</span>
+            </div>
+          </div>
+          <span class="btn-action-tag">⬇ Download</span>
+        </a>
+
+        <button id="pwa-install-btn" class="dl-btn dl-btn-pwa">
+          <div class="btn-main-content">
+            <span class="btn-icon">📲</span>
+            <div class="btn-text">
+              <span class="btn-title">1-Click Install Web App (PWA)</span>
+              <span class="btn-subtitle">Instant Home Screen Install · Chrome / Safari / Edge</span>
+            </div>
+          </div>
+          <span class="btn-action-tag">＋ Install</span>
+        </button>
+
+        <a href="/AssuraStaff.exe" download="AssuraStaff.exe" class="dl-btn dl-btn-exe">
+          <div class="btn-main-content">
+            <span class="btn-icon">💻</span>
+            <div class="btn-text">
+              <span class="btn-title">Download Windows Desktop App (.EXE)</span>
+              <span class="btn-subtitle">Native Windows 10/11 Installer</span>
+            </div>
+          </div>
+          <span class="btn-action-tag" style="background:#e2e8f0; color:#334155;">⬇ .EXE</span>
+        </a>
+
+        <a href="/AssuraStaff-Windows.zip" download="AssuraStaff-Windows.zip" class="dl-btn dl-btn-exe">
+          <div class="btn-main-content">
+            <span class="btn-icon">📦</span>
+            <div class="btn-text">
+              <span class="btn-title">Download Windows Portable App (.ZIP)</span>
+              <span class="btn-subtitle">No Installation Required · Extract &amp; Run</span>
+            </div>
+          </div>
+          <span class="btn-action-tag" style="background:#e2e8f0; color:#334155;">⬇ .ZIP</span>
+        </a>
+      </div>
+
+      <!-- Android Install Guide -->
+      <div class="guide-box">
+        <h4>🤖 How to install the APK on your Android Phone:</h4>
+        <ol>
+          <li>Tap <b>Download Android App (.APK)</b> above.</li>
+          <li>If your browser says <i>"File might be harmful"</i>, tap <b>Download anyway</b> (standard Android security prompt).</li>
+          <li>Once downloaded, tap <b>Open</b> from your notifications or browser downloads.</li>
+          <li>Tap <b>Install</b> (if prompted, enable <i>"Allow from this source"</i> in Settings).</li>
+        </ol>
+      </div>
+
+      <!-- iPhone / iOS Guide -->
+      <div class="guide-box" style="margin-top: 10px;">
+        <h4>🍎 How to install on Apple iPhone / iPad (iOS):</h4>
+        <ol>
+          <li>Open <a href="https://staff.assuranursing.com" style="color:var(--blue); font-weight:700;">staff.assuranursing.com</a> in Safari.</li>
+          <li>Tap the <b>Share button</b> (box with arrow pointing up ⎋) at the bottom.</li>
+          <li>Scroll down and tap <b>Add to Home Screen</b> ➕.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- PATIENT & FAMILY APP CARD -->
+    <div class="card">
+      <span class="badge-primary" style="background:#dcfce7; color:#15803d;">👨‍👩‍👧 Patient &amp; Family Care Portal</span>
+      <h2>📱 Assura Patient Companion App</h2>
+      <p class="card-desc">
+        Companion mobile app for patients and family members to view daily nursing schedules, vital sign charts, medication logs, and invoice receipts.
+      </p>
+
+      <div class="btn-grid">
+        <a href="/AssuraNursing.apk" download="AssuraNursing.apk" class="dl-btn dl-btn-apk" style="background: linear-gradient(135deg, #15803d 0%, #166534 100%);">
+          <div class="btn-main-content">
+            <span class="btn-icon">🤖</span>
+            <div class="btn-text">
+              <span class="btn-title">Download Patient Android App (.APK)</span>
+              <span class="btn-subtitle">Direct APK Download · v8.0 · 3.0 MB</span>
+            </div>
+          </div>
+          <span class="btn-action-tag">⬇ Download</span>
+        </a>
+
+        <a href="https://assuranursing.com/portal.html" class="dl-btn dl-btn-pwa" style="background:#14532d;">
+          <div class="btn-main-content">
+            <span class="btn-icon">🌐</span>
+            <div class="btn-text">
+              <span class="btn-title">Open Online Patient Web Portal</span>
+              <span class="btn-subtitle">Family Live Tracking &amp; Vital Charting</span>
+            </div>
+          </div>
+          <span class="btn-action-tag">➔ Open</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="/" class="back-home">
+      ← Return to Staff Portal Login
+    </a>
+  </main>
+
+  <footer class="foot">
+    Assura Healthcare &amp; Clinical Case Management · Penang &amp; Northern Region<br />
+    Official Mobile &amp; Desktop App Distribution
+  </footer>
+
+  <script>
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const btn = document.getElementById('pwa-install-btn');
+      if (btn) btn.style.display = 'flex';
+    });
+
+    document.getElementById('pwa-install-btn').addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+      } else {
+        alert('📱 To install on your device:\n\n• Chrome / Android: Tap the 3-dots menu ⋮ → "Install App" or "Add to Home screen"\n• Safari / iPhone: Tap Share ⎋ → "Add to Home Screen" ➕\n• Desktop PC: Tap the ⊕ icon in your browser URL address bar');
+      }
+    });
+  </script>
+</body>
+</html>

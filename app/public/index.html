@@ -14,15 +14,15 @@
   <link rel="apple-touch-icon" href="/icon-192.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
-  <link rel="stylesheet" href="/styles.css?v=11" />
+  <link rel="stylesheet" href="/styles.css?v=12" />
 </head>
 <body>
   <div id="root"><div class="center muted">Loading…</div></div>
-  <script type="module" src="/app.js?v=11"></script>
+  <script type="module" src="/app.js?v=12"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js?v=11').then((reg) => {
+        navigator.serviceWorker.register('/sw.js?v=12').then((reg) => {
           reg.update();
         }).catch(() => {});
       });

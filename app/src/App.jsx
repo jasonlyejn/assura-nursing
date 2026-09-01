@@ -184,6 +184,15 @@ function InstallButton() {
               >
                 📦 Download Windows App (.ZIP)
               </a>
+
+              <a
+                href="/download.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', textAlign: 'center', padding: '8px', color: '#0284c7', fontWeight: 700, fontSize: '0.82rem', marginTop: '4px' }}
+              >
+                📖 Open Full Download Page &amp; Android Installation Guide ➔
+              </a>
             </div>
           </div>
         </div>

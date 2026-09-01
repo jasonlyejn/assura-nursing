@@ -1,9 +1,9 @@
 // Assura Case Management — offline shell.
 // Caches the app itself so it opens without signal; live data still needs a
 // connection (the API is never cached, so you never see stale patient data).
-const SHELL = 'assura-shell-v11-subfolder-nav-fix';
-const FILES = ['/', '/index.html', '/app.js?v=11', '/styles.css?v=11', '/logo.png',
-               '/icon-192.png', '/icon-512.png', '/manifest.json', '/manifest.webmanifest'];
+const SHELL = 'assura-shell-v12-apk-download-album-photo';
+const FILES = ['/', '/index.html', '/app.js?v=12', '/styles.css?v=12', '/logo.png',
+               '/download.html', '/apk.html', '/icon-192.png', '/icon-512.png', '/manifest.json', '/manifest.webmanifest'];
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();
