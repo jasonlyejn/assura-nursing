@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { api } from './api.js';
 import { useI18n } from './i18n.js';
 import LangSelector from './components/LangSelector.jsx';
@@ -375,8 +375,6 @@ export default function App() {
   if (!state.authed) {
     return (
       <div className="auth-wrap">
-        <img className="brand" src="/logo.png?v=8" alt="Assura Nursing Care" />
-        <LangSelector style={{ marginBottom: '16px' }} />
         {state.needsSetup ? <Setup onDone={refresh} /> : <Login onDone={refresh} />}
         {state.error && <p className="err">{state.error}</p>}
       </div>

@@ -30,21 +30,21 @@ export default function Login({ onDone }) {
   }
 
   return (
-    <div className="card auth-card">
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '14px' }}>
-        <img src="/logo.png?v=8" alt="Assura Case Management Logo" style={{ height: '72px', width: 'auto', marginBottom: '8px' }} />
-        <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '1px', color: '#186084', textTransform: 'uppercase', background: '#eef6ff', padding: '2px 8px', borderRadius: '4px' }}>
+    <div className="card auth-card" style={{ maxWidth: '440px', margin: '40px auto', padding: '32px 26px', borderRadius: '24px', boxShadow: '0 20px 40px -10px rgba(12,48,84,0.12)', border: '1px solid rgba(226,232,240,0.9)' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
+        <img src="/logo.png?v=9" alt="Assura Case Management Logo" style={{ height: '84px', width: 'auto', marginBottom: '10px', objectFit: 'contain' }} />
+        <span style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '1.2px', color: '#0369a1', textTransform: 'uppercase', background: '#e0f2fe', padding: '3px 12px', borderRadius: '20px', border: '1px solid #bae6fd' }}>
           CASE MANAGEMENT PORTAL
         </span>
       </div>
 
-      <div style={{ marginBottom: '14px' }}>
+      <div style={{ marginBottom: '18px', display: 'flex', justifyContent: 'center' }}>
         <LangSelector />
       </div>
 
-      <h2 style={{ marginBottom: '2px' }}>{t('appTitle')}</h2>
-      <p className="muted" style={{ marginTop: '0', fontSize: '0.84rem' }}>
-        {useEmail ? 'Sign in with your staff email / username and PIN.' : 'Staff & Clinical Sign In. 输入密码登录系统。'}
+      <h2 style={{ marginBottom: '4px', fontSize: '1.25rem', color: '#07192d', fontWeight: 800 }}>{t('appTitle')}</h2>
+      <p className="muted" style={{ marginTop: '0', fontSize: '0.84rem', color: '#64748b' }}>
+        {useEmail ? 'Sign in with your staff email / username and PIN.' : 'Staff & Clinical Sign In · 护士与医护人员登录'}
       </p>
 
       {useEmail && (
