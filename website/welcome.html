@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Welcome to Assura Nursing Care · Executive Gateway</title>
+<meta name="description" content="Welcome to Assura Nursing Care — 24/7 Professional Home Nursing, Stroke Rehab, Wound Care and Clinical Management across Penang Island and Mainland." />
+<link rel="icon" href="home-nursing-icon-192.png" />
+<link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
+<link rel="manifest" href="home-nursing.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg-deep: #040D1A;
+  --bg-card: rgba(10, 26, 46, 0.68);
+  --bg-card-hover: rgba(15, 38, 68, 0.85);
+  --line: rgba(56, 189, 248, 0.18);
+  --blue: #0284c7;
+  --blue-bright: #38bdf8;
+  --ice: #E0F2FE;
+  --gold: #FFD27A;
+  --amber: #F59E0B;
+  --pulse: #E4544A;
+  --green: #10B981;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-deep);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animated Ambient Sky & Pulse Grid */
+.sky-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 90% 60%, rgba(228, 84, 74, 0.14) 0%, transparent 55%),
+    #040D1A;
+}
+
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+/* Header & Navigation */
+header.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  animation: breathe 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03) translateY(-2px); }
+}
+
+.nav-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-247 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(228, 84, 74, 0.15);
+  border: 1px solid rgba(228, 84, 74, 0.4);
+  color: #FFA49B;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: #E4544A;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #E4544A;
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+.lang-bar {
+  display: flex;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 3px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background: var(--blue);
+  color: #FFF;
+}
+
+/* Hero Section */
+.hero-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 28px;
+  padding: 40px 32px;
+  box-shadow: 0 25px 50px -12px rgba(2, 8, 18, 0.7);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.founder-img-wrap {
+  position: relative;
+  width: 220px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 210, 122, 0.5);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.founder-img-wrap:hover .founder-img {
+  transform: scale(1.04);
+}
+
+.founder-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(4, 13, 26, 0.95) 0%, rgba(4, 13, 26, 0.7) 70%, transparent 100%);
+  padding: 12px 10px 8px;
+  text-align: center;
+}
+
+.founder-tag b {
+  display: block;
+  font-size: 0.88rem;
+  color: #FFF;
+}
+
+.founder-tag span {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 50%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content p {
+  color: #C9DCEC;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.stat-item b {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.stat-item span {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Action Cards Grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--card-color, var(--blue-bright)), transparent);
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  background: var(--bg-card-hover);
+  border-color: var(--card-color, var(--blue-bright));
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px var(--card-glow, rgba(56, 189, 248, 0.3));
+}
+
+.action-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.action-card:hover .card-icon {
+  transform: scale(1.12);
+}
+
+.card-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-arrow {
+  color: var(--card-color, var(--blue-bright));
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.action-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.card-footer-pill {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--card-color, var(--blue-bright));
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+/* Card Specific Themes */
+.card-patient { --card-color: #38BDF8; --card-glow: rgba(56, 189, 248, 0.35); }
+.card-staff { --card-color: #F59E0B; --card-glow: rgba(245, 158, 11, 0.35); }
+.card-emergency { --card-color: #EF4444; --card-glow: rgba(239, 68, 68, 0.35); }
+.card-equip { --card-color: #10B981; --card-glow: rgba(16, 185, 129, 0.35); }
+.card-career { --card-color: #A855F7; --card-glow: rgba(168, 85, 247, 0.35); }
+.card-feedback { --card-color: #EC4899; --card-glow: rgba(236, 72, 153, 0.35); }
+
+/* Quick Action Banner */
+.quick-banner {
+  background: linear-gradient(135deg, rgba(12, 48, 84, 0.9) 0%, rgba(6, 24, 44, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.quick-text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 4px;
+}
+
+.quick-text p {
+  font-size: 0.86rem;
+  color: #B9D0E4;
+}
+
+.quick-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #FFF;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(2, 132, 199, 0.6);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #FFF;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+  transition: all 0.2s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(34, 197, 94, 0.6);
+}
+
+footer {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 50px;
+  color: #64748B;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .founder-img-wrap {
+    width: 180px;
+    height: 230px;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sky-canvas"></div>
+<div class="grid-lines"></div>
+
+<div class="container">
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-wrap">
+      <img src="assura-logo.png" alt="Assura Nursing Care" class="brand-logo" />
+    </a>
+
+    <div class="nav-badges">
+      <div class="badge-247">
+        <span class="pulse-dot"></span>
+        <span id="txt-coverage">24/7 WHOLE PENANG &amp; MAINLAND</span>
+      </div>
+
+      <div class="lang-bar">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+        <button class="lang-btn" onclick="setLang('bm')">BM</button>
+        <button class="lang-btn" onclick="setLang('ta')">தமிழ்</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Welcome Card with Founder Message -->
+  <div class="hero-card">
+    <div class="founder-img-wrap">
+      <img src="founder-blazer.jpg" alt="Founder &amp; Clinical Director" class="founder-img" />
+      <div class="founder-tag">
+        <b>Jason Lye</b>
+        <span id="txt-founder-title">Founder &amp; Clinical Director</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1 id="txt-welcome-title">Nursing Care, with Dignity at Home.</h1>
+      <p id="txt-welcome-msg">
+        "Welcome to Assura Nursing Care. We bring hospital-standard clinical procedures, compassionate post-surgical recovery, stroke rehabilitation, and 24/7 private bedside nursing directly to your home across Penang Island and Mainland."
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <b>24/7</b>
+          <span id="txt-stat-1">Round-the-Clock Shifts</span>
+        </div>
+        <div class="stat-item">
+          <b>100%</b>
+          <span id="txt-stat-2">Penang &amp; Mainland</span>
+        </div>
+        <div class="stat-item">
+          <b>Certified</b>
+          <span id="txt-stat-3">MOH / LJM Nurses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Action Hub Grid -->
+  <div class="action-grid">
+    <!-- 1. Patient Care Booking -->
+    <a href="index.html#calculator" class="action-card card-patient">
+      <div>
+        <span class="card-icon">🩺</span>
+        <div class="card-title">
+          <span id="txt-card1-title">Book Home Nursing</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card1-desc">
+          Professional wound dressing, Ryle's tube insertion, urinary catheter care, stoma management &amp; medication administration.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card1-pill">View Rates &amp; Procedures</span>
+    </a>
+
+    <!-- 2. Staff Portal Gateway -->
+    <a href="https://staff.assuranursing.com" class="action-card card-staff">
+      <div>
+        <span class="card-icon">🔒</span>
+        <div class="card-title">
+          <span id="txt-card2-title">Staff Portal Access</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card2-desc">
+          Clinical login for Registered Nurses &amp; AMOs. Manage active cases, electronic MAR, MEWS vital charts &amp; admission assessments.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card2-pill">Nurse &amp; AMO Login</span>
+    </a>
+
+    <!-- 3. Medical Equipment Rental -->
+    <a href="index.html#equipment" class="action-card card-equip">
+      <div>
+        <span class="card-icon">🛏️</span>
+        <div class="card-title">
+          <span id="txt-card3-title">Medical Equipment Rentals</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card3-desc">
+          Electric ICU hospital beds, medical-grade 5L/10L oxygen concentrators, suction machines, ripple mattresses &amp; wheelchairs in Penang.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card3-pill">Same-Day Delivery</span>
+    </a>
+
+    <!-- 4. 24/7 Emergency & First Aid Guide -->
+    <a href="index.html#emergency" class="action-card card-emergency">
+      <div>
+        <span class="card-icon">🚑</span>
+        <div class="card-title">
+          <span id="txt-card4-title">24/7 Emergency Guide</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card4-desc">
+          Emergency contact protocols, private ambulance dispatch coordination, CPR instructions &amp; Stroke F.A.S.T warning signs.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card4-pill">Emergency Protocols</span>
+    </a>
+
+    <!-- 5. Careers & Recruitment -->
+    <a href="index.html#careers" class="action-card card-career">
+      <div>
+        <span class="card-icon">💼</span>
+        <div class="card-title">
+          <span id="txt-card5-title">Join Our Nursing Team</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card5-desc">
+          High hourly rates (70% nurse split), flexible shifts, prompt bi-weekly payroll &amp; professional clinical support in Penang.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card5-pill">Apply as Nurse / AMO</span>
+    </a>
+
+    <!-- 6. Client Feedback & Quality Review -->
+    <a href="index.html#feedback" class="action-card card-feedback">
+      <div>
+        <span class="card-icon">⭐</span>
+        <div class="card-title">
+          <span id="txt-card6-title">Family Feedback &amp; Reviews</span>
+          <span class="card-arrow">➔</span>
+        </div>
+        <p class="card-desc" id="txt-card6-desc">
+          Share your experience or submit feedback on our nursing care quality. We strive for clinical excellence in every home visit.
+        </p>
+      </div>
+      <span class="card-footer-pill" id="txt-card6-pill">Submit Review</span>
+    </a>
+  </div>
+
+  <!-- Quick Action Banner -->
+  <div class="quick-banner">
+    <div class="quick-text">
+      <h3 id="txt-banner-title">Need Immediate Care in Penang?</h3>
+      <p id="txt-banner-sub">Speak directly with our clinical care supervisor for advice, rates, or nurse dispatch.</p>
+    </div>
+    <div class="quick-btns">
+      <a href="https://wa.me/60124701235?text=Hello%20Assura%20Nursing,%20I%20would%20like%20to%20enquire%20about%20home%20nursing%20care." class="btn-whatsapp" target="_blank" rel="noopener">
+        💬 WhatsApp 24/7
+      </a>
+      <a href="index.html" class="btn-primary">
+        🌐 Explore Main Website
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Assura Nursing Care · All Rights Reserved · Penang Island &amp; Mainland</p>
+    <p style="margin-top: 6px; font-size: 0.74rem;">Registered Private Home Healthcare &amp; Clinical Nursing Services</p>
+  </footer>
+</div>
+
+<script>
+const DICT = {
+  en: {
+    coverage: "24/7 WHOLE PENANG & MAINLAND",
+    founderTitle: "Founder & Clinical Director",
+    welcomeTitle: "Nursing Care, with Dignity at Home.",
+    welcomeMsg: '"Welcome to Assura Nursing Care. We bring hospital-standard clinical procedures, compassionate post-surgical recovery, stroke rehabilitation, and 24/7 private bedside nursing directly to your home across Penang Island and Mainland."',
+    stat1: "Round-the-Clock Shifts",
+    stat2: "Penang & Mainland",
+    stat3: "MOH / LJM Nurses",
+    card1Title: "Book Home Nursing",
+    card1Desc: "Professional wound dressing, Ryle's tube insertion, urinary catheter care, stoma management & medication administration.",
+    card1Pill: "View Rates & Procedures",
+    card2Title: "Staff Portal Access",
+    card2Desc: "Clinical login for Registered Nurses & AMOs. Manage active cases, electronic MAR, MEWS vital charts & admission assessments.",
+    card2Pill: "Nurse & AMO Login",
+    card3Title: "Medical Equipment Rentals",
+    card3Desc: "Electric ICU hospital beds, medical-grade 5L/10L oxygen concentrators, suction machines, ripple mattresses & wheelchairs in Penang.",
+    card3Pill: "Same-Day Delivery",
+    card4Title: "24/7 Emergency Guide",
+    card4Desc: "Emergency contact protocols, private ambulance dispatch coordination, CPR instructions & Stroke F.A.S.T warning signs.",
+    card4Pill: "Emergency Protocols",
+    card5Title: "Join Our Nursing Team",
+    card5Desc: "High hourly rates (70% nurse split), flexible shifts, prompt bi-weekly payroll & professional clinical support in Penang.",
+    card5Pill: "Apply as Nurse / AMO",
+    card6Title: "Family Feedback & Reviews",
+    card6Desc: "Share your experience or submit feedback on our nursing care quality. We strive for clinical excellence in every home visit.",
+    card6Pill: "Submit Review",
+    bannerTitle: "Need Immediate Care in Penang?",
+    bannerSub: "Speak directly with our clinical care supervisor for advice, rates, or nurse dispatch."
+  },
+  zh: {
+    coverage: "24小时全槟岛及威省全境服务",
+    founderTitle: "创办人兼临床总监",
+    welcomeTitle: "专业居家护理，让长辈在家享有尊严与温度。",
+    welcomeMsg: '“欢迎来到 Assura Nursing Care。我们将医院级别的临床护理标准、贴心的术后康复、中风复健与全天候私人照护带入全槟岛及威省的千家万户。”',
+    stat1: "24小时轮班照护",
+    stat2: "全槟岛及威省",
+    stat3: "政府注册护士 (LJM/MOH)",
+    card1Title: "预约居家护理",
+    card1Desc: "专业伤口换药、胃管插管护理、导尿管护理、造口护理与药物注射管理。",
+    card1Pill: "查看收费与服务项目",
+    card2Title: "医护人员系统",
+    card2Desc: "注册护士与助理医疗官临床工作台。查看病例、电子给药记录、生命体征与入院评估。",
+    card2Pill: "护士与医护人员登录",
+    card3Title: "医疗设备租赁",
+    card3Desc: "槟城电动三功能护理病床、5L/10L医疗级制氧机、吸痰机、防褥疮气垫床与轮椅租赁。",
+    card3Pill: "当天专人送货上门",
+    card4Title: "24小时急救与紧急指南",
+    card4Desc: "紧急救护车协调协议、心肺复苏 CPR 指南与中风 FAST 早期辨识指标。",
+    card4Pill: "查看急救指南",
+    card5Title: "加入护士医护团队",
+    card5Desc: "高薪待遇（70% 护士分成）、自由排班、准时双周发薪与专业临床支持。",
+    card5Pill: "申请加入护士团队",
+    card6Title: "家属反馈与评价",
+    card6Desc: "分享您的护理体验或提出宝贵建议。我们不断精益求精，为您提供最优质的临床照护。",
+    card6Pill: "提交评价与反馈",
+    bannerTitle: "需要即时居家护理安排？",
+    bannerSub: "直接联络临床主管，为您提供专业建议、透明报价及护士派遣。"
+  },
+  bm: {
+    coverage: "24/7 SELURUH PULAU PINANG & SEBERANG PERAI",
+    founderTitle: "Pengasas & Pengarah Klinikal",
+    welcomeTitle: "Penjagaan Kejururawatan Profesional di Rumah.",
+    welcomeMsg: '"Selamat datang ke Assura Nursing Care. Kami membawa piawaian klinikal hospital, pemulihan pasca pembedahan, dan penjagaan jururawat 24/7 terus ke rumah anda di seluruh Pulau Pinang & Seberang Perai."',
+    stat1: "Syif 24 Jam Setiap Hari",
+    stat2: "Pulau & Tanah Besar",
+    stat3: "Jururawat Berdaftar LJM/KKM",
+    card1Title: "Tempah Jururawat Rumah",
+    card1Desc: "Rawatan luka, pertukaran tiub Ryle, tiub kencing kateter, stoma & pemberian ubat klinikal.",
+    card1Pill: "Lihat Kadar & Prosedur",
+    card2Title: "Portal Staf Klinikal",
+    card2Desc: "Log masuk untuk Jururawat & Penolong Pegawai Perubatan (AMO). Urus kes, carta MEWS & penilaian kemasukan.",
+    card2Pill: "Log Masuk Jururawat",
+    card3Title: "Sewa Peralatan Perubatan",
+    card3Desc: "Katil hospital elektrik, mesin konsentrator oksigen 5L/10L, tilam angin & kerusi roda di Pulau Pinang.",
+    card3Pill: "Penghantaran Hari Yang Sama",
+    card4Title: "Panduan Kecemasan 24 Jam",
+    card4Desc: "Protokol kecemasan, koordinasi ambulans swasta, panduan CPR & tanda amaran Strok F.A.S.T.",
+    card4Pill: "Protokol Kecemasan",
+    card5Title: "Sertai Pasukan Jururawat",
+    card5Desc: "Kadar bayaran tinggi (70% bahagian jururawat), syif fleksibel & sokongan klinikal profesional.",
+    card5Pill: "Daftar Sebagai Jururawat",
+    card6Title: "Maklum Balas & Ulasan",
+    card6Desc: "Kongsi pengalaman anda atau berikan maklum balas mengenai kualiti perkhidmatan kejururawatan kami.",
+    card6Pill: "Hantar Maklum Balas",
+    bannerTitle: "Perlukan Jururawat Segera di Pulau Pinang?",
+    bannerSub: "Hubungi penyelia klinikal kami terus untuk nasihat, sebut harga & tugasan jururawat."
+  },
+  ta: {
+    coverage: "24/7 பினாங்கு & நிலப்பரப்பு முழுவதும்",
+    founderTitle: "நிறுவனர் & மருத்துவ இயக்குநர்",
+    welcomeTitle: "உங்கள் வீட்டில் கண்ணியமான தொழில்முறை நர்சிங் பராமரிப்பு.",
+    welcomeMsg: '"அசுரா நர்சிங் கேருக்கு வரவேற்கிறோம். பினாங்கு முழுவதும் உங்கள் வீட்டிற்கே மருத்துவமனை தர நர்சிங் சேவைகளை கொண்டு வருகிறோம்."',
+    stat1: "24/7 நர்சிங் சுழற்சி",
+    stat2: "முழு பினாங்கு பகுதி",
+    stat3: "பதிவுசெய்யப்பட்ட செவிலியர்கள்",
+    card1Title: "வீட்டு நர்சிங் பதிவு",
+    card1Desc: "காயம் கட்டுதல், குழாய் பராமரிப்பு, பக்கவாதம் மறுவாழ்வு மற்றும் மருத்துவ பராமரிப்பு.",
+    card1Pill: "விலை & நடைமுறைகள்",
+    card2Title: "ஊழியர் தளம்",
+    card2Desc: "செவிலியர் மற்றும் மருத்துவ அலுவலர் உள்நுழைவு.",
+    card2Pill: "ஊழியர் உள்நுழைவு",
+    card3Title: "மருத்துவ உபகரணங்கள் வாடகை",
+    card3Desc: "மின்சார மருத்துவமனை படுக்கைகள், ஆக்ஸிஜன் இயந்திரங்கள், சக்கர நாற்காலிகள்.",
+    card3Pill: "விரைவான விநியோகம்",
+    card4Title: "24/7 அவசர உதவி வழிகாட்டி",
+    card4Desc: "அவசர நெறிமுறைகள், CPR வழிகாட்டுதல் & ஆம்புலன்ஸ் சேவை.",
+    card4Pill: "அவசர நெறிமுறைகள்",
+    card5Title: "எங்கள் குழுவில் இணையுங்கள்",
+    card5Desc: "அதிக ஊதியம் (70% பங்கு), நெகிழ்வான பணி நேரம் & மருத்துவ ஆதரவு.",
+    card5Pill: "நர்ஸ் விண்ணப்பம்",
+    card6Title: "கருத்துகள் & மதிப்புரைகள்",
+    card6Desc: "உங்கள் அனுபவத்தைப் பகிர்ந்துகொள்ளுங்கள்.",
+    card6Pill: "கருத்து சமர்ப்பிக்கவும்",
+    bannerTitle: "பினாங்கில் உடனடி நர்சிங் உதவி தேவையா?",
+    bannerSub: "எங்கள் மருத்துவ மேற்பார்வையாளரை நேரடியாக தொடர்பு கொள்ளவும்."
+  }
+};
+
+function setLang(lang) {
+  const d = DICT[lang] || DICT.en;
+  document.getElementById('txt-coverage').innerText = d.coverage;
+  document.getElementById('txt-founder-title').innerText = d.founderTitle;
+  document.getElementById('txt-welcome-title').innerText = d.welcomeTitle;
+  document.getElementById('txt-welcome-msg').innerText = d.welcomeMsg;
+  document.getElementById('txt-stat-1').innerText = d.stat1;
+  document.getElementById('txt-stat-2').innerText = d.stat2;
+  document.getElementById('txt-stat-3').innerText = d.stat3;
+  document.getElementById('txt-card1-title').innerText = d.card1Title;
+  document.getElementById('txt-card1-desc').innerText = d.card1Desc;
+  document.getElementById('txt-card1-pill').innerText = d.card1Pill;
+  document.getElementById('txt-card2-title').innerText = d.card2Title;
+  document.getElementById('txt-card2-desc').innerText = d.card2Desc;
+  document.getElementById('txt-card2-pill').innerText = d.card2Pill;
+  document.getElementById('txt-card3-title').innerText = d.card3Title;
+  document.getElementById('txt-card3-desc').innerText = d.card3Desc;
+  document.getElementById('txt-card3-pill').innerText = d.card3Pill;
+  document.getElementById('txt-card4-title').innerText = d.card4Title;
+  document.getElementById('txt-card4-desc').innerText = d.card4Desc;
+  document.getElementById('txt-card4-pill').innerText = d.card4Pill;
+  document.getElementById('txt-card5-title').innerText = d.card5Title;
+  document.getElementById('txt-card5-desc').innerText = d.card5Desc;
+  document.getElementById('txt-card5-pill').innerText = d.card5Pill;
+  document.getElementById('txt-card6-title').innerText = d.card6Title;
+  document.getElementById('txt-card6-desc').innerText = d.card6Desc;
+  document.getElementById('txt-card6-pill').innerText = d.card6Pill;
+  document.getElementById('txt-banner-title').innerText = d.bannerTitle;
+  document.getElementById('txt-banner-sub').innerText = d.bannerSub;
+
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.innerText.toLowerCase().includes(lang));
+  });
+}
+</script>
+
+</body>
+</html>
