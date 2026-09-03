@@ -150,7 +150,8 @@ header{min-height:100svh;display:flex;flex-direction:column;justify-content:cent
   -webkit-tap-highlight-color:transparent}
 /* the logo breathes — slow, like someone asleep and comfortable */
 .logo{position:relative;z-index:2;display:block;width:min(230px,58%);height:auto;
-  animation:breathe 5.2s ease-in-out infinite;transform-origin:50% 60%}
+  animation:breathe 5.2s ease-in-out infinite;transform-origin:50% 60%;
+  filter:drop-shadow(0 0 1.5px rgba(255,255,255,0.95)) drop-shadow(0 2px 10px rgba(56,189,248,0.4))}
 @keyframes breathe{0%,100%{transform:translateY(0) scale(1)}
   50%{transform:translateY(-7px) scale(1.012)}}
 
