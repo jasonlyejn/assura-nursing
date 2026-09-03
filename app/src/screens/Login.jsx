@@ -32,7 +32,7 @@ export default function Login({ onDone }) {
   return (
     <div className="card auth-card" style={{ maxWidth: '440px', margin: '40px auto', padding: '32px 26px', borderRadius: '24px', boxShadow: '0 20px 40px -10px rgba(12,48,84,0.12)', border: '1px solid rgba(226,232,240,0.9)' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
-        <img src="/logo.png?v=9" alt="Assura Case Management Logo" style={{ height: '84px', width: 'auto', marginBottom: '10px', objectFit: 'contain' }} />
+        <img src="/logo.png?v=10" alt="Assura Case Management Logo" style={{ height: '96px', width: 'auto', marginBottom: '10px', objectFit: 'contain' }} />
         <span style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '1.2px', color: '#0369a1', textTransform: 'uppercase', background: '#e0f2fe', padding: '3px 12px', borderRadius: '20px', border: '1px solid #bae6fd' }}>
           CASE MANAGEMENT PORTAL
         </span>

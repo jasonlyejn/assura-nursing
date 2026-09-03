@@ -42,13 +42,13 @@ input,select,button{font:inherit}
 
 /* app shell — responsive full screen */
 .app{width:100%;max-width:100%;min-height:100vh;min-height:100dvh;margin:0 auto;display:flex;flex-direction:column;box-sizing:border-box;background:transparent;overflow-x:hidden}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:calc(8px + env(safe-area-inset-top, 0px)) 12px 8px 12px;background:linear-gradient(135deg,#07192d 0%,#0c2b48 50%,#082035 100%);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 4px 20px rgba(0,0,0,.3);border-bottom:1px solid rgba(56,189,248,.2);backdrop-filter:blur(16px);max-width:100%;box-sizing:border-box}
-.topbar-brand{display:flex;align-items:center;gap:8px;cursor:pointer;flex-shrink:0;min-width:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(10px + env(safe-area-inset-top, 0px)) 16px 10px 16px;background:linear-gradient(135deg,#07192d 0%,#0c2b48 50%,#082035 100%);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 4px 20px rgba(0,0,0,.3);border-bottom:1px solid rgba(56,189,248,.2);backdrop-filter:blur(16px);max-width:100%;box-sizing:border-box}
+.topbar-brand{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;min-width:0}
 .topbar-logo-wrap{background:transparent;padding:2px 4px;display:flex;align-items:center;justify-content:center;transition:transform .15s ease;filter:drop-shadow(0 2px 8px rgba(56,189,248,.3))}
 .topbar-logo-wrap:hover{transform:scale(1.04)}
-.topbar-logo{height:38px;max-height:44px;width:auto;max-width:140px;object-fit:contain;display:block}
+.topbar-logo{height:48px;max-height:54px;width:auto;max-width:170px;object-fit:contain;display:block}
 .topbar-title{line-height:1.2;min-width:0}
-.topbar-title b{display:block;color:#ffffff;font-size:0.92rem;font-weight:800;letter-spacing:-0.2px}
+.topbar-title b{display:block;color:#ffffff;font-size:0.96rem;font-weight:800;letter-spacing:-0.2px}
 .topbar-title span{display:inline-block;color:#38bdf8;font-size:0.7rem;font-weight:700;background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.3);padding:1px 6px;border-radius:8px;margin-top:2px}
 
 .topbar-user-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:3px 9px;border-radius:24px;font-size:0.78rem;color:#e2e8f0;margin-left:auto;white-space:nowrap;flex-shrink:0}
