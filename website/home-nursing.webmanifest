@@ -1,14 +1,16 @@
 {
-  "name": "Assura Nursing",
+  "name": "Assura Nursing: Home Care",
   "short_name": "Assura Nursing",
-  "description": "Professional Nursing, Wherever You Need It. Private home nursing in Bukit Mertajam and nearby areas.",
-  "lang": "en-MY",
-  "start_url": "./",
-  "scope": "./",
+  "id": "com.assuranursing.app",
+  "description": "24/7 Professional Home Nursing, Wound Care, Post-Surgery & Stroke Rehab across Penang Island & Mainland.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "background_color": "#040D1A",
   "theme_color": "#07182B",
+  "categories": ["medical", "health", "lifestyle"],
   "icons": [
     {
       "src": "home-nursing-icon-192.png",
@@ -31,16 +33,16 @@
   ],
   "shortcuts": [
     {
-      "name": "Book a visit",
+      "name": "Book Home Nursing",
       "short_name": "Book",
-      "url": "./book.html",
-      "description": "Go straight to the booking form"
+      "url": "/#calculator",
+      "description": "Calculate rates and book private nursing care"
     },
     {
-      "name": "WhatsApp us",
+      "name": "WhatsApp 24/7",
       "short_name": "WhatsApp",
-      "url": "./book.html#booking-form",
-      "description": "Ask a question"
+      "url": "https://wa.me/60124701235",
+      "description": "Direct care supervisor coordination"
     }
   ]
 }
