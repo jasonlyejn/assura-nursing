@@ -405,9 +405,12 @@ footer{margin:34px 0 0;padding:34px 0 8px;border-top:1px solid var(--line)}
       <button class="lbtn" type="button" onclick="setLang('bm')">B. Melayu</button>
       <button class="lbtn" type="button" onclick="setLang('ta')">தமிழ்</button>
     </div>
-    <div>
-      <a href="portal.html" class="lbtn" style="background: rgba(14, 165, 233, 0.2); color: #7dd3fc; border: 1px solid rgba(14, 165, 233, 0.5); text-decoration: none; font-weight: 700; padding: 6px 12px;">
-        👤 Patient Portal · 会员专区
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <a href="portal.html" class="lbtn" style="background: rgba(14, 165, 233, 0.2); color: #7dd3fc; border: 1px solid rgba(14, 165, 233, 0.5); text-decoration: none; font-weight: 700; padding: 6px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 4px;">
+        👤 <span data-t="btn_patient_portal">Patient Portal · 会员专区</span>
+      </a>
+      <a href="https://staff.assuranursing.com" target="_blank" rel="noopener" class="lbtn" style="background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.5); text-decoration: none; font-weight: 700; padding: 6px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 4px;">
+        🔒 <span data-t="btn_staff_portal">Staff Portal · 员工系统</span>
       </a>
     </div>
   </div>
@@ -450,7 +453,8 @@ footer{margin:34px 0 0;padding:34px 0 8px;border-top:1px solid var(--line)}
         <span data-t="cta_wa">WhatsApp us · 询问</span>
       </a>
       <a class="btn btn-book" href="book.html"><span data-t="cta_book">Book a visit · 预约上门</span></a>
-      <a class="btn btn-call" href="portal.html" style="background: rgba(14, 165, 233, 0.2); border: 1px solid rgba(14, 165, 233, 0.5); color: #7dd3fc;"><span>👤 Patient Portal · 会员</span></a>
+      <a class="btn btn-call" href="portal.html" style="background: rgba(14, 165, 233, 0.2); border: 1px solid rgba(14, 165, 233, 0.5); color: #7dd3fc;"><span>👤 <span data-t="btn_patient_portal">Patient Portal · 会员</span></span></a>
+      <a class="btn btn-call" href="https://staff.assuranursing.com" target="_blank" rel="noopener" style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.5); color: #fde047;"><span>🔒 <span data-t="btn_staff_portal">Staff Portal · 员工</span></span></a>
       <a class="btn btn-call" href="tel:+60122064868">Call 012-206 4868</a>
     </div>
   </header>
@@ -869,6 +873,8 @@ updateCalc();
 
 const DICT = {
   en: {
+    btn_patient_portal: 'Patient Portal · Member Area',
+    btn_staff_portal: 'Staff Portal · Clinical Access',
     eyebrow: 'Care that comes to you',
     h1_1: 'Nursing care,',
     h1_2: 'at home.',
@@ -886,6 +892,8 @@ const DICT = {
     svc_p: "A licensed nurse or trained caregiver comes directly to you. Same procedures you'd get at a clinic — without moving someone who is frail, or waiting half a day to be seen."
   },
   zh: {
+    btn_patient_portal: 'Patient Portal · 会员专区',
+    btn_staff_portal: 'Staff Portal · 员工系统',
     eyebrow: '专业护理 · 亲自上门',
     h1_1: '专业居家护理，',
     h1_2: '就在您家中。',
@@ -903,6 +911,8 @@ const DICT = {
     svc_p: '由注册执业专业护士与受训医护人员亲自上门，提供与诊所相同的医疗护理程序，免除体弱病患奔波之苦。'
   },
   bm: {
+    btn_patient_portal: 'Portal Pesakit · Kawasan Ahli',
+    btn_staff_portal: 'Portal Staf · Akses Klinikal',
     eyebrow: 'Penjagaan Kejururawatan Di Rumah Anda',
     h1_1: 'Rawatan Jururawat & Penjaga,',
     h1_2: 'Di Rumah Sendiri.',
@@ -920,6 +930,8 @@ const DICT = {
     svc_p: 'Jururawat bertauliah dan penjaga profesional datang terus ke rumah. Prosedur klinikal berkualiti tanpa perlu memindahkan pesakit yang uzur.'
   },
   ta: {
+    btn_patient_portal: 'நோயாளி தளம் · உறுப்பினர் பகுதி',
+    btn_staff_portal: 'ஊழியர் தளம் · மருத்துவ உள்நுழைவு',
     eyebrow: 'உங்கள் இல்லத்திற்கே வரும் செவிலியர் பராமரிப்பு',
     h1_1: 'வீட்டு செவிலியர் பராமரிப்பு,',
     h1_2: 'உங்கள் இல்லத்திலேயே.',
