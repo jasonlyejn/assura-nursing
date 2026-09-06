@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
-<title>Penang Emergency Directory, Hospitals, CPR &amp; Stroke F.A.S.T · Assura Nursing</title>
-<meta name="description" content="Complete directory of Penang hospital emergency hotlines, ambulance services, CPR visual guide with 110 BPM metronome &amp; Stroke FAST protocols." />
+<title>Penang Emergency Directory, Hospitals &amp; GPS Directions · Assura Nursing</title>
+<meta name="description" content="Complete directory of Penang hospital emergency hotlines, GPS navigation directions (Google Maps &amp; Waze), ambulance services, CPR guide &amp; Stroke FAST protocols." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -73,7 +73,7 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px 80px;
 }
@@ -313,15 +313,15 @@ header.site-header {
 /* Hospital Directory Table / List Cards */
 .hospital-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
 }
 
 .hospital-item {
-  background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  border-radius: 14px;
-  padding: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 16px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -329,9 +329,10 @@ header.site-header {
 }
 
 .hospital-item:hover {
-  background: rgba(20, 35, 60, 0.85);
-  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(20, 35, 60, 0.9);
+  border-color: rgba(56, 189, 248, 0.45);
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .h-top {
@@ -343,16 +344,17 @@ header.site-header {
 }
 
 .h-name {
-  font-size: 0.98rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #FFF;
   line-height: 1.35;
 }
 
 .h-loc {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: #94A3B8;
-  margin-top: 2px;
+  margin-top: 3px;
+  line-height: 1.35;
 }
 
 .h-badge {
@@ -379,7 +381,7 @@ header.site-header {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-top: 8px;
+  padding: 10px 0 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -420,6 +422,52 @@ header.site-header {
 .h-phone-link.emg:hover {
   background: rgba(239, 68, 68, 0.35);
   color: #FFF;
+}
+
+/* GPS Navigation Buttons */
+.h-nav-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.h-nav-pill {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7DD3FC;
+  font-weight: 700;
+  font-size: 0.74rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.h-nav-pill:hover {
+  background: rgba(14, 165, 233, 0.28);
+  color: #FFF;
+  border-color: #38BDF8;
+  transform: translateY(-1px);
+}
+
+.h-nav-pill.waze {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(96, 165, 250, 0.35);
+  color: #93C5FD;
+}
+
+.h-nav-pill.waze:hover {
+  background: rgba(59, 130, 246, 0.28);
+  color: #FFF;
+  border-color: #60A5FA;
+  transform: translateY(-1px);
 }
 
 /* Stroke FAST Visual Cards Grid */
@@ -705,9 +753,9 @@ footer.site-footer {
 <div class="container">
   <!-- Page Header -->
   <div class="page-hero">
-    <span class="page-tag">Penang Emergency Directory · 槟城紧急与急救指南</span>
+    <span class="page-tag">Penang Emergency &amp; GPS Directory · 槟城紧急与医院导航指南</span>
     <h1>Penang Hospital Directory &amp; Emergency Protocols</h1>
-    <p>Complete directory of Penang Island &amp; Mainland hospital emergency hotlines, NGO ambulance dispatches, visual Stroke F.A.S.T identification, and 110 BPM CPR rhythm guide.</p>
+    <p>Complete directory of Penang Island &amp; Mainland hospital emergency hotlines, one-tap GPS navigation (Google Maps &amp; Waze), ambulance dispatches, and life-saving first aid protocols.</p>
   </div>
 
   <!-- 1. IMMEDIATE 24/7 NATIONAL & AMBULANCE DISPATCH HOTLINES -->
@@ -776,19 +824,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Penang General Hospital (HPP)</div>
-              <div class="h-loc">Jalan Residensi, Georgetown (Main Tertiary Centre)</div>
+              <div class="h-loc">Jalan Residensi, 10990 George Town, Penang</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency (ETD):</span>
-            <a href="tel:+6042225222" class="h-phone-link emg">☎ 04-222 5222</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency (ETD):</span>
+              <a href="tel:+6042225222" class="h-phone-link emg">☎ 04-222 5222</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6042225333" class="h-phone-link">☎ 04-222 5333</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6042225333" class="h-phone-link">☎ 04-222 5333</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Pulau+Pinang+Jalan+Residensi+Georgetown" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Pulau+Pinang" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -799,15 +857,25 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Hospital Balik Pulau (HBP)</div>
-              <div class="h-loc">Balik Pulau, South-West Island District</div>
+              <div class="h-loc">Jalan Balik Pulau, 11000 Balik Pulau, Penang</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency / General:</span>
-            <a href="tel:+6048669333" class="h-phone-link emg">☎ 04-866 9333</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency / Line:</span>
+              <a href="tel:+6048669333" class="h-phone-link emg">☎ 04-866 9333</a>
+            </div>
+          </div>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Balik+Pulau+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Balik+Pulau" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -818,19 +886,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Gleneagles Hospital Penang</div>
-              <div class="h-loc">Jalan Pangkor, Georgetown</div>
+              <div class="h-loc">1, Jalan Pangkor, 10050 George Town, Penang</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Hotline:</span>
-            <a href="tel:+6042229199" class="h-phone-link emg">☎ 04-222 9199</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Hotline:</span>
+              <a href="tel:+6042229199" class="h-phone-link emg">☎ 04-222 9199</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6042229111" class="h-phone-link">☎ 04-222 9111</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6042229111" class="h-phone-link">☎ 04-222 9111</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Gleneagles+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Gleneagles+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -841,19 +919,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Island Hospital Penang</div>
-              <div class="h-loc">Macalister Road / Peel Avenue, Georgetown</div>
+              <div class="h-loc">308, Macalister Road / Peel Avenue, 10450 George Town</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Care:</span>
-            <a href="tel:+6042383388" class="h-phone-link emg">☎ 04-238 3388</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Care:</span>
+              <a href="tel:+6042383388" class="h-phone-link emg">☎ 04-238 3388</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6042288222" class="h-phone-link">☎ 04-228 8222</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6042288222" class="h-phone-link">☎ 04-228 8222</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Island+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Island+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -864,19 +952,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Loh Guan Lye Specialists Centre (LSC)</div>
-              <div class="h-loc">Logan Road, Georgetown</div>
+              <div class="h-loc">238, Logan Road, 10400 George Town, Penang</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Line:</span>
-            <a href="tel:+6042266911" class="h-phone-link emg">☎ 04-226 6911</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Line:</span>
+              <a href="tel:+6042266911" class="h-phone-link emg">☎ 04-226 6911</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6042388888" class="h-phone-link">☎ 04-238 8888</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6042388888" class="h-phone-link">☎ 04-238 8888</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Loh+Guan+Lye+Specialists+Centre+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Loh+Guan+Lye+Specialists+Centre" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -887,19 +985,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Pantai Hospital Penang</div>
-              <div class="h-loc">Jalan Tengah, Bayan Lepas (Near Airport)</div>
+              <div class="h-loc">82, Jalan Tengah, Bandar Bayan Baru, 11950 Bayan Lepas</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Line:</span>
-            <a href="tel:+6046433888" class="h-phone-link emg">☎ 04-643 3888</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Line:</span>
+              <a href="tel:+6046433888" class="h-phone-link emg">☎ 04-643 3888</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6046433444" class="h-phone-link">☎ 04-643 3444</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6046433444" class="h-phone-link">☎ 04-643 3444</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Pantai+Hospital+Penang+Bayan+Lepas" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Pantai+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -910,19 +1018,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Penang Adventist Hospital (PAH)</div>
-              <div class="h-loc">Burmah Road, Georgetown</div>
+              <div class="h-loc">465, Burmah Road, 10350 George Town, Penang</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Line:</span>
-            <a href="tel:+6042227799" class="h-phone-link emg">☎ 04-222 7799</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Line:</span>
+              <a href="tel:+6042227799" class="h-phone-link emg">☎ 04-222 7799</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6042227200" class="h-phone-link">☎ 04-222 7200</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6042227200" class="h-phone-link">☎ 04-222 7200</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Penang+Adventist+Hospital" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Penang+Adventist+Hospital" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -933,15 +1051,25 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Mount Miriam Cancer Hospital</div>
-              <div class="h-loc">Jalan Bulan, Tanjung Bungah</div>
+              <div class="h-loc">23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah</div>
             </div>
             <span class="h-badge badge-pvt">Oncology Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>General / Inquiries:</span>
-            <a href="tel:+6048923999" class="h-phone-link">☎ 04-892 3999</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>General / Enquiries:</span>
+              <a href="tel:+6048923999" class="h-phone-link">☎ 04-892 3999</a>
+            </div>
+          </div>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Mount+Miriam+Cancer+Hospital+Tanjung+Bungah" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Mount+Miriam+Cancer+Hospital" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -962,19 +1090,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
-              <div class="h-loc">Seberang Jaya (Mainland Major Referral Hospital)</div>
+              <div class="h-loc">Jalan Tun Hussein Onn, 13700 Seberang Jaya, Perai</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency (ETD):</span>
-            <a href="tel:+6043827300" class="h-phone-link emg">☎ 04-382 7300</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency (ETD):</span>
+              <a href="tel:+6043827300" class="h-phone-link emg">☎ 04-382 7300</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6043827333" class="h-phone-link">☎ 04-382 7333</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6043827333" class="h-phone-link">☎ 04-382 7333</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Seberang+Jaya" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Seberang+Jaya" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -985,15 +1123,25 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Hospital Bukit Mertajam (HBM)</div>
-              <div class="h-loc">Jalan Kulim, Bukit Mertajam</div>
+              <div class="h-loc">Jalan Kulim, 14000 Bukit Mertajam, Penang</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency / General:</span>
-            <a href="tel:+6045497333" class="h-phone-link emg">☎ 04-549 7333</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency / Line:</span>
+              <a href="tel:+6045497333" class="h-phone-link emg">☎ 04-549 7333</a>
+            </div>
+          </div>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Bukit+Mertajam" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Bukit+Mertajam" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -1004,15 +1152,25 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Hospital Kepala Batas (HKB)</div>
-              <div class="h-loc">Kepala Batas, Seberang Perai Utara</div>
+              <div class="h-loc">Jalan Bertam 2, 13200 Kepala Batas, Penang</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency / General:</span>
-            <a href="tel:+6045622333" class="h-phone-link emg">☎ 04-562 2333</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency / Line:</span>
+              <a href="tel:+6045622333" class="h-phone-link emg">☎ 04-562 2333</a>
+            </div>
+          </div>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Kepala+Batas" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Kepala+Batas" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -1023,15 +1181,25 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Hospital Sungai Bakap (HSB)</div>
-              <div class="h-loc">Sungai Bakap, Seberang Perai Selatan</div>
+              <div class="h-loc">14200 Sungai Bakap, Seberang Perai Selatan, Penang</div>
             </div>
             <span class="h-badge badge-gov">Gov Hospital</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency / General:</span>
-            <a href="tel:+6045824333" class="h-phone-link emg">☎ 04-582 4333</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency / Line:</span>
+              <a href="tel:+6045824333" class="h-phone-link emg">☎ 04-582 4333</a>
+            </div>
+          </div>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Sungai+Bakap" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Hospital+Sungai+Bakap" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -1042,19 +1210,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Sunway Medical Centre Penang</div>
-              <div class="h-loc">Pusat Bandar Seberang Jaya, Perai</div>
+              <div class="h-loc">Pusat Bandar Seberang Jaya, 13700 Perai, Penang</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Hotline:</span>
-            <a href="tel:+6043735999" class="h-phone-link emg">☎ 04-373 5999</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Hotline:</span>
+              <a href="tel:+6043735999" class="h-phone-link emg">☎ 04-373 5999</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6043735555" class="h-phone-link">☎ 04-373 5555</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6043735555" class="h-phone-link">☎ 04-373 5555</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Sunway+Medical+Centre+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Sunway+Medical+Centre+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -1065,19 +1243,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">KPJ Penang Specialist Hospital</div>
-              <div class="h-loc">Bandar Perda, Bukit Mertajam</div>
+              <div class="h-loc">570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Emergency Hotline:</span>
-            <a href="tel:+6045486699" class="h-phone-link emg">☎ 04-548 6699</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Emergency Hotline:</span>
+              <a href="tel:+6045486699" class="h-phone-link emg">☎ 04-548 6699</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6045486688" class="h-phone-link">☎ 04-548 6688</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6045486688" class="h-phone-link">☎ 04-548 6688</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=KPJ+Penang+Specialist+Hospital" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=KPJ+Penang+Specialist+Hospital" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
@@ -1088,19 +1276,29 @@ footer.site-footer {
           <div class="h-top">
             <div>
               <div class="h-name">Bagan Specialist Centre</div>
-              <div class="h-loc">Jalan Bagan 1, Butterworth</div>
+              <div class="h-loc">Jalan Bagan 1, 13400 Butterworth, Penang</div>
             </div>
             <span class="h-badge badge-pvt">Private Specialist</span>
           </div>
         </div>
-        <div class="h-numbers">
-          <div class="h-call-row">
-            <span>24/7 Accident &amp; Emergency:</span>
-            <a href="tel:+6043405200" class="h-phone-link emg">☎ 04-340 5200</a>
+        <div>
+          <div class="h-numbers">
+            <div class="h-call-row">
+              <span>24/7 Accident &amp; Emergency:</span>
+              <a href="tel:+6043405200" class="h-phone-link emg">☎ 04-340 5200</a>
+            </div>
+            <div class="h-call-row">
+              <span>General Line:</span>
+              <a href="tel:+6043405000" class="h-phone-link">☎ 04-340 5000</a>
+            </div>
           </div>
-          <div class="h-call-row">
-            <span>General Line:</span>
-            <a href="tel:+6043405000" class="h-phone-link">☎ 04-340 5000</a>
+          <div class="h-nav-row">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Bagan+Specialist+Centre+Butterworth" target="_blank" rel="noopener" class="h-nav-pill">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Bagan+Specialist+Centre" target="_blank" rel="noopener" class="h-nav-pill waze">
+              🚗 Waze
+            </a>
           </div>
         </div>
       </div>
