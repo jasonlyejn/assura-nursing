@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
 <title>Assura Nursing Care · 24/7 Professional Home Nursing Penang</title>
-<meta name="description" content="MOH/LJM Certified Private Home Nursing, Wound Care, Post-Surgery Recovery, Stroke Rehab & Medical Equipment across Penang Island & Mainland." />
+<meta name="description" content="Penang's premier private home nursing service. MOH/LJM Certified Registered Nurses providing wound care, stroke rehab, elderly care & medical equipment." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
 <style>
 :root {
   --bg-deep: #040D1A;
-  --bg-card: rgba(10, 26, 46, 0.72);
-  --bg-card-hover: rgba(15, 38, 68, 0.9);
+  --bg-card: rgba(10, 26, 46, 0.78);
+  --bg-card-hover: rgba(16, 40, 72, 0.92);
   --line: rgba(56, 189, 248, 0.18);
   --blue: #0284c7;
   --blue-bright: #38bdf8;
+  --blue-glow: rgba(56, 189, 248, 0.35);
   --ice: #E0F2FE;
   --gold: #FFD27A;
+  --gold-glow: rgba(255, 210, 122, 0.35);
   --amber: #F59E0B;
   --pulse: #E4544A;
   --green: #10B981;
@@ -50,9 +52,9 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 15%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
-    radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
-    radial-gradient(circle at 90% 60%, rgba(228, 84, 74, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 50% 12%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 10% 75%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 90% 55%, rgba(228, 84, 74, 0.14) 0%, transparent 55%),
     #040D1A;
 }
 
@@ -72,7 +74,7 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1080px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px 80px;
 }
@@ -82,7 +84,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(4, 13, 26, 0.90);
+  background: rgba(4, 13, 26, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
@@ -90,7 +92,7 @@ header.site-header {
 }
 
 .header-inner {
-  max-width: 1120px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -138,11 +140,11 @@ header.site-header {
 
 .nav-link:hover, .nav-link.active {
   color: #FFF;
-  background: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.35);
 }
 
-/* Header Actions: Portals & Lang */
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
@@ -156,19 +158,19 @@ header.site-header {
   border: 1px solid rgba(14, 165, 233, 0.5);
   text-decoration: none;
   font-weight: 700;
-  padding: 5px 11px;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   transition: all 0.2s;
   white-space: nowrap;
 }
 
 .portal-pill-patient:hover {
   background: rgba(14, 165, 233, 0.35);
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.4);
 }
 
 .portal-pill-staff {
@@ -177,45 +179,19 @@ header.site-header {
   border: 1px solid rgba(245, 158, 11, 0.5);
   text-decoration: none;
   font-weight: 700;
-  padding: 5px 11px;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   transition: all 0.2s;
   white-space: nowrap;
 }
 
 .portal-pill-staff:hover {
   background: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
-}
-
-.lang-bar {
-  display: flex;
-  gap: 3px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 3px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: #94A3B8;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lang-btn.active, .lang-btn:hover {
-  background: var(--blue);
-  color: #FFF;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
 }
 
 .mobile-toggle {
@@ -229,44 +205,44 @@ header.site-header {
   cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section (Visual & Welcoming) */
 .hero-sec {
-  padding: 40px 10px 30px;
+  padding: 42px 10px 32px;
   text-align: center;
 }
 
-.badge-247 {
+.trust-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(228, 84, 74, 0.15);
-  border: 1px solid rgba(228, 84, 74, 0.4);
-  color: #FFA49B;
-  padding: 5px 14px;
-  border-radius: 20px;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6EE7B7;
+  padding: 6px 16px;
+  border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 18px;
 }
 
 .pulse-dot {
-  width: 7px;
-  height: 7px;
-  background: #E4544A;
+  width: 8px;
+  height: 8px;
+  background: #10B981;
   border-radius: 50%;
-  box-shadow: 0 0 8px #E4544A;
+  box-shadow: 0 0 10px #10B981;
   animation: pulse-dot 1.8s infinite;
 }
 
 @keyframes pulse-dot {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 0.5; }
 }
 
 .hero-sec h1 {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
   font-weight: 600;
   line-height: 1.15;
   margin-bottom: 16px;
@@ -276,12 +252,12 @@ header.site-header {
   color: transparent;
 }
 
-.hero-sec p {
+.hero-sec .sub-headline {
   color: #C9DCEC;
-  font-size: 1.05rem;
-  max-width: 680px;
-  margin: 0 auto 24px;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  line-height: 1.65;
 }
 
 .hero-ctas {
@@ -289,19 +265,42 @@ header.site-header {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #FFF;
+  padding: 13px 26px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
 }
 
 .btn-primary {
   background: linear-gradient(135deg, #0284c7, #0369a1);
   color: #FFF;
-  padding: 12px 24px;
+  padding: 13px 26px;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 0.94rem;
+  font-size: 0.98rem;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -309,137 +308,354 @@ header.site-header {
   box-shadow: 0 10px 25px rgba(2, 132, 199, 0.6);
 }
 
-.btn-whatsapp {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #FFF;
-  padding: 12px 24px;
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 13px 24px;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 0.94rem;
+  font-size: 0.98rem;
   text-decoration: none;
-  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
 }
 
-.btn-whatsapp:hover {
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFF;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.6);
 }
 
-/* Category Action Hub Grid */
-.category-grid {
+/* Trust Stats Bar */
+.stats-bar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
   margin-bottom: 40px;
 }
 
-.cat-card {
+.stat-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  border-color: var(--blue-bright);
+  transform: translateY(-2px);
+}
+
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #FFF;
+  background: linear-gradient(135deg, #FFF 0%, var(--blue-bright) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Glass Section Cards */
+.glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--line);
   border-radius: 22px;
-  padding: 26px 24px;
-  text-decoration: none;
-  color: inherit;
+  padding: 32px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 26px;
+}
+
+.sec-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--blue-bright);
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.section-head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.section-head p {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.55;
+}
+
+/* 3-Step Process Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.step-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 18px;
+  padding: 24px 20px;
+  position: relative;
+  transition: all 0.25s;
+}
+
+.step-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.step-number-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: rgba(255, 210, 122, 0.25);
+}
+
+.step-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+/* Services Visual Grid */
+.services-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.service-v-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 18px;
+  padding: 22px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  transition: all 0.25s ease;
 }
 
-.cat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--cat-color, var(--blue-bright)), transparent);
-  opacity: 0.4;
-  transition: opacity 0.3s;
-}
-
-.cat-card:hover {
-  transform: translateY(-5px);
+.service-v-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--cat-color, var(--blue-bright));
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px var(--cat-glow, rgba(56, 189, 248, 0.3));
+  border-color: var(--blue-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-.cat-card:hover::before {
-  opacity: 1;
-}
-
-.cat-icon {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.cat-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #FFF;
-  margin-bottom: 8px;
+.s-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.cat-arrow {
-  color: var(--cat-color, var(--blue-bright));
+.s-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.s-title {
   font-size: 1.1rem;
-  transition: transform 0.2s;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.3;
 }
 
-.cat-card:hover .cat-arrow {
-  transform: translateX(4px);
-}
-
-.cat-desc {
+.s-desc {
   font-size: 0.86rem;
-  color: #94A3B8;
+  color: #CBD5E1;
   line-height: 1.5;
   margin-bottom: 16px;
 }
 
-.cat-pill {
-  display: inline-block;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--cat-color, var(--blue-bright));
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 10px;
-  border-radius: 8px;
-  align-self: flex-start;
+.s-features-list {
+  list-style: none;
+  font-size: 0.8rem;
+  color: #94A3B8;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
 }
 
-.cat-services { --cat-color: #38BDF8; --cat-glow: rgba(56, 189, 248, 0.35); }
-.cat-equip { --cat-color: #10B981; --cat-glow: rgba(16, 185, 129, 0.35); }
-.cat-emergency { --cat-color: #EF4444; --cat-glow: rgba(239, 68, 68, 0.35); }
-.cat-about { --cat-color: #FFD27A; --cat-glow: rgba(255, 210, 122, 0.35); }
-.cat-career { --cat-color: #A855F7; --cat-glow: rgba(168, 85, 247, 0.35); }
-.cat-portal { --cat-color: #F59E0B; --cat-glow: rgba(245, 158, 11, 0.35); }
+.s-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-/* Video Presentation Section */
-.vid-card {
-  background: var(--bg-card);
-  border-radius: 24px;
-  border: 1px solid var(--line);
-  padding: 24px;
-  margin-bottom: 40px;
+.s-features-list li::before {
+  content: '✓';
+  color: #38BDF8;
+  font-weight: 800;
+}
+
+.s-link-btn {
+  color: #38BDF8;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+
+.s-link-btn:hover {
+  color: #FFF;
+  transform: translateX(3px);
+}
+
+/* Founder & Leadership Visual Showcase */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.founder-photo-wrap {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 210, 122, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.founder-photo-wrap img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-badge-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(4, 13, 26, 0.95), transparent);
+  padding: 16px 14px 12px;
   text-align: center;
 }
 
-.vid-card video {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.founder-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.founder-role {
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.founder-quote {
+  font-size: 0.94rem;
+  color: #CBD5E1;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.founder-creds {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cred-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #E2E8F0;
+}
+
+/* App Download Banner */
+.app-banner-box {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.app-banner-text h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.app-banner-text p {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  max-width: 520px;
+  line-height: 1.5;
 }
 
 /* Footer */
@@ -487,6 +703,21 @@ footer.site-footer {
     box-shadow: 0 20px 40px rgba(0,0,0,0.7);
     gap: 8px;
   }
+  .founder-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .founder-photo-wrap {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .founder-creds {
+    justify-content: center;
+  }
+  .app-banner-box {
+    text-align: center;
+    justify-content: center;
+  }
 }
 </style>
 </head>
@@ -504,7 +735,7 @@ footer.site-footer {
     <ul class="nav-menu" id="navMenu">
       <li><a href="index.html" class="nav-link active">Home</a></li>
       <li><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
-      <li><a href="equipment.html" class="nav-link">Equipment Guide</a></li>
+      <li><a href="equipment.html" class="nav-link">Medical Equipment</a></li>
       <li><a href="emergency.html" class="nav-link">Emergency Protocols</a></li>
       <li><a href="about.html" class="nav-link">About Us</a></li>
       <li><a href="careers.html" class="nav-link">Careers</a></li>
@@ -525,128 +756,263 @@ footer.site-footer {
 </header>
 
 <div class="container">
-  <!-- Hero Section -->
+  <!-- 1. HERO SECTION (Warm, Visual & Reassuring) -->
   <section class="hero-sec">
-    <div class="badge-247">
+    <div class="trust-badge-pill">
       <span class="pulse-dot"></span>
-      <span>24/7 WHOLE PENANG &amp; MAINLAND</span>
+      <span>Penang 24/7 Home Nursing · Island &amp; Mainland · MOH / LJM Certified</span>
     </div>
 
-    <h1>Nursing Care, with Dignity at Home.</h1>
-    <p>
-      Hospital-standard clinical procedures, compassionate post-surgical recovery, stroke rehabilitation, and 24/7 private bedside nursing delivered directly to your home across Penang Island &amp; Mainland.
+    <h1>Hospital-Grade Care in the Comfort of Your Home</h1>
+    <p class="sub-headline">
+      Professional, compassionate Registered Nurses dedicated to your family. Expert wound care, stroke recovery, post-surgery rehabilitation, and elderly care delivered right to your doorstep.
     </p>
 
     <div class="hero-ctas">
-      <a href="https://wa.me/60122064868?text=Hello%20Assura%20Nursing,%20I%20would%20like%20to%20enquire%20about%20home%20nursing%20care." class="btn-whatsapp" target="_blank" rel="noopener">
-        💬 WhatsApp 24/7 Hotline
+      <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp">
+        <span>💬</span> Chat on WhatsApp (012-206 4868)
       </a>
       <a href="services.html" class="btn-primary">
-        ⚡ Instant Price Estimator
+        <span>🩺</span> View Services &amp; Fees
       </a>
+      <a href="emergency.html" class="btn-secondary">
+        <span>🚨</span> Emergency &amp; GPS Guide
+      </a>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Licensed Registered Nurses (LJM/MOH)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">24 / 7</div>
+        <div class="stat-label">Care Hotline &amp; Emergency Support</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Same-Day</div>
+        <div class="stat-label">Rapid Nurse Dispatch (Penang &amp; Mainland)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1,500+</div>
+        <div class="stat-label">Penang Families Supported with Peace of Mind</div>
+      </div>
     </div>
   </section>
 
-  <!-- 6 Interactive Category Hub Cards -->
-  <section class="category-grid">
-    <!-- 1. Clinical Services -->
-    <a href="services.html" class="cat-card cat-services">
-      <div>
-        <span class="cat-icon">🩺</span>
-        <div class="cat-title">
-          <span>Clinical Services &amp; Rates</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          Professional wound dressing, Ryle's tube, Foley catheterization, injections, stroke rehab &amp; instant price calculator.
-        </p>
-      </div>
-      <span class="cat-pill">Explore Services &amp; Pricing</span>
-    </a>
+  <!-- 2. EASY 3-STEP CARE PROCESS (Simple for the Public) -->
+  <section class="glass-card">
+    <div class="section-head">
+      <span class="sec-tag">How It Works · 3个简单步骤</span>
+      <h2>Getting Home Care for Your Loved One is Simple</h2>
+      <p>We handle everything from initial medical assessment to daily bedside nursing so your family can focus on recovery.</p>
+    </div>
 
-    <!-- 2. Medical Equipment -->
-    <a href="equipment.html" class="cat-card cat-equip">
-      <div>
-        <span class="cat-icon">🛏️</span>
-        <div class="cat-title">
-          <span>Medical Equipment Guide</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          Guidance for families on sourcing, renting or purchasing electric hospital beds, 5L/10L oxygen concentrators &amp; wheelchairs in Penang.
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-number-badge">01</span>
+        <span class="step-icon">📱</span>
+        <div class="step-title">1. Reach Out to Us</div>
+        <p class="step-desc">
+          Contact our 24/7 care hotline via WhatsApp or phone. Share your loved one's current medical condition and care requirements.
         </p>
       </div>
-      <span class="cat-pill">View Equipment Directory</span>
-    </a>
 
-    <!-- 3. Emergency & First Aid -->
-    <a href="emergency.html" class="cat-card cat-emergency">
-      <div>
-        <span class="cat-icon">🚑</span>
-        <div class="cat-title">
-          <span>Emergency Protocols</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          24/7 Penang emergency hotlines, private ambulance coordination, CPR step-by-step instructions &amp; Stroke F.A.S.T warning signs.
+      <div class="step-card">
+        <span class="step-number-badge">02</span>
+        <span class="step-icon">📋</span>
+        <div class="step-title">2. Free Clinical Plan</div>
+        <p class="step-desc">
+          Our senior Registered Nurse formulates an individualized home recovery schedule, sterile supplies checklist, and visit timeline.
         </p>
       </div>
-      <span class="cat-pill">Emergency Response Guide</span>
-    </a>
 
-    <!-- 4. About Us & Founder -->
-    <a href="about.html" class="cat-card cat-about">
-      <div>
-        <span class="cat-icon">🏛️</span>
-        <div class="cat-title">
-          <span>About Us &amp; Standards</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          Our clinical mission, Founder Jason Lye's message, MOH/LJM registered nurse quality standards &amp; Penang district coverage.
+      <div class="step-card">
+        <span class="step-number-badge">03</span>
+        <span class="step-icon">🏡</span>
+        <div class="step-title">3. Nurse at Your Home</div>
+        <p class="step-desc">
+          A certified nurse arrives punctually with sterile equipment, providing gentle bedside care and real-time digital updates to your family.
         </p>
       </div>
-      <span class="cat-pill">Read Our Story</span>
-    </a>
-
-    <!-- 5. Careers & Recruitment -->
-    <a href="careers.html" class="cat-card cat-career">
-      <div>
-        <span class="cat-icon">💼</span>
-        <div class="cat-title">
-          <span>Careers: Join Our Team</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          Join Penang's top home nursing team. High hourly rates (70% nurse split), flexible shift selection &amp; prompt bi-weekly payouts.
-        </p>
-      </div>
-      <span class="cat-pill">Nurse &amp; AMO Applications</span>
-    </a>
-
-    <!-- 6. Staff Portal Access -->
-    <a href="https://staff.assuranursing.com" target="_blank" rel="noopener" class="cat-card cat-portal">
-      <div>
-        <span class="cat-icon">🔒</span>
-        <div class="cat-title">
-          <span>Staff Portal Access</span>
-          <span class="cat-arrow">➔</span>
-        </div>
-        <p class="cat-desc">
-          Secure clinical workstation for Registered Nurses &amp; AMOs. Active patient records, electronic MAR, MEWS vital charts &amp; case dispatch.
-        </p>
-      </div>
-      <span class="cat-pill">Clinical Staff Login</span>
-    </a>
+    </div>
   </section>
 
-  <!-- Video Section -->
-  <section class="vid-card">
-    <h3 style="font-size:1.25rem; color:#FFF; margin-bottom:12px;">🎥 Clinical Home Care in Penang</h3>
-    <video controls playsinline poster="assura-promo-poster.jpg" preload="metadata">
-      <source src="assura-promo.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+  <!-- 3. POPULAR NURSING SERVICES (Lively Visual Cards) -->
+  <section class="glass-card">
+    <div class="section-head">
+      <span class="sec-tag">Our Services · 护理项目与服务</span>
+      <h2>Comprehensive Hospital-Grade Services at Home</h2>
+      <p>Transparent pricing with zero hidden registration fees. Tailored for short-term recovery or long-term care.</p>
+    </div>
+
+    <div class="services-visual-grid">
+      <!-- Wound Care -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#38BDF8;">🩹</div>
+            <div class="s-title">Wound Care &amp; Dressing</div>
+          </div>
+          <p class="s-desc">
+            Sterile wound dressing for diabetic foot ulcers, surgical stitches/staples removal, and pressure sore management to accelerate healing.
+          </p>
+          <ul class="s-features-list">
+            <li>Aseptic sterile technique</li>
+            <li>Diabetic foot ulcer treatment</li>
+            <li>Post-operative wound healing</li>
+          </ul>
+        </div>
+        <a href="services.html" class="s-link-btn">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Elderly Care -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#FFD27A;">👴</div>
+            <div class="s-title">Elderly &amp; Bedridden Care</div>
+          </div>
+          <p class="s-desc">
+            Attentive daily nursing, feeding tube (Ryle's tube/NG tube) replacement, catheter (CBD) care, hygiene assistance, and vital monitoring.
+          </p>
+          <ul class="s-features-list">
+            <li>NG Tube &amp; Urinary Catheter insertion</li>
+            <li>Daily vitals &amp; blood glucose tracking</li>
+            <li>Gentle bed bathing &amp; repositioning</li>
+          </ul>
+        </div>
+        <a href="services.html" class="s-link-btn">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Stroke Rehab -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#FCA5A5;">🧠</div>
+            <div class="s-title">Stroke &amp; Post-Op Recovery</div>
+          </div>
+          <p class="s-desc">
+            Personalized recovery care to regain physical mobility, strictly timely medication dispensing, fall prevention, and hospital discharge handover.
+          </p>
+          <ul class="s-features-list">
+            <li>Passive &amp; active limb exercise support</li>
+            <li>Medication administration &amp; safety</li>
+            <li>Complication prevention &amp; care</li>
+          </ul>
+        </div>
+        <a href="services.html" class="s-link-btn">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Injections & Lab Tests -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#6EE7B7;">💉</div>
+            <div class="s-title">Injections &amp; Blood Tests</div>
+          </div>
+          <p class="s-desc">
+            Doctor-prescribed intramuscular / subcutaneous injections, insulin therapy management, and home blood collection dispatched to partner labs.
+          </p>
+          <ul class="s-features-list">
+            <li>Prescribed injection administration</li>
+            <li>Home blood taking (Full blood, Renal, Liver)</li>
+            <li>Fast digital laboratory report turnaround</li>
+          </ul>
+        </div>
+        <a href="services.html" class="s-link-btn">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Hospital Escort -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#C084FC;">🏥</div>
+            <div class="s-title">Hospital Escort &amp; Transfer</div>
+          </div>
+          <p class="s-desc">
+            Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge accompaniment.
+          </p>
+          <ul class="s-features-list">
+            <li>Direct hospital nurse accompaniment</li>
+            <li>Doctor consultation note taking for family</li>
+            <li>Wheelchair &amp; ambulance coordination</li>
+          </ul>
+        </div>
+        <a href="services.html" class="s-link-btn">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Equipment Rental -->
+      <div class="service-v-card">
+        <div>
+          <div class="s-header">
+            <div class="s-icon-wrap" style="color:#FBBF24;">🛏️</div>
+            <div class="s-title">Medical Equipment Rental</div>
+          </div>
+          <p class="s-desc">
+            Same-day home delivery and installation of hospital beds, oxygen concentrators, suction machines, patient wheelchairs, and ripple mattresses.
+          </p>
+          <ul class="s-features-list">
+            <li>Same-day delivery in Penang</li>
+            <li>Hospital-grade 3-function electric beds</li>
+            <li>Medical oxygen &amp; ripple mattress setup</li>
+          </ul>
+        </div>
+        <a href="equipment.html" class="s-link-btn">Explore Equipment Catalog →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MEET YOUR CLINICAL LEADERSHIP (Founder Visual Showcase) -->
+  <section class="glass-card">
+    <div class="founder-grid">
+      <div class="founder-photo-wrap">
+        <img src="founder-blazer.jpg" alt="Nurse Jason Lye, Clinical Lead &amp; Founder" />
+        <div class="founder-badge-overlay">
+          <div style="font-size:0.9rem; font-weight:800; color:#FFF;">Nurse Jason Lye</div>
+          <div style="font-size:0.72rem; color:var(--gold);">MOH / LJM Certified Registered Nurse</div>
+        </div>
+      </div>
+
+      <div class="founder-info">
+        <span class="sec-tag">Clinical Leadership · 创办人与资深护理团队</span>
+        <h3>"Founded by Licensed Nurses, Driven by True Compassion"</h3>
+        <div class="founder-role">Clinical Director &amp; Founder · Assura Nursing Care</div>
+        
+        <p class="founder-quote">
+          "Having cared for hundreds of acute and chronic patients in hospital wards and private homes across Penang, we founded Assura to provide families with reliable, hospital-standard clinical care right in the warmth of their homes. Every nurse we send is certified, compassionate, and committed to your loved one's comfort."
+        </p>
+
+        <div class="founder-creds">
+          <span class="cred-pill">🛡️ Registered Nurse (LJM)</span>
+          <span class="cred-pill">🏥 Hospital Acute Care Background</span>
+          <span class="cred-pill">🩸 Sterile Infection Control Certified</span>
+          <span class="cred-pill">🌟 24/7 Family Handover Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. UNIFIED MOBILE APP BANNER (Assura Nursing Care) -->
+  <section class="app-banner-box">
+    <div class="app-banner-text">
+      <span style="background:rgba(255,210,122,0.2); color:#FDE047; font-size:0.72rem; font-weight:800; padding:3px 10px; border-radius:6px; text-transform:uppercase;">
+        Official Android App · 官方安卓应用
+      </span>
+      <h3 style="margin-top:6px;">Download Assura Nursing Care App</h3>
+      <p>
+        Manage home nurse bookings, track clinical vital charts, access the 24/7 Penang emergency hospital directory, and use the 110 BPM CPR metronome even while offline.
+      </p>
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="AssuraNursing.apk" download class="btn-whatsapp" style="background:linear-gradient(135deg, #0284c7, #0369a1); box-shadow:0 6px 20px rgba(2,132,199,0.4);">
+        <span>📥</span> Download APK (Direct Install)
+      </a>
+      <a href="download.html" class="btn-secondary">
+        <span>📱</span> Installation Instructions
+      </a>
+    </div>
   </section>
 </div>
 
@@ -655,7 +1021,7 @@ footer.site-footer {
     <a href="index.html">Home</a>
     <a href="services.html">Services &amp; Pricing</a>
     <a href="equipment.html">Medical Equipment</a>
-    <a href="emergency.html">Emergency First Aid</a>
+    <a href="emergency.html">Emergency Protocols</a>
     <a href="about.html">About Us</a>
     <a href="careers.html">Careers</a>
     <a href="download.html">Download Apps</a>
@@ -670,16 +1036,6 @@ footer.site-footer {
 function toggleMobileMenu() {
   const menu = document.getElementById('navMenu');
   if (menu) menu.classList.toggle('mobile-open');
-}
-
-if('serviceWorker' in navigator && location.protocol !== 'file:'){
-  navigator.serviceWorker.register('home-nursing-service-worker.js').then((reg) => {
-    if('Notification' in window && Notification.permission === 'default'){
-      setTimeout(() => {
-        Notification.requestPermission().catch(()=>{});
-      }, 5000);
-    }
-  }).catch(()=>{});
 }
 </script>
 </body>

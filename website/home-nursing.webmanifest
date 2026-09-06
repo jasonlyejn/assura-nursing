@@ -1,48 +1,23 @@
 {
-  "name": "Assura Nursing: Home Care",
-  "short_name": "Assura Nursing",
-  "id": "com.assuranursing.app",
-  "description": "24/7 Professional Home Nursing, Wound Care, Post-Surgery & Stroke Rehab across Penang Island & Mainland.",
-  "lang": "en",
+  "name": "Assura Nursing Care",
+  "short_name": "Assura Care",
+  "description": "24/7 Professional Home Nursing, Wound Care & Clinical Recovery in Penang",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "any",
   "background_color": "#040D1A",
-  "theme_color": "#07182B",
-  "categories": ["medical", "health", "lifestyle"],
+  "theme_color": "#040D1A",
   "icons": [
     {
       "src": "home-nursing-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "home-nursing-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "home-nursing-icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Book Home Nursing",
-      "short_name": "Book",
-      "url": "/#calculator",
-      "description": "Calculate rates and book private nursing care"
-    },
-    {
-      "name": "WhatsApp 24/7",
-      "short_name": "WhatsApp",
-      "url": "https://wa.me/60124701235",
-      "description": "Direct care supervisor coordination"
+      "purpose": "any maskable"
     }
   ]
 }
