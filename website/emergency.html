@@ -643,7 +643,7 @@ header.site-header {
 
 /* Interactive Visual First Aid Guide & 3D Video Resources */
 .interactive-guide-card {
-  max-width: 620px;
+  max-width: 680px;
   margin: 0 auto;
   text-align: center;
   background: rgba(15, 23, 42, 0.9);
@@ -687,7 +687,7 @@ header.site-header {
 .sim-stage-instruction {
   font-size: 0.86rem;
   color: #CBD5E1;
-  max-width: 460px;
+  max-width: 480px;
   line-height: 1.45;
 }
 
@@ -721,9 +721,9 @@ header.site-header {
   border-color: #38BDF8;
 }
 
-.video-resources-row {
+.video-resources-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 10px;
   margin-top: 10px;
 }
@@ -791,9 +791,6 @@ footer.site-footer {
     border-bottom: 1px solid var(--line);
     box-shadow: 0 20px 40px rgba(0,0,0,0.7);
     gap: 8px;
-  }
-  .video-resources-row {
-    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -1535,17 +1532,20 @@ footer.site-footer {
         <button class="sim-btn primary" onclick="nextSimStep()">Next Step ▶</button>
       </div>
 
-      <!-- 3D Medical Animation Video Guides Selected by User -->
-      <div style="margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(255, 255, 255, 0.12);">
-        <div style="font-size: 0.74rem; color: #FFD27A; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;">
-          🩺 3D Anatomy Guides Inside the Body (YouTube)
+      <!-- 3D Medical Animation & Defibrillator Video Guides Selected by User -->
+      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px dashed rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.74rem; color: #FFD27A; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px;">
+          🩺 Clinical 3D Anatomy &amp; Defibrillator Guides (YouTube)
         </div>
-        <div class="video-resources-row">
+        <div class="video-resources-grid">
           <a href="https://www.youtube.com/watch?v=Kdf1VfPBSuw" target="_blank" rel="noopener" class="video-link-pill" style="background: rgba(239, 68, 68, 0.18); border: 1px solid rgba(239, 68, 68, 0.5); color: #FECACA;">
-            <span>🫀</span> CPR in Action (3D Inside Body)
+            <span>🫀</span> CPR in Action (3D)
           </a>
           <a href="https://www.youtube.com/watch?v=bMDLU5ma3f0" target="_blank" rel="noopener" class="video-link-pill" style="background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.5); color: #FDE68A;">
-            <span>⚡</span> AED in Action (3D Inside Body)
+            <span>⚡</span> AED in Action (3D)
+          </a>
+          <a href="https://www.youtube.com/watch?v=H4FjPn48aG0" target="_blank" rel="noopener" class="video-link-pill" style="background: rgba(14, 165, 233, 0.18); border: 1px solid rgba(56, 189, 248, 0.5); color: #BAE6FD;">
+            <span>💡</span> What is Defibrillator?
           </a>
         </div>
       </div>
