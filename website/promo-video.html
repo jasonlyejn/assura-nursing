@@ -210,7 +210,7 @@ function draw(timeSec) {
     ctx.fillText('❌ Surgical & Diabetic Wound Dressing (创面)', 105, 640);
     ctx.fillText('❌ Confusing Medication Schedules (复杂用药)', 105, 710);
     ctx.fillText('❌ Fear of Infection & Readmission (感染风险)', 105, 780);
-    ctx.fillText('❌ Unregulated Freelance Caregivers (无执照)', 105, 850);
+    ctx.fillText('❌ Untrained Caregivers & Stress (看护困难)', 105, 850);
     ctx.fillText('❌ Working Adult Children Stressed (家属焦虑)', 105, 920);
 
   } else if (timeSec < 10) {
@@ -224,14 +224,14 @@ function draw(timeSec) {
 
     ctx.fillStyle = '#fff';
     ctx.font = 'bold 32px sans-serif';
-    ctx.fillText('Licensed Registered Nurses to Your Door', 360, 375);
+    ctx.fillText('Trained Nurses & Caregivers to Your Door', 360, 375);
 
     ctx.fillStyle = '#7dd3fc';
     ctx.font = 'bold 28px sans-serif';
-    ctx.fillText('大马注册执照护士 · 上门到府', 360, 430);
+    ctx.fillText('专业护士与看护人员 · 上门到府', 360, 430);
 
     const items = [
-      ['100% LJM Licensed Staff Nurses', '100% 官方注册执照护士'],
+      ['Trained Nurses & Caregivers', '专业护士与经验看护'],
       ['Aseptic Sterile Wound Dressing', '医院级无菌敷料换药 (Aquacel)'],
       ['Ryles & Foley Catheter Changes', '鼻胃管 / 导尿管上门置换'],
       ['Post-Stroke & Complex Rehab', '中风术后康复与长期班制看护']

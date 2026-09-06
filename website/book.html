@@ -597,6 +597,7 @@
     mount();
   }
 
+  
   const form = document.querySelector('#booking-form');
   const inputs = [...form.querySelectorAll('input:not([name="service"]):not([name="slot"]), textarea')];
   const serviceInputs = [...form.querySelectorAll('input[name="service"]')];
@@ -609,6 +610,41 @@
   const installButton = document.querySelector('#install-app');
   const installTip = document.querySelector('#install-tip');
   let installPrompt, pin = null, pinKm = null;
+
+  // Auto-select service checkboxes from URL parameter (?service=wound, elderly, stroke, etc.)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const svcParam = urlParams.get('service');
+    if (svcParam) {
+      const sLower = svcParam.toLowerCase();
+      let matched = false;
+      serviceInputs.forEach(input => {
+        const valLower = input.value.toLowerCase();
+        if (
+          (sLower.includes('wound') && valLower.includes('wound')) ||
+          (sLower.includes('elderly') && (valLower.includes('bed-bound') || valLower.includes('adl'))) ||
+          (sLower.includes('bedridden') && valLower.includes('bed-bound')) ||
+          (sLower.includes('stroke') && (valLower.includes('post-operative') || valLower.includes('adl'))) ||
+          (sLower.includes('injection') && valLower.includes('injection')) ||
+          (sLower.includes('catheter') && valLower.includes('catheter')) ||
+          (sLower.includes('tube') && valLower.includes('ryle')) ||
+          (sLower.includes('escort') && valLower.includes('escort')) ||
+          valLower.includes(sLower)
+        ) {
+          input.checked = true;
+          input.closest('.service')?.classList.add('selected');
+          matched = true;
+        }
+      });
+      if (matched) {
+        setTimeout(() => {
+          servicesBox?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 150);
+      }
+    }
+  } catch (err) {
+    console.warn('URL param parse error:', err);
+  }
 
   /* ---- book vs just-asking ---- */
   let MODE = 'book';
