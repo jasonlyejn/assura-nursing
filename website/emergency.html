@@ -1,12 +1,11 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
-<title>24/7 Emergency & First Aid Protocols · Assura Nursing Care</title>
-<meta name="description" content="Penang 24/7 Emergency hotlines, private ambulance coordination, CPR guide & Stroke FAST signs." />
+<title>24/7 Emergency, CPR &amp; Stroke F.A.S.T Guide · Assura Nursing Care</title>
+<meta name="description" content="Penang 24/7 Emergency hotlines, CPR visual guide with 110 BPM rhythm metronome &amp; Stroke FAST visual signs." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -17,7 +16,7 @@
 <style>
 :root {
   --bg-deep: #040D1A;
-  --bg-card: rgba(10, 26, 46, 0.72);
+  --bg-card: rgba(10, 26, 46, 0.75);
   --bg-card-hover: rgba(15, 38, 68, 0.9);
   --line: rgba(56, 189, 248, 0.18);
   --blue: #0284c7;
@@ -27,6 +26,7 @@
   --amber: #F59E0B;
   --pulse: #E4544A;
   --green: #10B981;
+  --red: #EF4444;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 }
@@ -51,9 +51,9 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 15%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 50% 15%, rgba(228, 84, 74, 0.22) 0%, transparent 60%),
     radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
-    radial-gradient(circle at 90% 60%, rgba(228, 84, 74, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 90% 60%, rgba(2, 132, 199, 0.15) 0%, transparent 55%),
     #040D1A;
 }
 
@@ -63,8 +63,8 @@ body {
   z-index: 0;
   pointer-events: none;
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(228, 84, 74, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 84, 74, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
@@ -83,7 +83,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(4, 13, 26, 0.90);
+  background: rgba(4, 13, 26, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
@@ -139,8 +139,8 @@ header.site-header {
 
 .nav-link:hover, .nav-link.active {
   color: #FFF;
-  background: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(228, 84, 74, 0.16);
+  border: 1px solid rgba(228, 84, 74, 0.35);
 }
 
 /* Header Actions: Portals & Lang */
@@ -167,11 +167,6 @@ header.site-header {
   white-space: nowrap;
 }
 
-.portal-pill-patient:hover {
-  background: rgba(14, 165, 233, 0.35);
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
-}
-
 .portal-pill-staff {
   background: rgba(245, 158, 11, 0.2);
   color: #fde047;
@@ -186,37 +181,6 @@ header.site-header {
   gap: 4px;
   transition: all 0.2s;
   white-space: nowrap;
-}
-
-.portal-pill-staff:hover {
-  background: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
-}
-
-.lang-bar {
-  display: flex;
-  gap: 3px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 3px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: #94A3B8;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lang-btn.active, .lang-btn:hover {
-  background: var(--blue);
-  color: #FFF;
 }
 
 .mobile-toggle {
@@ -238,9 +202,9 @@ header.site-header {
 
 .page-tag {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: var(--blue-bright);
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #FCA5A5;
   font-size: 0.76rem;
   font-weight: 700;
   padding: 4px 12px;
@@ -256,7 +220,7 @@ header.site-header {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 12px;
-  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 60%, var(--gold) 100%);
+  background: linear-gradient(120deg, #FFFFFF 0%, #FECACA 50%, var(--gold) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -279,6 +243,171 @@ header.site-header {
   padding: 32px 28px;
   margin-bottom: 24px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Stroke FAST Visual Cards Grid */
+.fast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.fast-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 18px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fast-card:hover {
+  transform: translateY(-4px);
+  border-color: #EF4444;
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.25);
+}
+
+.fast-letter-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #EF4444, #B91C1C);
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.fast-illustration {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.fast-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.fast-desc {
+  font-size: 0.82rem;
+  color: #CBD5E1;
+  line-height: 1.45;
+}
+
+/* CPR Visual Steps Grid */
+.cpr-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.cpr-step-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 16px;
+  padding: 18px 14px;
+  text-align: center;
+  position: relative;
+}
+
+.cpr-step-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cpr-step-icon {
+  font-size: 2.2rem;
+  margin: 10px 0 8px;
+  display: block;
+}
+
+.cpr-step-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 4px;
+}
+
+.cpr-step-desc {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  line-height: 1.4;
+}
+
+/* Interactive Metronome Simulator */
+.metronome-box {
+  background: linear-gradient(135deg, rgba(228, 84, 74, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  margin: 24px 0 10px;
+}
+
+.heart-pulsar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #EF4444 0%, #B91C1C 70%);
+  color: #FFF;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+  transition: transform 0.1s ease;
+}
+
+.heart-pulsar.beating {
+  animation: pulse-beat 0.545s infinite; /* ~110 BPM */
+}
+
+@keyframes pulse-beat {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+  30% { transform: scale(1.22); box-shadow: 0 0 35px rgba(239, 68, 68, 0.8); }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+}
+
+.metro-btn {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: #FFF;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  transition: all 0.2s;
+}
+
+.metro-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.6);
 }
 
 /* Footer */
@@ -341,13 +470,13 @@ footer.site-footer {
     </a>
 
     <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html" class="nav-link ">Home</a></li>
-      <li><a href="services.html" class="nav-link ">Services &amp; Pricing</a></li>
-      <li><a href="equipment.html" class="nav-link ">Equipment Guide</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
+      <li><a href="equipment.html" class="nav-link">Equipment Guide</a></li>
       <li><a href="emergency.html" class="nav-link active">Emergency Protocols</a></li>
-      <li><a href="about.html" class="nav-link ">About Us</a></li>
-      <li><a href="careers.html" class="nav-link ">Careers</a></li>
-      <li><a href="download.html" class="nav-link ">Download Apps</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="careers.html" class="nav-link">Careers</a></li>
+      <li><a href="download.html" class="nav-link">Download Apps</a></li>
     </ul>
 
     <div class="header-actions">
@@ -358,57 +487,181 @@ footer.site-footer {
         🔒 <span>Staff Portal</span>
       </a>
 
-      <div class="lang-bar">
-        <button class="lang-btn active" onclick="setSubPageLang('en')">EN</button>
-        <button class="lang-btn" onclick="setSubPageLang('zh')">中文</button>
-        <button class="lang-btn" onclick="setSubPageLang('bm')">BM</button>
-        <button class="lang-btn" onclick="setSubPageLang('ta')">தமிழ்</button>
-      </div>
-
       <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
     </div>
   </div>
 </header>
 
 <div class="container">
+  <!-- Page Header -->
   <div class="page-hero">
-    <span class="page-tag" style="background:rgba(239,68,68,0.15); color:#FCA5A5; border-color:rgba(239,68,68,0.3);">Emergency Support · 24小时急救与紧急指南</span>
-    <h1>24/7 Emergency &amp; Clinical Response Guide</h1>
-    <p>Critical protocols, emergency dispatch numbers, CPR steps, and Stroke F.A.S.T warning signs for families in Penang.</p>
+    <span class="page-tag">Emergency Protocols · 24小时急救与紧急指南</span>
+    <h1>24/7 Emergency &amp; Clinical First Aid Guide</h1>
+    <p>Visual step-by-step Stroke F.A.S.T identification, interactive 110 BPM CPR rhythm metronome, and Penang 24/7 emergency dispatch directory.</p>
   </div>
 
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-bottom:24px;">
-    <div class="glass-card" style="border-color:rgba(239,68,68,0.4);">
-      <h3 style="color:#EF4444; font-size:1.25rem; margin-bottom:12px;">🚨 Emergency Numbers (Malaysia)</h3>
-      <ul style="list-style:none; line-height:2.2; font-size:0.95rem;">
-        <li><b>🚑 National Emergency (Ambulance/Police):</b> <a href="tel:999" style="color:#EF4444; font-weight:800; font-size:1.1rem; text-decoration:none;">999</a></li>
-        <li><b>📱 From Mobile Phone:</b> <a href="tel:112" style="color:#EF4444; font-weight:800; font-size:1.1rem; text-decoration:none;">112</a></li>
-        <li><b>🩺 Assura 24/7 Clinical Care Hotline:</b> <a href="tel:+60122064868" style="color:#38BDF8; font-weight:800; text-decoration:none;">012-206 4868</a></li>
-        <li><b>🏥 Penang General Hospital (HPP):</b> <a href="tel:+6042225333" style="color:#94A3B8; text-decoration:none;">04-222 5333</a></li>
-        <li><b>🏥 Seberang Jaya Hospital (HSJ):</b> <a href="tel:+6043827333" style="color:#94A3B8; text-decoration:none;">04-382 7333</a></li>
-      </ul>
-    </div>
+  <!-- Emergency Dispatch Numbers -->
+  <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.45);">
+    <h2 style="color: #EF4444; font-size: 1.3rem; margin-bottom: 14px; display:flex; align-items:center; gap:8px;">
+      <span>🚨</span> 24/7 Emergency Hotlines (Penang &amp; Malaysia)
+    </h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+      <div style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); padding: 14px; border-radius: 12px; text-align: center;">
+        <div style="font-size: 0.78rem; color: #FCA5A5; font-weight: 700; text-transform: uppercase;">National Ambulance / Police</div>
+        <a href="tel:999" style="font-size: 1.8rem; font-weight: 900; color: #FFF; text-decoration: none; display: block; margin-top: 4px;">☎ 999</a>
+        <div style="font-size: 0.72rem; color: #CBD5E1;">Mobile Emergency: <b>112</b></div>
+      </div>
 
-    <div class="glass-card" style="border-color:rgba(245,158,11,0.4);">
-      <h3 style="color:#F59E0B; font-size:1.25rem; margin-bottom:12px;">🧠 Stroke Warning Signs (F.A.S.T)</h3>
-      <ul style="list-style:none; line-height:1.7; font-size:0.88rem; color:#E2E8F0;">
-        <li style="margin-bottom:8px;"><b>F — Face Drooping:</b> Does one side of the face droop? Ask the person to smile.</li>
-        <li style="margin-bottom:8px;"><b>A — Arm Weakness:</b> Is one arm weak or numb? Ask them to raise both arms.</li>
-        <li style="margin-bottom:8px;"><b>S — Speech Difficulty:</b> Is speech slurred or strange? Ask them to repeat a simple sentence.</li>
-        <li style="margin-bottom:8px;"><b>T — Time to Call 999:</b> If any signs are present, immediately call 999 or proceed to the nearest emergency department.</li>
-      </ul>
+      <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 14px; border-radius: 12px; text-align: center;">
+        <div style="font-size: 0.78rem; color: #7DD3FC; font-weight: 700; text-transform: uppercase;">Assura 24/7 Clinical Care Line</div>
+        <a href="tel:+60122064868" style="font-size: 1.4rem; font-weight: 900; color: #FFD27A; text-decoration: none; display: block; margin-top: 6px;">☎ 012-206 4868</a>
+        <div style="font-size: 0.72rem; color: #CBD5E1;">WhatsApp Care Support</div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px; border-radius: 12px; text-align: center;">
+        <div style="font-size: 0.78rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Penang General Hospital</div>
+        <a href="tel:+6042225333" style="font-size: 1.15rem; font-weight: 800; color: #FFF; text-decoration: none; display: block; margin-top: 8px;">☎ 04-222 5333</a>
+        <div style="font-size: 0.72rem; color: #94A3B8;">Emergency Dept (HPP)</div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px; border-radius: 12px; text-align: center;">
+        <div style="font-size: 0.78rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Seberang Jaya Hospital</div>
+        <a href="tel:+6043827333" style="font-size: 1.15rem; font-weight: 800; color: #FFF; text-decoration: none; display: block; margin-top: 8px;">☎ 04-382 7333</a>
+        <div style="font-size: 0.72rem; color: #94A3B8;">Emergency Dept (HSJ)</div>
+      </div>
     </div>
   </div>
 
-  <div class="glass-card">
-    <h3 style="color:#38BDF8; font-size:1.25rem; margin-bottom:12px;">❤️ Adult CPR Step-by-Step (Hands-Only CPR)</h3>
-    <ol style="padding-left:20px; font-size:0.9rem; color:#C9DCEC; line-height:1.7;">
-      <li><b>Check for Responsiveness:</b> Tap shoulders firmly and shout "Are you okay?".</li>
-      <li><b>Call for Help:</b> Shout for immediate assistance and dial <b>999</b> immediately.</li>
-      <li><b>Position Hands:</b> Place heel of one hand in the center of the chest, lace fingers with the other hand.</li>
-      <li><b>Compress Hard &amp; Fast:</b> Push down at least 2 inches (5 cm) at a rate of 100 to 120 beats per minute (to the beat of "Stayin' Alive").</li>
-      <li><b>Continue Until Help Arrives:</b> Keep continuous compressions until the ambulance team or trained nurse takes over.</li>
-    </ol>
+  <!-- 1. STROKE WARNING SIGNS (F.A.S.T) VISUAL CARDS -->
+  <div class="glass-card" style="border-color: rgba(245, 158, 11, 0.4);">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+      <h2 style="color: #FFD27A; font-size: 1.35rem; display:flex; align-items:center; gap:8px;">
+        <span>🧠</span> Stroke Warning Signs: F.A.S.T Guide
+      </h2>
+      <span style="background:rgba(245,158,11,0.2); color:#FDE047; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:8px; border:1px solid rgba(245,158,11,0.4);">
+        TIME IS BRAIN · 分秒必争
+      </span>
+    </div>
+    <p style="font-size: 0.88rem; color: #CBD5E1;">
+      Recognize stroke symptoms immediately. A stroke occurs when blood supply to part of the brain is blocked. Act fast:
+    </p>
+
+    <div class="fast-grid">
+      <!-- F -->
+      <div class="fast-card">
+        <div class="fast-letter-badge">F</div>
+        <span class="fast-illustration">🥴</span>
+        <div class="fast-title">Face Drooping</div>
+        <p class="fast-desc">
+          Does one side of the face droop or feel numb? Ask the person to smile. Is the smile uneven or crooked?
+        </p>
+      </div>
+
+      <!-- A -->
+      <div class="fast-card">
+        <div class="fast-letter-badge">A</div>
+        <span class="fast-illustration">💪</span>
+        <div class="fast-title">Arm Weakness</div>
+        <p class="fast-desc">
+          Is one arm weak, heavy, or numb? Ask them to raise both arms. Does one arm drift downward?
+        </p>
+      </div>
+
+      <!-- S -->
+      <div class="fast-card">
+        <div class="fast-letter-badge">S</div>
+        <span class="fast-illustration">🗣️</span>
+        <div class="fast-title">Speech Slurred</div>
+        <p class="fast-desc">
+          Is speech slurred, garbled, or hard to understand? Ask them to repeat a simple sentence like "The sky is blue".
+        </p>
+      </div>
+
+      <!-- T -->
+      <div class="fast-card" style="border-color: #EF4444; background: rgba(239, 68, 68, 0.12);">
+        <div class="fast-letter-badge" style="background:#EF4444;">T</div>
+        <span class="fast-illustration">⏱️</span>
+        <div class="fast-title" style="color:#FCA5A5;">Time to Call 999</div>
+        <p class="fast-desc">
+          If you see ANY of these signs, note the exact time symptoms started and call <b>999</b> immediately!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. ADULT CPR STEP-BY-STEP & INTERACTIVE METRONOME -->
+  <div class="glass-card" style="border-color: rgba(56, 189, 248, 0.4);">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+      <h2 style="color: #FFF; font-size: 1.35rem; display:flex; align-items:center; gap:8px;">
+        <span>❤️</span> Adult Hands-Only CPR (Step-by-Step)
+      </h2>
+      <span style="background:rgba(56,189,248,0.18); color:#38BDF8; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:8px; border:1px solid rgba(56,189,248,0.35);">
+        100 – 120 COMPRESSIONS / MIN
+      </span>
+    </div>
+    <p style="font-size: 0.88rem; color: #CBD5E1;">
+      Hands-Only CPR can double or triple a person's chance of survival when sudden cardiac arrest occurs:
+    </p>
+
+    <!-- Visual 5 Step Cards -->
+    <div class="cpr-steps-grid">
+      <div class="cpr-step-card">
+        <span class="cpr-step-num">1</span>
+        <span class="cpr-step-icon">👋</span>
+        <div class="cpr-step-title">Check Response</div>
+        <p class="cpr-step-desc">Tap shoulders firmly and shout loudly: "Are you okay?".</p>
+      </div>
+
+      <div class="cpr-step-card">
+        <span class="cpr-step-num">2</span>
+        <span class="cpr-step-icon">📞</span>
+        <div class="cpr-step-title">Call 999 / 112</div>
+        <p class="cpr-step-desc">Shout for nearby help and dial 999 immediately on speakerphone.</p>
+      </div>
+
+      <div class="cpr-step-card">
+        <span class="cpr-step-num">3</span>
+        <span class="cpr-step-icon">👐</span>
+        <div class="cpr-step-title">Position Hands</div>
+        <p class="cpr-step-desc">Place heel of one hand in center of chest, lace other hand on top.</p>
+      </div>
+
+      <div class="cpr-step-card">
+        <span class="cpr-step-num">4</span>
+        <span class="cpr-step-icon">⚡</span>
+        <div class="cpr-step-title">Compress Hard &amp; Fast</div>
+        <p class="cpr-step-desc">Push down 2 inches (5cm) at 100–120 beats per minute.</p>
+      </div>
+
+      <div class="cpr-step-card">
+        <span class="cpr-step-num">5</span>
+        <span class="cpr-step-icon">🚑</span>
+        <div class="cpr-step-title">Do Not Stop</div>
+        <p class="cpr-step-desc">Continue compressions until the ambulance crew arrives.</p>
+      </div>
+    </div>
+
+    <!-- Interactive CPR Rhythm Simulator -->
+    <div class="metronome-box">
+      <div id="heartPulsar" class="heart-pulsar">❤️</div>
+      <h3 style="color:#FFF; font-size:1.2rem; margin-bottom:4px;">110 BPM CPR Rhythm Audio &amp; Visual Guide</h3>
+      <p style="font-size:0.84rem; color:#CBD5E1; margin-bottom:16px;">
+        Tap below to start the exact 110 BPM clinical metronome pulse (to the beat of "Stayin' Alive") to match your chest compressions:
+      </p>
+      <button id="btnMetro" class="metro-btn" onclick="toggleMetronome()">
+        ▶ Start 110 BPM CPR Rhythm Metronome
+      </button>
+    </div>
+  </div>
+
+  <!-- Video Tutorial Section -->
+  <div class="glass-card" style="text-align:center;">
+    <h3 style="color:#38BDF8; font-size:1.25rem; margin-bottom:12px;">🎥 Clinical First Aid &amp; Emergency Overview</h3>
+    <video controls playsinline poster="assura-promo-poster.jpg" preload="metadata" style="width:100%; max-width:780px; border-radius:16px; border:1px solid rgba(255,255,255,0.12);">
+      <source src="assura-promo.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
   </div>
 </div>
 
@@ -434,13 +687,58 @@ function toggleMobileMenu() {
   if (menu) menu.classList.toggle('mobile-open');
 }
 
-function setSubPageLang(l) {
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.innerText.toLowerCase().includes(l));
-  });
-  if (window.handleSubLang) window.handleSubLang(l);
+// 110 BPM Audio-Visual Metronome Engine (Web Audio API)
+let audioCtx = null;
+let isPlaying = false;
+let metroInterval = null;
+
+function playClick() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(880, audioCtx.currentTime); // 880 Hz High Beep
+  gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.08);
+}
+
+function toggleMetronome() {
+  const btn = document.getElementById('btnMetro');
+  const heart = document.getElementById('heartPulsar');
+
+  if (!isPlaying) {
+    isPlaying = true;
+    btn.innerHTML = '⏹ Stop CPR Metronome';
+    btn.style.background = 'linear-gradient(135deg, #475569, #334155)';
+    heart.classList.add('beating');
+
+    playClick();
+    // 110 BPM = 60,000 / 110 = ~545.45 ms
+    metroInterval = setInterval(() => {
+      playClick();
+    }, 545.45);
+  } else {
+    isPlaying = false;
+    btn.innerHTML = '▶ Start 110 BPM CPR Rhythm Metronome';
+    btn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
+    heart.classList.remove('beating');
+
+    if (metroInterval) clearInterval(metroInterval);
+  }
 }
 </script>
 </body>
 </html>
-
