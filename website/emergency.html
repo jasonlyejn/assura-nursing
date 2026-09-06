@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
 <title>Penang Emergency Directory, Hospitals &amp; First Aid · Assura Nursing</title>
-<meta name="description" content="Complete directory of Penang hospital emergency hotlines, GPS navigation (Google Maps &amp; Waze), ambulance dispatches, CPR visual metronome &amp; Stroke FAST guide." />
+<meta name="description" content="Complete directory of Penang hospital emergency hotlines, GPS navigation (Google Maps &amp; Waze), ambulance dispatches, CPR visual metronome &amp; 3D CPR/AED guides." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -641,15 +641,15 @@ header.site-header {
   box-shadow: 0 10px 25px rgba(239, 68, 68, 0.6);
 }
 
-/* Interactive Visual First Aid Guide & Video Resources */
+/* Interactive Visual First Aid Guide & 3D Video Resources */
 .interactive-guide-card {
-  max-width: 580px;
+  max-width: 620px;
   margin: 0 auto;
   text-align: center;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: 20px;
-  padding: 22px 20px;
+  padding: 24px 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -687,7 +687,7 @@ header.site-header {
 .sim-stage-instruction {
   font-size: 0.86rem;
   color: #CBD5E1;
-  max-width: 440px;
+  max-width: 460px;
   line-height: 1.45;
 }
 
@@ -725,31 +725,26 @@ header.site-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  margin-top: 10px;
 }
 
 .video-link-pill {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  color: #FCA5A5;
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 8px 10px;
-  border-radius: 10px;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 0.78rem;
+  line-height: 1.35;
   transition: all 0.2s;
 }
 
 .video-link-pill:hover {
-  background: rgba(239, 68, 68, 0.28);
-  color: #FFF;
-  border-color: #EF4444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Footer */
@@ -1514,7 +1509,7 @@ footer.site-footer {
     </div>
   </div>
 
-  <!-- 6. INTERACTIVE FIRST AID SIMULATOR & OFFICIAL VIDEO GUIDES -->
+  <!-- 6. INTERACTIVE FIRST AID SIMULATOR & 3D CLINICAL VIDEO GUIDES -->
   <div class="glass-card" style="text-align:center;">
     <div class="interactive-guide-card">
       <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:4px;">
@@ -1540,14 +1535,19 @@ footer.site-footer {
         <button class="sim-btn primary" onclick="nextSimStep()">Next Step ▶</button>
       </div>
 
-      <!-- Verified Direct Video Guide Links -->
-      <div class="video-resources-row">
-        <a href="https://www.youtube.com/watch?v=M4ACYp75BEk" target="_blank" rel="noopener" class="video-link-pill">
-          ▶ Watch AHA CPR Video (YouTube)
-        </a>
-        <a href="https://www.youtube.com/watch?v=BQNNOh8c8ks" target="_blank" rel="noopener" class="video-link-pill">
-          ▶ Watch St John CPR Video (YouTube)
-        </a>
+      <!-- 3D Medical Animation Video Guides Selected by User -->
+      <div style="margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.74rem; color: #FFD27A; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;">
+          🩺 3D Anatomy Guides Inside the Body (YouTube)
+        </div>
+        <div class="video-resources-row">
+          <a href="https://www.youtube.com/watch?v=Kdf1VfPBSuw" target="_blank" rel="noopener" class="video-link-pill" style="background: rgba(239, 68, 68, 0.18); border: 1px solid rgba(239, 68, 68, 0.5); color: #FECACA;">
+            <span>🫀</span> CPR in Action (3D Inside Body)
+          </a>
+          <a href="https://www.youtube.com/watch?v=bMDLU5ma3f0" target="_blank" rel="noopener" class="video-link-pill" style="background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.5); color: #FDE68A;">
+            <span>⚡</span> AED in Action (3D Inside Body)
+          </a>
+        </div>
       </div>
     </div>
   </div>
