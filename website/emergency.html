@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
-<title>24/7 Emergency, CPR &amp; Stroke F.A.S.T Guide · Assura Nursing Care</title>
-<meta name="description" content="Penang 24/7 Emergency hotlines, CPR visual guide with 110 BPM rhythm metronome &amp; Stroke FAST visual signs." />
+<title>Penang Emergency Directory, Hospitals, CPR &amp; Stroke F.A.S.T · Assura Nursing</title>
+<meta name="description" content="Complete directory of Penang hospital emergency hotlines, ambulance services, CPR visual guide with 110 BPM metronome &amp; Stroke FAST protocols." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -16,7 +16,7 @@
 <style>
 :root {
   --bg-deep: #040D1A;
-  --bg-card: rgba(10, 26, 46, 0.75);
+  --bg-card: rgba(10, 26, 46, 0.78);
   --bg-card-hover: rgba(15, 38, 68, 0.9);
   --line: rgba(56, 189, 248, 0.18);
   --blue: #0284c7;
@@ -51,7 +51,7 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 15%, rgba(228, 84, 74, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 50% 12%, rgba(228, 84, 74, 0.22) 0%, transparent 60%),
     radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
     radial-gradient(circle at 90% 60%, rgba(2, 132, 199, 0.15) 0%, transparent 55%),
     #040D1A;
@@ -73,7 +73,7 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px 80px;
 }
@@ -143,7 +143,7 @@ header.site-header {
   border: 1px solid rgba(228, 84, 74, 0.35);
 }
 
-/* Header Actions: Portals & Lang */
+/* Header Actions: Portals */
 .header-actions {
   display: flex;
   align-items: center;
@@ -229,7 +229,7 @@ header.site-header {
 .page-hero p {
   color: #C9DCEC;
   font-size: 1.02rem;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -240,9 +240,192 @@ header.site-header {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--line);
   border-radius: 22px;
-  padding: 32px 28px;
+  padding: 28px;
   margin-bottom: 24px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Quick Dispatch Grid */
+.dispatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.dispatch-card {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s;
+}
+
+.dispatch-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.dispatch-card.urgent {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.dispatch-card.care {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.dispatch-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.dispatch-num {
+  font-size: 1.55rem;
+  font-weight: 900;
+  text-decoration: none;
+  display: block;
+  margin: 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.dispatch-sub {
+  font-size: 0.74rem;
+  color: #94A3B8;
+}
+
+/* Hospital Directory Table / List Cards */
+.hospital-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 14px;
+}
+
+.hospital-item {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.hospital-item:hover {
+  background: rgba(20, 35, 60, 0.85);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.h-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.h-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #FFF;
+  line-height: 1.35;
+}
+
+.h-loc {
+  font-size: 0.74rem;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+
+.h-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.badge-gov {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6EE7B7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.badge-pvt {
+  background: rgba(245, 158, 11, 0.2);
+  color: #FDE047;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-ngo {
+  background: rgba(239, 68, 68, 0.2);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.h-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.h-call-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.h-call-row span {
+  color: #94A3B8;
+}
+
+.h-phone-link {
+  color: #38BDF8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: all 0.2s;
+}
+
+.h-phone-link:hover {
+  background: rgba(56, 189, 248, 0.25);
+  color: #FFF;
+}
+
+.h-phone-link.emg {
+  color: #FF8080;
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.h-phone-link.emg:hover {
+  background: rgba(239, 68, 68, 0.35);
+  color: #FFF;
 }
 
 /* Stroke FAST Visual Cards Grid */
@@ -307,7 +490,7 @@ header.site-header {
 /* CPR Visual Steps Grid */
 .cpr-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 14px;
   margin: 20px 0;
 }
@@ -495,45 +678,409 @@ footer.site-footer {
 <div class="container">
   <!-- Page Header -->
   <div class="page-hero">
-    <span class="page-tag">Emergency Protocols · 24小时急救与紧急指南</span>
-    <h1>24/7 Emergency &amp; Clinical First Aid Guide</h1>
-    <p>Visual step-by-step Stroke F.A.S.T identification, interactive 110 BPM CPR rhythm metronome, and Penang 24/7 emergency dispatch directory.</p>
+    <span class="page-tag">Penang Emergency Directory · 槟城紧急与急救指南</span>
+    <h1>Penang Hospital Directory &amp; Emergency Protocols</h1>
+    <p>Complete directory of Penang Island &amp; Mainland hospital emergency hotlines, NGO ambulance dispatches, visual Stroke F.A.S.T identification, and 110 BPM CPR rhythm guide.</p>
   </div>
 
-  <!-- Emergency Dispatch Numbers -->
+  <!-- 1. IMMEDIATE 24/7 NATIONAL & AMBULANCE DISPATCH HOTLINES -->
   <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.45);">
-    <h2 style="color: #EF4444; font-size: 1.3rem; margin-bottom: 14px; display:flex; align-items:center; gap:8px;">
-      <span>🚨</span> 24/7 Emergency Hotlines (Penang &amp; Malaysia)
-    </h2>
+    <div class="card-title" style="color: #EF4444;">
+      <span>🚨 Immediate 24/7 Emergency &amp; Ambulance Dispatch</span>
+      <span style="font-size:0.75rem; color:#FCA5A5; font-weight:700;">MALAYSIA &amp; PENANG HOTLINES</span>
+    </div>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
-      <div style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); padding: 14px; border-radius: 12px; text-align: center;">
-        <div style="font-size: 0.78rem; color: #FCA5A5; font-weight: 700; text-transform: uppercase;">National Ambulance / Police</div>
-        <a href="tel:999" style="font-size: 1.8rem; font-weight: 900; color: #FFF; text-decoration: none; display: block; margin-top: 4px;">☎ 999</a>
-        <div style="font-size: 0.72rem; color: #CBD5E1;">Mobile Emergency: <b>112</b></div>
+    <div class="dispatch-grid">
+      <!-- 999 -->
+      <div class="dispatch-card urgent">
+        <div class="dispatch-tag" style="color: #FCA5A5;">Ambulance / Police / Bomba</div>
+        <a href="tel:999" class="dispatch-num" style="color: #FFF;">☎ 999</a>
+        <div class="dispatch-sub">National Emergency Toll-Free</div>
       </div>
 
-      <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 14px; border-radius: 12px; text-align: center;">
-        <div style="font-size: 0.78rem; color: #7DD3FC; font-weight: 700; text-transform: uppercase;">Assura 24/7 Clinical Care Line</div>
-        <a href="tel:+60122064868" style="font-size: 1.4rem; font-weight: 900; color: #FFD27A; text-decoration: none; display: block; margin-top: 6px;">☎ 012-206 4868</a>
-        <div style="font-size: 0.72rem; color: #CBD5E1;">WhatsApp Care Support</div>
+      <!-- 112 -->
+      <div class="dispatch-card urgent">
+        <div class="dispatch-tag" style="color: #FCA5A5;">Mobile Phone Emergency</div>
+        <a href="tel:112" class="dispatch-num" style="color: #FFF;">☎ 112</a>
+        <div class="dispatch-sub">Works on Locked / No-SIM phones</div>
       </div>
 
-      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px; border-radius: 12px; text-align: center;">
-        <div style="font-size: 0.78rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Penang General Hospital</div>
-        <a href="tel:+6042225333" style="font-size: 1.15rem; font-weight: 800; color: #FFF; text-decoration: none; display: block; margin-top: 8px;">☎ 04-222 5333</a>
-        <div style="font-size: 0.72rem; color: #94A3B8;">Emergency Dept (HPP)</div>
+      <!-- Assura Care Line -->
+      <div class="dispatch-card care">
+        <div class="dispatch-tag" style="color: #7DD3FC;">Assura 24/7 Clinical Care Line</div>
+        <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
+        <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
       </div>
 
-      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px; border-radius: 12px; text-align: center;">
-        <div style="font-size: 0.78rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Seberang Jaya Hospital</div>
-        <a href="tel:+6043827333" style="font-size: 1.15rem; font-weight: 800; color: #FFF; text-decoration: none; display: block; margin-top: 8px;">☎ 04-382 7333</a>
-        <div style="font-size: 0.72rem; color: #94A3B8;">Emergency Dept (HSJ)</div>
+      <!-- St John Ambulance -->
+      <div class="dispatch-card">
+        <div class="dispatch-tag" style="color: #FCA5A5;">St. John Ambulance (Penang)</div>
+        <a href="tel:+6048286999" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-828 6999</a>
+        <div class="dispatch-sub">Alt: 04-828 5999</div>
+      </div>
+
+      <!-- Red Crescent -->
+      <div class="dispatch-card">
+        <div class="dispatch-tag" style="color: #FCA5A5;">Malaysian Red Crescent (BSMM)</div>
+        <a href="tel:+6048275684" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-827 5684</a>
+        <div class="dispatch-sub">Alt: 04-828 2842</div>
+      </div>
+
+      <!-- Civil Defence (APM) -->
+      <div class="dispatch-card">
+        <div class="dispatch-tag" style="color: #FDE047;">Civil Defence Force (APM Penang)</div>
+        <a href="tel:+6042283991" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-228 3991</a>
+        <div class="dispatch-sub">24/7 Disaster &amp; Medical Emergency</div>
       </div>
     </div>
   </div>
 
-  <!-- 1. STROKE WARNING SIGNS (F.A.S.T) VISUAL CARDS -->
+  <!-- 2. PENANG ISLAND HOSPITALS (GOVERNMENT & PRIVATE SPECIALISTS) -->
+  <div class="glass-card">
+    <div class="card-title" style="color: #38BDF8;">
+      <span>🏥 Penang Island Hospitals (Government &amp; Private)</span>
+      <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Georgetown · Bayan Lepas · Balik Pulau · Tanjung Tokong</span>
+    </div>
+
+    <div class="hospital-grid">
+      <!-- Penang General Hospital (HPP) -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Penang General Hospital (HPP)</div>
+              <div class="h-loc">Jalan Residensi, Georgetown (Main Tertiary Centre)</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency (ETD):</span>
+            <a href="tel:+6042225222" class="h-phone-link emg">☎ 04-222 5222</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6042225333" class="h-phone-link">☎ 04-222 5333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospital Balik Pulau -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Hospital Balik Pulau (HBP)</div>
+              <div class="h-loc">Balik Pulau, South-West Island District</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency / General:</span>
+            <a href="tel:+6048669333" class="h-phone-link emg">☎ 04-866 9333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gleneagles Hospital Penang -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Gleneagles Hospital Penang</div>
+              <div class="h-loc">Jalan Pangkor, Georgetown</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Hotline:</span>
+            <a href="tel:+6042229199" class="h-phone-link emg">☎ 04-222 9199</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6042229111" class="h-phone-link">☎ 04-222 9111</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Island Hospital Penang -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Island Hospital Penang</div>
+              <div class="h-loc">Macalister Road / Peel Avenue, Georgetown</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Care:</span>
+            <a href="tel:+6042383388" class="h-phone-link emg">☎ 04-238 3388</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6042288222" class="h-phone-link">☎ 04-228 8222</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loh Guan Lye Specialists Centre -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Loh Guan Lye Specialists Centre (LSC)</div>
+              <div class="h-loc">Logan Road, Georgetown</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Line:</span>
+            <a href="tel:+6042266911" class="h-phone-link emg">☎ 04-226 6911</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6042388888" class="h-phone-link">☎ 04-238 8888</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pantai Hospital Penang -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Pantai Hospital Penang</div>
+              <div class="h-loc">Jalan Tengah, Bayan Lepas (Near Airport)</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Line:</span>
+            <a href="tel:+6046433888" class="h-phone-link emg">☎ 04-643 3888</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6046433444" class="h-phone-link">☎ 04-643 3444</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Penang Adventist Hospital -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Penang Adventist Hospital (PAH)</div>
+              <div class="h-loc">Burmah Road, Georgetown</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Line:</span>
+            <a href="tel:+6042227799" class="h-phone-link emg">☎ 04-222 7799</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6042227200" class="h-phone-link">☎ 04-222 7200</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mount Miriam Cancer Hospital -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Mount Miriam Cancer Hospital</div>
+              <div class="h-loc">Jalan Bulan, Tanjung Bungah</div>
+            </div>
+            <span class="h-badge badge-pvt">Oncology Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>General / Inquiries:</span>
+            <a href="tel:+6048923999" class="h-phone-link">☎ 04-892 3999</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PENANG MAINLAND HOSPITALS (SEBERANG PERAI) -->
+  <div class="glass-card">
+    <div class="card-title" style="color: #FFD27A;">
+      <span>🏥 Penang Mainland Hospitals (Seberang Perai)</span>
+      <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas · Sungai Bakap</span>
+    </div>
+
+    <div class="hospital-grid">
+      <!-- Hospital Seberang Jaya (HSJ) -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
+              <div class="h-loc">Seberang Jaya (Mainland Major Referral Hospital)</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency (ETD):</span>
+            <a href="tel:+6043827300" class="h-phone-link emg">☎ 04-382 7300</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6043827333" class="h-phone-link">☎ 04-382 7333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospital Bukit Mertajam (HBM) -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Hospital Bukit Mertajam (HBM)</div>
+              <div class="h-loc">Jalan Kulim, Bukit Mertajam</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency / General:</span>
+            <a href="tel:+6045497333" class="h-phone-link emg">☎ 04-549 7333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospital Kepala Batas (HKB) -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Hospital Kepala Batas (HKB)</div>
+              <div class="h-loc">Kepala Batas, Seberang Perai Utara</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency / General:</span>
+            <a href="tel:+6045622333" class="h-phone-link emg">☎ 04-562 2333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospital Sungai Bakap (HSB) -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Hospital Sungai Bakap (HSB)</div>
+              <div class="h-loc">Sungai Bakap, Seberang Perai Selatan</div>
+            </div>
+            <span class="h-badge badge-gov">Gov Hospital</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency / General:</span>
+            <a href="tel:+6045824333" class="h-phone-link emg">☎ 04-582 4333</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sunway Medical Centre Penang -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Sunway Medical Centre Penang</div>
+              <div class="h-loc">Pusat Bandar Seberang Jaya, Perai</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Hotline:</span>
+            <a href="tel:+6043735999" class="h-phone-link emg">☎ 04-373 5999</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6043735555" class="h-phone-link">☎ 04-373 5555</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPJ Penang Specialist Hospital -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">KPJ Penang Specialist Hospital</div>
+              <div class="h-loc">Bandar Perda, Bukit Mertajam</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Emergency Hotline:</span>
+            <a href="tel:+6045486699" class="h-phone-link emg">☎ 04-548 6699</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6045486688" class="h-phone-link">☎ 04-548 6688</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagan Specialist Centre -->
+      <div class="hospital-item">
+        <div>
+          <div class="h-top">
+            <div>
+              <div class="h-name">Bagan Specialist Centre</div>
+              <div class="h-loc">Jalan Bagan 1, Butterworth</div>
+            </div>
+            <span class="h-badge badge-pvt">Private Specialist</span>
+          </div>
+        </div>
+        <div class="h-numbers">
+          <div class="h-call-row">
+            <span>24/7 Accident &amp; Emergency:</span>
+            <a href="tel:+6043405200" class="h-phone-link emg">☎ 04-340 5200</a>
+          </div>
+          <div class="h-call-row">
+            <span>General Line:</span>
+            <a href="tel:+6043405000" class="h-phone-link">☎ 04-340 5000</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. STROKE WARNING SIGNS (F.A.S.T) VISUAL CARDS -->
   <div class="glass-card" style="border-color: rgba(245, 158, 11, 0.4);">
     <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
       <h2 style="color: #FFD27A; font-size: 1.35rem; display:flex; align-items:center; gap:8px;">
@@ -590,7 +1137,7 @@ footer.site-footer {
     </div>
   </div>
 
-  <!-- 2. ADULT CPR STEP-BY-STEP & INTERACTIVE METRONOME -->
+  <!-- 5. ADULT CPR STEP-BY-STEP & INTERACTIVE METRONOME -->
   <div class="glass-card" style="border-color: rgba(56, 189, 248, 0.4);">
     <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
       <h2 style="color: #FFF; font-size: 1.35rem; display:flex; align-items:center; gap:8px;">
@@ -655,7 +1202,7 @@ footer.site-footer {
     </div>
   </div>
 
-  <!-- Video Tutorial Section -->
+  <!-- 6. VIDEO TUTORIAL SECTION -->
   <div class="glass-card" style="text-align:center;">
     <h3 style="color:#38BDF8; font-size:1.25rem; margin-bottom:12px;">🎥 Clinical First Aid &amp; Emergency Overview</h3>
     <video controls playsinline poster="assura-promo-poster.jpg" preload="metadata" style="width:100%; max-width:780px; border-radius:16px; border:1px solid rgba(255,255,255,0.12);">
@@ -704,7 +1251,7 @@ function playClick() {
   const gain = audioCtx.createGain();
 
   osc.type = 'sine';
-  osc.frequency.setValueAtTime(880, audioCtx.currentTime); // 880 Hz High Beep
+  osc.frequency.setValueAtTime(880, audioCtx.currentTime);
   gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
   gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
 
