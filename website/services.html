@@ -1,0 +1,524 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#040D1A" />
+<title>Clinical Services & Instant Pricing · Assura Nursing Care</title>
+<meta name="description" content="Professional wound care, Ryle tube, catheterization, stroke rehab, palliative care, and transparent pricing in Penang." />
+<link rel="icon" href="home-nursing-icon-192.png" />
+<link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
+<link rel="manifest" href="home-nursing.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg-deep: #040D1A;
+  --bg-card: rgba(10, 26, 46, 0.72);
+  --bg-card-hover: rgba(15, 38, 68, 0.9);
+  --line: rgba(56, 189, 248, 0.18);
+  --blue: #0284c7;
+  --blue-bright: #38bdf8;
+  --ice: #E0F2FE;
+  --gold: #FFD27A;
+  --amber: #F59E0B;
+  --pulse: #E4544A;
+  --green: #10B981;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-deep);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Canvas Background */
+.sky-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
+    radial-gradient(circle at 90% 60%, rgba(228, 84, 74, 0.12) 0%, transparent 55%),
+    #040D1A;
+}
+
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Sticky Luxury Top Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(4, 13, 26, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.brand-wrap:hover .brand-logo {
+  transform: scale(1.03);
+}
+
+/* Nav Menu Items */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 6px 11px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #FFF;
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Header Actions: Portals & Lang */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.portal-pill-patient {
+  background: rgba(14, 165, 233, 0.2);
+  color: #7dd3fc;
+  border: 1px solid rgba(14, 165, 233, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.portal-pill-patient:hover {
+  background: rgba(14, 165, 233, 0.35);
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+}
+
+.portal-pill-staff {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fde047;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.portal-pill-staff:hover {
+  background: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.lang-bar {
+  display: flex;
+  gap: 3px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background: var(--blue);
+  color: #FFF;
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #FFF;
+  font-size: 1.1rem;
+  padding: 5px 9px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Page Hero */
+.page-hero {
+  text-align: center;
+  padding: 42px 10px 28px;
+}
+
+.page-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--blue-bright);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 60%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.page-hero p {
+  color: #C9DCEC;
+  font-size: 1.02rem;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 32px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  color: #64748B;
+  font-size: 0.82rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #38BDF8;
+}
+
+@media (max-width: 960px) {
+  .nav-menu { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-menu.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(4, 13, 26, 0.98);
+    padding: 16px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    gap: 8px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="sky-canvas"></div>
+<div class="grid-lines"></div>
+
+<!-- Sticky Navigation Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand-wrap">
+      <img src="assura-logo.png" alt="Assura Nursing Care" class="brand-logo" />
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link ">Home</a></li>
+      <li><a href="services.html" class="nav-link active">Services &amp; Pricing</a></li>
+      <li><a href="equipment.html" class="nav-link ">Equipment Guide</a></li>
+      <li><a href="emergency.html" class="nav-link ">Emergency Protocols</a></li>
+      <li><a href="about.html" class="nav-link ">About Us</a></li>
+      <li><a href="careers.html" class="nav-link ">Careers</a></li>
+      <li><a href="download.html" class="nav-link ">Download Apps</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <a href="portal.html" class="portal-pill-patient">
+        👤 <span>Patient Portal</span>
+      </a>
+      <a href="https://staff.assuranursing.com" target="_blank" rel="noopener" class="portal-pill-staff">
+        🔒 <span>Staff Portal</span>
+      </a>
+
+      <div class="lang-bar">
+        <button class="lang-btn active" onclick="setSubPageLang('en')">EN</button>
+        <button class="lang-btn" onclick="setSubPageLang('zh')">中文</button>
+        <button class="lang-btn" onclick="setSubPageLang('bm')">BM</button>
+        <button class="lang-btn" onclick="setSubPageLang('ta')">தமிழ்</button>
+      </div>
+
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-hero">
+    <span class="page-tag" id="svc-tag">Clinical Services &amp; Rates · 临床服务与透明收费</span>
+    <h1 id="svc-title">Home Nursing Procedures &amp; Transparent Rates</h1>
+    <p id="svc-sub">MOH/LJM accredited Registered Nurses (RN) and AMOs delivering clinical excellence directly to your home across Penang Island &amp; Mainland.</p>
+  </div>
+
+  <!-- Calculator Card -->
+  <div class="glass-card" style="border-color: rgba(56, 189, 248, 0.4);">
+    <h2 style="font-size: 1.35rem; color: #FFF; margin-bottom: 6px;">⚡ Instant Price Estimator</h2>
+    <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 20px;">Select your required nursing procedure and location for instant transparent quotation:</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px;">
+      <div>
+        <label style="display:block; font-size: 0.8rem; font-weight:700; color:#38BDF8; margin-bottom:6px;">NURSING PROCEDURE</label>
+        <select id="selProcedure" onchange="calcPrice()" style="width:100%; padding:10px 12px; border-radius:10px; background:#071E3D; color:#FFF; border:1px solid rgba(56,189,248,0.3); font-size:0.92rem;">
+          <option value="120" data-name="Basic Wound Dressing (Simple / Post-Surgical)">Basic Wound Dressing (Simple / Post-Surgical) · RM 120</option>
+          <option value="160" data-name="Complex Wound / Bed Sore Stage 3-4 (Alginate/Hydrogel)">Complex Wound / Bed Sore Stage 3-4 · RM 160</option>
+          <option value="150" data-name="Ryle's Tube Insertion (NG Tube Changing)">Ryle's Tube (NG Tube) Insertion &amp; Checking · RM 150</option>
+          <option value="150" data-name="Urinary Catheterization (Foley Catheter)">Urinary Catheterization (Foley Catheter) · RM 150</option>
+          <option value="130" data-name="Subcutaneous / Intramuscular Injection / Blood Draw">SC/IM Injection / Blood Test Sampling · RM 130</option>
+          <option value="180" data-name="IV Drip Infusion & Medication Admin">IV Drip Infusion &amp; Medication Administration · RM 180</option>
+          <option value="250" data-name="Stroke Rehab & Physiotherapy Session (1.5 hr)">Stroke Rehab &amp; Mobility Exercise (1.5 hr) · RM 250</option>
+          <option value="350" data-name="12-Hour Private Bedside Nurse Shift">12-Hour Dedicated Bedside Nurse Shift · RM 350</option>
+          <option value="650" data-name="24-Hour Continuous Care Shift">24-Hour Continuous Private Nurse Shift · RM 650</option>
+        </select>
+      </div>
+
+      <div>
+        <label style="display:block; font-size: 0.8rem; font-weight:700; color:#38BDF8; margin-bottom:6px;">LOCATION IN PENANG</label>
+        <select id="selLocation" onchange="calcPrice()" style="width:100%; padding:10px 12px; border-radius:10px; background:#071E3D; color:#FFF; border:1px solid rgba(56,189,248,0.3); font-size:0.92rem;">
+          <option value="0" data-loc="Bukit Mertajam / BM Core">Bukit Mertajam &amp; Central Seberang Perai (+RM 0)</option>
+          <option value="0" data-loc="Butterworth / Perai / Seberang Jaya">Butterworth / Perai / Seberang Jaya (+RM 0)</option>
+          <option value="10" data-loc="Georgetown / Jelutong / Pulau Tikus">Georgetown / Jelutong / Pulau Tikus (+RM 10)</option>
+          <option value="15" data-loc="Bayan Lepas / Queensbay / Relau">Bayan Lepas / Queensbay / Relau (+RM 15)</option>
+          <option value="20" data-loc="Tanjung Bungah / Batu Ferringhi">Tanjung Bungah / Batu Ferringhi (+RM 20)</option>
+          <option value="10" data-loc="Simpang Ampat / Juru / Valdor">Simpang Ampat / Juru / Valdor (+RM 10)</option>
+          <option value="15" data-loc="Nibong Tebal / Jawi / Sungai Bakap">Nibong Tebal / Jawi / Sungai Bakap (+RM 15)</option>
+          <option value="15" data-loc="Kepala Batas / Tasek Gelugor / Bertam">Kepala Batas / Bertam (+RM 15)</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div style="font-size: 0.8rem; color: #94A3B8; text-transform: uppercase;">Estimated Total Before Consumables</div>
+        <div id="priceDisplay" style="font-size: 2rem; font-weight: 800; color: #FFD27A;">RM 120.00</div>
+        <div id="priceSummary" style="font-size: 0.82rem; color: #C9DCEC;">Basic Wound Dressing · Bukit Mertajam</div>
+      </div>
+      <a id="btnBookWa" href="https://wa.me/60124701235" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: #FFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+        💬 Book via WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Detailed Clinical Services Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">🩺 Complex Wound Care</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Post-surgical incision care, diabetic foot ulcer debridement, pressure sore staging (Stage 1 to 4) using sterile hydrocolloid and silver dressings.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">🧪 Tube &amp; Catheter Management</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Ryle's tube (NG Tube) insertion, enteral feeding guide, urinary Foley catheter changing, bladder irrigation &amp; stoma pouch care.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">💉 Medication &amp; Injections</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">🧠 Stroke &amp; Post-Op Rehab</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">🕊️ Palliative &amp; Bedside Nursing</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Compassionate end-of-life comfort care, symptom control, 12-hour / 24-hour round-the-clock bedside nursing shifts.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 10px;">📊 Electronic Vital Sign Charts (MEWS)</h3>
+      <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
+        Real-time digital charting of blood pressure, SpO2, pulse, blood glucose, temperature with instant Modified Early Warning Score (MEWS) calculation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+function calcPrice() {
+  const pSel = document.getElementById('selProcedure');
+  const lSel = document.getElementById('selLocation');
+  const basePrice = parseInt(pSel.value) || 120;
+  const travelFee = parseInt(lSel.value) || 0;
+  const total = basePrice + travelFee;
+  
+  const pName = pSel.options[pSel.selectedIndex].getAttribute('data-name');
+  const lName = lSel.options[lSel.selectedIndex].getAttribute('data-loc');
+
+  document.getElementById('priceDisplay').innerText = 'RM ' + total.toFixed(2);
+  document.getElementById('priceSummary').innerText = pName + ' · ' + lName;
+
+  const waMsg = encodeURIComponent('Hello Assura Nursing, I would like to book ' + pName + ' at ' + lName + ' (Estimated: RM ' + total + ').');
+  document.getElementById('btnBookWa').href = 'https://wa.me/60124701235?text=' + waMsg;
+}
+</script>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services &amp; Pricing</a>
+    <a href="equipment.html">Medical Equipment</a>
+    <a href="emergency.html">Emergency First Aid</a>
+    <a href="about.html">About Us</a>
+    <a href="careers.html">Careers</a>
+    <a href="download.html">Download Apps</a>
+    <a href="portal.html">Patient Portal</a>
+    <a href="https://staff.assuranursing.com">Staff Portal</a>
+  </div>
+  <p>© 2026 Assura Nursing Care · All Rights Reserved · Penang Island &amp; Mainland</p>
+  <p style="margin-top: 6px; font-size: 0.74rem;">MOH / LJM Accredited Private Home Nursing &amp; Clinical Healthcare Services</p>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('navMenu');
+  if (menu) menu.classList.toggle('mobile-open');
+}
+
+function setSubPageLang(l) {
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.innerText.toLowerCase().includes(l));
+  });
+  if (window.handleSubLang) window.handleSubLang(l);
+}
+</script>
+</body>
+</html>
+

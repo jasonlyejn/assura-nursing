@@ -1,10 +1,16 @@
 // Assura Nursing Care — Unified Service Worker
-// Version: v20 (Full Offline & Push Engine)
-const CACHE_NAME = 'assura-nursing-v20';
+// Version: v21 (Modular Multi-Page & Offline Push Engine)
+const CACHE_NAME = 'assura-nursing-v21';
 
 const APP_FILES = [
   '/',
   '/index.html',
+  '/services.html',
+  '/equipment.html',
+  '/emergency.html',
+  '/about.html',
+  '/careers.html',
+  '/download.html',
   '/portal.html',
   '/book.html',
   '/doctor.html',
@@ -15,7 +21,7 @@ const APP_FILES = [
   '/home-nursing-icon-512.png',
   '/assura-logo.png',
   '/logo.png',
-  '/styles.css'
+  '/founder-blazer.jpg'
 ];
 
 // Install: Cache all core application files
