@@ -793,7 +793,13 @@ document.getElementById('installBtn')?.addEventListener('click', async () => {
 addEventListener('appinstalled', () => { iLine.hidden = true; });
 
 if('serviceWorker' in navigator && location.protocol !== 'file:'){
-  navigator.serviceWorker.register('home-nursing-service-worker.js').catch(()=>{});
+  navigator.serviceWorker.register('home-nursing-service-worker.js').then((reg) => {
+    if('Notification' in window && Notification.permission === 'default'){
+      setTimeout(() => {
+        Notification.requestPermission().catch(()=>{});
+      }, 5000);
+    }
+  }).catch(()=>{});
 }
 
 // Tap the logo: it kicks, and throws a handful of sparks.

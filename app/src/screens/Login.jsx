@@ -197,6 +197,15 @@ export default function Login({ onDone }) {
             📦 Windows .ZIP
           </a>
         </div>
+
+        <div style={{ marginTop: '22px', textAlign: 'center', borderTop: '1px solid #e2e8f0', paddingTop: '16px' }}>
+          <a
+            href="https://assuranursing.com"
+            style={{ textDecoration: 'none', color: '#0284c7', fontSize: '0.85rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+          >
+            ← Return to Public Home Care Website
+          </a>
+        </div>
       </div>
     </div>
   );
