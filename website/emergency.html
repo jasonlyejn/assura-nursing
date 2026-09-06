@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
-<title>Penang Emergency Directory, Hospitals &amp; GPS Directions · Assura Nursing</title>
-<meta name="description" content="Complete directory of Penang hospital emergency hotlines, GPS navigation directions (Google Maps &amp; Waze), ambulance services, CPR guide &amp; Stroke FAST protocols." />
+<title>Penang Emergency Directory, Hospitals &amp; First Aid · Assura Nursing</title>
+<meta name="description" content="Complete directory of Penang hospital emergency hotlines, GPS navigation (Google Maps &amp; Waze), ambulance dispatches, CPR visual metronome &amp; Stroke FAST guide." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -544,6 +544,12 @@ header.site-header {
   padding: 18px 14px;
   text-align: center;
   position: relative;
+  transition: all 0.2s;
+}
+
+.cpr-step-card:hover {
+  border-color: var(--blue-bright);
+  transform: translateY(-2px);
 }
 
 .cpr-step-num {
@@ -635,37 +641,115 @@ header.site-header {
   box-shadow: 0 10px 25px rgba(239, 68, 68, 0.6);
 }
 
-/* Compact Video Card */
-.video-card-compact {
-  max-width: 520px;
+/* Interactive Visual First Aid Guide & Video Resources */
+.interactive-guide-card {
+  max-width: 580px;
   margin: 0 auto;
   text-align: center;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.video-wrap-compact {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #000;
-  margin: 10px 0 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.sim-stage-display {
+  background: rgba(4, 13, 26, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin: 14px 0 16px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.video-wrap-compact iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.sim-stage-icon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  animation: float-icon 2s ease-in-out infinite alternate;
+}
+
+@keyframes float-icon {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+.sim-stage-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.sim-stage-instruction {
+  font-size: 0.86rem;
+  color: #CBD5E1;
+  max-width: 440px;
+  line-height: 1.45;
+}
+
+.sim-nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sim-btn {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sim-btn:hover {
+  background: rgba(56, 189, 248, 0.3);
+  color: #FFF;
+}
+
+.sim-btn.primary {
+  background: linear-gradient(135deg, #0284C7, #0369A1);
+  color: #FFF;
+  border-color: #38BDF8;
+}
+
+.video-resources-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.video-link-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #FCA5A5;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.video-link-pill:hover {
+  background: rgba(239, 68, 68, 0.28);
+  color: #FFF;
+  border-color: #EF4444;
 }
 
 /* Footer */
@@ -712,6 +796,9 @@ footer.site-footer {
     border-bottom: 1px solid var(--line);
     box-shadow: 0 20px 40px rgba(0,0,0,0.7);
     gap: 8px;
+  }
+  .video-resources-row {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -1427,27 +1514,40 @@ footer.site-footer {
     </div>
   </div>
 
-  <!-- 6. COMPACT FIRST AID VIDEO DEMONSTRATION -->
+  <!-- 6. INTERACTIVE FIRST AID SIMULATOR & OFFICIAL VIDEO GUIDES -->
   <div class="glass-card" style="text-align:center;">
-    <div class="video-card-compact">
+    <div class="interactive-guide-card">
       <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:4px;">
         <span style="font-size:1.2rem;">🎬</span>
-        <h3 style="color:#38BDF8; font-size:1.05rem; font-weight:700;">Clinical First Aid &amp; CPR Demonstration</h3>
+        <h3 style="color:#38BDF8; font-size:1.05rem; font-weight:700;">Interactive First Aid &amp; CPR Simulator</h3>
       </div>
-      <p style="font-size:0.78rem; color:#94A3B8; margin-bottom:10px;">
-        Official Hands-Only CPR instructional demonstration guide (American Heart Association / St John)
+      <p style="font-size:0.78rem; color:#94A3B8;">
+        Follow the interactive step-by-step emergency action guide:
       </p>
-      <div class="video-wrap-compact">
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/M4ACYp75BEk?rel=0" 
-          title="Clinical First Aid and Hands-Only CPR Demonstration" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen 
-          loading="lazy">
-        </iframe>
+
+      <!-- Live Interactive Stage Display -->
+      <div class="sim-stage-display" id="simDisplay">
+        <div class="sim-stage-icon" id="simIcon">👋</div>
+        <div class="sim-stage-title" id="simTitle">Step 1: Check Responsiveness</div>
+        <div class="sim-stage-instruction" id="simDesc">
+          Firmly tap the person's shoulders and shout loudly: "Are you okay?". If no response, check if they are breathing normally.
+        </div>
       </div>
-      <div style="font-size:0.72rem; color:#64748B; margin-top:6px;">
-        ⏱️ Duration: ~2 mins · Tap to play instructional CPR &amp; Emergency response video
+
+      <!-- Simulator Navigation Buttons -->
+      <div class="sim-nav-controls">
+        <button class="sim-btn" onclick="prevSimStep()">◀ Previous</button>
+        <button class="sim-btn primary" onclick="nextSimStep()">Next Step ▶</button>
+      </div>
+
+      <!-- Verified Direct Video Guide Links -->
+      <div class="video-resources-row">
+        <a href="https://www.youtube.com/watch?v=M4ACYp75BEk" target="_blank" rel="noopener" class="video-link-pill">
+          ▶ Watch AHA CPR Video (YouTube)
+        </a>
+        <a href="https://www.youtube.com/watch?v=BQNNOh8c8ks" target="_blank" rel="noopener" class="video-link-pill">
+          ▶ Watch St John CPR Video (YouTube)
+        </a>
       </div>
     </div>
   </div>
@@ -1473,6 +1573,60 @@ footer.site-footer {
 function toggleMobileMenu() {
   const menu = document.getElementById('navMenu');
   if (menu) menu.classList.toggle('mobile-open');
+}
+
+// Interactive First Aid Guide Stages
+const simStages = [
+  {
+    icon: '👋',
+    title: 'Step 1: Check Responsiveness',
+    desc: 'Firmly tap the person\'s shoulders and shout loudly: "Are you okay?". If no response and no normal breathing, proceed immediately.'
+  },
+  {
+    icon: '📞',
+    title: 'Step 2: Shout For Help & Dial 999',
+    desc: 'Call 999 or 112 immediately on speakerphone. Ask someone nearby to get an AED (Automated External Defibrillator) if available.'
+  },
+  {
+    icon: '👐',
+    title: 'Step 3: Position Your Hands',
+    desc: 'Kneel beside the person. Place the heel of one hand in the center of the chest (lower half of breastbone). Interlock your other hand on top.'
+  },
+  {
+    icon: '⚡',
+    title: 'Step 4: Push Hard & Fast (110 BPM)',
+    desc: 'Keep arms straight and push down at least 2 inches (5 cm) at 100 to 120 beats per minute. Let chest rise completely between compressions.'
+  },
+  {
+    icon: '🚑',
+    title: 'Step 5: Continue Non-Stop Until Ambulance Arrives',
+    desc: 'Keep uninterrupted compressions until emergency medical personnel arrive and take over, or the person clearly wakes up and moves.'
+  }
+];
+
+let curSimIdx = 0;
+
+function updateSimDisplay() {
+  const stage = simStages[curSimIdx];
+  const icon = document.getElementById('simIcon');
+  const title = document.getElementById('simTitle');
+  const desc = document.getElementById('simDesc');
+  
+  if (icon && title && desc) {
+    icon.textContent = stage.icon;
+    title.textContent = stage.title;
+    desc.textContent = stage.desc;
+  }
+}
+
+function nextSimStep() {
+  curSimIdx = (curSimIdx + 1) % simStages.length;
+  updateSimDisplay();
+}
+
+function prevSimStep() {
+  curSimIdx = (curSimIdx - 1 + simStages.length) % simStages.length;
+  updateSimDisplay();
 }
 
 // 110 BPM Audio-Visual Metronome Engine (Web Audio API)
