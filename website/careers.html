@@ -327,6 +327,49 @@ footer.site-footer {
     gap: 8px;
   }
 }
+
+/* Floating Ambient Light Orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+  animation: float-orb 18s ease-in-out infinite alternate;
+}
+.orb-1 {
+  width: 420px;
+  height: 420px;
+  top: 5%;
+  right: -8%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35), rgba(2, 132, 199, 0.08));
+  animation-duration: 18s;
+}
+.orb-2 {
+  width: 380px;
+  height: 380px;
+  top: 45%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(255, 210, 122, 0.28), rgba(245, 158, 11, 0.05));
+  animation-duration: 22s;
+  animation-delay: -6s;
+}
+.orb-3 {
+  width: 440px;
+  height: 440px;
+  bottom: 8%;
+  right: 8%;
+  background: radial-gradient(circle, rgba(228, 84, 74, 0.28), rgba(168, 85, 247, 0.06));
+  animation-duration: 20s;
+  animation-delay: -11s;
+}
+@keyframes float-orb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(35px, 30px) scale(1.06); }
+  100% { transform: translate(-25px, -20px) scale(0.96); }
+}
+
 </style>
 </head>
 <body>

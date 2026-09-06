@@ -15,19 +15,18 @@
 
 <style>
 :root {
-  --bg-deep: #040D1A;
-  --bg-card: rgba(10, 26, 46, 0.78);
-  --bg-card-hover: rgba(16, 40, 72, 0.92);
-  --line: rgba(56, 189, 248, 0.18);
+  --bg-deep: #030914;
+  --bg-card: rgba(10, 25, 48, 0.72);
+  --bg-card-hover: rgba(15, 38, 72, 0.88);
+  --line: rgba(56, 189, 248, 0.22);
   --blue: #0284c7;
   --blue-bright: #38bdf8;
-  --blue-glow: rgba(56, 189, 248, 0.35);
   --ice: #E0F2FE;
   --gold: #FFD27A;
-  --gold-glow: rgba(255, 210, 122, 0.35);
   --amber: #F59E0B;
   --pulse: #E4544A;
   --green: #10B981;
+  --purple: #A855F7;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 }
@@ -45,30 +44,81 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Ambient Canvas Background */
+/* ==========================================================================
+   RICH DYNAMIC BACKGROUNDS: AURORA ORBS, MEDICAL GRID & ECG PULSE WAVE
+   ========================================================================== */
 .sky-canvas {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 12%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
-    radial-gradient(circle at 10% 75%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 90% 55%, rgba(228, 84, 74, 0.14) 0%, transparent 55%),
-    #040D1A;
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(14, 165, 233, 0.35) 0%, transparent 70%),
+    radial-gradient(circle 600px at 85% 25%, rgba(2, 132, 199, 0.25) 0%, transparent 70%),
+    radial-gradient(circle 500px at 15% 45%, rgba(245, 158, 11, 0.16) 0%, transparent 65%),
+    radial-gradient(circle 550px at 75% 70%, rgba(228, 84, 74, 0.18) 0%, transparent 65%),
+    radial-gradient(circle 600px at 20% 90%, rgba(16, 185, 129, 0.15) 0%, transparent 70%),
+    #030914;
 }
 
+/* Floating Light Orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  animation: float-orb 16s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  top: 5%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4), rgba(2, 132, 199, 0.1));
+  animation-duration: 18s;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(255, 210, 122, 0.3), rgba(245, 158, 11, 0.05));
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 480px;
+  height: 480px;
+  bottom: 10%;
+  right: 5%;
+  background: radial-gradient(circle, rgba(228, 84, 74, 0.3), rgba(168, 85, 247, 0.08));
+  animation-duration: 20s;
+  animation-delay: -10s;
+}
+
+@keyframes float-orb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 35px) scale(1.08); }
+  100% { transform: translate(-30px, -25px) scale(0.95); }
+}
+
+/* High-Tech Perspective Medical Grid */
 .grid-lines {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+    linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 85%);
 }
 
 .container {
@@ -84,11 +134,11 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(4, 13, 26, 0.92);
+  background: rgba(3, 9, 20, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .header-inner {
@@ -113,6 +163,7 @@ header.site-header {
   width: auto;
   object-fit: contain;
   transition: transform 0.2s;
+  filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.25));
 }
 
 .brand-wrap:hover .brand-logo {
@@ -132,7 +183,7 @@ header.site-header {
   text-decoration: none;
   font-size: 0.84rem;
   font-weight: 600;
-  padding: 6px 11px;
+  padding: 7px 12px;
   border-radius: 8px;
   transition: all 0.2s;
   white-space: nowrap;
@@ -140,8 +191,9 @@ header.site-header {
 
 .nav-link:hover, .nav-link.active {
   color: #FFF;
-  background: rgba(56, 189, 248, 0.16);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(2, 132, 199, 0.15) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.2);
 }
 
 /* Header Actions */
@@ -153,9 +205,9 @@ header.site-header {
 }
 
 .portal-pill-patient {
-  background: rgba(14, 165, 233, 0.2);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(2, 132, 199, 0.15));
   color: #7dd3fc;
-  border: 1px solid rgba(14, 165, 233, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.5);
   text-decoration: none;
   font-weight: 700;
   padding: 6px 12px;
@@ -169,12 +221,13 @@ header.site-header {
 }
 
 .portal-pill-patient:hover {
-  background: rgba(14, 165, 233, 0.35);
-  box-shadow: 0 0 14px rgba(14, 165, 233, 0.4);
+  background: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 0 16px rgba(14, 165, 233, 0.5);
+  transform: translateY(-1px);
 }
 
 .portal-pill-staff {
-  background: rgba(245, 158, 11, 0.2);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.15));
   color: #fde047;
   border: 1px solid rgba(245, 158, 11, 0.5);
   text-decoration: none;
@@ -190,8 +243,9 @@ header.site-header {
 }
 
 .portal-pill-staff:hover {
-  background: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
 }
 
 .mobile-toggle {
@@ -205,25 +259,29 @@ header.site-header {
   cursor: pointer;
 }
 
-/* Hero Section (Visual & Welcoming) */
+/* ==========================================================================
+   HERO SECTION: VIBRANT GLOW, WELCOMING MEDICAL COPY & ECG HEARTBEAT
+   ========================================================================== */
 .hero-sec {
-  padding: 42px 10px 32px;
+  padding: 46px 10px 32px;
   text-align: center;
+  position: relative;
 }
 
 .trust-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(16, 185, 129, 0.14);
-  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.45);
   color: #6EE7B7;
-  padding: 6px 16px;
+  padding: 7px 18px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.4px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
 }
 
 .pulse-dot {
@@ -242,218 +300,277 @@ header.site-header {
 
 .hero-sec h1 {
   font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
   font-weight: 600;
   line-height: 1.15;
-  margin-bottom: 16px;
-  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 50%, var(--gold) 100%);
+  margin-bottom: 18px;
+  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 45%, var(--gold) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
 }
 
 .hero-sec .sub-headline {
-  color: #C9DCEC;
-  font-size: 1.08rem;
-  max-width: 720px;
+  color: #CBD5E1;
+  font-size: 1.1rem;
+  max-width: 740px;
   margin: 0 auto 28px;
   line-height: 1.65;
+}
+
+/* ECG Heartbeat Waveform Line */
+.ecg-line-wrap {
+  max-width: 480px;
+  margin: 0 auto 30px;
+  height: 32px;
+  opacity: 0.85;
+}
+
+.ecg-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ecg-path {
+  stroke: #38BDF8;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: ecg-draw 3.5s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.8));
+}
+
+@keyframes ecg-draw {
+  0% { stroke-dashoffset: 600; }
+  80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -600; }
 }
 
 .hero-ctas {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .btn-whatsapp {
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #FFF;
-  padding: 13px 26px;
-  border-radius: 12px;
+  padding: 14px 28px;
+  border-radius: 14px;
   font-weight: 800;
-  font-size: 0.98rem;
+  font-size: 1rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.2s ease;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0284c7, #0369a1);
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #FFF;
-  padding: 13px 26px;
-  border-radius: 12px;
+  padding: 14px 28px;
+  border-radius: 14px;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
-  transition: all 0.2s ease;
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.65);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.75);
   color: #E2E8F0;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 13px 24px;
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 14px 26px;
+  border-radius: 14px;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(30, 41, 59, 0.9);
   color: #FFF;
-  transform: translateY(-2px);
+  border-color: var(--blue-bright);
+  transform: translateY(-3px);
 }
 
-/* Trust Stats Bar */
+/* ==========================================================================
+   TRUST STATS BAR WITH GLOWING ACCENT BORDERS
+   ========================================================================== */
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin-bottom: 40px;
+  gap: 16px;
+  margin-bottom: 42px;
 }
 
 .stat-card {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 18px;
+  background: linear-gradient(145deg, rgba(15, 28, 52, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-top: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 18px;
+  padding: 20px 16px;
   text-align: center;
-  transition: all 0.2s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s;
 }
 
 .stat-card:hover {
   border-color: var(--blue-bright);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
 }
 
 .stat-num {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 900;
-  color: #FFF;
-  background: linear-gradient(135deg, #FFF 0%, var(--blue-bright) 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 60%, var(--gold) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #94A3B8;
   margin-top: 4px;
   font-weight: 600;
 }
 
-/* Glass Section Cards */
+/* ==========================================================================
+   GLASS SECTION CARDS: LAYERED GRADIENTS & SHIMMER HIGHLIGHTS
+   ========================================================================== */
 .glass-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 32px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(145deg, rgba(12, 28, 54, 0.78) 0%, rgba(5, 16, 34, 0.86) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-top: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 24px;
+  padding: 36px 30px;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), transparent);
 }
 
 .section-head {
   text-align: center;
-  max-width: 680px;
-  margin: 0 auto 26px;
+  max-width: 700px;
+  margin: 0 auto 28px;
 }
 
 .sec-tag {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18) 0%, rgba(2, 132, 199, 0.1) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   color: var(--blue-bright);
   font-size: 0.74rem;
   font-weight: 800;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
 }
 
 .section-head h2 {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.7rem, 3.6vw, 2.3rem);
   font-weight: 600;
   color: #FFF;
   margin-bottom: 8px;
 }
 
 .section-head p {
-  font-size: 0.95rem;
-  color: #94A3B8;
-  line-height: 1.55;
+  font-size: 0.96rem;
+  color: #CBD5E1;
+  line-height: 1.6;
 }
 
-/* 3-Step Process Grid */
+/* ==========================================================================
+   3-STEP PROCESS: GLOWING NUMBER BADGES & RICH CARDS
+   ========================================================================== */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
-  margin-top: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
 }
 
 .step-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 18px;
-  padding: 24px 20px;
+  background: linear-gradient(145deg, rgba(15, 30, 58, 0.85) 0%, rgba(8, 20, 40, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-top: 1px solid rgba(255, 210, 122, 0.4);
+  border-radius: 20px;
+  padding: 26px 22px;
   position: relative;
-  transition: all 0.25s;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .step-card:hover {
   border-color: var(--gold);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 35px rgba(255, 210, 122, 0.2);
 }
 
 .step-number-badge {
   position: absolute;
   top: 16px;
-  right: 16px;
-  font-size: 1.6rem;
+  right: 18px;
+  font-size: 1.8rem;
   font-weight: 900;
   color: rgba(255, 210, 122, 0.25);
+  font-family: var(--font-serif);
 }
 
 .step-icon {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 12px;
   display: block;
 }
 
 .step-title {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
   color: #FFF;
   margin-bottom: 8px;
@@ -462,124 +579,156 @@ header.site-header {
 .step-desc {
   font-size: 0.88rem;
   color: #CBD5E1;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* Services Visual Grid */
+/* ==========================================================================
+   POPULAR SERVICES: COLOR-CODED ACCENT HEADERS & GLOW BORDERS
+   ========================================================================== */
 .services-visual-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
 }
 
 .service-v-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 18px;
-  padding: 22px 20px;
+  background: linear-gradient(145deg, rgba(14, 28, 54, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 20px;
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
+.service-v-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--blue-bright);
+}
+
+.service-v-card.gold::before { background: var(--gold); }
+.service-v-card.red::before { background: #EF4444; }
+.service-v-card.green::before { background: #10B981; }
+.service-v-card.purple::before { background: #A855F7; }
+.service-v-card.amber::before { background: #F59E0B; }
+
 .service-v-card:hover {
-  background: var(--bg-card-hover);
+  background: linear-gradient(145deg, rgba(20, 42, 80, 0.9) 0%, rgba(8, 22, 44, 0.95) 100%);
   border-color: var(--blue-bright);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(56, 189, 248, 0.25);
 }
 
 .s-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .s-icon-wrap {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
   background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .s-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #FFF;
   line-height: 1.3;
 }
 
 .s-desc {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: #CBD5E1;
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 16px;
 }
 
 .s-features-list {
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #94A3B8;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
+  gap: 7px;
+  margin-bottom: 18px;
 }
 
 .s-features-list li {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
 }
 
 .s-features-list li::before {
   content: '✓';
   color: #38BDF8;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .s-link-btn {
   color: #38BDF8;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  align-self: flex-start;
   transition: all 0.2s;
 }
 
 .s-link-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
   color: #FFF;
+  border-color: #38BDF8;
   transform: translateX(3px);
 }
 
-/* Founder & Leadership Visual Showcase */
+/* ==========================================================================
+   FOUNDER & LEADERSHIP SHOWCASE WITH LUXURY GOLD HALO
+   ========================================================================== */
 .founder-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 28px;
+  grid-template-columns: 290px 1fr;
+  gap: 32px;
   align-items: center;
 }
 
 .founder-photo-wrap {
   position: relative;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(255, 210, 122, 0.4);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 210, 122, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 210, 122, 0.2);
 }
 
 .founder-photo-wrap img {
   width: 100%;
-  height: 340px;
+  height: 350px;
   object-fit: cover;
   display: block;
 }
@@ -589,30 +738,30 @@ header.site-header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(4, 13, 26, 0.95), transparent);
-  padding: 16px 14px 12px;
+  background: linear-gradient(to top, rgba(3, 9, 20, 0.96) 20%, transparent 100%);
+  padding: 20px 16px 14px;
   text-align: center;
 }
 
 .founder-info h3 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #FFF;
   margin-bottom: 6px;
 }
 
 .founder-role {
   color: var(--gold);
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .founder-quote {
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   color: #CBD5E1;
-  line-height: 1.65;
-  margin-bottom: 18px;
+  line-height: 1.68;
+  margin-bottom: 20px;
 }
 
 .founder-creds {
@@ -623,39 +772,43 @@ header.site-header {
 
 .cred-pill {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.74rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.76rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
   color: #E2E8F0;
 }
 
-/* App Download Banner */
+/* ==========================================================================
+   APP DOWNLOAD BANNER (VIBRANT GLOW)
+   ========================================================================== */
 .app-banner-box {
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  border-radius: 20px;
-  padding: 30px;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.3) 0%, rgba(10, 25, 48, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-top: 1px solid rgba(56, 189, 248, 0.65);
+  border-radius: 22px;
+  padding: 34px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.25);
 }
 
 .app-banner-text h3 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #FFF;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .app-banner-text p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #CBD5E1;
   max-width: 520px;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Footer */
@@ -697,10 +850,10 @@ footer.site-footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(4, 13, 26, 0.98);
+    background: rgba(3, 9, 20, 0.98);
     padding: 16px;
     border-bottom: 1px solid var(--line);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
     gap: 8px;
   }
   .founder-grid {
@@ -723,6 +876,9 @@ footer.site-footer {
 </head>
 <body>
 <div class="sky-canvas"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 <div class="grid-lines"></div>
 
 <!-- Sticky Navigation Header -->
@@ -767,6 +923,13 @@ footer.site-footer {
     <p class="sub-headline">
       Professional, compassionate Registered Nurses dedicated to your family. Expert wound care, stroke recovery, post-surgery rehabilitation, and elderly care delivered right to your doorstep.
     </p>
+
+    <!-- Animated ECG Waveform Visual -->
+    <div class="ecg-line-wrap">
+      <svg class="ecg-svg" viewBox="0 0 500 40" preserveAspectRatio="none">
+        <path class="ecg-path" d="M0,20 L120,20 L135,5 L145,35 L155,10 L165,28 L175,20 L300,20 L315,5 L325,35 L335,10 L345,28 L355,20 L500,20" />
+      </svg>
+    </div>
 
     <div class="hero-ctas">
       <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp">
@@ -868,7 +1031,7 @@ footer.site-footer {
       </div>
 
       <!-- Elderly Care -->
-      <div class="service-v-card">
+      <div class="service-v-card gold">
         <div>
           <div class="s-header">
             <div class="s-icon-wrap" style="color:#FFD27A;">👴</div>
@@ -887,7 +1050,7 @@ footer.site-footer {
       </div>
 
       <!-- Stroke Rehab -->
-      <div class="service-v-card">
+      <div class="service-v-card red">
         <div>
           <div class="s-header">
             <div class="s-icon-wrap" style="color:#FCA5A5;">🧠</div>
@@ -906,7 +1069,7 @@ footer.site-footer {
       </div>
 
       <!-- Injections & Lab Tests -->
-      <div class="service-v-card">
+      <div class="service-v-card green">
         <div>
           <div class="s-header">
             <div class="s-icon-wrap" style="color:#6EE7B7;">💉</div>
@@ -925,7 +1088,7 @@ footer.site-footer {
       </div>
 
       <!-- Hospital Escort -->
-      <div class="service-v-card">
+      <div class="service-v-card purple">
         <div>
           <div class="s-header">
             <div class="s-icon-wrap" style="color:#C084FC;">🏥</div>
@@ -944,7 +1107,7 @@ footer.site-footer {
       </div>
 
       <!-- Equipment Rental -->
-      <div class="service-v-card">
+      <div class="service-v-card amber">
         <div>
           <div class="s-header">
             <div class="s-icon-wrap" style="color:#FBBF24;">🛏️</div>
@@ -970,8 +1133,8 @@ footer.site-footer {
       <div class="founder-photo-wrap">
         <img src="founder-blazer.jpg" alt="Nurse Jason Lye, Clinical Lead &amp; Founder" />
         <div class="founder-badge-overlay">
-          <div style="font-size:0.9rem; font-weight:800; color:#FFF;">Nurse Jason Lye</div>
-          <div style="font-size:0.72rem; color:var(--gold);">MOH / LJM Certified Registered Nurse</div>
+          <div style="font-size:0.95rem; font-weight:800; color:#FFF;">Nurse Jason Lye</div>
+          <div style="font-size:0.75rem; color:var(--gold);">MOH / LJM Certified Registered Nurse</div>
         </div>
       </div>
 
