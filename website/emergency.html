@@ -375,12 +375,6 @@ header.site-header {
   border: 1px solid rgba(245, 158, 11, 0.4);
 }
 
-.badge-ngo {
-  background: rgba(239, 68, 68, 0.2);
-  color: #FCA5A5;
-  border: 1px solid rgba(239, 68, 68, 0.4);
-}
-
 .h-numbers {
   display: flex;
   flex-direction: column;
@@ -593,6 +587,39 @@ header.site-header {
   box-shadow: 0 10px 25px rgba(239, 68, 68, 0.6);
 }
 
+/* Compact Video Card */
+.video-card-compact {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrap-compact {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  margin: 10px 0 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-wrap-compact iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Footer */
 footer.site-footer {
   text-align: center;
@@ -739,7 +766,7 @@ footer.site-footer {
   <div class="glass-card">
     <div class="card-title" style="color: #38BDF8;">
       <span>🏥 Penang Island Hospitals (Government &amp; Private)</span>
-      <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Georgetown · Bayan Lepas · Balik Pulau · Tanjung Tokong</span>
+      <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah</span>
     </div>
 
     <div class="hospital-grid">
@@ -1202,13 +1229,29 @@ footer.site-footer {
     </div>
   </div>
 
-  <!-- 6. VIDEO TUTORIAL SECTION -->
+  <!-- 6. COMPACT FIRST AID VIDEO DEMONSTRATION -->
   <div class="glass-card" style="text-align:center;">
-    <h3 style="color:#38BDF8; font-size:1.25rem; margin-bottom:12px;">🎥 Clinical First Aid &amp; Emergency Overview</h3>
-    <video controls playsinline poster="assura-promo-poster.jpg" preload="metadata" style="width:100%; max-width:780px; border-radius:16px; border:1px solid rgba(255,255,255,0.12);">
-      <source src="assura-promo.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+    <div class="video-card-compact">
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:4px;">
+        <span style="font-size:1.2rem;">🎬</span>
+        <h3 style="color:#38BDF8; font-size:1.05rem; font-weight:700;">Clinical First Aid &amp; CPR Demonstration</h3>
+      </div>
+      <p style="font-size:0.78rem; color:#94A3B8; margin-bottom:10px;">
+        Official Hands-Only CPR instructional demonstration guide (American Heart Association / St John)
+      </p>
+      <div class="video-wrap-compact">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/M4ACYp75BEk?rel=0" 
+          title="Clinical First Aid and Hands-Only CPR Demonstration" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div style="font-size:0.72rem; color:#64748B; margin-top:6px;">
+        ⏱️ Duration: ~2 mins · Tap to play instructional CPR &amp; Emergency response video
+      </div>
+    </div>
   </div>
 </div>
 
