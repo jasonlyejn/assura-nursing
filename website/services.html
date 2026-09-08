@@ -467,7 +467,7 @@ footer.site-footer {
   <!-- Calculator Card -->
   <div id="calculator-section" class="glass-card" style="border-color: rgba(56, 189, 248, 0.4); scroll-margin-top: 90px;">
     <h2 style="font-size: 1.35rem; color: #FFF; margin-bottom: 6px;">⚡ Instant Price Estimator</h2>
-    <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 20px;">Select your nursing procedure and Penang location for instant transparent procedure fees and travel fare estimates:</p>
+    <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 20px;">Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):</p>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px;">
       <div>
@@ -487,16 +487,17 @@ footer.site-footer {
       </div>
 
       <div>
-        <label style="display:block; font-size: 0.8rem; font-weight:700; color:#38BDF8; margin-bottom:6px;">LOCATION IN PENANG</label>
+        <label style="display:block; font-size: 0.8rem; font-weight:700; color:#38BDF8; margin-bottom:6px;">LOCATION IN PENANG (ALL AREAS COVERED)</label>
         <select id="selLocation" onchange="calcPrice()" style="width:100%; padding:10px 12px; border-radius:10px; background:#071E3D; color:#FFF; border:1px solid rgba(56,189,248,0.3); font-size:0.92rem;">
-          <option value="0" data-loc="Bukit Mertajam / BM Core">Bukit Mertajam &amp; Central Seberang Perai (+RM 0)</option>
-          <option value="0" data-loc="Butterworth / Perai / Seberang Jaya">Butterworth / Perai / Seberang Jaya (+RM 0)</option>
-          <option value="10" data-loc="Georgetown / Jelutong / Pulau Tikus">Georgetown / Jelutong / Pulau Tikus (+RM 10)</option>
-          <option value="15" data-loc="Bayan Lepas / Queensbay / Relau">Bayan Lepas / Queensbay / Relau (+RM 15)</option>
-          <option value="20" data-loc="Tanjung Bungah / Batu Ferringhi">Tanjung Bungah / Batu Ferringhi (+RM 20)</option>
-          <option value="10" data-loc="Simpang Ampat / Juru / Valdor">Simpang Ampat / Juru / Valdor (+RM 10)</option>
-          <option value="15" data-loc="Nibong Tebal / Jawi / Sungai Bakap">Nibong Tebal / Jawi / Sungai Bakap (+RM 15)</option>
-          <option value="15" data-loc="Kepala Batas / Tasek Gelugor / Bertam">Kepala Batas / Bertam (+RM 15)</option>
+          <option value="0" data-loc="Bukit Mertajam & Central Seberang Perai">Bukit Mertajam &amp; Central Seberang Perai</option>
+          <option value="0" data-loc="Butterworth / Perai / Seberang Jaya">Butterworth / Perai / Seberang Jaya</option>
+          <option value="0" data-loc="Georgetown / Jelutong / Pulau Tikus">Georgetown / Jelutong / Pulau Tikus</option>
+          <option value="0" data-loc="Bayan Lepas / Queensbay / Relau">Bayan Lepas / Queensbay / Relau</option>
+          <option value="0" data-loc="Tanjung Bungah / Batu Ferringhi">Tanjung Bungah / Batu Ferringhi</option>
+          <option value="0" data-loc="Simpang Ampat / Juru / Batu Kawan">Simpang Ampat / Juru / Batu Kawan</option>
+          <option value="0" data-loc="Nibong Tebal / Jawi / Sungai Bakap">Nibong Tebal / Jawi / Sungai Bakap</option>
+          <option value="0" data-loc="Kepala Batas / Tasek Gelugor / Bertam">Kepala Batas / Tasek Gelugor / Bertam</option>
+          <option value="0" data-loc="Balik Pulau & South Island">Balik Pulau &amp; South Island</option>
         </select>
       </div>
     </div>
@@ -636,7 +637,7 @@ function calcPrice() {
   document.getElementById('priceDisplay').innerText = 'RM ' + total.toFixed(2);
   document.getElementById('priceSummary').innerText = pName + ' · ' + lName;
 
-  const waMsg = encodeURIComponent('Hello Assura Nursing, I would like to book ' + pName + ' at ' + lName + ' (Estimated: RM ' + total + ').');
+  const waMsg = encodeURIComponent('Hello Assura Nursing, I would like to inquire about ' + pName + ' in ' + lName + ' (Estimated Rate: RM ' + total + ').');
   document.getElementById('btnBookWa').href = 'https://wa.me/60122064868?text=' + waMsg;
   document.getElementById('btnBookForm').href = 'book.html?service=' + encodeURIComponent(pId);
 }
