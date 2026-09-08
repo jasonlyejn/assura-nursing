@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -36,7 +36,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 20px 16px 40px;
+  padding: 16px 16px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,28 +44,67 @@ body {
   overflow-x: hidden;
 }
 
-/* Ambient Canvas Glow */
+/* Ambient Background */
 .sky-canvas {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.22) 0%, transparent 60%),
     radial-gradient(circle at 85% 60%, rgba(255, 210, 122, 0.15) 0%, transparent 55%),
     #040D1A;
 }
 
-.card-container {
+.wrapper {
   position: relative;
   z-index: 1;
-  max-width: 430px;
+  max-width: 480px;
   width: 100%;
 }
 
-/* Main Digital NFC Card */
+/* View Mode Switcher Tab */
+.mode-switch-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.mode-switcher {
+  display: inline-flex;
+  background: rgba(10, 34, 62, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 4px;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.mode-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, #0284C7, #0369A1);
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.4);
+}
+
+/* ========================================================
+   VIEW 1: DIGITAL NFC MOBILE CARD
+   ======================================================== */
 .digital-card {
-  background: rgba(10, 34, 62, 0.82);
+  background: rgba(10, 34, 62, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 210, 122, 0.35);
@@ -76,15 +115,10 @@ body {
 
 .card-top {
   background: linear-gradient(135deg, #092344 0%, #051426 100%);
-  padding: 26px 20px 54px;
+  padding: 24px 20px 58px;
   text-align: center;
   position: relative;
   border-bottom: 1px solid var(--line);
-}
-
-.card-top .logo-link {
-  display: inline-block;
-  text-decoration: none;
 }
 
 .card-top img.logo {
@@ -94,15 +128,16 @@ body {
   filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.4));
 }
 
+/* Avatar Photo with Face Centering */
 .avatar-halo {
-  width: 106px;
-  height: 106px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin: -53px auto 0;
+  margin: -60px auto 0;
   position: relative;
-  padding: 3px;
+  padding: 3.5px;
   background: linear-gradient(135deg, #FFD27A, #F59E0B);
-  box-shadow: 0 8px 25px rgba(255, 210, 122, 0.35);
+  box-shadow: 0 10px 28px rgba(255, 210, 122, 0.45);
 }
 
 .avatar-halo img {
@@ -110,12 +145,13 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 14%; /* Perfectly centers face and eyes */
   display: block;
   background: #040D1A;
 }
 
 .card-content {
-  padding: 18px 22px 26px;
+  padding: 16px 20px 24px;
   text-align: center;
 }
 
@@ -142,7 +178,7 @@ body {
   font-weight: 700;
   padding: 5px 14px;
   border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .reg-badge {
@@ -155,7 +191,7 @@ body {
 .philosophy-quote {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: #E2E8F0;
   margin: 14px 0 18px;
   line-height: 1.5;
@@ -165,12 +201,12 @@ body {
   border-left: 3px solid var(--gold);
 }
 
-/* Quick Action CTAs */
+/* Action Buttons */
 .quick-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .btn-action {
@@ -209,14 +245,14 @@ body {
   box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
 }
 
-/* Detailed Contact List */
+/* Contact Rows */
 .contact-list {
   text-align: left;
   background: rgba(4, 15, 30, 0.6);
   border: 1px solid rgba(56, 189, 248, 0.15);
   border-radius: 16px;
   padding: 6px 16px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .contact-row {
@@ -257,39 +293,272 @@ body {
   color: #FFFFFF;
 }
 
-/* QR Code Section */
 .qr-box {
   background: rgba(4, 15, 30, 0.6);
   border: 1px solid rgba(56, 189, 248, 0.15);
   border-radius: 16px;
-  padding: 16px;
+  padding: 14px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .qr-box img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   background: #FFFFFF;
-  padding: 8px;
-  border-radius: 12px;
+  padding: 6px;
+  border-radius: 10px;
   display: inline-block;
 }
 
 .qr-box p {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* Card Footer */
+/* ========================================================
+   VIEW 2: PHYSICAL PRINTED BUSINESS CARD (90 x 54 mm)
+   ======================================================== */
+.print-section {
+  display: none;
+}
+
+.print-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-label-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Exact 90mm x 54mm Aspect Ratio container */
+.physical-card {
+  width: 100%;
+  aspect-ratio: 90 / 54;
+  border-radius: 10px;
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FRONT SIDE */
+.card-front-design {
+  background: linear-gradient(135deg, #09213D 0%, #051426 100%);
+  border: 1.5px solid rgba(255, 210, 122, 0.5);
+}
+
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-logo {
+  height: 38px;
+  object-fit: contain;
+}
+
+.p-tagline-top {
+  text-align: right;
+  font-size: 0.6rem;
+  color: var(--cyan);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.p-middle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.p-name-block h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.p-name-block .p-zh {
+  font-size: 0.95rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.p-role-text {
+  font-size: 0.68rem;
+  color: var(--cyan);
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.p-reg-text {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.p-photo-thumb {
+  width: 58px;
+  height: 70px;
+  border-radius: 8px;
+  border: 1.5px solid var(--gold);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #030D1A;
+}
+
+.p-photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 14%;
+  display: block;
+}
+
+.p-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 8px;
+  font-size: 0.62rem;
+  color: #CBD5E1;
+  border-top: 1px solid rgba(255, 210, 122, 0.25);
+  padding-top: 6px;
+}
+
+.p-footer-grid span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* BACK SIDE */
+.card-back-design {
+  background: #06172C;
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.p-back-content {
+  flex: 1;
+}
+
+.p-back-title {
+  font-size: 0.74rem;
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+.p-back-list {
+  list-style: none;
+  font-size: 0.58rem;
+  color: #CBD5E1;
+  line-height: 1.45;
+}
+
+.p-back-list li::before {
+  content: "• ";
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.p-back-tagline {
+  font-size: 0.54rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.p-back-qr-box {
+  text-align: center;
+  background: #FFFFFF;
+  padding: 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.p-back-qr-box img {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.p-back-qr-box span {
+  font-size: 0.5rem;
+  color: #0F172A;
+  font-weight: 800;
+  display: block;
+  margin-top: 3px;
+}
+
+.print-cta-bar {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #0284C7, #0369A1);
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Card footer */
 .card-footer {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
   line-height: 1.5;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 14px;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+@media print {
+  body {
+    background: #FFF !important;
+    color: #000 !important;
+    padding: 0 !important;
+  }
+  .sky-canvas, .mode-switch-wrap, #digitalView, .print-cta-bar, .card-footer {
+    display: none !important;
+  }
+  .print-section {
+    display: block !important;
+  }
+  .physical-card {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
 }
 </style>
 </head>
@@ -297,21 +566,32 @@ body {
 
 <div class="sky-canvas" aria-hidden="true"></div>
 
-<div class="card-container">
-  <div class="digital-card">
-    <!-- Top Branding -->
+<div class="wrapper">
+  <!-- View Mode Switcher -->
+  <div class="mode-switch-wrap">
+    <div class="mode-switcher">
+      <button type="button" class="mode-btn active" id="btnModeDigital" onclick="switchView('digital')">
+        <span>📱</span> Digital NFC Card
+      </button>
+      <button type="button" class="mode-btn" id="btnModePrint" onclick="switchView('print')">
+        <span>🖨️</span> Printed Card (90×54mm)
+      </button>
+    </div>
+  </div>
+
+  <!-- VIEW 1: DIGITAL NFC MOBILE CARD -->
+  <div id="digitalView" class="digital-card">
     <div class="card-top">
-      <a href="index.html" class="logo-link" title="Return to Homepage">
-        <img class="logo" src="assura-logo.png" alt="Assura Nursing Care Logo">
+      <a href="index.html" title="Return to Homepage">
+        <img class="logo" src="assura-logo.png" alt="Assura Nursing Care">
       </a>
     </div>
 
-    <!-- Portrait Photo Avatar -->
+    <!-- Portrait Photo Avatar with Centered Face Framing -->
     <div class="avatar-halo">
       <img src="founder-blazer.jpg" alt="Mr. Jason Ng Lye Tiam (吴乃添)">
     </div>
 
-    <!-- Profile Info -->
     <div class="card-content">
       <h1 class="name-en">Mr. Jason Ng Lye Tiam</h1>
       <div class="name-zh">吴乃添</div>
@@ -386,17 +666,102 @@ body {
         <p>Scan with phone camera to share or save contact<br>扫码保存或分享电子名片</p>
       </div>
 
-      <!-- Footer -->
       <div class="card-footer">
         <strong>Assura Nursing Care</strong> · Penang, Malaysia<br>
-        MOH &amp; LJM Certified Standards · Compassionate Home Recovery
+        MOH &amp; LJM Certified Standards · Compassionate Home Care
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 2: PHYSICAL PRINTED BUSINESS CARD (90 x 54 mm) -->
+  <div id="printView" class="print-section">
+    <div class="print-card-box">
+      <!-- FRONT SIDE -->
+      <div>
+        <div class="card-label-tag"><span>📇</span> FRONT SIDE (正面 - 90mm × 54mm)</div>
+        <div class="physical-card card-front-design">
+          <div class="p-header">
+            <img src="assura-logo.png" alt="Assura Logo" class="p-logo">
+            <div class="p-tagline-top">
+              24/7 HOME NURSING<br>
+              PENANG · 居家医疗护理
+            </div>
+          </div>
+
+          <div class="p-middle-row">
+            <div class="p-name-block">
+              <h2>Mr. Jason Ng Lye Tiam <span class="p-zh">吴乃添</span></h2>
+              <div class="p-role-text">Founder &amp; Clinical Director · 创办人兼临床总监</div>
+              <div class="p-reg-text">Registered Nurse (LJM Reg. No. 160659)</div>
+            </div>
+            
+            <div class="p-photo-thumb">
+              <img src="founder-blazer.jpg" alt="Jason Ng">
+            </div>
+          </div>
+
+          <div class="p-footer-grid">
+            <span>📞 012-206 4868</span>
+            <span>✉️ jason@assuranursing.com</span>
+            <span>🌐 assuranursing.com</span>
+            <span>📍 Penang, Malaysia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div>
+        <div class="card-label-tag"><span>🔄</span> BACK SIDE (背面 - 业务与扫码)</div>
+        <div class="physical-card card-back-design">
+          <div class="p-back-content">
+            <div class="p-back-title">ASSURA CLINICAL SERVICES</div>
+            <ul class="p-back-list">
+              <li>Wound Care &amp; Bed Sores (伤口换药 · 褥疮)</li>
+              <li>Ryle's NG Tube &amp; Foley Catheter (鼻胃管/导尿管)</li>
+              <li>Stroke Rehab &amp; Bedside Nursing (中风康复)</li>
+              <li>Prescribed Injections &amp; Blood Draw (打针抽血)</li>
+              <li>Hospital Escort &amp; Equipment (陪诊 · 医疗器材)</li>
+            </ul>
+            <div class="p-back-tagline">
+              "Care adapted to your home, upholding clinical fundamentals."
+            </div>
+          </div>
+
+          <div class="p-back-qr-box">
+            <img src="qr-card.png" alt="QR Code">
+            <span>SCAN FOR<br>DIGITAL CARD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-cta-bar">
+        <button type="button" class="btn-print" onclick="window.print()">
+          <span>🖨️</span> Print / Save as PDF (90×54mm)
+        </button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-// One-tap vCard generator for iOS and Android
+// Switch between Digital NFC card and Print view
+function switchView(mode) {
+  const isPrint = mode === 'print';
+  document.getElementById('digitalView').style.display = isPrint ? 'none' : 'block';
+  document.getElementById('printView').style.display = isPrint ? 'block' : 'none';
+  document.getElementById('btnModeDigital').classList.toggle('active', !isPrint);
+  document.getElementById('btnModePrint').classList.toggle('active', isPrint);
+}
+
+// Check URL query param ?view=print
+window.addEventListener('DOMContentLoaded', () => {
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('view') === 'print') {
+    switchView('print');
+  }
+});
+
+// One-tap vCard contact download
 document.getElementById('saveBtn').addEventListener('click', function (e) {
   e.preventDefault();
   var v = [
@@ -411,7 +776,7 @@ document.getElementById('saveBtn').addEventListener('click', function (e) {
     'EMAIL;TYPE=WORK,INTERNET:jason@assuranursing.com',
     'URL:https://assuranursing.com',
     'ADR;TYPE=WORK:;;Penang;Penang;;;Malaysia',
-    'NOTE:Founder & Clinical Director at Assura Nursing Care. Registered Nurse (LJM Reg. 160659). Professional home nursing across Penang Island & Mainland.',
+    'NOTE:Founder & Clinical Director at Assura Nursing Care. Registered Nurse (LJM Reg. 160659). Professional home nursing in Penang.',
     'END:VCARD'
   ].join('\r\n');
   
