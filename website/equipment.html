@@ -1,12 +1,11 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
-<title>Medical Equipment Sourcing & Rental Guide · Assura Nursing Care</title>
-<meta name="description" content="Free clinical advice on where families can source, rent or purchase hospital beds, oxygen concentrators, suction machines across Penang." />
+<title>Medical Equipment Reference & Market Guide · Assura Nursing Care</title>
+<meta name="description" content="Interactive public reference guide for home hospital beds, oxygen concentrators, suction machines, and recovery equipment in Penang. Educational reference only." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
@@ -73,12 +72,12 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px 80px;
 }
 
-/* Sticky Luxury Top Header */
+/* Header */
 header.site-header {
   position: sticky;
   top: 0;
@@ -91,7 +90,7 @@ header.site-header {
 }
 
 .header-inner {
-  max-width: 1120px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -114,269 +113,493 @@ header.site-header {
   transition: transform 0.2s;
 }
 
-.brand-wrap:hover .brand-logo {
-  transform: scale(1.03);
-}
-
-/* Nav Menu Items */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 18px;
   list-style: none;
 }
 
 .nav-link {
   color: #94A3B8;
   text-decoration: none;
-  font-size: 0.84rem;
-  font-weight: 600;
-  padding: 6px 11px;
-  border-radius: 8px;
-  transition: all 0.2s;
-  white-space: nowrap;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s;
 }
-
 .nav-link:hover, .nav-link.active {
-  color: #FFF;
-  background: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
 }
 
-/* Header Actions: Portals & Lang */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
+  gap: 10px;
 }
 
 .portal-pill-patient {
-  background: rgba(14, 165, 233, 0.2);
-  color: #7dd3fc;
-  border: 1px solid rgba(14, 165, 233, 0.5);
+  background: rgba(2, 132, 199, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38BDF8;
+  padding: 6px 14px;
+  border-radius: 20px;
   text-decoration: none;
-  font-weight: 700;
-  padding: 5px 11px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.portal-pill-patient:hover {
-  background: rgba(14, 165, 233, 0.35);
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .portal-pill-staff {
-  background: rgba(245, 158, 11, 0.2);
-  color: #fde047;
-  border: 1px solid rgba(245, 158, 11, 0.5);
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10B981;
+  padding: 6px 14px;
+  border-radius: 20px;
   text-decoration: none;
-  font-weight: 700;
-  padding: 5px 11px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.portal-pill-staff:hover {
-  background: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
-}
-
-.lang-bar {
-  display: flex;
-  gap: 3px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 3px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: #94A3B8;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lang-btn.active, .lang-btn:hover {
-  background: var(--blue);
-  color: #FFF;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .mobile-toggle {
   display: none;
-  background: transparent;
+  background: none;
   border: 1px solid var(--line);
-  color: #FFF;
-  font-size: 1.1rem;
-  padding: 5px 9px;
-  border-radius: 8px;
+  color: #38BDF8;
+  font-size: 1.25rem;
+  padding: 4px 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 /* Page Hero */
 .page-hero {
+  padding: 40px 0 24px;
   text-align: center;
-  padding: 42px 10px 28px;
 }
 
 .page-tag {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: var(--blue-bright);
-  font-size: 0.76rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38BDF8;
+  font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
   padding: 4px 12px;
   border-radius: 20px;
   margin-bottom: 12px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 .page-hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.25;
   margin-bottom: 12px;
-  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 60%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-family: var(--font-serif);
 }
 
 .page-hero p {
-  color: #C9DCEC;
-  font-size: 1.02rem;
-  max-width: 680px;
+  color: #94A3B8;
+  font-size: 0.95rem;
+  max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-.glass-card {
+/* Public Reference Notice Box */
+.disclaimer-banner {
+  background: rgba(245, 158, 11, 0.10);
+  border: 1.5px solid rgba(245, 158, 11, 0.4);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 24px 0 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.disclaimer-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.disclaimer-text h4 {
+  color: #FFD27A;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.disclaimer-text p {
+  font-size: 0.82rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+/* Category Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  background: rgba(10, 26, 46, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #94A3B8;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  border-color: #38BDF8;
+}
+.filter-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #FFFFFF;
+  border-color: #38BDF8;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+}
+
+/* Interactive Equipment Grid */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.equip-card {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 32px 28px;
-  margin-bottom: 24px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+  position: relative;
+}
+.equip-card:hover {
+  transform: translateY(-5px);
+  border-color: #38BDF8;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.card-img-wrap {
+  width: 100%;
+  height: 200px;
+  background: #020712;
+  position: relative;
+  overflow: hidden;
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.equip-card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.badge-cat {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(4, 13, 26, 0.85);
+  backdrop-filter: blur(8px);
+  color: #38BDF8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-ref-only {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(245, 158, 11, 0.9);
+  color: #040D1A;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body {
+  padding: 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.card-app {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price-row {
+  background: rgba(3, 10, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.price-label {
+  font-size: 0.72rem;
+  color: #64748B;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.price-tag {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #38BDF8;
+}
+
+.click-hint {
+  font-size: 0.78rem;
+  color: #7DD3FC;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+}
+
+/* Interactive Modal / Detail Lightbox */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 9, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background: #0A1A2E;
+  border: 1.5px solid #38BDF8;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: #E2E8F0;
+  animation: modal-pop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-pop {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+.modal-img-top {
+  width: 100%;
+  height: 260px;
+  background: #020712;
+  position: relative;
+}
+.modal-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 24px 28px;
+}
+
+.modal-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 12px;
+}
+
+.modal-price-box {
+  background: rgba(2, 132, 199, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-section-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFD27A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 16px 0 8px;
+}
+
+.modal-list {
+  list-style: none;
+  font-size: 0.88rem;
+  color: #C9DCEC;
+  line-height: 1.6;
+}
+.modal-list li {
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+.modal-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10B981;
+  font-weight: 800;
+}
+
+.modal-disclaimer-small {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid #F59E0B;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-modal-wa {
+  flex: 1;
+  background: #10B981;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+.btn-modal-wa:hover {
+  background: #059669;
 }
 
 /* Footer */
 footer.site-footer {
   text-align: center;
   padding: 40px 20px;
-  border-top: 1px solid var(--line);
-  margin-top: 60px;
+  font-size: 0.8rem;
   color: #64748B;
-  font-size: 0.82rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 60px;
 }
-
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
-
 .footer-links a {
   color: #94A3B8;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
 }
-
 .footer-links a:hover {
   color: #38BDF8;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .nav-menu { display: none; }
   .mobile-toggle { display: block; }
-  .nav-menu.mobile-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(4, 13, 26, 0.98);
-    padding: 16px;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-    gap: 8px;
-  }
+  .page-hero h1 { font-size: 1.7rem; }
+  .equipment-grid { grid-template-columns: 1fr; }
+  .modal-actions { flex-direction: column; }
 }
-
-/* Floating Ambient Light Orbs */
-.orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-  animation: float-orb 18s ease-in-out infinite alternate;
-}
-.orb-1 {
-  width: 420px;
-  height: 420px;
-  top: 5%;
-  right: -8%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35), rgba(2, 132, 199, 0.08));
-  animation-duration: 18s;
-}
-.orb-2 {
-  width: 380px;
-  height: 380px;
-  top: 45%;
-  left: -8%;
-  background: radial-gradient(circle, rgba(255, 210, 122, 0.28), rgba(245, 158, 11, 0.05));
-  animation-duration: 22s;
-  animation-delay: -6s;
-}
-.orb-3 {
-  width: 440px;
-  height: 440px;
-  bottom: 8%;
-  right: 8%;
-  background: radial-gradient(circle, rgba(228, 84, 74, 0.28), rgba(168, 85, 247, 0.06));
-  animation-duration: 20s;
-  animation-delay: -11s;
-}
-@keyframes float-orb {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(35px, 30px) scale(1.06); }
-  100% { transform: translate(-25px, -20px) scale(0.96); }
-}
-
 </style>
 </head>
 <body>
+
 <div class="sky-canvas"></div>
 <div class="grid-lines"></div>
 
-<!-- Sticky Navigation Header -->
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand-wrap">
@@ -384,13 +607,13 @@ footer.site-footer {
     </a>
 
     <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html" class="nav-link ">Home</a></li>
-      <li><a href="services.html" class="nav-link ">Services &amp; Pricing</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
       <li><a href="equipment.html" class="nav-link active">Equipment Guide</a></li>
-      <li><a href="emergency.html" class="nav-link ">Emergency Protocols</a></li>
-      <li><a href="about.html" class="nav-link ">About Us</a></li>
-      <li><a href="careers.html" class="nav-link ">Careers</a></li>
-      <li><a href="download.html" class="nav-link ">Download Apps</a></li>
+      <li><a href="emergency.html" class="nav-link">Emergency Protocols</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="careers.html" class="nav-link">Careers</a></li>
+      <li><a href="download.html" class="nav-link">Download Apps</a></li>
     </ul>
 
     <div class="header-actions">
@@ -400,14 +623,6 @@ footer.site-footer {
       <a href="https://staff.assuranursing.com" target="_blank" rel="noopener" class="portal-pill-staff">
         🔒 <span>Staff Portal</span>
       </a>
-
-      <div class="lang-bar">
-        <button class="lang-btn active" onclick="setSubPageLang('en')">EN</button>
-        <button class="lang-btn" onclick="setSubPageLang('zh')">中文</button>
-        <button class="lang-btn" onclick="setSubPageLang('bm')">BM</button>
-        <button class="lang-btn" onclick="setSubPageLang('ta')">தமிழ்</button>
-      </div>
-
       <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
     </div>
   </div>
@@ -415,51 +630,330 @@ footer.site-footer {
 
 <div class="container">
   <div class="page-hero">
-    <span class="page-tag">Patient Resource · 医疗器材获取指引</span>
-    <h1>Penang Medical Equipment Sourcing &amp; Guidance</h1>
-    <p>To support your home recovery, our nurses assess your home layout and provide clinical recommendations to help families source, rent, or set up certified medical recovery equipment across Penang Island &amp; Mainland.</p>
+    <span class="page-tag">Public Educational Resource · 医疗器材公众参考指引</span>
+    <h1>Medical Equipment Online Reference Catalog</h1>
+    <p>A transparent, educational guide to typical home healthcare equipment, Penang rental market rate benchmarks, and clinical selection checklists. Click any item for clinical specs.</p>
   </div>
 
-  <div class="glass-card">
-    <h2 style="font-size: 1.35rem; color: #FFF; margin-bottom: 16px;">🛏️ Typical Equipment Rates &amp; Market Guide</h2>
+  <!-- Mandatory Public Notice Disclaimer -->
+  <div class="disclaimer-banner">
+    <div class="disclaimer-icon">ℹ️</div>
+    <div class="disclaimer-text">
+      <h4>Public Reference &amp; Educational Guide Only (非租售声明 · 仅供公众参考)</h4>
+      <p>
+        <b>Assura Nursing Care is a professional home nursing service provider and DOES NOT sell or rent medical equipment.</b> This catalog is maintained strictly as a free reference resource to assist patients, families, and caregivers in understanding equipment functions, standard market price ranges, and home room requirements across Penang.
+      </p>
+    </div>
+  </div>
+
+  <!-- Category Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCategory('all', this)">All Equipment (全部)</button>
+    <button class="filter-btn" onclick="filterCategory('beds', this)">🛏️ Mobility &amp; Beds (护理床与床垫)</button>
+    <button class="filter-btn" onclick="filterCategory('respiratory', this)">🫁 Respiratory &amp; Airway (呼吸与吸痰)</button>
+    <button class="filter-btn" onclick="filterCategory('transfer', this)">♿ Transfer &amp; Hygiene (轮椅与便椅)</button>
+    <button class="filter-btn" onclick="filterCategory('monitoring', this)">🩺 Monitoring &amp; Kits (体征监测)</button>
+  </div>
+
+  <!-- Interactive Equipment Catalog Grid -->
+  <div class="equipment-grid" id="equipGrid">
     
-    <div style="overflow-x:auto;">
-      <table style="width:100%; border-collapse:collapse; font-size:0.9rem; color:#C9DCEC;">
-        <thead>
-          <tr style="border-bottom:1px solid rgba(56,189,248,0.3); text-align:left; color:#FFD27A;">
-            <th style="padding:10px 8px;">Equipment Type</th>
-            <th style="padding:10px 8px;">Market Rental Guide</th>
-            <th style="padding:10px 8px;">Clinical Application</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-            <td style="padding:12px 8px;"><b>2/3-Function Electric Hospital Bed 电动护理床</b></td>
-            <td style="padding:12px 8px; color:#38BDF8; font-weight:700;">RM 180 – RM 320 / mo</td>
-            <td style="padding:12px 8px; color:#94A3B8;">Bedbound patients, post-surgery, stroke recovery &amp; palliative care</td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-            <td style="padding:12px 8px;"><b>Medical Oxygen Concentrator (5L / 10L) 医疗制氧机</b></td>
-            <td style="padding:12px 8px; color:#38BDF8; font-weight:700;">RM 250 – RM 450 / mo</td>
-            <td style="padding:12px 8px; color:#94A3B8;">COPD, respiratory distress, palliative oxygen therapy</td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-            <td style="padding:12px 8px;"><b>Electric Suction Machine 电动吸痰机</b></td>
-            <td style="padding:12px 8px; color:#38BDF8; font-weight:700;">RM 120 – RM 200 / mo</td>
-            <td style="padding:12px 8px; color:#94A3B8;">Tracheostomy care, airway clearance, excess sputum removal</td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-            <td style="padding:12px 8px;"><b>Ripple Anti-Decubitus Mattress 防褥疮气垫床</b></td>
-            <td style="padding:12px 8px; color:#38BDF8; font-weight:700;">RM 50 – RM 80 / mo</td>
-            <td style="padding:12px 8px; color:#94A3B8;">Pressure injury &amp; bed sore prevention for long-term bedbound cases</td>
-          </tr>
-          <tr>
-            <td style="padding:12px 8px;"><b>Foldable Wheelchair &amp; Commode Chair 轮椅与便椅</b></td>
-            <td style="padding:12px 8px; color:#38BDF8; font-weight:700;">RM 60 – RM 100 / mo</td>
-            <td style="padding:12px 8px; color:#94A3B8;">Patient transport, hospital appointments &amp; home toileting support</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Item 1: Hospital Bed -->
+    <div class="equip-card" data-cat="beds" onclick="openModal('bed')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🛏️ Mobility &amp; Beds</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/hospital-bed.jpg" alt="2/3-Function Electric Hospital Bed" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">2/3-Function Electric Hospital Bed 电动护理床</h3>
+          <p class="card-app">For bedbound patients, post-surgery recovery, stroke rehab, and palliative care. Enables electronic backrest &amp; knee elevation.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 180 – RM 320 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 2.2k – RM 4.5k</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2: Oxygen Concentrator -->
+    <div class="equip-card" data-cat="respiratory" onclick="openModal('oxygen')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🫁 Respiratory &amp; Airway</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/oxygen-concentrator.jpg" alt="Medical Oxygen Concentrator" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Medical Oxygen Concentrator (5L / 10L) 医疗制氧机</h3>
+          <p class="card-app">Continuous medical-grade oxygen supply for COPD, severe pneumonia, heart failure, and palliative respiratory distress.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 250 – RM 450 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 2.8k – RM 6.0k</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3: Suction Machine -->
+    <div class="equip-card" data-cat="respiratory" onclick="openModal('suction')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🫁 Respiratory &amp; Airway</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/suction-machine.jpg" alt="Electric Suction Machine" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Electric Medical Suction Machine 电动吸痰机</h3>
+          <p class="card-app">Airway clearance for tracheostomy patients, stroke dysphagia, and bedridden individuals unable to clear deep lung phlegm.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 120 – RM 200 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 650 – RM 1.4k</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 4: Ripple Mattress -->
+    <div class="equip-card" data-cat="beds" onclick="openModal('ripple')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🛏️ Mobility &amp; Beds</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/ripple-mattress.jpg" alt="Ripple Anti-Decubitus Mattress" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Ripple Anti-Decubitus Mattress 防褥疮气垫床</h3>
+          <p class="card-app">Alternating air pressure chambers to relieve bony pressure points and prevent Stage 1 to 4 bedsores for bedridden cases.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 50 – RM 80 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 280 – RM 650</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 5: Wheelchair & Commode -->
+    <div class="equip-card" data-cat="transfer" onclick="openModal('wheelchair')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">♿ Transfer &amp; Hygiene</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/wheelchair.jpg" alt="Foldable Wheelchair & Commode Chair" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Foldable Wheelchair &amp; Commode Chair 轮椅与便椅</h3>
+          <p class="card-app">Essential for hospital specialist visits, safe home transfers, and hygienic bedside toileting support for reduced mobility.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 60 – RM 100 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 250 – RM 750</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 6: Nebulizer -->
+    <div class="equip-card" data-cat="respiratory" onclick="openModal('nebulizer')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🫁 Respiratory &amp; Airway</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/nebulizer.jpg" alt="Compressor Nebulizer" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Medical Compressor Nebulizer 医用雾化机</h3>
+          <p class="card-app">Transforms doctor-prescribed bronchodilator medication into fine aerosol mist for direct bronchial absorption.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 40 – RM 70 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 180 – RM 350</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 7: Vital Monitor -->
+    <div class="equip-card" data-cat="monitoring" onclick="openModal('vital')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🩺 Monitoring &amp; Kits</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/vital-monitor.jpg" alt="Multi-Parameter Vital Monitor" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Digital Vital Signs &amp; SpO2 Monitor 生命体征仪</h3>
+          <p class="card-app">Automatic blood pressure cuff, fingertip pulse oximeter, and infrared temperature sensor for continuous clinical tracking.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Rental Guide</div>
+              <div class="price-tag">RM 80 – RM 140 / mo</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Purchase Guide</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">RM 350 – RM 900</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 8: Clinical Dressing Packs -->
+    <div class="equip-card" data-cat="monitoring" onclick="openModal('dressing')">
+      <div class="card-img-wrap">
+        <span class="badge-cat">🩺 Monitoring &amp; Kits</span>
+        <span class="badge-ref-only">Reference Only</span>
+        <img src="images/equipment/medical-tools.jpg" alt="Sterile Clinical Dressing Packs" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div>
+          <h3 class="card-title">Hospital-Grade Sterile Dressing Packs 无菌换药包</h3>
+          <p class="card-app">Sterile forceps, gauze, gallipots, and drape sets for surgical incision cleaning, NGT changes, and catheter care.</p>
+        </div>
+        <div>
+          <div class="price-row">
+            <div>
+              <div class="price-label">Market Benchmark</div>
+              <div class="price-tag">RM 15 – RM 45 / pack</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="price-label">Type</div>
+              <div style="font-size: 0.85rem; color: #94A3B8; font-weight: 600;">Single-Use Sterile</div>
+            </div>
+          </div>
+          <div class="click-hint">
+            <span>🔍 Click for clinical specs &amp; checklist</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Interactive Modal Lightbox -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+    
+    <div class="modal-img-top">
+      <img id="modalImg" src="" alt="Equipment Image">
+    </div>
+
+    <div class="modal-content">
+      <div class="modal-header-meta">
+        <span class="badge-cat" id="modalCategory">Category</span>
+        <span class="badge-ref-only">Public Reference Only</span>
+      </div>
+
+      <h2 class="modal-title" id="modalTitle">Equipment Name</h2>
+
+      <div class="modal-price-box">
+        <div>
+          <div style="font-size: 0.72rem; color: #7DD3FC; font-weight: 700; text-transform: uppercase;">Penang Market Rental Guide</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #38BDF8;" id="modalRent">RM 180 - RM 320 / mo</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 0.72rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Estimated Purchase Guide</div>
+          <div style="font-size: 1.05rem; font-weight: 700; color: #FFF;" id="modalBuy">RM 2,200 - RM 4,500</div>
+        </div>
+      </div>
+
+      <div class="modal-section-title">🩺 Primary Clinical Indication</div>
+      <p style="font-size: 0.88rem; color: #C9DCEC; line-height: 1.55;" id="modalDesc"></p>
+
+      <div class="modal-section-title">📋 Clinical Selection &amp; Home Safety Checklist</div>
+      <ul class="modal-list" id="modalList"></ul>
+
+      <div class="modal-disclaimer-small">
+        ⚠️ <b>Reminder:</b> Assura Nursing Care does NOT rent or sell equipment. Our Registered Nurses evaluate patient needs during home visits to ensure correct clinical positioning and family safety.
+      </div>
+
+      <div class="modal-actions">
+        <a id="modalWaBtn" href="#" target="_blank" class="btn-modal-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Ask Nurse Jason for Home Setup Advice
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -476,22 +970,187 @@ footer.site-footer {
     <a href="https://staff.assuranursing.com">Staff Portal</a>
   </div>
   <p>© 2026 Assura Nursing Care · All Rights Reserved · Penang Island &amp; Mainland</p>
-  <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Trained Nurses &amp; Dedicated Caregivers</p>
+  <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)</p>
 </footer>
 
 <script>
+const equipmentData = {
+  bed: {
+    title: "2/3-Function Electric Hospital Bed 电动护理床",
+    category: "🛏️ Mobility & Beds",
+    img: "images/equipment/hospital-bed.jpg",
+    rent: "RM 180 – RM 320 / month",
+    buy: "RM 2,200 – RM 4,500 (Ref)",
+    desc: "Provides electric backrest raising (up to 75° for safe feeding & breathing), knee elevation (to prevent sliding down), and hi-lo vertical bed height adjustment for easier patient transfers.",
+    points: [
+      "Select 3-function if caregivers require height adjustability to prevent back strain during nursing care.",
+      "Ensure collapsible aluminum guardrails lock securely to prevent accidental falls.",
+      "Check that your room has a dedicated 3-pin power point and at least 3 feet clearance around the bed.",
+      "Assura nurses assist with hospital-to-home bed positioning during discharge handover."
+    ]
+  },
+  oxygen: {
+    title: "Medical Oxygen Concentrator (5L / 10L) 医疗制氧机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/oxygen-concentrator.jpg",
+    rent: "RM 250 – RM 450 / month",
+    buy: "RM 2,800 – RM 6,000 (Ref)",
+    desc: "Extracts nitrogen from ambient air to continuously deliver 90-96% pure medical oxygen without the recurring hassle of heavy gas cylinders.",
+    points: [
+      "5L units are standard for low-flow requirements (1-4 LPM); 10L units are required for high-dependency respiratory cases.",
+      "Always maintain 1 backup oxygen tank in the house in case of power failure or electrical tripping.",
+      "Use only distilled water in the humidifier bottle to prevent mineral crust buildup.",
+      "Assura nurses monitor SPO2 and breath sounds to ensure flow rate matches doctor's prescription."
+    ]
+  },
+  suction: {
+    title: "Electric Medical Suction Machine 电动吸痰机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/suction-machine.jpg",
+    rent: "RM 120 – RM 200 / month",
+    buy: "RM 650 – RM 1,400 (Ref)",
+    desc: "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear and patent airway in bedridden or dysphagic patients.",
+    points: [
+      "Look for overflow valve protection and bacterial filters to prevent liquid entry into the motor.",
+      "Ensure suction pressure is maintained between 80-120 mmHg for adult comfort and safety.",
+      "Always use single-use sterile suction catheters with fingertip suction control valves.",
+      "Assura nurses provide specialized tracheostomy cannula cleaning and emergency airway suctioning."
+    ]
+  },
+  ripple: {
+    title: "Ripple Anti-Decubitus Mattress 防褥疮气垫床",
+    category: "🛏️ Mobility & Beds",
+    img: "images/equipment/ripple-mattress.jpg",
+    rent: "RM 50 – RM 80 / month",
+    buy: "RM 280 – RM 650 (Ref)",
+    desc: "Features alternating cylindrical air cells connected to a continuous ultra-quiet pump that shifts pressure points every 6 to 10 minutes.",
+    points: [
+      "Essential for patients with Braden Scale score < 15 or existing Stage 1 to 4 pressure bedsores.",
+      "Tubular cell mattresses provide significantly better pressure relief than cheaper bubble pads.",
+      "Must be paired with regular 2-hourly turning protocols by caregivers or nurses.",
+      "Assura nurses perform weekly wound staging and healing progression monitoring."
+    ]
+  },
+  wheelchair: {
+    title: "Foldable Wheelchair & Commode Chair 轮椅与便椅",
+    category: "♿ Transfer & Hygiene",
+    img: "images/equipment/wheelchair.jpg",
+    rent: "RM 60 – RM 100 / month",
+    buy: "RM 250 – RM 750 (Ref)",
+    desc: "Dual-purpose mobility and hygiene support. Features flip-up armrests, removable footrests, and a waterproof padded seat with waste bucket.",
+    points: [
+      "Choose aluminum lightweight models for easy loading into car boots for specialist appointments.",
+      "Flip-up armrests allow seamless lateral sliding transfers from bed to chair without lifting.",
+      "Ensure rear wheel brakes lock firmly before initiating any patient transfer.",
+      "Assura nurses train family caregivers on ergonomic, zero-strain transfer techniques."
+    ]
+  },
+  nebulizer: {
+    title: "Medical Compressor Nebulizer 医用雾化机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/nebulizer.jpg",
+    rent: "RM 40 – RM 70 / month",
+    buy: "RM 180 – RM 350 (Ref)",
+    desc: "Delivers prescribed respiratory medications (e.g. Salbutamol, Combivent, Pulmicort) directly into the lungs in a gentle, breathable aerosol mist.",
+    points: [
+      "Ideal for elderly patients with weak inspiratory effort who cannot use standard MDI inhalers.",
+      "Rinse medicine chamber with sterile water after every use to prevent drug residue crystallization.",
+      "Replace tubing and mask every 3-6 months for optimal hygiene.",
+      "Assura nurses assist with breath coordination and post-nebulization chest percussion."
+    ]
+  },
+  vital: {
+    title: "Digital Vital Signs & SpO2 Monitor 生命体征仪",
+    category: "🩺 Monitoring & Kits",
+    img: "images/equipment/vital-monitor.jpg",
+    rent: "RM 80 – RM 140 / month",
+    buy: "RM 350 – RM 900 (Ref)",
+    desc: "Digital clinical-grade monitor for rapid assessment of Blood Pressure (NIBP), Pulse Rate, Blood Oxygen Saturation (SpO2), and Core Temperature.",
+    points: [
+      "Select blood pressure cuffs appropriate for arm circumference to avoid false high/low readings.",
+      "Ensure pulse oximeter probe has good peripheral perfusion and clean nail surface.",
+      "Helps detect early deterioration before serious medical emergencies occur.",
+      "Assura nurses log all vital records into our digital MEWS chart for attending doctors."
+    ]
+  },
+  dressing: {
+    title: "Hospital-Grade Sterile Dressing Packs 无菌换药包",
+    category: "🩺 Monitoring & Kits",
+    img: "images/equipment/medical-tools.jpg",
+    rent: "N/A (Consumable Item)",
+    buy: "RM 15 – RM 45 / pack (Ref)",
+    desc: "Single-use, gamma-sterilized basic and complex dressing sets containing forceps, gauze swabs, non-woven drape, and waste bag.",
+    points: [
+      "Guarantees 100% sterile aseptic non-touch technique (ANTT) for surgical wound care.",
+      "Never reuse opened dressing sets to prevent cross-contamination and MRSA infections.",
+      "Assura nurses supply certified sterile dressing sets directly during every home procedure.",
+      "Includes specialized modern hydrocolloid, alginate, and silicone foam dressings."
+    ]
+  }
+};
+
+function filterCategory(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('.equip-card');
+  cards.forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function openModal(id) {
+  const data = equipmentData[id];
+  if (!data) return;
+
+  document.getElementById('modalImg').src = data.img;
+  document.getElementById('modalCategory').textContent = data.category;
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalRent').textContent = data.rent;
+  document.getElementById('modalBuy').textContent = data.buy;
+  document.getElementById('modalDesc').textContent = data.desc;
+
+  const listEl = document.getElementById('modalList');
+  listEl.innerHTML = '';
+  data.points.forEach(pt => {
+    const li = document.createElement('li');
+    li.textContent = pt;
+    listEl.appendChild(li);
+  });
+
+  const waMsg = encodeURIComponent(
+    'Hi Nurse Jason, I was reviewing the Assura Equipment Reference Guide for: ' + data.title + '. Could you provide clinical advice on whether this is suitable for my patient\'s home recovery?'
+  );
+  document.getElementById('modalWaBtn').href = 'https://wa.me/601156608820?text=' + waMsg;
+
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function closeModalOnBg(e) {
+  if (e.target.id === 'modalOverlay') {
+    closeModal();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
 function toggleMobileMenu() {
   const menu = document.getElementById('navMenu');
-  if (menu) menu.classList.toggle('mobile-open');
-}
-
-function setSubPageLang(l) {
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.innerText.toLowerCase().includes(l));
-  });
-  if (window.handleSubLang) window.handleSubLang(l);
+  menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
 </script>
+
 </body>
 </html>
-
