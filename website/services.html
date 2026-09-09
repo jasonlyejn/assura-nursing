@@ -415,6 +415,42 @@ footer.site-footer {
 }
 
 </style>
+
+<style>
+.svc-card-thumb {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #06172C;
+}
+.svc-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.glass-card:hover .svc-card-thumb img {
+  transform: scale(1.05);
+}
+.svc-card-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(4, 15, 30, 0.85);
+  backdrop-filter: blur(8px);
+  color: #38BDF8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+</style>
+
 </head>
 <body>
 <div class="sky-canvas"></div>
@@ -520,14 +556,18 @@ footer.site-footer {
   </div>
 
   <!-- Detailed Clinical Services Grid -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
     <!-- Complex Wound Care -->
     <div class="glass-card" id="card-wound">
+      <div class="svc-card-thumb">
+        <img src="images/wound-care.jpg" alt="Complex Wound Care" loading="lazy">
+        <div class="svc-card-badge">🩹 ANTT Aseptic Protocol</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">🩹 Complex Wound Care</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Post-surgical incision care, diabetic foot ulcer debridement, pressure sore staging (Stage 1 to 4) using hydrocolloid and silver antimicrobial dressings to minimize infection risks.
+        Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using silver antimicrobial and hydrogel dressings to minimize infection risks.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('wound')">⚡ Estimate Rate</button>
         <a href="book.html?service=wound" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>
@@ -535,11 +575,15 @@ footer.site-footer {
 
     <!-- Tube & Catheter Management -->
     <div class="glass-card" id="card-tubes">
+      <div class="svc-card-thumb">
+        <img src="images/tube-catheter.jpg" alt="Tube & Catheter Care" loading="lazy">
+        <div class="svc-card-badge">🧪 Sterile Tube Replacement</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">🧪 Tube &amp; Catheter Management</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Ryle's tube (NG Tube) insertion, enteral feeding guide, urinary Foley catheter changing, bladder irrigation &amp; stoma pouch care.
+        Ryle's tube (NG Tube) insertion, enteral feeding placement checks, urinary Foley catheter changing, bladder irrigation &amp; stoma pouch care.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('tube')">⚡ Estimate Rate</button>
         <a href="book.html?service=tube" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>
@@ -547,11 +591,15 @@ footer.site-footer {
 
     <!-- Medication & Injections -->
     <div class="glass-card" id="card-injections">
+      <div class="svc-card-thumb">
+        <img src="images/injection-medication.jpg" alt="Medication & Injections" loading="lazy">
+        <div class="svc-card-badge">💉 Clinical SC/IM & Vitals</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">💉 Medication &amp; Injections</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.
+        Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs tracking.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('injection')">⚡ Estimate Rate</button>
         <a href="book.html?service=injection" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>
@@ -559,11 +607,15 @@ footer.site-footer {
 
     <!-- Stroke & Post-Op Rehab -->
     <div class="glass-card" id="card-stroke">
+      <div class="svc-card-thumb">
+        <img src="images/stroke-rehab.jpg" alt="Stroke & Mobility Rehab" loading="lazy">
+        <div class="svc-card-badge">🧠 Mobility & Range of Motion</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">🧠 Stroke &amp; Post-Op Rehab</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.
+        Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, fall prevention, and discharge rehabilitation.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('stroke')">⚡ Estimate Rate</button>
         <a href="book.html?service=stroke" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>
@@ -571,11 +623,15 @@ footer.site-footer {
 
     <!-- Palliative & Bedside Nursing -->
     <div class="glass-card" id="card-elderly">
+      <div class="svc-card-thumb">
+        <img src="images/elderly-bedside.jpg" alt="Bedside Nursing" loading="lazy">
+        <div class="svc-card-badge">👴 12h / 24h Dedicated Care</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">👴 Palliative &amp; Bedside Nursing</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Compassionate elderly &amp; bedridden care, symptom control, 12-hour / 24-hour round-the-clock dedicated nurse &amp; caregiver shifts.
+        Compassionate elderly &amp; bedridden care, symptom relief, hygiene assistance, and 12-hour / 24-hour round-the-clock dedicated nurse &amp; caregiver shifts.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('elderly')">⚡ Estimate Rate</button>
         <a href="book.html?service=elderly" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>
@@ -583,11 +639,15 @@ footer.site-footer {
 
     <!-- Hospital Escort & Transfer -->
     <div class="glass-card" id="card-escort">
+      <div class="svc-card-thumb">
+        <img src="images/hospital-escort.jpg" alt="Hospital Escort" loading="lazy">
+        <div class="svc-card-badge">🏥 Specialist Consultation Escort</div>
+      </div>
       <h3 style="color: #38BDF8; font-size: 1.2rem; margin-bottom: 8px;">🏥 Hospital Escort &amp; Transfer</h3>
       <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55;">
-        Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.
+        Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and doctor note handovers.
       </p>
-      <div>
+      <div style="margin-top: 14px;">
         <button type="button" class="btn-card-action btn-calc-jump" onclick="selectAndScrollProcedure('escort')">⚡ Estimate Rate</button>
         <a href="book.html?service=escort" class="btn-card-action btn-form-jump">📝 Book Form</a>
       </div>

@@ -873,6 +873,56 @@ footer.site-footer {
   }
 }
 </style>
+
+<style>
+.home-hero-banner {
+  margin: 20px auto 0;
+  max-width: 900px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.home-hero-banner img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(4,13,26,0.95) 0%, rgba(4,13,26,0.3) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 24px;
+}
+.home-hero-tag {
+  color: #FFD27A;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.home-svc-thumb {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #06172C;
+}
+.home-svc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.service-v-card:hover .home-svc-thumb img {
+  transform: scale(1.05);
+}
+</style>
+
 </head>
 <body>
 <div class="sky-canvas"></div>
@@ -944,6 +994,18 @@ footer.site-footer {
     </div>
 
     <!-- Stats Bar -->
+    
+    <!-- Hero Reassuring Visual Banner -->
+    <div class="home-hero-banner">
+      <img src="images/hero-home-nursing.jpg" alt="Assura Home Nursing Care Penang" loading="eager">
+      <div class="home-hero-overlay">
+        <div>
+          <div class="home-hero-tag">✨ Compassionate Clinical Nursing at Your Doorstep</div>
+          <div style="font-size:0.8rem; color:#C9DCEC; margin-top:2px;">Serving Families Across Penang Island &amp; Mainland (Bukit Mertajam Base)</div>
+        </div>
+      </div>
+    </div>
+  
     <div class="stats-bar">
       <div class="stat-card">
         <div class="stat-num">Trained</div>
@@ -1015,8 +1077,11 @@ footer.site-footer {
       <div class="service-v-card" onclick="location.href='services.html?service=wound'" style="cursor: pointer;" title="Click to view rates for Wound Care">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#38BDF8;">🩹</div>
-            <div class="s-title">Wound Care &amp; Dressing</div>
+            <div class="home-svc-thumb"><img src="images/wound-care.jpg" alt="Wound Care" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#38BDF8;">🩹</div>
+              <div class="s-title">Wound Care &amp; Dressing</div>
+            </div>
           </div>
           <p class="s-desc">
             Professional wound dressing for diabetic foot ulcers, surgical stitches/staples removal, and pressure sore management to minimize infection and accelerate healing.
@@ -1034,8 +1099,11 @@ footer.site-footer {
       <div class="service-v-card gold" onclick="location.href='services.html?service=elderly'" style="cursor: pointer;" title="Click to view rates for Elderly & Bedridden Care">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#FFD27A;">👴</div>
-            <div class="s-title">Elderly &amp; Bedridden Care</div>
+            <div class="home-svc-thumb"><img src="images/elderly-bedside.jpg" alt="Elderly Care" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FFD27A;">👴</div>
+              <div class="s-title">Elderly &amp; Bedridden Care</div>
+            </div>
           </div>
           <p class="s-desc">
             Attentive daily nursing, feeding tube (Ryle's tube/NG tube) replacement, catheter (CBD) care, hygiene assistance, and vital monitoring.
@@ -1053,8 +1121,11 @@ footer.site-footer {
       <div class="service-v-card red" onclick="location.href='services.html?service=stroke'" style="cursor: pointer;" title="Click to view rates for Stroke Rehab">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#FCA5A5;">🧠</div>
-            <div class="s-title">Stroke &amp; Post-Op Recovery</div>
+            <div class="home-svc-thumb"><img src="images/stroke-rehab.jpg" alt="Stroke Rehab" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FCA5A5;">🧠</div>
+              <div class="s-title">Stroke &amp; Post-Op Recovery</div>
+            </div>
           </div>
           <p class="s-desc">
             Personalized recovery care to regain physical mobility, strictly timely medication dispensing, fall prevention, and hospital discharge handover.
@@ -1072,8 +1143,11 @@ footer.site-footer {
       <div class="service-v-card green" onclick="location.href='services.html?service=injection'" style="cursor: pointer;" title="Click to view rates for Injections & Blood Tests">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#6EE7B7;">💉</div>
-            <div class="s-title">Injections &amp; Blood Tests</div>
+            <div class="home-svc-thumb"><img src="images/injection-medication.jpg" alt="Injections" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#6EE7B7;">💉</div>
+              <div class="s-title">Injections &amp; Blood Tests</div>
+            </div>
           </div>
           <p class="s-desc">
             Doctor-prescribed intramuscular / subcutaneous injections, insulin therapy management, and home blood collection dispatched to partner labs.
@@ -1091,8 +1165,11 @@ footer.site-footer {
       <div class="service-v-card purple" onclick="location.href='services.html?service=escort'" style="cursor: pointer;" title="Click to view rates for Hospital Escort">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#C084FC;">🏥</div>
-            <div class="s-title">Hospital Escort &amp; Transfer</div>
+            <div class="home-svc-thumb"><img src="images/hospital-escort.jpg" alt="Hospital Escort" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#C084FC;">🏥</div>
+              <div class="s-title">Hospital Escort &amp; Transfer</div>
+            </div>
           </div>
           <p class="s-desc">
             Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge accompaniment.
@@ -1110,8 +1187,11 @@ footer.site-footer {
       <div class="service-v-card amber" onclick="location.href='equipment.html'" style="cursor: pointer;" title="Click to explore Medical Equipment">
         <div>
           <div class="s-header">
-            <div class="s-icon-wrap" style="color:#FBBF24;">🛏️</div>
-            <div class="s-title">Medical Equipment Rental</div>
+            <div class="home-svc-thumb"><img src="images/tube-catheter.jpg" alt="Medical Equipment" loading="lazy"></div>
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FBBF24;">🛏️</div>
+              <div class="s-title">Medical Equipment Rental</div>
+            </div>
           </div>
           <p class="s-desc">
             Same-day home delivery and installation of hospital beds, oxygen concentrators, suction machines, patient wheelchairs, and ripple mattresses.
