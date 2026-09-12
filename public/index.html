@@ -335,57 +335,75 @@ header.site-header {
   line-height: 1.65;
 }
 
-/* ECG Heartbeat Waveform Line */
+/* Real Clinical ECG Heartbeat Rhythm Line (Full Width, Vivid Red) */
 .ecg-line-wrap {
-  max-width: 480px;
-  margin: 0 auto 30px;
-  height: 32px;
-  opacity: 0.85;
+  width: 100%;
+  max-width: 1080px;
+  margin: 10px auto 28px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
 }
 
 .ecg-svg {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
-.ecg-path {
-  stroke: #38BDF8;
-  stroke-width: 2.2;
+.ecg-bg-path {
+  stroke: rgba(239, 68, 68, 0.22);
+  stroke-width: 1.5;
   fill: none;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: ecg-draw 3.5s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.8));
 }
 
-@keyframes ecg-draw {
-  0% { stroke-dashoffset: 600; }
-  80% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -600; }
+.ecg-pulse-path {
+  stroke: #EF4444;
+  stroke-width: 2.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 450 1200;
+  stroke-dashoffset: 1650;
+  animation: ecg-sweep 2.2s linear infinite;
+  filter: drop-shadow(0 0 7px rgba(239, 68, 68, 0.9)) drop-shadow(0 0 2px #F87171);
+}
+
+@keyframes ecg-sweep {
+  0% { stroke-dashoffset: 1650; }
+  100% { stroke-dashoffset: 0; }
 }
 
 .hero-ctas {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 42px;
+  margin-bottom: 24px;
 }
 
 .btn-whatsapp {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #FFF;
-  padding: 14px 28px;
+  padding: 0 26px;
+  height: 52px;
   border-radius: 14px;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.96rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
   transition: all 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-sizing: border-box;
 }
 
 .btn-whatsapp:hover {
@@ -396,17 +414,20 @@ header.site-header {
 .btn-primary {
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #FFF;
-  padding: 14px 28px;
+  padding: 0 26px;
+  height: 52px;
   border-radius: 14px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.96rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45);
   transition: all 0.25s ease;
   border: 1px solid rgba(56, 189, 248, 0.4);
+  box-sizing: border-box;
 }
 
 .btn-primary:hover {
@@ -415,23 +436,26 @@ header.site-header {
 }
 
 .btn-secondary {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(15, 23, 42, 0.85);
   color: #E2E8F0;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  padding: 14px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0 24px;
+  height: 52px;
   border-radius: 14px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.96rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   backdrop-filter: blur(10px);
   transition: all 0.25s ease;
+  box-sizing: border-box;
 }
 
 .btn-secondary:hover {
-  background: rgba(30, 41, 59, 0.9);
+  background: rgba(30, 41, 59, 0.95);
   color: #FFF;
   border-color: var(--blue-bright);
   transform: translateY(-3px);
@@ -444,7 +468,8 @@ header.site-header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
-  margin-bottom: 42px;
+  margin-top: 0;
+  margin-bottom: 48px;
 }
 
 .stat-card {
@@ -942,9 +967,20 @@ img, video, iframe {
     gap: 14px !important;
   }
   
-  .btn-group, .hero-actions, .cta-group, .button-row {
+  .btn-group, .hero-actions, .cta-group, .button-row, .hero-ctas {
     flex-direction: column !important;
     width: 100% !important;
+  }
+  
+  .hero-ctas .btn-whatsapp, .hero-ctas .btn-primary, .hero-ctas .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .keyword-pills-row {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+    margin-bottom: 28px !important;
   }
   
   .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa {
@@ -983,41 +1019,53 @@ img, video, iframe {
 .keyword-pills-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  max-width: 840px;
-  margin: 22px auto 0;
+  gap: 10px;
+  max-width: 880px;
+  margin: 0 auto 36px auto;
+  padding: 12px 18px;
+  background: rgba(8, 22, 46, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 .kw-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  background: rgba(14, 40, 75, 0.75);
-  border: 1px solid rgba(56, 189, 248, 0.28);
+  background: rgba(14, 40, 75, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   color: #BAE6FD;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.2s ease;
-  backdrop-filter: blur(8px);
+  white-space: nowrap;
 }
 .kw-pill:hover {
-  background: rgba(56, 189, 248, 0.22);
+  background: rgba(56, 189, 248, 0.25);
   border-color: #38BDF8;
   color: #FFF;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
 .kw-pill.gold {
-  border-color: rgba(255, 210, 122, 0.4);
+  border-color: rgba(255, 210, 122, 0.45);
   color: #FFD27A;
-  background: rgba(255, 210, 122, 0.1);
+  background: rgba(255, 210, 122, 0.12);
 }
 .kw-pill.gold:hover {
   background: rgba(255, 210, 122, 0.25);
   border-color: #FFD27A;
   color: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 210, 122, 0.3);
 }
 
 </style>
@@ -1116,10 +1164,13 @@ img, video, iframe {
       Trained nurses and dedicated caregivers delivering personalized care plans adapted to your home environment—ensuring professional handling to minimize infection risks while upholding patient safety, comfort, and dignity.
     </p>
 
-    <!-- Animated ECG Waveform Visual -->
+    <!-- Real Clinical ECG Heartbeat Waveform Line (Vivid Red, Full Horizontal Width) -->
     <div class="ecg-line-wrap">
-      <svg class="ecg-svg" viewBox="0 0 500 40" preserveAspectRatio="none">
-        <path class="ecg-path" d="M0,20 L120,20 L135,5 L145,35 L155,10 L165,28 L175,20 L300,20 L315,5 L325,35 L335,10 L345,28 L355,20 L500,20" />
+      <svg class="ecg-svg" viewBox="0 0 1200 40" preserveAspectRatio="none">
+        <!-- Background faint trace -->
+        <path class="ecg-bg-path" d="M 0 20 L 30 20 C 36 13, 44 13, 50 20 L 65 20 L 70 24 L 78 3 L 86 37 L 94 20 L 110 20 C 120 10, 135 10, 145 20 L 200 20 L 230 20 C 236 13, 244 13, 250 20 L 265 20 L 270 24 L 278 3 L 286 37 L 294 20 L 310 20 C 320 10, 335 10, 345 20 L 400 20 L 430 20 C 436 13, 444 13, 450 20 L 465 20 L 470 24 L 478 3 L 486 37 L 494 20 L 510 20 C 520 10, 535 10, 545 20 L 600 20 L 630 20 C 636 13, 644 13, 650 20 L 665 20 L 670 24 L 678 3 L 686 37 L 694 20 L 710 20 C 720 10, 735 10, 745 20 L 800 20 L 830 20 C 836 13, 844 13, 850 20 L 865 20 L 870 24 L 878 3 L 886 37 L 894 20 L 910 20 C 920 10, 935 10, 945 20 L 1000 20 L 1030 20 C 1036 13, 1044 13, 1050 20 L 1065 20 L 1070 24 L 1078 3 L 1086 37 L 1094 20 L 1110 20 C 1120 10, 1135 10, 1145 20 L 1200 20" />
+        <!-- Glowing active ECG pulse sweep -->
+        <path class="ecg-pulse-path" d="M 0 20 L 30 20 C 36 13, 44 13, 50 20 L 65 20 L 70 24 L 78 3 L 86 37 L 94 20 L 110 20 C 120 10, 135 10, 145 20 L 200 20 L 230 20 C 236 13, 244 13, 250 20 L 265 20 L 270 24 L 278 3 L 286 37 L 294 20 L 310 20 C 320 10, 335 10, 345 20 L 400 20 L 430 20 C 436 13, 444 13, 450 20 L 465 20 L 470 24 L 478 3 L 486 37 L 494 20 L 510 20 C 520 10, 535 10, 545 20 L 600 20 L 630 20 C 636 13, 644 13, 650 20 L 665 20 L 670 24 L 678 3 L 686 37 L 694 20 L 710 20 C 720 10, 735 10, 745 20 L 800 20 L 830 20 C 836 13, 844 13, 850 20 L 865 20 L 870 24 L 878 3 L 886 37 L 894 20 L 910 20 C 920 10, 935 10, 945 20 L 1000 20 L 1030 20 C 1036 13, 1044 13, 1050 20 L 1065 20 L 1070 24 L 1078 3 L 1086 37 L 1094 20 L 1110 20 C 1120 10, 1135 10, 1145 20 L 1200 20" />
       </svg>
     </div>
 

@@ -27,7 +27,16 @@ const APP_FILES = [
   '/home-nursing-icon-512.png',
   '/assura-logo.png',
   '/logo.png',
-  '/founder-blazer.jpg'
+  '/founder-blazer.jpg',
+  '/images/equipment/hospital-bed.jpg',
+  '/images/equipment/oxygen-concentrator.jpg',
+  '/images/equipment/suction-machine.jpg',
+  '/images/equipment/ripple-mattress.jpg',
+  '/images/equipment/wheelchair.jpg',
+  '/images/equipment/nebulizer.jpg',
+  '/images/equipment/vital-monitor.jpg',
+  '/images/equipment/dressing-pack.jpg',
+  '/images/equipment/medical-tools.jpg',
 ];
 
 // Install: Cache all core application files
