@@ -3881,10 +3881,32 @@ window.setSubPageLang = setLanguage;
 window.getCurrentLanguage = getCurrentLanguage;
 window.STRING_MAP = STRING_MAP;
 
+// Auto-run on page load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     setLanguage(getCurrentLanguage());
   });
 } else {
   setLanguage(getCurrentLanguage());
+}
+
+// Observe dynamic DOM changes to re-apply language translation
+let _i18n_debounce = null;
+const observer = new MutationObserver((mutations) => {
+  const currentLang = getCurrentLanguage();
+  if (currentLang === 'en') return;
+  
+  if (_i18n_debounce) clearTimeout(_i18n_debounce);
+  _i18n_debounce = setTimeout(() => {
+    translateDomNodes(document.body, currentLang);
+    translateInputsAndOptions(currentLang);
+  }, 100);
+});
+
+if (document.body) {
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+  });
 }
