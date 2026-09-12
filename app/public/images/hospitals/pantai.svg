@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="pantaiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2942"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="pantaiOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="url(#pantaiBg)" stroke="#38BDF8" stroke-width="2"/>
+  <g transform="translate(60, 46)">
+    <path d="M 0 18 C -18 6, -24 -6, -18 -18 C -12 -26, 0 -18, 0 -10 C 0 -18, 12 -26, 18 -18 C 24 -6, 18 6, 0 18 Z" fill="none" stroke="#38BDF8" stroke-width="3.5"/>
+    <path d="M 0 12 C -10 3, -14 -4, -10 -11 C -6 -16, 0 -10, 0 -6 C 0 -10, 6 -16, 10 -11 C 14 -4, 10 3, 0 12 Z" fill="url(#pantaiOrange)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FFF"/>
+  </g>
+  <text x="60" y="87" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8">PANTAI HOSPITAL</text>
+  <text x="60" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700" fill="#FB923C" text-anchor="middle" letter-spacing="1.5">PENANG</text>
+</svg>

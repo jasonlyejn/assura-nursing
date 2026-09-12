@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#DC2626" stroke-width="4"/>
+  <path d="M 46 26 A 34 34 0 1 0 74 74 A 27 27 0 1 1 46 26 Z" fill="#DC2626"/>
+  <text x="60" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="900" fill="#991B1B" text-anchor="middle" letter-spacing="0.5">BULAN SABIT MERAH</text>
+  <text x="60" y="107" font-family="system-ui, -apple-system, sans-serif" font-size="6" font-weight="700" fill="#64748B" text-anchor="middle">MALAYSIAN RED CRESCENT</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="assuraBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082F49"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="url(#assuraBg)" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 60 20 Q 82 22 84 38 C 84 62 60 76 60 76 C 60 76 36 62 36 38 Q 38 22 60 20 Z" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="2.5"/>
+  <path d="M 42 48 L 52 48 L 56 38 L 60 58 L 64 42 L 68 48 L 78 48" fill="none" stroke="#FFD27A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle" letter-spacing="1">ASSURA CLINICAL</text>
+  <text x="60" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1">24/7 CARE LINE</text>
+</svg>

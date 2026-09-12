@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="56" fill="#0F172A" stroke="#F59E0B" stroke-width="3"/>
+  <g transform="translate(60, 52)" fill="#FFFFFF">
+    <polygon points="0,0 -8,-24 0,-18 8,-24"/>
+    <polygon points="0,0 24,-8 18,0 24,8"/>
+    <polygon points="0,0 8,24 0,18 -8,24"/>
+    <polygon points="0,0 -24,8 -18,0 -24,-8"/>
+  </g>
+  <circle cx="46" cy="38" r="2.5" fill="#F59E0B"/>
+  <circle cx="74" cy="38" r="2.5" fill="#F59E0B"/>
+  <circle cx="46" cy="66" r="2.5" fill="#F59E0B"/>
+  <circle cx="74" cy="66" r="2.5" fill="#F59E0B"/>
+  <text x="60" y="94" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="900" fill="#F59E0B" text-anchor="middle" letter-spacing="0.8">ST. JOHN AMBULANCE</text>
+  <text x="60" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="6" font-weight="700" fill="#94A3B8" text-anchor="middle">PENANG</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="hppGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2942"/>
+      <stop offset="100%" stop-color="#1E4E79"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="56" fill="url(#hppGrad)" stroke="url(#goldGrad)" stroke-width="3.5"/>
+  <!-- Inner ring -->
+  <circle cx="60" cy="60" r="47" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 2" opacity="0.6"/>
+  <!-- Crescent and Star -->
+  <path d="M 46 32 A 16 16 0 1 0 74 32 A 13 13 0 1 1 46 32 Z" fill="url(#goldGrad)"/>
+  <polygon points="60,20 62.5,26 68.5,26 63.5,29.5 65.5,35.5 60,32 54.5,35.5 56.5,29.5 51.5,26 57.5,26" fill="#F59E0B"/>
+  <!-- Medical Cross -->
+  <rect x="54" y="46" width="12" height="36" rx="2" fill="#EF4444"/>
+  <rect x="42" y="58" width="36" height="12" rx="2" fill="#EF4444"/>
+  <!-- Staff of Asclepius -->
+  <line x1="60" y1="42" x2="60" y2="86" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 55 50 Q 66 54 56 62 Q 67 70 56 78 Q 65 82 60 86" fill="none" stroke="#FFF" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="60" cy="42" r="2.5" fill="#F59E0B"/>
+  <!-- Text badge -->
+  <rect x="22" y="89" width="76" height="16" rx="4" fill="#0B192C" stroke="#F59E0B" stroke-width="1"/>
+  <text x="60" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="900" fill="#FFF" text-anchor="middle" letter-spacing="0.5">HPP · PENANG</text>
+</svg>
