@@ -1,6 +1,6 @@
-/AssuraStaff.apk
+/AssuraNursing.apk
   Content-Type: application/vnd.android.package-archive
-  Content-Disposition: attachment; filename="AssuraStaff.apk"
+  Content-Disposition: attachment; filename="AssuraNursing.apk"
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=3600
 
@@ -13,6 +13,14 @@
 /*.exe
   Content-Type: application/vnd.microsoft.portable-executable
   Content-Disposition: attachment
+
+/AssuraStaff.exe
+  Content-Type: application/vnd.microsoft.portable-executable
+  Content-Disposition: attachment; filename="AssuraStaff.exe"
+
+/AssuraNursing.exe
+  Content-Type: application/vnd.microsoft.portable-executable
+  Content-Disposition: attachment; filename="AssuraNursing.exe"
 
 /*.zip
   Content-Type: application/zip

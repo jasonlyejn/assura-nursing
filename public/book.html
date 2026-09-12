@@ -181,17 +181,13 @@
       border-radius: 999px; background: #f2f7fd; font-size: .76rem; font-weight: 700; }
     .area i { font-style: normal; font-weight: 400; color: var(--muted); }
 
-    /* ---- time slots ---- */
-    .slots { display: flex; flex-wrap: wrap; gap: 8px; }
+    /* ---- time slots (24 Hours Responsive Grid) ---- */
+    .slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 8px; }
     .slot { position: relative; }
     .slot input { position: absolute; width: 1px; height: 1px; opacity: 0; }
-    .slot span { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 9px 15px;
+    .slot span { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 42px; padding: 8px 4px;
       border: 1px solid var(--line); border-radius: 10px; background: #fff; font-size: .88rem; font-weight: 700;
-      cursor: pointer; transition: .14s ease; }
-    .slot span:hover { border-color: #80b7eb; }
-    .slot input:checked + span { border-color: var(--blue); background: #eef6ff; box-shadow: inset 0 0 0 1px var(--blue); color: var(--blue-dark); }
-    .slot input:focus-visible + span { outline: 3px solid var(--blue-dark); outline-offset: 2px; }
-    .slot input:disabled + span { color: #9db0c4; background: #f4f7fb; cursor: not-allowed; text-decoration: line-through; border-style: dashed; }
+      cursor: pointer; transition: .14s ease; text-align: center; }
     .slot-note { margin: 10px 0 0; color: var(--muted); font-size: .79rem; line-height: 1.45; }
 
     .actions { display: grid; gap: 11px; margin-top: 28px; }
@@ -519,7 +515,7 @@ img, video, iframe {
               <label for="slots">Preferred time <span>时间</span></label>
               <div class="slots" id="slots" role="group" aria-label="Preferred visiting time"></div>
               <small class="field-error" id="slot-error">Please choose a time.</small>
-              <p class="slot-note">These are our usual visiting hours — we'll confirm your exact slot by WhatsApp.<br>这些是护士的一般上门时段，确切时间将由我们在 WhatsApp 确认。</p>
+              <p class="slot-note" data-i18n="book_time_note">24/7 Home Nursing Visiting Hours — round-the-clock shift support across Penang. We'll confirm your exact slot by WhatsApp.<br>24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。</p>
             </div>
           </div>
         </section>
@@ -593,7 +589,7 @@ img, video, iframe {
           <div><dt>Call</dt><dd><a href="tel:+60122064868">012-206 4868</a></dd></div>
           <div><dt>Based in</dt><dd>Bukit Mertajam, Penang<span>大山脚</span></dd></div>
           <div><dt>We travel</dt><dd>Up to 25 km<span>方圆 25 公里</span></dd></div>
-          <div><dt>Hours</dt><dd>9am – 8pm daily<span>每日 9am–8pm</span></dd></div>
+          <div><dt>Hours</dt><dd>24 Hours Daily<span>每日 24小时全天候</span></dd></div>
           <div><dt>Online</dt><dd><a href="index.html">About our service · 了解服务</a></dd></div>
         </dl>
         <figure class="qr">
@@ -622,7 +618,7 @@ img, video, iframe {
     coverageKm: 25,
 
     // Your visiting hours. step = minutes between slots.
-    hours: { from: 9, to: 20, step: 60 },
+    hours: { from: 0, to: 23, step: 60 },
 
     // Towns you cover — shown as text under the map.
     areas: [
@@ -1170,5 +1166,6 @@ img, video, iframe {
   }
   </script>
 <script src="notifications.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

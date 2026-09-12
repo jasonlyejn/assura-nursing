@@ -492,15 +492,18 @@ img, video, iframe {
       <li><a href="download.html" class="nav-link">Download Apps</a></li>
     </ul>
 
-    <div class="header-actions">
-      <a href="portal.html" class="portal-pill">🏥 <span>Clinical Portal</span></a>
+        <div class="header-actions">
+      <a href="portal.html" class="portal-pill" data-i18n="portal_pill">🏥 <span>Clinical Portal</span></a>
 
-      <div class="lang-bar">
-        <button class="lang-btn active" onclick="setSubPageLang('en')">EN</button>
-        <button class="lang-btn" onclick="setSubPageLang('zh')">中文</button>
-        <button class="lang-btn" onclick="setSubPageLang('bm')">BM</button>
-        <button class="lang-btn" onclick="setSubPageLang('ta')">தமிழ்</button>
+      <div class="lang-bar" id="langBar">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')">中文</button>
+        <button class="lang-btn" data-lang="bm" onclick="setLanguage('bm')">BM</button>
+        <button class="lang-btn" data-lang="ta" onclick="setLanguage('ta')">தமிழ்</button>
       </div>
+
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
 
       <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
     </div>
@@ -713,6 +716,7 @@ function setSubPageLang(l) {
 }
 </script>
 <script src="notifications.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
 
