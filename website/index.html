@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#040D1A" />
 <title>Assura Nursing · 24/7 Professional Home Nursing Penang</title>
+<meta name="keywords" content="Assura Nursing, Home Nursing Penang, Private Nurse Penang, Wound Care Penang, Stroke Rehab Penang, Elderly Care Penang, Bedridden Care, Ryle Tube Insertion, Foley Catheter Change, Home Blood Test, Medical Equipment Rental Penang, Hospital Bed Rental, Georgetown, Butterworth, Bayan Lepas, Bukit Mertajam" />
+<meta property="og:title" content="Assura Nursing · 24/7 Professional Home Nursing Penang" />
+<meta property="og:description" content="Professional private home nursing in Penang. Trained nurses & dedicated caregivers providing wound care, stroke rehab, elderly care & medical equipment." />
+<meta property="og:image" content="https://assuranursing.com/home-nursing-icon-512.png" />
+<meta property="og:url" content="https://assuranursing.com" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="description" content="Professional private home nursing care in Penang. Trained nurses & dedicated caregivers providing wound care, stroke rehab, elderly care & medical equipment." />
 <link rel="icon" href="home-nursing-icon-192.png" />
 <link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
@@ -971,6 +978,48 @@ img, video, iframe {
     height: 52px !important;
   }
 }
+
+/* KEYWORD SEARCH PILLS */
+.keyword-pills-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 840px;
+  margin: 22px auto 0;
+}
+.kw-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(14, 40, 75, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  color: #BAE6FD;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+.kw-pill:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38BDF8;
+  color: #FFF;
+  transform: translateY(-1px);
+}
+.kw-pill.gold {
+  border-color: rgba(255, 210, 122, 0.4);
+  color: #FFD27A;
+  background: rgba(255, 210, 122, 0.1);
+}
+.kw-pill.gold:hover {
+  background: rgba(255, 210, 122, 0.25);
+  border-color: #FFD27A;
+  color: #FFF;
+}
+
 </style>
 
 <style>
@@ -1039,11 +1088,10 @@ img, video, iframe {
 
     <ul class="nav-menu" id="navMenu">
       <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
-      <li><a href="equipment.html" class="nav-link">Medical Equipment</a></li>
-      <li><a href="emergency.html" class="nav-link">Emergency Protocols</a></li>
       <li><a href="about.html" class="nav-link">About Us</a></li>
-      <li><a href="careers.html" class="nav-link">Careers</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="media.html" class="nav-link">Media</a></li>
+      <li><a href="announcements.html" class="nav-link">Announcements</a></li>
       <li><a href="download.html" class="nav-link">Download Apps</a></li>
     </ul>
 
@@ -1082,16 +1130,25 @@ img, video, iframe {
       <a href="services.html" class="btn-primary">
         <span>🩺</span> View Services &amp; Fees
       </a>
-      <a href="emergency.html" class="btn-secondary">
+      <a href="media.html?tab=emergency" class="btn-secondary">
         <span>🚨</span> Emergency &amp; GPS Guide
       </a>
     </div>
 
-    <!-- Stats Bar -->
-    
-    
+    <!-- Prominent Key Focus & Search Keywords Pills -->
+    <div class="keyword-pills-row">
+      <a href="services.html?service=wound" class="kw-pill">🩹 Wound Care &amp; Dressing</a>
+      <a href="services.html?service=elderly" class="kw-pill">👴 Elderly &amp; Bedridden Care</a>
+      <a href="services.html?service=stroke" class="kw-pill">🧠 Stroke Rehab &amp; Mobility</a>
+      <a href="services.html?service=tube" class="kw-pill">🍼 Ryle's Tube / NG Tube</a>
+      <a href="services.html?service=catheter" class="kw-pill">💧 Catheter (CBD) Care</a>
+      <a href="services.html?service=injection" class="kw-pill">💉 Injections &amp; Blood Tests</a>
+      <a href="services.html?service=escort" class="kw-pill">🏥 Hospital Escort &amp; Transfer</a>
+      <a href="media.html?tab=equipment" class="kw-pill">🛏️ Medical Bed &amp; Oxygen Rental</a>
+      <a href="media.html?tab=emergency" class="kw-pill">🚨 24/7 Hospital Emergency GPS</a>
+      <a href="services.html" class="kw-pill gold">📍 All Penang Areas Covered</a>
     </div>
-  
+
     <div class="stats-bar">
       <div class="stat-card">
         <div class="stat-num">Trained</div>
@@ -1265,7 +1322,7 @@ img, video, iframe {
       </div>
 
       <!-- Equipment Rental -->
-      <div class="service-v-card amber" onclick="location.href='equipment.html'" style="cursor: pointer;" title="Click to explore Medical Equipment">
+      <div class="service-v-card amber" onclick="location.href='media.html?tab=equipment'" style="cursor: pointer;" title="Click to explore Medical Equipment">
         <div>
           <div class="s-header">
             <div class="s-header">
@@ -1282,7 +1339,7 @@ img, video, iframe {
             <li>Medical oxygen &amp; ripple mattress setup</li>
           </ul>
         </div>
-        <a href="equipment.html" class="s-link-btn" onclick="event.stopPropagation();">Explore Equipment Catalog →</a>
+        <a href="media.html?tab=equipment" class="s-link-btn" onclick="event.stopPropagation();">Explore Equipment Catalog →</a>
       </div>
     </div>
   </section>
@@ -1314,15 +1371,14 @@ img, video, iframe {
 
 <footer class="site-footer">
   
-  <div class="footer-links" style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 14px;">
-    <a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a>
-    <a href="services.html" style="color: #94A3B8; text-decoration: none;">Services &amp; Rates</a>
-    <a href="equipment.html" style="color: #94A3B8; text-decoration: none;">Equipment Guide</a>
-    <a href="emergency.html" style="color: #94A3B8; text-decoration: none;">Emergency Protocols</a>
-    <a href="about.html" style="color: #94A3B8; text-decoration: none;">About Us</a>
-    <a href="careers.html" style="color: #94A3B8; text-decoration: none;">Careers</a>
-    <a href="download.html" style="color: #94A3B8; text-decoration: none;">Download App</a>
-    <a href="portal.html" style="color: #38BDF8; font-weight: 700; text-decoration: none;">Clinical Portal</a>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="media.html">Media</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="download.html">Download App</a>
+    <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
   </div>
   <p>© 2026 Assura Nursing · All Rights Reserved · Penang Island &amp; Mainland</p>
   <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Trained Nurses &amp; Dedicated Caregivers</p>

@@ -1,0 +1,2295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#040D1A" />
+<title>Media, Medical Equipment &amp; Emergency Hub · Assura Nursing</title>
+<meta name="description" content="Comprehensive Penang clinical resource hub by Assura Nursing: 24/7 Penang emergency hospital directory &amp; GPS, 110 BPM CPR metronome, medical equipment rental catalog, and home care clinical guides." />
+<meta name="keywords" content="Penang hospital directory, emergency hospital hotlines, medical equipment rental Penang, hospital bed rental, oxygen concentrator Penang, CPR metronome, home nursing guide, Assura Nursing" />
+<link rel="icon" href="home-nursing-icon-192.png" />
+<link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
+<link rel="manifest" href="home-nursing.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg-deep: #040D1A;
+  --bg-card: rgba(10, 26, 46, 0.78);
+  --bg-card-hover: rgba(15, 38, 68, 0.9);
+  --line: rgba(56, 189, 248, 0.18);
+  --blue: #0284c7;
+  --blue-bright: #38bdf8;
+  --ice: #E0F2FE;
+  --gold: #FFD27A;
+  --amber: #F59E0B;
+  --pulse: #E4544A;
+  --green: #10B981;
+  --red: #EF4444;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Background */
+.sky-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(2, 132, 199, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
+    radial-gradient(circle at 90% 60%, rgba(228, 84, 74, 0.15) 0%, transparent 55%),
+    #040D1A;
+}
+
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 80%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+
+/* Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(4, 13, 26, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #FFF;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(2, 132, 199, 0.15) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.2);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.portal-pill {
+  background: rgba(2, 132, 199, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38BDF8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.portal-pill:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38BDF8;
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #FFF;
+  font-size: 1.3rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Page Hero */
+.page-hero {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.page-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38BDF8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.page-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.page-hero p {
+  font-size: 0.96rem;
+  color: #94A3B8;
+  max-width: 760px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+/* PRIMARY RESOURCE HUB NAVIGATION TABS */
+.hub-tabs-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 36px;
+  max-width: 820px;
+  flex-wrap: wrap;
+}
+
+.hub-tab-btn {
+  background: rgba(10, 26, 46, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.25);
+  color: #94A3B8;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(10px);
+}
+
+.hub-tab-btn:hover {
+  color: #FFF;
+  border-color: var(--blue-bright);
+  background: rgba(15, 38, 68, 0.95);
+  transform: translateY(-2px);
+}
+
+.hub-tab-btn.active {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.4) 0%, rgba(14, 165, 233, 0.25) 100%);
+  border-color: #38BDF8;
+  color: #FFF;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+}
+
+.hub-tab-btn.urgent.active {
+  background: linear-gradient(135deg, rgba(228, 84, 74, 0.4) 0%, rgba(239, 68, 68, 0.25) 100%);
+  border-color: #EF4444;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+.hub-tab-btn.amber.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.4) 0%, rgba(255, 210, 122, 0.25) 100%);
+  border-color: #F59E0B;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass Cards */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.15rem;
+  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Dispatch Hotlines Grid */
+.dispatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.dispatch-card {
+  background: rgba(6, 18, 36, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.dispatch-card:hover {
+  border-color: var(--blue-bright);
+  background: rgba(10, 28, 54, 0.95);
+  transform: translateY(-2px);
+}
+
+.dispatch-card.urgent {
+  background: linear-gradient(145deg, rgba(228, 84, 74, 0.18) 0%, rgba(10, 20, 36, 0.9) 100%);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.dispatch-card.care {
+  background: linear-gradient(145deg, rgba(2, 132, 199, 0.25) 0%, rgba(10, 20, 36, 0.9) 100%);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.dispatch-tag {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.dispatch-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 4px;
+  display: block;
+  font-family: var(--font-serif);
+}
+
+.dispatch-sub {
+  font-size: 0.78rem;
+  color: #94A3B8;
+}
+
+/* Hospital Directory Grid */
+.hospital-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.hospital-item {
+  background: rgba(6, 18, 36, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.hospital-item:hover {
+  border-color: var(--blue-bright);
+  background: rgba(10, 28, 54, 0.95);
+  transform: translateY(-2px);
+}
+
+.h-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.h-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.35;
+}
+
+.h-loc {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+.h-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-gov {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.badge-pvt {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.h-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.h-call-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #CBD5E1;
+}
+
+.h-phone-link {
+  color: #FFD27A;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.h-phone-link.emg {
+  color: #F87171;
+  font-weight: 800;
+}
+
+.h-phone-link:hover {
+  text-decoration: underline;
+}
+
+.h-nav-row {
+  display: flex;
+  gap: 8px;
+}
+
+.h-nav-pill {
+  flex: 1;
+  background: rgba(2, 132, 199, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38BDF8;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.h-nav-pill:hover {
+  background: rgba(2, 132, 199, 0.4);
+  border-color: #38BDF8;
+  color: #FFF;
+}
+
+.h-nav-pill.waze {
+  background: rgba(51, 204, 255, 0.15);
+  border-color: rgba(51, 204, 255, 0.4);
+  color: #67E8F9;
+}
+
+.h-nav-pill.waze:hover {
+  background: rgba(51, 204, 255, 0.3);
+  color: #FFF;
+}
+
+/* CPR & Metronome Section */
+.cpr-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.metronome-box {
+  background: rgba(6, 18, 36, 0.9);
+  border: 1px solid rgba(228, 84, 74, 0.35);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-heart {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  transition: transform 0.1s ease;
+  display: inline-block;
+}
+
+.pulse-heart.beating {
+  animation: heartPulse 0.545s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.3); text-shadow: 0 0 25px rgba(239, 68, 68, 0.8); }
+  30% { transform: scale(1.05); }
+  45% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.btn-metro {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: #FFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-metro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Equipment Filter & Grid */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(10, 26, 46, 0.7);
+  border: 1px solid var(--line);
+  color: #94A3B8;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  color: #38BDF8;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.filter-btn.active {
+  background: rgba(2, 132, 199, 0.3);
+  border-color: #38BDF8;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.equip-card {
+  background: linear-gradient(145deg, rgba(14, 28, 54, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.equip-card:hover {
+  border-color: var(--blue-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(56, 189, 248, 0.2);
+}
+
+.equip-img-wrap {
+  width: 100%;
+  height: 180px;
+  background: #06172C;
+  overflow: hidden;
+  position: relative;
+}
+
+.equip-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.equip-card:hover .equip-img-wrap img {
+  transform: scale(1.06);
+}
+
+.equip-cat-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(4, 13, 26, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.equip-body {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.equip-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.equip-desc {
+  font-size: 0.84rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.equip-rate-box {
+  background: rgba(6, 18, 36, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.equip-rent-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFD27A;
+}
+
+.equip-action-link {
+  color: #38BDF8;
+  font-size: 0.84rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Education Guides Cards */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.edu-card {
+  background: linear-gradient(145deg, rgba(14, 28, 54, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--blue-bright);
+}
+
+.edu-card.gold::before { background: var(--gold); }
+.edu-card.green::before { background: var(--green); }
+.edu-card.red::before { background: var(--red); }
+.edu-card.purple::before { background: #A855F7; }
+
+.edu-card:hover {
+  border-color: var(--blue-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(56, 189, 248, 0.2);
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.edu-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.edu-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.3;
+}
+
+.edu-subtitle {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+.edu-steps {
+  list-style: none;
+  font-size: 0.84rem;
+  color: #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.edu-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.edu-steps li span.step-dot {
+  color: #38BDF8;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.edu-alert-box {
+  background: rgba(228, 84, 74, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  color: #FCA5A5;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Modal Popup */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 13, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-card {
+  background: #0A1A2E;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 20px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFF;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.6);
+  border-color: #EF4444;
+}
+
+.modal-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #06172C;
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.modal-rates-row {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.modal-rate-pill {
+  background: rgba(6, 18, 36, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 10px 14px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.modal-rate-label {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.modal-rate-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFD27A;
+}
+
+.modal-points-list {
+  list-style: none;
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+.modal-points-list li {
+  display: flex;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.modal-points-list li::before {
+  content: '✓';
+  color: #38BDF8;
+  font-weight: 900;
+}
+
+.modal-cta-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-modal-wa {
+  flex: 1;
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  color: #FFF;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
+  transition: all 0.2s;
+}
+
+.btn-modal-wa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+}
+
+/* App Download Banner */
+.app-banner-box {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.3) 0%, rgba(10, 25, 48, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-top: 1px solid rgba(56, 189, 248, 0.65);
+  border-radius: 22px;
+  padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.25);
+  margin-top: 40px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #FFF;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFF;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(15, 23, 42, 0.75);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  color: #64748B;
+  font-size: 0.82rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #38BDF8;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .nav-menu { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-menu.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(4, 13, 26, 0.98);
+    padding: 16px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    gap: 8px;
+  }
+  .cpr-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-logo { height: 52px !important; }
+  .hub-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+<div class="sky-canvas"></div>
+<div class="grid-lines"></div>
+
+<!-- Sticky Top Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand-wrap">
+      <img src="assura-logo.png" alt="Assura Nursing" class="brand-logo" />
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="media.html" class="nav-link active">Media</a></li>
+      <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+      <li><a href="download.html" class="nav-link">Download Apps</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <a href="portal.html" class="portal-pill">🏥 <span>Clinical Portal</span></a>
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <span class="page-tag">Media &amp; Clinical Resources · 媒体中心与临床资源</span>
+    <h1>Media, Clinical Resources &amp; Emergency Hub</h1>
+    <p>Your unified Penang healthcare &amp; media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video &amp; photo media.</p>
+    
+    <!-- 3 MAIN TABS -->
+    <div class="hub-tabs-wrap">
+      <button class="hub-tab-btn urgent active" id="tabBtn-emergency" onclick="switchTab('emergency')">
+        <span>🚨</span> Emergency &amp; Hospital GPS
+      </button>
+      <button class="hub-tab-btn amber" id="tabBtn-equipment" onclick="switchTab('equipment')">
+        <span>🛏️</span> Medical Equipment Rental
+      </button>
+      <button class="hub-tab-btn" id="tabBtn-education" onclick="switchTab('education')">
+        <span>📚</span> Patient &amp; Family Care Guides
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TAB 1: EMERGENCY PROTOCOLS & HOSPITAL DIRECTORY
+       ========================================================================= -->
+  <div class="tab-panel active" id="panel-emergency">
+    <!-- 1. Immediate 24/7 Hotlines -->
+    <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.45);">
+      <div class="card-title" style="color: #EF4444;">
+        <span>🚨 Immediate 24/7 Emergency &amp; Ambulance Dispatch</span>
+        <span style="font-size:0.75rem; color:#FCA5A5; font-weight:700;">MALAYSIA &amp; PENANG HOTLINES</span>
+      </div>
+      
+      <div class="dispatch-grid">
+        <!-- 999 -->
+        <div class="dispatch-card urgent">
+          <div class="dispatch-tag" style="color: #FCA5A5;">Ambulance / Police / Bomba</div>
+          <a href="tel:999" class="dispatch-num" style="color: #FFF;">☎ 999</a>
+          <div class="dispatch-sub">National Emergency Toll-Free</div>
+        </div>
+
+        <!-- 112 -->
+        <div class="dispatch-card urgent">
+          <div class="dispatch-tag" style="color: #FCA5A5;">Mobile Phone Emergency</div>
+          <a href="tel:112" class="dispatch-num" style="color: #FFF;">☎ 112</a>
+          <div class="dispatch-sub">Works on Locked / No-SIM phones</div>
+        </div>
+
+        <!-- Assura Care Line -->
+        <div class="dispatch-card care">
+          <div class="dispatch-tag" style="color: #7DD3FC;">Assura 24/7 Clinical Care Line</div>
+          <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
+          <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
+        </div>
+
+        <!-- St John Ambulance -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FCA5A5;">St. John Ambulance (Penang)</div>
+          <a href="tel:+6048286999" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-828 6999</a>
+          <div class="dispatch-sub">Alt: 04-828 5999</div>
+        </div>
+
+        <!-- Red Crescent -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FCA5A5;">Malaysian Red Crescent (BSMM)</div>
+          <a href="tel:+6048275684" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-827 5684</a>
+          <div class="dispatch-sub">Alt: 04-828 2842</div>
+        </div>
+
+        <!-- Civil Defence (APM) -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FDE047;">Civil Defence Force (APM Penang)</div>
+          <a href="tel:+6042283991" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-228 3991</a>
+          <div class="dispatch-sub">24/7 Disaster &amp; Medical Emergency</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Penang Island Hospitals -->
+    <div class="glass-card">
+      <div class="card-title" style="color: #38BDF8;">
+        <span>🏥 Penang Island Hospitals (Government &amp; Private)</span>
+        <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah</span>
+      </div>
+
+      <div class="hospital-grid">
+        <!-- Penang General Hospital (HPP) -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Penang General Hospital (HPP)</div>
+                <div class="h-loc">Jalan Residensi, 10990 George Town, Penang</div>
+              </div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency (ETD):</span>
+                <a href="tel:+6042225222" class="h-phone-link emg">☎ 04-222 5222</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6042225333" class="h-phone-link">☎ 04-222 5333</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Pulau+Pinang+Jalan+Residensi+Georgetown" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Hospital+Pulau+Pinang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hospital Balik Pulau -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Hospital Balik Pulau (HBP)</div>
+                <div class="h-loc">Jalan Balik Pulau, 11000 Balik Pulau, Penang</div>
+              </div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency / Line:</span>
+                <a href="tel:+6048669333" class="h-phone-link emg">☎ 04-866 9333</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Balik+Pulau+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Hospital+Balik+Pulau" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gleneagles Hospital Penang -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Gleneagles Hospital Penang</div>
+                <div class="h-loc">1, Jalan Pangkor, 10050 George Town, Penang</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency Hotline:</span>
+                <a href="tel:+6042229199" class="h-phone-link emg">☎ 04-222 9199</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6042229111" class="h-phone-link">☎ 04-222 9111</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Gleneagles+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Gleneagles+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Island Hospital Penang -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Island Hospital Penang</div>
+                <div class="h-loc">308, Macalister Road / Peel Avenue, 10450 George Town</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency Care:</span>
+                <a href="tel:+6042383388" class="h-phone-link emg">☎ 04-238 3388</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6042288222" class="h-phone-link">☎ 04-228 8222</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Island+Hospital+Macalister+Road+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Island+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loh Guan Lye -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Loh Guan Lye Specialists Centre</div>
+                <div class="h-loc">19 &amp; 21, Logan Road, 10400 George Town, Penang</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency:</span>
+                <a href="tel:+6042388888" class="h-phone-link emg">☎ 04-238 8888</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6042388888" class="h-phone-link">☎ 04-238 8888</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Loh+Guan+Lye+Specialists+Centre+Logan+Road+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Loh+Guan+Lye+Specialists+Centre" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pantai Hospital Penang -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Pantai Hospital Penang</div>
+                <div class="h-loc">82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency:</span>
+                <a href="tel:+6046432743" class="h-phone-link emg">☎ 04-643 2743</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6046433888" class="h-phone-link">☎ 04-643 3888</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Pantai+Hospital+Penang+Bayan+Lepas" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Pantai+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Penang Mainland Hospitals -->
+    <div class="glass-card">
+      <div class="card-title" style="color: #FFD27A;">
+        <span>🏥 Penang Mainland Hospitals (Seberang Perai)</span>
+        <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas</span>
+      </div>
+
+      <div class="hospital-grid">
+        <!-- Hospital Seberang Jaya (HSJ) -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
+                <div class="h-loc">Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang</div>
+              </div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency (ETD):</span>
+                <a href="tel:+6043827333" class="h-phone-link emg">☎ 04-382 7333</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Seberang+Jaya" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Hospital+Seberang+Jaya" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bagan Specialist Centre -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">Bagan Specialist Centre</div>
+                <div class="h-loc">Jalan Bagan 1, 13400 Butterworth, Penang</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency Hotline:</span>
+                <a href="tel:+6043322800" class="h-phone-link emg">☎ 04-332 2800</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6043278888" class="h-phone-link">☎ 04-327 8888</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Bagan+Specialist+Centre+Butterworth" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Bagan+Specialist+Centre" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPJ Penang Specialist Hospital -->
+        <div class="hospital-item">
+          <div>
+            <div class="h-top">
+              <div>
+                <div class="h-name">KPJ Penang Specialist Hospital</div>
+                <div class="h-loc">570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam</div>
+              </div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+          </div>
+          <div>
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency Line:</span>
+                <a href="tel:+6045486688" class="h-phone-link emg">☎ 04-548 6688</a>
+              </div>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6045486666" class="h-phone-link">☎ 04-548 6666</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=KPJ+Penang+Specialist+Hospital+Bandar+Perda" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=KPJ+Penang+Specialist+Hospital" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. CPR 110 BPM Visual & Audio Metronome -->
+    <div class="glass-card" style="border-color: rgba(228, 84, 74, 0.4);">
+      <div class="card-title" style="color: #EF4444;">
+        <span>❤️ Adult Hands-Only CPR &amp; 110 BPM Metronome</span>
+        <span style="font-size:0.75rem; color:#FCA5A5; font-weight:700;">AHA / ERC LIFE-SAVING STANDARD</span>
+      </div>
+
+      <div class="cpr-box">
+        <div>
+          <h3 style="font-size:1.2rem; color:#FFF; margin-bottom:12px;">Hands-Only CPR Protocol</h3>
+          <p style="font-size:0.88rem; color:#CBD5E1; line-height:1.6; margin-bottom:14px;">
+            If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.
+          </p>
+          <ul style="font-size:0.84rem; color:#94A3B8; display:flex; flex-direction:column; gap:8px; list-style:none;">
+            <li><b style="color:#FFF;">1. Check &amp; Call:</b> Tap shoulders, shout "Are you OK?". Dial 999 or 112 on speakerphone.</li>
+            <li><b style="color:#FFF;">2. Position Hands:</b> Heel of one hand on center of chest (lower breastbone), interlock other hand on top.</li>
+            <li><b style="color:#FFF;">3. Push Hard &amp; Fast:</b> Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.</li>
+          </ul>
+        </div>
+
+        <div class="metronome-box">
+          <div class="pulse-heart" id="heartPulsar">🫀</div>
+          <div style="font-size:1.2rem; font-weight:800; color:#FFF; margin-bottom:4px;">110 BPM Standard Rhythm</div>
+          <div style="font-size:0.8rem; color:#94A3B8; margin-bottom:16px;">Compress to this audio-visual beat</div>
+          <button class="btn-metro" id="btnMetro" onclick="toggleMetronome()">
+            <span>▶</span> Start 110 BPM CPR Rhythm Metronome
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Interactive First Aid Simulator -->
+    <div class="glass-card">
+      <div class="card-title" style="color: #38BDF8;">
+        <span>📱 Interactive First Aid &amp; CPR Simulator</span>
+        <span style="font-size:0.75rem; color:#94A3B8;">Step-by-Step Training</span>
+      </div>
+
+      <div style="background:rgba(6,18,36,0.85); border:1px solid rgba(56,189,248,0.25); border-radius:16px; padding:24px; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:10px;" id="simIcon">👋</div>
+        <h3 style="font-size:1.2rem; font-weight:800; color:#FFF; margin-bottom:8px;" id="simTitle">Step 1: Check Responsiveness</h3>
+        <p style="font-size:0.9rem; color:#CBD5E1; max-width:600px; margin:0 auto 20px; line-height:1.55;" id="simDesc">
+          Firmly tap the person's shoulders and shout loudly: "Are you okay?". If no response and no normal breathing, proceed immediately.
+        </p>
+
+        <div style="display:flex; justify-content:center; gap:12px;">
+          <button onclick="prevSimStep()" style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.2); color:#FFF; padding:8px 18px; border-radius:10px; font-weight:700; cursor:pointer;">
+            ← Previous
+          </button>
+          <button onclick="nextSimStep()" style="background:linear-gradient(135deg, #0284c7, #0369a1); border:1px solid #38BDF8; color:#FFF; padding:8px 22px; border-radius:10px; font-weight:700; cursor:pointer;">
+            Next Step →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TAB 2: MEDICAL EQUIPMENT RENTAL & CATALOG
+       ========================================================================= -->
+  <div class="tab-panel" id="panel-equipment">
+    <div class="glass-card">
+      <div class="card-title" style="color: #FFD27A;">
+        <span>🛏️ Home Medical Equipment Rental &amp; Reference Guide</span>
+        <span style="font-size:0.75rem; color:#94A3B8;">Penang Island &amp; Mainland Fast Delivery</span>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">All Equipment</button>
+        <button class="filter-btn" onclick="filterCategory('mobility', this)">🛏️ Mobility &amp; Beds</button>
+        <button class="filter-btn" onclick="filterCategory('respiratory', this)">🫁 Respiratory &amp; Airway</button>
+        <button class="filter-btn" onclick="filterCategory('transfer', this)">♿ Transfer &amp; Hygiene</button>
+        <button class="filter-btn" onclick="filterCategory('monitoring', this)">🩺 Monitoring &amp; Kits</button>
+      </div>
+
+      <!-- Equipment Grid -->
+      <div class="equip-grid">
+        <!-- 1. Hospital Bed -->
+        <div class="equip-card" data-cat="mobility" onclick="openModal('bed')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/hospital-bed.jpg" alt="Electric Hospital Bed" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🛏️ Mobility &amp; Beds</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">2/3-Function Electric Hospital Bed</div>
+              <div class="equip-desc">Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 180 – RM 320 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Oxygen Concentrator -->
+        <div class="equip-card" data-cat="respiratory" onclick="openModal('oxygen')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/oxygen-concentrator.jpg" alt="Medical Oxygen Concentrator" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🫁 Respiratory</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Medical Oxygen Concentrator (5L/10L)</div>
+              <div class="equip-desc">Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 250 – RM 450 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Suction Machine -->
+        <div class="equip-card" data-cat="respiratory" onclick="openModal('suction')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/suction-machine.jpg" alt="Electric Medical Suction Machine" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🫁 Respiratory</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Electric Medical Suction Machine</div>
+              <div class="equip-desc">Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 120 – RM 200 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Ripple Mattress -->
+        <div class="equip-card" data-cat="mobility" onclick="openModal('ripple')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/ripple-mattress.jpg" alt="Ripple Anti-Decubitus Mattress" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🛏️ Mobility &amp; Beds</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Ripple Anti-Decubitus Mattress</div>
+              <div class="equip-desc">Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 50 – RM 80 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Wheelchair & Commode -->
+        <div class="equip-card" data-cat="transfer" onclick="openModal('wheelchair')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/wheelchair.jpg" alt="Foldable Wheelchair & Commode" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">♿ Transfer</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Foldable Wheelchair &amp; Commode Chair</div>
+              <div class="equip-desc">Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 60 – RM 100 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Nebulizer -->
+        <div class="equip-card" data-cat="respiratory" onclick="openModal('nebulizer')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/nebulizer.jpg" alt="Medical Compressor Nebulizer" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🫁 Respiratory</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Medical Compressor Nebulizer</div>
+              <div class="equip-desc">Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 40 – RM 70 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Vital Monitor -->
+        <div class="equip-card" data-cat="monitoring" onclick="openModal('vital')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/vital-monitor.jpg" alt="Digital Vital Signs & SpO2 Monitor" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🩺 Monitoring</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Digital Vital Signs &amp; SpO2 Monitor</div>
+              <div class="equip-desc">Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Rental:</span>
+                <span class="equip-rent-val">RM 80 – RM 140 / mo</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Dressing Pack -->
+        <div class="equip-card" data-cat="monitoring" onclick="openModal('dressing')">
+          <div class="equip-img-wrap">
+            <img src="images/equipment/dressing-pack.jpg" alt="Sterile Wound Dressing Pack" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+            <span class="equip-cat-badge">🩺 Supplies</span>
+          </div>
+          <div class="equip-body">
+            <div>
+              <div class="equip-title">Sterile Wound Dressing Pack (ANTT)</div>
+              <div class="equip-desc">Single-use gamma-sterilized basic &amp; complex dressing sets with forceps, gauze swabs, and drapes.</div>
+            </div>
+            <div>
+              <div class="equip-rate-box">
+                <span style="font-size:0.75rem; color:#94A3B8; font-weight:700;">Purchase:</span>
+                <span class="equip-rent-val">RM 15 – RM 45 / pack</span>
+              </div>
+              <span class="equip-action-link">View Specifications &amp; Advice →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TAB 3: PATIENT CARE & FAMILY EDUCATION GUIDES
+       ========================================================================= -->
+  <div class="tab-panel" id="panel-education">
+    <div class="glass-card">
+      <div class="card-title" style="color: #38BDF8;">
+        <span>📚 Patient &amp; Family Clinical Home Care Guides</span>
+        <span style="font-size:0.75rem; color:#94A3B8;">Step-by-Step Practical Guidelines</span>
+      </div>
+
+      <div class="edu-grid">
+        <!-- Guide 1: Wound Care -->
+        <div class="edu-card">
+          <div>
+            <div class="edu-header">
+              <div class="edu-icon" style="color:#38BDF8;">🩹</div>
+              <div>
+                <div class="edu-title">Aseptic Wound Care &amp; Dressing</div>
+                <div class="edu-subtitle">Surgical, Bedsores &amp; Diabetic Ulcers</div>
+              </div>
+            </div>
+            <p style="font-size:0.86rem; color:#CBD5E1; line-height:1.5;">
+              Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).
+            </p>
+            <ul class="edu-steps">
+              <li><span class="step-dot">1.</span> Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.</li>
+              <li><span class="step-dot">2.</span> Cleanse wound gently with sterile Normal Saline from the cleanest area outward.</li>
+              <li><span class="step-dot">3.</span> Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.</li>
+              <li><span class="step-dot">4.</span> Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.</li>
+            </ul>
+          </div>
+          <div class="edu-alert-box">
+            ⚠️ <b>Infection Red Flags:</b> Spreading redness &gt;2cm, intense heat, foul odor, cloudy discharge, or patient fever &gt;38°C.
+          </div>
+        </div>
+
+        <!-- Guide 2: NG Tube Feeding -->
+        <div class="edu-card gold">
+          <div>
+            <div class="edu-header">
+              <div class="edu-icon" style="color:#FFD27A;">🍼</div>
+              <div>
+                <div class="edu-title">Safe Ryle's / NG Tube Feeding</div>
+                <div class="edu-subtitle">Aspiration Prevention &amp; Bolus Protocol</div>
+              </div>
+            </div>
+            <p style="font-size:0.86rem; color:#CBD5E1; line-height:1.5;">
+              Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.
+            </p>
+            <ul class="edu-steps">
+              <li><span class="step-dot">1.</span> Elevate patient's head of bed to at least 45° to 60° before starting feeds.</li>
+              <li><span class="step-dot">2.</span> Verify tube marking at nose and check gastric residual volume with a 50ml syringe.</li>
+              <li><span class="step-dot">3.</span> Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).</li>
+              <li><span class="step-dot">4.</span> Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.</li>
+              <li><span class="step-dot">5.</span> <b>Crucial:</b> Keep patient upright for 45–60 minutes after feeding.</li>
+            </ul>
+          </div>
+          <div class="edu-alert-box" style="color:#FDE047; border-color:rgba(245,158,11,0.3); background:rgba(245,158,11,0.12);">
+            ⚠️ <b>Stop Feeding Immediately If:</b> Patient coughs persistently, vomits, experiences choking, or struggles to breathe.
+          </div>
+        </div>
+
+        <!-- Guide 3: Foley Catheter Care -->
+        <div class="edu-card green">
+          <div>
+            <div class="edu-header">
+              <div class="edu-icon" style="color:#10B981;">💧</div>
+              <div>
+                <div class="edu-title">Foley Urinary Catheter Hygiene</div>
+                <div class="edu-subtitle">CAUTI Prevention &amp; Drainage Maintenance</div>
+              </div>
+            </div>
+            <p style="font-size:0.86rem; color:#CBD5E1; line-height:1.5;">
+              Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).
+            </p>
+            <ul class="edu-steps">
+              <li><span class="step-dot">1.</span> Keep urine drainage bag <b>below bladder level</b> at all times to prevent backflow.</li>
+              <li><span class="step-dot">2.</span> Perform gentle peri-care twice daily with mild soap and clean warm water.</li>
+              <li><span class="step-dot">3.</span> Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.</li>
+              <li><span class="step-dot">4.</span> Empty drainage bag when 2/3 full, avoiding contact between tap and container.</li>
+            </ul>
+          </div>
+          <div class="edu-alert-box" style="color:#86EFAC; border-color:rgba(16,185,129,0.3); background:rgba(16,185,129,0.12);">
+            ⚠️ <b>Clinical Alert:</b> Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.
+          </div>
+        </div>
+
+        <!-- Guide 4: Stroke Positioning & Bedsore Offloading -->
+        <div class="edu-card purple">
+          <div>
+            <div class="edu-header">
+              <div class="edu-icon" style="color:#C084FC;">🛌</div>
+              <div>
+                <div class="edu-title">Stroke Rehabilitation &amp; Offloading</div>
+                <div class="edu-subtitle">2-Hourly Turning &amp; Contracture Prevention</div>
+              </div>
+            </div>
+            <p style="font-size:0.86rem; color:#CBD5E1; line-height:1.5;">
+              Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.
+            </p>
+            <ul class="edu-steps">
+              <li><span class="step-dot">1.</span> Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).</li>
+              <li><span class="step-dot">2.</span> Place supportive pillows between knees, under affected arm, and floating heels.</li>
+              <li><span class="step-dot">3.</span> Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.</li>
+              <li><span class="step-dot">4.</span> Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).</li>
+            </ul>
+          </div>
+          <div class="edu-alert-box" style="color:#E9D5FF; border-color:rgba(168,85,247,0.3); background:rgba(168,85,247,0.12);">
+            💡 <b>Caregiver Tip:</b> Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.
+          </div>
+        </div>
+
+        <!-- Guide 5: Medication Administration Safety -->
+        <div class="edu-card red">
+          <div>
+            <div class="edu-header">
+              <div class="edu-icon" style="color:#EF4444;">💊</div>
+              <div>
+                <div class="edu-title">Medication Safety &amp; Standard Times</div>
+                <div class="edu-subtitle">Standard Malaysian Clinical Dosing Schedule</div>
+              </div>
+            </div>
+            <p style="font-size:0.86rem; color:#CBD5E1; line-height:1.5;">
+              Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.
+            </p>
+            <ul class="edu-steps">
+              <li><span class="step-dot">⏰ OD (Once Daily):</span> 07:00 or 12:00 (Morning / Midday)</li>
+              <li><span class="step-dot">⏰ BD (Twice Daily):</span> 06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)</li>
+              <li><span class="step-dot">⏰ TDS (Three Times Daily):</span> 06:00, 15:00, 22:00 (8-hour intervals)</li>
+              <li><span class="step-dot">⏰ QID (Four Times Daily):</span> 06:00, 12:00, 18:00, 22:00 (6-hour intervals)</li>
+              <li><span class="step-dot">⏰ ON (Nightly):</span> 19:00 or 22:00 before sleep</li>
+            </ul>
+          </div>
+          <div class="edu-alert-box">
+            ⚠️ <b>Do Not Crush:</b> Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared App & Booking Callout -->
+  <section class="app-banner-box">
+    <div style="flex: 1; min-width: 280px;">
+      <span style="background:rgba(255,210,122,0.2); color:#FDE047; font-size:0.72rem; font-weight:800; padding:3px 10px; border-radius:6px; text-transform:uppercase;">
+        Assura Nursing App · 官方手机应用
+      </span>
+      <h3 style="font-size:1.4rem; color:#FFF; font-weight:800; margin:8px 0 6px;">Need Professional Nurse Visit or Equipment in Penang?</h3>
+      <p style="font-size:0.88rem; color:#CBD5E1; line-height:1.55;">
+        Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island &amp; Mainland.
+      </p>
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp">
+        <span>💬</span> WhatsApp Consultation
+      </a>
+      <a href="services.html" class="btn-primary">
+        <span>📋</span> View Services &amp; Rates
+      </a>
+      <a href="download.html" class="btn-secondary">
+        <span>📱</span> Download Apps
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- EQUIPMENT DETAIL MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img src="images/equipment/hospital-bed.jpg" alt="" class="modal-img" id="modalImg" onerror="this.src='assura-logo.png'; this.style.objectFit='contain'; this.style.padding='20px';" />
+    <div class="modal-content">
+      <span class="equip-cat-badge" style="position:static; margin-bottom:8px;" id="modalCategory">🛏️ Mobility &amp; Beds</span>
+      <h2 class="modal-title" id="modalTitle">Equipment Title</h2>
+      <p style="font-size:0.88rem; color:#CBD5E1; line-height:1.6;" id="modalDesc">Equipment description.</p>
+      
+      <div class="modal-rates-row">
+        <div class="modal-rate-pill">
+          <div class="modal-rate-label">Estimated Rental</div>
+          <div class="modal-rate-val" id="modalRent">RM 180 / mo</div>
+        </div>
+        <div class="modal-rate-pill">
+          <div class="modal-rate-label">Purchase Reference</div>
+          <div class="modal-rate-val" id="modalBuy">RM 2,500</div>
+        </div>
+      </div>
+
+      <div style="font-size:0.82rem; font-weight:800; color:#38BDF8; text-transform:uppercase; margin-bottom:8px;">
+        Clinical Points &amp; Safety Checklist:
+      </div>
+      <ul class="modal-points-list" id="modalList"></ul>
+
+      <div class="modal-cta-row">
+        <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-modal-wa" id="modalWaBtn">
+          <span>💬</span> Inquire &amp; Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Unified Footer -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="media.html">Media</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="download.html">Download App</a>
+    <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
+  </div>
+  <p>© 2026 Assura Nursing · All Rights Reserved · Penang Island &amp; Mainland</p>
+  <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Trained Nurses &amp; Dedicated Caregivers</p>
+</footer>
+
+<script>
+// Mobile Navigation Toggle
+function toggleMobileMenu() {
+  const menu = document.getElementById('navMenu');
+  if (menu) menu.classList.toggle('mobile-open');
+}
+
+// TAB SWITCHING LOGIC
+function switchTab(tabId) {
+  const tabs = ['emergency', 'equipment', 'education'];
+  tabs.forEach(t => {
+    const btn = document.getElementById('tabBtn-' + t);
+    const panel = document.getElementById('panel-' + t);
+    if (btn) btn.classList.remove('active');
+    if (panel) panel.classList.remove('active');
+  });
+
+  const activeBtn = document.getElementById('tabBtn-' + tabId);
+  const activePanel = document.getElementById('panel-' + tabId);
+  if (activeBtn) activeBtn.classList.add('active');
+  if (activePanel) activePanel.classList.add('active');
+
+  // Update URL hash without scroll jump
+  if (history.replaceState) {
+    history.replaceState(null, null, '#' + tabId);
+  }
+}
+
+// Handle Direct URL Parameters & Hash on Load
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const queryTab = params.get('tab');
+  const hashTab = window.location.hash.replace('#', '');
+
+  const targetTab = queryTab || hashTab;
+  if (targetTab && (targetTab === 'equipment' || targetTab === 'emergency' || targetTab === 'education')) {
+    switchTab(targetTab);
+  }
+});
+
+// FIRST AID SIMULATOR
+const simStages = [
+  {
+    icon: '👋',
+    title: 'Step 1: Check Responsiveness',
+    desc: 'Firmly tap the person\'s shoulders and shout loudly: "Are you okay?". If no response and no normal breathing, proceed immediately.'
+  },
+  {
+    icon: '📞',
+    title: 'Step 2: Shout For Help & Dial 999',
+    desc: 'Call 999 or 112 immediately on speakerphone. Ask someone nearby to get an AED (Automated External Defibrillator) if available.'
+  },
+  {
+    icon: '👐',
+    title: 'Step 3: Position Your Hands',
+    desc: 'Kneel beside the person. Place the heel of one hand in the center of the chest (lower half of breastbone). Interlock your other hand on top.'
+  },
+  {
+    icon: '⚡',
+    title: 'Step 4: Push Hard & Fast (110 BPM)',
+    desc: 'Keep arms straight and push down at least 2 inches (5 cm) at 100 to 120 beats per minute. Let chest rise completely between compressions.'
+  },
+  {
+    icon: '🚑',
+    title: 'Step 5: Continue Non-Stop Until Ambulance Arrives',
+    desc: 'Keep uninterrupted compressions until emergency medical personnel arrive and take over, or the person clearly wakes up and moves.'
+  }
+];
+
+let curSimIdx = 0;
+
+function updateSimDisplay() {
+  const stage = simStages[curSimIdx];
+  const icon = document.getElementById('simIcon');
+  const title = document.getElementById('simTitle');
+  const desc = document.getElementById('simDesc');
+  
+  if (icon && title && desc) {
+    icon.textContent = stage.icon;
+    title.textContent = stage.title;
+    desc.textContent = stage.desc;
+  }
+}
+
+function nextSimStep() {
+  curSimIdx = (curSimIdx + 1) % simStages.length;
+  updateSimDisplay();
+}
+
+function prevSimStep() {
+  curSimIdx = (curSimIdx - 1 + simStages.length) % simStages.length;
+  updateSimDisplay();
+}
+
+// 110 BPM METRONOME
+let audioCtx = null;
+let isPlaying = false;
+let metroInterval = null;
+
+function playClick() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+  gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.08);
+}
+
+function toggleMetronome() {
+  const btn = document.getElementById('btnMetro');
+  const heart = document.getElementById('heartPulsar');
+
+  if (!isPlaying) {
+    isPlaying = true;
+    btn.innerHTML = '⏹ Stop CPR Metronome';
+    btn.style.background = 'linear-gradient(135deg, #475569, #334155)';
+    heart.classList.add('beating');
+
+    playClick();
+    metroInterval = setInterval(() => {
+      playClick();
+    }, 545.45);
+  } else {
+    isPlaying = false;
+    btn.innerHTML = '▶ Start 110 BPM CPR Rhythm Metronome';
+    btn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
+    heart.classList.remove('beating');
+
+    if (metroInterval) clearInterval(metroInterval);
+  }
+}
+
+// EQUIPMENT DATA & MODALS
+const equipmentData = {
+  bed: {
+    title: "2/3-Function Electric Hospital Bed 电动护理床",
+    category: "🛏️ Mobility & Beds",
+    img: "images/equipment/hospital-bed.jpg",
+    rent: "RM 180 – RM 320 / month",
+    buy: "RM 2,200 – RM 4,500 (Ref)",
+    desc: "Provides electric backrest raising, knee elevation, and bed height adjustability with collapsible aluminum guardrails and castor brake locks.",
+    points: [
+      "Select 3-function model if caregivers require height adjustability to prevent back strain during nursing procedures.",
+      "Ensure collapsible aluminum guardrails lock securely to prevent accidental falls.",
+      "Check that your room has a dedicated 3-pin power point and at least 3 feet clearance around the bed.",
+      "Assura nurses assist with hospital-to-home bed positioning during discharge handover."
+    ]
+  },
+  oxygen: {
+    title: "Medical Oxygen Concentrator (5L / 10L) 医疗制氧机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/oxygen-concentrator.jpg",
+    rent: "RM 250 – RM 450 / month",
+    buy: "RM 2,800 – RM 6,000 (Ref)",
+    desc: "Extracts nitrogen from ambient air to continuously deliver 90-96% pure medical oxygen without the recurring hassle of heavy gas cylinders.",
+    points: [
+      "5L units are standard for low-flow requirements (1-4 LPM); 10L units are required for high-dependency respiratory cases.",
+      "Always maintain 1 backup oxygen tank in the house in case of power failure or electrical tripping.",
+      "Use only distilled water in the humidifier bottle to prevent mineral crust buildup.",
+      "Assura nurses monitor SpO2 and breath sounds to ensure flow rate matches doctor's prescription."
+    ]
+  },
+  suction: {
+    title: "Electric Medical Suction Machine 电动吸痰机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/suction-machine.jpg",
+    rent: "RM 120 – RM 200 / month",
+    buy: "RM 650 – RM 1,400 (Ref)",
+    desc: "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear and patent airway in bedridden or dysphagic patients.",
+    points: [
+      "Look for overflow valve protection and bacterial filters to prevent liquid entry into the motor.",
+      "Ensure suction pressure is maintained between 80-120 mmHg for adult comfort and safety.",
+      "Always use single-use sterile suction catheters with fingertip suction control valves.",
+      "Assura nurses provide specialized tracheostomy cannula cleaning and emergency airway suctioning."
+    ]
+  },
+  ripple: {
+    title: "Ripple Anti-Decubitus Mattress 防褥疮气垫床",
+    category: "🛏️ Mobility & Beds",
+    img: "images/equipment/ripple-mattress.jpg",
+    rent: "RM 50 – RM 80 / month",
+    buy: "RM 280 – RM 650 (Ref)",
+    desc: "Features alternating cylindrical air cells connected to a continuous ultra-quiet pump that shifts pressure points every 6 to 10 minutes.",
+    points: [
+      "Essential for patients with Braden Scale score < 15 or existing Stage 1 to 4 pressure bedsores.",
+      "Tubular cell mattresses provide significantly better pressure relief than cheaper bubble pads.",
+      "Must be paired with regular 2-hourly turning protocols by caregivers or nurses.",
+      "Assura nurses perform weekly wound staging and healing progression monitoring."
+    ]
+  },
+  wheelchair: {
+    title: "Foldable Wheelchair & Commode Chair 轮椅与便椅",
+    category: "♿ Transfer & Hygiene",
+    img: "images/equipment/wheelchair.jpg",
+    rent: "RM 60 – RM 100 / month",
+    buy: "RM 250 – RM 750 (Ref)",
+    desc: "Dual-purpose mobility and hygiene support. Features flip-up armrests, removable footrests, and a waterproof padded seat with waste bucket.",
+    points: [
+      "Choose aluminum lightweight models for easy loading into car boots for specialist appointments.",
+      "Flip-up armrests allow seamless lateral sliding transfers from bed to chair without lifting.",
+      "Ensure rear wheel brakes lock firmly before initiating any patient transfer.",
+      "Assura nurses train family caregivers on ergonomic, zero-strain transfer techniques."
+    ]
+  },
+  nebulizer: {
+    title: "Medical Compressor Nebulizer 医用雾化机",
+    category: "🫁 Respiratory & Airway",
+    img: "images/equipment/nebulizer.jpg",
+    rent: "RM 40 – RM 70 / month",
+    buy: "RM 180 – RM 350 (Ref)",
+    desc: "Delivers prescribed respiratory medications (e.g. Salbutamol, Combivent, Pulmicort) directly into the lungs in a gentle, breathable aerosol mist.",
+    points: [
+      "Ideal for elderly patients with weak inspiratory effort who cannot use standard MDI inhalers.",
+      "Rinse medicine chamber with sterile water after every use to prevent drug residue crystallization.",
+      "Replace tubing and mask every 3-6 months for optimal hygiene.",
+      "Assura nurses assist with breath coordination and post-nebulization chest percussion."
+    ]
+  },
+  vital: {
+    title: "Digital Vital Signs & SpO2 Monitor 生命体征仪",
+    category: "🩺 Monitoring & Kits",
+    img: "images/equipment/vital-monitor.jpg",
+    rent: "RM 80 – RM 140 / month",
+    buy: "RM 350 – RM 900 (Ref)",
+    desc: "Digital clinical-grade monitor for rapid assessment of Blood Pressure (NIBP), Pulse Rate, Blood Oxygen Saturation (SpO2), and Core Temperature.",
+    points: [
+      "Select blood pressure cuffs appropriate for arm circumference to avoid false high/low readings.",
+      "Ensure pulse oximeter probe has good peripheral perfusion and clean nail surface.",
+      "Helps detect early deterioration before serious medical emergencies occur.",
+      "Assura nurses log all vital records into our digital MEWS chart for attending doctors."
+    ]
+  },
+  dressing: {
+    title: "Disposable Sterile Wound Dressing Pack (一次性无菌换药包)",
+    category: "🩺 Monitoring & Kits",
+    img: "images/equipment/dressing-pack.jpg",
+    rent: "N/A (Consumable Item)",
+    buy: "RM 15 – RM 45 / pack (Ref)",
+    desc: "Single-use, gamma-sterilized basic and complex dressing sets containing forceps, gauze swabs, non-woven drape, and waste bag.",
+    points: [
+      "Guarantees 100% sterile aseptic non-touch technique (ANTT) for surgical wound care.",
+      "Never reuse opened dressing sets to prevent cross-contamination and MRSA infections.",
+      "Assura nurses supply certified sterile dressing sets directly during every home procedure.",
+      "Includes specialized modern hydrocolloid, alginate, and silicone foam dressings."
+    ]
+  }
+};
+
+function filterCategory(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('.equip-card');
+  cards.forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function openModal(id) {
+  const data = equipmentData[id];
+  if (!data) return;
+
+  document.getElementById('modalImg').src = data.img;
+  document.getElementById('modalCategory').textContent = data.category;
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalRent').textContent = data.rent;
+  document.getElementById('modalBuy').textContent = data.buy;
+  document.getElementById('modalDesc').textContent = data.desc;
+
+  const listEl = document.getElementById('modalList');
+  listEl.innerHTML = '';
+  data.points.forEach(pt => {
+    const li = document.createElement('li');
+    li.textContent = pt;
+    listEl.appendChild(li);
+  });
+
+  const waMsg = encodeURIComponent(
+    'Hi Assura Nursing, I am inquiring about the medical equipment: ' + data.title + '. Could you provide rental availability and delivery details for Penang?'
+  );
+  document.getElementById('modalWaBtn').href = 'https://wa.me/60122064868?text=' + waMsg;
+
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function closeModalOnBg(e) {
+  if (e.target.id === 'modalOverlay') {
+    closeModal();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+<script src="notifications.js"></script>
+</body>
+</html>

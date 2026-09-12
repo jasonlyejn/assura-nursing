@@ -1,11 +1,14 @@
 // Assura Nursing — Unified Service Worker
 // Version: v22 (Modular Multi-Page & Offline Notification Engine)
-const CACHE_NAME = 'assura-nursing-v22';
+const CACHE_NAME = 'assura-nursing-v25';
 
 const APP_FILES = [
   '/',
   '/index.html',
   '/services.html',
+  '/media.html',
+  '/announcements.html',
+  '/resources.html',
   '/equipment.html',
   '/emergency.html',
   '/about.html',
