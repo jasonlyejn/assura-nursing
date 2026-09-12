@@ -330,7 +330,7 @@ export default function ConsentModal({ caseId, patientName, defaultDnr = false, 
               </div>
             ) : (
               <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '8px', fontSize: '0.75rem', color: '#334155', margin: '8px 0 12px', lineHeight: 1.4 }}>
-                <b>Informed Procedure Consent / 知情同意声明:</b> I authorize Assura Nursing Care to perform the indicated clinical nursing procedure. Risks, benefits, and alternatives have been explained.
+                <b>Informed Procedure Consent / 知情同意声明:</b> I authorize Assura Nursing to perform the indicated clinical nursing procedure. Risks, benefits, and alternatives have been explained.
               </div>
             )}
 

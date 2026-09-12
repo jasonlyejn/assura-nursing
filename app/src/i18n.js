@@ -10,7 +10,7 @@ export const LANGUAGES = [
 export const TRANSLATIONS = {
   en: {
     // Navigation & Shell
-    appTitle: 'Assura Case Management',
+    appTitle: 'Assura Nursing',
     home: 'Home',
     enquiries: 'Enquiries',
     intake: 'New Enquiries',

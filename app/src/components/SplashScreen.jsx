@@ -59,7 +59,7 @@ export default function SplashScreen({ onFinish, minDuration = 1200 }) {
       >
         <img
           src="/logo.png?v=9"
-          alt="Assura Nursing Care"
+          alt="Assura Nursing"
           style={{
             height: '110px',
             width: 'auto',
@@ -89,7 +89,7 @@ export default function SplashScreen({ onFinish, minDuration = 1200 }) {
             textTransform: 'uppercase',
           }}
         >
-          Assura Nursing Care
+          Assura Nursing
         </h1>
         <p
           style={{

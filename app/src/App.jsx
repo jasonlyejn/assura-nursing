@@ -642,7 +642,7 @@ export default function App() {
       </main>
 
       <footer className="foot muted">
-        <span>Assura Case Management · Penang &amp; Northern Region · {t('appTitle')}</span>
+        <span>Assura Nursing · Penang &amp; Northern Region · {t('appTitle')}</span>
       </footer>
     </div>
   );

@@ -14,6 +14,14 @@
   Content-Type: application/vnd.microsoft.portable-executable
   Content-Disposition: attachment
 
+/AssuraStaff.exe
+  Content-Type: application/vnd.microsoft.portable-executable
+  Content-Disposition: attachment; filename="AssuraStaff.exe"
+
+/AssuraNursing.exe
+  Content-Type: application/vnd.microsoft.portable-executable
+  Content-Disposition: attachment; filename="AssuraNursing.exe"
+
 /*.zip
   Content-Type: application/zip
   Content-Disposition: attachment

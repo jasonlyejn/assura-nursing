@@ -119,7 +119,7 @@ export default function App() {
   if (!state.authed) {
     return (
       <div className="auth-wrap">
-        <img className="brand" src="/logo.png" alt="Assura Nursing Care" />
+        <img className="brand" src="/logo.png" alt="Assura Nursing" />
         {state.needsSetup ? <Setup onDone={refresh} /> : <Login onDone={refresh} />}
         {state.error && <p className="err">{state.error}</p>}
       </div>
@@ -141,7 +141,7 @@ export default function App() {
       <header className="topbar">
         <img className="topbar-logo" src="/logo.png" alt="Assura" />
         <div className="topbar-title">
-          <b>Assura Case Management</b>
+          <b>Assura Nursing</b>
           <span>{PAGE[view] || ''}</span>
         </div>
         <div className="topbar-who">
@@ -235,7 +235,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="foot muted">Assura Nursing Care · staff app v2 · Phase 2</footer>
+      <footer className="foot muted">Assura Nursing · staff app v2 · Phase 2</footer>
     </div>
   );
 }

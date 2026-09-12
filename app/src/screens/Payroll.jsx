@@ -41,7 +41,7 @@ export default function Payroll({ me }) {
   const grandPayout = payrollData.reduce((s, p) => s + (p.net_nurse_payout || 0), 0);
 
   function sendWhatsAppPaySlip(p) {
-    const text = `📄 *[Assura Nursing Care] Monthly Pay Slip / 护士薪资结算单*\n`
+    const text = `📄 *[Assura Nursing] Monthly Pay Slip / 护士薪资结算单*\n`
       + `👤 *Staff:* ${p.staff.name} (${p.staff.staff_no || p.staff.role})\n`
       + `📅 *Period:* ${p.month}\n`
       + `💳 *Bank:* ${p.staff.bank_name || 'Bank'} · ${p.staff.bank_acc || 'Acc No'}\n\n`

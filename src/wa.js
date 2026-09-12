@@ -12,7 +12,7 @@ export function waOpen(phone, text) {
   window.open('https://wa.me/' + n + '?text=' + encodeURIComponent(text), '_blank');
 }
 
-const BIZ = 'Assura Nursing Care';
+const BIZ = 'Assura Nursing';
 export const msg = {
   confirm: (name) =>
     `Hi${name ? ' ' + name : ''}, this is ${BIZ} 🌿 We're glad to take your case and will confirm the visit details with you shortly. `

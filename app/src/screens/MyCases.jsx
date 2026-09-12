@@ -55,7 +55,7 @@ export default function MyCases({ me, onOpenMews, onOpenHand, onOpenQuote, onOpe
 
       if (c.phone) {
         const time = new Date().toLocaleTimeString('en-MY', { hour: '2-digit', minute: '2-digit' });
-        const waText = `👋 *[Assura Nursing Care] Nurse Arrival Notification*\n\n`
+        const waText = `👋 *[Assura Nursing] Nurse Arrival Notification*\n\n`
           + `Hello! Nurse *${me.name}* has arrived safely at your residence for *${c.name}* at *${time}*.\n`
           + `We are now starting today's clinical home care routine. 🙏`;
         if (confirm('Send arrival notification WhatsApp to family?')) {
@@ -82,7 +82,7 @@ export default function MyCases({ me, onOpenMews, onOpenHand, onOpenQuote, onOpe
       flash(`✓ Clocked out! Visit duration: ${res.duration_minutes} minutes.`);
 
       if (caseObj.phone) {
-        const waText = `✅ *[Assura Nursing Care] Visit Completed*\n\n`
+        const waText = `✅ *[Assura Nursing] Visit Completed*\n\n`
           + `👤 *Patient:* ${caseObj.name}\n`
           + `👩‍⚕️ *Attending Nurse:* ${me.name}\n`
           + `⏱️ *Duration:* ${res.duration_minutes} minutes\n`

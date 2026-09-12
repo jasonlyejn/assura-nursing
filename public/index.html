@@ -1,32 +1,1339 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0d1f33" />
-  <title>Assura Staff Portal · Clinical Case Management</title>
-  <meta name="application-name" content="Assura Staff" />
-  <meta name="apple-mobile-web-app-title" content="Assura Staff" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <link rel="icon" type="image/png" href="/icon-192.png" />
-  <link rel="apple-touch-icon" href="/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
-  <link rel="stylesheet" href="/styles.css?v=12" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#040D1A" />
+<title>Assura Nursing · 24/7 Professional Home Nursing Penang</title>
+<meta name="description" content="Professional private home nursing care in Penang. Trained nurses & dedicated caregivers providing wound care, stroke rehab, elderly care & medical equipment." />
+<link rel="icon" href="home-nursing-icon-192.png" />
+<link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
+<link rel="manifest" href="home-nursing.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg-deep: #030914;
+  --bg-card: rgba(10, 25, 48, 0.72);
+  --bg-card-hover: rgba(15, 38, 72, 0.88);
+  --line: rgba(56, 189, 248, 0.22);
+  --blue: #0284c7;
+  --blue-bright: #38bdf8;
+  --ice: #E0F2FE;
+  --gold: #FFD27A;
+  --amber: #F59E0B;
+  --pulse: #E4544A;
+  --green: #10B981;
+  --purple: #A855F7;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   RICH DYNAMIC BACKGROUNDS: AURORA ORBS, MEDICAL GRID & ECG PULSE WAVE
+   ========================================================================== */
+.sky-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(14, 165, 233, 0.35) 0%, transparent 70%),
+    radial-gradient(circle 600px at 85% 25%, rgba(2, 132, 199, 0.25) 0%, transparent 70%),
+    radial-gradient(circle 500px at 15% 45%, rgba(245, 158, 11, 0.16) 0%, transparent 65%),
+    radial-gradient(circle 550px at 75% 70%, rgba(228, 84, 74, 0.18) 0%, transparent 65%),
+    radial-gradient(circle 600px at 20% 90%, rgba(16, 185, 129, 0.15) 0%, transparent 70%),
+    #030914;
+}
+
+/* Floating Light Orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  animation: float-orb 16s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  top: 5%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4), rgba(2, 132, 199, 0.1));
+  animation-duration: 18s;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(255, 210, 122, 0.3), rgba(245, 158, 11, 0.05));
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 480px;
+  height: 480px;
+  bottom: 10%;
+  right: 5%;
+  background: radial-gradient(circle, rgba(228, 84, 74, 0.3), rgba(168, 85, 247, 0.08));
+  animation-duration: 20s;
+  animation-delay: -10s;
+}
+
+@keyframes float-orb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 35px) scale(1.08); }
+  100% { transform: translate(-30px, -25px) scale(0.95); }
+}
+
+/* High-Tech Perspective Medical Grid */
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 85%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+
+/* Sticky Luxury Top Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 9, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+}
+
+.brand-wrap:hover .brand-logo {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+}
+
+/* Nav Menu Items */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #FFF;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(2, 132, 199, 0.15) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.portal-pill-patient {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(2, 132, 199, 0.15));
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.portal-pill-patient:hover {
+  background: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 0 16px rgba(14, 165, 233, 0.5);
+  transform: translateY(-1px);
+}
+
+.portal-pill-staff {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.15));
+  color: #fde047;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.portal-pill-staff:hover {
+  background: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #FFF;
+  font-size: 1.1rem;
+  padding: 5px 9px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION: VIBRANT GLOW, WELCOMING MEDICAL COPY & ECG HEARTBEAT
+   ========================================================================== */
+.hero-sec {
+  padding: 46px 10px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.trust-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #6EE7B7;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10B981;
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.hero-sec h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 45%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
+}
+
+.hero-sec .sub-headline {
+  color: #CBD5E1;
+  font-size: 1.1rem;
+  max-width: 740px;
+  margin: 0 auto 28px;
+  line-height: 1.65;
+}
+
+/* ECG Heartbeat Waveform Line */
+.ecg-line-wrap {
+  max-width: 480px;
+  margin: 0 auto 30px;
+  height: 32px;
+  opacity: 0.85;
+}
+
+.ecg-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ecg-path {
+  stroke: #38BDF8;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: ecg-draw 3.5s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.8));
+}
+
+@keyframes ecg-draw {
+  0% { stroke-dashoffset: 600; }
+  80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -600; }
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFF;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #FFF;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.65);
+}
+
+.btn-secondary {
+  background: rgba(15, 23, 42, 0.75);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 14px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(30, 41, 59, 0.9);
+  color: #FFF;
+  border-color: var(--blue-bright);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   TRUST STATS BAR WITH GLOWING ACCENT BORDERS
+   ========================================================================== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, rgba(15, 28, 52, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-top: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 18px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s;
+}
+
+.stat-card:hover {
+  border-color: var(--blue-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+}
+
+.stat-num {
+  font-size: 1.9rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 60%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   GLASS SECTION CARDS: LAYERED GRADIENTS & SHIMMER HIGHLIGHTS
+   ========================================================================== */
+.glass-card {
+  background: linear-gradient(145deg, rgba(12, 28, 54, 0.78) 0%, rgba(5, 16, 34, 0.86) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-top: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 24px;
+  padding: 36px 30px;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), transparent);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
+.sec-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18) 0%, rgba(2, 132, 199, 0.1) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: var(--blue-bright);
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.section-head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 3.6vw, 2.3rem);
+  font-weight: 600;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.section-head p {
+  font-size: 0.96rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   3-STEP PROCESS: GLOWING NUMBER BADGES & RICH CARDS
+   ========================================================================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.step-card {
+  background: linear-gradient(145deg, rgba(15, 30, 58, 0.85) 0%, rgba(8, 20, 40, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-top: 1px solid rgba(255, 210, 122, 0.4);
+  border-radius: 20px;
+  padding: 26px 22px;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.step-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(255, 210, 122, 0.2);
+}
+
+.step-number-badge {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: rgba(255, 210, 122, 0.25);
+  font-family: var(--font-serif);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.step-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   POPULAR SERVICES: COLOR-CODED ACCENT HEADERS & GLOW BORDERS
+   ========================================================================== */
+.services-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
+}
+
+.service-v-card {
+  background: linear-gradient(145deg, rgba(14, 28, 54, 0.85) 0%, rgba(6, 16, 32, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 20px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.service-v-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--blue-bright);
+}
+
+.service-v-card.gold::before { background: var(--gold); }
+.service-v-card.red::before { background: #EF4444; }
+.service-v-card.green::before { background: #10B981; }
+.service-v-card.purple::before { background: #A855F7; }
+.service-v-card.amber::before { background: #F59E0B; }
+
+.service-v-card:hover {
+  background: linear-gradient(145deg, rgba(20, 42, 80, 0.9) 0%, rgba(8, 22, 44, 0.95) 100%);
+  border-color: var(--blue-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(56, 189, 248, 0.25);
+}
+
+.s-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.s-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.s-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.3;
+}
+
+.s-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.s-features-list {
+  list-style: none;
+  font-size: 0.82rem;
+  color: #94A3B8;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.s-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.s-features-list li::before {
+  content: '✓';
+  color: #38BDF8;
+  font-weight: 900;
+}
+
+.s-link-btn {
+  color: #38BDF8;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  align-self: flex-start;
+  transition: all 0.2s;
+}
+
+.s-link-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  color: #FFF;
+  border-color: #38BDF8;
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   FOUNDER & LEADERSHIP SHOWCASE WITH LUXURY GOLD HALO
+   ========================================================================== */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.founder-photo-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 210, 122, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 210, 122, 0.2);
+}
+
+.founder-photo-wrap img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-badge-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(3, 9, 20, 0.96) 20%, transparent 100%);
+  padding: 20px 16px 14px;
+  text-align: center;
+}
+
+.founder-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.founder-role {
+  color: var(--gold);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.founder-quote {
+  font-size: 0.96rem;
+  color: #CBD5E1;
+  line-height: 1.68;
+  margin-bottom: 20px;
+}
+
+.founder-creds {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cred-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 8px;
+  color: #E2E8F0;
+}
+
+/* ==========================================================================
+   APP DOWNLOAD BANNER (VIBRANT GLOW)
+   ========================================================================== */
+.app-banner-box {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.3) 0%, rgba(10, 25, 48, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-top: 1px solid rgba(56, 189, 248, 0.65);
+  border-radius: 22px;
+  padding: 34px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.25);
+}
+
+.app-banner-text h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.app-banner-text p {
+  font-size: 0.9rem;
+  color: #CBD5E1;
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  color: #64748B;
+  font-size: 0.82rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #38BDF8;
+}
+
+@media (max-width: 960px) {
+  .nav-menu { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-menu.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(3, 9, 20, 0.98);
+    padding: 16px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    gap: 8px;
+  }
+  .founder-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .founder-photo-wrap {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .founder-creds {
+    justify-content: center;
+  }
+  .app-banner-box {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.portal-pill {
+  background: rgba(2, 132, 199, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38BDF8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.portal-pill:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38BDF8;
+}
+
+
+/* Global Mobile Alignment & Overflow Protection */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container, .shell, .wrap {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+  }
+  
+  .glass-card, .card, .hero, .unified-app-box {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+  }
+  
+  .grid, .grid2, .grid3, .grid4, .card-grid, .features-grid, .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  
+  .btn-group, .hero-actions, .cta-group, .button-row {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .table-wrap, .table-container, .scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  
+  h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 52px !important;
+  }
+}
+</style>
+
+<style>
+.home-hero-banner {
+  margin: 20px auto 0;
+  max-width: 900px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.home-hero-banner img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(4,13,26,0.95) 0%, rgba(4,13,26,0.3) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 24px;
+}
+.home-hero-tag {
+  color: #FFD27A;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.home-svc-thumb {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #06172C;
+}
+.home-svc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.service-v-card:hover .home-svc-thumb img {
+  transform: scale(1.05);
+}
+</style>
+
 </head>
 <body>
-  <div id="root"><div class="center muted">Loading…</div></div>
-  <script type="module" src="/app.js?v=12"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js?v=12').then((reg) => {
-          reg.update();
-        }).catch(() => {});
-      });
-    }
-  </script>
+<div class="sky-canvas"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="grid-lines"></div>
+
+<!-- Sticky Navigation Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand-wrap">
+      <img src="assura-logo.png" alt="Assura Nursing" class="brand-logo" />
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
+      <li><a href="equipment.html" class="nav-link">Medical Equipment</a></li>
+      <li><a href="emergency.html" class="nav-link">Emergency Protocols</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="careers.html" class="nav-link">Careers</a></li>
+      <li><a href="download.html" class="nav-link">Download Apps</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <a href="portal.html" class="portal-pill">🏥 <span>Clinical Portal</span></a>
+
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- 1. HERO SECTION (Warm, Visual & Reassuring) -->
+  <section class="hero-sec">
+    <div class="trust-badge-pill">
+      <span class="pulse-dot"></span>
+      <span>Penang's 1st Digital &amp; AI-Era Home Nursing · Transparent Fare Rates · Fast Staff Coordination</span>
+    </div>
+
+    <h1>Professional Clinical Care, Tailored to Your Home</h1>
+    <p class="sub-headline">
+      Trained nurses and dedicated caregivers delivering personalized care plans adapted to your home environment—ensuring professional handling to minimize infection risks while upholding patient safety, comfort, and dignity.
+    </p>
+
+    <!-- Animated ECG Waveform Visual -->
+    <div class="ecg-line-wrap">
+      <svg class="ecg-svg" viewBox="0 0 500 40" preserveAspectRatio="none">
+        <path class="ecg-path" d="M0,20 L120,20 L135,5 L145,35 L155,10 L165,28 L175,20 L300,20 L315,5 L325,35 L335,10 L345,28 L355,20 L500,20" />
+      </svg>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp">
+        <span>💬</span> Chat on WhatsApp (012-206 4868)
+      </a>
+      <a href="services.html" class="btn-primary">
+        <span>🩺</span> View Services &amp; Fees
+      </a>
+      <a href="emergency.html" class="btn-secondary">
+        <span>🚨</span> Emergency &amp; GPS Guide
+      </a>
+    </div>
+
+    <!-- Stats Bar -->
+    
+    
+    </div>
+  
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-num">Trained</div>
+        <div class="stat-label">Nurses &amp; Dedicated Caregivers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1st in Penang</div>
+        <div class="stat-label">Pioneering Digital &amp; AI-Era Care</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Fast Match</div>
+        <div class="stat-label">Staff Coordination &amp; ASAP Reply</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Transparent</div>
+        <div class="stat-label">Upfront Fare &amp; Procedure Rates</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EASY 3-STEP CARE PROCESS (Simple for the Public) -->
+  <section class="glass-card">
+    <div class="section-head">
+      <span class="sec-tag">How It Works · 3个简单步骤</span>
+      <h2>Getting Home Care for Your Loved One is Simple</h2>
+      <p>We handle everything from initial medical assessment to daily bedside nursing so your family can focus on recovery.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-number-badge">01</span>
+        <span class="step-icon">📱</span>
+        <div class="step-title">1. Reach Out to Us</div>
+        <p class="step-desc">
+          Contact our care hotline via WhatsApp or phone. Share your location and care needs—we immediately look for nearby available staff and get back to you ASAP.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <span class="step-number-badge">02</span>
+        <span class="step-icon">📋</span>
+        <div class="step-title">2. Free Clinical Plan</div>
+        <p class="step-desc">
+          Our experienced nursing and care team formulates an individualized home recovery schedule, clinical supplies checklist, and visit timeline.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <span class="step-number-badge">03</span>
+        <span class="step-icon">🏡</span>
+        <div class="step-title">3. Nurse at Your Home</div>
+        <p class="step-desc">
+          A trained nurse arrives punctually with clean clinical equipment, executing professional procedures to minimize infection risks while providing gentle bedside care and digital updates.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. POPULAR NURSING SERVICES (Lively Visual Cards) -->
+  <section class="glass-card">
+    <div class="section-head">
+      <span class="sec-tag">Our Services · 护理项目与服务</span>
+      <h2>Personalized Home Nursing &amp; Clinical Services</h2>
+      <p>Professionally planned around your home environment with trained staff handling to minimize infection risks and protect patient safety. Click any service to view rates and book instantly:</p>
+    </div>
+
+    <div class="services-visual-grid">
+      <!-- Wound Care -->
+      <div class="service-v-card" onclick="location.href='services.html?service=wound'" style="cursor: pointer;" title="Click to view rates for Wound Care">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#38BDF8;">🩹</div>
+              <div class="s-title">Wound Care &amp; Dressing</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Professional wound dressing for diabetic foot ulcers, surgical stitches/staples removal, and pressure sore management to minimize infection and accelerate healing.
+          </p>
+          <ul class="s-features-list">
+            <li>Aseptic non-touch technique (ANTT)</li>
+            <li>Diabetic foot ulcer treatment</li>
+            <li>Post-operative wound healing</li>
+          </ul>
+        </div>
+        <a href="services.html?service=wound" class="s-link-btn" onclick="event.stopPropagation();">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Elderly Care -->
+      <div class="service-v-card gold" onclick="location.href='services.html?service=elderly'" style="cursor: pointer;" title="Click to view rates for Elderly & Bedridden Care">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FFD27A;">👴</div>
+              <div class="s-title">Elderly &amp; Bedridden Care</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Attentive daily nursing, feeding tube (Ryle's tube/NG tube) replacement, catheter (CBD) care, hygiene assistance, and vital monitoring.
+          </p>
+          <ul class="s-features-list">
+            <li>NG Tube &amp; Urinary Catheter insertion</li>
+            <li>Daily vitals &amp; blood glucose tracking</li>
+            <li>Gentle bed bathing &amp; repositioning</li>
+          </ul>
+        </div>
+        <a href="services.html?service=elderly" class="s-link-btn" onclick="event.stopPropagation();">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Stroke Rehab -->
+      <div class="service-v-card red" onclick="location.href='services.html?service=stroke'" style="cursor: pointer;" title="Click to view rates for Stroke Rehab">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FCA5A5;">🧠</div>
+              <div class="s-title">Stroke &amp; Post-Op Recovery</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Personalized recovery care to regain physical mobility, strictly timely medication dispensing, fall prevention, and hospital discharge handover.
+          </p>
+          <ul class="s-features-list">
+            <li>Passive &amp; active limb exercise support</li>
+            <li>Medication administration &amp; safety</li>
+            <li>Complication prevention &amp; care</li>
+          </ul>
+        </div>
+        <a href="services.html?service=stroke" class="s-link-btn" onclick="event.stopPropagation();">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Injections & Lab Tests -->
+      <div class="service-v-card green" onclick="location.href='services.html?service=injection'" style="cursor: pointer;" title="Click to view rates for Injections & Blood Tests">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#6EE7B7;">💉</div>
+              <div class="s-title">Injections &amp; Blood Tests</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Doctor-prescribed intramuscular / subcutaneous injections, insulin therapy management, and home blood collection dispatched to partner labs.
+          </p>
+          <ul class="s-features-list">
+            <li>Prescribed injection administration</li>
+            <li>Home blood taking (Full blood, Renal, Liver)</li>
+            <li>Fast digital laboratory report turnaround</li>
+          </ul>
+        </div>
+        <a href="services.html?service=injection" class="s-link-btn" onclick="event.stopPropagation();">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Hospital Escort -->
+      <div class="service-v-card purple" onclick="location.href='services.html?service=escort'" style="cursor: pointer;" title="Click to view rates for Hospital Escort">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#C084FC;">🏥</div>
+              <div class="s-title">Hospital Escort &amp; Transfer</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge accompaniment.
+          </p>
+          <ul class="s-features-list">
+            <li>Direct hospital nurse accompaniment</li>
+            <li>Doctor consultation note taking for family</li>
+            <li>Wheelchair &amp; ambulance coordination</li>
+          </ul>
+        </div>
+        <a href="services.html?service=escort" class="s-link-btn" onclick="event.stopPropagation();">View Rates &amp; Book Visit →</a>
+      </div>
+
+      <!-- Equipment Rental -->
+      <div class="service-v-card amber" onclick="location.href='equipment.html'" style="cursor: pointer;" title="Click to explore Medical Equipment">
+        <div>
+          <div class="s-header">
+            <div class="s-header">
+              <div class="s-icon-wrap" style="color:#FBBF24;">🛏️</div>
+              <div class="s-title">Medical Equipment Rental</div>
+            </div>
+          </div>
+          <p class="s-desc">
+            Same-day home delivery and installation of hospital beds, oxygen concentrators, suction machines, patient wheelchairs, and ripple mattresses.
+          </p>
+          <ul class="s-features-list">
+            <li>Same-day delivery in Penang</li>
+            <li>Certified 3-function electric medical beds</li>
+            <li>Medical oxygen &amp; ripple mattress setup</li>
+          </ul>
+        </div>
+        <a href="equipment.html" class="s-link-btn" onclick="event.stopPropagation();">Explore Equipment Catalog →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. UNIFIED MOBILE APP BANNER (Assura Nursing) -->
+  <section class="app-banner-box">
+    <div class="app-banner-text">
+      <span style="background:rgba(255,210,122,0.2); color:#FDE047; font-size:0.72rem; font-weight:800; padding:3px 10px; border-radius:6px; text-transform:uppercase;">
+        Official Android App · 官方安卓应用
+      </span>
+      <h3 style="margin-top:6px;">Download Assura Nursing App</h3>
+      <p>
+        Manage home nurse bookings, track clinical vital charts, access the 24/7 Penang emergency hospital directory, and use the 110 BPM CPR metronome even while offline.
+      </p>
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="AssuraNursing.apk" download class="btn-whatsapp" style="background:linear-gradient(135deg, #0284c7, #0369a1); box-shadow:0 6px 20px rgba(2,132,199,0.4);">
+        <span>🤖</span> Download Android APK
+      </a>
+      <a href="AssuraStaff.exe" download class="btn-whatsapp" style="background:linear-gradient(135deg, #1e3a8a, #0369a1); border:1px solid #38BDF8; box-shadow:0 6px 20px rgba(56,189,248,0.3);">
+        <span>💻</span> Download Windows (.exe)
+      </a>
+      <a href="download.html" class="btn-secondary">
+        <span>📖</span> Installation Guide
+      </a>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  
+  <div class="footer-links" style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 14px;">
+    <a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a>
+    <a href="services.html" style="color: #94A3B8; text-decoration: none;">Services &amp; Rates</a>
+    <a href="equipment.html" style="color: #94A3B8; text-decoration: none;">Equipment Guide</a>
+    <a href="emergency.html" style="color: #94A3B8; text-decoration: none;">Emergency Protocols</a>
+    <a href="about.html" style="color: #94A3B8; text-decoration: none;">About Us</a>
+    <a href="careers.html" style="color: #94A3B8; text-decoration: none;">Careers</a>
+    <a href="download.html" style="color: #94A3B8; text-decoration: none;">Download App</a>
+    <a href="portal.html" style="color: #38BDF8; font-weight: 700; text-decoration: none;">Clinical Portal</a>
+  </div>
+  <p>© 2026 Assura Nursing · All Rights Reserved · Penang Island &amp; Mainland</p>
+  <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Trained Nurses &amp; Dedicated Caregivers</p>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('navMenu');
+  if (menu) menu.classList.toggle('mobile-open');
+}
+</script>
+<script src="notifications.js"></script>
 </body>
 </html>

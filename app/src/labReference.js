@@ -1,4 +1,4 @@
-// Assura Nursing Care — Clinical Laboratory Reference Ranges & Critical Values Library
+// Assura Nursing — Clinical Laboratory Reference Ranges & Critical Values Library
 
 export const LAB_PANELS = [
   {

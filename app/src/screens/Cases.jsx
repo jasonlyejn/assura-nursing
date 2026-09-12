@@ -114,7 +114,7 @@ export default function Cases({ onOpenMews, onOpenQuote, onOpenHand, onOpenChat,
   }
 
   function copyWaBroadcastText(b) {
-    const text = `📢 *[Assura Nursing Care] New Case Available*\n`
+    const text = `📢 *[Assura Nursing] New Case Available*\n`
       + `📍 *Location:* ${b.area || 'Penang'}\n`
       + `🩺 *Care Type:* ${b.care_type || 'Nursing Care'}\n`
       + `⏰ *Schedule:* ${b.schedule || 'Standard visit'}\n`

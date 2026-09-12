@@ -74,7 +74,7 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
   function buildMessage() {
     const name = (c && c.name) ? c.name : 'there';
     const L = [];
-    L.push(`Hello ${name}, thank you for choosing Assura Nursing Care 🙏`);
+    L.push(`Hello ${name}, thank you for choosing Assura Nursing 🙏`);
     L.push('');
     L.push('Here is your care estimate:');
     L.push('');
@@ -95,7 +95,7 @@ export default function Quote({ caseId, onBack, mode = 'quote' }) {
     L.push('');
     L.push('Reply *YES* to confirm and we will arrange your nurse. 回复 *YES* 即可安排护士。');
     L.push('');
-    L.push('Assura Nursing Care · assuranursing.com');
+    L.push('Assura Nursing · assuranursing.com');
     return L.join('\n');
   }
 

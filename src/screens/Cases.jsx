@@ -17,7 +17,7 @@ export default function Cases({ onOpenMews, onOpenQuote, onOpenHand, onOpenChat,
     try {
       const r = await api.makeFeedbackLink(c.id);
       const link = location.origin + '/feedback.html?t=' + r.token;
-      const msg = `Hello${c.name ? ' ' + c.name : ''}, thank you for trusting Assura Nursing Care `
+      const msg = `Hello${c.name ? ' ' + c.name : ''}, thank you for trusting Assura Nursing `
         + `with your family's care 🙏\n\nWould you spare a minute to tell us how we did? `
         + `It helps us care better.\n感谢您的信任，请花一分钟给我们意见：\n\n${link}`;
       const phone = String(c.phone || '').replace(/[^0-9]/g, '').replace(/^0/, '60');

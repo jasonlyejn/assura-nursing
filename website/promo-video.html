@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assura Nursing Care · Viral Video Studio (With Music & Audio)</title>
-  <meta name="description" content="Assura Nursing Care Promo Video & Marketing Studio.">
+  <title>Assura Nursing · Viral Video Studio (With Music & Audio)</title>
+  <meta name="description" content="Assura Nursing Promo Video & Marketing Studio.">
   <style>
     body { background: #070f1e; color: #f8fafc; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
     .studio-container { max-width: 960px; width: 100%; display: flex; flex-direction: column; align-items: center; }
@@ -21,11 +21,80 @@
     .progress { height: 100%; width: 0%; background: linear-gradient(90deg, #0284c7, #38bdf8); transition: width 0.1s linear; }
     .scene-badge { margin-top: 10px; font-size: 0.85rem; color: #38bdf8; font-weight: 700; background: rgba(2,132,199,0.15); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(56,189,248,0.3); }
     .downloads-box { margin-top: 24px; padding: 16px; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; width: 100%; max-width: 640px; text-align: center; }
-  </style>
+  
+/* Global Mobile Alignment & Overflow Protection */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container, .shell, .wrap {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+  }
+  
+  .glass-card, .card, .hero, .unified-app-box {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+  }
+  
+  .grid, .grid2, .grid3, .grid4, .card-grid, .features-grid, .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  
+  .btn-group, .hero-actions, .cta-group, .button-row {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .table-wrap, .table-container, .scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  
+  h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+</style>
 </head>
 <body>
 
 <div class="studio-container">
+        <div style="margin-bottom: 18px; text-align: center;">
+          <a href="index.html" title="Back to Home">
+            <img src="assura-logo.png" alt="Assura Nursing" style="height: 60px; width: auto; filter: drop-shadow(0 3px 10px rgba(56,189,248,0.4));" />
+          </a>
+        </div>
   <h1 style="color: #fff; margin: 0 0 4px; font-size: 1.7rem; text-align: center; letter-spacing: -0.5px;">
     🎬 Assura Viral Promo Video Studio
   </h1>
@@ -327,7 +396,7 @@ function draw(timeSec) {
     ctx.fillStyle = '#6ee7b7';
     ctx.font = 'bold 24px sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('💬 [Assura Nursing Care Notification]', 95, 530);
+    ctx.fillText('💬 [Assura Nursing Notification]', 95, 530);
     
     ctx.fillStyle = '#fff';
     ctx.font = '22px sans-serif';
@@ -489,6 +558,6 @@ resetBtn.addEventListener('click', () => {
 // Initial draw
 draw(0);
 </script>
-
+<script src="notifications.js"></script>
 </body>
 </html>

@@ -44,7 +44,7 @@ export default function Billing({ me }) {
 
   function whatsappInvoice(inv) {
     const L = [];
-    L.push(`*Assura Nursing Care — Invoice ${inv.no}*`);
+    L.push(`*Assura Nursing — Invoice ${inv.no}*`);
     L.push(`Patient: ${inv.patient_name}`);
     if (inv.period_start) L.push(`Period: ${inv.period_start} – ${inv.period_end || inv.period_start}`);
     L.push('');

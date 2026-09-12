@@ -1,4 +1,4 @@
-// Assura Case Management — offline shell.
+// Assura Nursing — offline shell.
 // Caches the app itself so it opens without signal; live data still needs a
 // connection (the API is never cached, so you never see stale patient data).
 const SHELL = 'assura-shell-v13-patient-admission-assessment';

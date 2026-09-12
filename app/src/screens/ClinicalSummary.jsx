@@ -95,7 +95,7 @@ export default function ClinicalSummary({ caseObj, me, onBack }) {
 
   function handleShareWhatsApp() {
     if (!shareResult) return;
-    const msg = `🩺 *Assura Nursing Care — Clinical Summary & Records for ${caseObj.name}*\n\nDear Doctor ${shareDocName || ''},\nHere is the live confidential clinical referral record:\n🔗 ${shareResult.share_url}\n\n🔑 *Security PIN:* ${shareResult.pin}\n⏳ *Validity:* 72 hours\n\n_Prepared by Attending Nurse: ${me?.name || 'Assura Care Team'}_`;
+    const msg = `🩺 *Assura Nursing — Clinical Summary & Records for ${caseObj.name}*\n\nDear Doctor ${shareDocName || ''},\nHere is the live confidential clinical referral record:\n🔗 ${shareResult.share_url}\n\n🔑 *Security PIN:* ${shareResult.pin}\n⏳ *Validity:* 72 hours\n\n_Prepared by Attending Nurse: ${me?.name || 'Assura Care Team'}_`;
     const cleanPhone = (shareDocPhone || '').replace(/\D/g, '');
     const url = cleanPhone ? `https://wa.me/${cleanPhone.startsWith('60') ? cleanPhone : '60' + cleanPhone.replace(/^0/, '')}?text=${encodeURIComponent(msg)}` : `https://wa.me/?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jason Ng - Photo Selection Gallery</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #070d1e; color: #f8fafc; padding: 20px; }
+  .header { max-width: 1400px; margin: 0 auto 20px auto; background: #0f1c3f; padding: 20px 28px; border-radius: 14px; border: 1px solid #1e3a8a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; position: sticky; top: 10px; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+  h1 { font-size: 22px; color: #38bdf8; margin-bottom: 4px; }
+  p { color: #94a3b8; font-size: 13px; }
+  .action-wrap { display: flex; align-items: center; gap: 12px; }
+  .selected-bar { background: #0284c7; color: white; padding: 8px 16px; border-radius: 10px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  .copy-btn { background: white; color: #0284c7; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; transition: transform 0.1s; }
+  .copy-btn:hover { transform: scale(1.03); background: #e0f2fe; }
+  .grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #0f1c3f; border-radius: 12px; overflow: hidden; border: 2px solid #1e3a8a; display: flex; flex-direction: column; transition: all 0.2s; }
+  .card:hover { border-color: #38bdf8; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+  .card.selected { border-color: #10b981; background: #064e3b; }
+  .img-box { width: 100%; height: 260px; background: #050814; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .img-box img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+  .badge-id { position: absolute; top: 8px; left: 8px; background: rgba(7,13,30,0.9); backdrop-filter: blur(6px); color: #38bdf8; font-weight: 800; font-size: 12px; padding: 3px 8px; border-radius: 6px; border: 1px solid #38bdf8; }
+  .card-info { padding: 12px 14px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .card-title { font-size: 13px; font-weight: 600; color: #f1f5f9; margin-bottom: 8px; word-break: break-all; }
+  .select-btn { background: #0284c7; color: white; border: none; padding: 8px 10px; border-radius: 6px; font-weight: 600; font-size: 12px; cursor: pointer; width: 100%; }
+  .select-btn:hover { background: #0369a1; }
+  .card.selected .select-btn { background: #10b981; }
+
+/* Global Mobile Alignment & Overflow Protection */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container, .shell, .wrap {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+  }
+  
+  .glass-card, .card, .hero, .unified-app-box {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+  }
+  
+  .grid, .grid2, .grid3, .grid4, .card-grid, .features-grid, .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  
+  .btn-group, .hero-actions, .cta-group, .button-row {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .table-wrap, .table-container, .scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  
+  h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+</style>
+</head>
+<body>
+        <div style="padding: 16px; text-align: center; background: #030a16; border-bottom: 1px solid rgba(56,189,248,0.2);">
+          <a href="index.html" title="Back to Home">
+            <img src="assura-logo.png" alt="Assura Nursing" style="height: 58px; width: auto; filter: drop-shadow(0 3px 10px rgba(56,189,248,0.35));" />
+          </a>
+        </div>
+  <div class="header">
+    <div>
+      <h1>📸 Jason Ng - Working & Personal Photo Gallery</h1>
+      <p>Total <b>112 authentic photos</b> from Aikang Documents, WhatsApp, and Gallery. Click to select.</p>
+    </div>
+    <div class="action-wrap">
+      <div class="selected-bar">
+        <span>Selected: <span id="count">0</span></span>
+      </div>
+      <button class="copy-btn" onclick="copySelected()">📋 Copy Selected IDs</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    
+    <div class="card" id="PHOTO-001">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-001</span>
+        <img src="images/review_gallery/photo_001.jpg" alt="PHOTO-001" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_001.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-001')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-002">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-002</span>
+        <img src="images/review_gallery/photo_002.jpg" alt="PHOTO-002" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_002.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-002')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-003">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-003</span>
+        <img src="images/review_gallery/photo_003.jpg" alt="PHOTO-003" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_003.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-003')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-004">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-004</span>
+        <img src="images/review_gallery/photo_004.jpg" alt="PHOTO-004" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_004.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-004')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-005">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-005</span>
+        <img src="images/review_gallery/photo_005.jpg" alt="PHOTO-005" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_005.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-005')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-006">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-006</span>
+        <img src="images/review_gallery/photo_006.jpg" alt="PHOTO-006" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_006.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-006')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-007">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-007</span>
+        <img src="images/review_gallery/photo_007.jpg" alt="PHOTO-007" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_007.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-007')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-008">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-008</span>
+        <img src="images/review_gallery/photo_008.jpg" alt="PHOTO-008" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_008.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-008')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-009">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-009</span>
+        <img src="images/review_gallery/photo_009.jpg" alt="PHOTO-009" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_009.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-009')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-010">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-010</span>
+        <img src="images/review_gallery/photo_010.jpg" alt="PHOTO-010" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_010.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-010')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-011">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-011</span>
+        <img src="images/review_gallery/photo_011.jpg" alt="PHOTO-011" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_011.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-011')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-012">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-012</span>
+        <img src="images/review_gallery/photo_012.jpg" alt="PHOTO-012" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_012.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-012')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-013">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-013</span>
+        <img src="images/review_gallery/photo_013.jpg" alt="PHOTO-013" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_013.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-013')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-014">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-014</span>
+        <img src="images/review_gallery/photo_014.jpg" alt="PHOTO-014" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_014.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-014')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-015">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-015</span>
+        <img src="images/review_gallery/photo_015.jpg" alt="PHOTO-015" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_015.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-015')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-016">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-016</span>
+        <img src="images/review_gallery/photo_016.jpg" alt="PHOTO-016" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_016.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-016')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-017">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-017</span>
+        <img src="images/review_gallery/photo_017.jpg" alt="PHOTO-017" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_017.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-017')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-018">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-018</span>
+        <img src="images/review_gallery/photo_018.jpg" alt="PHOTO-018" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_018.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-018')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-019">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-019</span>
+        <img src="images/review_gallery/photo_019.jpg" alt="PHOTO-019" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_019.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-019')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-020">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-020</span>
+        <img src="images/review_gallery/photo_020.jpg" alt="PHOTO-020" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_020.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-020')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-021">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-021</span>
+        <img src="images/review_gallery/photo_021.jpg" alt="PHOTO-021" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_021.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-021')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-022">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-022</span>
+        <img src="images/review_gallery/photo_022.jpg" alt="PHOTO-022" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_022.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-022')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-023">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-023</span>
+        <img src="images/review_gallery/photo_023.jpg" alt="PHOTO-023" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_023.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-023')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-024">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-024</span>
+        <img src="images/review_gallery/photo_024.jpg" alt="PHOTO-024" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_024.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-024')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-025">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-025</span>
+        <img src="images/review_gallery/photo_025.jpg" alt="PHOTO-025" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_025.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-025')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-026">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-026</span>
+        <img src="images/review_gallery/photo_026.jpg" alt="PHOTO-026" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_026.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-026')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-027">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-027</span>
+        <img src="images/review_gallery/photo_027.jpg" alt="PHOTO-027" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_027.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-027')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-028">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-028</span>
+        <img src="images/review_gallery/photo_028.jpg" alt="PHOTO-028" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_028.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-028')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-029">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-029</span>
+        <img src="images/review_gallery/photo_029.jpg" alt="PHOTO-029" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_029.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-029')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-030">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-030</span>
+        <img src="images/review_gallery/photo_030.jpg" alt="PHOTO-030" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_030.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-030')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-031">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-031</span>
+        <img src="images/review_gallery/photo_031.jpg" alt="PHOTO-031" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_031.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-031')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-032">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-032</span>
+        <img src="images/review_gallery/photo_032.jpg" alt="PHOTO-032" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_032.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-032')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-033">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-033</span>
+        <img src="images/review_gallery/photo_033.jpg" alt="PHOTO-033" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_033.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-033')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-034">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-034</span>
+        <img src="images/review_gallery/photo_034.jpg" alt="PHOTO-034" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_034.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-034')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-035">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-035</span>
+        <img src="images/review_gallery/photo_035.jpg" alt="PHOTO-035" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_035.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-035')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-036">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-036</span>
+        <img src="images/review_gallery/photo_036.jpg" alt="PHOTO-036" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_036.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-036')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-037">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-037</span>
+        <img src="images/review_gallery/photo_037.jpg" alt="PHOTO-037" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_037.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-037')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-038">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-038</span>
+        <img src="images/review_gallery/photo_038.jpg" alt="PHOTO-038" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_038.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-038')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-039">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-039</span>
+        <img src="images/review_gallery/photo_039.jpg" alt="PHOTO-039" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_039.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-039')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-040">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-040</span>
+        <img src="images/review_gallery/photo_040.jpg" alt="PHOTO-040" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_040.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-040')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-041">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-041</span>
+        <img src="images/review_gallery/photo_041.jpg" alt="PHOTO-041" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_041.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-041')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-042">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-042</span>
+        <img src="images/review_gallery/photo_042.jpg" alt="PHOTO-042" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_042.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-042')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-043">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-043</span>
+        <img src="images/review_gallery/photo_043.jpg" alt="PHOTO-043" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_043.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-043')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-044">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-044</span>
+        <img src="images/review_gallery/photo_044.jpg" alt="PHOTO-044" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_044.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-044')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-045">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-045</span>
+        <img src="images/review_gallery/photo_045.jpg" alt="PHOTO-045" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_045.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-045')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-046">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-046</span>
+        <img src="images/review_gallery/photo_046.jpg" alt="PHOTO-046" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_046.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-046')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-047">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-047</span>
+        <img src="images/review_gallery/photo_047.jpg" alt="PHOTO-047" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_047.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-047')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-048">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-048</span>
+        <img src="images/review_gallery/photo_048.jpg" alt="PHOTO-048" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_048.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-048')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-049">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-049</span>
+        <img src="images/review_gallery/photo_049.jpg" alt="PHOTO-049" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_049.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-049')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-050">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-050</span>
+        <img src="images/review_gallery/photo_050.jpg" alt="PHOTO-050" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_050.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-050')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-051">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-051</span>
+        <img src="images/review_gallery/photo_051.jpg" alt="PHOTO-051" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_051.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-051')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-052">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-052</span>
+        <img src="images/review_gallery/photo_052.jpg" alt="PHOTO-052" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_052.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-052')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-053">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-053</span>
+        <img src="images/review_gallery/photo_053.jpg" alt="PHOTO-053" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_053.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-053')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-054">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-054</span>
+        <img src="images/review_gallery/photo_054.jpg" alt="PHOTO-054" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_054.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-054')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-055">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-055</span>
+        <img src="images/review_gallery/photo_055.jpg" alt="PHOTO-055" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_055.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-055')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-056">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-056</span>
+        <img src="images/review_gallery/photo_056.jpg" alt="PHOTO-056" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_056.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-056')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-057">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-057</span>
+        <img src="images/review_gallery/photo_057.jpg" alt="PHOTO-057" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_057.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-057')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-058">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-058</span>
+        <img src="images/review_gallery/photo_058.jpg" alt="PHOTO-058" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_058.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-058')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-059">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-059</span>
+        <img src="images/review_gallery/photo_059.jpg" alt="PHOTO-059" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_059.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-059')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-060">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-060</span>
+        <img src="images/review_gallery/photo_060.jpg" alt="PHOTO-060" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_060.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-060')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-061">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-061</span>
+        <img src="images/review_gallery/photo_061.jpg" alt="PHOTO-061" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_061.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-061')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-062">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-062</span>
+        <img src="images/review_gallery/photo_062.jpg" alt="PHOTO-062" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_062.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-062')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-063">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-063</span>
+        <img src="images/review_gallery/photo_063.jpg" alt="PHOTO-063" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_063.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-063')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-064">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-064</span>
+        <img src="images/review_gallery/photo_064.jpg" alt="PHOTO-064" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_064.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-064')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-065">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-065</span>
+        <img src="images/review_gallery/photo_065.jpg" alt="PHOTO-065" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_065.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-065')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-066">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-066</span>
+        <img src="images/review_gallery/photo_066.jpg" alt="PHOTO-066" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_066.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-066')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-067">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-067</span>
+        <img src="images/review_gallery/photo_067.jpg" alt="PHOTO-067" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_067.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-067')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-068">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-068</span>
+        <img src="images/review_gallery/photo_068.jpg" alt="PHOTO-068" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_068.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-068')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-069">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-069</span>
+        <img src="images/review_gallery/photo_069.jpg" alt="PHOTO-069" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_069.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-069')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-070">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-070</span>
+        <img src="images/review_gallery/photo_070.jpg" alt="PHOTO-070" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_070.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-070')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-071">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-071</span>
+        <img src="images/review_gallery/photo_071.jpg" alt="PHOTO-071" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_071.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-071')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-072">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-072</span>
+        <img src="images/review_gallery/photo_072.jpg" alt="PHOTO-072" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_072.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-072')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-073">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-073</span>
+        <img src="images/review_gallery/photo_073.jpg" alt="PHOTO-073" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_073.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-073')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-074">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-074</span>
+        <img src="images/review_gallery/photo_074.jpg" alt="PHOTO-074" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_074.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-074')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-075">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-075</span>
+        <img src="images/review_gallery/photo_075.jpg" alt="PHOTO-075" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_075.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-075')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-076">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-076</span>
+        <img src="images/review_gallery/photo_076.jpg" alt="PHOTO-076" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_076.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-076')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-077">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-077</span>
+        <img src="images/review_gallery/photo_077.jpg" alt="PHOTO-077" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_077.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-077')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-078">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-078</span>
+        <img src="images/review_gallery/photo_078.jpg" alt="PHOTO-078" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_078.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-078')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-079">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-079</span>
+        <img src="images/review_gallery/photo_079.jpg" alt="PHOTO-079" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_079.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-079')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-080">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-080</span>
+        <img src="images/review_gallery/photo_080.jpg" alt="PHOTO-080" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_080.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-080')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-081">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-081</span>
+        <img src="images/review_gallery/photo_081.jpg" alt="PHOTO-081" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_081.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-081')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-082">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-082</span>
+        <img src="images/review_gallery/photo_082.jpg" alt="PHOTO-082" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_082.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-082')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-083">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-083</span>
+        <img src="images/review_gallery/photo_083.jpg" alt="PHOTO-083" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_083.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-083')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-084">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-084</span>
+        <img src="images/review_gallery/photo_084.jpg" alt="PHOTO-084" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_084.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-084')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-085">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-085</span>
+        <img src="images/review_gallery/photo_085.jpg" alt="PHOTO-085" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_085.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-085')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-086">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-086</span>
+        <img src="images/review_gallery/photo_086.jpg" alt="PHOTO-086" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_086.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-086')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-087">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-087</span>
+        <img src="images/review_gallery/photo_087.jpg" alt="PHOTO-087" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_087.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-087')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-088">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-088</span>
+        <img src="images/review_gallery/photo_088.jpg" alt="PHOTO-088" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_088.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-088')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-089">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-089</span>
+        <img src="images/review_gallery/photo_089.jpg" alt="PHOTO-089" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_089.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-089')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-090">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-090</span>
+        <img src="images/review_gallery/photo_090.jpg" alt="PHOTO-090" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_090.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-090')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-091">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-091</span>
+        <img src="images/review_gallery/photo_091.jpg" alt="PHOTO-091" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_091.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-091')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-092">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-092</span>
+        <img src="images/review_gallery/photo_092.jpg" alt="PHOTO-092" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_092.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-092')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-093">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-093</span>
+        <img src="images/review_gallery/photo_093.jpg" alt="PHOTO-093" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_093.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-093')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-094">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-094</span>
+        <img src="images/review_gallery/photo_094.jpg" alt="PHOTO-094" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_094.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-094')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-095">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-095</span>
+        <img src="images/review_gallery/photo_095.jpeg" alt="PHOTO-095" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_095.jpeg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-095')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-096">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-096</span>
+        <img src="images/review_gallery/photo_096.jpg" alt="PHOTO-096" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_096.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-096')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-097">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-097</span>
+        <img src="images/review_gallery/photo_097.jpg" alt="PHOTO-097" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_097.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-097')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-098">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-098</span>
+        <img src="images/review_gallery/photo_098.jpg" alt="PHOTO-098" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_098.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-098')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-099">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-099</span>
+        <img src="images/review_gallery/photo_099.jpg" alt="PHOTO-099" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_099.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-099')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-100">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-100</span>
+        <img src="images/review_gallery/photo_100.jpeg" alt="PHOTO-100" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_100.jpeg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-100')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-101">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-101</span>
+        <img src="images/review_gallery/photo_101.jpg" alt="PHOTO-101" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_101.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-101')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-102">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-102</span>
+        <img src="images/review_gallery/photo_102.jpg" alt="PHOTO-102" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_102.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-102')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-103">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-103</span>
+        <img src="images/review_gallery/photo_103.jpg" alt="PHOTO-103" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_103.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-103')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-104">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-104</span>
+        <img src="images/review_gallery/photo_104.jpeg" alt="PHOTO-104" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_104.jpeg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-104')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-105">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-105</span>
+        <img src="images/review_gallery/photo_105.jpeg" alt="PHOTO-105" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_105.jpeg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-105')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-106">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-106</span>
+        <img src="images/review_gallery/photo_106.jpg" alt="PHOTO-106" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_106.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-106')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-107">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-107</span>
+        <img src="images/review_gallery/photo_107.jpg" alt="PHOTO-107" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_107.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-107')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-108">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-108</span>
+        <img src="images/review_gallery/photo_108.jpeg" alt="PHOTO-108" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_108.jpeg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-108')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-109">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-109</span>
+        <img src="images/review_gallery/photo_109.jpg" alt="PHOTO-109" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_109.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-109')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-110">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-110</span>
+        <img src="images/review_gallery/photo_110.jpg" alt="PHOTO-110" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_110.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-110')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-111">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-111</span>
+        <img src="images/review_gallery/photo_111.jpg" alt="PHOTO-111" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_111.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-111')">Select for Website</button>
+      </div>
+    </div>
+  
+    <div class="card" id="PHOTO-112">
+      <div class="img-box">
+        <span class="badge-id">PHOTO-112</span>
+        <img src="images/review_gallery/photo_112.jpg" alt="PHOTO-112" loading="lazy">
+      </div>
+      <div class="card-info">
+        <div class="card-title">photo_112.jpg</div>
+        <button class="select-btn" onclick="toggleSelect('PHOTO-112')">Select for Website</button>
+      </div>
+    </div>
+  
+  </div>
+
+  <script>
+    const selected = new Set();
+    function toggleSelect(id) {
+      const card = document.getElementById(id);
+      if (selected.has(id)) {
+        selected.delete(id);
+        card.classList.remove('selected');
+        card.querySelector('.select-btn').textContent = 'Select for Website';
+      } else {
+        selected.add(id);
+        card.classList.add('selected');
+        card.querySelector('.select-btn').textContent = '✓ Selected';
+      }
+      document.getElementById('count').textContent = selected.size;
+    }
+    function copySelected() {
+      const list = Array.from(selected).join(', ');
+      navigator.clipboard.writeText(list).then(() => {
+        alert('Copied to clipboard: ' + (list || 'None selected') + '\n\nPaste it in the chat!');
+      }).catch(() => {
+        prompt('Copy your selected IDs below:', list);
+      });
+    }
+  </script>
+<script src="notifications.js"></script>
+</body>
+</html>

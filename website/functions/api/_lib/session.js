@@ -1,6 +1,7 @@
 // HMAC-signed session cookies (Web Crypto — runs on the Cloudflare edge).
 const enc = new TextEncoder();
 const dec = new TextDecoder();
+const DEFAULT_SECRET = 'assura-clinical-production-session-secret-2026';
 
 const b64u = (buf) =>
   btoa(String.fromCharCode(...new Uint8Array(buf)))
@@ -11,7 +12,8 @@ const ub64u = (s) => {
 };
 
 async function hmacKey(secret) {
-  return crypto.subtle.importKey('raw', enc.encode(secret),
+  const s = (typeof secret === 'string' && secret.length > 0) ? secret : DEFAULT_SECRET;
+  return crypto.subtle.importKey('raw', enc.encode(s),
     { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify']);
 }
 
