@@ -408,6 +408,29 @@ img, video, iframe {
 </style>
 </head>
 <body>
+
+  <!-- Top Navigation Header with Language Selector -->
+  <header style="background: rgba(6, 21, 43, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(56, 189, 248, 0.25); position: sticky; top: 0; z-index: 100; padding: 8px 16px;">
+    <div style="max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #FFF; font-weight: 800; font-size: 0.95rem;">
+        <img src="home-nursing-logo-horizontal.png" alt="Assura Nursing" style="height: 38px; width: auto;" />
+      </a>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button id="notifBellBtn" onclick="openNotificationModal()" title="Alerts & Live Case Status" style="position: relative; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.35); color: #38BDF8; padding: 5px 9px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">
+          <span>🔔</span>
+          <span style="font-size: 0.72rem;" data-i18n="notif_btn">Alerts</span>
+          <span style="position: absolute; top: -2px; right: -2px; width: 7px; height: 7px; background: #10B981; border-radius: 50%; box-shadow: 0 0 6px #10B981;"></span>
+        </button>
+        <div class="lang-bar" style="display: flex; gap: 3px; background: rgba(15, 23, 42, 0.85); padding: 3px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.25);">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">EN</button>
+          <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">中文</button>
+          <button class="lang-btn" data-lang="bm" onclick="setLanguage('bm')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">BM</button>
+          <button class="lang-btn" data-lang="ta" onclick="setLanguage('ta')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">தமிழ்</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
   <main class="shell">
     <header class="hero">
       <a href="index.html" class="brand-link" aria-label="Assura Nursing — home" title="Back to Home">
