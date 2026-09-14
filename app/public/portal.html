@@ -689,7 +689,7 @@
         <a href="AssuraNursing.apk" download class="btn btn-sec" style="flex: 1; min-width: 160px; font-size: 0.82rem; text-align: center; text-decoration: none;">
           🤖 Android APK (3.8 MB)
         </a>
-        <a href="AssuraStaff.exe" download class="btn btn-sec" style="flex: 1; min-width: 160px; font-size: 0.82rem; text-align: center; text-decoration: none; border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+        <a href="AssuraNursing.exe" download class="btn btn-sec" style="flex: 1; min-width: 160px; font-size: 0.82rem; text-align: center; text-decoration: none; border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
           💻 Windows .EXE (2.1 MB)
         </a>
       </div>
@@ -937,6 +937,35 @@
       document.getElementById('staffLoginForm').style.display = tab === 'staff' ? 'block' : 'none';
       document.getElementById('registerForm').style.display = tab === 'register' ? 'block' : 'none';
       document.getElementById('authAlert').style.display = 'none';
+    }
+
+    
+    function quickFillAndLoginPatient(phone, pin) {
+      quickFillPatient(phone, pin);
+      const form = document.getElementById('patientLoginForm');
+      if (form) {
+        if (typeof form.requestSubmit === 'function') {
+          form.requestSubmit();
+        } else {
+          form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+        }
+      }
+    }
+
+    function prevPortalWeek() {
+      if (portalCurrentWeek > 0) {
+        portalCurrentWeek--;
+        const lbl = document.getElementById('portalWeekLbl');
+        if (lbl) lbl.innerText = 'Week ' + (portalCurrentWeek + 1);
+        renderPortalMewsChart();
+      }
+    }
+
+    function nextPortalWeek() {
+      portalCurrentWeek++;
+      const lbl = document.getElementById('portalWeekLbl');
+      if (lbl) lbl.innerText = 'Week ' + (portalCurrentWeek + 1);
+      renderPortalMewsChart();
     }
 
     function quickFillPatient(phone, pin) {

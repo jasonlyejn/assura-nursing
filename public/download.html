@@ -7,7 +7,7 @@
 <title>Download Assura Nursing App · Android APK &amp; Windows Desktop</title>
 <meta name="description" content="Download the official all-in-one Assura Nursing App for patients, families, and registered nurses across Penang." />
 <link rel="icon" href="home-nursing-icon-192.png" />
-<link rel="apple-touch-icon" href="home-nursing-icon-192.png" />
+<link rel="apple-touch-icon" href="home-nursing-icon-512.png" />
 <link rel="manifest" href="home-nursing.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -402,6 +402,20 @@ body {
   color: #38BDF8;
 }
 
+.alt-mirror-row {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+.alt-mirror-row a {
+  color: #38BDF8;
+  text-decoration: underline;
+  font-weight: 600;
+  margin: 0 4px;
+}
+
 /* GUIDE MEMO CARD */
 .guide-memo-card {
   background: var(--bg-card);
@@ -716,7 +730,7 @@ body {
       <li><a href="download.html" class="nav-link active">Download Apps</a></li>
     </ul>
 
-        <div class="header-actions">
+    <div class="header-actions">
       <a href="portal.html" class="portal-pill" data-i18n="portal_pill">🏥 <span>Clinical Portal</span></a>
 
       <div class="lang-bar" id="langBar">
@@ -781,32 +795,32 @@ body {
       </button>
     </div>
 
-    <!-- Symmetrical Aligned Download Action Stack -->
-        <!-- Symmetrical Aligned Download Action Stack -->
-    <div class="btn-group-download">
-      <!-- Smart OS Detection Notice Banner -->
-      <div id="osDetectBanner" style="display:none; background:rgba(2,132,199,0.18); border:1px solid rgba(56,189,248,0.4); border-radius:12px; padding:12px 14px; text-align:center; font-size:0.82rem; color:#E0F2FE; margin-bottom:4px;">
-        <span id="osDetectText"></span>
-      </div>
+    <!-- Smart OS Detection Notice Banner -->
+    <div id="osDetectBanner" style="display:none; background:rgba(2,132,199,0.18); border:1px solid rgba(56,189,248,0.4); border-radius:12px; padding:12px 14px; text-align:center; font-size:0.82rem; color:#E0F2FE; margin-bottom:16px;">
+      <span id="osDetectText"></span>
+    </div>
 
-      <!-- 1. Android APK -->
-      <a href="AssuraNursing.apk" download="AssuraNursing.apk" class="dl-btn apk" id="btnDownloadApk" onclick="handleApkDownload(event)">
+    <!-- Symmetrical Aligned Download Action Stack -->
+    <div class="btn-group-download">
+
+      <!-- 1. Android APK Direct Link -->
+      <a href="AssuraNursing.apk" download="AssuraNursing.apk" class="dl-btn apk" id="btnDownloadApk">
         <div class="dl-btn-icon">🤖</div>
         <div class="dl-btn-text">
           <div class="dl-btn-title">Download Android APK</div>
           <div class="dl-btn-sub">v2.4 · 3.3 MB · Phones &amp; Tablets · Direct Install</div>
         </div>
-        <div class="dl-btn-badge" id="badgeApk">📥 Download</div>
+        <div class="dl-btn-badge">📥 Download</div>
       </a>
 
-      <!-- 2. Windows EXE -->
-      <a href="AssuraNursing.exe" download="AssuraNursing.exe" class="dl-btn exe" id="btnDownloadExe" onclick="handleExeDownload(event)">
+      <!-- 2. Windows EXE Direct Link -->
+      <a href="AssuraNursing.exe" download="AssuraNursing.exe" class="dl-btn exe" id="btnDownloadExe">
         <div class="dl-btn-icon">💻</div>
         <div class="dl-btn-text">
           <div class="dl-btn-title">Download Assura Nursing (.exe)</div>
           <div class="dl-btn-sub">v2.4 · 2.1 MB · PC &amp; Workstations · Standalone</div>
         </div>
-        <div class="dl-btn-badge" id="badgeExe">📥 Download</div>
+        <div class="dl-btn-badge">📥 Download</div>
       </a>
 
       <!-- 3. PWA 1-Tap Install / Open -->
@@ -828,6 +842,14 @@ body {
         </div>
         <div class="dl-btn-badge">🚀 Open</div>
       </a>
+    </div>
+
+    <!-- Direct Fallback / Alternative Mirrors -->
+    <div class="alt-mirror-row">
+      <span>Direct Mirrors:</span>
+      <a href="/AssuraNursing.apk" target="_blank" rel="noopener">Direct APK Mirror</a> ·
+      <a href="/AssuraNursing.exe" target="_blank" rel="noopener">Direct EXE Mirror</a> ·
+      <a href="portal.html">Launch Web App</a>
     </div>
   </div>
 
@@ -942,6 +964,64 @@ function setDlStep(step) {
     icon.innerText = '🩺';
     title.innerText = '3. Clinical Staff Sign-in (医护人员工号登录)';
     desc.innerText = 'Registered nurses and supervisors sign in with their Clinical Staff ID (e.g. ASN-001) and PIN to access clinical rosters and shift management.';
+  }
+}
+
+// Smart Device & OS Detection
+let deferredInstallPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const pwaBtn = document.getElementById('btnInstallPwa');
+  const pwaBadge = document.getElementById('pwaBtnBadge');
+  if (pwaBadge) pwaBadge.innerText = '⚡ 1-Tap Install';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const banner = document.getElementById('osDetectBanner');
+  const text = document.getElementById('osDetectText');
+
+  if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    if (banner && text) {
+      banner.style.display = 'block';
+      banner.style.borderColor = 'rgba(255, 210, 122, 0.5)';
+      text.innerHTML = '🍏 <b>Apple iOS (iPhone / iPad) Detected:</b> Tap the <b>Share</b> button <span style="font-size:1.1rem;">⎋</span> in Safari and choose <b>"Add to Home Screen" ➕</b>, or launch the Clinical Portal directly.';
+    }
+    const pwaTitle = document.getElementById('pwaBtnTitle');
+    const pwaSub = document.getElementById('pwaBtnSub');
+    if (pwaTitle) pwaTitle.innerText = 'Add to iPhone / iPad Home Screen';
+    if (pwaSub) pwaSub.innerText = 'Safari Share ⎋ → Add to Home Screen ➕';
+  } else if (/android/i.test(ua)) {
+    if (banner && text) {
+      banner.style.display = 'block';
+      text.innerHTML = '🤖 <b>Android Device Detected:</b> Tap <b>Download Android APK</b> below for direct installation, or tap <b>Install Assura App</b>.';
+    }
+  } else if (/windows/i.test(ua)) {
+    if (banner && text) {
+      banner.style.display = 'block';
+      text.innerHTML = '💻 <b>Windows PC Detected:</b> Tap <b>Download Assura Nursing (.exe)</b> below for standalone workstation access.';
+    }
+  }
+});
+
+function handlePwaInstall() {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        alert('Assura Nursing installed successfully to your home screen!');
+      }
+      deferredInstallPrompt = null;
+    });
+  } else {
+    const ua = navigator.userAgent || '';
+    if (/iPad|iPhone|iPod/.test(ua)) {
+      alert('To install on iPhone/iPad: Tap the Share button (⎋) at the bottom of Safari, then tap "Add to Home Screen" (➕).');
+    } else {
+      window.location.href = 'portal.html';
+    }
   }
 }
 </script>
