@@ -470,6 +470,135 @@ img, video, iframe {
     height: 52px !important;
   }
 }
+
+/* Responsive About Us & Founder Layout */
+.founder-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.founder-photo-wrap {
+  text-align: center;
+}
+
+.founder-photo {
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 210, 122, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.founder-creds {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.sec-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cred-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(12, 28, 54, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: #CBD5E1;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-cta-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+  }
+  
+  .founder-card {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  
+  .founder-photo-wrap {
+    margin: 0 auto 10px !important;
+  }
+  
+  .founder-photo {
+    width: 180px !important;
+  }
+  
+  .founder-creds {
+    align-items: stretch !important;
+    text-align: left !important;
+  }
+  
+  .standards-grid, .mission-vision-grid, .commitments-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .about-cta-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .about-cta-btns a {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -504,9 +633,6 @@ img, video, iframe {
 
       <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
     </div>
-
-      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
-    </div>
   </div>
 </header>
 
@@ -519,10 +645,10 @@ img, video, iframe {
   </div>
 
   <!-- 1. FOUNDER'S MESSAGE & REASON WHY ASSURA WAS BUILT -->
-  <div class="glass-card" style="display:grid; grid-template-columns: minmax(220px, 260px) 1fr; gap:36px; align-items:start; margin-bottom: 24px;">
-    <div style="text-align:center;">
+  <div class="glass-card founder-card">
+    <div class="founder-photo-wrap">
       <div style="position:relative; display:inline-block;">
-        <img src="founder-blazer.jpg" alt="Mr. Jason Ng Lye Tiam (吴乃添), Founder &amp; Clinical Director" style="width:210px; height:280px; object-fit:cover; border-radius:20px; border:2px solid rgba(255,210,122,0.6); box-shadow:0 12px 30px rgba(0,0,0,0.6);" />
+        <img src="founder-blazer.jpg" alt="Mr. Jason Ng Lye Tiam (吴乃添), Founder &amp; Clinical Director" class="founder-photo" />
         <div style="margin-top:12px;">
           <div style="font-weight:800; color:#FFF; font-size:1.05rem;">Mr. Jason Ng Lye Tiam</div>
           <div style="font-size:0.95rem; color:#FFD27A; font-weight:700; margin-top:2px;">吴乃添</div>
@@ -530,7 +656,7 @@ img, video, iframe {
         </div>
       </div>
 
-      <div style="margin-top:16px; display:flex; flex-direction:column; gap:6px; text-align:left;">
+      <div class="founder-creds">
         <span class="cred-pill" style="font-size:0.75rem;">🛡️ Registered Nurse (LJM)</span>
         <span class="cred-pill" style="font-size:0.75rem;">🏥 Hospital Acute Care Background</span>
         <span class="cred-pill" style="font-size:0.75rem;">🩸 Wound Care &amp; Infection Risk Minimization</span>
@@ -558,7 +684,7 @@ img, video, iframe {
         We founded <strong>Assura Nursing</strong> to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.
       </p>
 
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+      <div class="about-cta-btns">
         <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:10px 20px; font-size:0.9rem; text-decoration:none; border-radius:10px; font-weight:700; background:linear-gradient(135deg, #22c55e, #16a34a); color:#FFF; display:inline-flex; align-items:center; gap:6px;">
           💬 Chat with Our Care Team (012-206 4868)
         </a>
@@ -579,7 +705,7 @@ img, video, iframe {
       </p>
     </div>
 
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+    <div class="standards-grid">
       <div style="background:rgba(12,28,54,0.7); padding:20px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
         <div style="font-size:1.8rem; margin-bottom:10px;">🏡</div>
         <h3 style="color:#38BDF8; font-size:1.1rem; margin-bottom:8px;">1. Home Environment Assessment &amp; Planning</h3>
@@ -615,7 +741,7 @@ img, video, iframe {
   </div>
 
   <!-- 3. MISSION & VISION SECTION (Corporate Purpose) -->
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px; margin-bottom:24px;">
+  <div class="mission-vision-grid">
     <!-- Mission Card -->
     <div class="glass-card" style="border-top:3px solid #38BDF8;">
       <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
@@ -659,7 +785,7 @@ img, video, iframe {
       <p style="font-size:0.88rem; color:#94A3B8;">Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:18px;">
+    <div class="commitments-grid">
       <div style="background:rgba(15,38,68,0.6); padding:20px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
         <div style="font-size:1.6rem; margin-bottom:10px;">💖</div>
         <h4 style="color:#38BDF8; font-size:1.05rem; margin-bottom:6px;">Compassion First (仁爱关怀)</h4>

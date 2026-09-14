@@ -885,6 +885,26 @@ const STRING_MAP = {
     "bm": "Dapatkan akses segera kepada tempahan jururawat rumah, kadar telus, direktori hospital kecemasan, dan metronom CPR 110 BPM luar talian.",
     "ta": "வீட்டு நர்ஸ் முன்பதிவு, வெளிப்படையான கட்டணங்கள் மற்றும் 110 BPM CPR வழிகாட்டியை உடனடியாக அணுகவும்."
   },
+  "Instant Home Screen App · No Storage Needed": {
+    "zh": "即时添加到手机主屏幕 · 免占存储空间",
+    "bm": "Aplikasi Skrin Utama Segera · Tanpa Storan",
+    "ta": "உடனடி முகப்புத் திரை ஆப் · சேமிப்பிடம் தேவையில்லை"
+  },
+  "Install Assura App (Web / iOS / Android)": {
+    "zh": "安装 Assura 应用 (网页/苹果/安卓通用)",
+    "bm": "Pasang Aplikasi Assura (Web / iOS / Android)",
+    "ta": "Assura செயலியை நிறுவவும் (Web / iOS / Android)"
+  },
+  "Add to iPhone / iPad Home Screen": {
+    "zh": "添加到苹果 iPhone / iPad 主屏幕",
+    "bm": "Tambah ke Skrin Utama iPhone / iPad",
+    "ta": "iPhone / iPad முகப்புத் திரையில் சேர்க்கவும்"
+  },
+  "Safari Share ⎋ → Add to Home Screen ➕": {
+    "zh": "Safari 分享 ⎋ → 添加到主屏幕 ➕",
+    "bm": "Kongsi Safari ⎋ → Tambah ke Skrin Utama ➕",
+    "ta": "Safari பகிர் ⎋ → முகப்புத் திரையில் சேர் ➕"
+  },
   "Unified Patient & Staff Clinical Portal": {
     "zh": "统一患者与医护临床系统",
     "bm": "Portal Klinikal Bersepadu Pesakit & Staf",

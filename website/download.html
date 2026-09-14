@@ -782,25 +782,44 @@ body {
     </div>
 
     <!-- Symmetrical Aligned Download Action Stack -->
+        <!-- Symmetrical Aligned Download Action Stack -->
     <div class="btn-group-download">
-      <a href="AssuraNursing.apk" download class="dl-btn apk">
+      <!-- Smart OS Detection Notice Banner -->
+      <div id="osDetectBanner" style="display:none; background:rgba(2,132,199,0.18); border:1px solid rgba(56,189,248,0.4); border-radius:12px; padding:12px 14px; text-align:center; font-size:0.82rem; color:#E0F2FE; margin-bottom:4px;">
+        <span id="osDetectText"></span>
+      </div>
+
+      <!-- 1. Android APK -->
+      <a href="AssuraNursing.apk" download="AssuraNursing.apk" class="dl-btn apk" id="btnDownloadApk" onclick="handleApkDownload(event)">
         <div class="dl-btn-icon">🤖</div>
         <div class="dl-btn-text">
           <div class="dl-btn-title">Download Android APK</div>
           <div class="dl-btn-sub">v2.4 · 3.3 MB · Phones &amp; Tablets · Direct Install</div>
         </div>
-        <div class="dl-btn-badge">📥 Download</div>
+        <div class="dl-btn-badge" id="badgeApk">📥 Download</div>
       </a>
 
-      <a href="AssuraStaff.exe" download class="dl-btn exe">
+      <!-- 2. Windows EXE -->
+      <a href="AssuraStaff.exe" download="AssuraStaff.exe" class="dl-btn exe" id="btnDownloadExe" onclick="handleExeDownload(event)">
         <div class="dl-btn-icon">💻</div>
         <div class="dl-btn-text">
           <div class="dl-btn-title">Download Windows App (.exe)</div>
           <div class="dl-btn-sub">v2.4 · 2.1 MB · PC &amp; Workstations · Standalone</div>
         </div>
-        <div class="dl-btn-badge">📥 Download</div>
+        <div class="dl-btn-badge" id="badgeExe">📥 Download</div>
       </a>
 
+      <!-- 3. PWA 1-Tap Install / Open -->
+      <button type="button" class="dl-btn pwa" id="btnInstallPwa" onclick="handlePwaInstall()" style="cursor:pointer; font-family:inherit;">
+        <div class="dl-btn-icon">📲</div>
+        <div class="dl-btn-text">
+          <div class="dl-btn-title" id="pwaBtnTitle">Install Assura App (Web / iOS / Android)</div>
+          <div class="dl-btn-sub" id="pwaBtnSub">Instant Home Screen App · No Storage Needed</div>
+        </div>
+        <div class="dl-btn-badge" id="pwaBtnBadge">⚡ Install</div>
+      </button>
+
+      <!-- 4. Clinical Portal Web Link -->
       <a href="portal.html" class="dl-btn pwa">
         <div class="dl-btn-icon">🌐</div>
         <div class="dl-btn-text">
