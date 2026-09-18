@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <defs>
-    <linearGradient id="assuraBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#082F49"/>
-      <stop offset="100%" stop-color="#0369A1"/>
-    </linearGradient>
-  </defs>
-  <rect width="120" height="120" rx="24" fill="url(#assuraBg)" stroke="#38BDF8" stroke-width="2"/>
-  <path d="M 60 20 Q 82 22 84 38 C 84 62 60 76 60 76 C 60 76 36 62 36 38 Q 38 22 60 20 Z" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="2.5"/>
-  <path d="M 42 48 L 52 48 L 56 38 L 60 58 L 64 42 L 68 48 L 78 48" fill="none" stroke="#FFD27A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="60" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle" letter-spacing="1">ASSURA CLINICAL</text>
-  <text x="60" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1">24/7 CARE LINE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
+  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <g transform="translate(80, 50)">
+    <circle cx="0" cy="0" r="28" fill="#040D1A" stroke="#FFD27A" stroke-width="2"/>
+    <!-- Medical Heart & Cross -->
+    <path d="M -12 -6 C -12 -12, -4 -14, 0 -8 C 4 -14, 12 -12, 12 -6 C 12 4, 0 14, 0 14 C 0 14, -12 4, -12 -6 Z" fill="#38BDF8"/>
+    <rect x="-2" y="-5" width="4" height="10" fill="#FFFFFF"/>
+    <rect x="-5" y="-2" width="10" height="4" fill="#FFFFFF"/>
+  </g>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#040D1A" text-anchor="middle">ASSURA NURSING</text>
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#0284C7" text-anchor="middle">24/7 CLINICAL ESCORT</text>
+  <text x="80" y="134" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#B45309" text-anchor="middle">ALL PENANG DISTRICTS</text>
+  <text x="80" y="148" font-family="Arial, sans-serif" font-size="6.5" font-weight="600" fill="#040D1A" text-anchor="middle">HOTLINE: 012-206 4868</text>
 </svg>

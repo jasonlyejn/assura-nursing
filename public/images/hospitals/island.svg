@@ -1,21 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <defs>
-    <linearGradient id="islandBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A2540"/>
-      <stop offset="100%" stop-color="#004B87"/>
-    </linearGradient>
-    <linearGradient id="islandSwoosh" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00A3E0"/>
-      <stop offset="100%" stop-color="#00D2C4"/>
-    </linearGradient>
-  </defs>
-  <rect width="120" height="120" rx="24" fill="url(#islandBg)" stroke="#0284C7" stroke-width="2"/>
-  <g transform="translate(60, 46)">
-    <path d="M -24 0 C -24 -16, -12 -26, 0 -26 C 16 -26, 26 -14, 24 2 C 22 16, 12 24, 0 24 C -14 24, -22 14, -24 0 Z" fill="none" stroke="url(#islandSwoosh)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="60 12"/>
-    <rect x="-4" y="-16" width="8" height="32" rx="2" fill="#FFFFFF"/>
-    <rect x="-16" y="-4" width="32" height="8" rx="2" fill="#FFFFFF"/>
-    <circle cx="0" cy="0" r="3.5" fill="#EF4444"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
+  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+  <!-- Island Teal Ring & Medical Cross Wave -->
+  <g transform="translate(80, 52)">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#008080" stroke-width="4"/>
+    <circle cx="0" cy="0" r="22" fill="#E6F4F4"/>
+    <!-- Medical Cross -->
+    <rect x="-4" y="-14" width="8" height="28" rx="2" fill="#008080"/>
+    <rect x="-14" y="-4" width="28" height="8" rx="2" fill="#008080"/>
+    <!-- Center Pulse -->
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <!-- Dynamic Wave Accent -->
+    <path d="M -18 8 Q -9 18 0 8 Q 9 -2 18 8" fill="none" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round"/>
   </g>
-  <text x="60" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8">ISLAND HOSPITAL</text>
-  <text x="60" y="101" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1.5">PENANG · MALAYSIA</text>
+  <!-- Typography -->
+  <text x="80" y="108" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#008080" text-anchor="middle" letter-spacing="-0.5">island</text>
+  <text x="80" y="126" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#0A2540" text-anchor="middle" letter-spacing="-0.5">hospital</text>
+  <text x="80" y="144" font-family="Arial, sans-serif" font-size="7.5" font-weight="800" fill="#008080" text-anchor="middle" letter-spacing="1.5">PENANG · MALAYSIA</text>
 </svg>

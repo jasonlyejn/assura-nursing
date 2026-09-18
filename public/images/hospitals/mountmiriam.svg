@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
+  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+  <!-- Gentle Caring Hands & Green Leaf -->
+  <g transform="translate(80, 50)">
+    <circle cx="0" cy="0" r="28" fill="#F0FDF4"/>
+    <path d="M 0 -18 C 6 -12, 14 0, 0 16 C -14 0, -6 -12, 0 -18 Z" fill="#15803D"/>
+    <path d="M 0 -12 L 0 12" stroke="#FEF08A" stroke-width="1.5"/>
+    <path d="M -16 6 Q -8 18 0 18 Q 8 18 16 6" fill="none" stroke="#CA8A04" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="80" y="104" font-family="Arial, sans-serif" font-size="10" font-weight="900" fill="#15803D" text-anchor="middle">MOUNT MIRIAM</text>
+  <text x="80" y="118" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#0C2340" text-anchor="middle">CANCER HOSPITAL</text>
+  <text x="80" y="132" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#CA8A04" text-anchor="middle">NOT-FOR-PROFIT ONCOLOGY</text>
+  <text x="80" y="146" font-family="Arial, sans-serif" font-size="6.5" font-weight="600" fill="#64748B" text-anchor="middle">TANJUNG BUNGAH · PENANG</text>
+</svg>
