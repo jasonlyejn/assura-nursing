@@ -947,7 +947,7 @@ footer.site-footer {
     </a>
     <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
       <button class="btn btn-sec" onclick="openGuideModal()" style="font-size: 0.8rem; padding: 6px 12px;">
-        📖 User Guide &amp; Memo (首次使用指南)
+        📖 User Guide &amp; Memo
       </button>
       <a href="index.html" class="btn btn-sec" style="font-size: 0.8rem; padding: 6px 12px;">← Back to Home</a>
     </div>
@@ -960,7 +960,7 @@ footer.site-footer {
       <div class="guide-banner-left">
         <div class="guide-icon-pulse">💡</div>
         <div>
-          <b style="color: #fff; font-size: 0.96rem; display: block;">First-Time App User Guide &amp; Official Memo · 首次使用备忘录</b>
+          <b style="color: #fff; font-size: 0.96rem; display: block;">First-Time App User Guide &amp; Official Memo</b>
           <span style="color: #94A3B8; font-size: 0.82rem; display: block; margin-top: 2px;">
             <b>Public:</b> No login needed · <b>Patients/Family:</b> Case Code or Phone · <b>Staff:</b> Staff ID Sign-in
           </span>
@@ -975,22 +975,22 @@ footer.site-footer {
     <div id="authSection" class="card" style="max-width: 520px; margin: 0 auto; text-align: center;">
       
       <div style="font-size: 1.15rem; font-weight: 800; color: #38bdf8; margin-bottom: 14px; letter-spacing: 0.5px;">
-        UNIFIED PORTAL ACCESS (统一服务登录)
+        UNIFIED PORTAL ACCESS
       </div>
 
       <!-- 3-Way Role Tab Navigation -->
       <div class="auth-tabs-grid">
         <button id="tabPatient" class="auth-tab-btn active" onclick="setRoleTab('patient')">
           <span>👤 Patient &amp; Family</span>
-          <small>患者与家属</small>
+          <small>Patients &amp; Families</small>
         </button>
         <button id="tabStaff" class="auth-tab-btn" onclick="setRoleTab('staff')">
           <span>🩺 Staff Sign-In</span>
-          <small>医护工号登录</small>
+          <small>Clinical Staff ID</small>
         </button>
         <button id="tabRegister" class="auth-tab-btn" onclick="setRoleTab('register')">
           <span>➕ New Register</span>
-          <small>新会员注册</small>
+          <small>New Patient Registration</small>
         </button>
       </div>
 
@@ -999,32 +999,32 @@ footer.site-footer {
       <!-- 1. PATIENT / FAMILY LOGIN FORM -->
       <form id="patientLoginForm" onsubmit="handlePatientLogin(event)">
         <div class="form-group">
-          <label>Registered Mobile Phone (手机号码) or Case Code (病历编号)</label>
+          <label>Registered Mobile Phone or Case Code</label>
           <input id="loginPhone" type="text" placeholder="e.g. 0124567890 or ASN-8821" required />
         </div>
         <div class="form-group">
-          <label>Security PIN / Password (个人安全密码)</label>
+          <label>Security PIN / Password</label>
           <input id="loginPin" type="password" placeholder="Enter your 4-8 digit PIN" required />
         </div>
-        <button type="submit" class="btn btn-pri btn-block">🔒 Sign In as Patient / Family (家属与患者登录)</button>
+        <button type="submit" class="btn btn-pri btn-block">🔒 Sign In as Patient / Family</button>
       </form>
 
       <!-- 2. STAFF ID LOGIN FORM -->
       <form id="staffLoginForm" onsubmit="handleStaffLogin(event)" style="display: none;">
         <div class="form-group">
-          <label>Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)</label>
+          <label>Clinical Staff ID / Email / Phone</label>
           <input id="staffIdentifier" type="text" placeholder="e.g. ASN-001 / admin@assuranursing.com" required />
         </div>
         <div class="form-group">
-          <label>Staff Security PIN (员工授权密码)</label>
+          <label>Staff Security PIN</label>
           <input id="staffPin" type="password" placeholder="Enter your Staff PIN" required />
         </div>
         <button type="submit" class="btn btn-pri btn-block" style="background: #FFD27A; color: #04101e;">
-          🩺 Staff Sign In (医护人员工号登录)
+          🩺 Staff Sign In
         </button>
         <div style="margin-top: 10px;">
           <a href="staff.html" class="btn btn-sec btn-block" style="font-size: 0.8rem; padding: 8px 12px; border: 1px dashed rgba(255, 210, 122, 0.4); color: #FFD27A;">
-            🩺 Direct Staff Workspace Link (医护工作台通道) →
+            🩺 Direct Staff Workspace Link →
           </a>
         </div>
       </form>
@@ -1032,28 +1032,28 @@ footer.site-footer {
       <!-- 3. REGISTER FORM -->
       <form id="registerForm" onsubmit="handleRegister(event)" style="display: none;">
         <div class="form-group">
-          <label>Patient / Family Representative Name (姓名)</label>
+          <label>Patient / Family Representative Name</label>
           <input id="regName" type="text" placeholder="e.g. Tan Ah Kow / Jason Tan" required />
         </div>
         <div class="form-group">
-          <label>Mobile Phone Number (手机号码)</label>
+          <label>Mobile Phone Number</label>
           <input id="regPhone" type="tel" placeholder="e.g. 0123456789" required />
         </div>
         <div class="form-group">
-          <label>Patient NRIC / IC Number (身份证号 - 选填)</label>
+          <label>Patient NRIC / IC Number (Optional)</label>
           <input id="regNric" type="text" placeholder="e.g. 550101-07-5555" />
         </div>
         <div class="form-group">
-          <label>Set Security PIN / Password (设定您的安全密码)</label>
+          <label>Set Security PIN / Password</label>
           <input id="regPin" type="password" placeholder="Create 4-8 digit PIN" required />
         </div>
-        <button type="submit" class="btn btn-pri btn-block">✓ Register Patient Account (注册账号)</button>
+        <button type="submit" class="btn btn-pri btn-block">✓ Register Patient Account</button>
       </form>
 
       <!-- PREVIEW SAMPLE PATIENT CHART -->
       <div style="margin-top: 16px;">
         <button type="button" class="btn btn-sec btn-block" onclick="quickFillAndLoginPatient('0124567890', '1234')" style="border: 1.5px dashed rgba(56, 189, 248, 0.5); color: #38bdf8; background: rgba(56, 189, 248, 0.08); font-size: 0.88rem; padding: 11px;">
-          👀 Preview Sample Patient Chart (查看病历演示样本)
+          👀 Preview Sample Patient Chart
         </button>
       </div>
 
@@ -1075,7 +1075,7 @@ footer.site-footer {
       <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
         <div>
           <div style="font-size: 0.76rem; color: var(--teal); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">
-            PATIENT MEMBER ACCOUNT · 个人病历管理
+            PATIENT MEMBER ACCOUNT
           </div>
           <h1 id="dashPatientName" style="font-size: 1.4rem; color: #fff; margin: 2px 0;">—</h1>
           <div style="font-size: 0.84rem; color: var(--muted);" id="dashPatientMeta">—</div>
@@ -1093,9 +1093,9 @@ footer.site-footer {
 
       <!-- Navigation Tabs -->
       <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('vitals')">📈 MEWS Vitals (生命体征)</button>
-        <button class="tab-btn" onclick="switchTab('meds')">💊 Medication Sheet (用药记录)</button>
-        <button class="tab-btn" onclick="switchTab('docs')">📁 Medical Vault (病历文件)</button>
+        <button class="tab-btn active" onclick="switchTab('vitals')">📈 MEWS Vitals</button>
+        <button class="tab-btn" onclick="switchTab('meds')">💊 Medication Sheet</button>
+        <button class="tab-btn" onclick="switchTab('docs')">📁 Medical Vault</button>
         <button class="tab-btn" onclick="switchTab('pdpa')">🛡️ PDPA Privacy &amp; Consent</button>
       </div>
 
@@ -1103,7 +1103,7 @@ footer.site-footer {
       <div id="tabContentVitals" class="card" style="padding: 16px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
           <h2 style="margin: 0; font-size: 1.15rem; color: #fff; display: flex; align-items: center; gap: 8px;">
-            📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)
+            📊 MEWS Vitals Sign Scoring Chart
           </h2>
           <div style="display: flex; gap: 8px; align-items: center;">
             <button id="portalWprev" class="btn btn-sec" style="padding: 6px 12px; font-size: 0.8rem;" onclick="prevPortalWeek()">◀ Prev</button>
@@ -1119,7 +1119,7 @@ footer.site-footer {
 
       <!-- TAB 2: MEDICATION SHEET (MAR) -->
       <div id="tabContentMeds" class="card" style="display: none;">
-        <h2 style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">💊 Medication Administration Record (用药记录表)</h2>
+        <h2 style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">💊 Medication Administration Record </h2>
         <div class="table-wrap" style="overflow-x: auto;">
           <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem;">
             <thead>
@@ -1140,7 +1140,7 @@ footer.site-footer {
 
       <!-- TAB 3: DOCUMENT VAULT -->
       <div id="tabContentDocs" class="card" style="display: none;">
-        <h2 style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">📁 Medical Document Vault (医疗文件与报告)</h2>
+        <h2 style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">📁 Medical Document Vault </h2>
         <p style="font-size: 0.84rem; color: var(--muted); margin-bottom: 14px;">
           Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.
         </p>
@@ -1168,7 +1168,7 @@ footer.site-footer {
       <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
         <div>
           <h3 style="color: #38BDF8; font-size: 1.2rem; margin: 0;">🎬 First-Time App User Guide &amp; Memo</h3>
-          <span style="font-size: 0.76rem; color: var(--muted);">Assura Nursing · 官方统一应用使用备忘录</span>
+          <span style="font-size: 0.76rem; color: var(--muted);">Assura Nursing</span>
         </div>
         <button onclick="closeGuideModal()" style="background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer;">✕</button>
       </div>
@@ -1177,7 +1177,7 @@ footer.site-footer {
       <div class="video-sim-player">
         <div class="video-sim-screen" id="simScreen">
           <div style="font-size: 2.2rem; margin-bottom: 8px;" id="simIcon">📱</div>
-          <h4 style="font-size: 1.1rem; color: #FFD27A; margin-bottom: 6px;" id="simTitle">Step 1: Public Open Access (公众免密使用)</h4>
+          <h4 style="font-size: 1.1rem; color: #FFD27A; margin-bottom: 6px;" id="simTitle">Step 1: Public Open Access </h4>
           <p style="font-size: 0.84rem; color: #E0F2FE; max-width: 420px; line-height: 1.45;" id="simDesc">
             No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.
           </p>
@@ -1185,9 +1185,9 @@ footer.site-footer {
         
         <div class="video-controls">
           <div style="display: flex; gap: 6px;">
-            <button onclick="playSimStep(1)" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 1: Public</button>
-            <button onclick="playSimStep(2)" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 2: Family Case Link</button>
-            <button onclick="playSimStep(3)" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 3: Staff Portal</button>
+            <button onclick="playSimStep" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 1: Public</button>
+            <button onclick="playSimStep" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 2: Family Case Link</button>
+            <button onclick="playSimStep" class="btn btn-sec" style="font-size: 0.72rem; padding: 4px 8px;">Step 3: Staff Portal</button>
           </div>
           <span style="color: #38BDF8; font-weight: 700;">● Interactive Walkthrough</span>
         </div>
@@ -1195,19 +1195,22 @@ footer.site-footer {
 
       <!-- Guide Memo Notes -->
       <div style="background: rgba(3, 10, 22, 0.75); border-radius: 12px; padding: 16px; border: 1px solid var(--border); font-size: 0.85rem; line-height: 1.6; color: #CBD5E1;">
-        <h4 style="color: #FFD27A; margin-bottom: 8px;">📌 Official User Guide Memo (使用要点备忘):</h4>
+        <h4 style="color: #FFD27A; margin-bottom: 8px;">📌 Official User Guide Memo :</h4>
         <ol style="padding-left: 20px; margin-bottom: 12px;">
-          <li><b>同一个 App 所有人通用</b>：公众、患者、家属与注册护士均下载同一款 <code>Assura Nursing</code> 应用。</li>
-          <li><b>公众与家属 (无需登录)</b>：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。</li>
-          <li><b>患者家属关联病历 (Case Link)</b>：已有护理个案的家庭，在门户输入 Case Access Code (如 <code>ASN-8821</code>) 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。</li>
-          <li><b>医护人员专属门户 (Staff Portal)</b>：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如 <code>ASN-001</code> / <code>ASN-002</code>) 与 PIN 登录接单、记录生命体征与排班。</li>
+          <li><b>Unified App for Everyone</b>: Public, patients, families, and registered nurses use the same <code>Assura Nursing</code> application.</li>
+            <li><b>Public &amp; Families</b>: Open the app to browse transparent home nursing rates, medical equipment guides, and hospital emergency GPS routes without requiring a login.</li>
+            <li><b>Active Patients &amp; Families (Case Link)</b>: Enter your Case Access Code (e.g. <code>ASN-8821</code>) or phone number to view real-time MEWS vital charts, medication administration records, and wound healing progress photos.</li>
+            <li><b>Clinical Staff Portal</b>: Nurses and supervisors click the "🩺 Staff ID" tab and enter their Staff ID (e.g. <code>ASN-001</code>) and PIN to view assigned rosters, record real-time MEWS vitals, and initiate doctor referrals.</li>
+          <li><b>Public &amp; Families</b>: Open the app to browse transparent home nursing rates, medical equipment guides, and hospital emergency GPS routes without requiring a login.</li>
+          <li><b>Active Patients &amp; Families (Case Link)</b>: Enter your Case Access Code (e.g. <code>ASN-8821</code>) or phone number to view real-time MEWS vital charts, medication administration records, and wound healing progress photos.</li>
+          <li><b>Clinical Staff Portal</b>: Nurses and supervisors click the "🩺 Staff ID" tab and enter their Staff ID (e.g. <code>ASN-001</code>) and PIN to view assigned rosters, record real-time MEWS vitals, and initiate doctor referrals.</li>
         </ol>
       </div>
 
       <!-- Developer & Clinical Sandbox Accounts (Hidden by default) -->
       <details style="margin-top: 14px; background: rgba(3, 10, 22, 0.9); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 10px; padding: 12px; font-size: 0.82rem; color: #94A3B8;">
         <summary style="cursor: pointer; color: #FFD27A; font-weight: 700; display: flex; align-items: center; justify-content: space-between;">
-          <span>🛠️ Clinical Sandbox &amp; Testing Accounts (内部测试账号说明)</span>
+          <span>🛠️ Clinical Sandbox &amp; Testing Accounts </span>
           <span style="font-size: 0.72rem; color: #38BDF8;">Click to expand</span>
         </summary>
         <div style="margin-top: 10px; line-height: 1.5;">
@@ -1226,25 +1229,25 @@ footer.site-footer {
                 <td style="padding: 4px;">Patient (Stroke Rehab)</td>
                 <td style="padding: 4px; color: #fff;">0124567890</td>
                 <td style="padding: 4px;">1234</td>
-                <td style="padding: 4px;"><a href="javascript:void(0)" onclick="closeGuideModal(); quickFillAndLoginPatient('0124567890', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
+                <td style="padding: 4px;"><a href="javascript:void" onclick="closeGuideModal(); quickFillAndLoginPatient('0124567890', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                 <td style="padding: 4px;">Patient (Wound Care)</td>
                 <td style="padding: 4px; color: #fff;">0164123890</td>
                 <td style="padding: 4px;">1234</td>
-                <td style="padding: 4px;"><a href="javascript:void(0)" onclick="closeGuideModal(); quickFillAndLoginPatient('0164123890', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
+                <td style="padding: 4px;"><a href="javascript:void" onclick="closeGuideModal(); quickFillAndLoginPatient('0164123890', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                 <td style="padding: 4px;">Sister Tan (Supervisor)</td>
                 <td style="padding: 4px; color: #fff;">supervisor@assuranursing.com</td>
                 <td style="padding: 4px;">1234</td>
-                <td style="padding: 4px;"><a href="javascript:void(0)" onclick="closeGuideModal(); quickFillStaff('supervisor@assuranursing.com', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
+                <td style="padding: 4px;"><a href="javascript:void" onclick="closeGuideModal(); quickFillStaff('supervisor@assuranursing.com', '1234')" style="color: #38BDF8;">Auto-Fill</a></td>
               </tr>
               <tr>
                 <td style="padding: 4px;">Admin (Director)</td>
                 <td style="padding: 4px; color: #fff;">admin@assuranursing.com</td>
                 <td style="padding: 4px;">8888</td>
-                <td style="padding: 4px;"><a href="javascript:void(0)" onclick="closeGuideModal(); quickFillStaff('admin@assuranursing.com', '8888')" style="color: #38BDF8;">Auto-Fill</a></td>
+                <td style="padding: 4px;"><a href="javascript:void" onclick="closeGuideModal(); quickFillStaff('admin@assuranursing.com', '8888')" style="color: #38BDF8;">Auto-Fill</a></td>
               </tr>
             </tbody>
           </table>
@@ -1257,7 +1260,7 @@ footer.site-footer {
       </details>
 
       <div style="margin-top: 16px; display: flex; justify-content: flex-end;">
-        <button class="btn btn-pri" onclick="closeGuideModal()">Got It (明白了)</button>
+        <button class="btn btn-pri" onclick="closeGuideModal()">Got It </button>
       </div>
     </div>
   </div>
@@ -1275,8 +1278,7 @@ footer.site-footer {
     <a href="announcements.html">Announcements</a>
     <a href="download.html">Download App</a>
     <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
-    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
-  </div>
+    </div>
   <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
     © 2026 Assura Nursing Care. All Rights Reserved.
   </p>
@@ -1284,7 +1286,7 @@ footer.site-footer {
     Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
   </p>
   <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
-    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+    Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
   </p>
 </footer>
 
@@ -1307,15 +1309,15 @@ footer.site-footer {
 
       if (step === 1) {
         icon.innerText = '🌐';
-        title.innerText = 'Step 1: Public Open Access (公众免密使用)';
+        title.innerText = 'Step 1: Public Open Access ';
         desc.innerText = 'Directly explore home nursing services, procedure fees, emergency hospital GPS, and WhatsApp dispatch without requiring any password.';
       } else if (step === 2) {
         icon.innerText = '👨‍👩‍👧‍👦';
-        title.innerText = 'Step 2: Patient & Family Case Link (家属关联病历)';
+        title.innerText = 'Step 2: Patient & Family Case Link ';
         desc.innerText = 'Enter your Case PIN (e.g. ASN-8821) or phone number to view live MEWS vital scoring charts, Medication (MAR), and nurse handovers.';
       } else if (step === 3) {
         icon.innerText = '🩺';
-        title.innerText = 'Step 3: Clinical Staff Sign-in (医护人员工号登录)';
+        title.innerText = 'Step 3: Clinical Staff Sign-in ';
         desc.innerText = 'Registered nurses and supervisors sign in with their Clinical Staff ID (e.g. ASN-001) and PIN to access clinical rosters and shift management.';
       }
     }
@@ -1513,7 +1515,7 @@ footer.site-footer {
       ['vitals', 'meds', 'docs', 'pdpa'].forEach(t => {
         const btn = document.querySelector(`button[onclick="switchTab('${t}')"]`);
         if (btn) btn.classList.toggle('active', t === tab);
-        const content = document.getElementById(`tabContent${t.charAt(0).toUpperCase() + t.slice(1)}`);
+        const content = document.getElementById(`tabContent${t.charAt.toUpperCase() + t.slice}`);
         if (content) content.style.display = t === tab ? 'block' : 'none';
       });
     }

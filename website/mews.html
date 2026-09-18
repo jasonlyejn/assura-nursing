@@ -257,49 +257,49 @@ img, video, iframe {
   <div class="alertbar ok" id="alertbar">✓ All recorded values within normal limits</div>
   <div class="scroll"><table id="chart"></table></div>
   <div class="foot">
-    <span><b>Assura Nursing</b> &nbsp;·&nbsp; 护理服务 &nbsp;·&nbsp; assuranursing.com<span id="syncstat" style="color:var(--steel);font-weight:700"></span></span>
+    <span><b>Assura Nursing</b> &nbsp;·&nbsp; Clinical Portal &nbsp;·&nbsp; assuranursing.com<span id="syncstat" style="color:var(--steel);font-weight:700"></span></span>
     <span>MEWS auto-scoring · plot ✗ resp &nbsp;● SpO₂ &nbsp;▲ SBP ▼ DBP &nbsp;<span style="color:#d40000">●</span> HR &nbsp;○ temp · escalate per clinical protocol</span>
   </div>
 </div>
 <div id="printarea"></div>
 <div class="backdrop" id="backdrop"><div class="modal">
-  <h3>Enter readings (录入生命体征与护理记录)</h3>
+  <h3>Enter Vital Readings & Clinical Notes</h3>
   <div class="sub" id="modalcol" style="margin-bottom:8px;">Column</div>
 
   <!-- Auto-filled Editable Date & Time -->
   <div style="display:flex;gap:8px;margin-bottom:12px;background:#f0f7ff;padding:8px 10px;border-radius:8px;border:1px solid #bae6fd;">
     <div style="flex:1;">
-      <label style="font-size:11px;font-weight:700;color:#0369a1;display:block;margin-bottom:2px;">📅 Date (日期 DD/MM)</label>
+      <label style="font-size:11px;font-weight:700;color:#0369a1;display:block;margin-bottom:2px;">📅 Date ( DD/MM)</label>
       <input type="text" id="m_date" placeholder="DD/MM" style="width:100%;font-size:13px;padding:5px 6px;border:1px solid #cbd5e1;border-radius:4px;background:#fff;font-weight:700;">
     </div>
     <div style="flex:1;">
-      <label style="font-size:11px;font-weight:700;color:#0369a1;display:block;margin-bottom:2px;">⏰ Time (时间 HH:mm)</label>
+      <label style="font-size:11px;font-weight:700;color:#0369a1;display:block;margin-bottom:2px;">⏰ Time ( HH:mm)</label>
       <input type="text" id="m_time" placeholder="HH:mm (e.g. 09:00, 14:00)" style="width:100%;font-size:13px;padding:5px 6px;border:1px solid #cbd5e1;border-radius:4px;background:#fff;font-weight:700;">
     </div>
   </div>
 
   <div class="fld"><label>✗ Respiration</label><input type="number" id="m_resp" placeholder="breaths/min"></div>
   <div class="fld"><label>SpO₂ scale</label><div class="seg">
-    <button id="sc1" onclick="pickScale(1)">Scale 1</button>
-    <button id="sc2" onclick="pickScale(2)">Scale 2 · COPD</button></div></div>
-  <div class="fld"><label>● SpO₂ (%)</label><input type="number" id="m_spo2" placeholder="e.g. 98"></div>
+    <button id="sc1" onclick="pickScale">Scale 1</button>
+    <button id="sc2" onclick="pickScale">Scale 2 · COPD</button></div></div>
+  <div class="fld"><label>● SpO₂ </label><input type="number" id="m_spo2" placeholder="e.g. 98"></div>
   <div class="fld"><label>Air / Oxygen</label><div class="seg">
     <button type="button" id="o2ra" onclick="pickO2('RA')">Room air (RA)</button>
-    <button type="button" id="o2o2" onclick="pickO2('O2')">On O₂ (需吸氧)</button></div></div>
+    <button type="button" id="o2o2" onclick="pickO2('O2')">On O₂</button></div></div>
     
   <div class="fld" id="fld_o2dev" style="display:none;align-items:flex-start;">
-    <label style="margin-top:4px;">O₂ Device &amp; Flow (吸氧设备与流量)</label>
+    <label style="margin-top:4px;">O₂ Device &amp; Flow</label>
     <div style="flex:1;">
       <div style="display:flex;gap:4px;margin-bottom:4px;">
         <select id="m_o2dev_sel" class="wsel" onchange="pickO2DevSel(this.value)" style="flex:1;font-weight:700;font-size:12px;">
           <option value="">— Select Device —</option>
-          <option value="NP">NP · Nasal Prong (鼻导管 2-5 L/min)</option>
-          <option value="FM">FM · Face Mask (简易面罩 6-10 L/min)</option>
-          <option value="VM">VM · Venturi Mask (文丘里面罩 24-60%)</option>
-          <option value="HFM">HFM · High Flow / NRBM (高流量面罩 10-15 L/min)</option>
-          <option value="HFNC">HFNC · High Flow Nasal Cannula (高流量湿化)</option>
-          <option value="NIV">NIV · BiPAP / CPAP (无创通气)</option>
-          <option value="Vent">Vent · Mechanical Ventilator (有创呼吸机)</option>
+          <option value="NP">NP · Nasal Prong (2-5 L/min)</option>
+          <option value="FM">FM · Simple Face Mask (6-10 L/min)</option>
+          <option value="VM">VM · Venturi Mask </option>
+          <option value="HFM">HFM · High Flow / NRBM (10-15 L/min)</option>
+          <option value="HFNC">HFNC · High Flow Nasal Cannula </option>
+          <option value="NIV">NIV · BiPAP / CPAP </option>
+          <option value="Vent">Vent · Mechanical Ventilator </option>
         </select>
         <input type="text" id="m_o2flow" placeholder="Flow (e.g. 3L)" style="width:80px;font-size:12px;padding:4px;border:1px solid #cbd5e1;border-radius:4px;text-align:center;font-weight:700;">
       </div>
@@ -317,7 +317,7 @@ img, video, iframe {
   <div class="fld"><label>○ Temp (°C)</label><input type="number" step="0.1" id="m_temp" placeholder="e.g. 36.8"></div>
 
   <div class="msub">Additional clinical information &amp; hygiene</div>
-  <div class="fld"><label>Pain score (0–10)</label><input type="number" id="m_pain" placeholder="0–10"></div>
+  <div class="fld"><label>Pain score </label><input type="number" id="m_pain" placeholder="0–10"></div>
   <div class="fld"><label>HGT (mmol/L)</label><input type="number" step="0.1" id="m_hgt" placeholder="e.g. 5.8"></div>
   <div class="fld"><label>Fluid intake (mL)</label><input type="number" id="m_fluidin" placeholder="mL"></div>
   <div class="fld"><label>Urine output (mL)</label><input type="number" id="m_urine" placeholder="mL"></div>
@@ -329,20 +329,20 @@ img, video, iframe {
 
   <!-- Personal Hygiene with Dropdown and Quick Chips -->
   <div class="fld" style="align-items:flex-start;">
-    <label style="margin-top:6px;">Personal hygiene (个人卫生)</label>
+    <label style="margin-top:6px;">Personal hygiene </label>
     <div style="flex:1;">
       <select id="m_hygiene_sel" class="wsel" onchange="pickHygiene(this.value)" style="width:100%;margin-bottom:5px;">
-        <option value="">— Select hygiene status / 快速选择 —</option>
-        <option value="All Done">✓ All Done (全部个人卫生已完成)</option>
-        <option value="Sponging Done">🛁 Bed Sponging / Bath Done (温水擦浴/洗澡完成)</option>
-        <option value="Oral Care Done">🪥 Oral Care Done (口腔护理完成)</option>
-        <option value="Hair Wash Done">🧴 Hair Wash / Grooming Done (洗头/仪容整理完成)</option>
-        <option value="Nail Care Done">✂️ Nail Care Done (指甲修剪完成)</option>
-        <option value="Diaper / Peri-Care Done">👶 Perineal / Diaper Change Done (会阴护理与换尿布完成)</option>
-        <option value="Turning & Back Care Done">🔄 Turning & Back Care Done (定时翻身与背部护理完成)</option>
-        <option value="Linen Change Done">🛏️ Linen & Clothes Change Done (更换床单与衣物完成)</option>
-        <option value="Partial Done">⚡ Partial Care Done (部分日常护理完成)</option>
-        <option value="Refused">❌ Refused by Patient / Family (病患或家属暂拒)</option>
+        <option value="">— Select hygiene status —</option>
+        <option value="All Done">✓ All Done </option>
+        <option value="Sponging Done">🛁 Bed Sponging / Bath Done </option>
+        <option value="Oral Care Done">🪥 Oral Care Done </option>
+        <option value="Hair Wash Done">🧴 Hair Wash / Grooming Done </option>
+        <option value="Nail Care Done">✂️ Nail Care Done </option>
+        <option value="Diaper / Peri-Care Done">👶 Perineal / Diaper Change Done </option>
+        <option value="Turning & Back Care Done">🔄 Turning & Back Care Done </option>
+        <option value="Linen Change Done">🛏️ Linen & Clothes Change Done </option>
+        <option value="Partial Done">⚡ Partial Care Done </option>
+        <option value="Refused">❌ Refused by Patient / Family </option>
       </select>
       <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px;">
         <button type="button" class="xs ghost" onclick="appendHygiene('All Done')" style="font-size:10px;padding:2px 6px;border-radius:4px;cursor:pointer;border:1px solid #cbd5e1;background:#f8fafc;">+ All Done</button>
@@ -351,7 +351,7 @@ img, video, iframe {
         <button type="button" class="xs ghost" onclick="appendHygiene('Diaper')" style="font-size:10px;padding:2px 6px;border-radius:4px;cursor:pointer;border:1px solid #cbd5e1;background:#f8fafc;">+ Diaper</button>
         <button type="button" class="xs ghost" onclick="appendHygiene('Turning')" style="font-size:10px;padding:2px 6px;border-radius:4px;cursor:pointer;border:1px solid #cbd5e1;background:#f8fafc;">+ Turning</button>
       </div>
-      <input type="text" id="m_hygiene" placeholder="Detail notes / 详细备注" style="width:100%;">
+      <input type="text" id="m_hygiene" placeholder="Detail notes / " style="width:100%;">
     </div>
   </div>
 
@@ -398,7 +398,7 @@ img, video, iframe {
         <h3 style="margin:0;font-size:16px;color:var(--navy);font-weight:800;display:flex;align-items:center;gap:6px;">
           🫁 Mechanical Ventilation Flowsheet &amp; Reference Settings
         </h3>
-        <div style="font-size:10.5px;color:#556;">有创/无创机械通气临床监测记录单与呼吸机临床参考设置</div>
+        <div style="font-size:10.5px;color:#556;">/</div>
       </div>
       <div style="display:flex;gap:6px;">
         <button type="button" class="ghost" onclick="printVentChart()" style="padding:4px 9px;font-size:11px;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);font-weight:700;cursor:pointer;">🖨 Print Vent Sheet (A4)</button>
@@ -409,10 +409,10 @@ img, video, iframe {
     <!-- Mode Tabs -->
     <div style="display:flex;gap:6px;border-bottom:1px solid #cbd5e1;margin-bottom:10px;">
       <button type="button" id="tabVentLogBtn" onclick="setVentTab('log')" style="padding:7px 16px;border:none;background:var(--navy);color:#fff;font-weight:800;border-radius:6px 6px 0 0;cursor:pointer;font-size:11.5px;">
-        🫁 24-Hour Ventilation Log (机械通气监测表)
+        🫁 24-Hour Ventilation Log 
       </button>
       <button type="button" id="tabVentGuideBtn" onclick="setVentTab('guide')" style="padding:7px 16px;border:none;background:#e2e8f0;color:var(--navy);font-weight:800;border-radius:6px 6px 0 0;cursor:pointer;font-size:11.5px;">
-        📖 Clinical Settings Guide &amp; PBW Calculator (参考设置与指南)
+        📖 Clinical Settings Guide &amp; PBW Calculator 
       </button>
     </div>
 
@@ -420,7 +420,7 @@ img, video, iframe {
     <div id="ventLogTab" style="overflow:auto;flex:1;">
       <!-- Airway Info Header Bar -->
       <div style="background:#f0f7ff;border:1px solid #bae6fd;border-radius:8px;padding:8px 12px;margin-bottom:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px 12px;font-size:11px;">
-        <div><b>Airway Type:</b> <select id="v_airway" onchange="saveAirway()" style="font-size:11px;padding:2px 4px;border:1px solid #cbd5e1;border-radius:4px;"><option value="ETT">ETT (气管插管)</option><option value="Tracheostomy">Tracheostomy (气管切开)</option><option value="NIV Mask">NIV Mask (无创面罩)</option></select></div>
+        <div><b>Airway Type:</b> <select id="v_airway" onchange="saveAirway()" style="font-size:11px;padding:2px 4px;border:1px solid #cbd5e1;border-radius:4px;"><option value="ETT">ETT </option><option value="Tracheostomy">Tracheostomy </option><option value="NIV Mask">NIV Mask </option></select></div>
         <div><b>Tube Size (mm ID):</b> <input id="v_tubesize" onchange="saveAirway()" placeholder="e.g. 7.5" style="width:60px;font-size:11px;padding:2px 4px;border:1px solid #cbd5e1;border-radius:4px;"></div>
         <div><b>Depth (Lips/Teeth):</b> <input id="v_depth" onchange="saveAirway()" placeholder="e.g. 21 cm" style="width:70px;font-size:11px;padding:2px 4px;border:1px solid #cbd5e1;border-radius:4px;"></div>
         <div><b>Cuff Target:</b> <span style="color:#0369a1;font-weight:800;">20 – 30 cmH₂O</span></div>
@@ -429,12 +429,12 @@ img, video, iframe {
       <!-- Add New Observation Form -->
       <div style="background:#fff;border:1.5px solid #cbd5e1;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
         <div style="font-weight:800;font-size:11.5px;color:var(--navy);margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;">
-          <span>＋ Record Ventilator Observation (录入通气监测数据)</span>
+          <span>＋ Record Ventilator Observation </span>
           <span style="font-size:10px;color:#64748b;font-weight:600;">Target Peak Pressure &lt; 30–35 cmH₂O · Pplat &lt; 30 cmH₂O</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:6px;font-size:10px;">
-          <div><label style="font-weight:700;display:block;">Time (时间)</label><input id="vl_time" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="HH:mm"></div>
-          <div><label style="font-weight:700;display:block;">Mode (模式)</label>
+          <div><label style="font-weight:700;display:block;">Time </label><input id="vl_time" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="HH:mm"></div>
+          <div><label style="font-weight:700;display:block;">Mode </label>
             <select id="vl_mode" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;">
               <option value="SIMV+PS">SIMV + PS</option>
               <option value="VCV">VCV (Volume Control)</option>
@@ -447,7 +447,7 @@ img, video, iframe {
           </div>
           <div><label style="font-weight:700;display:block;">Set Vt / Exp Vt</label><input id="vl_vt" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 420 / 415"></div>
           <div><label style="font-weight:700;display:block;">Set RR / Tot RR</label><input id="vl_rr" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 14 / 16"></div>
-          <div><label style="font-weight:700;display:block;">FiO₂ (%)</label><input id="vl_fio2" type="number" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 40"></div>
+          <div><label style="font-weight:700;display:block;">FiO₂ </label><input id="vl_fio2" type="number" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 40"></div>
           <div><label style="font-weight:700;display:block;">PEEP (cmH₂O)</label><input id="vl_peep" type="number" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 6"></div>
           <div><label style="font-weight:700;display:block;">Ppeak / PIP</label><input id="vl_pip" type="number" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 22"></div>
           <div><label style="font-weight:700;display:block;">Pplat (cmH₂O)</label><input id="vl_pplat" type="number" style="width:100%;font-size:11px;padding:3px;border:1px solid #cbd5e1;border-radius:4px;" placeholder="e.g. 18"></div>
@@ -495,13 +495,13 @@ img, video, iframe {
           🧮 Predicted Body Weight (PBW) &amp; Lung-Protective Tidal Volume Calculator
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:8px;">
-          <div><label style="font-weight:700;">Gender (性别):</label>
+          <div><label style="font-weight:700;">Gender :</label>
             <select id="vg_gender" onchange="calcPBW()" style="width:100%;font-size:11px;padding:3px;border-radius:4px;border:1px solid #cbd5e1;">
-              <option value="male">Male (男性)</option>
-              <option value="female">Female (女性)</option>
+              <option value="male">Male </option>
+              <option value="female">Female </option>
             </select>
           </div>
-          <div><label style="font-weight:700;">Height (身高 cm):</label>
+          <div><label style="font-weight:700;">Height ( cm):</label>
             <input id="vg_height" type="number" oninput="calcPBW()" placeholder="e.g. 170" style="width:100%;font-size:11px;padding:3px;border-radius:4px;border:1px solid #cbd5e1;">
           </div>
           <div><label style="font-weight:700;">Calculated PBW:</label>
@@ -518,7 +518,7 @@ img, video, iframe {
       <!-- Clinical Matrix by Indication -->
       <div style="border:1px solid #cbd5e1;border-radius:8px;overflow:hidden;margin-bottom:12px;">
         <div style="background:#0C3054;color:#fff;font-weight:800;padding:6px 10px;font-size:11.5px;">
-          📋 Recommended Initial Ventilator Settings by Indication (各病症初始通气参数参考)
+          📋 Recommended Initial Ventilator Settings by Indication 
         </div>
         <table style="width:100%;border-collapse:collapse;font-size:10px;text-align:left;">
           <thead>
@@ -533,7 +533,7 @@ img, video, iframe {
           </thead>
           <tbody>
             <tr>
-              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>ARDS / Hypoxemic Sepsis</b><br><small style="color:#64748b;">肺保护性通气策略</small></td>
+              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>ARDS / Hypoxemic Sepsis</b><br><small style="color:#64748b;"></small></td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">VCV / PCV / PRVC</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;color:#dc2626;font-weight:700;">4 – 6 mL/kg PBW</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">18 – 28 bpm</td>
@@ -541,7 +541,7 @@ img, video, iframe {
               <td style="padding:5px 8px;border:1px solid #e2e8f0;"><b>Pplat &lt; 30 cmH₂O</b>; Driving Press &lt; 14; Permissive hypercapnia (pH &ge; 7.20).</td>
             </tr>
             <tr style="background:#f8fafc;">
-              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>COPD / Asthma / Air Trapping</b><br><small style="color:#64748b;">阻塞性气道/肺气肿</small></td>
+              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>COPD / Asthma / Air Trapping</b><br><small style="color:#64748b;">/</small></td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">VCV / SIMV+PS</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">6 – 8 mL/kg PBW</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;color:#d97706;font-weight:700;">10 – 12 bpm (Slow)</td>
@@ -549,7 +549,7 @@ img, video, iframe {
               <td style="padding:5px 8px;border:1px solid #e2e8f0;"><b>Long Expiratory Time (I:E 1:3 to 1:4)</b> to prevent auto-PEEP / dynamic hyperinflation.</td>
             </tr>
             <tr>
-              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>Post-Operative / Normal Lung</b><br><small style="color:#64748b;">常规术后/神经损伤正常肺</small></td>
+              <td style="padding:5px 8px;border:1px solid #e2e8f0;font-weight:700;"><b>Post-Operative / Normal Lung</b><br><small style="color:#64748b;">/</small></td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">SIMV / VCV / PSV</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">6 – 8 mL/kg PBW</td>
               <td style="padding:5px 8px;border:1px solid #e2e8f0;">12 – 16 bpm</td>
@@ -563,7 +563,7 @@ img, video, iframe {
       <!-- ABG & High Peak Pressure Troubleshooting Guide -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div style="border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#fff;">
-          <div style="font-weight:800;color:var(--navy);margin-bottom:4px;">🩸 ABG Correction Rules (血气调整指南)</div>
+          <div style="font-weight:800;color:var(--navy);margin-bottom:4px;">🩸 ABG Correction Rules </div>
           <ul style="margin:0;padding-left:16px;font-size:10px;color:#334155;">
             <li><b>High PaCO₂ (Acidosis):</b> Increase Minute Ventilation (↑ RR or ↑ Vt).</li>
             <li><b>Low PaCO₂ (Alkalosis):</b> Decrease Minute Ventilation (↓ RR or ↓ Vt).</li>
@@ -589,7 +589,7 @@ img, video, iframe {
   <div class="modal" style="max-width:850px;width:95vw;max-height:90vh;overflow:auto;padding:16px 20px;background:#fff;border-radius:12px;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;border-bottom:2px solid #e2e8f0;padding-bottom:8px;">
       <h3 style="margin:0;color:var(--navy);font-size:16px;display:flex;align-items:center;gap:6px;">
-        🩸 Clinical Laboratory Reference Ranges &amp; Panic Value Guide (检验参考值与危急值)
+        🩸 Clinical Laboratory Reference Ranges &amp; Panic Value Guide 
       </h3>
       <button type="button" onclick="closeLabRefModal()" style="background:#f1f5f9;border:none;border-radius:6px;padding:4px 10px;font-size:14px;cursor:pointer;font-weight:800;">✕ Close</button>
     </div>
@@ -604,45 +604,45 @@ img, video, iframe {
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:12px;">
         <!-- Panel 1: ABG -->
         <div style="border:1.5px solid #bae6fd;border-radius:8px;padding:10px;background:#f0f9ff;">
-          <div style="font-weight:800;color:#0369a1;font-size:12px;margin-bottom:6px;">🩸 Arterial Blood Gas (ABG 血气分析)</div>
+          <div style="font-weight:800;color:#0369a1;font-size:12px;margin-bottom:6px;">🩸 Arterial Blood Gas (ABG )</div>
           <table style="width:100%;border-collapse:collapse;font-size:10px;background:#fff;border-radius:4px;overflow:hidden;">
             <tr style="background:#e0f2fe;font-weight:800;"><th style="padding:4px;border:1px solid #cbd5e1;text-align:left;">Parameter</th><th style="padding:4px;border:1px solid #cbd5e1;">Normal Range</th><th style="padding:4px;border:1px solid #cbd5e1;color:#b91c1c;">🚨 Critical / Panic</th></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>pH</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">7.35 – 7.45</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 7.20 / &gt; 7.60</td></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>PaCO₂</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">35 – 45 mmHg</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 20 / &gt; 60 mmHg</td></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>PaO₂</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">80 – 100 mmHg</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 60 mmHg (Hypoxemia)</td></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>HCO₃⁻</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">22 – 26 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 10 / &gt; 40 mmol/L</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Lactate (血乳酸)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">0.5 – 2.0 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&gt; 4.0 mmol/L (Sepsis Alert)</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Lactate </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">0.5 – 2.0 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&gt; 4.0 mmol/L (Sepsis Alert)</td></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>P/F Ratio</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">&gt; 300 mmHg</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 200 (Mod-Severe ARDS)</td></tr>
           </table>
         </div>
 
         <!-- Panel 2: Renal Profile & Electrolytes -->
         <div style="border:1.5px solid #fed7aa;border-radius:8px;padding:10px;background:#fff7ed;">
-          <div style="font-weight:800;color:#c2410c;font-size:12px;margin-bottom:6px;">🧪 Renal Profile &amp; Electrolytes (RP / 肾功能与电解质)</div>
+          <div style="font-weight:800;color:#c2410c;font-size:12px;margin-bottom:6px;">🧪 Renal Profile &amp; Electrolytes (RP / )</div>
           <table style="width:100%;border-collapse:collapse;font-size:10px;background:#fff;border-radius:4px;overflow:hidden;">
             <tr style="background:#ffedd5;font-weight:800;"><th style="padding:4px;border:1px solid #cbd5e1;text-align:left;">Parameter</th><th style="padding:4px;border:1px solid #cbd5e1;">Normal Range</th><th style="padding:4px;border:1px solid #cbd5e1;color:#b91c1c;">🚨 Critical / Panic</th></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Potassium (K⁺ 钾)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">3.5 – 5.0 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 2.8 / &gt; 6.0 (Arrhythmia)</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Sodium (Na⁺ 钠)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">135 – 145 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 120 / &gt; 160 mmol/L</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Creatinine (肌酐)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">50 – 110 µmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&gt; 350 µmol/L (Acute AKI)</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Total Calcium (钙)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">2.15 – 2.55 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 1.75 / &gt; 3.00 mmol/L</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Magnesium (镁)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">0.70 – 1.05 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 0.50 / &gt; 1.80 mmol/L</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Potassium (K⁺ )</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">3.5 – 5.0 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 2.8 / &gt; 6.0 (Arrhythmia)</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Sodium (Na⁺ )</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">135 – 145 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 120 / &gt; 160 mmol/L</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Creatinine </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">50 – 110 µmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&gt; 350 µmol/L (Acute AKI)</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Total Calcium </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">2.15 – 2.55 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 1.75 / &gt; 3.00 mmol/L</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Magnesium </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">0.70 – 1.05 mmol/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 0.50 / &gt; 1.80 mmol/L</td></tr>
           </table>
         </div>
 
         <!-- Panel 3: Full Blood Count -->
         <div style="border:1.5px solid #fbcfe8;border-radius:8px;padding:10px;background:#fdf2f8;">
-          <div style="font-weight:800;color:#be185d;font-size:12px;margin-bottom:6px;">🩸 Full Blood Count (FBC / CBC 全血细胞)</div>
+          <div style="font-weight:800;color:#be185d;font-size:12px;margin-bottom:6px;">🩸 Full Blood Count (FBC / CBC )</div>
           <table style="width:100%;border-collapse:collapse;font-size:10px;background:#fff;border-radius:4px;overflow:hidden;">
             <tr style="background:#fce7f3;font-weight:800;"><th style="padding:4px;border:1px solid #cbd5e1;text-align:left;">Parameter</th><th style="padding:4px;border:1px solid #cbd5e1;">Normal Range</th><th style="padding:4px;border:1px solid #cbd5e1;color:#b91c1c;">🚨 Critical / Panic</th></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Hemoglobin (Hb)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">12.0 – 16.0 g/dL</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 7.0 g/dL (Transfusion)</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>WBC (白细胞)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">4.0 – 11.0 ×10⁹/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 2.0 / &gt; 30.0 ×10⁹/L</td></tr>
-            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Platelets (血小板)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">150 – 400 ×10⁹/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 50 ×10⁹/L (Bleeding Risk)</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>WBC </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">4.0 – 11.0 ×10⁹/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 2.0 / &gt; 30.0 ×10⁹/L</td></tr>
+            <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>Platelets </b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">150 – 400 ×10⁹/L</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&lt; 50 ×10⁹/L (Bleeding Risk)</td></tr>
           </table>
         </div>
 
         <!-- Panel 4: Coagulation & Cardiac Biomarkers -->
         <div style="border:1.5px solid #bbf7d0;border-radius:8px;padding:10px;background:#f0fdf4;">
-          <div style="font-weight:800;color:#15803d;font-size:12px;margin-bottom:6px;">🔬 Coagulation &amp; Biomarkers (凝血与心肌标志物)</div>
+          <div style="font-weight:800;color:#15803d;font-size:12px;margin-bottom:6px;">🔬 Coagulation &amp; Biomarkers </div>
           <table style="width:100%;border-collapse:collapse;font-size:10px;background:#fff;border-radius:4px;overflow:hidden;">
             <tr style="background:#dcfce7;font-weight:800;"><th style="padding:4px;border:1px solid #cbd5e1;text-align:left;">Parameter</th><th style="padding:4px;border:1px solid #cbd5e1;">Normal Range</th><th style="padding:4px;border:1px solid #cbd5e1;color:#b91c1c;">🚨 Critical / Panic</th></tr>
             <tr><td style="padding:3px 5px;border:1px solid #cbd5e1;"><b>INR (Warfarin)</b></td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;">0.8 – 1.2 (target 2-3)</td><td style="padding:3px;border:1px solid #cbd5e1;text-align:center;color:#b91c1c;font-weight:800;">&gt; 4.5 (Major Hemorrhage)</td></tr>
@@ -666,9 +666,9 @@ const SECT=[
  {key:'resp',sym:'✗',name:'RESPIRATION RATE',sub:'breaths / min',plot:'✗',bands:[
    b('≥36',36,Infinity,3,3),b('25 - 35',25,36,2,2),b('21 - 24',21,25,1,1),b('12 - 20',12,21,0,0),
    b('9 - 11',9,12,1,1),b('5 - 8',5,9,2,2),b('≤4',-Infinity,5,3,3)]},
- {key:'spo2a',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 1 · SpO₂ (%)',plot:'●',scale:1,bands:[
+ {key:'spo2a',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 1 · SpO₂ ',plot:'●',scale:1,bands:[
    b('≥ 96',96,Infinity,0,0),b('94 - 95',94,96,1,1),b('90 - 93',90,94,2,2),b('≤ 89',-Infinity,90,3,3)]},
- {key:'spo2b',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 2 · SpO₂ (%) — use when target 88–92% (respiratory failure / COPD)',plot:'●',scale:2,bands:[
+ {key:'spo2b',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 2 · SpO₂  — use when target 88–92% (respiratory failure / COPD)',plot:'●',scale:2,bands:[
    b('≥97 on O₂',97,Infinity,3,3),b('95 - 96 on O₂',95,97,2,2),b('88 - 94 / ≥93 RA',88,95,0,0),
    b('86 - 87',86,88,1,1),b('84 - 85',84,86,2,2),b('≤ 83',-Infinity,84,3,3)]},
  {key:'o2',sym:'',name:'ROOM AIR / OXYGEN',sub:'',plot:'',type:'o2',bands:[
@@ -704,13 +704,13 @@ const NOTES=[
 /* ===== Clinical Dropdown Options (Top Level) ===== */
 const O2_DEVICE_OPTS = [
   ['', '— Select Device —'],
-  ['NP', 'NP · Nasal Prong (鼻导管 2-5 L/min)'],
-  ['FM', 'FM · Face Mask (简易面罩 6-10 L/min)'],
-  ['VM', 'VM · Venturi Mask (文丘里面罩 24-60%)'],
-  ['HFM', 'HFM · High Flow / NRBM (高流量面罩 10-15 L/min)'],
-  ['HFNC', 'HFNC · High Flow Nasal Cannula (高流量湿化)'],
-  ['NIV', 'NIV · BiPAP / CPAP (无创通气)'],
-  ['Vent', 'Vent · Mechanical Ventilator (有创呼吸机)']
+  ['NP', 'NP · Nasal Prong (2-5 L/min)'],
+  ['FM', 'FM · Simple Face Mask (6-10 L/min)'],
+  ['VM', 'VM · Venturi Mask '],
+  ['HFM', 'HFM · High Flow / NRBM (10-15 L/min)'],
+  ['HFNC', 'HFNC · High Flow Nasal Cannula '],
+  ['NIV', 'NIV · BiPAP / CPAP '],
+  ['Vent', 'Vent · Mechanical Ventilator ']
 ];
 
 const STOOL_OPTS = [
@@ -723,16 +723,16 @@ const STOOL_OPTS = [
 
 const HYGIENE_OPTS = [
   ['', ' '],
-  ['All Done', '✓ All Done (全部完成)'],
-  ['Sponging Done', '🛁 Sponging (温水擦浴)'],
-  ['Oral Care Done', '🪥 Oral Care (口腔护理)'],
-  ['Diaper / Peri-Care Done', '👶 Diaper/Peri (换尿布/会阴)'],
-  ['Turning & Back Care Done', '🔄 Turning (定时翻身)'],
-  ['Hair Wash Done', '🧴 Hair Wash (洗头整理)'],
-  ['Nail Care Done', '✂️ Nail Care (剪指甲)'],
-  ['Linen Change Done', '🛏️ Linen (更换床单)'],
-  ['Partial Done', '⚡ Partial (部分护理)'],
-  ['Refused', '❌ Refused (暂拒)']
+  ['All Done', '✓ All Done '],
+  ['Sponging Done', '🛁 Sponging '],
+  ['Oral Care Done', '🪥 Oral Care '],
+  ['Diaper / Peri-Care Done', '👶 Diaper/Peri '],
+  ['Turning & Back Care Done', '🔄 Turning '],
+  ['Hair Wash Done', '🧴 Hair Wash '],
+  ['Nail Care Done', '✂️ Nail Care '],
+  ['Linen Change Done', '🛏️ Linen '],
+  ['Partial Done', '⚡ Partial '],
+  ['Refused', '❌ Refused ']
 ];
 
 function pickO2DevSel(v) {
@@ -1543,7 +1543,7 @@ function calcPBW() {
   }
   const base = (g === 'male') ? 50 : 45.5;
   const pbw = Math.max(30, base + 0.91 * (h - 152.4));
-  document.getElementById('vg_pbw_res').innerText = pbw.toFixed(1) + ' kg';
+  document.getElementById('vg_pbw_res').innerText = pbw.toFixed + ' kg';
   document.getElementById('vg_vt4').innerText = Math.round(pbw * 4) + ' mL';
   document.getElementById('vg_vt6').innerText = Math.round(pbw * 6) + ' mL';
   document.getElementById('vg_vt8').innerText = Math.round(pbw * 8) + ' mL';
@@ -1592,7 +1592,29 @@ function printVentChart() {
       </tr>`;
     });
   }
-  h += `</tbody></table>\n</body></html>`;
+  h += `</tbody></table>\n<footer class="site-footer" style="background:#020b14; border-top:1px solid rgba(56,189,248,0.15); padding:32px 20px; text-align:center; font-family:system-ui,sans-serif; margin-top:40px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:12px;">
+      <img src="assura-logo.png" alt="Assura" style="height:32px; width:auto;">
+      <span style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:0.5px;">ASSURA <span style="color:#38bdf8;">NURSING CARE</span></span>
+    </div>
+    <p style="color:#94a3b8; font-size:0.84rem; margin:6px 0 14px; line-height:1.6;">
+      Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
+    </p>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.82rem; margin-bottom:14px;">
+      <a href="index.html" style="color:#38bdf8; text-decoration:none;">Home</a>
+      <a href="about.html" style="color:#38bdf8; text-decoration:none;">About Us</a>
+      <a href="services.html" style="color:#38bdf8; text-decoration:none;">Services &amp; Rates</a>
+      <a href="media.html" style="color:#38bdf8; text-decoration:none;">Media &amp; Ambulance</a>
+      <a href="portal.html" style="color:#38bdf8; text-decoration:none;">Clinical Portal</a>
+      <a href="book.html" style="color:#38bdf8; text-decoration:none;">Book Care</a>
+    </div>
+    <div style="color:#64748b; font-size:0.78rem; border-top:1px solid rgba(255,255,255,0.06); padding-top:12px;">
+      © 2026 Assura Nursing Care. All Rights Reserved. · Penang &amp; Seberang Perai Home Nursing Services
+    </div>
+  </div>
+</footer>
+</body></html>`;
   const w = window.open('','_blank');
   if (w) {
     w.document.write(h);
@@ -1604,4 +1626,26 @@ function printVentChart() {
 
 render();cloudInit();
 </script>
+<footer class="site-footer" style="background:#020b14; border-top:1px solid rgba(56,189,248,0.15); padding:32px 20px; text-align:center; font-family:system-ui,sans-serif; margin-top:40px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:12px;">
+      <img src="assura-logo.png" alt="Assura" style="height:32px; width:auto;">
+      <span style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:0.5px;">ASSURA <span style="color:#38bdf8;">NURSING CARE</span></span>
+    </div>
+    <p style="color:#94a3b8; font-size:0.84rem; margin:6px 0 14px; line-height:1.6;">
+      Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
+    </p>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.82rem; margin-bottom:14px;">
+      <a href="index.html" style="color:#38bdf8; text-decoration:none;">Home</a>
+      <a href="about.html" style="color:#38bdf8; text-decoration:none;">About Us</a>
+      <a href="services.html" style="color:#38bdf8; text-decoration:none;">Services &amp; Rates</a>
+      <a href="media.html" style="color:#38bdf8; text-decoration:none;">Media &amp; Ambulance</a>
+      <a href="portal.html" style="color:#38bdf8; text-decoration:none;">Clinical Portal</a>
+      <a href="book.html" style="color:#38bdf8; text-decoration:none;">Book Care</a>
+    </div>
+    <div style="color:#64748b; font-size:0.78rem; border-top:1px solid rgba(255,255,255,0.06); padding-top:12px;">
+      © 2026 Assura Nursing Care. All Rights Reserved. · Penang &amp; Seberang Perai Home Nursing Services
+    </div>
+  </div>
+</footer>
 </body></html>

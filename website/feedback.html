@@ -351,31 +351,31 @@ async function start(){
   wrap.innerHTML = `
     <img class="logo" src="/logo.png" alt="Assura Nursing">
     <h1>How did we do?</h1>
-    <p class="sub">Your feedback helps us care better.<br><span class="zh">您的意见能帮助我们做得更好。</span></p>
+    <p class="sub">Your feedback helps us care better.<br></p>
 
-    <label>Overall, how was our care? <span class="zh">整体服务</span></label>${stars('rating')}
-    <label>The nurse / caregiver <span class="zh">护理人员</span></label>${stars('care_rating')}
-    <label>Keeping you informed <span class="zh">沟通与通知</span></label>${stars('comm_rating')}
+    <label>Overall, how was our care? </label>${stars('rating')}
+    <label>The nurse / caregiver </label>${stars('care_rating')}
+    <label>Keeping you informed </label>${stars('comm_rating')}
 
-    <label>Would you recommend us? <span class="zh">您会推荐我们吗？</span></label>
+    <label>Would you recommend us? </label>
     <div class="yn" id="yn">
-      <button type="button" data-v="1">👍 Yes 会</button>
-      <button type="button" data-v="0">👎 No 不会</button>
+      <button type="button" data-v="1">👍 Yes</button>
+      <button type="button" data-v="0">👎 No</button>
     </div>
 
-    <label>What went well? <span class="zh">哪里做得好？</span></label>
+    <label>What went well? </label>
     <textarea id="went_well" rows="3" placeholder="Optional"></textarea>
 
-    <label>What could we do better? <span class="zh">哪里可以改进？</span></label>
+    <label>What could we do better? </label>
     <textarea id="improve" rows="3" placeholder="Optional"></textarea>
 
-    <label>Anyone you'd like to thank? <span class="zh">想感谢的同事</span></label>
+    <label>Anyone you'd like to thank? </label>
     <input type="text" id="staff_praise" placeholder="Optional — a nurse's name">
 
-    <label>Your name <span class="zh">您的称呼</span></label>
+    <label>Your name </label>
     <input type="text" id="name" placeholder="Optional">
 
-    <button class="go" id="go">Send feedback 提交</button>
+    <button class="go" id="go">Send Feedback</button>
     <p class="foot">Assura Nursing · assuranursing.com</p>`;
 
   wrap.querySelectorAll('.stars').forEach(row=>{
@@ -410,7 +410,7 @@ async function send(){
     if(!r.ok) throw new Error(d.error||'Could not send');
     thanks(false);
   }catch(e){
-    btn.disabled = false; btn.textContent = 'Send feedback 提交';
+    btn.disabled = false; btn.textContent = 'Send Feedback';
     alert(e.message);
   }
 }
@@ -422,13 +422,35 @@ function thanks(already){
     <div class="big">🙏</div>
     <h1>${already ? 'Already received' : 'Thank you'}</h1>
     <p class="sub">${already
-      ? 'We have your feedback — thank you.<br><span class="zh">我们已收到您的意见，谢谢。</span>'
-      : 'We really appreciate you taking the time.<br><span class="zh">感谢您抽空给予意见。</span>'}</p>
+      ? 'We have your feedback — thank you.<br>'
+      : 'We really appreciate you taking the time.<br>'}</p>
     <p class="foot">Assura Nursing · assuranursing.com</p></div>`;
 }
 start();
 </script>
 <script src="notifications.js"></script>
 <script src="i18n.js"></script>
+<footer class="site-footer" style="background:#020b14; border-top:1px solid rgba(56,189,248,0.15); padding:32px 20px; text-align:center; font-family:system-ui,sans-serif; margin-top:40px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:12px;">
+      <img src="assura-logo.png" alt="Assura" style="height:32px; width:auto;">
+      <span style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:0.5px;">ASSURA <span style="color:#38bdf8;">NURSING CARE</span></span>
+    </div>
+    <p style="color:#94a3b8; font-size:0.84rem; margin:6px 0 14px; line-height:1.6;">
+      Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
+    </p>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.82rem; margin-bottom:14px;">
+      <a href="index.html" style="color:#38bdf8; text-decoration:none;">Home</a>
+      <a href="about.html" style="color:#38bdf8; text-decoration:none;">About Us</a>
+      <a href="services.html" style="color:#38bdf8; text-decoration:none;">Services &amp; Rates</a>
+      <a href="media.html" style="color:#38bdf8; text-decoration:none;">Media &amp; Ambulance</a>
+      <a href="portal.html" style="color:#38bdf8; text-decoration:none;">Clinical Portal</a>
+      <a href="book.html" style="color:#38bdf8; text-decoration:none;">Book Care</a>
+    </div>
+    <div style="color:#64748b; font-size:0.78rem; border-top:1px solid rgba(255,255,255,0.06); padding-top:12px;">
+      © 2026 Assura Nursing Care. All Rights Reserved. · Penang &amp; Seberang Perai Home Nursing Services
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -55,7 +55,7 @@
         radial-gradient(42% 36% at 84% 6%,  rgba(150,86,255,.28) 0, transparent 60%),
         radial-gradient(56% 40% at 52% 100%, rgba(244,166,42,.26) 0, transparent 64%);
       filter:blur(22px); animation:sky 26s ease-in-out infinite alternate; }
-    @keyframes sky{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3%,-3%,0) scale(1.1)}}
+    @keyframes sky{from{transform:translate3d(0,0,0) scale}to{transform:translate3d(3%,-3%,0) scale(1.1)}}
     @media (prefers-reduced-motion: reduce){ .hero::before{animation:none} }
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 15px; padding: 8px 13px;
       border: 1px solid #ffffff35; border-radius: 999px; color: #d1eaff; background: #07366d55;
@@ -263,7 +263,7 @@
         radial-gradient(46% 38% at 84% 4%, rgba(150,86,255,.22) 0, transparent 60%),
         radial-gradient(60% 42% at 50% 98%, rgba(244,166,42,.20) 0, transparent 64%);
       filter:blur(24px);animation:skyB 30s ease-in-out infinite alternate}
-    @keyframes skyB{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3%,-3%,0) scale(1.1)}}
+    @keyframes skyB{from{transform:translate3d(0,0,0) scale}to{transform:translate3d(3%,-3%,0) scale(1.1)}}
     body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.14;
       mix-blend-mode:overlay;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -912,7 +912,7 @@ footer.site-footer {
 
       <div class="lang-bar" id="langBar">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')">中文</button>
+        <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')"></button>
         <button class="lang-btn" data-lang="bm" onclick="setLanguage('bm')">BM</button>
         <button class="lang-btn" data-lang="ta" onclick="setLanguage('ta')">தமிழ்</button>
       </div>
@@ -928,30 +928,30 @@ footer.site-footer {
       <p class="eyebrow">CARE THAT COMES TO YOU</p>
       <h1>Private Home <span class="accent">Nursing</span> Care</h1>
       <p class="subtitle">Professional Nursing, Wherever You Need It</p>
-      <p class="subtitle zh-sub">居家护理预约 · 专业护士上门</p>
-      <p class="contact">Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868</p>
+      
+      <p class="contact">Assura Nursing · Bukit Mertajam Base &amp; Penang Island · 012-206 4868</p>
     </header>
 
     <div class="booking">
       <div class="card urgent" id="urgent">
         <button type="button" class="urg-open" id="urgOpen">
           <span class="urg-ico">🚑</span>
-          <span><b>Need someone urgently?</b><small>需要紧急护理？</small></span>
+          <span><b>Need someone urgently?</b></span>
         </button>
         <div class="urg-body" id="urgBody" hidden>
           <p class="urg-999"><b>If this is a medical emergency — chest pain, trouble breathing,
             severe bleeding, unconscious, stroke signs — call 999 now.</b><br>
-            如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。</p>
-          <a class="urg-call urg-999-btn" href="tel:999">📞 Call 999 · 紧急救护</a>
+            For acute medical emergencies, call 999 immediately.</p>
+          <a class="urg-call urg-999-btn" href="tel:999">📞 Call 999 (Emergency Ambulance)</a>
           <p class="urg-or">We are a home nursing service, not an ambulance. For urgent
             <b>nursing</b> needs — a blocked catheter, a dressing that won't stop bleeding,
             a tube that has come out — reach us directly:</p>
-          <p class="urg-or zh-sm">我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：</p>
+          <p class="urg-or">We provide scheduled and rapid home nursing care. If experiencing acute medical emergencies (severe chest pain, respiratory arrest, massive hemorrhage), please call 999 immediately.</p>
           <a class="urg-call" href="tel:+60122064868">📞 Call us · 012-206 4868</a>
-          <a class="urg-call urg-wa" id="urgWa" href="#" target="_blank" rel="noopener">💬 WhatsApp urgent · 紧急讯息</a>
+          <a class="urg-call urg-wa" id="urgWa" href="#" target="_blank" rel="noopener">💬 WhatsApp Urgent Care</a>
           <p class="urg-fine">We answer when we can, but we cannot promise immediate availability.
             If nobody answers, call 999 or go to the nearest clinic.<br>
-            我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。</p>
+            We will respond promptly. For urgent medical emergencies, please proceed to the nearest emergency department or call 999.</p>
         </div>
       </div>
 
@@ -962,84 +962,84 @@ footer.site-footer {
             <small id="welWhat"></small>
           </div>
           <div class="wel-btns">
-            <button type="button" class="wel-go" id="welFill">Use my details · 填入资料</button>
-            <button type="button" class="wel-clr" id="welClear">Forget me · 清除</button>
+            <button type="button" class="wel-go" id="welFill">Use Saved Details</button>
+            <button type="button" class="wel-clr" id="welClear">Clear Saved Details</button>
           </div>
         </div>
         <p class="wel-note">Saved only on this phone. We never see it until you send the message.<br>
-          资料只存于本手机，发送前我们不会看到。</p>
+          All details remain confidential under PDPA 2010 regulations.</p>
       </div>
 
       <form id="booking-form" class="card" novalidate>
         <div class="mode" role="group" aria-label="What would you like to do?">
           <button type="button" class="mode-btn on" data-mode="book">
-            <strong>Book a visit</strong><small>预约上门</small>
+            <strong>Book a visit</strong>
           </button>
           <button type="button" class="mode-btn" data-mode="ask">
-            <strong>Just asking</strong><small>只想咨询</small>
+            <strong>Just asking</strong>
           </button>
         </div>
         <section class="section">
-          <div class="section-head"><span class="step">1</span><div><h2 id="svc-h">Choose services</h2><p class="zh" id="svc-zh">选择护理项目</p></div></div>
+          <div class="section-head"><span class="step">1</span><div><h2 id="svc-h">Choose services</h2></div></div>
           <div class="services" id="services">
-            <label class="service"><input type="checkbox" name="service" value="Wound Dressing"><span class="tick">✓</span><strong>Wound Dressing</strong><small>伤口换药与护理</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Injection & Drip"><span class="tick">✓</span><strong>Injection &amp; Drip</strong><small>注射 · 打点滴（输液）</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Urinary Catheter Change"><span class="tick">✓</span><strong>Urinary Catheter Change</strong><small>更换尿管（导尿管）</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Ryle's Tube Change"><span class="tick">✓</span><strong>Ryle's Tube Change</strong><small>更换鼻胃管（喂食管）</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Post-Operative Care"><span class="tick">✓</span><strong>Post-Operative Care</strong><small>术后护理与康复照顾</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Bed-Bound Patient Care"><span class="tick">✓</span><strong>Bed-Bound Patient Care</strong><small>卧床护理 · 翻身防褥疮</small></label>
-            <label class="service"><input type="checkbox" name="service" value="ADL Assistance"><span class="tick">✓</span><strong>ADL Assistance</strong><small>日常起居协助 · 进食移动</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Personal Hygiene Care"><span class="tick">✓</span><strong>Personal Hygiene Care</strong><small>个人卫生 · 洗澡清洁</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Palliative Care"><span class="tick">✓</span><strong>Palliative Care</strong><small>安宁疗护 · 舒缓护理</small></label>
-            <label class="service"><input type="checkbox" name="service" value="End-of-Life Care"><span class="tick">✓</span><strong>End-of-Life Care</strong><small>临终关怀与家属支持</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Clinic & Hospital Escort"><span class="tick">✓</span><strong>Clinic &amp; Hospital Escort</strong><small>陪诊 · 陪同复诊门诊</small></label>
-            <label class="service"><input type="checkbox" name="service" value="Other / Not Sure"><span class="tick">✓</span><strong>Other / Not Sure</strong><small>其他需求 · 欢迎询问</small></label>
+            <label class="service"><input type="checkbox" name="service" value="Wound Dressing"><span class="tick">✓</span><strong>Wound Dressing</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Injection & Drip"><span class="tick">✓</span><strong>Injection &amp; Drip</strong><small> · </small></label>
+            <label class="service"><input type="checkbox" name="service" value="Urinary Catheter Change"><span class="tick">✓</span><strong>Urinary Catheter Change</strong><small></small></label>
+            <label class="service"><input type="checkbox" name="service" value="Ryle's Tube Change"><span class="tick">✓</span><strong>Ryle's Tube Change</strong><small></small></label>
+            <label class="service"><input type="checkbox" name="service" value="Post-Operative Care"><span class="tick">✓</span><strong>Post-Operative Care</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Bed-Bound Patient Care"><span class="tick">✓</span><strong>Bed-Bound Patient Care</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="ADL Assistance"><span class="tick">✓</span><strong>ADL Assistance</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Personal Hygiene Care"><span class="tick">✓</span><strong>Personal Hygiene Care</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Palliative Care"><span class="tick">✓</span><strong>Palliative Care</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="End-of-Life Care"><span class="tick">✓</span><strong>End-of-Life Care</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Clinic & Hospital Escort"><span class="tick">✓</span><strong>Clinic &amp; Hospital Escort</strong></label>
+            <label class="service"><input type="checkbox" name="service" value="Other / Not Sure"><span class="tick">✓</span><strong>Other / Not Sure</strong></label>
           </div>
         <section class="section">
-          <div class="section-head"><span class="step">2</span><div><h2>Staff &amp; Gender Preference</h2><p class="zh">医护人员与性别偏好（男女护士/护理师均可指定）</p></div></div>
+          <div class="section-head"><span class="step">2</span><div><h2>Staff &amp; Gender Preference</h2></div></div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
             <label class="service" style="min-height:68px;padding:12px 12px 12px 42px;">
-              <input type="radio" name="staff_pref" value="Any (No preference / 均可)" checked>
+              <input type="radio" name="staff_pref" value="Any (No preference)" checked>
               <span class="tick">✓</span>
               <strong>Any Nurse / Caregiver</strong>
-              <small>无偏好 · 安排最快到达人员</small>
+              
             </label>
             <label class="service" style="min-height:68px;padding:12px 12px 12px 42px;">
-              <input type="radio" name="staff_pref" value="Female Nurse / Caregiver (女护士/女护理师)">
+              <input type="radio" name="staff_pref" value="Female Nurse / Caregiver ">
               <span class="tick">✓</span>
               <strong>Female Nurse / Caregiver</strong>
-              <small>优先安排女护士 / 女护理师</small>
+              
             </label>
             <label class="service" style="min-height:68px;padding:12px 12px 12px 42px;">
-              <input type="radio" name="staff_pref" value="Male Nurse / Caregiver (男护士/男护理师)">
+              <input type="radio" name="staff_pref" value="Male Nurse / Caregiver ">
               <span class="tick">✓</span>
               <strong>Male Nurse / Caregiver</strong>
-              <small>优先安排男护士 (力气大·翻身/男导尿)</small>
+              
             </label>
           </div>
         </section>
 
         <section class="section book-only">
-          <div class="section-head"><span class="step">3</span><div><h2>Pick a visiting time</h2><p class="zh">选择上门时间</p></div></div>
+          <div class="section-head"><span class="step">3</span><div><h2>Pick a visiting time</h2></div></div>
           <div class="fields">
-            <div class="field full"><label for="date">Preferred date <span>日期</span></label><input id="date" name="date" type="date" required><small class="field-error">Please choose a date.</small></div>
+            <div class="field full"><label for="date">Preferred date </label><input id="date" name="date" type="date" required><small class="field-error">Please choose a date.</small></div>
             <div class="field full">
-              <label for="slots">Preferred time <span>时间</span></label>
+              <label for="slots">Preferred time </label>
               <div class="slots" id="slots" role="group" aria-label="Preferred visiting time"></div>
               <small class="field-error" id="slot-error">Please choose a time.</small>
-              <p class="slot-note" data-i18n="book_time_note">24/7 Home Nursing Visiting Hours — round-the-clock shift support across Penang. We'll confirm your exact slot by WhatsApp.<br>24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。</p>
+              <p class="slot-note" data-i18n="book_time_note">24/7 Home Nursing Visiting Hours — round-the-clock shift support across Penang. We'll confirm your exact slot by WhatsApp.<br>24， WhatsApp 。</p>
             </div>
           </div>
         </section>
 
         <section class="section">
-          <div class="section-head"><span class="step" id="step3">4</span><div><h2 id="addr-h">Where should we come?</h2><p class="zh" id="addr-zh">上门地址与联系方式</p></div></div>
-          <p class="ask-note ask-only">Just leave your name, phone and question — everything else is optional.<br>只需留下姓名、电话和问题，其余可不填。</p>
+          <div class="section-head"><span class="step" id="step3">4</span><div><h2 id="addr-h">Where should we come?</h2></div></div>
+          <p class="ask-note ask-only">Just leave your name, phone and question — everything else is optional.<br>、，。</p>
           <div class="fields">
             <div class="field full">
-              <label for="area">Address <span>地址</span></label>
+              <label for="area">Address </label>
               <input id="area" name="area" autocomplete="street-address" placeholder="e.g. No 8, Taman Kota Permai, Bukit Mertajam" required>
-              <p class="addr-hint" id="addr-hint" hidden>📍 Filled from your location — please add your house/unit number if it's missing.<br>已根据定位填写，请补上门牌号码。</p>
+              <p class="addr-hint" id="addr-hint" hidden>📍 Filled from your location — please add your house/unit number if it's missing.<br>，。</p>
               <small class="field-error">Please enter your address.</small>
 
               <div class="pick book-only">
@@ -1047,27 +1047,27 @@ footer.site-footer {
                 <div class="pick-bar">
                   <button class="pick-btn" id="gps" type="button">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-                    Use my location · 定位
+                    Use My Location
                   </button>
-                  <span class="pick-msg" id="pick-msg" role="status" aria-live="polite">Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。</span>
+                  <span class="pick-msg" id="pick-msg" role="status" aria-live="polite">Tap the map to drop a pin, or use your GPS. ， GPS。</span>
                 </div>
               </div>
-              <p class="pick-hint book-only">The pin is what gets the nurse to your gate — an address alone often stops at the street.<br>定位针能让护士准确找到您家门口。</p>
+              <p class="pick-hint book-only">The pin is what gets the nurse to your gate — an address alone often stops at the street.<br>。</p>
               <ul class="areas book-only" id="areas"></ul>
             </div>
-            <div class="field"><label for="name">Name <span>姓名</span></label><input id="name" name="name" autocomplete="name" placeholder="Your name" required><small class="field-error">Please enter your name.</small></div>
-            <div class="field"><label for="phone">Phone <span>电话</span></label><input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="01X-XXXX XXX" required><small class="field-error">Please enter a phone number.</small></div>
-            <div class="field full"><label for="notes"><span id="notes-lab">Patient condition / notes</span> <span id="notes-zh">病人情况 / 备注（选填）</span></label><textarea id="notes" name="notes" placeholder="Tell us anything helpful about the patient's condition or care needed."></textarea></div>
+            <div class="field"><label for="name">Name </label><input id="name" name="name" autocomplete="name" placeholder="Your name" required><small class="field-error">Please enter your name.</small></div>
+            <div class="field"><label for="phone">Phone </label><input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="01X-XXXX XXX" required><small class="field-error">Please enter a phone number.</small></div>
+            <div class="field full"><label for="notes"><span id="notes-lab">Patient condition / notes</span> </label><textarea id="notes" name="notes" placeholder="Tell us anything helpful about the patient's condition or care needed."></textarea></div>
           </div>
           <p class="form-error" id="form-error" role="alert">Please choose a service and complete the required details.</p>
           <div id="ts-widget" style="margin:0 0 14px;display:flex;justify-content:center"></div>
           <div class="actions">
             <button class="whatsapp" type="submit">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.149-.198.297-.768.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.478-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.1-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.478 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.492.71.306 1.264.489 1.696.626.713.227 1.363.195 1.876.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.006a9.867 9.867 0 0 1-5.032-1.378l-.361-.214-3.741.982.998-3.648-.235-.375a9.867 9.867 0 1 1 8.377 4.633m0-18.117a11.951 11.951 0 0 0-10.117 18.3L.5 23.5l5.55-1.456a11.951 11.951 0 1 0 6.001-17.376"/></svg>
-              <span id="wa-label">Book via WhatsApp · 预约</span>
+              <span id="wa-label">Book via WhatsApp </span>
             </button>
-            <p class="action-note" id="action-note">Opens WhatsApp with your booking details filled in — just press send.<br>点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。</p>
-            <a class="call" href="tel:+60122064868">Call us · 拨打 012-206 4868</a>
+            <p class="action-note" id="action-note">Opens WhatsApp with your booking details filled in — just press send.<br> WhatsApp，，。</p>
+            <a class="call" href="tel:+60122064868">Call us · 012-206 4868</a>
           </div>
         </section>
       </form>
@@ -1076,21 +1076,21 @@ footer.site-footer {
         <div class="install">
           <strong>Save this booking app</strong>
           <small id="install-tip">After this page is published, install it from your browser for faster bookings.</small>
-          <button id="install-app" class="install-button" type="button">Install app · 安装应用</button>
+          <button id="install-app" class="install-button" type="button">Install app </button>
         </div>
-        <div class="availability"><b>Serving Bukit Mertajam &amp; nearby areas</b>大山脚及邻近地区</div>
+        <div class="availability"><b>Serving Bukit Mertajam &amp; nearby areas</b></div>
       </aside>
     </div>
 
     <section class="card summary-card" id="summary-card" aria-live="polite">
       <h3>Summary</h3>
-      <p>预约摘要 · Check this before you send. Nothing is sent until you tap the button.</p>
+      <p>Check this before you send. Nothing is sent until you tap the button.</p>
       <div class="summary">
         <div class="summary-item"><b>Services</b><span id="summary-services" class="empty">Not selected yet</span></div>
         <div class="summary-item"><b>Visit</b><span id="summary-visit" class="empty">Choose date and time</span></div>
         <div class="summary-item"><b>Where</b><span id="summary-area" class="empty">Add your address</span></div>
       </div>
-      <a class="summary-jump" href="#booking-form">↑ Back to the form · 返回表格</a>
+      <a class="summary-jump" href="#booking-form">↑ Back to the form · </a>
     </section>
     <footer class="site-footer">
   <div class="footer-brand-wrap" style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:16px;">
@@ -1105,8 +1105,7 @@ footer.site-footer {
     <a href="announcements.html">Announcements</a>
     <a href="download.html">Download App</a>
     <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
-    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
-  </div>
+    </div>
   <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
     © 2026 Assura Nursing Care. All Rights Reserved.
   </p>
@@ -1114,7 +1113,7 @@ footer.site-footer {
     Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
   </p>
   <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
-    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+    Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
   </p>
 </footer>
   </main>
@@ -1138,13 +1137,13 @@ footer.site-footer {
 
     // Towns you cover — shown as text under the map.
     areas: [
-      { en: 'Bukit Mertajam', zh: '大山脚' },
-      { en: 'Butterworth',    zh: '北海' },
-      { en: 'Perai',          zh: '北赖' },
-      { en: 'Juru',           zh: '爪夷' },
-      { en: 'Machang Bubok',  zh: '马章武莫' },
-      { en: 'Kepala Batas',   zh: '甲抛峇底' },
-      { en: 'Nibong Tebal',   zh: '高渊' }
+      { en: 'Bukit Mertajam', zh: '' },
+      { en: 'Butterworth',    zh: '' },
+      { en: 'Perai',          zh: '' },
+      { en: 'Juru',           zh: '' },
+      { en: 'Machang Bubok',  zh: '' },
+      { en: 'Kepala Batas',   zh: '' },
+      { en: 'Nibong Tebal',   zh: '' }
     ]
   };
   /* ========================================================================= */
@@ -1237,23 +1236,23 @@ footer.site-footer {
     document.querySelector('#area').required = !asking;
 
     document.querySelector('#svc-h').textContent  = asking ? 'What do you want to ask about?' : 'Choose services';
-    document.querySelector('#svc-zh').textContent = asking ? '想咨询哪些项目？（选填）' : '选择护理项目';
+    document.querySelector('#svc-zh').textContent = asking ? '？' : '';
     document.querySelector('#step3').textContent  = asking ? '2' : '3';
     document.querySelector('#addr-h').textContent  = asking ? 'Your details' : 'Where should we come?';
-    document.querySelector('#addr-zh').textContent = asking ? '联络资料' : '上门地址';
+    document.querySelector('#addr-zh').textContent = asking ? '' : '';
     document.querySelector('#area').placeholder = asking
-      ? 'Which town are you in? (optional) 您在哪个地区？（选填）'
+      ? 'Which town are you in? (optional) ？'
       : 'e.g. No 8, Taman Kota Permai, Bukit Mertajam';
     document.querySelector('#notes-lab').textContent = asking ? 'Your question' : 'Patient condition / notes';
-    document.querySelector('#notes-zh').textContent  = asking ? '您的问题' : '病人情况 / 备注（选填）';
+    document.querySelector('#notes-zh').textContent  = asking ? '' : ' / ';
     document.querySelector('#notes').placeholder = asking
       ? 'What would you like to ask? e.g. do you do catheter change, what does it cost, are you free this weekend?'
       : "Tell us anything helpful about the patient's condition or care needed.";
     document.querySelector('#wa-label').textContent = asking
-      ? 'Ask via WhatsApp · 询问' : 'Book via WhatsApp · 预约';
+      ? 'Ask via WhatsApp · ' : 'Book via WhatsApp ';
     document.querySelector('#action-note').innerHTML = asking
-      ? "Opens WhatsApp with your question ready — just press send.<br>点击后会打开 WhatsApp，按发送即可。"
-      : "Opens WhatsApp with your booking details filled in — just press send.<br>点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。";
+      ? "Opens WhatsApp with your question ready — just press send.<br> WhatsApp，。"
+      : "Opens WhatsApp with your booking details filled in — just press send.<br> WhatsApp，，。";
 
     form.querySelectorAll('.has-error').forEach(e=>e.classList.remove('has-error'));
     errorMessage.classList.remove('show');
@@ -1288,7 +1287,7 @@ footer.site-footer {
     const box = document.querySelector('.pick');
     if (box) box.innerHTML = '<p class="pick-bar" style="display:block">Map unavailable right now — '
       + 'just type your address above and we will call to confirm it.<br>'
-      + '地图暂时无法显示，请填写地址，我们会致电确认。</p>';
+      + '，，。</p>';
   }
   if (mapOK) {
   // Leaflet needs a view set before any layer is added.
@@ -1304,7 +1303,7 @@ footer.site-footer {
     radius: JHN.coverageKm * 1000,
     color: '#0a6dcc', weight: 2, dashArray: '5 4',
     fillColor: '#0a6dcc', fillOpacity: .10
-  }).addTo(map).bindTooltip('We come to this area · 服务范围');
+  }).addTo(map).bindTooltip('We come to this area · ');
 
   // Frame the whole coverage area, so the edge of it is actually visible.
   map.fitBounds(coverage.getBounds(), { padding: [12, 12] });
@@ -1344,8 +1343,8 @@ footer.site-footer {
     const inside = pinKm <= JHN.coverageKm;
     pickMsg.className = 'pick-msg ' + (inside ? 'in' : 'out');
     pickMsg.textContent = inside
-      ? `✅ ${pinKm.toFixed(1)} km away — inside our service area. 在服务范围内。`
-      : `⚠️ ${pinKm.toFixed(1)} km away — outside our usual area. Send the request anyway, we'll tell you if we can come. 超出一般范围，仍可预约，我们会回复。`;
+      ? `✅ ${pinKm.toFixed} km away — inside our service area. 。`
+      : `⚠️ ${pinKm.toFixed} km away — outside our usual area. Send the request anyway, we'll tell you if we can come. ，，。`;
     updateSummary();
     fillAddressFrom(lat, lng);
   }
@@ -1397,7 +1396,7 @@ footer.site-footer {
   async function fillAddressFrom(lat, lng) {
     if (areaInput.value.trim() && !addrAuto) return;   // client typed their own
     const seq = ++addrSeq;
-    areaInput.placeholder = 'Getting your address… 正在获取地址…';
+    areaInput.placeholder = 'Getting your address… …';
     let text = '';
     try { text = await lookupDetailed(lat, lng); } catch (e) {
       try { text = await lookupArea(lat, lng); } catch (e2) { /* both unavailable */ }
@@ -1419,18 +1418,18 @@ footer.site-footer {
   document.querySelector('#gps').addEventListener('click', () => {
     if (!navigator.geolocation) {
       pickMsg.className = 'pick-msg err';
-      pickMsg.textContent = 'Location not available here — tap the map instead. 请点地图选择位置。';
+      pickMsg.textContent = 'Location not available here — tap the map instead. 。';
       return;
     }
     pickMsg.className = 'pick-msg';
-    pickMsg.textContent = 'Finding you… 定位中…';
+    pickMsg.textContent = 'Finding you… …';
     navigator.geolocation.getCurrentPosition(
       p => setPin(L.latLng(p.coords.latitude, p.coords.longitude), 16),
       err => {
         pickMsg.className = 'pick-msg err';
         pickMsg.textContent = err && err.code === 1
-          ? 'Location blocked — allow it in settings, or tap the map. 请允许定位，或点地图选择。'
-          : 'Could not find you — tap the map instead. 无法定位，请点地图选择。';
+          ? 'Location blocked — allow it in settings, or tap the map. ，。'
+          : 'Could not find you — tap the map instead. ，。';
       },
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
     );
@@ -1506,7 +1505,7 @@ footer.site-footer {
       : (selectedServices().length > 0 && selectedSlot() && inputs.filter(i => i.required).every(fieldValid));
     renderFieldErrors();
     errorMessage.textContent = asking
-      ? 'Please add your name, phone and your question. 请填写姓名、电话和问题。'
+      ? 'Please add your name, phone and your question. 、。'
       : 'Please choose a service and complete the required details.';
     errorMessage.classList.toggle('show', !ok);
     if (!ok) {
@@ -1536,8 +1535,8 @@ footer.site-footer {
       'Name: ' + val('name'),
       'Phone: ' + val('phone'),
       'Address: ' + val('area'),
-      p ? 'My location pin: https://www.google.com/maps?q=' + p.lat.toFixed(6) + ',' + p.lng.toFixed(6) : '',
-      pinKm != null ? 'Approx distance: ' + pinKm.toFixed(1) + ' km' : '',
+      p ? 'My location pin: https://www.google.com/maps?q=' + p.lat.toFixed + ',' + p.lng.toFixed : '',
+      pinKm != null ? 'Approx distance: ' + pinKm.toFixed + ' km' : '',
       'Preferred date: ' + dateInput.value,
       'Preferred time: ' + selectedSlot(),
       val('notes') ? 'Patient condition / notes: ' + val('notes') : ''
@@ -1558,9 +1557,9 @@ footer.site-footer {
           date: asking ? '' : dateInput.value,
           time: asking ? '' : selectedSlot(),
           notes: val('notes'),
-          lat: p ? +p.lat.toFixed(6) : null,
-          lng: p ? +p.lng.toFixed(6) : null,
-          km: pinKm != null ? +pinKm.toFixed(1) : null,
+          lat: p ? +p.lat.toFixed : null,
+          lng: p ? +p.lng.toFixed : null,
+          km: pinKm != null ? +pinKm.toFixed : null,
           token: tsToken,
           website: ''   // honeypot (must stay empty)
         };
@@ -1647,7 +1646,7 @@ footer.site-footer {
   if (isStandalone) {
     // Already installed and running as an app — hide the whole prompt.
     installButton.style.display = 'none';
-    installTip.textContent = 'You’re using the installed app. 已安装应用。';
+    installTip.textContent = 'You’re using the installed app. 。';
   } else if (isIOS) {
     // iPhone/iPad: Apple gives no install button, so tell them the manual steps.
     installButton.style.display = 'none';
@@ -1655,18 +1654,18 @@ footer.site-footer {
       'On iPhone: tap the <strong>Share</strong> button ' +
       '<span aria-hidden="true">⬆️</span> at the bottom, then ' +
       '<strong>“Add to Home Screen.”</strong><br>' +
-      'iPhone 用户：点下方 <strong>分享</strong> 按钮，选 <strong>“加入主画面”</strong>。';
+      'iPhone ： <strong></strong> ， <strong>“”</strong>。';
   }
 
   window.addEventListener('beforeinstallprompt', event => {
     event.preventDefault();
     installPrompt = event;
     installButton.style.display = '';   // Android can install directly
-    installTip.textContent = 'Install this booking app for quick access from your home screen. 安装到主画面，预约更快。';
+    installTip.textContent = 'Install this booking app for quick access from your home screen. ，。';
   });
   installButton.addEventListener('click', async () => {
     if (!installPrompt) {
-      installTip.textContent = 'Use your browser menu and choose “Add to Home screen”. 请用浏览器菜单选择“加入主画面”。';
+      installTip.textContent = 'Use your browser menu and choose “Add to Home screen”. “”。';
       return;
     }
     installPrompt.prompt();
@@ -1675,7 +1674,7 @@ footer.site-footer {
   });
   window.addEventListener('appinstalled', () => {
     installButton.style.display = 'none';
-    installTip.textContent = 'Installed. Find “Home Nursing” on your home screen. 已安装，可在主画面找到。';
+    installTip.textContent = 'Installed. Find “Home Nursing” on your home screen. ，。';
   });
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('home-nursing-service-worker.js').catch(() => {});

@@ -1344,7 +1344,7 @@ img, video, iframe {
 
 <div class="container">
   <div class="page-hero">
-    <span class="page-tag" id="svc-tag">Clinical Services &amp; Rates · 临床服务与透明收费</span>
+    <span class="page-tag" id="svc-tag">Clinical Services &amp; Rates</span>
     <h1 id="svc-title">Home Nursing Procedures &amp; Transparent Rates</h1>
     <p id="svc-sub">Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.</p>
   </div>
@@ -1367,7 +1367,7 @@ img, video, iframe {
           <option value="250" data-id="stroke" data-name="Stroke Rehab & Physiotherapy Session (1.5 hr)">Stroke Rehab &amp; Mobility Exercise (1.5 hr) · RM 250</option>
           <option value="350" data-id="elderly" data-name="12-Hour Private Bedside Nurse Shift">12-Hour Dedicated Bedside Nurse Shift · RM 350</option>
           <option value="650" data-id="shift24" data-name="24-Hour Continuous Care Shift">24-Hour Continuous Private Nurse Shift · RM 650</option>
-          <option value="custom" data-id="custom" data-name="Other / Custom Nursing Service">Other / Custom Nursing Service (Key in below) · 其他自订护理服务</option>
+          <option value="custom" data-id="custom" data-name="Other / Custom Nursing Service">Other / Custom Nursing Service (Key in below)</option>
           <option value="150" data-id="escort" data-name="Hospital / Specialist Clinic Escort (3 Hours)">Hospital / Specialist Clinic Escort · RM 150</option>
         </select>
       </div>
@@ -1391,9 +1391,9 @@ img, video, iframe {
     <!-- Collapsible Custom Nursing Service Box -->
     <div id="customServiceBox" style="display:none; background:rgba(14,38,68,0.7); border:1px solid rgba(255,210,122,0.4); border-radius:14px; padding:16px; margin-bottom:20px;">
       <label style="display:block; font-size:0.82rem; font-weight:700; color:#FFD27A; margin-bottom:6px;">
-        SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求
+        SPECIFY YOUR REQUIRED SERVICE · Please key in your specific nursing requirements
       </label>
-      <textarea id="customServiceText" oninput="calcPrice()" placeholder="e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)" style="width:100%; min-height:80px; padding:10px 12px; border-radius:10px; background:#071E3D; color:#FFF; border:1px solid rgba(56,189,248,0.3); font-size:0.9rem; font-family:inherit; resize:vertical;"></textarea>
+      <textarea id="customServiceText" oninput="calcPrice()" placeholder="e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements..." style="width:100%; min-height:80px; padding:10px 12px; border-radius:10px; background:#071E3D; color:#FFF; border:1px solid rgba(56,189,248,0.3); font-size:0.9rem; font-family:inherit; resize:vertical;"></textarea>
     </div>
 
     <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
@@ -1407,7 +1407,7 @@ img, video, iframe {
           💬 Book via WhatsApp
         </a>
         <a id="btnEnquireWa" href="https://wa.me/60122064868?text=Hi%20Assura%20Nursing,%20I%20have%20an%20enquiry" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #0284c7, #0369a1); color: #FFF; border: 1px solid rgba(56, 189, 248, 0.5); padding: 12px 18px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.92rem; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4); display: inline-flex; align-items: center; gap: 6px;">
-          ❓ Enquire / 咨询
+          ❓ Enquire
         </a>
         <a id="btnBookForm" href="book.html?service=wound" style="background: rgba(255, 210, 122, 0.2); color: #FFD27A; border: 1px solid rgba(255, 210, 122, 0.4); padding: 12px 16px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 6px;">
           📝 Online Form
@@ -1534,8 +1534,8 @@ function calcPrice() {
   const lName = lSel.options[lSel.selectedIndex].getAttribute('data-loc');
 
   if (isCustom) {
-    const customText = (customInput && customInput.value.trim()) ? customInput.value.trim() : 'Custom Procedure / 特定需求';
-    document.getElementById('priceDisplay').innerText = 'Custom Quote · 客服评估';
+    const customText = (customInput && customInput.value.trim()) ? customInput.value.trim() : 'Custom Procedure';
+    document.getElementById('priceDisplay').innerText = 'Custom Quote';
     document.getElementById('priceSummary').innerText = 'Custom: ' + customText + ' · ' + lName;
 
     const waBookMsg = encodeURIComponent('Hello Assura Nursing, I would like to book a custom home nursing service in ' + lName + ':
@@ -1603,8 +1603,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <a href="announcements.html">Announcements</a>
     <a href="download.html">Download App</a>
     <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
-    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
-  </div>
+    </div>
   <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
     © 2026 Assura Nursing Care. All Rights Reserved.
   </p>
@@ -1612,7 +1611,7 @@ window.addEventListener('DOMContentLoaded', () => {
     Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
   </p>
   <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
-    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+    Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
   </p>
 </footer>
 

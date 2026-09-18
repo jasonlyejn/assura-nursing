@@ -331,7 +331,7 @@ img, video, iframe {
       <!-- Official MEWS Vitals Scoring Chart (Matching Clinical Standard) -->
       <div class="card" style="padding: 16px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-          <h3 style="margin: 0; border: none; padding: 0;">📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)</h3>
+          <h3 style="margin: 0; border: none; padding: 0;">📊 MEWS Vitals Sign Scoring Chart </h3>
           <div style="display: flex; gap: 8px; align-items: center;">
             <button id="wprev" class="btn" style="padding: 6px 12px; font-size: 0.8rem; width: auto;" onclick="prevDocWeek()">◀ Prev</button>
             <span id="docWeekLbl" style="font-weight: 800; font-size: 0.85rem; color: var(--primary);">Week 1</span>
@@ -395,7 +395,7 @@ img, video, iframe {
       <!-- Laboratory Results & Longitudinal Blood Test Tracker -->
       <div class="card">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
-          <h3 style="margin:0;border:none;padding:0;">🧪 Laboratory Results &amp; Serial Blood Test Matrix (检验单与血气追踪)</h3>
+          <h3 style="margin:0;border:none;padding:0;">🧪 Laboratory Results &amp; Serial Blood Test Matrix </h3>
           <span id="labAlertPill" style="display:none;font-size:0.75rem;font-weight:800;background:#fee2e2;color:#b91c1c;padding:3px 8px;border-radius:12px;border:1px solid #f87171;">
             🚨 Critical Lab Values Found
           </span>
@@ -431,9 +431,9 @@ img, video, iframe {
      {key:'resp',sym:'✗',name:'RESPIRATION RATE',sub:'BREATH /MIN',plot:'✗',bands:[
        b('≥36',36,Infinity,3,3),b('25 - 35',25,36,2,2),b('21 - 24',21,25,1,1),b('12 - 20',12,21,0,0),
        b('9 - 11',9,12,1,1),b('5 - 8',5,9,2,2),b('≤ 4',-Infinity,5,3,3)]},
-     {key:'spo2a',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 1 · SPO2 (%)',plot:'●',scale:1,bands:[
+     {key:'spo2a',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 1 · SPO2 ',plot:'●',scale:1,bands:[
        b('≥ 96',96,Infinity,0,0),b('94 - 95',94,96,1,1),b('90 - 93',90,94,2,2),b('≤ 89',-Infinity,90,3,3)]},
-     {key:'spo2b',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 2 · SPO2 (%) — (use scale 2 when SPO2 target in range of 88-92% for Respiratory failure / COPD)',plot:'●',scale:2,bands:[
+     {key:'spo2b',sym:'●',name:'OXYGEN SATURATION',sub:'SCALE 2 · SPO2  — (use scale 2 when SPO2 target in range of 88-92% for Respiratory failure / COPD)',plot:'●',scale:2,bands:[
        b('≥97 on O2',97,Infinity,3,3),b('95 - 96 on O2',95,97,2,2),b('≥93 - 94 on O2 / ≥93 RA',88,95,0,0),
        b('86 - 87',86,88,1,1),b('84 - 85',84,86,2,2),b('≤ 83',-Infinity,84,3,3)]},
      {key:'o2',sym:'',name:'ROOM AIR / OXYGEN',sub:'',plot:'',type:'o2',bands:[
@@ -681,7 +681,7 @@ img, video, iframe {
         h += `
           <div style="margin-top:16px;border:1.5px solid #0284c7;border-radius:8px;overflow:hidden;background:#fff;">
             <div style="background:#0284c7;color:#fff;padding:6px 10px;font-size:12px;font-weight:800;display:flex;justify-content:space-between;align-items:center;">
-              <span>🫁 Mechanical Ventilation Flowsheet (机械通气监测记录)</span>
+              <span>🫁 Mechanical Ventilation Flowsheet </span>
               <span style="font-size:10px;font-weight:600;">Airway: ${esc(aw.type||'ETT')} ${esc(aw.size||'7.5')}mm (${esc(aw.depth||'21cm')}) · Cuff: 20-30 cmH₂O</span>
             </div>
             <div style="overflow-x:auto;">
@@ -787,7 +787,7 @@ img, video, iframe {
           <tr>
             <td>${g.date} ${g.time || ''}</td>
             <td><span style="font-weight:700; text-transform:capitalize;">${g.meal_slot}</span></td>
-            <td><b style="color: ${g.glucose_reading > 10 ? 'var(--amber)' : g.glucose_reading < 4 ? 'var(--red)' : 'var(--green)'}">${Number(g.glucose_reading).toFixed(1)}</b></td>
+            <td><b style="color: ${g.glucose_reading > 10 ? 'var(--amber)' : g.glucose_reading < 4 ? 'var(--red)' : 'var(--green)'}">${Number(g.glucose_reading).toFixed}</b></td>
             <td>${g.insulin_units ? g.insulin_units + ' units (' + (g.insulin_brand || '') + ')' : '—'}</td>
             <td>${g.injection_site || '—'}</td>
             <td>${g.notes || '—'}</td>
@@ -836,36 +836,36 @@ img, video, iframe {
         columns.forEach(col => Object.keys(col.readings).forEach(k => allKeys.add(k)));
 
         const LAB_REF = {
-          ph: { name: 'pH (酸碱度)', unit: '', min: 7.35, max: 7.45, critLow: 7.20, critHigh: 7.60 },
-          paco2: { name: 'PaCO₂ (二氧化碳分压)', unit: 'mmHg', min: 35, max: 45, critLow: 20, critHigh: 60 },
-          pao2: { name: 'PaO₂ (氧分压)', unit: 'mmHg', min: 80, max: 100, critLow: 60, critHigh: null },
-          hco3: { name: 'HCO₃⁻ (碳酸氢根)', unit: 'mmol/L', min: 22, max: 26, critLow: 10, critHigh: 40 },
-          be: { name: 'Base Excess (BE 碱剩余)', unit: 'mmol/L', min: -2.0, max: 2.0, critLow: -10.0, critHigh: 10.0 },
-          sao2: { name: 'SaO₂ (血氧饱和度)', unit: '%', min: 95, max: 100, critLow: 88, critHigh: null },
-          lactate: { name: 'Lactate (血乳酸)', unit: 'mmol/L', min: 0.5, max: 2.0, critLow: null, critHigh: 4.0 },
+          ph: { name: 'pH ', unit: '', min: 7.35, max: 7.45, critLow: 7.20, critHigh: 7.60 },
+          paco2: { name: 'PaCO₂ ', unit: 'mmHg', min: 35, max: 45, critLow: 20, critHigh: 60 },
+          pao2: { name: 'PaO₂ ', unit: 'mmHg', min: 80, max: 100, critLow: 60, critHigh: null },
+          hco3: { name: 'HCO₃⁻ ', unit: 'mmol/L', min: 22, max: 26, critLow: 10, critHigh: 40 },
+          be: { name: 'Base Excess (BE )', unit: 'mmol/L', min: -2.0, max: 2.0, critLow: -10.0, critHigh: 10.0 },
+          sao2: { name: 'SaO₂ ', unit: '%', min: 95, max: 100, critLow: 88, critHigh: null },
+          lactate: { name: 'Lactate ', unit: 'mmol/L', min: 0.5, max: 2.0, critLow: null, critHigh: 4.0 },
           pf_ratio: { name: 'P/F Ratio (PaO₂/FiO₂)', unit: 'mmHg', min: 300, max: 500, critLow: 200, critHigh: null },
-          hb: { name: 'Hemoglobin (Hb 血红蛋白)', unit: 'g/dL', min: 12.0, max: 16.0, critLow: 7.0, critHigh: 20.0 },
-          wbc: { name: 'White Blood Cell (WBC 白细胞)', unit: '×10⁹/L', min: 4.0, max: 11.0, critLow: 2.0, critHigh: 30.0 },
-          plt: { name: 'Platelets (PLT 血小板)', unit: '×10⁹/L', min: 150, max: 400, critLow: 50, critHigh: 1000 },
-          hct: { name: 'Hematocrit (HCT 红细胞比容)', unit: '%', min: 36, max: 48, critLow: 21, critHigh: 60 },
-          k: { name: 'Potassium (K⁺ 钾)', unit: 'mmol/L', min: 3.5, max: 5.0, critLow: 2.8, critHigh: 6.0 },
-          na: { name: 'Sodium (Na⁺ 钠)', unit: 'mmol/L', min: 135, max: 145, critLow: 120, critHigh: 160 },
-          creat: { name: 'Serum Creatinine (肌酐)', unit: 'µmol/L', min: 50, max: 110, critLow: null, critHigh: 350 },
-          urea: { name: 'Blood Urea (尿素氮)', unit: 'mmol/L', min: 2.5, max: 7.1, critLow: null, critHigh: 20.0 },
-          egfr: { name: 'eGFR (肾小球滤过率)', unit: 'mL/min', min: 60, max: 120, critLow: 15, critHigh: null },
-          ca: { name: 'Total Calcium (Ca²⁺ 钙)', unit: 'mmol/L', min: 2.15, max: 2.55, critLow: 1.75, critHigh: 3.00 },
-          mg: { name: 'Magnesium (Mg²⁺ 镁)', unit: 'mmol/L', min: 0.70, max: 1.05, critLow: 0.50, critHigh: 1.80 },
-          t_bili: { name: 'Total Bilirubin (总胆红素)', unit: 'µmol/L', min: 3, max: 21, critLow: null, critHigh: 80 },
-          alt: { name: 'ALT / SGPT (谷丙转氨酶)', unit: 'U/L', min: 7, max: 56, critLow: null, critHigh: 500 },
-          ast: { name: 'AST / SGOT (谷草转氨酶)', unit: 'U/L', min: 10, max: 40, critLow: null, critHigh: 500 },
-          alb: { name: 'Albumin (白蛋白)', unit: 'g/L', min: 35, max: 50, critLow: 20, critHigh: null },
-          inr: { name: 'INR (国际标准化比值)', unit: '', min: 0.8, max: 1.2, critLow: null, critHigh: 4.5 },
-          pt: { name: 'PT (凝血酶原时间)', unit: 's', min: 11.0, max: 13.5, critLow: null, critHigh: 30.0 },
-          aptt: { name: 'APTT (部分凝血活酶时间)', unit: 's', min: 25.0, max: 35.0, critLow: null, critHigh: 70.0 },
-          d_dimer: { name: 'D-Dimer (D-二聚体)', unit: 'µg/mL', min: 0.0, max: 0.50, critLow: null, critHigh: 5.0 },
-          trop: { name: 'Troponin I/T (肌钙蛋白)', unit: 'ng/mL', min: 0.0, max: 0.04, critLow: null, critHigh: 0.04 },
-          crp: { name: 'hs-CRP (C反应蛋白)', unit: 'mg/L', min: 0.0, max: 5.0, critLow: null, critHigh: 50.0 },
-          pct: { name: 'Procalcitonin (降钙素原)', unit: 'ng/mL', min: 0.0, max: 0.25, critLow: null, critHigh: 2.0 },
+          hb: { name: 'Hemoglobin (Hb )', unit: 'g/dL', min: 12.0, max: 16.0, critLow: 7.0, critHigh: 20.0 },
+          wbc: { name: 'White Blood Cell (WBC )', unit: '×10⁹/L', min: 4.0, max: 11.0, critLow: 2.0, critHigh: 30.0 },
+          plt: { name: 'Platelets (PLT )', unit: '×10⁹/L', min: 150, max: 400, critLow: 50, critHigh: 1000 },
+          hct: { name: 'Hematocrit (HCT )', unit: '%', min: 36, max: 48, critLow: 21, critHigh: 60 },
+          k: { name: 'Potassium (K⁺ )', unit: 'mmol/L', min: 3.5, max: 5.0, critLow: 2.8, critHigh: 6.0 },
+          na: { name: 'Sodium (Na⁺ )', unit: 'mmol/L', min: 135, max: 145, critLow: 120, critHigh: 160 },
+          creat: { name: 'Serum Creatinine ', unit: 'µmol/L', min: 50, max: 110, critLow: null, critHigh: 350 },
+          urea: { name: 'Blood Urea ', unit: 'mmol/L', min: 2.5, max: 7.1, critLow: null, critHigh: 20.0 },
+          egfr: { name: 'eGFR ', unit: 'mL/min', min: 60, max: 120, critLow: 15, critHigh: null },
+          ca: { name: 'Total Calcium (Ca²⁺ )', unit: 'mmol/L', min: 2.15, max: 2.55, critLow: 1.75, critHigh: 3.00 },
+          mg: { name: 'Magnesium (Mg²⁺ )', unit: 'mmol/L', min: 0.70, max: 1.05, critLow: 0.50, critHigh: 1.80 },
+          t_bili: { name: 'Total Bilirubin ', unit: 'µmol/L', min: 3, max: 21, critLow: null, critHigh: 80 },
+          alt: { name: 'ALT / SGPT ', unit: 'U/L', min: 7, max: 56, critLow: null, critHigh: 500 },
+          ast: { name: 'AST / SGOT ', unit: 'U/L', min: 10, max: 40, critLow: null, critHigh: 500 },
+          alb: { name: 'Albumin ', unit: 'g/L', min: 35, max: 50, critLow: 20, critHigh: null },
+          inr: { name: 'INR ', unit: '', min: 0.8, max: 1.2, critLow: null, critHigh: 4.5 },
+          pt: { name: 'PT ', unit: 's', min: 11.0, max: 13.5, critLow: null, critHigh: 30.0 },
+          aptt: { name: 'APTT ', unit: 's', min: 25.0, max: 35.0, critLow: null, critHigh: 70.0 },
+          d_dimer: { name: 'D-Dimer (D-)', unit: 'µg/mL', min: 0.0, max: 0.50, critLow: null, critHigh: 5.0 },
+          trop: { name: 'Troponin I/T ', unit: 'ng/mL', min: 0.0, max: 0.04, critLow: null, critHigh: 0.04 },
+          crp: { name: 'hs-CRP (C)', unit: 'mg/L', min: 0.0, max: 5.0, critLow: null, critHigh: 50.0 },
+          pct: { name: 'Procalcitonin ', unit: 'ng/mL', min: 0.0, max: 0.25, critLow: null, critHigh: 2.0 },
           rbs: { name: 'Random Blood Glucose', unit: 'mmol/L', min: 4.0, max: 8.0, critLow: 3.0, critHigh: 20.0 }
         };
 
@@ -907,7 +907,7 @@ img, video, iframe {
             const cur = activeNums[activeNums.length - 1].val;
             const diff = cur - p;
             const dir = diff > 0 ? '▲ +' : diff < 0 ? '▼ ' : '= ';
-            deltaTxt = `<span style="font-weight:800;color:${diff>0?'#dc2626':diff<0?'#2563eb':'#64748b'};">${dir}${diff.toFixed(2)}</span>`;
+            deltaTxt = `<span style="font-weight:800;color:${diff>0?'#dc2626':diff<0?'#2563eb':'#64748b'};">${dir}${diff.toFixed}</span>`;
           }
 
           matrixHtml += `<tr style="border-bottom:1px solid #e2e8f0;">
@@ -958,5 +958,27 @@ img, video, iframe {
   </script>
 <script src="notifications.js"></script>
 <script src="i18n.js"></script>
+<footer class="site-footer" style="background:#020b14; border-top:1px solid rgba(56,189,248,0.15); padding:32px 20px; text-align:center; font-family:system-ui,sans-serif; margin-top:40px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:12px;">
+      <img src="assura-logo.png" alt="Assura" style="height:32px; width:auto;">
+      <span style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:0.5px;">ASSURA <span style="color:#38bdf8;">NURSING CARE</span></span>
+    </div>
+    <p style="color:#94a3b8; font-size:0.84rem; margin:6px 0 14px; line-height:1.6;">
+      Applying Malaysian Ministry of Health (MOH) Nursing Guidelines, adapted to home environments and individual patient needs.
+    </p>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.82rem; margin-bottom:14px;">
+      <a href="index.html" style="color:#38bdf8; text-decoration:none;">Home</a>
+      <a href="about.html" style="color:#38bdf8; text-decoration:none;">About Us</a>
+      <a href="services.html" style="color:#38bdf8; text-decoration:none;">Services &amp; Rates</a>
+      <a href="media.html" style="color:#38bdf8; text-decoration:none;">Media &amp; Ambulance</a>
+      <a href="portal.html" style="color:#38bdf8; text-decoration:none;">Clinical Portal</a>
+      <a href="book.html" style="color:#38bdf8; text-decoration:none;">Book Care</a>
+    </div>
+    <div style="color:#64748b; font-size:0.78rem; border-top:1px solid rgba(255,255,255,0.06); padding-top:12px;">
+      © 2026 Assura Nursing Care. All Rights Reserved. · Penang &amp; Seberang Perai Home Nursing Services
+    </div>
+  </div>
+</footer>
 </body>
 </html>

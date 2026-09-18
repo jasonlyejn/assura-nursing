@@ -733,7 +733,7 @@ body {
 
 <div class="container">
   <div class="page-hero">
-    <span class="page-tag">Official Applications · 官方统一客户端</span>
+    <span class="page-tag">Official Applications</span>
     <h1>Assura Nursing App</h1>
     <p>Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.</p>
   </div>
@@ -758,11 +758,11 @@ body {
     <!-- Role Access Clarity -->
     <div class="role-split-grid">
       <div class="role-box public">
-        <h4>👤 Patients &amp; Families (公众与家属)</h4>
+        <h4>👤 Patients &amp; Families</h4>
         <p><b>No login required.</b> Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.</p>
       </div>
       <div class="role-box staff">
-        <h4>🩺 Clinical Staff &amp; Nurses (医护人员)</h4>
+        <h4>🩺 Clinical Staff &amp; Nurses</h4>
         <p><b>Staff ID Login.</b> Sign in with your registered Staff ID inside the app to unlock patient vitals entry, MEWS scoring, and shift roster management.</p>
       </div>
     </div>
@@ -792,7 +792,7 @@ body {
         <div class="dl-btn-badge">📥 Download</div>
       </a>
 
-      <a href="AssuraStaff.exe" download class="dl-btn exe">
+      <a href="AssuraNursing.exe" download class="dl-btn exe">
         <div class="dl-btn-icon">💻</div>
         <div class="dl-btn-text">
           <div class="dl-btn-title">Download Windows App (.exe)</div>
@@ -816,7 +816,7 @@ body {
   <div class="guide-memo-card">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
       <h3 style="color: #38BDF8; font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 8px;">
-        🎬 First-Time User Guide Video &amp; Memo (首次使用指南)
+        🎬 First-Time User Guide Video &amp; Memo
       </h3>
       <span style="font-size: 0.74rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 3px 8px; border-radius: 20px;">
         Interactive Walkthrough
@@ -831,7 +831,7 @@ body {
     <div class="sim-video-player">
       <div class="sim-video-screen" id="dlSimScreen">
         <div style="font-size: 2.2rem; margin-bottom: 6px;" id="dlSimIcon">🌐</div>
-        <h4 style="color: #FFD27A; font-size: 1.05rem; margin-bottom: 4px;" id="dlSimTitle">1. Public Open Mode (公众免密快速浏览)</h4>
+        <h4 style="color: #FFD27A; font-size: 1.05rem; margin-bottom: 4px;" id="dlSimTitle">1. Public Open Mode</h4>
         <p style="color: #CBD5E1; font-size: 0.82rem; max-width: 440px;" id="dlSimDesc">
           You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.
         </p>
@@ -849,11 +849,11 @@ body {
 
     <!-- Official Memo Details -->
     <div style="background: rgba(3, 10, 22, 0.7); border-radius: 12px; padding: 16px; border: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.85rem; line-height: 1.6; color: #CBD5E1;">
-      <h4 style="color: #FFD27A; margin-bottom: 6px;">📌 First-Time User Memo (使用备忘):</h4>
+      <h4 style="color: #FFD27A; margin-bottom: 6px;">📌 First-Time User Memo:</h4>
       <ul style="padding-left: 18px; margin-bottom: 8px;">
-        <li><b>公众与普通患者</b>：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。</li>
-        <li><b>正在接受护理的家属</b>：在 App 内输入个案编号（如 <code>ASN-8821</code>）即可同步查看主治护士记录的生命体征图表与用药打卡。</li>
-        <li><b>在册医护人员</b>：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。</li>
+        <li><b>Public &amp; New Patients</b>: No password required. Open the App directly to browse clinical services and contact 24/7 rapid emergency dispatch.</li>
+        <li><b>Active Care Families</b>: Enter your Case Code (e.g. <code>ASN-8821</code>) in the App to view real-time vital sign charts and medication records.</li>
+        <li><b>Registered Clinical Staff</b>: Switch to "Clinical Staff Sign-In" to manage assigned visits, record digital MEWS vitals, and complete clinical handovers.</li>
       </ul>
     </div>
   </div>
@@ -877,8 +877,8 @@ body {
         <span>💻</span> How to Run Windows App (.exe):
       </h3>
       <ol>
-        <li>Click <b>Download Windows App (.exe)</b> to save <code>AssuraStaff.exe</code>.</li>
-        <li>Open <code>AssuraStaff.exe</code> from your Downloads folder.</li>
+        <li>Click <b>Download Windows App (.exe)</b> to save <code>AssuraNursing.exe</code>.</li>
+        <li>Open <code>AssuraNursing.exe</code> from your Downloads folder.</li>
         <li>Standalone portable application — no complex installation needed.</li>
         <li>Pin to Taskbar or Desktop for 1-click clinical workstation access.</li>
       </ol>
@@ -913,15 +913,15 @@ function setDlStep(step) {
 
   if (step === 1) {
     icon.innerText = '🌐';
-    title.innerText = '1. Public Open Mode (公众免密快速浏览)';
+    title.innerText = '1. Public Open Mode';
     desc.innerText = 'You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.';
   } else if (step === 2) {
     icon.innerText = '👨‍👩‍👧‍👦';
-    title.innerText = '2. Patient & Family Case Link (家属关联病历)';
+    title.innerText = '2. Patient & Family Case Link';
     desc.innerText = 'Enter your Case PIN (e.g. ASN-8821) or phone number to view live MEWS vital scoring charts, Medication (MAR), and nurse handovers.';
   } else if (step === 3) {
     icon.innerText = '🩺';
-    title.innerText = '3. Clinical Staff Sign-in (医护人员工号登录)';
+    title.innerText = '3. Clinical Staff Sign-in';
     desc.innerText = 'Registered nurses and supervisors sign in with their Clinical Staff ID (e.g. ASN-001) and PIN to access clinical rosters and shift management.';
   }
 }
