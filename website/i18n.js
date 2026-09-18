@@ -4489,6 +4489,16 @@ const STRING_MAP = {
     "zh": "老年医学专科护理师",
     "bm": "Pakar Penjagaan Geriatrik",
     "ta": "முதியோர் பராமரிப்பு நிபுணர்"
+  },
+  "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.": {
+    "zh": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.",
+    "bm": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.",
+    "ta": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides."
+  },
+  "Clinical Resources, Emergency & Equipment Hub": {
+    "zh": "Clinical Resources, Emergency & Equipment Hub",
+    "bm": "Clinical Resources, Emergency & Equipment Hub",
+    "ta": "Clinical Resources, Emergency & Equipment Hub"
   }
 };
 
@@ -4619,8 +4629,6 @@ function getCurrentLanguage() {
     const saved = localStorage.getItem('assura_lang');
     if (saved && ['en', 'zh', 'bm', 'ta'].includes(saved)) return saved;
   } catch (e) {}
-  
-  // Default to English unless user explicitly chooses another language
   return 'en';
 }
 
