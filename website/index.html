@@ -760,6 +760,343 @@ footer.site-footer {
   .btn-whatsapp, .btn-primary, .btn-secondary { width: 100% !important; justify-content: center !important; }
   .services-visual-grid, .steps-grid, .stats-bar { grid-template-columns: 1fr !important; }
 }
+
+/* ==========================================================================
+   GLENEAGLES-INSPIRED LUXURY HEALTHCARE UI COMPONENTS
+   ========================================================================== */
+
+/* 1. Quick Action Launchpad Grid */
+.quick-launchpad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 36px;
+}
+
+.launchpad-card {
+  background: linear-gradient(145deg, rgba(14, 30, 58, 0.85) 0%, rgba(6, 18, 38, 0.95) 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.25);
+  border-radius: 18px;
+  padding: 20px 18px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.launchpad-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #38BDF8, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.launchpad-card:hover {
+  transform: translateY(-5px);
+  border-color: #38BDF8;
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3);
+  background: linear-gradient(145deg, rgba(18, 42, 80, 0.95) 0%, rgba(8, 24, 48, 0.98) 100%);
+}
+
+.launchpad-card:hover::before {
+  opacity: 1;
+}
+
+.launchpad-card.urgent {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.launchpad-card.urgent:hover {
+  border-color: #EF4444;
+  box-shadow: 0 15px 35px rgba(239, 68, 68, 0.35);
+}
+
+.launchpad-card.gold {
+  border-color: rgba(255, 210, 122, 0.4);
+}
+.launchpad-card.gold:hover {
+  border-color: #FFD27A;
+  box-shadow: 0 15px 35px rgba(255, 210, 122, 0.35);
+}
+
+.lp-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+  transition: transform 0.25s ease;
+}
+
+.launchpad-card:hover .lp-icon-box {
+  transform: scale(1.12);
+}
+
+.launchpad-card.urgent .lp-icon-box {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.launchpad-card.gold .lp-icon-box {
+  background: rgba(255, 210, 122, 0.15);
+  border-color: rgba(255, 210, 122, 0.35);
+}
+
+.lp-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.lp-desc {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.lp-action {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #38BDF8;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.launchpad-card.urgent .lp-action { color: #F87171; }
+.launchpad-card.gold .lp-action { color: #FFD27A; }
+
+/* 2. Interactive Live Search Bar */
+.live-search-container {
+  max-width: 820px;
+  margin: 0 auto 36px;
+  position: relative;
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(8, 22, 46, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 999px;
+  padding: 6px 12px 6px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(2, 132, 199, 0.2);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(14px);
+}
+
+.search-input-wrap:focus-within {
+  border-color: #38BDF8;
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.4), 0 0 25px rgba(56, 189, 248, 0.3);
+  background: rgba(12, 28, 56, 0.95);
+}
+
+.search-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #FFF;
+  font-size: 0.96rem;
+  font-weight: 600;
+  padding: 10px 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-input-field::placeholder {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.search-clear-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: none;
+}
+.search-clear-btn:hover { color: #FFF; }
+
+.search-submit-btn {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  color: #FFF;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.search-submit-btn:hover {
+  background: #0284C7;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+  transform: scale(1.03);
+}
+
+/* Live Search Dropdown Results */
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: rgba(6, 18, 38, 0.98);
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  display: none;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.search-results-dropdown.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+.search-res-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #E2E8F0;
+  transition: all 0.2s;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+  gap: 12px;
+}
+
+.search-res-item:last-child {
+  border-bottom: none;
+}
+
+.search-res-item:hover {
+  background: rgba(56, 189, 248, 0.15);
+  transform: translateX(4px);
+}
+
+.s-res-title {
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: #FFF;
+  margin-bottom: 2px;
+}
+
+.s-res-sub {
+  font-size: 0.78rem;
+  color: #94A3B8;
+}
+
+.s-res-price {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #FFD27A;
+  background: rgba(255, 210, 122, 0.12);
+  border: 1px solid rgba(255, 210, 122, 0.3);
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* 3. Luxury Impact Stats Bar */
+.impact-stats-card {
+  background: linear-gradient(145deg, rgba(10, 26, 48, 0.85) 0%, rgba(4, 14, 30, 0.95) 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  padding: 24px 20px;
+  margin: 0 auto 36px;
+  max-width: 1000px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.impact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.impact-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 768px) {
+  .impact-item:not(:last-child)::after { display: none; }
+}
+
+.impact-num {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #FFD27A;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  text-shadow: 0 0 15px rgba(255, 210, 122, 0.4);
+}
+
+.impact-num.cyan {
+  color: #38BDF8;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.impact-num.green {
+  color: #34D399;
+  text-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
+}
+
+.impact-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 2px;
+}
+
+.impact-sub {
+  font-size: 0.78rem;
+  color: #94A3B8;
+}
+
 </style>
 </head>
 <body>
@@ -849,39 +1186,100 @@ footer.site-footer {
       </div>
     </div>
 
-    <!-- Keywords Pills -->
-    <div class="keyword-pills-row">
-      <a href="services.html?service=wound" class="kw-pill">🩹 Wound Care &amp; Dressing</a>
-      <a href="services.html?service=elderly" class="kw-pill">👴 Elderly &amp; Bedridden Care</a>
-      <a href="services.html?service=stroke" class="kw-pill">🧠 Stroke Rehab &amp; Mobility</a>
-      <a href="services.html?service=tube" class="kw-pill">🍼 Ryle's Tube / NG Tube</a>
-      <a href="services.html?service=catheter" class="kw-pill">💧 Catheter (CBD) Care</a>
-      <a href="services.html?service=injection" class="kw-pill">💉 Injections &amp; Blood Tests</a>
-      <a href="services.html?service=escort" class="kw-pill">🏥 Hospital Escort &amp; Transfer</a>
-      <a href="media.html?tab=equipment" class="kw-pill">🛏️ Medical Bed &amp; Oxygen Rental</a>
-      <a href="media.html?tab=emergency" class="kw-pill">🚨 24/7 Hospital Emergency GPS</a>
-      <a href="services.html" class="kw-pill gold">📍 All Penang Areas Covered</a>
+    
+    <!-- =========================================================================
+         GLENEAGLES-INSPIRED INTERACTIVE QUICK ACTION LAUNCHPAD
+         ========================================================================= -->
+    <div class="quick-launchpad-grid">
+      <!-- 1. Find a Nurse / Procedure -->
+      <a href="services.html" class="launchpad-card">
+        <div>
+          <div class="lp-icon-box">🩺</div>
+          <div class="lp-title">Match a Procedure &amp; Nurse</div>
+          <div class="lp-desc">Wound dressing, catheters, Ryle's tube, bed bathing &amp; post-surgery recovery.</div>
+        </div>
+        <div class="lp-action">Select Procedure →</div>
+      </a>
+
+      <!-- 2. Care Plan & Instant Quote -->
+      <a href="https://wa.me/60122064868?text=Hi%20Assura%20Nursing,%20I%20would%20like%20to%20get%20an%20instant%20home%20care%20plan%20and%20transparent%20quotation." target="_blank" rel="noopener" class="launchpad-card gold">
+        <div>
+          <div class="lp-icon-box">📋</div>
+          <div class="lp-title">Instant Care Plan &amp; Quotation</div>
+          <div class="lp-desc">Clear rates from RM 150, RM 0 weekend surcharge, full clinical supplies included.</div>
+        </div>
+        <div class="lp-action">Get 3-Min Quote →</div>
+      </a>
+
+      <!-- 3. Medical Equipment Urgent Delivery -->
+      <a href="media.html?tab=equipment" class="launchpad-card">
+        <div>
+          <div class="lp-icon-box">🛏️</div>
+          <div class="lp-title">Medical Equipment Rental</div>
+          <div class="lp-desc">Hospital beds, 5L/10L oxygen concentrators, suction machines &amp; ripple mattresses.</div>
+        </div>
+        <div class="lp-action">Browse Equipment →</div>
+      </a>
+
+      <!-- 4. 24/7 Clinical Emergency Hotline -->
+      <a href="tel:+60122064868" class="launchpad-card urgent">
+        <div>
+          <div class="lp-icon-box">🚨</div>
+          <div class="lp-title">24/7 Clinical Emergency Hotline</div>
+          <div class="lp-desc">Penang Island &amp; Mainland (Bukit Mertajam base) rapid nurse dispatch.</div>
+        </div>
+        <div class="lp-action">Call 012-206 4868 ☎</div>
+      </a>
     </div>
 
-    <!-- Stats -->
-    <div class="stats-bar">
-      <div class="stat-card">
-        <div class="stat-num">Trained</div>
-        <div class="stat-label">Nurses &amp; Dedicated Caregivers</div>
+    <!-- =========================================================================
+         INTERACTIVE LIVE PROCEDURE & CONDITION SEARCH BAR
+         ========================================================================= -->
+    <div class="live-search-container">
+      <div class="search-input-wrap">
+        <span style="font-size:1.2rem; color:#38BDF8; margin-right:8px;">🔍</span>
+        <input type="text" id="liveSearchInput" class="search-input-field" placeholder="Search a service, procedure, or condition (e.g. wound, catheter, tube, stroke, bed, oxygen)..." oninput="handleLiveSearch(this.value)" onfocus="handleLiveSearch(this.value)" autocomplete="off">
+        <button id="searchClearBtn" class="search-clear-btn" onclick="clearLiveSearch()">✕</button>
+        <button class="search-submit-btn" onclick="executeSearchRedirect()">Search Services</button>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">1st in Penang</div>
-        <div class="stat-label">Pioneering Digital &amp; AI-Era Care</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">Fast Match</div>
-        <div class="stat-label">Staff Coordination &amp; ASAP Reply</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">Transparent</div>
-        <div class="stat-label">Upfront Fare &amp; Procedure Rates</div>
+
+      <!-- Dropdown Results Box -->
+      <div id="searchResultsDropdown" class="search-results-dropdown">
+        <div id="searchResList"></div>
       </div>
     </div>
+
+    <!-- =========================================================================
+         "WHY CHOOSE ASSURA" HOSPITAL-GRADE IMPACT METRICS
+         ========================================================================= -->
+    <div class="impact-stats-card">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-num">100%</div>
+          <div class="impact-label">Licensed Nurses &amp; Staff</div>
+          <div class="impact-sub">LJM Registered Nurses &amp; Dedicated Caregivers</div>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-num cyan">15</div>
+          <div class="impact-label">Penang Hospitals Connected</div>
+          <div class="impact-sub">Island &amp; Mainland Direct Coordination</div>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-num green">RM 0</div>
+          <div class="impact-label">Weekend &amp; Holiday Surcharge</div>
+          <div class="impact-sub">Transparent Upfront Pricing Guaranteed</div>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-num">24/7</div>
+          <div class="impact-label">Rapid Dispatch Response</div>
+          <div class="impact-sub">Island &amp; Bukit Mertajam Dual Base</div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- 2. SHORT PROMO VIDEO SHOWCASE -->
@@ -1102,5 +1500,111 @@ function toggleMobileMenu() {
 </script>
 <script src="notifications.js"></script>
 <script src="i18n.js"></script>
+
+<script>
+// --- LIVE INTERACTIVE PROCEDURE SEARCH DATABASE ---
+const PROCEDURE_DB = [
+  { name: "Wound Dressing & Care (伤口无菌换药)", cat: "Wound Care", price: "From RM 150", link: "services.html?service=wound", keywords: "wound dressing diabetic ulcer surgery stitches staples pressure sore antt burn" },
+  { name: "Ryle's Tube / NG Feeding Tube Insertion (鼻胃管置换)", cat: "Tubes & Catheters", price: "From RM 180", link: "services.html?service=tube", keywords: "ryles tube ng tube feeding aspiration dysphagia nose tube" },
+  { name: "Foley Catheter / CBD Care (导尿管置换与冲洗)", cat: "Tubes & Catheters", price: "From RM 180", link: "services.html?service=catheter", keywords: "catheter foley cbd urinary blockage urine bag bladder irrigation" },
+  { name: "Elderly & Bedridden Care (长辈与失能卧床护理)", cat: "Geriatric Care", price: "From RM 150", link: "services.html?service=elderly", keywords: "elderly bedridden bed bath bathing repositioning mobility turn diaper" },
+  { name: "Stroke & Mobility Rehab (中风术后康复与活动)", cat: "Rehabilitation", price: "From RM 160", link: "services.html?service=stroke", keywords: "stroke paralysis rehab exercise passive active rom physiotherapy mobility" },
+  { name: "Injections & Blood Glucose / Vitals (注射与血糖检测)", cat: "Clinical Nursing", price: "From RM 120", link: "services.html?service=injection", keywords: "injection insulin sc im blood test glucose bp vitals mews" },
+  { name: "Hospital Escort & Patient Transfer (医院陪诊与转运)", cat: "Escort & Transfer", price: "From RM 150", link: "services.html?service=escort", keywords: "escort hospital doctor specialist appointment transfer ambulance clinic" },
+  { name: "Hospital Bed Rental (医用病床紧急租借)", cat: "Medical Equipment", price: "RM 180 - RM 280/mo", link: "media.html?tab=equipment", keywords: "hospital bed electric bed 2 function 3 function rental equipment" },
+  { name: "Oxygen Concentrator Rental (医用制氧机 5L/10L)", cat: "Medical Equipment", price: "RM 250 - RM 450/mo", link: "media.html?tab=equipment", keywords: "oxygen concentrator breathing spo2 5l 10l respiratory copd" },
+  { name: "Electric Medical Suction Machine (电动吸痰机)", cat: "Medical Equipment", price: "RM 120 - RM 200/mo", link: "media.html?tab=equipment", keywords: "suction machine phlegm sputum tracheostomy airway secretion" },
+  { name: "Ripple Anti-Decubitus Mattress (防褥疮气垫床)", cat: "Medical Equipment", price: "RM 50 - RM 80/mo", link: "media.html?tab=equipment", keywords: "ripple mattress air mattress bedsore decubitus ulcer pressure relief" }
+];
+
+function handleLiveSearch(query) {
+  const q = (query || '').trim().toLowerCase();
+  const dropdown = document.getElementById('searchResultsDropdown');
+  const resList = document.getElementById('searchResList');
+  const clearBtn = document.getElementById('searchClearBtn');
+
+  if (clearBtn) {
+    clearBtn.style.display = q.length > 0 ? 'inline-block' : 'none';
+  }
+
+  if (q.length === 0) {
+    // Show popular procedures when clicked with empty query
+    const popular = PROCEDURE_DB.slice(0, 5);
+    resList.innerHTML = '<div style="font-size:0.75rem; font-weight:800; color:#38BDF8; text-transform:uppercase; margin-bottom:8px; padding-left:6px;">⭐ Popular Procedures in Penang</div>' +
+      popular.map(p => `
+        <a href="${p.link}" class="search-res-item">
+          <div>
+            <div class="s-res-title">${p.name}</div>
+            <div class="s-res-sub">📂 ${p.cat}</div>
+          </div>
+          <div class="s-res-price">${p.price}</div>
+        </a>
+      `).join('');
+    dropdown.classList.add('active');
+    return;
+  }
+
+  const matches = PROCEDURE_DB.filter(p => 
+    p.name.toLowerCase().includes(q) || 
+    p.cat.toLowerCase().includes(q) || 
+    p.keywords.toLowerCase().includes(q)
+  );
+
+  if (matches.length > 0) {
+    resList.innerHTML = '<div style="font-size:0.75rem; font-weight:800; color:#38BDF8; text-transform:uppercase; margin-bottom:8px; padding-left:6px;">🔍 Matching Services &amp; Equipment</div>' +
+      matches.map(p => `
+        <a href="${p.link}" class="search-res-item">
+          <div>
+            <div class="s-res-title">${p.name}</div>
+            <div class="s-res-sub">📂 ${p.cat}</div>
+          </div>
+          <div class="s-res-price">${p.price}</div>
+        </a>
+      `).join('');
+    dropdown.classList.add('active');
+  } else {
+    resList.innerHTML = `
+      <div style="text-align:center; padding:18px; color:#94A3B8;">
+        <div style="font-size:1.4rem; margin-bottom:4px;">🩺</div>
+        <div style="font-weight:700; color:#FFF; font-size:0.95rem;">Need a customized procedure?</div>
+        <div style="font-size:0.8rem; margin:6px 0 12px;">We accommodate all specialized hospital nursing requests in Penang.</div>
+        <a href="https://wa.me/60122064868?text=Hi%20Assura%20Nursing,%20I%20am%20looking%20for%20a%20procedure:%20${encodeURIComponent(q)}" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:6px 14px; font-size:0.82rem; display:inline-flex;">
+          💬 Inquire "${q}" via WhatsApp (012-206 4868)
+        </a>
+      </div>
+    `;
+    dropdown.classList.add('active');
+  }
+}
+
+function clearLiveSearch() {
+  const input = document.getElementById('liveSearchInput');
+  if (input) {
+    input.value = '';
+    input.focus();
+  }
+  handleLiveSearch('');
+}
+
+function executeSearchRedirect() {
+  const input = document.getElementById('liveSearchInput');
+  const q = input ? input.value.trim() : '';
+  if (q.length > 0) {
+    location.href = 'services.html?q=' + encodeURIComponent(q);
+  } else {
+    location.href = 'services.html';
+  }
+}
+
+// Close search dropdown on click outside
+document.addEventListener('click', (e) => {
+  const container = document.querySelector('.live-search-container');
+  const dropdown = document.getElementById('searchResultsDropdown');
+  if (container && !container.contains(e.target) && dropdown) {
+    dropdown.classList.remove('active');
+  }
+});
+</script>
+
 </body>
 </html>

@@ -1452,8 +1452,21 @@ Details: ' + customText);
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const svc = params.get('service') || params.get('proc');
+  const q = (params.get('q') || '').toLowerCase().trim();
+  
   if (svc) {
     selectAndScrollProcedure(svc);
+  } else if (q) {
+    // Match query to known service IDs
+    let matched = 'wound';
+    if (q.includes('tube') || q.includes('ryle') || q.includes('feed')) matched = 'tube';
+    else if (q.includes('cath') || q.includes('foley') || q.includes('cbd') || q.includes('urine')) matched = 'catheter';
+    else if (q.includes('elder') || q.includes('bed') || q.includes('bath') || q.includes('diaper')) matched = 'elderly';
+    else if (q.includes('stroke') || q.includes('rehab') || q.includes('paralysis') || q.includes('exercise')) matched = 'stroke';
+    else if (q.includes('inject') || q.includes('insulin') || q.includes('blood') || q.includes('glucose')) matched = 'injection';
+    else if (q.includes('escort') || q.includes('hospital') || q.includes('transfer')) matched = 'escort';
+    else if (q.includes('wound') || q.includes('ulcer') || q.includes('dress') || q.includes('stitch')) matched = 'wound';
+    selectAndScrollProcedure(matched);
   } else {
     calcPrice();
   }
