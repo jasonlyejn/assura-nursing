@@ -810,6 +810,119 @@ header.site-header {
   border-color: #38BDF8;
   box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
 }
+
+/* ==========================================================================
+   GLENEAGLES-STYLE PROMINENT LOGO & BRAND TYPOGRAPHY HEADER
+   ========================================================================== */
+.brand-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.brand-wrap:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo {
+  height: 52px !important;
+  width: auto !important;
+  max-width: 150px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 14px rgba(56, 189, 248, 0.45)) !important;
+  transition: transform 0.25s ease !important;
+}
+
+.brand-wrap:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-text-block {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  line-height: 1.15 !important;
+}
+
+.brand-name {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.brand-tagline {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+header.site-header .header-inner {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 8px 18px !important;
+}
+
+@media (max-width: 768px) {
+  .brand-wrap {
+    gap: 8px !important;
+  }
+  .brand-logo {
+    height: 42px !important;
+  }
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+  .brand-tagline {
+    font-size: 0.65rem !important;
+  }
+  header.site-header .header-inner {
+    padding: 6px 12px !important;
+  }
+}
+
+
+/* Unified High-End Copyright Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-top: 1px solid rgba(56, 189, 248, 0.22);
+  margin-top: 60px;
+  color: #94A3B8;
+  font-size: 0.84rem;
+  background: rgba(3, 9, 20, 0.95);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.site-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.site-footer .footer-links a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-links a:hover {
+  color: #38BDF8;
+}
+
 </style>
 </head>
 <body>
@@ -826,10 +939,10 @@ header.site-header {
 
   <header>
     <a href="index.html" class="brand-wrap">
-      <img src="assura-logo.png" alt="Assura Nursing Logo" class="brand-logo" />
-      <div class="brand-text">
-        <b>Assura Nursing</b>
-        <span>Unified Care &amp; Clinical Portal</span>
+      <img src="assura-logo.png" alt="Assura Nursing Care" class="brand-logo" />
+      <div class="brand-text-block">
+        <span class="brand-name">Assura</span>
+        <span class="brand-tagline">Nursing Care</span>
       </div>
     </a>
     <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -1149,11 +1262,31 @@ header.site-header {
     </div>
   </div>
 
-  <footer>
-  
-    <p>© 2026 Assura Nursing · All Rights Reserved · Penang Island &amp; Mainland</p>
-    <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services</p>
-  </footer>
+  <footer class="site-footer">
+  <div class="footer-brand-wrap" style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:16px;">
+    <img src="assura-logo.png" alt="Assura Nursing Care" style="height:36px; width:auto; filter:drop-shadow(0 2px 8px rgba(56,189,248,0.3));" />
+    <span style="font-weight:800; font-size:1.05rem; color:#FFF; letter-spacing:0.02em;">Assura Nursing Care</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="media.html">Media Hub</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="download.html">Download App</a>
+    <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
+    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
+  </div>
+  <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
+    © 2026 Assura Nursing Care. All Rights Reserved.
+  </p>
+  <p style="margin-top: 4px; font-size: 0.76rem; color: #94A3B8;">
+    Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
+  </p>
+  <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
+    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+  </p>
+</footer>
 
   <script>
     let currentRoleTab = 'patient';

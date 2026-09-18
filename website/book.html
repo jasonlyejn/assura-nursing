@@ -769,6 +769,119 @@ img, video, iframe {
   }
 }
 
+
+/* ==========================================================================
+   GLENEAGLES-STYLE PROMINENT LOGO & BRAND TYPOGRAPHY HEADER
+   ========================================================================== */
+.brand-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.brand-wrap:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo {
+  height: 52px !important;
+  width: auto !important;
+  max-width: 150px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 14px rgba(56, 189, 248, 0.45)) !important;
+  transition: transform 0.25s ease !important;
+}
+
+.brand-wrap:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-text-block {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  line-height: 1.15 !important;
+}
+
+.brand-name {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.brand-tagline {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+header.site-header .header-inner {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 8px 18px !important;
+}
+
+@media (max-width: 768px) {
+  .brand-wrap {
+    gap: 8px !important;
+  }
+  .brand-logo {
+    height: 42px !important;
+  }
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+  .brand-tagline {
+    font-size: 0.65rem !important;
+  }
+  header.site-header .header-inner {
+    padding: 6px 12px !important;
+  }
+}
+
+
+/* Unified High-End Copyright Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-top: 1px solid rgba(56, 189, 248, 0.22);
+  margin-top: 60px;
+  color: #94A3B8;
+  font-size: 0.84rem;
+  background: rgba(3, 9, 20, 0.95);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.site-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.site-footer .footer-links a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-links a:hover {
+  color: #38BDF8;
+}
+
 </style>
 </head>
 <body>
@@ -778,7 +891,11 @@ img, video, iframe {
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand-wrap">
-      <img src="assura-logo.png" alt="Assura Nursing" class="brand-logo" />
+      <img src="assura-logo.png" alt="Assura Nursing Care" class="brand-logo" />
+      <div class="brand-text-block">
+        <span class="brand-name">Assura</span>
+        <span class="brand-tagline">Nursing Care</span>
+      </div>
     </a>
 
     <ul class="nav-menu" id="navMenu">
@@ -975,27 +1092,31 @@ img, video, iframe {
       </div>
       <a class="summary-jump" href="#booking-form">↑ Back to the form · 返回表格</a>
     </section>
-    <footer class="site-foot">
-      <div class="f-brand"><b>Assura Nursing</b><i>居家护理服务</i></div>
-      <p class="f-tag">Professional Nursing, Wherever You Need It</p>
-      <div class="f-split">
-        <dl class="f-rows">
-          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/60122064868" target="_blank" rel="noopener">012-206 4868</a></dd></div>
-          <div><dt>Call</dt><dd><a href="tel:+60122064868">012-206 4868</a></dd></div>
-          <div><dt>Based in</dt><dd>Bukit Mertajam, Penang<span>大山脚</span></dd></div>
-          <div><dt>We travel</dt><dd>Up to 25 km<span>方圆 25 公里</span></dd></div>
-          <div><dt>Hours</dt><dd>24 Hours Daily<span>每日 24小时全天候</span></dd></div>
-          <div><dt>Online</dt><dd><a href="index.html">About our service · 了解服务</a></dd></div>
-        </dl>
-        <figure class="qr">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoCAIAAABqyz8vAAADgklEQVR42u3dS04sMQxAURrVkIWwDVbONlgI8zBgXEhGthx3zhnzqn9XUWTVSz3WWi8wzauvAOGCcEG4CBeEC8JFuCBcEC4IF+GCcEG4CBf2cEX/wdv7x4gP9v31GXr/1X8ffZ9Zpv9eVlxsFUC4IFyEC8IF4UJ8jnuneh55J2tuutt8t9qU38uKi60CCBeEi3BBuCBcyJvj3sma22XNHafPX6Pvf/rvZcXFVgGEC8JFuCBcEC7Uz3F3s9u8tnoua8UF4YJwES4IF4QLwmW8y1fwK+v8hKzrR69jxQXhgnBBuAgXhAvC5WmVz3F3mztG57LR97/b9af/XlZcbBVAuCBchAvCBeFC3hx3t3Nkqz9X13m9fi8rLsIF4YJwES4IF4TLccJz3On/rz/rfIMpc9BnPYfBiotwQbggXIQLwgXhcpDHWiv0D6L3j3bdz3pnylxzyn3AXT1YcbFVAOGCcBEuCBeEy0HS7sfNmudFX7drrtk1v+y6D7j697XiYqsAwgXhIlwQLggXbpU/5yxrXps1F9xtHtyl+nyJ6t/RioutAggXhItwQbggXA5Sfq5C9Dp3uq7/rM8hqz4/wYoLwkW4IFwQLsIF4UKa8Bz3Tte5BFHTz+XtOr8ii/NxsVUA4YJwQbgIF4QLYWnnKnTdl9l1Pmv162adb9DF+bggXIQLwgXhIlwQLqQJz3G77u/c7flqXbo+127nHFtxsVUA4YJwES4IF4TLQdLOVYiafk5C1vvsOm+4+nNZcUG4CBeEC8JFuCBcSFN+P+6drDnllOeBdX3Pu30PWXNfKy62CiBcEC7CBeGCcDlI2/24Xaqfx5b1utXXmX59Ky62CiBcEC7CBeGCcDlI2/241arno9G/7zp/oHoua8UF4SJcEC4IF+GCcKHclXWh3eaUWe9zt/t3p/8uzlXAVgGEC8IF4SJcEC6EXdUvMGUeOf2+1Sn3SVtxsVUA4YJwQbgIF4QLYZev4G9d89Ho/b7R62R93q7vx4qLrQIIF4SLcEG4IFwOctwcd8pzy6K65rXRebPnnGGrAMIF4YJwES4IF8LK57i7nUuw27wzS/XrRq9T/XmtuNgqgHBBuAgXhAvC5SBpc9wp57NmzTt3O/eg67lrXdex4mKrAMIF4SJcEC4Il4M81lq+Bay4IFwQLsIF4YJwES4IF4QLwkW4IFwQLsIF4cL//ADJyYd3ByUaGQAAAABJRU5ErkJggg==" alt="QR code to assuranursing.com" width="232" height="232">
-          <figcaption>Scan to share<br>扫码分享</figcaption>
-        </figure>
-      </div>
-      
-      <p class="f-fine">Licensed Nurses &amp; Trained Caregivers · Home visits only · Transparent quotation before every visit<br>
-      注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价</p>
-    </footer>
+    <footer class="site-footer">
+  <div class="footer-brand-wrap" style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:16px;">
+    <img src="assura-logo.png" alt="Assura Nursing Care" style="height:36px; width:auto; filter:drop-shadow(0 2px 8px rgba(56,189,248,0.3));" />
+    <span style="font-weight:800; font-size:1.05rem; color:#FFF; letter-spacing:0.02em;">Assura Nursing Care</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="media.html">Media Hub</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="download.html">Download App</a>
+    <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
+    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
+  </div>
+  <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
+    © 2026 Assura Nursing Care. All Rights Reserved.
+  </p>
+  <p style="margin-top: 4px; font-size: 0.76rem; color: #94A3B8;">
+    Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
+  </p>
+  <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
+    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+  </p>
+</footer>
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>

@@ -1654,6 +1654,119 @@ img, video, iframe {
   }
 }
 
+
+/* ==========================================================================
+   GLENEAGLES-STYLE PROMINENT LOGO & BRAND TYPOGRAPHY HEADER
+   ========================================================================== */
+.brand-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.brand-wrap:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo {
+  height: 52px !important;
+  width: auto !important;
+  max-width: 150px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 14px rgba(56, 189, 248, 0.45)) !important;
+  transition: transform 0.25s ease !important;
+}
+
+.brand-wrap:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-text-block {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  line-height: 1.15 !important;
+}
+
+.brand-name {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.brand-tagline {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+header.site-header .header-inner {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 8px 18px !important;
+}
+
+@media (max-width: 768px) {
+  .brand-wrap {
+    gap: 8px !important;
+  }
+  .brand-logo {
+    height: 42px !important;
+  }
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+  .brand-tagline {
+    font-size: 0.65rem !important;
+  }
+  header.site-header .header-inner {
+    padding: 6px 12px !important;
+  }
+}
+
+
+/* Unified High-End Copyright Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-top: 1px solid rgba(56, 189, 248, 0.22);
+  margin-top: 60px;
+  color: #94A3B8;
+  font-size: 0.84rem;
+  background: rgba(3, 9, 20, 0.95);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.site-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.site-footer .footer-links a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-links a:hover {
+  color: #38BDF8;
+}
+
 </style>
 </head>
 <body>
@@ -1665,7 +1778,11 @@ img, video, iframe {
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand-wrap">
-      <img src="assura-logo.png" alt="Assura Nursing" class="brand-logo" />
+      <img src="assura-logo.png" alt="Assura Nursing Care" class="brand-logo" />
+      <div class="brand-text-block">
+        <span class="brand-name">Assura</span>
+        <span class="brand-tagline">Nursing Care</span>
+      </div>
     </a>
 
     <ul class="nav-menu" id="navMenu">
@@ -1718,11 +1835,11 @@ img, video, iframe {
        TAB 1: EMERGENCY PROTOCOLS & HOSPITAL DIRECTORY
        ========================================================================= -->
   <div class="tab-panel active" id="panel-emergency">
-    <!-- 1. Immediate 24/7 Hotlines -->
-    <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.45);">
+    <!-- 1. Immediate 24/7 National & Emergency Hotlines -->
+    <div class="glass-card" style="border-color: rgba(239, 68, 68, 0.45); margin-bottom: 24px;">
       <div class="card-title" style="color: #EF4444;">
-        <span>🚨 Immediate 24/7 Emergency &amp; Ambulance Dispatch</span>
-        <span style="font-size:0.75rem; color:#FCA5A5; font-weight:700;">MALAYSIA &amp; PENANG HOTLINES</span>
+        <span>🚨 National Emergency &amp; 24/7 Assura Clinical Careline</span>
+        <span style="font-size:0.75rem; color:#FCA5A5; font-weight:700;">MALAYSIA TOLL-FREE &amp; DISPATCH</span>
       </div>
       
       <div class="dispatch-grid">
@@ -1749,40 +1866,84 @@ img, video, iframe {
           <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
           <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
         </div>
-          <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
-          <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
+      </div>
+    </div>
+
+    <!-- 2. Penang Private Ambulance & Patient Transport Services -->
+    <div class="glass-card" style="border-color: rgba(245, 158, 11, 0.45); margin-bottom: 24px;">
+      <div class="card-title" style="color: #FFD27A;">
+        <span>🚑 Penang Private Ambulance &amp; Non-Emergency Medical Transport</span>
+        <span style="font-size:0.75rem; color:#FDE047; font-weight:700;">24/7 PRIVATE AMBULANCE DIRECTORY</span>
+      </div>
+      <p style="font-size:0.85rem; color:#CBD5E1; margin-bottom:16px; line-height:1.5;">
+        Private ambulance services for post-hospital discharge, inter-hospital transfer, bedridden patient medical appointments, dialysis transport, and inter-state medical transfers:
+      </p>
+
+      <div class="dispatch-grid">
+        <!-- 1. KC Ambulance -->
+        <div class="dispatch-card" style="border-color: rgba(245, 158, 11, 0.35);">
+          <div class="dispatch-tag" style="color: #FFD27A;">KC Ambulance Service (Butterworth / Penang)</div>
+          <a href="tel:+60105205375" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 010-520 5375</a>
+          <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 4px;">Alt / WhatsApp: <a href="tel:+60174941624" style="color:#7DD3FC; text-decoration:none;">017-494 1624</a></div>
+          <div class="dispatch-sub">Emergency &amp; Patient Transfers · Mainland &amp; Island</div>
         </div>
 
-        <!-- St John Ambulance -->
-        <div class="dispatch-card">
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <div class="dispatch-tag" style="color: #FCA5A5; margin-bottom:0;">St. John Ambulance (Penang)</div>
-          </div>
-          <a href="tel:+6048286999" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-828 6999</a>
-          <div class="dispatch-sub">Alt: 04-828 5999</div>
+        <!-- 2. Medilife Ambulance -->
+        <div class="dispatch-card" style="border-color: rgba(56, 189, 248, 0.35);">
+          <div class="dispatch-tag" style="color: #7DD3FC;">Medilife Ambulance Services (Bayan Lepas)</div>
+          <a href="tel:+6046463999" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 04-646 3999</a>
+          <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 4px;">Alt / WhatsApp: <a href="tel:+601116401929" style="color:#7DD3FC; text-decoration:none;">011-1640 1929</a></div>
+          <div class="dispatch-sub">Critical Care Transport &amp; Home-to-Hospital Transfers</div>
         </div>
 
-        <!-- Red Crescent -->
+        <!-- 3. Premier Ambulance -->
         <div class="dispatch-card">
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <div class="dispatch-tag" style="color: #FCA5A5; margin-bottom:0;">Malaysian Red Crescent (BSMM)</div>
-          </div>
-          <a href="tel:+6048275684" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-827 5684</a>
-          <div class="dispatch-sub">Alt: 04-828 2842</div>
+          <div class="dispatch-tag" style="color: #FDE047;">Premier Ambulance Service (Penang)</div>
+          <a href="tel:+60164172007" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 016-417 2007</a>
+          <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 4px;">Alt: <a href="tel:+6048903998" style="color:#7DD3FC; text-decoration:none;">04-890 3998</a></div>
+          <div class="dispatch-sub">Specialist Clinic Escort &amp; Non-Emergency Transfer</div>
         </div>
 
-        <!-- Civil Defence (APM) -->
+        <!-- 4. Ocean Medic -->
         <div class="dispatch-card">
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <div class="dispatch-tag" style="color: #FDE047; margin-bottom:0;">Civil Defence Force (APM Penang)</div>
-          </div>
-          <a href="tel:+6042283991" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-228 3991</a>
-          <div class="dispatch-sub">24/7 Disaster &amp; Medical Emergency</div>
+          <div class="dispatch-tag" style="color: #86EFAC;">Ocean Medic Ambulance (Penang)</div>
+          <a href="tel:+60123441007" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 012-344 1007</a>
+          <div class="dispatch-sub">Oxygen-Equipped Bedside Medical Transfer</div>
+        </div>
+
+        <!-- 5. First Ambulance -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #BAE6FD;">First Ambulance (Northern Regional Hub)</div>
+          <a href="tel:1300881919" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 1300 88 1919</a>
+          <div class="dispatch-sub">Advanced Life Support (ALS) &amp; Inter-State Transfers</div>
+        </div>
+
+        <!-- 6. St John Ambulance -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FCA5A5;">St. John Ambulance (Penang)</div>
+          <a href="tel:+6048286999" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 04-828 6999</a>
+          <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 4px;">Alt: <a href="tel:+6048285972" style="color:#7DD3FC; text-decoration:none;">04-828 5972</a> · <a href="tel:+60164195972" style="color:#7DD3FC; text-decoration:none;">016-419 5972</a></div>
+          <div class="dispatch-sub">Emergency &amp; Non-Emergency Community Dispatch</div>
+        </div>
+
+        <!-- 7. Red Crescent (BSMM) -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FCA5A5;">Malaysian Red Crescent (BSMM Penang)</div>
+          <a href="tel:+6048275684" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 04-827 5684</a>
+          <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 4px;">Alt: <a href="tel:+6048275678" style="color:#7DD3FC; text-decoration:none;">04-827 5678</a> · <a href="tel:+6048282842" style="color:#7DD3FC; text-decoration:none;">04-828 2842</a></div>
+          <div class="dispatch-sub">24/7 Humanitarian Ambulance Services</div>
+        </div>
+
+        <!-- 8. Civil Defence (APM) -->
+        <div class="dispatch-card">
+          <div class="dispatch-tag" style="color: #FDE047;">Civil Defence Force (APM Penang)</div>
+          <a href="tel:+6042283991" class="dispatch-num" style="color: #FFF; font-size: 1.3rem;">☎ 04-228 3991</a>
+          <div class="dispatch-sub">24/7 Disaster &amp; Medical Emergency Response</div>
         </div>
       </div>
     </div>
 
-        <!-- 2. Penang Island Hospitals (11 Hospitals) -->
+        <!-- 3. Penang Island Hospitals (11 Hospitals) -->
     <div class="glass-card" style="margin-bottom:28px;">
       <div class="card-title" style="color: #38BDF8;">
         <span>🏥 Penang Island Hospitals (Government &amp; Private)</span>
@@ -2840,17 +3001,29 @@ img, video, iframe {
 
 <!-- Unified Footer -->
 <footer class="site-footer">
+  <div class="footer-brand-wrap" style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:16px;">
+    <img src="assura-logo.png" alt="Assura Nursing Care" style="height:36px; width:auto; filter:drop-shadow(0 2px 8px rgba(56,189,248,0.3));" />
+    <span style="font-weight:800; font-size:1.05rem; color:#FFF; letter-spacing:0.02em;">Assura Nursing Care</span>
+  </div>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
-    <a href="media.html">Media</a>
+    <a href="media.html">Media Hub</a>
     <a href="announcements.html">Announcements</a>
     <a href="download.html">Download App</a>
     <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
+    <a href="promo-video.html" style="color: #FFD27A; font-weight: 700;">🎬 Video Studio</a>
   </div>
-  <p>© 2026 Assura Nursing · All Rights Reserved · Penang Island &amp; Mainland</p>
-  <p style="margin-top: 6px; font-size: 0.74rem;">Private Home Nursing &amp; Healthcare Services · Trained Nurses &amp; Dedicated Caregivers</p>
+  <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
+    © 2026 Assura Nursing Care. All Rights Reserved.
+  </p>
+  <p style="margin-top: 4px; font-size: 0.76rem; color: #94A3B8;">
+    Private Home Nursing &amp; Clinical Healthcare Services · Penang Island &amp; Mainland (Bukit Mertajam Base)
+  </p>
+  <p style="margin-top: 4px; font-size: 0.72rem; color: #64748B;">
+    Strictly adhering to Malaysian Ministry of Health (MOH) Nursing Standards &amp; Clinical Protocols.
+  </p>
 </footer>
 
 <script>
