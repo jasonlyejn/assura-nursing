@@ -397,40 +397,23 @@ header.site-header {
 }
 
 
-.h-brand-wrap {
+.hospital-item {
+  background: linear-gradient(145deg, rgba(10, 26, 48, 0.85) 0%, rgba(6, 18, 38, 0.95) 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.22);
+  border-radius: 16px;
+  padding: 20px 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  flex: 1;
-  width: 100%;
-}
-
-.h-logo-box {
-  width: 100%;
-  height: 68px;
-  border-radius: 12px;
-  background: #FFFFFF;
-  border: 1.5px solid rgba(56, 189, 248, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  justify-content: space-between;
   transition: all 0.25s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
-.hospital-item:hover .h-logo-box {
-  transform: translateY(-2px);
+.hospital-item:hover {
   border-color: #38BDF8;
-  box-shadow: 0 8px 22px rgba(56, 189, 248, 0.4);
-}
-
-.h-logo-img {
-  width: 100%;
-  height: 100%;
-  max-height: 56px;
-  object-fit: contain;
-  display: block;
+  background: linear-gradient(145deg, rgba(14, 38, 70, 0.95) 0%, rgba(8, 24, 48, 0.98) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.25);
 }
 
 .hospital-item:hover {
@@ -1773,7 +1756,6 @@ img, video, iframe {
         <!-- St John Ambulance -->
         <div class="dispatch-card">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <img src="images/hospitals/st-john.svg" alt="St. John Ambulance" style="width:34px; height:34px; border-radius:8px; border:1px solid rgba(245,158,11,0.4); flex-shrink:0;" />
             <div class="dispatch-tag" style="color: #FCA5A5; margin-bottom:0;">St. John Ambulance (Penang)</div>
           </div>
           <a href="tel:+6048286999" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-828 6999</a>
@@ -1783,7 +1765,6 @@ img, video, iframe {
         <!-- Red Crescent -->
         <div class="dispatch-card">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <img src="images/hospitals/red-crescent.svg" alt="Malaysian Red Crescent" style="width:34px; height:34px; border-radius:8px; border:1px solid rgba(239,68,68,0.4); flex-shrink:0;" />
             <div class="dispatch-tag" style="color: #FCA5A5; margin-bottom:0;">Malaysian Red Crescent (BSMM)</div>
           </div>
           <a href="tel:+6048275684" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-827 5684</a>
@@ -1793,7 +1774,6 @@ img, video, iframe {
         <!-- Civil Defence (APM) -->
         <div class="dispatch-card">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <img src="images/hospitals/apm.svg" alt="Civil Defence Force" style="width:34px; height:34px; border-radius:8px; border:1px solid rgba(234,88,12,0.4); flex-shrink:0;" />
             <div class="dispatch-tag" style="color: #FDE047; margin-bottom:0;">Civil Defence Force (APM Penang)</div>
           </div>
           <a href="tel:+6042283991" class="dispatch-num" style="color: #FFF; font-size:1.35rem;">☎ 04-228 3991</a>
@@ -1813,9 +1793,6 @@ img, video, iframe {
         <!-- 1. Penang General Hospital (HPP) -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/hpp.svg" alt="Penang General Hospital (HPP) Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Penang General Hospital (HPP)</div>
               <span class="h-badge badge-gov">Gov Hospital</span>
@@ -1847,9 +1824,6 @@ img, video, iframe {
         <!-- 2. Hospital Balik Pulau (HBP) -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/hbp.svg" alt="Hospital Balik Pulau (HBP) Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Hospital Balik Pulau (HBP)</div>
               <span class="h-badge badge-gov">Gov Hospital</span>
@@ -1877,9 +1851,6 @@ img, video, iframe {
         <!-- 3. Gleneagles Hospital Penang -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/gleneagles.svg" alt="Gleneagles Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Gleneagles Hospital Penang</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -1911,9 +1882,6 @@ img, video, iframe {
         <!-- 4. Island Hospital Penang -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/island.svg" alt="Island Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Island Hospital Penang</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -1945,9 +1913,6 @@ img, video, iframe {
         <!-- 5. Loh Guan Lye Specialists Centre -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/lohguanlye.svg" alt="Loh Guan Lye Specialists Centre Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Loh Guan Lye Specialists Centre</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -1979,9 +1944,6 @@ img, video, iframe {
         <!-- 6. Pantai Hospital Penang -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/pantai.svg" alt="Pantai Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Pantai Hospital Penang</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2013,9 +1975,6 @@ img, video, iframe {
         <!-- 7. Penang Adventist Hospital (PAH) -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/adventist.svg" alt="Penang Adventist Hospital (PAH) Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Penang Adventist Hospital (PAH)</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2047,9 +2006,6 @@ img, video, iframe {
         <!-- 8. Lam Wah Ee Hospital (HLWE) -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/hlwe.svg" alt="Lam Wah Ee Hospital (HLWE) Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Lam Wah Ee Hospital (HLWE)</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2081,9 +2037,6 @@ img, video, iframe {
         <!-- 9. Georgetown Specialist Hospital -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/georgetown.svg" alt="Georgetown Specialist Hospital Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Georgetown Specialist Hospital</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2111,9 +2064,6 @@ img, video, iframe {
         <!-- 10. Northern Heart Hospital Penang -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/northernheart.svg" alt="Northern Heart Hospital Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Northern Heart Hospital Penang</div>
               <span class="h-badge badge-pvt">Cardiac Specialist</span>
@@ -2141,9 +2091,6 @@ img, video, iframe {
         <!-- 11. Mount Miriam Cancer Hospital -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/mountmiriam.svg" alt="Mount Miriam Cancer Hospital Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Mount Miriam Cancer Hospital</div>
               <span class="h-badge badge-pvt">Oncology Specialist</span>
@@ -2185,9 +2132,6 @@ img, video, iframe {
         <!-- 12. Hospital Seberang Jaya (HSJ) -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/hsj.svg" alt="Hospital Seberang Jaya (HSJ) Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
               <span class="h-badge badge-gov">Gov Hospital</span>
@@ -2215,9 +2159,6 @@ img, video, iframe {
         <!-- 13. Bagan Specialist Centre -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/bagan.svg" alt="Bagan Specialist Centre Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Bagan Specialist Centre</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2249,9 +2190,6 @@ img, video, iframe {
         <!-- 14. Sunway Medical Centre Penang -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/sunway.svg" alt="Sunway Medical Centre Penang Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">Sunway Medical Centre Penang</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
@@ -2283,9 +2221,6 @@ img, video, iframe {
         <!-- 15. KPJ Penang Specialist Hospital -->
         <div class="hospital-item">
           <div class="h-top">
-            <div class="h-logo-box">
-              <img src="images/hospitals/kpj.svg" alt="KPJ Penang Specialist Hospital Logo" class="h-logo-img" loading="lazy" />
-            </div>
             <div class="h-name-row">
               <div class="h-name">KPJ Penang Specialist Hospital</div>
               <span class="h-badge badge-pvt">Private Specialist</span>
