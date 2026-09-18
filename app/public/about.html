@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,9 +16,9 @@
 <style>
 :root {
   --bg-deep: #040D1A;
-  --bg-card: rgba(10, 26, 46, 0.72);
+  --bg-card: rgba(10, 26, 46, 0.75);
   --bg-card-hover: rgba(15, 38, 68, 0.9);
-  --line: rgba(56, 189, 248, 0.18);
+  --line: rgba(56, 189, 248, 0.22);
   --blue: #0284c7;
   --blue-bright: #38bdf8;
   --ice: #E0F2FE;
@@ -34,8 +33,10 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
+  width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,12 +45,11 @@ body {
   font-family: var(--font-body);
   min-height: 100vh;
   min-height: 100dvh;
-  overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Ambient Canvas Background */
+/* Ambient Background */
 .sky-canvas {
   position: fixed;
   inset: 0;
@@ -83,112 +83,106 @@ body {
   padding: 0 16px 60px;
 }
 
-/* Sticky Luxury Top Header */
+/* ==========================================================================
+   UNIFIED LUXURY COMPACT HEADER (TIED TOGETHER ON DESKTOP & MOBILE)
+   ========================================================================== */
 header.site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(4, 13, 26, 0.90);
+  z-index: 1000;
+  background: rgba(3, 9, 20, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1120px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .brand-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo {
-  height: 62px;
+  height: 48px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.2s;
-  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 3px 10px rgba(56, 189, 248, 0.35));
 }
 
 .brand-wrap:hover .brand-logo {
-  height: 62px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.2s;
-  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+  transform: scale(1.04);
 }
 
-/* Luxury Icon-Button Navigation Bar */
 .nav-menu {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   list-style: none;
-  background: rgba(8, 20, 42, 0.65);
-  padding: 4px 6px;
+  margin: 0;
+  padding: 4px 8px;
+  background: rgba(8, 22, 46, 0.75);
   border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .nav-link {
-  color: #CBD5E1;
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 6px 13px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
-  border: 1px solid transparent;
-}
-
-.nav-link .nav-icon {
-  font-size: 1.05rem;
-  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 1.18rem;
+  color: #E2E8F0;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  user-select: none;
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
-  background: rgba(56, 189, 248, 0.2);
-  border-color: rgba(56, 189, 248, 0.45);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
-}
-
-.nav-link:hover .nav-icon {
-  transform: scale(1.22);
+  transform: translateY(-2px) scale(1.12);
+  background: rgba(56, 189, 248, 0.25);
+  border-color: #38BDF8;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.55);
 }
 
 .nav-link.active {
-  color: #FFFFFF;
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.5) 0%, rgba(56, 189, 248, 0.35) 100%);
-  border: 1px solid #38BDF8;
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.45);
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.6) 0%, rgba(56, 189, 248, 0.4) 100%);
+  border: 1.5px solid #38BDF8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
 }
 
-.nav-link.active .nav-icon {
-  filter: drop-shadow(0 0 8px rgba(255, 210, 122, 0.9));
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  background: #FFD27A;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #FFD27A;
 }
 
-/* Header Actions: Portals & Lang */
 .header-actions {
   display: flex;
   align-items: center;
@@ -197,88 +191,59 @@ header.site-header {
 }
 
 .portal-pill-patient {
-  background: rgba(14, 165, 233, 0.2);
-  color: #7dd3fc;
-  border: 1px solid rgba(14, 165, 233, 0.5);
-  text-decoration: none;
-  font-weight: 700;
-  padding: 5px 11px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
-  gap: 4px;
-  transition: all 0.2s;
-  white-space: nowrap;
+  justify-content: center;
+  font-size: 1.18rem;
+  background: rgba(14, 165, 233, 0.2);
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #FFF;
 }
 
 .portal-pill-patient:hover {
-  background: rgba(14, 165, 233, 0.35);
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
-}
-
-.portal-pill-staff {
-  background: rgba(245, 158, 11, 0.2);
-  color: #fde047;
-  border: 1px solid rgba(245, 158, 11, 0.5);
-  text-decoration: none;
-  font-weight: 700;
-  padding: 5px 11px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.portal-pill-staff:hover {
-  background: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px) scale(1.12);
+  background: rgba(14, 165, 233, 0.45);
+  border-color: #38BDF8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
 }
 
 .lang-bar {
   display: flex;
-  gap: 3px;
-  background: rgba(15, 23, 42, 0.8);
+  gap: 2px;
+  background: rgba(15, 23, 42, 0.85);
   padding: 3px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
 .lang-btn {
   background: transparent;
   border: none;
   color: #94A3B8;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 6px;
+  padding: 4px 7px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s;
+  font-family: inherit;
 }
 
 .lang-btn.active, .lang-btn:hover {
-  background: var(--blue);
+  background: #0284c7;
   color: #FFF;
-}
-
-.mobile-toggle {
-  display: none;
-  background: transparent;
-  border: 1px solid var(--line);
-  color: #FFF;
-  font-size: 1.1rem;
-  padding: 5px 9px;
-  border-radius: 8px;
-  cursor: pointer;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
 }
 
 /* Page Hero */
 .page-hero {
   text-align: center;
-  padding: 42px 10px 28px;
+  padding: 36px 10px 24px;
 }
 
 .page-tag {
@@ -297,9 +262,9 @@ header.site-header {
 
 .page-hero h1 {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.22;
   margin-bottom: 12px;
   background: linear-gradient(120deg, #FFFFFF 0%, #DCE9F6 60%, var(--gold) 100%);
   -webkit-background-clip: text;
@@ -309,7 +274,7 @@ header.site-header {
 
 .page-hero p {
   color: #C9DCEC;
-  font-size: 1.02rem;
+  font-size: 0.96rem;
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.6;
@@ -320,10 +285,94 @@ header.site-header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 32px 28px;
+  border-radius: 20px;
+  padding: 30px 24px;
   margin-bottom: 24px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.sec-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Founder Layout */
+.founder-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.founder-photo-wrap {
+  text-align: center;
+}
+
+.founder-photo {
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 210, 122, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.founder-creds {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.cred-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(12, 28, 54, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #CBD5E1;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.about-cta-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 /* Footer */
@@ -343,506 +392,47 @@ footer.site-footer {
   flex-wrap: wrap;
   margin-bottom: 16px;
 }
-
 .footer-links a {
   color: #94A3B8;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
+.footer-links a:hover { color: #38BDF8; }
 
-.footer-links a:hover {
-  color: #38BDF8;
-}
-
-@media (max-width: 960px) {
-  .nav-menu { display: none; }
-  .mobile-toggle { display: block; }
-  .nav-menu.mobile-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(4, 13, 26, 0.98);
-    padding: 16px;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-    gap: 8px;
-  }
-}
-
-/* Floating Ambient Light Orbs */
-.orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-  animation: float-orb 18s ease-in-out infinite alternate;
-}
-.orb-1 {
-  width: 420px;
-  height: 420px;
-  top: 5%;
-  right: -8%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35), rgba(2, 132, 199, 0.08));
-  animation-duration: 18s;
-}
-.orb-2 {
-  width: 380px;
-  height: 380px;
-  top: 45%;
-  left: -8%;
-  background: radial-gradient(circle, rgba(255, 210, 122, 0.28), rgba(245, 158, 11, 0.05));
-  animation-duration: 22s;
-  animation-delay: -6s;
-}
-.orb-3 {
-  width: 440px;
-  height: 440px;
-  bottom: 8%;
-  right: 8%;
-  background: radial-gradient(circle, rgba(228, 84, 74, 0.28), rgba(168, 85, 247, 0.06));
-  animation-duration: 20s;
-  animation-delay: -11s;
-}
-@keyframes float-orb {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(35px, 30px) scale(1.06); }
-  100% { transform: translate(-25px, -20px) scale(0.96); }
-}
-
-
-.portal-pill {
-  background: rgba(2, 132, 199, 0.25);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  color: #38BDF8;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-.portal-pill:hover {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: #38BDF8;
-}
-
-
-/* Global Mobile Alignment & Overflow Protection */
-html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
-}
-
+/* Responsive Media Queries */
 @media (max-width: 768px) {
-  .container, .shell, .wrap {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-    max-width: 100% !important;
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6px 12px;
+    gap: 6px;
+    max-width: 100%;
   }
-  
-  .glass-card, .card, .hero, .unified-app-box {
-    padding: 20px 16px !important;
-    border-radius: 14px !important;
+  .brand-logo { height: 38px !important; }
+  .header-actions { gap: 6px; }
+  .portal-pill-patient { width: 32px; height: 32px; font-size: 1rem; }
+  .lang-bar { padding: 2px; gap: 2px; }
+  .lang-btn { font-size: 0.65rem; padding: 3px 5px; }
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    padding: 4px 6px;
+    margin: 2px auto 0;
+    background: rgba(6, 18, 38, 0.85);
   }
-  
-  .grid, .grid2, .grid3, .grid4, .card-grid, .features-grid, .service-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-  
-  .btn-group, .hero-actions, .cta-group, .button-row {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-  
-  .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-  
-  .table-wrap, .table-container, .scroll {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-  
-  h1 {
-    font-size: 1.65rem !important;
-    line-height: 1.25 !important;
-  }
-  
-  h2 {
-    font-size: 1.35rem !important;
-    line-height: 1.3 !important;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .brand-logo {
-    height: 52px !important;
-  }
-  .founder-card {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  .founder-creds {
-    align-items: center !important;
-    text-align: center !important;
-  }
-  .standards-grid, .mission-vision-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-}
-
-/* Responsive About Us & Founder Layout */
-.founder-card {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 32px;
-  align-items: start;
-  margin-bottom: 24px;
-}
-
-.founder-photo-wrap {
-  text-align: center;
-}
-
-.founder-photo {
-  width: 210px;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 210, 122, 0.6);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-}
-
-.founder-creds {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: left;
-}
-
-.sec-tag {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: #38BDF8;
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.cred-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(12, 28, 54, 0.7);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 8px;
-  padding: 6px 12px;
-  color: #CBD5E1;
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.standards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.mission-vision-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 24px;
-}
-
-.commitments-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.about-cta-btns {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-    max-width: 100% !important;
-  }
-  
-  .founder-card {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    text-align: center !important;
-  }
-  
-  .founder-photo-wrap {
-    margin: 0 auto 10px !important;
-  }
-  
-  .founder-photo {
-    width: 180px !important;
-  }
-  
-  .founder-creds {
-    align-items: stretch !important;
-    text-align: left !important;
-  }
-  
-  .standards-grid, .mission-vision-grid, .commitments-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-  
-  .about-cta-btns {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-  
-  .about-cta-btns a {
-    width: 100% !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-}
-
-
-/* Ultra-Clean Minimalist Header */
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(3, 9, 20, 0.90);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.brand-logo {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.25s ease;
-  filter: drop-shadow(0 4px 14px rgba(56, 189, 248, 0.35));
-}
-
-.brand-wrap:hover .brand-logo {
-  transform: scale(1.03);
-}
-
-.nav-menu {
-  display: none !important;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.portal-pill-patient {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(2, 132, 199, 0.15));
-  color: #7dd3fc;
-  border: 1px solid rgba(56, 189, 248, 0.5);
-  text-decoration: none;
-  font-weight: 700;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.portal-pill-patient:hover {
-  background: rgba(14, 165, 233, 0.4);
-  border-color: #38BDF8;
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-}
-
-/* Pure Icon Navigation Header (No Text Labels) */
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(3, 9, 20, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.22);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand-wrap {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.brand-logo {
-  height: 56px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.25s ease;
-  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
-}
-
-.brand-wrap:hover .brand-logo {
-  transform: scale(1.03);
-}
-
-/* Center Pure Icon Navigation Dock */
-.nav-menu {
-  display: flex !important;
-  align-items: center;
-  gap: 8px;
-  list-style: none;
-  background: rgba(8, 22, 46, 0.75);
-  padding: 5px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.nav-link {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: #E2E8F0;
-  text-decoration: none;
-  background: transparent;
-  border: 1px solid transparent;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  position: relative;
-}
-
-.nav-link:hover {
-  transform: translateY(-3px) scale(1.15);
-  background: rgba(56, 189, 248, 0.25);
-  border-color: #38BDF8;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55);
-}
-
-.nav-link.active {
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.6) 0%, rgba(56, 189, 248, 0.4) 100%);
-  border: 1.5px solid #38BDF8;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  width: 5px;
-  height: 5px;
-  background: #FFD27A;
-  border-radius: 50%;
-  box-shadow: 0 0 6px #FFD27A;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.portal-pill-patient {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  background: rgba(14, 165, 233, 0.2);
-  border: 1.5px solid rgba(56, 189, 248, 0.5);
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  color: #FFF;
-}
-
-.portal-pill-patient:hover {
-  transform: translateY(-3px) scale(1.15);
-  background: rgba(14, 165, 233, 0.45);
-  border-color: #38BDF8;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
+  .nav-link { width: 34px; height: 34px; font-size: 1.05rem; }
+  .container { padding: 0 12px 40px !important; max-width: 100% !important; }
+  .glass-card { padding: 20px 14px !important; border-radius: 16px !important; }
+  .founder-card { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .founder-photo-wrap { margin: 0 auto 12px !important; text-align: center !important; }
+  .founder-photo { width: 170px !important; margin: 0 auto !important; }
+  .founder-creds { align-items: stretch !important; }
+  .standards-grid, .mission-vision-grid, .commitments-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .about-cta-btns { flex-direction: column !important; width: 100% !important; }
+  .about-cta-btns a { width: 100% !important; text-align: center !important; justify-content: center !important; }
 }
 </style>
 </head>
@@ -850,7 +440,7 @@ header.site-header {
 <div class="sky-canvas"></div>
 <div class="grid-lines"></div>
 
-<!-- Sticky Navigation Header -->
+<!-- Sticky Top Header -->
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand-wrap">
@@ -887,7 +477,7 @@ header.site-header {
     <p>Pioneering modern digital home healthcare in Penang: transparent fare rates, fast staff coordination, and personalized clinical care tailored to your home environment.</p>
   </div>
 
-  <!-- 1. FOUNDER'S MESSAGE & REASON WHY ASSURA WAS BUILT -->
+  <!-- 1. FOUNDER'S MESSAGE -->
   <div class="glass-card founder-card">
     <div class="founder-photo-wrap">
       <div style="position:relative; display:inline-block;">
@@ -900,164 +490,163 @@ header.site-header {
       </div>
 
       <div class="founder-creds">
-        <span class="cred-pill" style="font-size:0.75rem;">🛡️ Registered Nurse (LJM)</span>
-        <span class="cred-pill" style="font-size:0.75rem;">🏥 Hospital Acute Care Background</span>
-        <span class="cred-pill" style="font-size:0.75rem;">🩸 Wound Care &amp; Infection Risk Minimization</span>
-        <span class="cred-pill" style="font-size:0.75rem;">🏡 Home Clinical Care Specialist</span>
+        <span class="cred-pill">🛡️ Registered Nurse (LJM)</span>
+        <span class="cred-pill">🏥 Hospital Acute Care Background</span>
+        <span class="cred-pill">🩸 Wound Care &amp; Infection Risk Minimization</span>
+        <span class="cred-pill">🏡 Home Clinical Care Specialist</span>
       </div>
     </div>
 
     <div>
       <span class="sec-tag">Founder's Message · 创办人心声与初心</span>
-      <h2 style="font-size:1.55rem; color:#FFF; margin: 8px 0 16px; line-height:1.35;">
+      <h2 style="font-size:1.45rem; color:#FFF; margin: 8px 0 16px; line-height:1.35;">
         "Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals"
       </h2>
 
       <div style="background:rgba(56,189,248,0.08); border-left:4px solid #38BDF8; padding:14px 18px; border-radius:0 12px 12px 0; margin-bottom:18px;">
-        <p style="font-size:0.95rem; color:#E0F2FE; line-height:1.7; font-style:italic;">
+        <p style="font-size:0.92rem; color:#E0F2FE; line-height:1.7; font-style:italic;">
           "Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center."
         </p>
       </div>
 
-      <h3 style="font-size:1.1rem; color:#FFD27A; margin-bottom:8px;">The Real Challenge We Solve (创办初心)</h3>
-      <p style="font-size:0.92rem; color:#C9DCEC; line-height:1.7; margin-bottom:14px;">
+      <h3 style="font-size:1.05rem; color:#FFD27A; margin-bottom:8px;">The Real Challenge We Solve (创办初心)</h3>
+      <p style="font-size:0.9rem; color:#C9DCEC; line-height:1.68; margin-bottom:14px;">
         After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.
       </p>
-      <p style="font-size:0.92rem; color:#C9DCEC; line-height:1.7; margin-bottom:16px;">
+      <p style="font-size:0.9rem; color:#C9DCEC; line-height:1.68; margin-bottom:16px;">
         We founded <strong>Assura Nursing</strong> to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.
       </p>
 
       <div class="about-cta-btns">
-        <a href="https://wa.me/60122064868" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:10px 20px; font-size:0.9rem; text-decoration:none; border-radius:10px; font-weight:700; background:linear-gradient(135deg, #22c55e, #16a34a); color:#FFF; display:inline-flex; align-items:center; gap:6px;">
+        <a href="https://wa.me/60122064868" target="_blank" rel="noopener" style="padding:10px 20px; font-size:0.9rem; text-decoration:none; border-radius:10px; font-weight:700; background:linear-gradient(135deg, #22c55e, #16a34a); color:#FFF; display:inline-flex; align-items:center; gap:6px;">
           💬 Chat with Our Care Team (012-206 4868)
         </a>
-        <a href="services.html" class="btn-secondary" style="padding:10px 18px; font-size:0.9rem; text-decoration:none; border-radius:10px; font-weight:700; border:1px solid rgba(56,189,248,0.4); color:#38BDF8;">
+        <a href="services.html" style="padding:10px 18px; font-size:0.9rem; text-decoration:none; border-radius:10px; font-weight:700; border:1px solid rgba(56,189,248,0.4); color:#38BDF8; display:inline-flex; align-items:center; gap:6px;">
           🩺 View Services &amp; Transparent Rates
         </a>
       </div>
     </div>
   </div>
 
-  <!-- 2. OUR STANDARD OF CARE (HOME ENVIRONMENT & NURSING FUNDAMENTALS) -->
+  <!-- 2. OUR STANDARD OF CARE -->
   <div class="glass-card" style="border-top:3px solid #38BDF8; margin-bottom:24px;">
     <div style="max-width:760px; margin:0 auto 24px; text-align:center;">
       <span class="sec-tag">Our Standard of Care · 专业护理标准与服务价值</span>
-      <h2 style="font-size:1.5rem; color:#FFF; margin-top:6px;">Adapting to the Home, Upholding the Fundamentals</h2>
-      <p style="font-size:0.9rem; color:#94A3B8; line-height:1.6;">
+      <h2 style="font-size:1.45rem; color:#FFF; margin-top:6px;">Adapting to the Home, Upholding the Fundamentals</h2>
+      <p style="font-size:0.88rem; color:#94A3B8; line-height:1.6;">
         We believe effective home care is a balance of two essential skills: <strong>flexible environmental adaptation</strong> for family comfort, and <strong>uncompromising adherence to the core fundamentals of nursing care</strong>.
       </p>
     </div>
 
     <div class="standards-grid">
-      <div style="background:rgba(12,28,54,0.7); padding:20px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
-        <div style="font-size:1.8rem; margin-bottom:10px;">🏡</div>
-        <h3 style="color:#38BDF8; font-size:1.1rem; margin-bottom:8px;">1. Home Environment Assessment &amp; Planning</h3>
-        <p style="font-size:0.86rem; color:#C9DCEC; line-height:1.6;">
+      <div style="background:rgba(12,28,54,0.7); padding:18px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
+        <div style="font-size:1.6rem; margin-bottom:8px;">🏡</div>
+        <h3 style="color:#38BDF8; font-size:1.05rem; margin-bottom:6px;">1. Home Environment Assessment &amp; Planning</h3>
+        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">
           <strong>因地制宜·环境规划：</strong> Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.
         </p>
       </div>
 
-      <div style="background:rgba(12,28,54,0.7); padding:20px; border-radius:14px; border:1px solid rgba(255,210,122,0.25);">
-        <div style="font-size:1.8rem; margin-bottom:10px;">🛡️</div>
-        <h3 style="color:#FFD27A; font-size:1.1rem; margin-bottom:8px;">2. Uncompromising Nursing Fundamentals</h3>
-        <p style="font-size:0.86rem; color:#C9DCEC; line-height:1.6;">
+      <div style="background:rgba(12,28,54,0.7); padding:18px; border-radius:14px; border:1px solid rgba(255,210,122,0.25);">
+        <div style="font-size:1.6rem; margin-bottom:8px;">🛡️</div>
+        <h3 style="color:#FFD27A; font-size:1.05rem; margin-bottom:6px;">2. Uncompromising Nursing Fundamentals</h3>
+        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">
           <strong>恪守根本·降低感染风险：</strong> While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.
         </p>
       </div>
 
-      <div style="background:rgba(12,28,54,0.7); padding:20px; border-radius:14px; border:1px solid rgba(52,211,153,0.25);">
-        <div style="font-size:1.8rem; margin-bottom:10px;">📋</div>
-        <h3 style="color:#34D399; font-size:1.1rem; margin-bottom:8px;">3. Individualized Care Roadmap</h3>
-        <p style="font-size:0.86rem; color:#C9DCEC; line-height:1.6;">
+      <div style="background:rgba(12,28,54,0.7); padding:18px; border-radius:14px; border:1px solid rgba(52,211,153,0.25);">
+        <div style="font-size:1.6rem; margin-bottom:8px;">📋</div>
+        <h3 style="color:#34D399; font-size:1.05rem; margin-bottom:6px;">3. Individualized Care Roadmap</h3>
+        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">
           <strong>量身定制·科学照护：</strong> Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.
         </p>
       </div>
 
-      <div style="background:rgba(12,28,54,0.7); padding:20px; border-radius:14px; border:1px solid rgba(244,114,182,0.25);">
-        <div style="font-size:1.8rem; margin-bottom:10px;">📊</div>
-        <h3 style="color:#F472B6; font-size:1.1rem; margin-bottom:8px;">4. Digital MEWS Vitals &amp; Handover</h3>
-        <p style="font-size:0.86rem; color:#C9DCEC; line-height:1.6;">
+      <div style="background:rgba(12,28,54,0.7); padding:18px; border-radius:14px; border:1px solid rgba(244,114,182,0.25);">
+        <div style="font-size:1.6rem; margin-bottom:8px;">📊</div>
+        <h3 style="color:#F472B6; font-size:1.05rem; margin-bottom:6px;">4. Digital MEWS Vitals &amp; Handover</h3>
+        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">
           <strong>数智记录·清晰交接：</strong> Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- 3. MISSION & VISION SECTION (Corporate Purpose) -->
+  <!-- 3. MISSION & VISION SECTION -->
   <div class="mission-vision-grid">
     <!-- Mission Card -->
     <div class="glass-card" style="border-top:3px solid #38BDF8;">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-        <span style="font-size:1.6rem;">🎯</span>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-size:1.5rem;">🎯</span>
         <div>
-          <span style="font-size:0.75rem; color:#38BDF8; font-weight:800; text-transform:uppercase;">Our Mission</span>
-          <h3 style="color:#FFF; font-size:1.25rem;">企业使命</h3>
+          <span style="font-size:0.72rem; color:#38BDF8; font-weight:800; text-transform:uppercase;">Our Mission</span>
+          <h3 style="color:#FFF; font-size:1.15rem;">企业使命</h3>
         </div>
       </div>
-      <p style="font-size:0.93rem; color:#C9DCEC; line-height:1.65; margin-bottom:12px;">
+      <p style="font-size:0.88rem; color:#C9DCEC; line-height:1.6; margin-bottom:10px;">
         <strong>"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity."</strong>
       </p>
-      <p style="font-size:0.86rem; color:#94A3B8; line-height:1.55;">
+      <p style="font-size:0.82rem; color:#94A3B8; line-height:1.5;">
         为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。
       </p>
     </div>
 
     <!-- Vision Card -->
     <div class="glass-card" style="border-top:3px solid #FFD27A;">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-        <span style="font-size:1.6rem;">🌟</span>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-size:1.5rem;">🌟</span>
         <div>
-          <span style="font-size:0.75rem; color:#FFD27A; font-weight:800; text-transform:uppercase;">Our Vision</span>
-          <h3 style="color:#FFF; font-size:1.25rem;">企业愿景</h3>
+          <span style="font-size:0.72rem; color:#FFD27A; font-weight:800; text-transform:uppercase;">Our Vision</span>
+          <h3 style="color:#FFF; font-size:1.15rem;">企业愿景</h3>
         </div>
       </div>
-      <p style="font-size:0.93rem; color:#C9DCEC; line-height:1.65; margin-bottom:12px;">
+      <p style="font-size:0.88rem; color:#C9DCEC; line-height:1.6; margin-bottom:10px;">
         <strong>"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care."</strong>
       </p>
-      <p style="font-size:0.86rem; color:#94A3B8; line-height:1.55;">
+      <p style="font-size:0.82rem; color:#94A3B8; line-height:1.5;">
         致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。
       </p>
     </div>
   </div>
 
-    <!-- 4. OUR CORE CLINICAL COMMITMENTS (服务宗旨与承诺) -->
+  <!-- 4. OUR CORE CLINICAL COMMITMENTS -->
   <div class="glass-card" style="margin-bottom:32px;">
-    <div style="text-align:center; max-width:680px; margin:0 auto 24px;">
+    <div style="text-align:center; max-width:680px; margin:0 auto 20px;">
       <span class="sec-tag">Our Standards · 服务宗旨与承诺</span>
-      <h2 style="font-size:1.45rem; color:#FFF; margin-bottom:8px;">The Guiding Principles Behind Every Home Visit</h2>
-      <p style="font-size:0.88rem; color:#94A3B8;">Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.</p>
+      <h2 style="font-size:1.4rem; color:#FFF; margin-bottom:6px;">The Guiding Principles Behind Every Home Visit</h2>
+      <p style="font-size:0.86rem; color:#94A3B8;">Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.</p>
     </div>
 
     <div class="commitments-grid">
-      <div style="background:rgba(15,38,68,0.6); padding:20px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
-        <div style="font-size:1.6rem; margin-bottom:10px;">💖</div>
-        <h4 style="color:#38BDF8; font-size:1.05rem; margin-bottom:6px;">Compassion First (仁爱关怀)</h4>
-        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.</p>
+      <div style="background:rgba(15,38,68,0.6); padding:18px; border-radius:14px; border:1px solid rgba(56,189,248,0.25);">
+        <div style="font-size:1.5rem; margin-bottom:8px;">💖</div>
+        <h4 style="color:#38BDF8; font-size:1rem; margin-bottom:4px;">Compassion First (仁爱关怀)</h4>
+        <p style="font-size:0.82rem; color:#C9DCEC; line-height:1.5;">Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.</p>
       </div>
 
-      <div style="background:rgba(15,38,68,0.6); padding:20px; border-radius:14px; border:1px solid rgba(255,210,122,0.25);">
-        <div style="font-size:1.6rem; margin-bottom:10px;">🛡️</div>
-        <h4 style="color:#FFD27A; font-size:1.05rem; margin-bottom:6px;">Clinical Integrity (专业严谨)</h4>
-        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">Strict adherence to MOH &amp; LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound &amp; catheter care.</p>
+      <div style="background:rgba(15,38,68,0.6); padding:18px; border-radius:14px; border:1px solid rgba(255,210,122,0.25);">
+        <div style="font-size:1.5rem; margin-bottom:8px;">🛡️</div>
+        <h4 style="color:#FFD27A; font-size:1rem; margin-bottom:4px;">Clinical Integrity (专业严谨)</h4>
+        <p style="font-size:0.82rem; color:#C9DCEC; line-height:1.5;">Strict adherence to MOH &amp; LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound &amp; catheter care.</p>
       </div>
 
-      <div style="background:rgba(15,38,68,0.6); padding:20px; border-radius:14px; border:1px solid rgba(16,185,129,0.25);">
-        <div style="font-size:1.6rem; margin-bottom:10px;">💎</div>
-        <h4 style="color:#34D399; font-size:1.05rem; margin-bottom:6px;">Transparent Rates (透明合理收费)</h4>
-        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.</p>
+      <div style="background:rgba(15,38,68,0.6); padding:18px; border-radius:14px; border:1px solid rgba(16,185,129,0.25);">
+        <div style="font-size:1.5rem; margin-bottom:8px;">💎</div>
+        <h4 style="color:#34D399; font-size:1rem; margin-bottom:4px;">Transparent Rates (透明合理收费)</h4>
+        <p style="font-size:0.82rem; color:#C9DCEC; line-height:1.5;">Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.</p>
       </div>
 
-      <div style="background:rgba(15,38,68,0.6); padding:20px; border-radius:14px; border:1px solid rgba(244,114,182,0.25);">
-        <div style="font-size:1.6rem; margin-bottom:10px;">⚡</div>
-        <h4 style="color:#F472B6; font-size:1.05rem; margin-bottom:6px;">Active Coordination (就近协调·迅速回复)</h4>
-        <p style="font-size:0.84rem; color:#C9DCEC; line-height:1.55;">Active local nurse coordination across Penang Island &amp; Mainland with fast WhatsApp booking confirmation and on-call support.</p>
+      <div style="background:rgba(15,38,68,0.6); padding:18px; border-radius:14px; border:1px solid rgba(244,114,182,0.25);">
+        <div style="font-size:1.5rem; margin-bottom:8px;">⚡</div>
+        <h4 style="color:#F472B6; font-size:1rem; margin-bottom:4px;">Active Coordination (就近协调·迅速回复)</h4>
+        <p style="font-size:0.82rem; color:#C9DCEC; line-height:1.5;">Active local nurse coordination across Penang Island &amp; Mainland with fast WhatsApp booking confirmation and on-call support.</p>
       </div>
     </div>
   </div>
 </div>
 
 <footer class="site-footer">
-  
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -1076,16 +665,8 @@ function toggleMobileMenu() {
   const menu = document.getElementById('navMenu');
   if (menu) menu.classList.toggle('mobile-open');
 }
-
-function setSubPageLang(l) {
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.innerText.toLowerCase().includes(l));
-  });
-  if (window.handleSubLang) window.handleSubLang(l);
-}
 </script>
 <script src="notifications.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
-

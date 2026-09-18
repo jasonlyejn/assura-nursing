@@ -1444,54 +1444,58 @@ header.site-header {
   box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
-/* Pure Icon Navigation Header (No Text Labels) */
+/* ==========================================================================
+   UNIFIED LUXURY COMPACT HEADER (TIED TOGETHER ON DESKTOP & MOBILE)
+   ========================================================================== */
 header.site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(3, 9, 20, 0.92);
+  z-index: 1000;
+  background: rgba(3, 9, 20, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(56, 189, 248, 0.22);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 8px 20px;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .brand-wrap {
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo {
-  height: 56px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   transition: transform 0.25s ease;
-  filter: drop-shadow(0 3px 12px rgba(56, 189, 248, 0.35));
+  filter: drop-shadow(0 3px 10px rgba(56, 189, 248, 0.35));
 }
 
 .brand-wrap:hover .brand-logo {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
-/* Center Pure Icon Navigation Dock */
 .nav-menu {
   display: flex !important;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
+  margin: 0;
+  padding: 4px 8px;
   background: rgba(8, 22, 46, 0.75);
-  padding: 5px 10px;
   border-radius: 999px;
   border: 1px solid rgba(56, 189, 248, 0.28);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -1500,40 +1504,41 @@ header.site-header {
 }
 
 .nav-link {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   color: #E2E8F0;
   text-decoration: none;
   background: transparent;
   border: 1px solid transparent;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
+  user-select: none;
 }
 
 .nav-link:hover {
-  transform: translateY(-3px) scale(1.15);
+  transform: translateY(-2px) scale(1.12);
   background: rgba(56, 189, 248, 0.25);
   border-color: #38BDF8;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.55);
 }
 
 .nav-link.active {
   background: linear-gradient(135deg, rgba(2, 132, 199, 0.6) 0%, rgba(56, 189, 248, 0.4) 100%);
   border: 1.5px solid #38BDF8;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
 }
 
 .nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 2px;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background: #FFD27A;
   border-radius: 50%;
   box-shadow: 0 0 6px #FFD27A;
@@ -1542,37 +1547,137 @@ header.site-header {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
 .portal-pill-patient {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   background: rgba(14, 165, 233, 0.2);
   border: 1.5px solid rgba(56, 189, 248, 0.5);
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   color: #FFF;
 }
 
 .portal-pill-patient:hover {
-  transform: translateY(-3px) scale(1.15);
+  transform: translateY(-2px) scale(1.12);
   background: rgba(14, 165, 233, 0.45);
   border-color: #38BDF8;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
 }
+
+.lang-bar {
+  display: flex;
+  gap: 2px;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 7px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background: #0284c7;
+  color: #FFF;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+/* Global Mobile Alignment & Full-Screen Scaling */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .shell, .wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6px 12px;
+    gap: 6px;
+    max-width: 100%;
+  }
+  .brand-logo { height: 38px !important; }
+  .header-actions { gap: 6px; }
+  .portal-pill-patient { width: 32px; height: 32px; font-size: 1rem; }
+  .lang-bar { padding: 2px; gap: 2px; }
+  .lang-btn { font-size: 0.65rem; padding: 3px 5px; }
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    padding: 4px 6px;
+    margin: 2px auto 0;
+    background: rgba(6, 18, 38, 0.85);
+  }
+  .nav-link { width: 34px; height: 34px; font-size: 1.05rem; }
+  .container, .shell, .wrap { padding: 0 12px 40px !important; max-width: 100% !important; }
+  .glass-card, .card, .sec-card { padding: 18px 14px !important; border-radius: 16px !important; }
+  .grid, .grid2, .grid3, .grid4, .card-grid, .features-grid, .service-grid, .standards-grid, .mission-vision-grid, .commitments-grid, .founder-card, .founder-grid, .role-split-grid, .booking, .fields, .cpr-box {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+  .btn-group, .hero-actions, .cta-group, .button-row, .hero-ctas, .about-cta-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  .btn, .btn-pri, .btn-sec, .btn-gold, .btn-main-apk, .btn-sub-pwa, .btn-whatsapp, .btn-primary, .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="sky-canvas"></div>
 <div class="grid-lines"></div>
 
+<!-- Sticky Top Header -->
 <!-- Sticky Top Header -->
 <header class="site-header">
   <div class="header-inner">
@@ -1652,9 +1757,12 @@ header.site-header {
         <!-- Assura Care Line -->
         <div class="dispatch-card care">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <img src="images/hospitals/assura-care.svg" alt="Assura 24/7 Care Line" style="width:34px; height:34px; border-radius:8px; border:1px solid rgba(56,189,248,0.4); flex-shrink:0;" />
+            <img src="assura-logo.png" alt="Assura 24/7 Care Line" style="height:34px; width:auto; border-radius:6px; background:#fff; padding:2px 4px; border:1px solid rgba(56,189,248,0.4); flex-shrink:0;" />
             <div class="dispatch-tag" style="color: #7DD3FC; margin-bottom:0;">Assura 24/7 Clinical Care Line</div>
           </div>
+          <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
+          <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
+        </div>
           <a href="tel:+60122064868" class="dispatch-num" style="color: #FFD27A;">☎ 012-206 4868</a>
           <div class="dispatch-sub">Home Nursing &amp; Nurse Dispatch</div>
         </div>
@@ -1691,29 +1799,27 @@ header.site-header {
       </div>
     </div>
 
-    <!-- 2. Penang Island Hospitals -->
-    <div class="glass-card">
+        <!-- 2. Penang Island Hospitals (11 Hospitals) -->
+    <div class="glass-card" style="margin-bottom:28px;">
       <div class="card-title" style="color: #38BDF8;">
         <span>🏥 Penang Island Hospitals (Government &amp; Private)</span>
         <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah</span>
       </div>
 
       <div class="hospital-grid">
-        <!-- Penang General Hospital (HPP) -->
+        <!-- 1. Penang General Hospital (HPP) -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/hpp.svg" alt="Penang General Hospital (HPP) Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Penang General Hospital (HPP)</div>
-                <span class="h-badge badge-gov">Gov Hospital</span>
-              </div>
-              <div class="h-loc">Jalan Residensi, 10990 George Town, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/hpp.svg" alt="Penang General Hospital (HPP) Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Penang General Hospital (HPP)</div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+            <div class="h-loc">Jalan Residensi, 10990 George Town, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency (ETD):</span>
@@ -1735,21 +1841,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Hospital Balik Pulau -->
+        <!-- 2. Hospital Balik Pulau (HBP) -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/hbp.svg" alt="Hospital Balik Pulau (HBP) Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Hospital Balik Pulau (HBP)</div>
-                <span class="h-badge badge-gov">Gov Hospital</span>
-              </div>
-              <div class="h-loc">Jalan Balik Pulau, 11000 Balik Pulau, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/hbp.svg" alt="Hospital Balik Pulau (HBP) Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Hospital Balik Pulau (HBP)</div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+            <div class="h-loc">Jalan Balik Pulau, 11000 Balik Pulau, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency / Line:</span>
@@ -1767,21 +1871,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Gleneagles Hospital Penang -->
+        <!-- 3. Gleneagles Hospital Penang -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/gleneagles.svg" alt="Gleneagles Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Gleneagles Hospital Penang</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">1, Jalan Pangkor, 10050 George Town, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/gleneagles.svg" alt="Gleneagles Hospital Penang Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Gleneagles Hospital Penang</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">1, Jalan Pangkor, 10050 George Town, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency Hotline:</span>
@@ -1803,21 +1905,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Island Hospital Penang -->
+        <!-- 4. Island Hospital Penang -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/island.svg" alt="Island Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Island Hospital Penang</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">308, Macalister Road / Peel Avenue, 10450 George Town</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/island.svg" alt="Island Hospital Penang Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Island Hospital Penang</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">308, Macalister Road / Peel Avenue, 10450 George Town</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency Care:</span>
@@ -1839,21 +1939,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Loh Guan Lye -->
+        <!-- 5. Loh Guan Lye Specialists Centre -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/lohguanlye.svg" alt="Loh Guan Lye Specialists Centre Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Loh Guan Lye Specialists Centre</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">19 &amp; 21, Logan Road, 10400 George Town, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/lohguanlye.svg" alt="Loh Guan Lye Specialists Centre Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Loh Guan Lye Specialists Centre</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">19 &amp; 21, Logan Road, 10400 George Town, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency:</span>
@@ -1875,21 +1973,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Pantai Hospital Penang -->
+        <!-- 6. Pantai Hospital Penang -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/pantai.svg" alt="Pantai Hospital Penang Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Pantai Hospital Penang</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/pantai.svg" alt="Pantai Hospital Penang Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Pantai Hospital Penang</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency:</span>
@@ -1909,22 +2005,21 @@ header.site-header {
               </a>
             </div>
           </div>
-        
-        <!-- Penang Adventist Hospital -->
+        </div>
+
+        <!-- 7. Penang Adventist Hospital (PAH) -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/adventist.svg" alt="Penang Adventist Hospital (PAH) Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Penang Adventist Hospital (PAH)</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">465, Jalan Burma, 10350 George Town, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/adventist.svg" alt="Penang Adventist Hospital (PAH) Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Penang Adventist Hospital (PAH)</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">465, Jalan Burma, 10350 George Town, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency:</span>
@@ -1946,21 +2041,113 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Mount Miriam Cancer Hospital -->
+        <!-- 8. Lam Wah Ee Hospital (HLWE) -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/mountmiriam.svg" alt="Mount Miriam Cancer Hospital Logo" class="h-logo-img" loading="lazy" />
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/hlwe.svg" alt="Lam Wah Ee Hospital (HLWE) Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">Lam Wah Ee Hospital (HLWE)</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">141, Jalan Tan Sri Teh Ewe Lim, 11600 George Town</div>
+          </div>
+          <div class="h-bottom">
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency:</span>
+                <a href="tel:+6046528888" class="h-phone-link emg">☎ 04-652 8888</a>
               </div>
-              <div class="h-name-row">
-                <div class="h-name">Mount Miriam Cancer Hospital</div>
-                <span class="h-badge badge-pvt">Oncology Specialist</span>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6046571888" class="h-phone-link">☎ 04-657 1888</a>
               </div>
-              <div class="h-loc">23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah</div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Hospital+Lam+Wah+Ee+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Hospital+Lam+Wah+Ee" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
             </div>
           </div>
-          <div>
+        </div>
+
+        <!-- 9. Georgetown Specialist Hospital -->
+        <div class="hospital-item">
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/georgetown.svg" alt="Georgetown Specialist Hospital Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">Georgetown Specialist Hospital</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">12A, Jalan Masjid Negeri, 11600 George Town, Penang</div>
+          </div>
+          <div class="h-bottom">
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Line &amp; Emergency:</span>
+                <a href="tel:+6048273333" class="h-phone-link emg">☎ 04-827 3333</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Georgetown+Specialist+Hospital" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Georgetown+Specialist+Hospital" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Northern Heart Hospital Penang -->
+        <div class="hospital-item">
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/northernheart.svg" alt="Northern Heart Hospital Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">Northern Heart Hospital Penang</div>
+              <span class="h-badge badge-pvt">Cardiac Specialist</span>
+            </div>
+            <div class="h-loc">22A, Jalan Sultan Ahmad Shah, 10050 George Town</div>
+          </div>
+          <div class="h-bottom">
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Cardiac Emergency:</span>
+                <a href="tel:+6042292288" class="h-phone-link emg">☎ 04-229 2288</a>
+              </div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Northern+Heart+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Northern+Heart+Hospital+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Mount Miriam Cancer Hospital -->
+        <div class="hospital-item">
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/mountmiriam.svg" alt="Mount Miriam Cancer Hospital Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">Mount Miriam Cancer Hospital</div>
+              <span class="h-badge badge-pvt">Oncology Specialist</span>
+            </div>
+            <div class="h-loc">23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah</div>
+          </div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Direct Care / Line:</span>
@@ -1981,34 +2168,30 @@ header.site-header {
             </div>
           </div>
         </div>
-
-        </div>
       </div>
     </div>
 
-    <!-- 3. Penang Mainland Hospitals -->
-    <div class="glass-card">
+    <!-- 3. Penang Mainland Hospitals (4 Hospitals) -->
+    <div class="glass-card" style="margin-bottom:28px;">
       <div class="card-title" style="color: #FFD27A;">
         <span>🏥 Penang Mainland Hospitals (Seberang Perai)</span>
         <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas</span>
       </div>
 
       <div class="hospital-grid">
-        <!-- Hospital Seberang Jaya (HSJ) -->
+        <!-- 12. Hospital Seberang Jaya (HSJ) -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/hsj.svg" alt="Hospital Seberang Jaya (HSJ) Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
-                <span class="h-badge badge-gov">Gov Hospital</span>
-              </div>
-              <div class="h-loc">Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/hsj.svg" alt="Hospital Seberang Jaya (HSJ) Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Hospital Seberang Jaya (HSJ)</div>
+              <span class="h-badge badge-gov">Gov Hospital</span>
+            </div>
+            <div class="h-loc">Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency (ETD):</span>
@@ -2026,21 +2209,19 @@ header.site-header {
           </div>
         </div>
 
-        <!-- Bagan Specialist Centre -->
+        <!-- 13. Bagan Specialist Centre -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/bagan.svg" alt="Bagan Specialist Centre Logo" class="h-logo-img" loading="lazy" />
-              </div>
-              <div class="h-name-row">
-                <div class="h-name">Bagan Specialist Centre</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
-              </div>
-              <div class="h-loc">Jalan Bagan 1, 13400 Butterworth, Penang</div>
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/bagan.svg" alt="Bagan Specialist Centre Logo" class="h-logo-img" loading="lazy" />
             </div>
+            <div class="h-name-row">
+              <div class="h-name">Bagan Specialist Centre</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">Jalan Bagan 1, 13400 Butterworth, Penang</div>
           </div>
-          <div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency Hotline:</span>
@@ -2062,21 +2243,53 @@ header.site-header {
           </div>
         </div>
 
-        <!-- KPJ Penang Specialist Hospital -->
+        <!-- 14. Sunway Medical Centre Penang -->
         <div class="hospital-item">
-          <div>
-            <div class="h-top">
-              <div class="h-logo-box">
-                <img src="images/hospitals/kpj.svg" alt="KPJ Penang Specialist Hospital Logo" class="h-logo-img" loading="lazy" />
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/sunway.svg" alt="Sunway Medical Centre Penang Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">Sunway Medical Centre Penang</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">3088, Jalan Todak, Seberang Jaya, 13700 Perai</div>
+          </div>
+          <div class="h-bottom">
+            <div class="h-numbers">
+              <div class="h-call-row">
+                <span>24/7 Emergency Care:</span>
+                <a href="tel:+6043735000" class="h-phone-link emg">☎ 04-373 5000</a>
               </div>
-              <div class="h-name-row">
-                <div class="h-name">KPJ Penang Specialist Hospital</div>
-                <span class="h-badge badge-pvt">Private Specialist</span>
+              <div class="h-call-row">
+                <span>General Line:</span>
+                <a href="tel:+6043735555" class="h-phone-link">☎ 04-373 5555</a>
               </div>
-              <div class="h-loc">570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam</div>
+            </div>
+            <div class="h-nav-row">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Sunway+Medical+Centre+Penang" target="_blank" rel="noopener" class="h-nav-pill">
+                📍 Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Sunway+Medical+Centre+Penang" target="_blank" rel="noopener" class="h-nav-pill waze">
+                🚗 Waze
+              </a>
             </div>
           </div>
-          <div>
+        </div>
+
+        <!-- 15. KPJ Penang Specialist Hospital -->
+        <div class="hospital-item">
+          <div class="h-top">
+            <div class="h-logo-box">
+              <img src="images/hospitals/kpj.svg" alt="KPJ Penang Specialist Hospital Logo" class="h-logo-img" loading="lazy" />
+            </div>
+            <div class="h-name-row">
+              <div class="h-name">KPJ Penang Specialist Hospital</div>
+              <span class="h-badge badge-pvt">Private Specialist</span>
+            </div>
+            <div class="h-loc">570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam</div>
+          </div>
+          <div class="h-bottom">
             <div class="h-numbers">
               <div class="h-call-row">
                 <span>24/7 Emergency Line:</span>
