@@ -405,31 +405,165 @@ img, video, iframe {
   }
 }
 
+
+
+/* Luxury Icon-Button Navigation Bar */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  list-style: none;
+  background: rgba(8, 20, 42, 0.65);
+  padding: 4px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-link {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 13px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.nav-link .nav-icon {
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.22);
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.5) 0%, rgba(56, 189, 248, 0.35) 100%);
+  border: 1px solid #38BDF8;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.45);
+}
+
+.nav-link.active .nav-icon {
+  filter: drop-shadow(0 0 8px rgba(255, 210, 122, 0.9));
+}
+
+
+/* Ultra-Clean Minimalist Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 9, 20, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 4px 14px rgba(56, 189, 248, 0.35));
+}
+
+.brand-wrap:hover .brand-logo {
+  transform: scale(1.03);
+}
+
+.nav-menu {
+  display: none !important;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.portal-pill-patient {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(2, 132, 199, 0.15));
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.portal-pill-patient:hover {
+  background: rgba(14, 165, 233, 0.4);
+  border-color: #38BDF8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
 </style>
 </head>
 <body>
 
   <!-- Top Navigation Header with Language Selector -->
-  <header style="background: rgba(6, 21, 43, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(56, 189, 248, 0.25); position: sticky; top: 0; z-index: 100; padding: 8px 16px;">
-    <div style="max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
-      <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #FFF; font-weight: 800; font-size: 0.95rem;">
-        <img src="assura-logo.png" alt="Assura Nursing" style="height: 48px; width: auto; object-fit: contain;" />
-      </a>
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <button id="notifBellBtn" onclick="openNotificationModal()" title="Alerts & Live Case Status" style="position: relative; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.35); color: #38BDF8; padding: 5px 9px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">
-          <span>🔔</span>
-          <span style="font-size: 0.72rem;" data-i18n="notif_btn">Alerts</span>
-          <span style="position: absolute; top: -2px; right: -2px; width: 7px; height: 7px; background: #10B981; border-radius: 50%; box-shadow: 0 0 6px #10B981;"></span>
-        </button>
-        <div class="lang-bar" style="display: flex; gap: 3px; background: rgba(15, 23, 42, 0.85); padding: 3px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.25);">
-          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">EN</button>
-          <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">中文</button>
-          <button class="lang-btn" data-lang="bm" onclick="setLanguage('bm')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">BM</button>
-          <button class="lang-btn" data-lang="ta" onclick="setLanguage('ta')" style="background: transparent; border: none; color: #94A3B8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 7px; cursor: pointer;">தமிழ்</button>
-        </div>
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand-wrap">
+      <img src="assura-logo.png" alt="Assura Nursing" class="brand-logo" />
+    </a>
+
+    <div class="header-actions">
+      <a href="portal.html" class="portal-pill-patient" data-i18n="portal_pill">🏥 <span>Clinical Portal</span></a>
+
+      <div class="lang-bar" id="langBar">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')">中文</button>
+        <button class="lang-btn" data-lang="bm" onclick="setLanguage('bm')">BM</button>
+        <button class="lang-btn" data-lang="ta" onclick="setLanguage('ta')">தமிழ்</button>
       </div>
     </div>
-  </header>
+  </div>
+</header>
   
   <main class="shell">
     <header class="hero">

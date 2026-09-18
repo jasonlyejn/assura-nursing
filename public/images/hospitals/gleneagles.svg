@@ -1,21 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
-  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
-  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <rect width="320" height="100" rx="12" fill="#FFFFFF"/>
   <!-- IHH Gold & Navy Crest -->
-  <g transform="translate(80, 52)">
-    <!-- Crest Shield -->
-    <path d="M -26 -30 L 26 -30 Q 26 12 0 28 Q -26 12 -26 -30 Z" fill="#0C2340" stroke="#C5A059" stroke-width="2.5"/>
-    <!-- Gold Crown / Leaves -->
-    <path d="M 0 -22 C 2 -18, 5 -16, 7 -16 C 9 -16, 11 -18, 12 -21 C 10 -16, 5 -13, 2 -10 L 0 -2 L -2 -10 C -5 -13, -10 -16, -12 -21 C -11 -18, -9 -16, -7 -16 C -5 -16, -2 -18, 0 -22 Z" fill="#C5A059"/>
-    <circle cx="0" cy="-14" r="2.5" fill="#FFFFFF"/>
-    <!-- Gold Ribbon Wings -->
-    <path d="M -3 -8 C -12 -16, -20 -12, -24 -7 C -20 -7, -17 -6, -14 -4 C -20 -4, -23 -1, -24 3 C -20 2, -16 3, -13 5 L -3 0 Z" fill="#C5A059"/>
-    <path d="M 3 -8 C 12 -16, 20 -12, 24 -7 C 20 -7, 17 -6, 14 -4 C 20 -4, 23 -1, 24 3 C 20 2, 16 3, 13 5 L 3 0 Z" fill="#C5A059"/>
-    <path d="M 0 0 L 3 5 L 9 6 L 4.5 11 L 6 17 L 0 13.5 L -6 17 L -4.5 11 L -9 6 L -3 5 Z" fill="#FFFFFF"/>
+  <g transform="translate(48, 50)">
+    <path d="M -22 -26 L 22 -26 Q 22 10 0 24 Q -22 10 -22 -26 Z" fill="#0C2340" stroke="#C5A059" stroke-width="2"/>
+    <path d="M 0 -18 C 2 -15, 4 -13, 6 -13 C 8 -13, 10 -15, 11 -17 C 9 -13, 4 -11, 2 -8 L 0 -2 L -2 -8 C -4 -11, -9 -13, -11 -17 C -10 -15, -8 -13, -6 -13 C -4 -13, -2 -15, 0 -18 Z" fill="#C5A059"/>
+    <circle cx="0" cy="-12" r="2" fill="#FFFFFF"/>
+    <path d="M -3 -7 C -10 -13, -17 -10, -20 -6 C -17 -6, -14 -5, -12 -3 C -17 -3, -19 -1, -20 2 C -17 1, -14 2, -11 4 L -3 0 Z" fill="#C5A059"/>
+    <path d="M 3 -7 C 10 -13, 17 -10, 20 -6 C 17 -6, 14 -5, 12 -3 C 17 -3, 19 -1, 20 2 C 17 1, 14 2, 11 4 L 3 0 Z" fill="#C5A059"/>
+    <path d="M 0 0 L 2.5 4 L 7.5 5 L 4 9 L 5 14 L 0 11 L -5 14 L -4 9 L -7.5 5 L -2.5 4 Z" fill="#FFFFFF"/>
   </g>
-  <!-- Typography -->
-  <text x="80" y="106" font-family="'Times New Roman', Georgia, serif" font-size="14" font-weight="bold" fill="#0C2340" text-anchor="middle">Gleneagles</text>
-  <text x="80" y="122" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#0C2340" text-anchor="middle" letter-spacing="1">HOSPITAL</text>
-  <text x="80" y="136" font-family="Arial, sans-serif" font-size="8" font-weight="900" fill="#C5A059" text-anchor="middle" letter-spacing="1.5">PENANG</text>
-  <text x="80" y="148" font-family="Arial, sans-serif" font-size="6" font-weight="600" fill="#64748B" text-anchor="middle">IHH HEALTHCARE</text>
+  <!-- Gleneagles Text -->
+  <text x="86" y="44" font-family="'Times New Roman', Georgia, serif" font-size="24" font-weight="bold" fill="#0C2340">Gleneagles</text>
+  <text x="86" y="64" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#0C2340" letter-spacing="1">HOSPITAL PENANG</text>
+  <text x="86" y="80" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#C5A059" letter-spacing="1.5">AN IHH HEALTHCARE HOSPITAL</text>
 </svg>

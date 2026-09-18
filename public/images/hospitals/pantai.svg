@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
-  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
-  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#E2E8F0" stroke-width="2"/>
-  <!-- Pantai Radiant Sunburst Icon -->
-  <g transform="translate(80, 52)">
-    <circle cx="0" cy="0" r="26" fill="#FFF7ED"/>
-    <!-- Sunburst Petals -->
-    <path d="M 0 -22 L 4 -12 L 14 -18 L 10 -7 L 22 -6 L 14 2 L 22 10 L 11 10 L 14 21 L 4 15 L 0 24 L -4 15 L -14 21 L -11 10 L -22 10 L -14 2 L -22 -6 L -10 -7 L -14 -18 L -4 -12 Z" fill="#EA580C"/>
-    <circle cx="0" cy="0" r="10" fill="#C2410C"/>
-    <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <rect width="320" height="100" rx="12" fill="#FFFFFF"/>
+  <!-- Pantai Radiant Sun -->
+  <g transform="translate(48, 50)">
+    <circle cx="0" cy="0" r="24" fill="#FFF7ED"/>
+    <path d="M 0 -20 L 3.5 -11 L 13 -16 L 9 -6 L 20 -5 L 13 2 L 20 9 L 10 9 L 13 19 L 3.5 14 L 0 22 L -3.5 14 L -13 19 L -10 9 L -20 9 L -13 2 L -20 -5 L -9 -6 L -13 -16 L -3.5 -11 Z" fill="#EA580C"/>
+    <circle cx="0" cy="0" r="9" fill="#C2410C"/>
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
   </g>
-  <!-- Typography -->
-  <text x="80" y="106" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#EA580C" text-anchor="middle">Pantai Hospital</text>
-  <text x="80" y="122" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#0C2340" text-anchor="middle" letter-spacing="1">PENANG</text>
-  <text x="80" y="136" font-family="Arial, sans-serif" font-size="7" font-weight="800" fill="#EA580C" text-anchor="middle" letter-spacing="1">IHH HEALTHCARE</text>
-  <text x="80" y="148" font-family="Arial, sans-serif" font-size="6" font-weight="600" fill="#64748B" text-anchor="middle">BAYAN BARU</text>
+  <!-- Pantai Text -->
+  <text x="86" y="44" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#EA580C">Pantai Hospital</text>
+  <text x="86" y="64" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#0C2340" letter-spacing="1">PENANG</text>
+  <text x="86" y="80" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#EA580C" letter-spacing="1">IHH HEALTHCARE · BAYAN BARU</text>
 </svg>

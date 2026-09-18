@@ -929,3210 +929,3260 @@ const STRING_MAP = {
     "bm": "Tiada log masuk diperlukan ·",
     "ta": "உள்நுழைவு தேவையில்லை ·"
   },
-  "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.": {
-    "zh": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.",
-    "bm": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.",
-    "ta": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels."
-  },
-  "☎ 04-332 2800": {
-    "zh": "☎ 04-332 2800",
-    "bm": "☎ 04-332 2800",
-    "ta": "☎ 04-332 2800"
-  },
-  "📍 Google Maps": {
-    "zh": "📍 Google Maps",
-    "bm": "📍 Google Maps",
-    "ta": "📍 Google Maps"
-  },
-  "Bagan Specialist Centre": {
-    "zh": "Bagan Specialist Centre",
-    "bm": "Bagan Specialist Centre",
-    "ta": "Bagan Specialist Centre"
-  },
-  "Compassion First (仁爱关怀)": {
-    "zh": "Compassion First (仁爱关怀)",
-    "bm": "Compassion First (仁爱关怀)",
-    "ta": "Compassion First (仁爱关怀)"
-  },
-  "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam": {
-    "zh": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam",
-    "bm": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam",
-    "ta": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam"
-  },
-  "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"": {
-    "zh": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"",
-    "bm": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"",
-    "ta": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\""
-  },
-  "Alt: 04-828 2842": {
-    "zh": "Alt: 04-828 2842",
-    "bm": "Alt: 04-828 2842",
-    "ta": "Alt: 04-828 2842"
-  },
-  "Click to view rates for Hospital Escort": {
-    "zh": "Click to view rates for Hospital Escort",
-    "bm": "Click to view rates for Hospital Escort",
-    "ta": "Click to view rates for Hospital Escort"
-  },
-  "\"Install unknown apps\"": {
-    "zh": "\"Install unknown apps\"",
-    "bm": "\"Install unknown apps\"",
-    "ta": "\"Install unknown apps\""
-  },
-  "Infection Red Flags:": {
-    "zh": "Infection Red Flags:",
-    "bm": "Infection Red Flags:",
-    "ta": "Infection Red Flags:"
-  },
-  "💬 WhatsApp urgent · 紧急讯息": {
-    "zh": "💬 WhatsApp urgent · 紧急讯息",
-    "bm": "💬 WhatsApp urgent · 紧急讯息",
-    "ta": "💬 WhatsApp urgent · 紧急讯息"
-  },
-  "需要紧急护理？": {
-    "zh": "需要紧急护理？",
-    "bm": "需要紧急护理？",
-    "ta": "需要紧急护理？"
-  },
-  "Clinic & Hospital Escort": {
-    "zh": "Clinic & Hospital Escort",
-    "bm": "Clinic & Hospital Escort",
-    "ta": "Clinic & Hospital Escort"
-  },
-  "🩺 Supplies": {
-    "zh": "🩺 Supplies",
-    "bm": "🩺 Supplies",
-    "ta": "🩺 Supplies"
-  },
-  "Medical Compressor Nebulizer": {
-    "zh": "Medical Compressor Nebulizer",
-    "bm": "Medical Compressor Nebulizer",
-    "ta": "Medical Compressor Nebulizer"
-  },
-  "What would you like to do?": {
-    "zh": "What would you like to do?",
-    "bm": "What would you like to do?",
-    "ta": "What would you like to do?"
-  },
-  "居家护理服务": {
-    "zh": "居家护理服务",
-    "bm": "居家护理服务",
-    "ta": "居家护理服务"
-  },
-  "❓ Enquire / 咨询": {
-    "zh": "❓ Enquire / 咨询",
-    "bm": "❓ Enquire / 咨询",
-    "ta": "❓ Enquire / 咨询"
-  },
-  "创办人兼临床总监": {
-    "zh": "创办人兼临床总监",
-    "bm": "创办人兼临床总监",
-    "ta": "创办人兼临床总监"
-  },
-  "Hospital Seberang Jaya (HSJ)": {
-    "zh": "Hospital Seberang Jaya (HSJ)",
-    "bm": "Hospital Seberang Jaya (HSJ)",
-    "ta": "Hospital Seberang Jaya (HSJ)"
-  },
-  "1. Home Environment Assessment & Planning": {
-    "zh": "1. Home Environment Assessment & Planning",
-    "bm": "1. Home Environment Assessment & Planning",
-    "ta": "1. Home Environment Assessment & Planning"
-  },
-  "Medication Safety & Standard Times": {
-    "zh": "Medication Safety & Standard Times",
-    "bm": "Medication Safety & Standard Times",
-    "ta": "Medication Safety & Standard Times"
-  },
-  "医护人员与性别偏好（男女护士/护理师均可指定）": {
-    "zh": "医护人员与性别偏好（男女护士/护理师均可指定）",
-    "bm": "医护人员与性别偏好（男女护士/护理师均可指定）",
-    "ta": "医护人员与性别偏好（男女护士/护理师均可指定）"
-  },
-  "Click to explore Medical Equipment": {
-    "zh": "Click to explore Medical Equipment",
-    "bm": "Click to explore Medical Equipment",
-    "ta": "Click to explore Medical Equipment"
-  },
-  "Crucial:": {
-    "zh": "Crucial:",
-    "bm": "Crucial:",
-    "ta": "Crucial:"
-  },
-  "Other / Not Sure": {
-    "zh": "Other / Not Sure",
-    "bm": "Other / Not Sure",
-    "ta": "Other / Not Sure"
-  },
-  "AssuraNursing.apk": {
-    "zh": "AssuraNursing.apk",
-    "bm": "AssuraNursing.apk",
-    "ta": "AssuraNursing.apk"
-  },
-  "Patient NRIC / IC Number (身份证号 - 选填)": {
-    "zh": "Patient NRIC / IC Number (身份证号 - 选填)",
-    "bm": "Patient NRIC / IC Number (身份证号 - 选填)",
-    "ta": "Patient NRIC / IC Number (身份证号 - 选填)"
-  },
-  "🛏️": {
-    "zh": "🛏️",
-    "bm": "🛏️",
-    "ta": "🛏️"
-  },
-  "AssuraNursing.exe": {
-    "zh": "AssuraNursing.exe",
-    "bm": "AssuraNursing.exe",
-    "ta": "AssuraNursing.exe"
-  },
-  "👴 Elderly & Bedridden Care": {
-    "zh": "👴 Elderly & Bedridden Care",
-    "bm": "👴 Elderly & Bedridden Care",
-    "ta": "👴 Elderly & Bedridden Care"
-  },
-  "Any Nurse / Caregiver": {
-    "zh": "Any Nurse / Caregiver",
-    "bm": "Any Nurse / Caregiver",
-    "ta": "Any Nurse / Caregiver"
-  },
-  "📍 Filled from your location — please add your house/unit number if it's missing.": {
-    "zh": "📍 Filled from your location — please add your house/unit number if it's missing.",
-    "bm": "📍 Filled from your location — please add your house/unit number if it's missing.",
-    "ta": "📍 Filled from your location — please add your house/unit number if it's missing."
-  },
-  "Action": {
-    "zh": "Action",
-    "bm": "Action",
-    "ta": "Action"
-  },
-  "🩺 View Services & Transparent Rates": {
-    "zh": "🩺 View Services & Transparent Rates",
-    "bm": "🩺 View Services & Transparent Rates",
-    "ta": "🩺 View Services & Transparent Rates"
-  },
-  "Wound Dressing": {
-    "zh": "Wound Dressing",
-    "bm": "Wound Dressing",
-    "ta": "Wound Dressing"
-  },
-  "📁 Medical Vault (病历文件)": {
-    "zh": "📁 Medical Vault (病历文件)",
-    "bm": "📁 Medical Vault (病历文件)",
-    "ta": "📁 Medical Vault (病历文件)"
-  },
-  "优先安排女护士 / 女护理师": {
-    "zh": "优先安排女护士 / 女护理师",
-    "bm": "优先安排女护士 / 女护理师",
-    "ta": "优先安排女护士 / 女护理师"
-  },
-  "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.": {
-    "zh": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.",
-    "bm": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.",
-    "ta": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance."
-  },
-  "flexible environmental adaptation": {
-    "zh": "flexible environmental adaptation",
-    "bm": "flexible environmental adaptation",
-    "ta": "flexible environmental adaptation"
-  },
-  "Media & Clinical Resources · 媒体中心与临床资源": {
-    "zh": "Media & Clinical Resources · 媒体中心与临床资源",
-    "bm": "Media & Clinical Resources · 媒体中心与临床资源",
-    "ta": "Media & Clinical Resources · 媒体中心与临床资源"
-  },
-  "🔒 Sign In as Patient / Family (家属与患者登录)": {
-    "zh": "🔒 Sign In as Patient / Family (家属与患者登录)",
-    "bm": "🔒 Sign In as Patient / Family (家属与患者登录)",
-    "ta": "🔒 Sign In as Patient / Family (家属与患者登录)"
-  },
-  "Week 1": {
-    "zh": "Week 1",
-    "bm": "Week 1",
-    "ta": "Week 1"
-  },
-  "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:": {
-    "zh": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:",
-    "bm": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:",
-    "ta": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:"
-  },
-  "Personal Hygiene Care": {
-    "zh": "Personal Hygiene Care",
-    "bm": "Personal Hygiene Care",
-    "ta": "Personal Hygiene Care"
-  },
-  "📥 Download": {
-    "zh": "📥 Download",
-    "bm": "📥 Download",
-    "ta": "📥 Download"
-  },
-  "19 & 21, Logan Road, 10400 George Town, Penang": {
-    "zh": "19 & 21, Logan Road, 10400 George Town, Penang",
-    "bm": "19 & 21, Logan Road, 10400 George Town, Penang",
-    "ta": "19 & 21, Logan Road, 10400 George Town, Penang"
-  },
-  "Save this booking app": {
-    "zh": "Save this booking app",
-    "bm": "Save this booking app",
-    "ta": "Save this booking app"
-  },
-  "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)": {
-    "zh": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)",
-    "bm": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)",
-    "ta": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)"
-  },
-  "Surgical, Bedsores & Diabetic Ulcers": {
-    "zh": "Surgical, Bedsores & Diabetic Ulcers",
-    "bm": "Surgical, Bedsores & Diabetic Ulcers",
-    "ta": "Surgical, Bedsores & Diabetic Ulcers"
-  },
-  "⏰ QID (Four Times Daily):": {
-    "zh": "⏰ QID (Four Times Daily):",
-    "bm": "⏰ QID (Four Times Daily):",
-    "ta": "⏰ QID (Four Times Daily):"
-  },
-  "UNIFIED PORTAL ACCESS (统一服务登录)": {
-    "zh": "UNIFIED PORTAL ACCESS (统一服务登录)",
-    "bm": "UNIFIED PORTAL ACCESS (统一服务登录)",
-    "ta": "UNIFIED PORTAL ACCESS (统一服务登录)"
-  },
-  "➕ New Register": {
-    "zh": "➕ New Register",
-    "bm": "➕ New Register",
-    "ta": "➕ New Register"
-  },
-  "企业使命": {
-    "zh": "企业使命",
-    "bm": "企业使命",
-    "ta": "企业使命"
-  },
-  "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.": {
-    "zh": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.",
-    "bm": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.",
-    "ta": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance."
-  },
-  "Open": {
-    "zh": "Open",
-    "bm": "Open",
-    "ta": "Open"
-  },
-  "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas": {
-    "zh": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas",
-    "bm": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas",
-    "ta": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas"
-  },
-  "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。": {
-    "zh": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。",
-    "bm": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。",
-    "ta": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。"
-  },
-  "Use my location · 定位": {
-    "zh": "Use my location · 定位",
-    "bm": "Use my location · 定位",
-    "ta": "Use my location · 定位"
-  },
-  "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang": {
-    "zh": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang",
-    "bm": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang",
-    "ta": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang"
-  },
-  "Our Standard of Care · 专业护理标准与服务价值": {
-    "zh": "Our Standard of Care · 专业护理标准与服务价值",
-    "bm": "Our Standard of Care · 专业护理标准与服务价值",
-    "ta": "Our Standard of Care · 专业护理标准与服务价值"
-  },
-  "Jalan Balik Pulau, 11000 Balik Pulau, Penang": {
-    "zh": "Jalan Balik Pulau, 11000 Balik Pulau, Penang",
-    "bm": "Jalan Balik Pulau, 11000 Balik Pulau, Penang",
-    "ta": "Jalan Balik Pulau, 11000 Balik Pulau, Penang"
-  },
-  "⚡ Instant Price Estimator": {
-    "zh": "⚡ Instant Price Estimator",
-    "bm": "⚡ Instant Price Estimator",
-    "ta": "⚡ Instant Price Estimator"
-  },
-  "Injection & Drip": {
-    "zh": "Injection & Drip",
-    "bm": "Injection & Drip",
-    "ta": "Injection & Drip"
-  },
-  "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.": {
-    "zh": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.",
-    "bm": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.",
-    "ta": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field."
-  },
-  "4. Digital MEWS Vitals & Handover": {
-    "zh": "4. Digital MEWS Vitals & Handover",
-    "bm": "4. Digital MEWS Vitals & Handover",
-    "ta": "4. Digital MEWS Vitals & Handover"
-  },
-  "Ripple Anti-Decubitus Mattress": {
-    "zh": "Ripple Anti-Decubitus Mattress",
-    "bm": "Ripple Anti-Decubitus Mattress",
-    "ta": "Ripple Anti-Decubitus Mattress"
-  },
-  "Assura Nursing · Unified Patient & Staff Clinical Portal": {
-    "zh": "Assura Nursing · Unified Patient & Staff Clinical Portal",
-    "bm": "Assura Nursing · Unified Patient & Staff Clinical Portal",
-    "ta": "Assura Nursing · Unified Patient & Staff Clinical Portal"
-  },
-  "for family comfort, and": {
-    "zh": "for family comfort, and",
-    "bm": "for family comfort, and",
-    "ta": "for family comfort, and"
-  },
-  "to place Assura on your mobile home screen.": {
-    "zh": "to place Assura on your mobile home screen.",
-    "bm": "to place Assura on your mobile home screen.",
-    "ta": "to place Assura on your mobile home screen."
-  },
-  "🩺 Staff Sign In (医护人员工号登录)": {
-    "zh": "🩺 Staff Sign In (医护人员工号登录)",
-    "bm": "🩺 Staff Sign In (医护人员工号登录)",
-    "ta": "🩺 Staff Sign In (医护人员工号登录)"
-  },
-  "Step 2: Family Case Link": {
-    "zh": "Step 2: Family Case Link",
-    "bm": "Step 2: Family Case Link",
-    "ta": "Step 2: Family Case Link"
-  },
-  "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.": {
-    "zh": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.",
-    "bm": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.",
-    "ta": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately."
-  },
-  "Step 1: Public": {
-    "zh": "Step 1: Public",
-    "bm": "Step 1: Public",
-    "ta": "Step 1: Public"
-  },
-  "Medication": {
-    "zh": "Medication",
-    "bm": "Medication",
-    "ta": "Medication"
-  },
-  "Auto-Fill": {
-    "zh": "Auto-Fill",
-    "bm": "Auto-Fill",
-    "ta": "Auto-Fill"
-  },
-  "Install": {
-    "zh": "Install",
-    "bm": "Install",
-    "ta": "Install"
-  },
-  "安宁疗护 · 舒缓护理": {
-    "zh": "安宁疗护 · 舒缓护理",
-    "bm": "安宁疗护 · 舒缓护理",
-    "ta": "安宁疗护 · 舒缓护理"
-  },
-  "Assura 24/7 Clinical Care Line": {
-    "zh": "Assura 24/7 Clinical Care Line",
-    "bm": "Assura 24/7 Clinical Care Line",
-    "ta": "Assura 24/7 Clinical Care Line"
-  },
-  "无偏好 · 安排最快到达人员": {
-    "zh": "无偏好 · 安排最快到达人员",
-    "bm": "无偏好 · 安排最快到达人员",
-    "ta": "无偏好 · 安排最快到达人员"
-  },
-  "📍 All Penang Areas Covered": {
-    "zh": "📍 All Penang Areas Covered",
-    "bm": "📍 All Penang Areas Covered",
-    "ta": "📍 All Penang Areas Covered"
-  },
-  "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.": {
-    "zh": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.",
-    "bm": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.",
-    "ta": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims."
-  },
-  "🛡️": {
-    "zh": "🛡️",
-    "bm": "🛡️",
-    "ta": "🛡️"
-  },
-  "19:00 or 22:00 before sleep": {
-    "zh": "19:00 or 22:00 before sleep",
-    "bm": "19:00 or 22:00 before sleep",
-    "ta": "19:00 or 22:00 before sleep"
-  },
-  "☎ 04-828 6999": {
-    "zh": "☎ 04-828 6999",
-    "bm": "☎ 04-828 6999",
-    "ta": "☎ 04-828 6999"
-  },
-  "📢 Official Company Bulletins & Clinical Announcements": {
-    "zh": "📢 Official Company Bulletins & Clinical Announcements",
-    "bm": "📢 Official Company Bulletins & Clinical Announcements",
-    "ta": "📢 Official Company Bulletins & Clinical Announcements"
-  },
-  "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如": {
-    "zh": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如",
-    "bm": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如",
-    "ta": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如"
-  },
-  "🤖 Android APK (3.8 MB)": {
-    "zh": "🤖 Android APK (3.8 MB)",
-    "bm": "🤖 Android APK (3.8 MB)",
-    "ta": "🤖 Android APK (3.8 MB)"
-  },
-  "2-Hourly Turning & Contracture Prevention": {
-    "zh": "2-Hourly Turning & Contracture Prevention",
-    "bm": "2-Hourly Turning & Contracture Prevention",
-    "ta": "2-Hourly Turning & Contracture Prevention"
-  },
-  "🚨 Immediate 24/7 Emergency & Ambulance Dispatch": {
-    "zh": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch",
-    "bm": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch",
-    "ta": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch"
-  },
-  "只需留下姓名、电话和问题，其余可不填。": {
-    "zh": "只需留下姓名、电话和问题，其余可不填。",
-    "bm": "只需留下姓名、电话和问题，其余可不填。",
-    "ta": "只需留下姓名、电话和问题，其余可不填。"
-  },
-  "🫁 Respiratory": {
-    "zh": "🫁 Respiratory",
-    "bm": "🫁 Respiratory",
-    "ta": "🫁 Respiratory"
-  },
-  "Click": {
-    "zh": "Click",
-    "bm": "Click",
-    "ta": "Click"
-  },
-  "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。": {
-    "zh": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。",
-    "bm": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。",
-    "ta": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。"
-  },
-  "Compress to this audio-visual beat": {
-    "zh": "Compress to this audio-visual beat",
-    "bm": "Compress to this audio-visual beat",
-    "ta": "Compress to this audio-visual beat"
-  },
-  "Step-by-Step Training": {
-    "zh": "Step-by-Step Training",
-    "bm": "Step-by-Step Training",
-    "ta": "Step-by-Step Training"
-  },
-  "Care": {
-    "zh": "Care",
-    "bm": "Care",
-    "ta": "Care"
-  },
-  "Male Nurse / Caregiver": {
-    "zh": "Male Nurse / Caregiver",
-    "bm": "Male Nurse / Caregiver",
-    "ta": "Male Nurse / Caregiver"
-  },
-  "🛡️ PDPA Act 2010 Privacy & Data Protection": {
-    "zh": "🛡️ PDPA Act 2010 Privacy & Data Protection",
-    "bm": "🛡️ PDPA Act 2010 Privacy & Data Protection",
-    "ta": "🛡️ PDPA Act 2010 Privacy & Data Protection"
-  },
-  "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.": {
-    "zh": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.",
-    "bm": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.",
-    "ta": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care."
-  },
-  "Saved only on this phone. We never see it until you send the message.": {
-    "zh": "Saved only on this phone. We never see it until you send the message.",
-    "bm": "Saved only on this phone. We never see it until you send the message.",
-    "ta": "Saved only on this phone. We never see it until you send the message."
-  },
-  "Where": {
-    "zh": "Where",
-    "bm": "Where",
-    "ta": "Where"
-  },
-  "🍼 Ryle's Tube / NG Tube": {
-    "zh": "🍼 Ryle's Tube / NG Tube",
-    "bm": "🍼 Ryle's Tube / NG Tube",
-    "ta": "🍼 Ryle's Tube / NG Tube"
-  },
-  "3. Individualized Care Roadmap": {
-    "zh": "3. Individualized Care Roadmap",
-    "bm": "3. Individualized Care Roadmap",
-    "ta": "3. Individualized Care Roadmap"
-  },
-  "Palliative Care": {
-    "zh": "Palliative Care",
-    "bm": "Palliative Care",
-    "ta": "Palliative Care"
-  },
-  "Book via WhatsApp · 预约": {
-    "zh": "Book via WhatsApp · 预约",
-    "bm": "Book via WhatsApp · 预约",
-    "ta": "Book via WhatsApp · 预约"
-  },
-  "⚡ Install": {
-    "zh": "⚡ Install",
-    "bm": "⚡ Install",
-    "ta": "⚡ Install"
-  },
-  "Our Mission": {
-    "zh": "Our Mission",
-    "bm": "Our Mission",
-    "ta": "Our Mission"
-  },
-  "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:": {
-    "zh": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:",
-    "bm": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:",
-    "ta": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:"
-  },
-  "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.": {
-    "zh": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.",
-    "bm": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.",
-    "ta": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland."
-  },
-  "Role": {
-    "zh": "Role",
-    "bm": "Role",
-    "ta": "Role"
-  },
-  "Announcements & Nurse Recruitment": {
-    "zh": "Announcements & Nurse Recruitment",
-    "bm": "Announcements & Nurse Recruitment",
-    "ta": "Announcements & Nurse Recruitment"
-  },
-  "Loading MEWS Scoring Chart…": {
-    "zh": "Loading MEWS Scoring Chart…",
-    "bm": "Loading MEWS Scoring Chart…",
-    "ta": "Loading MEWS Scoring Chart…"
-  },
-  "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.": {
-    "zh": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.",
-    "bm": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.",
-    "ta": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination."
-  },
-  "We are a home nursing service, not an ambulance. For urgent": {
-    "zh": "We are a home nursing service, not an ambulance. For urgent",
-    "bm": "We are a home nursing service, not an ambulance. For urgent",
-    "ta": "We are a home nursing service, not an ambulance. For urgent"
-  },
-  "♿ Transfer & Hygiene": {
-    "zh": "♿ Transfer & Hygiene",
-    "bm": "♿ Transfer & Hygiene",
-    "ta": "♿ Transfer & Hygiene"
-  },
-  "Just leave your name, phone and question — everything else is optional.": {
-    "zh": "Just leave your name, phone and question — everything else is optional.",
-    "bm": "Just leave your name, phone and question — everything else is optional.",
-    "ta": "Just leave your name, phone and question — everything else is optional."
-  },
-  "Just asking": {
-    "zh": "Just asking",
-    "bm": "Just asking",
-    "ta": "Just asking"
-  },
-  "JULY 2026 · HOSPITAL PARTNERSHIP": {
-    "zh": "JULY 2026 · HOSPITAL PARTNERSHIP",
-    "bm": "JULY 2026 · HOSPITAL PARTNERSHIP",
-    "ta": "JULY 2026 · HOSPITAL PARTNERSHIP"
-  },
-  "🔔 Test Offline Alert": {
-    "zh": "🔔 Test Offline Alert",
-    "bm": "🔔 Test Offline Alert",
-    "ta": "🔔 Test Offline Alert"
-  },
-  "24/7 Emergency (ETD):": {
-    "zh": "24/7 Emergency (ETD):",
-    "bm": "24/7 Emergency (ETD):",
-    "ta": "24/7 Emergency (ETD):"
-  },
-  "选择上门时间": {
-    "zh": "选择上门时间",
-    "bm": "选择上门时间",
-    "ta": "选择上门时间"
-  },
-  "RM 40 – RM 70 / mo": {
-    "zh": "RM 40 – RM 70 / mo",
-    "bm": "RM 40 – RM 70 / mo",
-    "ta": "RM 40 – RM 70 / mo"
-  },
-  "Sign Out": {
-    "zh": "Sign Out",
-    "bm": "Sign Out",
-    "ta": "Sign Out"
-  },
-  "Not selected yet": {
-    "zh": "Not selected yet",
-    "bm": "Not selected yet",
-    "ta": "Not selected yet"
-  },
-  "Call": {
-    "zh": "Call",
-    "bm": "Call",
-    "ta": "Call"
-  },
-  "2. Uncompromising Nursing Fundamentals": {
-    "zh": "2. Uncompromising Nursing Fundamentals",
-    "bm": "2. Uncompromising Nursing Fundamentals",
-    "ta": "2. Uncompromising Nursing Fundamentals"
-  },
-  "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing": {
-    "zh": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing",
-    "bm": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing",
-    "ta": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing"
-  },
-  "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.": {
-    "zh": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.",
-    "bm": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.",
-    "ta": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support."
-  },
-  "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.": {
-    "zh": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.",
-    "bm": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.",
-    "ta": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts."
-  },
-  "01X-XXXX XXX": {
-    "zh": "01X-XXXX XXX",
-    "bm": "01X-XXXX XXX",
-    "ta": "01X-XXXX XXX"
-  },
-  "06:00, 15:00, 22:00 (8-hour intervals)": {
-    "zh": "06:00, 15:00, 22:00 (8-hour intervals)",
-    "bm": "06:00, 15:00, 22:00 (8-hour intervals)",
-    "ta": "06:00, 15:00, 22:00 (8-hour intervals)"
-  },
-  "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.": {
-    "zh": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.",
-    "bm": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.",
-    "ta": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household."
-  },
-  "💻 Windows .EXE (2.1 MB)": {
-    "zh": "💻 Windows .EXE (2.1 MB)",
-    "bm": "💻 Windows .EXE (2.1 MB)",
-    "ta": "💻 Windows .EXE (2.1 MB)"
-  },
-  "☎ 04-228 3991": {
-    "zh": "☎ 04-228 3991",
-    "bm": "☎ 04-228 3991",
-    "ta": "☎ 04-228 3991"
-  },
-  "在册医护人员": {
-    "zh": "在册医护人员",
-    "bm": "在册医护人员",
-    "ta": "在册医护人员"
-  },
-  "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.": {
-    "zh": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.",
-    "bm": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.",
-    "ta": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance."
-  },
-  "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.": {
-    "zh": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.",
-    "bm": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.",
-    "ta": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing."
-  },
-  "扫码分享": {
-    "zh": "扫码分享",
-    "bm": "扫码分享",
-    "ta": "扫码分享"
-  },
-  "👤 Patients & Families (公众与家属)": {
-    "zh": "👤 Patients & Families (公众与家属)",
-    "bm": "👤 Patients & Families (公众与家属)",
-    "ta": "👤 Patients & Families (公众与家属)"
-  },
-  "医护人员专属门户 (Staff Portal)": {
-    "zh": "医护人员专属门户 (Staff Portal)",
-    "bm": "医护人员专属门户 (Staff Portal)",
-    "ta": "医护人员专属门户 (Staff Portal)"
-  },
-  "Hospital / Specialist Clinic Escort · RM 150": {
-    "zh": "Hospital / Specialist Clinic Escort · RM 150",
-    "bm": "Hospital / Specialist Clinic Escort · RM 150",
-    "ta": "Hospital / Specialist Clinic Escort · RM 150"
-  },
-  "Welcome back": {
-    "zh": "Welcome back",
-    "bm": "Welcome back",
-    "ta": "Welcome back"
-  },
-  "Gov Hospital": {
-    "zh": "Gov Hospital",
-    "bm": "Gov Hospital",
-    "ta": "Gov Hospital"
-  },
-  "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.": {
-    "zh": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.",
-    "bm": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.",
-    "ta": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression."
-  },
-  "📞 Call 999 · 紧急救护": {
-    "zh": "📞 Call 999 · 紧急救护",
-    "bm": "📞 Call 999 · 紧急救护",
-    "ta": "📞 Call 999 · 紧急救护"
-  },
-  "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.": {
-    "zh": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.",
-    "bm": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.",
-    "ta": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors."
-  },
-  "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.": {
-    "zh": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.",
-    "bm": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.",
-    "ta": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care."
-  },
-  "Ambulance / Police / Bomba": {
-    "zh": "Ambulance / Police / Bomba",
-    "bm": "Ambulance / Police / Bomba",
-    "ta": "Ambulance / Police / Bomba"
-  },
-  "姓名": {
-    "zh": "姓名",
-    "bm": "姓名",
-    "ta": "姓名"
-  },
-  "☎ 04-382 7333": {
-    "zh": "☎ 04-382 7333",
-    "bm": "☎ 04-382 7333",
-    "ta": "☎ 04-382 7333"
-  },
-  "Where should we come?": {
-    "zh": "Where should we come?",
-    "bm": "Where should we come?",
-    "ta": "Where should we come?"
-  },
-  "Use my details · 填入资料": {
-    "zh": "Use my details · 填入资料",
-    "bm": "Use my details · 填入资料",
-    "ta": "Use my details · 填入资料"
-  },
-  "Hours": {
-    "zh": "Hours",
-    "bm": "Hours",
-    "ta": "Hours"
-  },
-  "← Back to Home": {
-    "zh": "← Back to Home",
-    "bm": "← Back to Home",
-    "ta": "← Back to Home"
-  },
-  "✓ Register Patient Account (注册账号)": {
-    "zh": "✓ Register Patient Account (注册账号)",
-    "bm": "✓ Register Patient Account (注册账号)",
-    "ta": "✓ Register Patient Account (注册账号)"
-  },
-  "Hospital Balik Pulau (HBP)": {
-    "zh": "Hospital Balik Pulau (HBP)",
-    "bm": "Hospital Balik Pulau (HBP)",
-    "ta": "Hospital Balik Pulau (HBP)"
-  },
-  "KPJ Penang Specialist Hospital": {
-    "zh": "KPJ Penang Specialist Hospital",
-    "bm": "KPJ Penang Specialist Hospital",
-    "ta": "KPJ Penang Specialist Hospital"
-  },
-  "RM 180 / mo": {
-    "zh": "RM 180 / mo",
-    "bm": "RM 180 / mo",
-    "ta": "RM 180 / mo"
-  },
-  "folder.": {
-    "zh": "folder.",
-    "bm": "folder.",
-    "ta": "folder."
-  },
-  "Forget me · 清除": {
-    "zh": "Forget me · 清除",
-    "bm": "Forget me · 清除",
-    "ta": "Forget me · 清除"
-  },
-  "at all times to prevent backflow.": {
-    "zh": "at all times to prevent backflow.",
-    "bm": "at all times to prevent backflow.",
-    "ta": "at all times to prevent backflow."
-  },
-  "Open the file from notifications or your": {
-    "zh": "Open the file from notifications or your",
-    "bm": "Open the file from notifications or your",
-    "ta": "Open the file from notifications or your"
-  },
-  "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.": {
-    "zh": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.",
-    "bm": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.",
-    "ta": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation."
-  },
-  "🩺 Monitoring": {
-    "zh": "🩺 Monitoring",
-    "bm": "🩺 Monitoring",
-    "ta": "🩺 Monitoring"
-  },
-  "🩺 Staff Sign-In": {
-    "zh": "🩺 Staff Sign-In",
-    "bm": "🩺 Staff Sign-In",
-    "ta": "🩺 Staff Sign-In"
-  },
-  "🚀 Open": {
-    "zh": "🚀 Open",
-    "bm": "🚀 Open",
-    "ta": "🚀 Open"
-  },
-  "Please choose a date.": {
-    "zh": "Please choose a date.",
-    "bm": "Please choose a date.",
-    "ta": "Please choose a date."
-  },
-  "公众与家属 (无需登录)": {
-    "zh": "公众与家属 (无需登录)",
-    "bm": "公众与家属 (无需登录)",
-    "ta": "公众与家属 (无需登录)"
-  },
-  "💧 Catheter (CBD) Care": {
-    "zh": "💧 Catheter (CBD) Care",
-    "bm": "💧 Catheter (CBD) Care",
-    "ta": "💧 Catheter (CBD) Care"
-  },
-  "Please enter your address.": {
-    "zh": "Please enter your address.",
-    "bm": "Please enter your address.",
-    "ta": "Please enter your address."
-  },
-  "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.": {
-    "zh": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.",
-    "bm": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.",
-    "ta": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway."
-  },
-  "：在 App 内输入个案编号（如": {
-    "zh": "：在 App 内输入个案编号（如",
-    "bm": "：在 App 内输入个案编号（如",
-    "ta": "：在 App 内输入个案编号（如"
-  },
-  "308, Macalister Road / Peel Avenue, 10450 George Town": {
-    "zh": "308, Macalister Road / Peel Avenue, 10450 George Town",
-    "bm": "308, Macalister Road / Peel Avenue, 10450 George Town",
-    "ta": "308, Macalister Road / Peel Avenue, 10450 George Town"
-  },
-  "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.": {
-    "zh": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.",
-    "bm": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.",
-    "ta": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks."
-  },
-  "Safe Ryle's / NG Tube Feeding": {
-    "zh": "Safe Ryle's / NG Tube Feeding",
-    "bm": "Safe Ryle's / NG Tube Feeding",
-    "ta": "Safe Ryle's / NG Tube Feeding"
-  },
-  "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.": {
-    "zh": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.",
-    "bm": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.",
-    "ta": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent."
-  },
-  "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。": {
-    "zh": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。",
-    "bm": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。",
-    "ta": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。"
-  },
-  "Empty drainage bag when 2/3 full, avoiding contact between tap and container.": {
-    "zh": "Empty drainage bag when 2/3 full, avoiding contact between tap and container.",
-    "bm": "Empty drainage bag when 2/3 full, avoiding contact between tap and container.",
-    "ta": "Empty drainage bag when 2/3 full, avoiding contact between tap and container."
-  },
-  "Bayan Lepas / Queensbay / Relau": {
-    "zh": "Bayan Lepas / Queensbay / Relau",
-    "bm": "Bayan Lepas / Queensbay / Relau",
-    "ta": "Bayan Lepas / Queensbay / Relau"
-  },
-  "Login Identifier": {
-    "zh": "Login Identifier",
-    "bm": "Login Identifier",
-    "ta": "Login Identifier"
-  },
-  "病人情况 / 备注（选填）": {
-    "zh": "病人情况 / 备注（选填）",
-    "bm": "病人情况 / 备注（选填）",
-    "ta": "病人情况 / 备注（选填）"
-  },
-  "The Guiding Principles Behind Every Home Visit": {
-    "zh": "The Guiding Principles Behind Every Home Visit",
-    "bm": "The Guiding Principles Behind Every Home Visit",
-    "ta": "The Guiding Principles Behind Every Home Visit"
-  },
-  "新会员注册": {
-    "zh": "新会员注册",
-    "bm": "新会员注册",
-    "ta": "新会员注册"
-  },
-  "定位针能让护士准确找到您家门口。": {
-    "zh": "定位针能让护士准确找到您家门口。",
-    "bm": "定位针能让护士准确找到您家门口。",
-    "ta": "定位针能让护士准确找到您家门口。"
-  },
-  "Our Vision": {
-    "zh": "Our Vision",
-    "bm": "Our Vision",
-    "ta": "Our Vision"
-  },
-  "Aseptic Wound Care & Dressing": {
-    "zh": "Aseptic Wound Care & Dressing",
-    "bm": "Aseptic Wound Care & Dressing",
-    "ta": "Aseptic Wound Care & Dressing"
-  },
-  "💊 Medication Administration Record (用药记录表)": {
-    "zh": "💊 Medication Administration Record (用药记录表)",
-    "bm": "💊 Medication Administration Record (用药记录表)",
-    "ta": "💊 Medication Administration Record (用药记录表)"
-  },
-  "◀ Prev": {
-    "zh": "◀ Prev",
-    "bm": "◀ Prev",
-    "ta": "◀ Prev"
-  },
-  "☎ 112": {
-    "zh": "☎ 112",
-    "bm": "☎ 112",
-    "ta": "☎ 112"
-  },
-  "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).": {
-    "zh": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).",
-    "bm": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).",
-    "ta": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes)."
-  },
-  "📝 Online Form": {
-    "zh": "📝 Online Form",
-    "bm": "📝 Online Form",
-    "ta": "📝 Online Form"
-  },
-  "☎ 04-222 5333": {
-    "zh": "☎ 04-222 5333",
-    "bm": "☎ 04-222 5333",
-    "ta": "☎ 04-222 5333"
-  },
-  "AUGUST 2026 · CLINICAL TECHNOLOGY": {
-    "zh": "AUGUST 2026 · CLINICAL TECHNOLOGY",
-    "bm": "AUGUST 2026 · CLINICAL TECHNOLOGY",
-    "ta": "AUGUST 2026 · CLINICAL TECHNOLOGY"
-  },
-  "已根据定位填写，请补上门牌号码。": {
-    "zh": "已根据定位填写，请补上门牌号码。",
-    "bm": "已根据定位填写，请补上门牌号码。",
-    "ta": "已根据定位填写，请补上门牌号码。"
-  },
-  "电话": {
-    "zh": "电话",
-    "bm": "电话",
-    "ta": "电话"
-  },
-  "07:00 or 12:00 (Morning / Midday)": {
-    "zh": "07:00 or 12:00 (Morning / Midday)",
-    "bm": "07:00 or 12:00 (Morning / Midday)",
-    "ta": "07:00 or 12:00 (Morning / Midday)"
-  },
-  "Digital Vital Signs & SpO2 Monitor": {
-    "zh": "Digital Vital Signs & SpO2 Monitor",
-    "bm": "Digital Vital Signs & SpO2 Monitor",
-    "ta": "Digital Vital Signs & SpO2 Monitor"
-  },
-  "Media, Clinical Resources & Emergency Hub": {
-    "zh": "Media, Clinical Resources & Emergency Hub",
-    "bm": "Media, Clinical Resources & Emergency Hub",
-    "ta": "Media, Clinical Resources & Emergency Hub"
-  },
-  "Address": {
-    "zh": "Address",
-    "bm": "Address",
-    "ta": "Address"
-  },
-  "v2.4 · 3.3 MB · Phones & Tablets · Direct Install": {
-    "zh": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install",
-    "bm": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install",
-    "ta": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install"
-  },
-  "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.": {
-    "zh": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.",
-    "bm": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.",
-    "ta": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts."
-  },
-  "2/3-Function Electric Hospital Bed": {
-    "zh": "2/3-Function Electric Hospital Bed",
-    "bm": "2/3-Function Electric Hospital Bed",
-    "ta": "2/3-Function Electric Hospital Bed"
-  },
-  "Equipment Title": {
-    "zh": "Equipment Title",
-    "bm": "Equipment Title",
-    "ta": "Equipment Title"
-  },
-  "Upload Document": {
-    "zh": "Upload Document",
-    "bm": "Upload Document",
-    "ta": "Upload Document"
-  },
-  "BM": {
-    "zh": "BM",
-    "bm": "BM",
-    "ta": "BM"
-  },
-  "应用。": {
-    "zh": "应用。",
-    "bm": "应用。",
-    "ta": "应用。"
-  },
-  "Clinical Services & Rates · 临床服务与透明收费": {
-    "zh": "Clinical Services & Rates · 临床服务与透明收费",
-    "bm": "Clinical Services & Rates · 临床服务与透明收费",
-    "ta": "Clinical Services & Rates · 临床服务与透明收费"
-  },
-  "Book a visit": {
-    "zh": "Book a visit",
-    "bm": "Book a visit",
-    "ta": "Book a visit"
-  },
-  "Please enter your name.": {
-    "zh": "Please enter your name.",
-    "bm": "Please enter your name.",
-    "ta": "Please enter your name."
-  },
-  "ASSURA NURSING · PDPA 2010 CONFIDENTIAL": {
-    "zh": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL",
-    "bm": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL",
-    "ta": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL"
-  },
-  "e.g. ASN-001 / admin@assuranursing.com": {
-    "zh": "e.g. ASN-001 / admin@assuranursing.com",
-    "bm": "e.g. ASN-001 / admin@assuranursing.com",
-    "ta": "e.g. ASN-001 / admin@assuranursing.com"
-  },
-  "St. John Ambulance (Penang)": {
-    "zh": "St. John Ambulance (Penang)",
-    "bm": "St. John Ambulance (Penang)",
-    "ta": "St. John Ambulance (Penang)"
-  },
-  "患者家属关联病历 (Case Link)": {
-    "zh": "患者家属关联病历 (Case Link)",
-    "bm": "患者家属关联病历 (Case Link)",
-    "ta": "患者家属关联病历 (Case Link)"
-  },
-  "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.": {
-    "zh": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.",
-    "bm": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.",
-    "ta": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking."
-  },
-  "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.": {
-    "zh": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.",
-    "bm": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.",
-    "ta": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers."
-  },
-  "The Hire Site (Join Our Team)": {
-    "zh": "The Hire Site (Join Our Team)",
-    "bm": "The Hire Site (Join Our Team)",
-    "ta": "The Hire Site (Join Our Team)"
-  },
-  "Female Nurse / Caregiver (女护士/女护理师)": {
-    "zh": "Female Nurse / Caregiver (女护士/女护理师)",
-    "bm": "Female Nurse / Caregiver (女护士/女护理师)",
-    "ta": "Female Nurse / Caregiver (女护士/女护理师)"
-  },
-  "Summary": {
-    "zh": "Summary",
-    "bm": "Summary",
-    "ta": "Summary"
-  },
-  "Nursing": {
-    "zh": "Nursing",
-    "bm": "Nursing",
-    "ta": "Nursing"
-  },
-  "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.": {
-    "zh": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.",
-    "bm": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.",
-    "ta": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails."
-  },
-  "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)": {
-    "zh": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)",
-    "bm": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)",
-    "ta": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)"
-  },
-  "ADL Assistance": {
-    "zh": "ADL Assistance",
-    "bm": "ADL Assistance",
-    "ta": "ADL Assistance"
-  },
-  "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah": {
-    "zh": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah",
-    "bm": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah",
-    "ta": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah"
-  },
-  "RM 60 – RM 100 / mo": {
-    "zh": "RM 60 – RM 100 / mo",
-    "bm": "RM 60 – RM 100 / mo",
-    "ta": "RM 60 – RM 100 / mo"
-  },
-  "Security PIN / Password (个人安全密码)": {
-    "zh": "Security PIN / Password (个人安全密码)",
-    "bm": "Security PIN / Password (个人安全密码)",
-    "ta": "Security PIN / Password (个人安全密码)"
-  },
-  "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价": {
-    "zh": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价",
-    "bm": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价",
-    "ta": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价"
-  },
-  "Equipment description.": {
-    "zh": "Equipment description.",
-    "bm": "Equipment description.",
-    "ta": "Equipment description."
-  },
-  "Sister Tan (Supervisor)": {
-    "zh": "Sister Tan (Supervisor)",
-    "bm": "Sister Tan (Supervisor)",
-    "ta": "Sister Tan (Supervisor)"
-  },
-  "custom": {
-    "zh": "custom",
-    "bm": "custom",
-    "ta": "custom"
-  },
-  "🩺 Monitoring & Kits": {
-    "zh": "🩺 Monitoring & Kits",
-    "bm": "🩺 Monitoring & Kits",
-    "ta": "🩺 Monitoring & Kits"
-  },
-  "Inquire & Order via WhatsApp": {
-    "zh": "Inquire & Order via WhatsApp",
-    "bm": "Inquire & Order via WhatsApp",
-    "ta": "Inquire & Order via WhatsApp"
-  },
-  "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。": {
-    "zh": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。",
-    "bm": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。",
-    "ta": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。"
-  },
-  "Serving Bukit Mertajam & nearby areas": {
-    "zh": "Serving Bukit Mertajam & nearby areas",
-    "bm": "Serving Bukit Mertajam & nearby areas",
-    "ta": "Serving Bukit Mertajam & nearby areas"
-  },
-  "⏱️": {
-    "zh": "⏱️",
-    "bm": "⏱️",
-    "ta": "⏱️"
-  },
-  "数智记录·清晰交接：": {
-    "zh": "数智记录·清晰交接：",
-    "bm": "数智记录·清晰交接：",
-    "ta": "数智记录·清晰交接："
-  },
-  "术后护理与康复照顾": {
-    "zh": "术后护理与康复照顾",
-    "bm": "术后护理与康复照顾",
-    "ta": "术后护理与康复照顾"
-  },
-  "Enter your 4-8 digit PIN": {
-    "zh": "Enter your 4-8 digit PIN",
-    "bm": "Enter your 4-8 digit PIN",
-    "ta": "Enter your 4-8 digit PIN"
-  },
-  "Download Assura Nursing (.exe)": {
-    "zh": "Download Assura Nursing (.exe)",
-    "bm": "Download Assura Nursing (.exe)",
-    "ta": "Download Assura Nursing (.exe)"
-  },
-  "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.": {
-    "zh": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.",
-    "bm": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.",
-    "ta": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover."
-  },
-  "Jalan Residensi, 10990 George Town, Penang": {
-    "zh": "Jalan Residensi, 10990 George Town, Penang",
-    "bm": "Jalan Residensi, 10990 George Town, Penang",
-    "ta": "Jalan Residensi, 10990 George Town, Penang"
-  },
-  "Clinical Points & Safety Checklist:": {
-    "zh": "Clinical Points & Safety Checklist:",
-    "bm": "Clinical Points & Safety Checklist:",
-    "ta": "Clinical Points & Safety Checklist:"
-  },
-  "Click to view rates for Elderly & Bedridden Care": {
-    "zh": "Click to view rates for Elderly & Bedridden Care",
-    "bm": "Click to view rates for Elderly & Bedridden Care",
-    "ta": "Click to view rates for Elderly & Bedridden Care"
-  },
-  "Estimated Total Before Consumables": {
-    "zh": "Estimated Total Before Consumables",
-    "bm": "Estimated Total Before Consumables",
-    "ta": "Estimated Total Before Consumables"
-  },
-  "日期": {
-    "zh": "日期",
-    "bm": "日期",
-    "ta": "日期"
-  },
-  "supervisor@assuranursing.com": {
-    "zh": "supervisor@assuranursing.com",
-    "bm": "supervisor@assuranursing.com",
-    "ta": "supervisor@assuranursing.com"
-  },
-  "Assura Nursing App · 官方手机应用": {
-    "zh": "Assura Nursing App · 官方手机应用",
-    "bm": "Assura Nursing App · 官方手机应用",
-    "ta": "Assura Nursing App · 官方手机应用"
-  },
-  "🫁 Respiratory & Airway": {
-    "zh": "🫁 Respiratory & Airway",
-    "bm": "🫁 Respiratory & Airway",
-    "ta": "🫁 Respiratory & Airway"
-  },
-  "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.": {
-    "zh": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.",
-    "bm": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.",
-    "ta": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members."
-  },
-  "Elderly Care & Stroke": {
-    "zh": "Elderly Care & Stroke",
-    "bm": "Elderly Care & Stroke",
-    "ta": "Elderly Care & Stroke"
-  },
-  "RM 80 – RM 140 / mo": {
-    "zh": "RM 80 – RM 140 / mo",
-    "bm": "RM 80 – RM 140 / mo",
-    "ta": "RM 80 – RM 140 / mo"
-  },
-  "🏥 Penang Mainland Hospitals (Seberang Perai)": {
-    "zh": "🏥 Penang Mainland Hospitals (Seberang Perai)",
-    "bm": "🏥 Penang Mainland Hospitals (Seberang Perai)",
-    "ta": "🏥 Penang Mainland Hospitals (Seberang Perai)"
-  },
-  "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。": {
-    "zh": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。",
-    "bm": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。",
-    "ta": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。"
-  },
-  "24/7 Emergency / Line:": {
-    "zh": "24/7 Emergency / Line:",
-    "bm": "24/7 Emergency / Line:",
-    "ta": "24/7 Emergency / Line:"
-  },
-  "Georgetown / Jelutong / Pulau Tikus": {
-    "zh": "Georgetown / Jelutong / Pulau Tikus",
-    "bm": "Georgetown / Jelutong / Pulau Tikus",
-    "ta": "Georgetown / Jelutong / Pulau Tikus"
-  },
-  "🔄 Reset Demo Database": {
-    "zh": "🔄 Reset Demo Database",
-    "bm": "🔄 Reset Demo Database",
-    "ta": "🔄 Reset Demo Database"
-  },
-  "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.": {
-    "zh": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.",
-    "bm": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.",
-    "ta": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang."
-  },
-  "All Equipment": {
-    "zh": "All Equipment",
-    "bm": "All Equipment",
-    "ta": "All Equipment"
-  },
-  "🎬 First-Time App User Guide & Memo": {
-    "zh": "🎬 First-Time App User Guide & Memo",
-    "bm": "🎬 First-Time App User Guide & Memo",
-    "ta": "🎬 First-Time App User Guide & Memo"
-  },
-  "We believe effective home care is a balance of two essential skills:": {
-    "zh": "We believe effective home care is a balance of two essential skills:",
-    "bm": "We believe effective home care is a balance of two essential skills:",
-    "ta": "We believe effective home care is a balance of two essential skills:"
-  },
-  "nursing": {
-    "zh": "nursing",
-    "bm": "nursing",
-    "ta": "nursing"
-  },
-  "Step 1: Public Open Access (公众免密使用)": {
-    "zh": "Step 1: Public Open Access (公众免密使用)",
-    "bm": "Step 1: Public Open Access (公众免密使用)",
-    "ta": "Step 1: Public Open Access (公众免密使用)"
-  },
-  "Purchase Reference": {
-    "zh": "Purchase Reference",
-    "bm": "Purchase Reference",
-    "ta": "Purchase Reference"
-  },
-  "After this page is published, install it from your browser for faster bookings.": {
-    "zh": "After this page is published, install it from your browser for faster bookings.",
-    "bm": "After this page is published, install it from your browser for faster bookings.",
-    "ta": "After this page is published, install it from your browser for faster bookings."
-  },
-  "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.": {
-    "zh": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.",
-    "bm": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.",
-    "ta": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily."
-  },
-  "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)": {
-    "zh": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)",
-    "bm": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)",
-    "ta": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)"
-  },
-  "🛡️ Registered Nurse (LJM)": {
-    "zh": "🛡️ Registered Nurse (LJM)",
-    "bm": "🛡️ Registered Nurse (LJM)",
-    "ta": "🛡️ Registered Nurse (LJM)"
-  },
-  "🛏️ Mobility & Beds": {
-    "zh": "🛏️ Mobility & Beds",
-    "bm": "🛏️ Mobility & Beds",
-    "ta": "🛏️ Mobility & Beds"
-  },
-  "Step 1: Check Responsiveness": {
-    "zh": "Step 1: Check Responsiveness",
-    "bm": "Step 1: Check Responsiveness",
-    "ta": "Step 1: Check Responsiveness"
-  },
-  "优先安排男护士 (力气大·翻身/男导尿)": {
-    "zh": "优先安排男护士 (力气大·翻身/男导尿)",
-    "bm": "优先安排男护士 (力气大·翻身/男导尿)",
-    "ta": "优先安排男护士 (力气大·翻身/男导尿)"
-  },
-  "Please choose a service and complete the required details.": {
-    "zh": "Please choose a service and complete the required details.",
-    "bm": "Please choose a service and complete the required details.",
-    "ta": "Please choose a service and complete the required details."
-  },
-  "LJM Registered (SRN)": {
-    "zh": "LJM Registered (SRN)",
-    "bm": "LJM Registered (SRN)",
-    "ta": "LJM Registered (SRN)"
-  },
-  "Open Clinical Portal": {
-    "zh": "Open Clinical Portal",
-    "bm": "Open Clinical Portal",
-    "ta": "Open Clinical Portal"
-  },
-  "RM 2,500": {
-    "zh": "RM 2,500",
-    "bm": "RM 2,500",
-    "ta": "RM 2,500"
-  },
-  "Preferred visiting time": {
-    "zh": "Preferred visiting time",
-    "bm": "Preferred visiting time",
-    "ta": "Preferred visiting time"
-  },
-  "3. Push Hard & Fast:": {
-    "zh": "3. Push Hard & Fast:",
-    "bm": "3. Push Hard & Fast:",
-    "ta": "3. Push Hard & Fast:"
-  },
-  "Visit": {
-    "zh": "Visit",
-    "bm": "Visit",
-    "ta": "Visit"
-  },
-  "Simpang Ampat / Juru / Batu Kawan": {
-    "zh": "Simpang Ampat / Juru / Batu Kawan",
-    "bm": "Simpang Ampat / Juru / Batu Kawan",
-    "ta": "Simpang Ampat / Juru / Batu Kawan"
-  },
-  "☎ 04-222 5222": {
-    "zh": "☎ 04-222 5222",
-    "bm": "☎ 04-222 5222",
-    "ta": "☎ 04-222 5222"
-  },
-  "Public:": {
-    "zh": "Public:",
-    "bm": "Public:",
-    "ta": "Public:"
-  },
-  "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。": {
-    "zh": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。",
-    "bm": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。",
-    "ta": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。"
-  },
-  "Online": {
-    "zh": "Online",
-    "bm": "Online",
-    "ta": "Online"
-  },
-  "Mobile Phone Number (手机号码)": {
-    "zh": "Mobile Phone Number (手机号码)",
-    "bm": "Mobile Phone Number (手机号码)",
-    "ta": "Mobile Phone Number (手机号码)"
-  },
-  "伤口换药与护理": {
-    "zh": "伤口换药与护理",
-    "bm": "伤口换药与护理",
-    "ta": "伤口换药与护理"
-  },
-  "Penang Island & Mainland Fast Delivery": {
-    "zh": "Penang Island & Mainland Fast Delivery",
-    "bm": "Penang Island & Mainland Fast Delivery",
-    "ta": "Penang Island & Mainland Fast Delivery"
-  },
-  "Nibong Tebal / Jawi / Sungai Bakap": {
-    "zh": "Nibong Tebal / Jawi / Sungai Bakap",
-    "bm": "Nibong Tebal / Jawi / Sungai Bakap",
-    "ta": "Nibong Tebal / Jawi / Sungai Bakap"
-  },
-  "🩸 Wound Care & Infection Risk Minimization": {
-    "zh": "🩸 Wound Care & Infection Risk Minimization",
-    "bm": "🩸 Wound Care & Infection Risk Minimization",
-    "ta": "🩸 Wound Care & Infection Risk Minimization"
-  },
   "JUNE 2026 · EDUCATION & TRAINING": {
     "zh": "JUNE 2026 · EDUCATION & TRAINING",
     "bm": "JUNE 2026 · EDUCATION & TRAINING",
     "ta": "JUNE 2026 · EDUCATION & TRAINING"
-  },
-  "Staff ID Sign-in": {
-    "zh": "Staff ID Sign-in",
-    "bm": "Staff ID Sign-in",
-    "ta": "Staff ID Sign-in"
-  },
-  "Pantai Hospital Penang": {
-    "zh": "Pantai Hospital Penang",
-    "bm": "Pantai Hospital Penang",
-    "ta": "Pantai Hospital Penang"
-  },
-  "👀 Preview Sample Patient Chart (查看病历演示样本)": {
-    "zh": "👀 Preview Sample Patient Chart (查看病历演示样本)",
-    "bm": "👀 Preview Sample Patient Chart (查看病历演示样本)",
-    "ta": "👀 Preview Sample Patient Chart (查看病历演示样本)"
-  },
-  "🧪 Tube & Catheter Management": {
-    "zh": "🧪 Tube & Catheter Management",
-    "bm": "🧪 Tube & Catheter Management",
-    "ta": "🧪 Tube & Catheter Management"
-  },
-  "● Click steps to preview": {
-    "zh": "● Click steps to preview",
-    "bm": "● Click steps to preview",
-    "ta": "● Click steps to preview"
-  },
-  "e.g. 0124567890 or ASN-8821": {
-    "zh": "e.g. 0124567890 or ASN-8821",
-    "bm": "e.g. 0124567890 or ASN-8821",
-    "ta": "e.g. 0124567890 or ASN-8821"
-  },
-  "Need Professional Nurse Visit or Equipment in Penang?": {
-    "zh": "Need Professional Nurse Visit or Equipment in Penang?",
-    "bm": "Need Professional Nurse Visit or Equipment in Penang?",
-    "ta": "Need Professional Nurse Visit or Equipment in Penang?"
-  },
-  "Click to view rates for Wound Care": {
-    "zh": "Click to view rates for Wound Care",
-    "bm": "Click to view rates for Wound Care",
-    "ta": "Click to view rates for Wound Care"
-  },
-  "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.": {
-    "zh": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.",
-    "bm": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.",
-    "ta": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores."
-  },
-  "Opens WhatsApp with your booking details filled in — just press send.": {
-    "zh": "Opens WhatsApp with your booking details filled in — just press send.",
-    "bm": "Opens WhatsApp with your booking details filled in — just press send.",
-    "ta": "Opens WhatsApp with your booking details filled in — just press send."
-  },
-  "Up to 25 km": {
-    "zh": "Up to 25 km",
-    "bm": "Up to 25 km",
-    "ta": "Up to 25 km"
-  },
-  "Downloads": {
-    "zh": "Downloads",
-    "bm": "Downloads",
-    "ta": "Downloads"
-  },
-  "Name": {
-    "zh": "Name",
-    "bm": "Name",
-    "ta": "Name"
-  },
-  "EN": {
-    "zh": "EN",
-    "bm": "EN",
-    "ta": "EN"
-  },
-  "Adapting to the Home, Upholding the Fundamentals": {
-    "zh": "Adapting to the Home, Upholding the Fundamentals",
-    "bm": "Adapting to the Home, Upholding the Fundamentals",
-    "ta": "Adapting to the Home, Upholding the Fundamentals"
-  },
-  "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.": {
-    "zh": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.",
-    "bm": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.",
-    "ta": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring."
-  },
-  "居家护理预约 · 专业护士上门": {
-    "zh": "居家护理预约 · 专业护士上门",
-    "bm": "居家护理预约 · 专业护士上门",
-    "ta": "居家护理预约 · 专业护士上门"
-  },
-  "Post-Operative Care": {
-    "zh": "Post-Operative Care",
-    "bm": "Post-Operative Care",
-    "ta": "Post-Operative Care"
-  },
-  "Founder's Message · 创办人心声与初心": {
-    "zh": "Founder's Message · 创办人心声与初心",
-    "bm": "Founder's Message · 创办人心声与初心",
-    "ta": "Founder's Message · 创办人心声与初心"
-  },
-  "Estimated Rental": {
-    "zh": "Estimated Rental",
-    "bm": "Estimated Rental",
-    "ta": "Estimated Rental"
-  },
-  "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"": {
-    "zh": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"",
-    "bm": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"",
-    "ta": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\""
-  },
-  "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.": {
-    "zh": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.",
-    "bm": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.",
-    "ta": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media."
-  },
-  "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.": {
-    "zh": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.",
-    "bm": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.",
-    "ta": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil."
-  },
-  "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.": {
-    "zh": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.",
-    "bm": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.",
-    "ta": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring."
-  },
-  "量身定制·科学照护：": {
-    "zh": "量身定制·科学照护：",
-    "bm": "量身定制·科学照护：",
-    "ta": "量身定制·科学照护："
-  },
-  "v2.4 · 2.1 MB · PC & Workstations · Standalone": {
-    "zh": "v2.4 · 2.1 MB · PC & Workstations · Standalone",
-    "bm": "v2.4 · 2.1 MB · PC & Workstations · Standalone",
-    "ta": "v2.4 · 2.1 MB · PC & Workstations · Standalone"
-  },
-  "RM 120.00": {
-    "zh": "RM 120.00",
-    "bm": "RM 120.00",
-    "ta": "RM 120.00"
-  },
-  "注射 · 打点滴（输液）": {
-    "zh": "注射 · 打点滴（输液）",
-    "bm": "注射 · 打点滴（输液）",
-    "ta": "注射 · 打点滴（输液）"
-  },
-  "🖨 Print Summary": {
-    "zh": "🖨 Print Summary",
-    "bm": "🖨 Print Summary",
-    "ta": "🖨 Print Summary"
-  },
-  "Case Code or Phone ·": {
-    "zh": "Case Code or Phone ·",
-    "bm": "Case Code or Phone ·",
-    "ta": "Case Code or Phone ·"
-  },
-  "Pick a visiting time": {
-    "zh": "Pick a visiting time",
-    "bm": "Pick a visiting time",
-    "ta": "Pick a visiting time"
-  },
-  "Gleneagles Hospital Penang": {
-    "zh": "Gleneagles Hospital Penang",
-    "bm": "Gleneagles Hospital Penang",
-    "ta": "Gleneagles Hospital Penang"
-  },
-  "💊 Medication Sheet (用药记录)": {
-    "zh": "💊 Medication Sheet (用药记录)",
-    "bm": "💊 Medication Sheet (用药记录)",
-    "ta": "💊 Medication Sheet (用药记录)"
-  },
-  "Preferred date": {
-    "zh": "Preferred date",
-    "bm": "Preferred date",
-    "ta": "Preferred date"
-  },
-  "e.g. No 8, Taman Kota Permai, Bukit Mertajam": {
-    "zh": "e.g. No 8, Taman Kota Permai, Bukit Mertajam",
-    "bm": "e.g. No 8, Taman Kota Permai, Bukit Mertajam",
-    "ta": "e.g. No 8, Taman Kota Permai, Bukit Mertajam"
-  },
-  "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.": {
-    "zh": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.",
-    "bm": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.",
-    "ta": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports."
-  },
-  "Active Coordination (就近协调·迅速回复)": {
-    "zh": "Active Coordination (就近协调·迅速回复)",
-    "bm": "Active Coordination (就近协调·迅速回复)",
-    "ta": "Active Coordination (就近协调·迅速回复)"
-  },
-  "Patient & Family Care Guides": {
-    "zh": "Patient & Family Care Guides",
-    "bm": "Patient & Family Care Guides",
-    "ta": "Patient & Family Care Guides"
-  },
-  "Install app · 安装应用": {
-    "zh": "Install app · 安装应用",
-    "bm": "Install app · 安装应用",
-    "ta": "Install app · 安装应用"
-  },
-  "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)": {
-    "zh": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)",
-    "bm": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)",
-    "ta": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)"
-  },
-  "Stop Feeding Immediately If:": {
-    "zh": "Stop Feeding Immediately If:",
-    "bm": "Stop Feeding Immediately If:",
-    "ta": "Stop Feeding Immediately If:"
-  },
-  "below bladder level": {
-    "zh": "below bladder level",
-    "bm": "below bladder level",
-    "ta": "below bladder level"
-  },
-  "General Line:": {
-    "zh": "General Line:",
-    "bm": "General Line:",
-    "ta": "General Line:"
-  },
-  "☎ 04-228 8222": {
-    "zh": "☎ 04-228 8222",
-    "bm": "☎ 04-228 8222",
-    "ta": "☎ 04-228 8222"
-  },
-  "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.": {
-    "zh": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.",
-    "bm": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.",
-    "ta": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders."
-  },
-  "RM 15 – RM 45 / pack": {
-    "zh": "RM 15 – RM 45 / pack",
-    "bm": "RM 15 – RM 45 / pack",
-    "ta": "RM 15 – RM 45 / pack"
-  },
-  "WhatsApp Consultation": {
-    "zh": "WhatsApp Consultation",
-    "bm": "WhatsApp Consultation",
-    "ta": "WhatsApp Consultation"
-  },
-  "只想咨询": {
-    "zh": "只想咨询",
-    "bm": "只想咨询",
-    "ta": "只想咨询"
-  },
-  "Download Assura Nursing App · Android APK & Windows Desktop": {
-    "zh": "Download Assura Nursing App · Android APK & Windows Desktop",
-    "bm": "Download Assura Nursing App · Android APK & Windows Desktop",
-    "ta": "Download Assura Nursing App · Android APK & Windows Desktop"
-  },
-  "↑ Back to the form · 返回表格": {
-    "zh": "↑ Back to the form · 返回表格",
-    "bm": "↑ Back to the form · 返回表格",
-    "ta": "↑ Back to the form · 返回表格"
-  },
-  ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。": {
-    "zh": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。",
-    "bm": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。",
-    "ta": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。"
-  },
-  "☎ 012-206 4868": {
-    "zh": "☎ 012-206 4868",
-    "bm": "☎ 012-206 4868",
-    "ta": "☎ 012-206 4868"
-  },
-  "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit": {
-    "zh": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit",
-    "bm": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit",
-    "ta": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit"
-  },
-  "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.": {
-    "zh": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.",
-    "bm": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.",
-    "ta": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe."
-  },
-  "Tap": {
-    "zh": "Tap",
-    "bm": "Tap",
-    "ta": "Tap"
-  },
-  "Any (No preference / 均可)": {
-    "zh": "Any (No preference / 均可)",
-    "bm": "Any (No preference / 均可)",
-    "ta": "Any (No preference / 均可)"
-  },
-  "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.": {
-    "zh": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.",
-    "bm": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.",
-    "ta": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited."
-  },
-  "Please choose a time.": {
-    "zh": "Please choose a time.",
-    "bm": "Please choose a time.",
-    "ta": "Please choose a time."
-  },
-  "Do Not Crush:": {
-    "zh": "Do Not Crush:",
-    "bm": "Do Not Crush:",
-    "ta": "Do Not Crush:"
-  },
-  "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.": {
-    "zh": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.",
-    "bm": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.",
-    "ta": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat."
-  },
-  "Step-by-Step Practical Guidelines": {
-    "zh": "Step-by-Step Practical Guidelines",
-    "bm": "Step-by-Step Practical Guidelines",
-    "ta": "Step-by-Step Practical Guidelines"
-  },
-  "Pin to Taskbar or Desktop for 1-click clinical workstation access.": {
-    "zh": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
-    "bm": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
-    "ta": "Pin to Taskbar or Desktop for 1-click clinical workstation access."
-  },
-  "同一个 App 所有人通用": {
-    "zh": "同一个 App 所有人通用",
-    "bm": "同一个 App 所有人通用",
-    "ta": "同一个 App 所有人通用"
-  },
-  "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).": {
-    "zh": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).",
-    "bm": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).",
-    "ta": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral)."
-  },
-  "1. Check & Call:": {
-    "zh": "1. Check & Call:",
-    "bm": "1. Check & Call:",
-    "ta": "1. Check & Call:"
-  },
-  "🎬 Watch Guide Video & Read Memo": {
-    "zh": "🎬 Watch Guide Video & Read Memo",
-    "bm": "🎬 Watch Guide Video & Read Memo",
-    "ta": "🎬 Watch Guide Video & Read Memo"
-  },
-  "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.": {
-    "zh": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.",
-    "bm": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.",
-    "ta": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention."
-  },
-  "：公众、患者、家属与注册护士均下载同一款": {
-    "zh": "：公众、患者、家属与注册护士均下载同一款",
-    "bm": "：公众、患者、家属与注册护士均下载同一款",
-    "ta": "：公众、患者、家属与注册护士均下载同一款"
-  },
-  "🏥 Penang Island Hospitals (Government & Private)": {
-    "zh": "🏥 Penang Island Hospitals (Government & Private)",
-    "bm": "🏥 Penang Island Hospitals (Government & Private)",
-    "ta": "🏥 Penang Island Hospitals (Government & Private)"
-  },
-  "to save": {
-    "zh": "to save",
-    "bm": "to save",
-    "ta": "to save"
-  },
-  "Bed-Bound Patient Care": {
-    "zh": "Bed-Bound Patient Care",
-    "bm": "Bed-Bound Patient Care",
-    "ta": "Bed-Bound Patient Care"
-  },
-  "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"": {
-    "zh": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"",
-    "bm": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"",
-    "ta": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\""
-  },
-  "☎ 04-238 8888": {
-    "zh": "☎ 04-238 8888",
-    "bm": "☎ 04-238 8888",
-    "ta": "☎ 04-238 8888"
-  },
-  "WhatsApp": {
-    "zh": "WhatsApp",
-    "bm": "WhatsApp",
-    "ta": "WhatsApp"
-  },
-  "时间": {
-    "zh": "时间",
-    "bm": "时间",
-    "ta": "时间"
-  },
-  "🛡️ PDPA Privacy & Consent": {
-    "zh": "🛡️ PDPA Privacy & Consent",
-    "bm": "🛡️ PDPA Privacy & Consent",
-    "ta": "🛡️ PDPA Privacy & Consent"
-  },
-  "🏥 Hospital Escort & Transfer": {
-    "zh": "🏥 Hospital Escort & Transfer",
-    "bm": "🏥 Hospital Escort & Transfer",
-    "ta": "🏥 Hospital Escort & Transfer"
-  },
-  "🚨 24/7 Hospital Emergency GPS": {
-    "zh": "🚨 24/7 Hospital Emergency GPS",
-    "bm": "🚨 24/7 Hospital Emergency GPS",
-    "ta": "🚨 24/7 Hospital Emergency GPS"
-  },
-  "Standalone portable application — no complex installation needed.": {
-    "zh": "Standalone portable application — no complex installation needed.",
-    "bm": "Standalone portable application — no complex installation needed.",
-    "ta": "Standalone portable application — no complex installation needed."
-  },
-  "06:00, 12:00, 18:00, 22:00 (6-hour intervals)": {
-    "zh": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)",
-    "bm": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)",
-    "ta": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)"
-  },
-  "v2.4 · Android APK · Windows EXE · Web PWA": {
-    "zh": "v2.4 · Android APK · Windows EXE · Web PWA",
-    "bm": "v2.4 · Android APK · Windows EXE · Web PWA",
-    "ta": "v2.4 · Android APK · Windows EXE · Web PWA"
-  },
-  "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.": {
-    "zh": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.",
-    "bm": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.",
-    "ta": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes."
-  },
-  "患者与家属": {
-    "zh": "患者与家属",
-    "bm": "患者与家属",
-    "ta": "患者与家属"
-  },
-  "Staff ID Login.": {
-    "zh": "Staff ID Login.",
-    "bm": "Staff ID Login.",
-    "ta": "Staff ID Login."
-  },
-  "ASN-8821": {
-    "zh": "ASN-8821",
-    "bm": "ASN-8821",
-    "ta": "ASN-8821"
-  },
-  "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.": {
-    "zh": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.",
-    "bm": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.",
-    "ta": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe."
-  },
-  "恪守根本·降低感染风险：": {
-    "zh": "恪守根本·降低感染风险：",
-    "bm": "恪守根本·降低感染风险：",
-    "ta": "恪守根本·降低感染风险："
-  },
-  "e.g. Tan Ah Kow / Jason Tan": {
-    "zh": "e.g. Tan Ah Kow / Jason Tan",
-    "bm": "e.g. Tan Ah Kow / Jason Tan",
-    "ta": "e.g. Tan Ah Kow / Jason Tan"
-  },
-  "Urinary Catheter Change": {
-    "zh": "Urinary Catheter Change",
-    "bm": "Urinary Catheter Change",
-    "ta": "Urinary Catheter Change"
-  },
-  "Based in": {
-    "zh": "Based in",
-    "bm": "Based in",
-    "ta": "Based in"
-  },
-  "更换尿管（导尿管）": {
-    "zh": "更换尿管（导尿管）",
-    "bm": "更换尿管（导尿管）",
-    "ta": "更换尿管（导尿管）"
-  },
-  "admin@assuranursing.com": {
-    "zh": "admin@assuranursing.com",
-    "bm": "admin@assuranursing.com",
-    "ta": "admin@assuranursing.com"
-  },
-  "Alerts & Live Case Status": {
-    "zh": "Alerts & Live Case Status",
-    "bm": "Alerts & Live Case Status",
-    "ta": "Alerts & Live Case Status"
-  },
-  "Clinical Integrity (专业严谨)": {
-    "zh": "Clinical Integrity (专业严谨)",
-    "bm": "Clinical Integrity (专业严谨)",
-    "ta": "Clinical Integrity (专业严谨)"
-  },
-  "National Emergency Toll-Free": {
-    "zh": "National Emergency Toll-Free",
-    "bm": "National Emergency Toll-Free",
-    "ta": "National Emergency Toll-Free"
-  },
-  "End-of-Life Care": {
-    "zh": "End-of-Life Care",
-    "bm": "End-of-Life Care",
-    "ta": "End-of-Life Care"
-  },
-  "e.g. 0123456789": {
-    "zh": "e.g. 0123456789",
-    "bm": "e.g. 0123456789",
-    "ta": "e.g. 0123456789"
-  },
-  "🩹 Complex Wound Care": {
-    "zh": "🩹 Complex Wound Care",
-    "bm": "🩹 Complex Wound Care",
-    "ta": "🩹 Complex Wound Care"
-  },
-  "Clinical Alert:": {
-    "zh": "Clinical Alert:",
-    "bm": "Clinical Alert:",
-    "ta": "Clinical Alert:"
-  },
-  "Sterile Wound Dressing Pack (ANTT)": {
-    "zh": "Sterile Wound Dressing Pack (ANTT)",
-    "bm": "Sterile Wound Dressing Pack (ANTT)",
-    "ta": "Sterile Wound Dressing Pack (ANTT)"
-  },
-  "24/7 Emergency Care:": {
-    "zh": "24/7 Emergency Care:",
-    "bm": "24/7 Emergency Care:",
-    "ta": "24/7 Emergency Care:"
-  },
-  "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.": {
-    "zh": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.",
-    "bm": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.",
-    "ta": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation."
-  },
-  "⏰ OD (Once Daily):": {
-    "zh": "⏰ OD (Once Daily):",
-    "bm": "⏰ OD (Once Daily):",
-    "ta": "⏰ OD (Once Daily):"
-  },
-  "预约摘要 · Check this before you send. Nothing is sent until you tap the button.": {
-    "zh": "预约摘要 · Check this before you send. Nothing is sent until you tap the button.",
-    "bm": "预约摘要 · Check this before you send. Nothing is sent until you tap the button.",
-    "ta": "预约摘要 · Check this before you send. Nothing is sent until you tap the button."
-  },
-  "☎ 04-327 8888": {
-    "zh": "☎ 04-327 8888",
-    "bm": "☎ 04-327 8888",
-    "ta": "☎ 04-327 8888"
-  },
-  "If prompted with": {
-    "zh": "If prompted with",
-    "bm": "If prompted with",
-    "ta": "If prompted with"
-  },
-  "上门地址与联系方式": {
-    "zh": "上门地址与联系方式",
-    "bm": "上门地址与联系方式",
-    "ta": "上门地址与联系方式"
-  },
-  "Launch Web App": {
-    "zh": "启动网页应用",
-    "bm": "Buka Aplikasi Web",
-    "ta": "வலை செயலியைத் திறக்கவும்"
-  },
-  "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)": {
-    "zh": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)",
-    "bm": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)",
-    "ta": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)"
-  },
-  "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。": {
-    "zh": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。",
-    "bm": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。",
-    "ta": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。"
-  },
-  "Place supportive pillows between knees, under affected arm, and floating heels.": {
-    "zh": "Place supportive pillows between knees, under affected arm, and floating heels.",
-    "bm": "Place supportive pillows between knees, under affected arm, and floating heels.",
-    "ta": "Place supportive pillows between knees, under affected arm, and floating heels."
-  },
-  "☎ 04-222 9199": {
-    "zh": "☎ 04-222 9199",
-    "bm": "☎ 04-222 9199",
-    "ta": "☎ 04-222 9199"
-  },
-  "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求": {
-    "zh": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求",
-    "bm": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求",
-    "ta": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求"
-  },
-  "View Specifications & Advice →": {
-    "zh": "View Specifications & Advice →",
-    "bm": "View Specifications & Advice →",
-    "ta": "View Specifications & Advice →"
-  },
-  "Create 4-8 digit PIN": {
-    "zh": "Create 4-8 digit PIN",
-    "bm": "Create 4-8 digit PIN",
-    "ta": "Create 4-8 digit PIN"
-  },
-  "Electric Medical Suction Machine": {
-    "zh": "Electric Medical Suction Machine",
-    "bm": "Electric Medical Suction Machine",
-    "ta": "Electric Medical Suction Machine"
-  },
-  "🩺 Direct Staff Workspace Link (医护工作台通道) →": {
-    "zh": "🩺 Direct Staff Workspace Link (医护工作台通道) →",
-    "bm": "🩺 Direct Staff Workspace Link (医护工作台通道) →",
-    "ta": "🩺 Direct Staff Workspace Link (医护工作台通道) →"
-  },
-  "Malaysian Red Crescent (BSMM)": {
-    "zh": "Malaysian Red Crescent (BSMM)",
-    "bm": "Malaysian Red Crescent (BSMM)",
-    "ta": "Malaysian Red Crescent (BSMM)"
-  },
-  "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.": {
-    "zh": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.",
-    "bm": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.",
-    "ta": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now."
-  },
-  "📌 Official User Guide Memo (使用要点备忘):": {
-    "zh": "📌 Official User Guide Memo (使用要点备忘):",
-    "bm": "📌 Official User Guide Memo (使用要点备忘):",
-    "ta": "📌 Official User Guide Memo (使用要点备忘):"
-  },
-  "☎ 04-222 9111": {
-    "zh": "☎ 04-222 9111",
-    "bm": "☎ 04-222 9111",
-    "ta": "☎ 04-222 9111"
-  },
-  "）即可同步查看主治护士记录的生命体征图表与用药打卡。": {
-    "zh": "）即可同步查看主治护士记录的生命体征图表与用药打卡。",
-    "bm": "）即可同步查看主治护士记录的生命体征图表与用药打卡。",
-    "ta": "）即可同步查看主治护士记录的生命体征图表与用药打卡。"
-  },
-  "PIN": {
-    "zh": "PIN",
-    "bm": "PIN",
-    "ta": "PIN"
-  },
-  "Patient (Wound Care)": {
-    "zh": "Patient (Wound Care)",
-    "bm": "Patient (Wound Care)",
-    "ta": "Patient (Wound Care)"
-  },
-  "⚡ Estimate Rate": {
-    "zh": "⚡ Estimate Rate",
-    "bm": "⚡ Estimate Rate",
-    "ta": "⚡ Estimate Rate"
-  },
-  "☎ 04-548 6688": {
-    "zh": "☎ 04-548 6688",
-    "bm": "☎ 04-548 6688",
-    "ta": "☎ 04-548 6688"
-  },
-  "RM 120 – RM 200 / mo": {
-    "zh": "RM 120 – RM 200 / mo",
-    "bm": "RM 120 – RM 200 / mo",
-    "ta": "RM 120 – RM 200 / mo"
-  },
-  "RM 50 – RM 80 / mo": {
-    "zh": "RM 50 – RM 80 / mo",
-    "bm": "RM 50 – RM 80 / mo",
-    "ta": "RM 50 – RM 80 / mo"
-  },
-  "Status": {
-    "zh": "Status",
-    "bm": "Status",
-    "ta": "Status"
-  },
-  "地址": {
-    "zh": "地址",
-    "bm": "地址",
-    "ta": "地址"
-  },
-  "RM 180 – RM 320 / mo": {
-    "zh": "RM 180 – RM 320 / mo",
-    "bm": "RM 180 – RM 320 / mo",
-    "ta": "RM 180 – RM 320 / mo"
-  },
-  "⚠️": {
-    "zh": "⚠️",
-    "bm": "⚠️",
-    "ta": "⚠️"
-  },
-  "24/7 Disaster & Medical Emergency": {
-    "zh": "24/7 Disaster & Medical Emergency",
-    "bm": "24/7 Disaster & Medical Emergency",
-    "ta": "24/7 Disaster & Medical Emergency"
-  },
-  "Choose services": {
-    "zh": "Choose services",
-    "bm": "Choose services",
-    "ta": "Choose services"
-  },
-  "☎ 04-827 5684": {
-    "zh": "☎ 04-827 5684",
-    "bm": "☎ 04-827 5684",
-    "ta": "☎ 04-827 5684"
-  },
-  "Back to Home": {
-    "zh": "Back to Home",
-    "bm": "Back to Home",
-    "ta": "Back to Home"
-  },
-  "Male Nurse / Caregiver (男护士/男护理师)": {
-    "zh": "Male Nurse / Caregiver (男护士/男护理师)",
-    "bm": "Male Nurse / Caregiver (男护士/男护理师)",
-    "ta": "Male Nurse / Caregiver (男护士/男护理师)"
-  },
-  "💉 Medication & Injections": {
-    "zh": "💉 Medication & Injections",
-    "bm": "💉 Medication & Injections",
-    "ta": "💉 Medication & Injections"
-  },
-  "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250": {
-    "zh": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250",
-    "bm": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250",
-    "ta": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250"
-  },
-  "⏰ ON (Nightly):": {
-    "zh": "⏰ ON (Nightly):",
-    "bm": "⏰ ON (Nightly):",
-    "ta": "⏰ ON (Nightly):"
-  },
-  "Scan to share": {
-    "zh": "Scan to share",
-    "bm": "Scan to share",
-    "ta": "Scan to share"
-  },
-  "2. Position Hands:": {
-    "zh": "2. Position Hands:",
-    "bm": "2. Position Hands:",
-    "ta": "2. Position Hands:"
-  },
-  "Step 3: Staff Portal": {
-    "zh": "Step 3: Staff Portal",
-    "bm": "Step 3: Staff Portal",
-    "ta": "Step 3: Staff Portal"
-  },
-  "The pin is what gets the nurse to your gate — an address alone often stops at the street.": {
-    "zh": "The pin is what gets the nurse to your gate — an address alone often stops at the street.",
-    "bm": "The pin is what gets the nurse to your gate — an address alone often stops at the street.",
-    "ta": "The pin is what gets the nurse to your gate — an address alone often stops at the street."
-  },
-  "🎬 First-Time User Guide Video & Memo (首次使用指南)": {
-    "zh": "🎬 First-Time User Guide Video & Memo (首次使用指南)",
-    "bm": "🎬 First-Time User Guide Video & Memo (首次使用指南)",
-    "ta": "🎬 First-Time User Guide Video & Memo (首次使用指南)"
-  },
-  "资料只存于本手机，发送前我们不会看到。": {
-    "zh": "资料只存于本手机，发送前我们不会看到。",
-    "bm": "资料只存于本手机，发送前我们不会看到。",
-    "ta": "资料只存于本手机，发送前我们不会看到。"
-  },
-  "其他需求 · 欢迎询问": {
-    "zh": "其他需求 · 欢迎询问",
-    "bm": "其他需求 · 欢迎询问",
-    "ta": "其他需求 · 欢迎询问"
-  },
-  "Perform gentle peri-care twice daily with mild soap and clean warm water.": {
-    "zh": "Perform gentle peri-care twice daily with mild soap and clean warm water.",
-    "bm": "Perform gentle peri-care twice daily with mild soap and clean warm water.",
-    "ta": "Perform gentle peri-care twice daily with mild soap and clean warm water."
-  },
-  "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。": {
-    "zh": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。",
-    "bm": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。",
-    "ta": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。"
-  },
-  "Mobile Phone Emergency": {
-    "zh": "Mobile Phone Emergency",
-    "bm": "Mobile Phone Emergency",
-    "ta": "Mobile Phone Emergency"
-  },
-  "Rental:": {
-    "zh": "Rental:",
-    "bm": "Rental:",
-    "ta": "Rental:"
-  },
-  "Tanjung Bungah / Batu Ferringhi": {
-    "zh": "Tanjung Bungah / Batu Ferringhi",
-    "bm": "Tanjung Bungah / Batu Ferringhi",
-    "ta": "Tanjung Bungah / Batu Ferringhi"
-  },
-  "💬 Chat with Our Care Team (012-206 4868)": {
-    "zh": "💬 Chat with Our Care Team (012-206 4868)",
-    "bm": "💬 Chat with Our Care Team (012-206 4868)",
-    "ta": "💬 Chat with Our Care Team (012-206 4868)"
-  },
-  "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):": {
-    "zh": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):",
-    "bm": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):",
-    "ta": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):"
-  },
-  "Private Specialist": {
-    "zh": "Private Specialist",
-    "bm": "Private Specialist",
-    "ta": "Private Specialist"
-  },
-  "Phone": {
-    "zh": "Phone",
-    "bm": "Phone",
-    "ta": "Phone"
-  },
-  "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。": {
-    "zh": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。",
-    "bm": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。",
-    "ta": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。"
-  },
-  "❤️ Adult Hands-Only CPR & 110 BPM Metronome": {
-    "zh": "❤️ Adult Hands-Only CPR & 110 BPM Metronome",
-    "bm": "❤️ Adult Hands-Only CPR & 110 BPM Metronome",
-    "ta": "❤️ Adult Hands-Only CPR & 110 BPM Metronome"
-  },
-  "Your name": {
-    "zh": "Your name",
-    "bm": "Your name",
-    "ta": "Your name"
-  },
-  "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。": {
-    "zh": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。",
-    "bm": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。",
-    "ta": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。"
-  },
-  "How to Install Android APK:": {
-    "zh": "How to Install Android APK:",
-    "bm": "How to Install Android APK:",
-    "ta": "How to Install Android APK:"
-  },
-  "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.": {
-    "zh": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.",
-    "bm": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.",
-    "ta": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone."
-  },
-  "Call us · 拨打 012-206 4868": {
-    "zh": "Call us · 拨打 012-206 4868",
-    "bm": "Call us · 拨打 012-206 4868",
-    "ta": "Call us · 拨打 012-206 4868"
-  },
-  "24/7 Emergency Line:": {
-    "zh": "24/7 Emergency Line:",
-    "bm": "24/7 Emergency Line:",
-    "ta": "24/7 Emergency Line:"
-  },
-  "Home Nursing & Nurse Dispatch": {
-    "zh": "Home Nursing & Nurse Dispatch",
-    "bm": "Home Nursing & Nurse Dispatch",
-    "ta": "Home Nursing & Nurse Dispatch"
-  },
-  "Direct EXE Mirror": {
-    "zh": "直接下载 EXE 安装包",
-    "bm": "Muat Turun Terus EXE",
-    "ta": "நேரடி EXE பதிவிறக்கம்"
-  },
-  "ASN-002": {
-    "zh": "ASN-002",
-    "bm": "ASN-002",
-    "ta": "ASN-002"
-  },
-  "We travel": {
-    "zh": "We travel",
-    "bm": "We travel",
-    "ta": "We travel"
-  },
-  "uncompromising adherence to the core fundamentals of nursing care": {
-    "zh": "uncompromising adherence to the core fundamentals of nursing care",
-    "bm": "uncompromising adherence to the core fundamentals of nursing care",
-    "ta": "uncompromising adherence to the core fundamentals of nursing care"
-  },
-  "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.": {
-    "zh": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.",
-    "bm": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.",
-    "ta": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols."
-  },
-  "🏥 Hospital Acute Care Background": {
-    "zh": "🏥 Hospital Acute Care Background",
-    "bm": "🏥 Hospital Acute Care Background",
-    "ta": "🏥 Hospital Acute Care Background"
-  },
-  "Web PWA · Any Browser · No Installation": {
-    "zh": "Web PWA · Any Browser · No Installation",
-    "bm": "Web PWA · Any Browser · No Installation",
-    "ta": "Web PWA · Any Browser · No Installation"
-  },
-  "from your Downloads folder.": {
-    "zh": "from your Downloads folder.",
-    "bm": "from your Downloads folder.",
-    "ta": "from your Downloads folder."
-  },
-  "Transparent Rates (透明合理收费)": {
-    "zh": "Transparent Rates (透明合理收费)",
-    "bm": "Transparent Rates (透明合理收费)",
-    "ta": "Transparent Rates (透明合理收费)"
-  },
-  "Jalan Bagan 1, 13400 Butterworth, Penang": {
-    "zh": "Jalan Bagan 1, 13400 Butterworth, Penang",
-    "bm": "Jalan Bagan 1, 13400 Butterworth, Penang",
-    "ta": "Jalan Bagan 1, 13400 Butterworth, Penang"
-  },
-  "吴乃添": {
-    "zh": "吴乃添",
-    "bm": "吴乃添",
-    "ta": "吴乃添"
-  },
-  "Times": {
-    "zh": "Times",
-    "bm": "Times",
-    "ta": "Times"
-  },
-  "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.": {
-    "zh": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.",
-    "bm": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.",
-    "ta": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top."
-  },
-  "医护工号登录": {
-    "zh": "医护工号登录",
-    "bm": "医护工号登录",
-    "ta": "医护工号登录"
-  },
-  "Caregiver Tip:": {
-    "zh": "Caregiver Tip:",
-    "bm": "Caregiver Tip:",
-    "ta": "Caregiver Tip:"
-  },
-  "预约上门": {
-    "zh": "预约上门",
-    "bm": "预约上门",
-    "ta": "预约上门"
-  },
-  "Admin (Director)": {
-    "zh": "Admin (Director)",
-    "bm": "Admin (Director)",
-    "ta": "Admin (Director)"
-  },
-  "Direct APK Mirror": {
-    "zh": "直接下载 APK 安装包",
-    "bm": "Muat Turun Terus APK",
-    "ta": "நேரடி APK பதிவிறக்கம்"
-  },
-  "Butterworth / Perai / Seberang Jaya": {
-    "zh": "Butterworth / Perai / Seberang Jaya",
-    "bm": "Butterworth / Perai / Seberang Jaya",
-    "ta": "Butterworth / Perai / Seberang Jaya"
-  },
-  "更换鼻胃管（喂食管）": {
-    "zh": "更换鼻胃管（喂食管）",
-    "bm": "更换鼻胃管（喂食管）",
-    "ta": "更换鼻胃管（喂食管）"
-  },
-  "🧠 Stroke Rehab & Mobility": {
-    "zh": "🧠 Stroke Rehab & Mobility",
-    "bm": "🧠 Stroke Rehab & Mobility",
-    "ta": "🧠 Stroke Rehab & Mobility"
-  },
-  "Female Nurse / Caregiver": {
-    "zh": "Female Nurse / Caregiver",
-    "bm": "Female Nurse / Caregiver",
-    "ta": "Female Nurse / Caregiver"
-  },
-  "选择护理项目": {
-    "zh": "选择护理项目",
-    "bm": "选择护理项目",
-    "ta": "选择护理项目"
-  },
-  "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.": {
-    "zh": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.",
-    "bm": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.",
-    "ta": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward."
-  },
-  "The Real Challenge We Solve (创办初心)": {
-    "zh": "The Real Challenge We Solve (创办初心)",
-    "bm": "The Real Challenge We Solve (创办初心)",
-    "ta": "The Real Challenge We Solve (创办初心)"
-  },
-  "Offline Alerts & Notifications Active": {
-    "zh": "Offline Alerts & Notifications Active",
-    "bm": "Offline Alerts & Notifications Active",
-    "ta": "Offline Alerts & Notifications Active"
-  },
-  "👤 Patient & Family": {
-    "zh": "👤 Patient & Family",
-    "bm": "👤 Patient & Family",
-    "ta": "👤 Patient & Family"
-  },
-  "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.": {
-    "zh": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.",
-    "bm": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.",
-    "ta": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients."
-  },
-  "Patient condition / notes": {
-    "zh": "Patient condition / notes",
-    "bm": "Patient condition / notes",
-    "ta": "Patient condition / notes"
-  },
-  "🛏️ Medical Bed & Oxygen Rental": {
-    "zh": "🛏️ Medical Bed & Oxygen Rental",
-    "bm": "🛏️ Medical Bed & Oxygen Rental",
-    "ta": "🛏️ Medical Bed & Oxygen Rental"
-  },
-  "Assura Nursing": {
-    "zh": "Assura Nursing",
-    "bm": "Assura Nursing",
-    "ta": "Assura Nursing"
-  },
-  "Ryle's Tube Change": {
-    "zh": "Ryle's Tube Change",
-    "bm": "Ryle's Tube Change",
-    "ta": "Ryle's Tube Change"
-  },
-  "📱 Official Unified Client": {
-    "zh": "📱 Official Unified Client",
-    "bm": "📱 Official Unified Client",
-    "ta": "📱 Official Unified Client"
-  },
-  "陪诊 · 陪同复诊门诊": {
-    "zh": "陪诊 · 陪同复诊门诊",
-    "bm": "陪诊 · 陪同复诊门诊",
-    "ta": "陪诊 · 陪同复诊门诊"
-  },
-  "日常起居协助 · 进食移动": {
-    "zh": "日常起居协助 · 进食移动",
-    "bm": "日常起居协助 · 进食移动",
-    "ta": "日常起居协助 · 进食移动"
-  },
-  "正在接受护理的家属": {
-    "zh": "正在接受护理的家属",
-    "bm": "正在接受护理的家属",
-    "ta": "正在接受护理的家属"
-  },
-  "PATIENT MEMBER ACCOUNT · 个人病历管理": {
-    "zh": "PATIENT MEMBER ACCOUNT · 个人病历管理",
-    "bm": "PATIENT MEMBER ACCOUNT · 个人病历管理",
-    "ta": "PATIENT MEMBER ACCOUNT · 个人病历管理"
-  },
-  "卧床护理 · 翻身防褥疮": {
-    "zh": "卧床护理 · 翻身防褥疮",
-    "bm": "卧床护理 · 翻身防褥疮",
-    "ta": "卧床护理 · 翻身防褥疮"
-  },
-  "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.": {
-    "zh": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.",
-    "bm": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.",
-    "ta": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery."
-  },
-  "Patient / Family Representative Name (姓名)": {
-    "zh": "Patient / Family Representative Name (姓名)",
-    "bm": "Patient / Family Representative Name (姓名)",
-    "ta": "Patient / Family Representative Name (姓名)"
-  },
-  "：已有护理个案的家庭，在门户输入 Case Access Code (如": {
-    "zh": "：已有护理个案的家庭，在门户输入 Case Access Code (如",
-    "bm": "：已有护理个案的家庭，在门户输入 Case Access Code (如",
-    "ta": "：已有护理个案的家庭，在门户输入 Case Access Code (如"
-  },
-  "Patients/Family:": {
-    "zh": "Patients/Family:",
-    "bm": "Patients/Family:",
-    "ta": "Patients/Family:"
-  },
-  "24 Hours Daily": {
-    "zh": "24 Hours Daily",
-    "bm": "24 Hours Daily",
-    "ta": "24 Hours Daily"
-  },
-  "Basic Wound Dressing · Bukit Mertajam": {
-    "zh": "Basic Wound Dressing · Bukit Mertajam",
-    "bm": "Basic Wound Dressing · Bukit Mertajam",
-    "ta": "Basic Wound Dressing · Bukit Mertajam"
-  },
-  "方圆 25 公里": {
-    "zh": "方圆 25 公里",
-    "bm": "方圆 25 公里",
-    "ta": "方圆 25 公里"
-  },
-  "📈 MEWS Vitals (生命体征)": {
-    "zh": "📈 MEWS Vitals (生命体征)",
-    "bm": "📈 MEWS Vitals (生命体征)",
-    "ta": "📈 MEWS Vitals (生命体征)"
-  },
-  ") 与 PIN 登录接单、记录生命体征与排班。": {
-    "zh": ") 与 PIN 登录接单、记录生命体征与排班。",
-    "bm": ") 与 PIN 登录接单、记录生命体征与排班。",
-    "ta": ") 与 PIN 登录接单、记录生命体征与排班。"
-  },
-  "Got It (明白了)": {
-    "zh": "Got It (明白了)",
-    "bm": "Got It (明白了)",
-    "ta": "Got It (明白了)"
-  },
-  "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).": {
-    "zh": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).",
-    "bm": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).",
-    "ta": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT)."
-  },
-  "公众与普通患者": {
-    "zh": "公众与普通患者",
-    "bm": "公众与普通患者",
-    "ta": "公众与普通患者"
-  },
-  "Island Hospital Penang": {
-    "zh": "Island Hospital Penang",
-    "bm": "Island Hospital Penang",
-    "ta": "Island Hospital Penang"
-  },
-  "Choose date and time": {
-    "zh": "Choose date and time",
-    "bm": "Choose date and time",
-    "ta": "Choose date and time"
-  },
-  "☎ 04-643 3888": {
-    "zh": "☎ 04-643 3888",
-    "bm": "☎ 04-643 3888",
-    "ta": "☎ 04-643 3888"
-  },
-  "Preferred time": {
-    "zh": "Preferred time",
-    "bm": "Preferred time",
-    "ta": "Preferred time"
-  },
-  "RM 250 – RM 450 / mo": {
-    "zh": "RM 250 – RM 450 / mo",
-    "bm": "RM 250 – RM 450 / mo",
-    "ta": "RM 250 – RM 450 / mo"
-  },
-  "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.": {
-    "zh": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.",
-    "bm": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.",
-    "ta": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration."
-  },
-  "☎ 04-548 6666": {
-    "zh": "☎ 04-548 6666",
-    "bm": "☎ 04-548 6666",
-    "ta": "☎ 04-548 6666"
-  },
-  "💬 Book via WhatsApp": {
-    "zh": "💬 Book via WhatsApp",
-    "bm": "💬 Book via WhatsApp",
-    "ta": "💬 Book via WhatsApp"
-  },
-  "☎ 999": {
-    "zh": "☎ 999",
-    "bm": "☎ 999",
-    "ta": "☎ 999"
-  },
-  "Click to view rates for Injections & Blood Tests": {
-    "zh": "Click to view rates for Injections & Blood Tests",
-    "bm": "Click to view rates for Injections & Blood Tests",
-    "ta": "Click to view rates for Injections & Blood Tests"
-  },
-  "Stroke Rehabilitation & Offloading": {
-    "zh": "Stroke Rehabilitation & Offloading",
-    "bm": "Stroke Rehabilitation & Offloading",
-    "ta": "Stroke Rehabilitation & Offloading"
-  },
-  "Please enter a phone number.": {
-    "zh": "Please enter a phone number.",
-    "bm": "Please enter a phone number.",
-    "ta": "Please enter a phone number."
-  },
-  "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).": {
-    "zh": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).",
-    "bm": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).",
-    "ta": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI)."
-  },
-  "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.": {
-    "zh": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.",
-    "bm": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.",
-    "ta": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma."
-  },
-  "Private Home": {
-    "zh": "Private Home",
-    "bm": "Private Home",
-    "ta": "Private Home"
-  },
-  "Purchase:": {
-    "zh": "Purchase:",
-    "bm": "Purchase:",
-    "ta": "Purchase:"
-  },
-  "1. Public Open Mode (公众免密快速浏览)": {
-    "zh": "1. Public Open Mode (公众免密快速浏览)",
-    "bm": "1. Public Open Mode (公众免密快速浏览)",
-    "ta": "1. Public Open Mode (公众免密快速浏览)"
   },
   "Alt: 04-828 5999": {
     "zh": "Alt: 04-828 5999",
     "bm": "Alt: 04-828 5999",
     "ta": "Alt: 04-828 5999"
   },
-  "大山脚": {
-    "zh": "大山脚",
-    "bm": "大山脚",
-    "ta": "大山脚"
+  "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.": {
+    "zh": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.",
+    "bm": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks.",
+    "ta": "Post-surgical incision care, diabetic foot ulcer debridement, and pressure sore staging (Stage 1 to 4) using sterile dressing protocols (ANTT) to minimize infection risks."
   },
-  "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.": {
-    "zh": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.",
-    "bm": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.",
-    "ta": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly."
+  "Offline Alerts & Notifications Active": {
+    "zh": "Offline Alerts & Notifications Active",
+    "bm": "Offline Alerts & Notifications Active",
+    "ta": "Offline Alerts & Notifications Active"
   },
-  "Registered Mobile Phone (手机号码) or Case Code (病历编号)": {
-    "zh": "Registered Mobile Phone (手机号码) or Case Code (病历编号)",
-    "bm": "Registered Mobile Phone (手机号码) or Case Code (病历编号)",
-    "ta": "Registered Mobile Phone (手机号码) or Case Code (病历编号)"
+  "上门地址与联系方式": {
+    "zh": "上门地址与联系方式",
+    "bm": "上门地址与联系方式",
+    "ta": "上门地址与联系方式"
   },
-  "Standard Malaysian Clinical Dosing Schedule": {
-    "zh": "Standard Malaysian Clinical Dosing Schedule",
-    "bm": "Standard Malaysian Clinical Dosing Schedule",
-    "ta": "Standard Malaysian Clinical Dosing Schedule"
-  },
-  "大山脚及邻近地区": {
-    "zh": "大山脚及邻近地区",
-    "bm": "大山脚及邻近地区",
-    "ta": "大山脚及邻近地区"
-  },
-  "Hands-Only CPR Protocol": {
-    "zh": "Hands-Only CPR Protocol",
-    "bm": "Hands-Only CPR Protocol",
-    "ta": "Hands-Only CPR Protocol"
-  },
-  "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"": {
-    "zh": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"",
-    "bm": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"",
-    "ta": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\""
-  },
-  "🧠 Stroke & Post-Op Rehab": {
-    "zh": "🧠 Stroke & Post-Op Rehab",
-    "bm": "🧠 Stroke & Post-Op Rehab",
-    "ta": "🧠 Stroke & Post-Op Rehab"
-  },
-  "Foldable Wheelchair & Commode Chair": {
-    "zh": "Foldable Wheelchair & Commode Chair",
-    "bm": "Foldable Wheelchair & Commode Chair",
-    "ta": "Foldable Wheelchair & Commode Chair"
-  },
-  "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.": {
-    "zh": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.",
-    "bm": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.",
-    "ta": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain."
+  "Web PWA · Any Browser · No Installation": {
+    "zh": "Web PWA · Any Browser · No Installation",
+    "bm": "Web PWA · Any Browser · No Installation",
+    "ta": "Web PWA · Any Browser · No Installation"
   },
   "⏰ TDS (Three Times Daily):": {
     "zh": "⏰ TDS (Three Times Daily):",
     "bm": "⏰ TDS (Three Times Daily):",
     "ta": "⏰ TDS (Three Times Daily):"
   },
-  "LOCATION IN PENANG (ALL AREAS COVERED)": {
-    "zh": "LOCATION IN PENANG (ALL AREAS COVERED)",
-    "bm": "LOCATION IN PENANG (ALL AREAS COVERED)",
-    "ta": "LOCATION IN PENANG (ALL AREAS COVERED)"
+  "Please enter your address.": {
+    "zh": "Please enter your address.",
+    "bm": "Please enter your address.",
+    "ta": "Please enter your address."
   },
-  "Next ▶": {
-    "zh": "Next ▶",
-    "bm": "Next ▶",
-    "ta": "Next ▶"
+  "🛏️ Mobility & Beds": {
+    "zh": "🛏️ Mobility & Beds",
+    "bm": "🛏️ Mobility & Beds",
+    "ta": "🛏️ Mobility & Beds"
   },
-  "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)": {
-    "zh": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)",
-    "bm": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)",
-    "ta": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)"
-  },
-  "How to Run Windows App (.exe):": {
-    "zh": "How to Run Windows App (.exe):",
-    "bm": "How to Run Windows App (.exe):",
-    "ta": "How to Run Windows App (.exe):"
-  },
-  "1, Jalan Pangkor, 10050 George Town, Penang": {
-    "zh": "1, Jalan Pangkor, 10050 George Town, Penang",
-    "bm": "1, Jalan Pangkor, 10050 George Town, Penang",
-    "ta": "1, Jalan Pangkor, 10050 George Town, Penang"
-  },
-  "每日 24小时全天候": {
-    "zh": "每日 24小时全天候",
-    "bm": "每日 24小时全天候",
-    "ta": "每日 24小时全天候"
-  },
-  "Assura Nursing · 官方统一应用使用备忘录": {
-    "zh": "Assura Nursing · 官方统一应用使用备忘录",
-    "bm": "Assura Nursing · 官方统一应用使用备忘录",
-    "ta": "Assura Nursing · 官方统一应用使用备忘录"
-  },
-  "🩹 Wound Care & Dressing": {
-    "zh": "🩹 Wound Care & Dressing",
-    "bm": "🩹 Wound Care & Dressing",
-    "ta": "🩹 Wound Care & Dressing"
-  },
-  "Loading medications...": {
-    "zh": "Loading medications...",
-    "bm": "Loading medications...",
-    "ta": "Loading medications..."
-  },
-  "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值": {
-    "zh": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值",
-    "bm": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值",
-    "ta": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值"
-  },
-  "IV Drip Infusion & Medication Administration · RM 180": {
-    "zh": "IV Drip Infusion & Medication Administration · RM 180",
-    "bm": "IV Drip Infusion & Medication Administration · RM 180",
-    "ta": "IV Drip Infusion & Medication Administration · RM 180"
-  },
-  "Foley Urinary Catheter Hygiene": {
-    "zh": "Foley Urinary Catheter Hygiene",
-    "bm": "Foley Urinary Catheter Hygiene",
-    "ta": "Foley Urinary Catheter Hygiene"
-  },
-  "Our Standards · 服务宗旨与承诺": {
-    "zh": "Our Standards · 服务宗旨与承诺",
-    "bm": "Our Standards · 服务宗旨与承诺",
-    "ta": "Our Standards · 服务宗旨与承诺"
-  },
-  "Bukit Mertajam & Central Seberang Perai": {
-    "zh": "Bukit Mertajam & Central Seberang Perai",
-    "bm": "Bukit Mertajam & Central Seberang Perai",
-    "ta": "Bukit Mertajam & Central Seberang Perai"
-  },
-  "Ryle": {
-    "zh": "Ryle",
-    "bm": "Ryle",
-    "ta": "Ryle"
-  },
-  "中文": {
-    "zh": "中文",
-    "bm": "中文",
-    "ta": "中文"
-  },
-  "☎ 04-238 3388": {
-    "zh": "☎ 04-238 3388",
-    "bm": "☎ 04-238 3388",
-    "ta": "☎ 04-238 3388"
-  },
-  "📁 Medical Document Vault (医疗文件与报告)": {
-    "zh": "📁 Medical Document Vault (医疗文件与报告)",
-    "bm": "📁 Medical Document Vault (医疗文件与报告)",
-    "ta": "📁 Medical Document Vault (医疗文件与报告)"
-  },
-  "☎ 04-643 2743": {
-    "zh": "☎ 04-643 2743",
-    "bm": "☎ 04-643 2743",
-    "ta": "☎ 04-643 2743"
-  },
-  "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.": {
-    "zh": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.",
-    "bm": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.",
-    "ta": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers."
-  },
-  "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland": {
-    "zh": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland",
-    "bm": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland",
-    "ta": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland"
-  },
-  "🚗 Waze": {
-    "zh": "🚗 Waze",
-    "bm": "🚗 Waze",
-    "ta": "🚗 Waze"
-  },
-  "AHA / ERC LIFE-SAVING STANDARD": {
-    "zh": "AHA / ERC LIFE-SAVING STANDARD",
-    "bm": "AHA / ERC LIFE-SAVING STANDARD",
-    "ta": "AHA / ERC LIFE-SAVING STANDARD"
+  "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。": {
+    "zh": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。",
+    "bm": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。",
+    "ta": "Tap the map to drop a pin, or use your GPS. 点地图放置定位针，或使用 GPS。"
   },
   "Sign in with your registered Staff ID inside the app to unlock patient vitals entry, MEWS scoring, and shift roster management.": {
     "zh": "Sign in with your registered Staff ID inside the app to unlock patient vitals entry, MEWS scoring, and shift roster management.",
     "bm": "Sign in with your registered Staff ID inside the app to unlock patient vitals entry, MEWS scoring, and shift roster management.",
     "ta": "Sign in with your registered Staff ID inside the app to unlock patient vitals entry, MEWS scoring, and shift roster management."
   },
-  "ASN-001": {
-    "zh": "ASN-001",
-    "bm": "ASN-001",
-    "ta": "ASN-001"
+  "to save": {
+    "zh": "to save",
+    "bm": "to save",
+    "ta": "to save"
   },
-  "24/7 Emergency Hotline:": {
-    "zh": "24/7 Emergency Hotline:",
-    "bm": "24/7 Emergency Hotline:",
-    "ta": "24/7 Emergency Hotline:"
-  },
-  "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868": {
-    "zh": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868",
-    "bm": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868",
-    "ta": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868"
-  },
-  "📚 Patient & Family Clinical Home Care Guides": {
-    "zh": "📚 Patient & Family Clinical Home Care Guides",
-    "bm": "📚 Patient & Family Clinical Home Care Guides",
-    "ta": "📚 Patient & Family Clinical Home Care Guides"
-  },
-  "Bukit Mertajam, Penang": {
-    "zh": "Bukit Mertajam, Penang",
-    "bm": "Bukit Mertajam, Penang",
-    "ta": "Bukit Mertajam, Penang"
-  },
-  "📝 Book Form": {
-    "zh": "📝 Book Form",
-    "bm": "📝 Book Form",
-    "ta": "📝 Book Form"
-  },
-  "Elevate patient's head of bed to at least 45° to 60° before starting feeds.": {
-    "zh": "Elevate patient's head of bed to at least 45° to 60° before starting feeds.",
-    "bm": "Elevate patient's head of bed to at least 45° to 60° before starting feeds.",
-    "ta": "Elevate patient's head of bed to at least 45° to 60° before starting feeds."
-  },
-  "⏰ BD (Twice Daily):": {
-    "zh": "⏰ BD (Twice Daily):",
-    "bm": "⏰ BD (Twice Daily):",
-    "ta": "⏰ BD (Twice Daily):"
-  },
-  "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：": {
-    "zh": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：",
-    "bm": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：",
-    "ta": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们："
-  },
-  "LPPK Registered (MA)": {
-    "zh": "LPPK Registered (MA)",
-    "bm": "LPPK Registered (MA)",
-    "ta": "LPPK Registered (MA)"
-  },
-  "Staff & Gender Preference": {
-    "zh": "Staff & Gender Preference",
-    "bm": "Staff & Gender Preference",
-    "ta": "Staff & Gender Preference"
-  },
-  "About Us & Founder Message · Assura Nursing": {
-    "zh": "About Us & Founder Message · Assura Nursing",
-    "bm": "About Us & Founder Message · Assura Nursing",
-    "ta": "About Us & Founder Message · Assura Nursing"
-  },
-  "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.": {
-    "zh": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.",
-    "bm": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.",
-    "ta": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting."
-  },
-  "Set Security PIN / Password (设定您的安全密码)": {
-    "zh": "Set Security PIN / Password (设定您的安全密码)",
-    "bm": "Set Security PIN / Password (设定您的安全密码)",
-    "ta": "Set Security PIN / Password (设定您的安全密码)"
-  },
-  "Unified Care & Clinical Portal": {
-    "zh": "Unified Care & Clinical Portal",
-    "bm": "Unified Care & Clinical Portal",
-    "ta": "Unified Care & Clinical Portal"
-  },
-  "Staff Security PIN (员工授权密码)": {
-    "zh": "Staff Security PIN (员工授权密码)",
-    "bm": "Staff Security PIN (员工授权密码)",
-    "ta": "Staff Security PIN (员工授权密码)"
-  },
-  "CAUTI Prevention & Drainage Maintenance": {
-    "zh": "CAUTI Prevention & Drainage Maintenance",
-    "bm": "CAUTI Prevention & Drainage Maintenance",
-    "ta": "CAUTI Prevention & Drainage Maintenance"
-  },
-  "Aspiration Prevention & Bolus Protocol": {
-    "zh": "Aspiration Prevention & Bolus Protocol",
-    "bm": "Aspiration Prevention & Bolus Protocol",
-    "ta": "Aspiration Prevention & Bolus Protocol"
-  },
-  "Medical Oxygen Concentrator (5L/10L)": {
-    "zh": "Medical Oxygen Concentrator (5L/10L)",
-    "bm": "Medical Oxygen Concentrator (5L/10L)",
-    "ta": "Medical Oxygen Concentrator (5L/10L)"
-  },
-  "Assura Hub · 公告与招聘中心": {
-    "zh": "Assura Hub · 公告与招聘中心",
-    "bm": "Assura Hub · 公告与招聘中心",
-    "ta": "Assura Hub · 公告与招聘中心"
-  },
-  "♿ Transfer": {
-    "zh": "♿ Transfer",
-    "bm": "♿ Transfer",
-    "ta": "♿ Transfer"
-  },
-  "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:": {
-    "zh": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:",
-    "bm": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:",
-    "ta": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:"
-  },
-  "☎ 04-866 9333": {
-    "zh": "☎ 04-866 9333",
-    "bm": "☎ 04-866 9333",
-    "ta": "☎ 04-866 9333"
-  },
-  "● Interactive Walkthrough": {
-    "zh": "● Interactive Walkthrough",
-    "bm": "● Interactive Walkthrough",
-    "ta": "● Interactive Walkthrough"
-  },
-  "🛏️ Home Medical Equipment Rental & Reference Guide": {
-    "zh": "🛏️ Home Medical Equipment Rental & Reference Guide",
-    "bm": "🛏️ Home Medical Equipment Rental & Reference Guide",
-    "ta": "🛏️ Home Medical Equipment Rental & Reference Guide"
-  },
-  "Media, Medical Equipment & Emergency Hub · Assura Nursing": {
-    "zh": "Media, Medical Equipment & Emergency Hub · Assura Nursing",
-    "bm": "Media, Medical Equipment & Emergency Hub · Assura Nursing",
-    "ta": "Media, Medical Equipment & Emergency Hub · Assura Nursing"
-  },
-  "个人卫生 · 洗澡清洁": {
-    "zh": "个人卫生 · 洗澡清洁",
-    "bm": "个人卫生 · 洗澡清洁",
-    "ta": "个人卫生 · 洗澡清洁"
-  },
-  "🩺 Clinical Staff & Nurses (医护人员)": {
-    "zh": "🩺 Clinical Staff & Nurses (医护人员)",
-    "bm": "🩺 Clinical Staff & Nurses (医护人员)",
-    "ta": "🩺 Clinical Staff & Nurses (医护人员)"
-  },
-  "← Previous": {
-    "zh": "← Previous",
-    "bm": "← Previous",
-    "ta": "← Previous"
-  },
-  "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas": {
-    "zh": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas",
-    "bm": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas",
-    "ta": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas"
-  },
-  "MALAYSIA & PENANG HOTLINES": {
-    "zh": "MALAYSIA & PENANG HOTLINES",
-    "bm": "MALAYSIA & PENANG HOTLINES",
-    "ta": "MALAYSIA & PENANG HOTLINES"
-  },
-  "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.": {
-    "zh": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.",
-    "bm": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.",
-    "ta": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly."
-  },
-  "Frequency": {
-    "zh": "Frequency",
-    "bm": "Frequency",
-    "ta": "Frequency"
-  },
-  "Interactive Walkthrough": {
-    "zh": "Interactive Walkthrough",
-    "bm": "Interactive Walkthrough",
-    "ta": "Interactive Walkthrough"
-  },
-  "We founded": {
-    "zh": "We founded",
-    "bm": "We founded",
-    "ta": "We founded"
-  },
-  "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.": {
-    "zh": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.",
-    "bm": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.",
-    "ta": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination."
-  },
-  "Next Step →": {
-    "zh": "Next Step →",
-    "bm": "Next Step →",
-    "ta": "Next Step →"
-  },
-  "Medical Equipment Rental": {
-    "zh": "Medical Equipment Rental",
-    "bm": "Medical Equipment Rental",
-    "ta": "Medical Equipment Rental"
-  },
-  "Official Announcements": {
-    "zh": "Official Announcements",
-    "bm": "Official Announcements",
-    "ta": "Official Announcements"
-  },
-  "Works on Locked / No-SIM phones": {
-    "zh": "Works on Locked / No-SIM phones",
-    "bm": "Works on Locked / No-SIM phones",
-    "ta": "Works on Locked / No-SIM phones"
-  },
-  "Keep patient upright for 45–60 minutes after feeding.": {
-    "zh": "Keep patient upright for 45–60 minutes after feeding.",
-    "bm": "Keep patient upright for 45–60 minutes after feeding.",
-    "ta": "Keep patient upright for 45–60 minutes after feeding."
-  },
-  "Emergency & Hospital GPS": {
-    "zh": "Emergency & Hospital GPS",
-    "bm": "Emergency & Hospital GPS",
-    "ta": "Emergency & Hospital GPS"
-  },
-  "📌 First-Time User Memo (使用备忘):": {
-    "zh": "📌 First-Time User Memo (使用备忘):",
-    "bm": "📌 First-Time User Memo (使用备忘):",
-    "ta": "📌 First-Time User Memo (使用备忘):"
-  },
-  "110 BPM Standard Rhythm": {
-    "zh": "110 BPM Standard Rhythm",
-    "bm": "110 BPM Standard Rhythm",
-    "ta": "110 BPM Standard Rhythm"
-  },
-  "Official Android App · 官方安卓应用": {
-    "zh": "Official Android App · 官方安卓应用",
-    "bm": "Official Android App · 官方安卓应用",
-    "ta": "Official Android App · 官方安卓应用"
-  },
-  "📱 Interactive First Aid & CPR Simulator": {
-    "zh": "📱 Interactive First Aid & CPR Simulator",
-    "bm": "📱 Interactive First Aid & CPR Simulator",
-    "ta": "📱 Interactive First Aid & CPR Simulator"
-  },
-  "Click to expand": {
-    "zh": "Click to expand",
-    "bm": "Click to expand",
-    "ta": "Click to expand"
-  },
-  "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).": {
-    "zh": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).",
-    "bm": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).",
-    "ta": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles)."
-  },
-  "Staff:": {
-    "zh": "Staff:",
-    "bm": "Staff:",
-    "ta": "Staff:"
-  },
-  "Loh Guan Lye Specialists Centre": {
-    "zh": "Loh Guan Lye Specialists Centre",
-    "bm": "Loh Guan Lye Specialists Centre",
-    "ta": "Loh Guan Lye Specialists Centre"
-  },
-  "Click to view rates for Stroke Rehab": {
-    "zh": "Click to view rates for Stroke Rehab",
-    "bm": "Click to view rates for Stroke Rehab",
-    "ta": "Click to view rates for Stroke Rehab"
-  },
-  "Penang General Hospital (HPP)": {
-    "zh": "Penang General Hospital (HPP)",
-    "bm": "Penang General Hospital (HPP)",
-    "ta": "Penang General Hospital (HPP)"
-  },
-  "Patient (Stroke Rehab)": {
-    "zh": "Patient (Stroke Rehab)",
-    "bm": "Patient (Stroke Rehab)",
-    "ta": "Patient (Stroke Rehab)"
-  },
-  "Enter your Staff PIN": {
-    "zh": "Enter your Staff PIN",
-    "bm": "Enter your Staff PIN",
-    "ta": "Enter your Staff PIN"
-  },
-  "Civil Defence Force (APM Penang)": {
-    "zh": "Civil Defence Force (APM Penang)",
-    "bm": "Civil Defence Force (APM Penang)",
-    "ta": "Civil Defence Force (APM Penang)"
-  },
-  "Kepala Batas / Tasek Gelugor / Bertam": {
-    "zh": "Kepala Batas / Tasek Gelugor / Bertam",
-    "bm": "Kepala Batas / Tasek Gelugor / Bertam",
-    "ta": "Kepala Batas / Tasek Gelugor / Bertam"
-  },
-  "Tell us anything helpful about the patient": {
-    "zh": "Tell us anything helpful about the patient",
-    "bm": "Tell us anything helpful about the patient",
-    "ta": "Tell us anything helpful about the patient"
-  },
-  "தமிழ்": {
-    "zh": "தமிழ்",
-    "bm": "தமிழ்",
-    "ta": "தமிழ்"
-  },
-  "Start 110 BPM CPR Rhythm Metronome": {
-    "zh": "Start 110 BPM CPR Rhythm Metronome",
-    "bm": "Start 110 BPM CPR Rhythm Metronome",
-    "ta": "Start 110 BPM CPR Rhythm Metronome"
+  "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.": {
+    "zh": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.",
+    "bm": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media.",
+    "ta": "Your unified Penang healthcare & media center: 24/7 hospital emergency GPS directory, CPR metronome, medical equipment rental catalog, home nursing clinical guides, and clinical video & photo media."
   },
   "Dose & Route": {
     "zh": "Dose & Route",
     "bm": "Dose & Route",
     "ta": "Dose & Route"
   },
-  "因地制宜·环境规划：": {
-    "zh": "因地制宜·环境规划：",
-    "bm": "因地制宜·环境规划：",
-    "ta": "因地制宜·环境规划："
+  "☎ 04-222 9111": {
+    "zh": "☎ 04-222 9111",
+    "bm": "☎ 04-222 9111",
+    "ta": "☎ 04-222 9111"
   },
-  "Receive shift alerts, patient reminders, and emergency updates even without internet.": {
-    "zh": "Receive shift alerts, patient reminders, and emergency updates even without internet.",
-    "bm": "Receive shift alerts, patient reminders, and emergency updates even without internet.",
-    "ta": "Receive shift alerts, patient reminders, and emergency updates even without internet."
+  "其他需求 · 欢迎询问": {
+    "zh": "其他需求 · 欢迎询问",
+    "bm": "其他需求 · 欢迎询问",
+    "ta": "其他需求 · 欢迎询问"
   },
-  "🏡 Home Clinical Care Specialist": {
-    "zh": "🏡 Home Clinical Care Specialist",
-    "bm": "🏡 Home Clinical Care Specialist",
-    "ta": "🏡 Home Clinical Care Specialist"
+  "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.": {
+    "zh": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.",
+    "bm": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts.",
+    "ta": "Compassionate elderly & bedridden care, symptom control, and 12-hour / 24-hour round-the-clock dedicated nurse & caregiver shifts."
   },
-  "24/7 Emergency:": {
-    "zh": "24/7 Emergency:",
-    "bm": "24/7 Emergency:",
-    "ta": "24/7 Emergency:"
+  "姓名": {
+    "zh": "姓名",
+    "bm": "姓名",
+    "ta": "姓名"
   },
-  "Balik Pulau & South Island": {
-    "zh": "Balik Pulau & South Island",
-    "bm": "Balik Pulau & South Island",
-    "ta": "Balik Pulau & South Island"
+  "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.": {
+    "zh": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.",
+    "bm": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now.",
+    "ta": "If this is a medical emergency — chest pain, trouble breathing, severe bleeding, unconscious, stroke signs — call 999 now."
   },
-  "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services": {
-    "zh": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services",
-    "bm": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services",
-    "ta": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services"
+  "Where": {
+    "zh": "Where",
+    "bm": "Where",
+    "ta": "Where"
   },
-  "企业愿景": {
-    "zh": "企业愿景",
-    "bm": "企业愿景",
-    "ta": "企业愿景"
-  },
-  "Keep urine drainage bag": {
-    "zh": "Keep urine drainage bag",
-    "bm": "Keep urine drainage bag",
-    "ta": "Keep urine drainage bag"
-  },
-  "📞 Call us · 012-206 4868": {
-    "zh": "📞 Call us · 012-206 4868",
-    "bm": "📞 Call us · 012-206 4868",
-    "ta": "📞 Call us · 012-206 4868"
-  },
-  "📖 User Guide & Memo (首次使用指南)": {
-    "zh": "📖 User Guide & Memo (首次使用指南)",
-    "bm": "📖 User Guide & Memo (首次使用指南)",
-    "ta": "📖 User Guide & Memo (首次使用指南)"
-  },
-  "SEPTEMBER 2026 · SERVICE EXPANSION": {
-    "zh": "SEPTEMBER 2026 · SERVICE EXPANSION",
-    "bm": "SEPTEMBER 2026 · SERVICE EXPANSION",
-    "ta": "SEPTEMBER 2026 · SERVICE EXPANSION"
+  "What would you like to do?": {
+    "zh": "What would you like to do?",
+    "bm": "What would you like to do?",
+    "ta": "What would you like to do?"
   },
   "e.g. 550101-07-5555": {
     "zh": "e.g. 550101-07-5555",
     "bm": "e.g. 550101-07-5555",
     "ta": "e.g. 550101-07-5555"
   },
-  "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.": {
-    "zh": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.",
-    "bm": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.",
-    "ta": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic."
+  "24/7 Disaster & Medical Emergency": {
+    "zh": "24/7 Disaster & Medical Emergency",
+    "bm": "24/7 Disaster & Medical Emergency",
+    "ta": "24/7 Disaster & Medical Emergency"
   },
-  ", tap Settings and allow.": {
-    "zh": ", tap Settings and allow.",
-    "bm": ", tap Settings and allow.",
-    "ta": ", tap Settings and allow."
+  "Other / Not Sure": {
+    "zh": "Other / Not Sure",
+    "bm": "Other / Not Sure",
+    "ta": "Other / Not Sure"
   },
-  "Clinical Services & Instant Pricing · Assura Nursing": {
-    "zh": "Clinical Services & Instant Pricing · Assura Nursing",
-    "bm": "Clinical Services & Instant Pricing · Assura Nursing",
-    "ta": "Clinical Services & Instant Pricing · Assura Nursing"
+  "flexible environmental adaptation": {
+    "zh": "flexible environmental adaptation",
+    "bm": "flexible environmental adaptation",
+    "ta": "flexible environmental adaptation"
   },
-  "About our service · 了解服务": {
-    "zh": "About our service · 了解服务",
-    "bm": "About our service · 了解服务",
-    "ta": "About our service · 了解服务"
+  "06:00, 15:00, 22:00 (8-hour intervals)": {
+    "zh": "06:00, 15:00, 22:00 (8-hour intervals)",
+    "bm": "06:00, 15:00, 22:00 (8-hour intervals)",
+    "ta": "06:00, 15:00, 22:00 (8-hour intervals)"
   },
-  "Assura Nursing App": {
-    "zh": "Assura Nursing App",
-    "bm": "Assura Nursing App",
-    "ta": "Assura Nursing App"
+  "AssuraNursing.exe": {
+    "zh": "AssuraNursing.exe",
+    "bm": "AssuraNursing.exe",
+    "ta": "AssuraNursing.exe"
   },
-  "Assura Nursing — home": {
-    "zh": "Assura Nursing — home",
-    "bm": "Assura Nursing — home",
-    "ta": "Assura Nursing — home"
+  "AHA / ERC LIFE-SAVING STANDARD": {
+    "zh": "AHA / ERC LIFE-SAVING STANDARD",
+    "bm": "AHA / ERC LIFE-SAVING STANDARD",
+    "ta": "AHA / ERC LIFE-SAVING STANDARD"
+  },
+  "தமிழ்": {
+    "zh": "தமிழ்",
+    "bm": "தமிழ்",
+    "ta": "தமிழ்"
+  },
+  "☎ 04-890 7000": {
+    "zh": "☎ 04-890 7000",
+    "bm": "☎ 04-890 7000",
+    "ta": "☎ 04-890 7000"
+  },
+  "Jalan Residensi, 10990 George Town, Penang": {
+    "zh": "Jalan Residensi, 10990 George Town, Penang",
+    "bm": "Jalan Residensi, 10990 George Town, Penang",
+    "ta": "Jalan Residensi, 10990 George Town, Penang"
+  },
+  "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.": {
+    "zh": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.",
+    "bm": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring.",
+    "ta": "Clinical-grade automated NIBP Blood Pressure, Pulse Rate, and Oxygen Saturation monitoring."
+  },
+  "Choose services": {
+    "zh": "Choose services",
+    "bm": "Choose services",
+    "ta": "Choose services"
+  },
+  "🩺 Direct Staff Workspace Link (医护工作台通道) →": {
+    "zh": "🩺 Direct Staff Workspace Link (医护工作台通道) →",
+    "bm": "🩺 Direct Staff Workspace Link (医护工作台通道) →",
+    "ta": "🩺 Direct Staff Workspace Link (医护工作台通道) →"
+  },
+  "Elevate patient's head of bed to at least 45° to 60° before starting feeds.": {
+    "zh": "Elevate patient's head of bed to at least 45° to 60° before starting feeds.",
+    "bm": "Elevate patient's head of bed to at least 45° to 60° before starting feeds.",
+    "ta": "Elevate patient's head of bed to at least 45° to 60° before starting feeds."
+  },
+  "医护人员专属门户 (Staff Portal)": {
+    "zh": "医护人员专属门户 (Staff Portal)",
+    "bm": "医护人员专属门户 (Staff Portal)",
+    "ta": "医护人员专属门户 (Staff Portal)"
+  },
+  "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)": {
+    "zh": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)",
+    "bm": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)",
+    "ta": "🛠️ Clinical Sandbox & Testing Accounts (内部测试账号说明)"
+  },
+  "💬 WhatsApp urgent · 紧急讯息": {
+    "zh": "💬 WhatsApp urgent · 紧急讯息",
+    "bm": "💬 WhatsApp urgent · 紧急讯息",
+    "ta": "💬 WhatsApp urgent · 紧急讯息"
+  },
+  "Gleneagles Hospital Penang": {
+    "zh": "Gleneagles Hospital Penang",
+    "bm": "Gleneagles Hospital Penang",
+    "ta": "Gleneagles Hospital Penang"
+  },
+  "Personal Hygiene Care": {
+    "zh": "Personal Hygiene Care",
+    "bm": "Personal Hygiene Care",
+    "ta": "Personal Hygiene Care"
+  },
+  "24 Hours Daily": {
+    "zh": "24 Hours Daily",
+    "bm": "24 Hours Daily",
+    "ta": "24 Hours Daily"
+  },
+  "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.": {
+    "zh": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.",
+    "bm": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately.",
+    "ta": "Firmly tap the person's shoulders and shout loudly: \"Are you okay?\". If no response and no normal breathing, proceed immediately."
+  },
+  "Standalone portable application — no complex installation needed.": {
+    "zh": "Standalone portable application — no complex installation needed.",
+    "bm": "Standalone portable application — no complex installation needed.",
+    "ta": "Standalone portable application — no complex installation needed."
+  },
+  "大山脚": {
+    "zh": "大山脚",
+    "bm": "大山脚",
+    "ta": "大山脚"
+  },
+  "Week 1": {
+    "zh": "Week 1",
+    "bm": "Week 1",
+    "ta": "Week 1"
+  },
+  "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)": {
+    "zh": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)",
+    "bm": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)",
+    "ta": "Clinical Staff ID / Email / Phone (医护人员工号 / 邮箱)"
+  },
+  "Founder's Message · 创办人心声与初心": {
+    "zh": "Founder's Message · 创办人心声与初心",
+    "bm": "Founder's Message · 创办人心声与初心",
+    "ta": "Founder's Message · 创办人心声与初心"
+  },
+  "Up to 25 km": {
+    "zh": "Up to 25 km",
+    "bm": "Up to 25 km",
+    "ta": "Up to 25 km"
+  },
+  "☎ 04-238 3388": {
+    "zh": "☎ 04-238 3388",
+    "bm": "☎ 04-238 3388",
+    "ta": "☎ 04-238 3388"
+  },
+  "☎ 04-548 6688": {
+    "zh": "☎ 04-548 6688",
+    "bm": "☎ 04-548 6688",
+    "ta": "☎ 04-548 6688"
+  },
+  "Open": {
+    "zh": "Open",
+    "bm": "Open",
+    "ta": "Open"
+  },
+  "🛡️ PDPA Privacy & Consent": {
+    "zh": "🛡️ PDPA Privacy & Consent",
+    "bm": "🛡️ PDPA Privacy & Consent",
+    "ta": "🛡️ PDPA Privacy & Consent"
+  },
+  "🤖 Android APK (3.8 MB)": {
+    "zh": "🤖 Android APK (3.8 MB)",
+    "bm": "🤖 Android APK (3.8 MB)",
+    "ta": "🤖 Android APK (3.8 MB)"
+  },
+  "The Hire Site (Join Our Team)": {
+    "zh": "The Hire Site (Join Our Team)",
+    "bm": "The Hire Site (Join Our Team)",
+    "ta": "The Hire Site (Join Our Team)"
+  },
+  "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:": {
+    "zh": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:",
+    "bm": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:",
+    "ta": "Everything you need to know about using the Assura Nursing App on your phone, tablet, or desktop:"
+  },
+  "日期": {
+    "zh": "日期",
+    "bm": "日期",
+    "ta": "日期"
+  },
+  "WhatsApp Consultation": {
+    "zh": "WhatsApp Consultation",
+    "bm": "WhatsApp Consultation",
+    "ta": "WhatsApp Consultation"
+  },
+  "💧 Catheter (CBD) Care": {
+    "zh": "💧 Catheter (CBD) Care",
+    "bm": "💧 Catheter (CBD) Care",
+    "ta": "💧 Catheter (CBD) Care"
+  },
+  "Male Nurse / Caregiver": {
+    "zh": "Male Nurse / Caregiver",
+    "bm": "Male Nurse / Caregiver",
+    "ta": "Male Nurse / Caregiver"
+  },
+  "Care": {
+    "zh": "Care",
+    "bm": "Care",
+    "ta": "Care"
+  },
+  "☎ 04-866 9333": {
+    "zh": "☎ 04-866 9333",
+    "bm": "☎ 04-866 9333",
+    "ta": "☎ 04-866 9333"
+  },
+  "🩸 Wound Care & Infection Risk Minimization": {
+    "zh": "🩸 Wound Care & Infection Risk Minimization",
+    "bm": "🩸 Wound Care & Infection Risk Minimization",
+    "ta": "🩸 Wound Care & Infection Risk Minimization"
+  },
+  "Media, Medical Equipment & Emergency Hub · Assura Nursing": {
+    "zh": "Media, Medical Equipment & Emergency Hub · Assura Nursing",
+    "bm": "Media, Medical Equipment & Emergency Hub · Assura Nursing",
+    "ta": "Media, Medical Equipment & Emergency Hub · Assura Nursing"
+  },
+  "Clinical Services & Rates · 临床服务与透明收费": {
+    "zh": "Clinical Services & Rates · 临床服务与透明收费",
+    "bm": "Clinical Services & Rates · 临床服务与透明收费",
+    "ta": "Clinical Services & Rates · 临床服务与透明收费"
+  },
+  "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.": {
+    "zh": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.",
+    "bm": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels.",
+    "ta": "Follow standard Malaysian hospital medication serving intervals to maintain therapeutic drug blood levels."
+  },
+  "陪诊 · 陪同复诊门诊": {
+    "zh": "陪诊 · 陪同复诊门诊",
+    "bm": "陪诊 · 陪同复诊门诊",
+    "ta": "陪诊 · 陪同复诊门诊"
+  },
+  "Injection & Drip": {
+    "zh": "Injection & Drip",
+    "bm": "Injection & Drip",
+    "ta": "Injection & Drip"
+  },
+  "注射 · 打点滴（输液）": {
+    "zh": "注射 · 打点滴（输液）",
+    "bm": "注射 · 打点滴（输液）",
+    "ta": "注射 · 打点滴（输液）"
+  },
+  "Medical Equipment Rental": {
+    "zh": "Medical Equipment Rental",
+    "bm": "Medical Equipment Rental",
+    "ta": "Medical Equipment Rental"
+  },
+  "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services": {
+    "zh": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services",
+    "bm": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services",
+    "ta": "Lembaga Jururawat Malaysia (LJM) Regulated Private Nursing Services"
+  },
+  "🧠 Stroke Rehab & Mobility": {
+    "zh": "🧠 Stroke Rehab & Mobility",
+    "bm": "🧠 Stroke Rehab & Mobility",
+    "ta": "🧠 Stroke Rehab & Mobility"
+  },
+  "Alt: 04-828 2842": {
+    "zh": "Alt: 04-828 2842",
+    "bm": "Alt: 04-828 2842",
+    "ta": "Alt: 04-828 2842"
+  },
+  "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang": {
+    "zh": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang",
+    "bm": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang",
+    "ta": "Jalan Tun Hussein Onn, 13700 Seberang Jaya, Penang"
+  },
+  "Keep patient upright for 45–60 minutes after feeding.": {
+    "zh": "Keep patient upright for 45–60 minutes after feeding.",
+    "bm": "Keep patient upright for 45–60 minutes after feeding.",
+    "ta": "Keep patient upright for 45–60 minutes after feeding."
+  },
+  "Any Nurse / Caregiver": {
+    "zh": "Any Nurse / Caregiver",
+    "bm": "Any Nurse / Caregiver",
+    "ta": "Any Nurse / Caregiver"
+  },
+  "🎬 Watch Guide Video & Read Memo": {
+    "zh": "🎬 Watch Guide Video & Read Memo",
+    "bm": "🎬 Watch Guide Video & Read Memo",
+    "ta": "🎬 Watch Guide Video & Read Memo"
+  },
+  "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.": {
+    "zh": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.",
+    "bm": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care.",
+    "ta": "Ryle's tube (NG Tube) insertion, enteral feeding position checks, urinary Foley catheter changing, bladder irrigation & stoma pouch care."
+  },
+  "🩺 Clinical Staff & Nurses (医护人员)": {
+    "zh": "🩺 Clinical Staff & Nurses (医护人员)",
+    "bm": "🩺 Clinical Staff & Nurses (医护人员)",
+    "ta": "🩺 Clinical Staff & Nurses (医护人员)"
+  },
+  "Direct Mirrors:": {
+    "zh": "备用直接下载镜像：",
+    "bm": "Cermin Muat Turun Terus:",
+    "ta": "நேரடி பதிவிறக்க இணைப்புகள்:"
+  },
+  "Step 1: Public": {
+    "zh": "Step 1: Public",
+    "bm": "Step 1: Public",
+    "ta": "Step 1: Public"
+  },
+  "预约摘要 · Check this before you send. Nothing is sent until you tap the button.": {
+    "zh": "预约摘要 · Check this before you send. Nothing is sent until you tap the button.",
+    "bm": "预约摘要 · Check this before you send. Nothing is sent until you tap the button.",
+    "ta": "预约摘要 · Check this before you send. Nothing is sent until you tap the button."
+  },
+  "Click": {
+    "zh": "Click",
+    "bm": "Click",
+    "ta": "Click"
+  },
+  "Emergency & Hospital GPS": {
+    "zh": "Emergency & Hospital GPS",
+    "bm": "Emergency & Hospital GPS",
+    "ta": "Emergency & Hospital GPS"
+  },
+  "Just asking": {
+    "zh": "Just asking",
+    "bm": "Just asking",
+    "ta": "Just asking"
+  },
+  "个人卫生 · 洗澡清洁": {
+    "zh": "个人卫生 · 洗澡清洁",
+    "bm": "个人卫生 · 洗澡清洁",
+    "ta": "个人卫生 · 洗澡清洁"
+  },
+  "Preferred visiting time": {
+    "zh": "Preferred visiting time",
+    "bm": "Preferred visiting time",
+    "ta": "Preferred visiting time"
+  },
+  "Pin to Taskbar or Desktop for 1-click clinical workstation access.": {
+    "zh": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
+    "bm": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
+    "ta": "Pin to Taskbar or Desktop for 1-click clinical workstation access."
+  },
+  "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.": {
+    "zh": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.",
+    "bm": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top.",
+    "ta": "Heel of one hand on center of chest (lower breastbone), interlock other hand on top."
+  },
+  "☎ 04-222 9199": {
+    "zh": "☎ 04-222 9199",
+    "bm": "☎ 04-222 9199",
+    "ta": "☎ 04-222 9199"
+  },
+  "因地制宜·环境规划：": {
+    "zh": "因地制宜·环境规划：",
+    "bm": "因地制宜·环境规划：",
+    "ta": "因地制宜·环境规划："
+  },
+  "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.": {
+    "zh": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.",
+    "bm": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols.",
+    "ta": "to solve this exact challenge: our nurses and caregivers are trained to evaluate the home setting, plan safe bedside workflows, and guide family members—all while strictly adhering to Malaysian Ministry of Health (MOH) and Nursing Board (LJM) clinical protocols."
+  },
+  "View Specifications & Advice →": {
+    "zh": "View Specifications & Advice →",
+    "bm": "View Specifications & Advice →",
+    "ta": "View Specifications & Advice →"
+  },
+  "RM 2,500": {
+    "zh": "RM 2,500",
+    "bm": "RM 2,500",
+    "ta": "RM 2,500"
+  },
+  "💊 Medication Administration Record (用药记录表)": {
+    "zh": "💊 Medication Administration Record (用药记录表)",
+    "bm": "💊 Medication Administration Record (用药记录表)",
+    "ta": "💊 Medication Administration Record (用药记录表)"
+  },
+  "MALAYSIA & PENANG HOTLINES": {
+    "zh": "MALAYSIA & PENANG HOTLINES",
+    "bm": "MALAYSIA & PENANG HOTLINES",
+    "ta": "MALAYSIA & PENANG HOTLINES"
+  },
+  "📈 MEWS Vitals (生命体征)": {
+    "zh": "📈 MEWS Vitals (生命体征)",
+    "bm": "📈 MEWS Vitals (生命体征)",
+    "ta": "📈 MEWS Vitals (生命体征)"
+  },
+  "19 & 21, Logan Road, 10400 George Town, Penang": {
+    "zh": "19 & 21, Logan Road, 10400 George Town, Penang",
+    "bm": "19 & 21, Logan Road, 10400 George Town, Penang",
+    "ta": "19 & 21, Logan Road, 10400 George Town, Penang"
+  },
+  "RM 180 – RM 320 / mo": {
+    "zh": "RM 180 – RM 320 / mo",
+    "bm": "RM 180 – RM 320 / mo",
+    "ta": "RM 180 – RM 320 / mo"
+  },
+  "Sign Out": {
+    "zh": "Sign Out",
+    "bm": "Sign Out",
+    "ta": "Sign Out"
+  },
+  "🩺 Staff Sign-In": {
+    "zh": "🩺 Staff Sign-In",
+    "bm": "🩺 Staff Sign-In",
+    "ta": "🩺 Staff Sign-In"
+  },
+  "Assura 24/7 Clinical Care Line": {
+    "zh": "Assura 24/7 Clinical Care Line",
+    "bm": "Assura 24/7 Clinical Care Line",
+    "ta": "Assura 24/7 Clinical Care Line"
+  },
+  "☎ 04-228 3991": {
+    "zh": "☎ 04-228 3991",
+    "bm": "☎ 04-228 3991",
+    "ta": "☎ 04-228 3991"
+  },
+  "Stroke Rehabilitation & Offloading": {
+    "zh": "Stroke Rehabilitation & Offloading",
+    "bm": "Stroke Rehabilitation & Offloading",
+    "ta": "Stroke Rehabilitation & Offloading"
+  },
+  "v2.4 · Android APK · Windows EXE · Web PWA": {
+    "zh": "v2.4 · Android APK · Windows EXE · Web PWA",
+    "bm": "v2.4 · Android APK · Windows EXE · Web PWA",
+    "ta": "v2.4 · Android APK · Windows EXE · Web PWA"
+  },
+  "☎ 04-643 2743": {
+    "zh": "☎ 04-643 2743",
+    "bm": "☎ 04-643 2743",
+    "ta": "☎ 04-643 2743"
+  },
+  "Start 110 BPM CPR Rhythm Metronome": {
+    "zh": "Start 110 BPM CPR Rhythm Metronome",
+    "bm": "Start 110 BPM CPR Rhythm Metronome",
+    "ta": "Start 110 BPM CPR Rhythm Metronome"
+  },
+  "admin@assuranursing.com": {
+    "zh": "admin@assuranursing.com",
+    "bm": "admin@assuranursing.com",
+    "ta": "admin@assuranursing.com"
+  },
+  "24/7 Direct Care / Line:": {
+    "zh": "24/7 Direct Care / Line:",
+    "bm": "24/7 Direct Care / Line:",
+    "ta": "24/7 Direct Care / Line:"
+  },
+  "Estimated Rental": {
+    "zh": "Estimated Rental",
+    "bm": "Estimated Rental",
+    "ta": "Estimated Rental"
+  },
+  "Direct APK Mirror": {
+    "zh": "直接下载 APK 安装包",
+    "bm": "Muat Turun Terus APK",
+    "ta": "நேரடி APK பதிவிறக்கம்"
+  },
+  "🎬 First-Time User Guide Video & Memo (首次使用指南)": {
+    "zh": "🎬 First-Time User Guide Video & Memo (首次使用指南)",
+    "bm": "🎬 First-Time User Guide Video & Memo (首次使用指南)",
+    "ta": "🎬 First-Time User Guide Video & Memo (首次使用指南)"
+  },
+  "Registered Mobile Phone (手机号码) or Case Code (病历编号)": {
+    "zh": "Registered Mobile Phone (手机号码) or Case Code (病历编号)",
+    "bm": "Registered Mobile Phone (手机号码) or Case Code (病历编号)",
+    "ta": "Registered Mobile Phone (手机号码) or Case Code (病历编号)"
+  },
+  "Aspiration Prevention & Bolus Protocol": {
+    "zh": "Aspiration Prevention & Bolus Protocol",
+    "bm": "Aspiration Prevention & Bolus Protocol",
+    "ta": "Aspiration Prevention & Bolus Protocol"
+  },
+  "2. Uncompromising Nursing Fundamentals": {
+    "zh": "2. Uncompromising Nursing Fundamentals",
+    "bm": "2. Uncompromising Nursing Fundamentals",
+    "ta": "2. Uncompromising Nursing Fundamentals"
+  },
+  "Malaysian Red Crescent (BSMM)": {
+    "zh": "Malaysian Red Crescent (BSMM)",
+    "bm": "Malaysian Red Crescent (BSMM)",
+    "ta": "Malaysian Red Crescent (BSMM)"
+  },
+  "Next Step →": {
+    "zh": "Next Step →",
+    "bm": "Next Step →",
+    "ta": "Next Step →"
+  },
+  "Compassion First (仁爱关怀)": {
+    "zh": "Compassion First (仁爱关怀)",
+    "bm": "Compassion First (仁爱关怀)",
+    "ta": "Compassion First (仁爱关怀)"
+  },
+  "End-of-Life Care": {
+    "zh": "End-of-Life Care",
+    "bm": "End-of-Life Care",
+    "ta": "End-of-Life Care"
+  },
+  "3. Individualized Care Roadmap": {
+    "zh": "3. Individualized Care Roadmap",
+    "bm": "3. Individualized Care Roadmap",
+    "ta": "3. Individualized Care Roadmap"
+  },
+  "RM 60 – RM 100 / mo": {
+    "zh": "RM 60 – RM 100 / mo",
+    "bm": "RM 60 – RM 100 / mo",
+    "ta": "RM 60 – RM 100 / mo"
+  },
+  "Login Identifier": {
+    "zh": "Login Identifier",
+    "bm": "Login Identifier",
+    "ta": "Login Identifier"
+  },
+  "Bayan Lepas / Queensbay / Relau": {
+    "zh": "Bayan Lepas / Queensbay / Relau",
+    "bm": "Bayan Lepas / Queensbay / Relau",
+    "ta": "Bayan Lepas / Queensbay / Relau"
+  },
+  "☎ 04-238 8888": {
+    "zh": "☎ 04-238 8888",
+    "bm": "☎ 04-238 8888",
+    "ta": "☎ 04-238 8888"
+  },
+  "创办人兼临床总监": {
+    "zh": "创办人兼临床总监",
+    "bm": "创办人兼临床总监",
+    "ta": "创办人兼临床总监"
+  },
+  "2/3-Function Electric Hospital Bed": {
+    "zh": "2/3-Function Electric Hospital Bed",
+    "bm": "2/3-Function Electric Hospital Bed",
+    "ta": "2/3-Function Electric Hospital Bed"
+  },
+  "优先安排男护士 (力气大·翻身/男导尿)": {
+    "zh": "优先安排男护士 (力气大·翻身/男导尿)",
+    "bm": "优先安排男护士 (力气大·翻身/男导尿)",
+    "ta": "优先安排男护士 (力气大·翻身/男导尿)"
+  },
+  "Kepala Batas / Tasek Gelugor / Bertam": {
+    "zh": "Kepala Batas / Tasek Gelugor / Bertam",
+    "bm": "Kepala Batas / Tasek Gelugor / Bertam",
+    "ta": "Kepala Batas / Tasek Gelugor / Bertam"
+  },
+  "Action": {
+    "zh": "Action",
+    "bm": "Action",
+    "ta": "Action"
+  },
+  "Auto-Fill": {
+    "zh": "Auto-Fill",
+    "bm": "Auto-Fill",
+    "ta": "Auto-Fill"
   },
   "👴 Palliative & Bedside Nursing": {
     "zh": "👴 Palliative & Bedside Nursing",
     "bm": "👴 Palliative & Bedside Nursing",
     "ta": "👴 Palliative & Bedside Nursing"
   },
+  "Case Code or Phone ·": {
+    "zh": "Case Code or Phone ·",
+    "bm": "Case Code or Phone ·",
+    "ta": "Case Code or Phone ·"
+  },
+  "方圆 25 公里": {
+    "zh": "方圆 25 公里",
+    "bm": "方圆 25 公里",
+    "ta": "方圆 25 公里"
+  },
+  "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。": {
+    "zh": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。",
+    "bm": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。",
+    "ta": "如属紧急医疗状况（胸痛、呼吸困难、大量出血、昏迷、中风征兆），请立即拨打 999。"
+  },
+  "Female Nurse / Caregiver": {
+    "zh": "Female Nurse / Caregiver",
+    "bm": "Female Nurse / Caregiver",
+    "ta": "Female Nurse / Caregiver"
+  },
+  "Just leave your name, phone and question — everything else is optional.": {
+    "zh": "Just leave your name, phone and question — everything else is optional.",
+    "bm": "Just leave your name, phone and question — everything else is optional.",
+    "ta": "Just leave your name, phone and question — everything else is optional."
+  },
+  "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.": {
+    "zh": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.",
+    "bm": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression.",
+    "ta": "Care plans are customized based on doctor discharge summaries, medication orders, mobility goals, and family schedules to ensure seamless recovery progression."
+  },
+  "☎ 112": {
+    "zh": "☎ 112",
+    "bm": "☎ 112",
+    "ta": "☎ 112"
+  },
+  "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.": {
+    "zh": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.",
+    "bm": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent.",
+    "ta": "Flush tube with 30–50ml warm boiled water post-feed to keep lumen patent."
+  },
+  "🏥 Penang Island Hospitals (Government & Private)": {
+    "zh": "🏥 Penang Island Hospitals (Government & Private)",
+    "bm": "🏥 Penang Island Hospitals (Government & Private)",
+    "ta": "🏥 Penang Island Hospitals (Government & Private)"
+  },
+  "公众与普通患者": {
+    "zh": "公众与普通患者",
+    "bm": "公众与普通患者",
+    "ta": "公众与普通患者"
+  },
+  "在册医护人员": {
+    "zh": "在册医护人员",
+    "bm": "在册医护人员",
+    "ta": "在册医护人员"
+  },
+  "Private Home": {
+    "zh": "Private Home",
+    "bm": "Private Home",
+    "ta": "Private Home"
+  },
+  "The Guiding Principles Behind Every Home Visit": {
+    "zh": "The Guiding Principles Behind Every Home Visit",
+    "bm": "The Guiding Principles Behind Every Home Visit",
+    "ta": "The Guiding Principles Behind Every Home Visit"
+  },
+  "📝 Book Form": {
+    "zh": "📝 Book Form",
+    "bm": "📝 Book Form",
+    "ta": "📝 Book Form"
+  },
+  "📚 Patient & Family Clinical Home Care Guides": {
+    "zh": "📚 Patient & Family Clinical Home Care Guides",
+    "bm": "📚 Patient & Family Clinical Home Care Guides",
+    "ta": "📚 Patient & Family Clinical Home Care Guides"
+  },
+  "Female Nurse / Caregiver (女护士/女护理师)": {
+    "zh": "Female Nurse / Caregiver (女护士/女护理师)",
+    "bm": "Female Nurse / Caregiver (女护士/女护理师)",
+    "ta": "Female Nurse / Caregiver (女护士/女护理师)"
+  },
+  "Click to view rates for Wound Care": {
+    "zh": "Click to view rates for Wound Care",
+    "bm": "Click to view rates for Wound Care",
+    "ta": "Click to view rates for Wound Care"
+  },
+  "Pick a visiting time": {
+    "zh": "Pick a visiting time",
+    "bm": "Pick a visiting time",
+    "ta": "Pick a visiting time"
+  },
+  "Standard Malaysian Clinical Dosing Schedule": {
+    "zh": "Standard Malaysian Clinical Dosing Schedule",
+    "bm": "Standard Malaysian Clinical Dosing Schedule",
+    "ta": "Standard Malaysian Clinical Dosing Schedule"
+  },
+  "安宁疗护 · 舒缓护理": {
+    "zh": "安宁疗护 · 舒缓护理",
+    "bm": "安宁疗护 · 舒缓护理",
+    "ta": "安宁疗护 · 舒缓护理"
+  },
+  "🛡️": {
+    "zh": "🛡️",
+    "bm": "🛡️",
+    "ta": "🛡️"
+  },
+  "Save this booking app": {
+    "zh": "Save this booking app",
+    "bm": "Save this booking app",
+    "ta": "Save this booking app"
+  },
+  "Click to view rates for Stroke Rehab": {
+    "zh": "Click to view rates for Stroke Rehab",
+    "bm": "Click to view rates for Stroke Rehab",
+    "ta": "Click to view rates for Stroke Rehab"
+  },
+  "2-Hourly Turning & Contracture Prevention": {
+    "zh": "2-Hourly Turning & Contracture Prevention",
+    "bm": "2-Hourly Turning & Contracture Prevention",
+    "ta": "2-Hourly Turning & Contracture Prevention"
+  },
+  "Online": {
+    "zh": "Online",
+    "bm": "Online",
+    "ta": "Online"
+  },
+  "⚡ Estimate Rate": {
+    "zh": "⚡ Estimate Rate",
+    "bm": "⚡ Estimate Rate",
+    "ta": "⚡ Estimate Rate"
+  },
+  "☎ 04-222 7200": {
+    "zh": "☎ 04-222 7200",
+    "bm": "☎ 04-222 7200",
+    "ta": "☎ 04-222 7200"
+  },
+  "Medical Oxygen Concentrator (5L/10L)": {
+    "zh": "Medical Oxygen Concentrator (5L/10L)",
+    "bm": "Medical Oxygen Concentrator (5L/10L)",
+    "ta": "Medical Oxygen Concentrator (5L/10L)"
+  },
+  "RM 180 / mo": {
+    "zh": "RM 180 / mo",
+    "bm": "RM 180 / mo",
+    "ta": "RM 180 / mo"
+  },
+  "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas": {
+    "zh": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas",
+    "bm": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas",
+    "ta": "82, Jalan Tengah, Bandar Bayan Baru, 11900 Bayan Lepas"
+  },
+  "Bagan Specialist Centre": {
+    "zh": "Bagan Specialist Centre",
+    "bm": "Bagan Specialist Centre",
+    "ta": "Bagan Specialist Centre"
+  },
+  "custom": {
+    "zh": "custom",
+    "bm": "custom",
+    "ta": "custom"
+  },
+  "We are a home nursing service, not an ambulance. For urgent": {
+    "zh": "We are a home nursing service, not an ambulance. For urgent",
+    "bm": "We are a home nursing service, not an ambulance. For urgent",
+    "ta": "We are a home nursing service, not an ambulance. For urgent"
+  },
+  "🚨 Immediate 24/7 Emergency & Ambulance Dispatch": {
+    "zh": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch",
+    "bm": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch",
+    "ta": "🚨 Immediate 24/7 Emergency & Ambulance Dispatch"
+  },
+  "🚨 24/7 Hospital Emergency GPS": {
+    "zh": "🚨 24/7 Hospital Emergency GPS",
+    "bm": "🚨 24/7 Hospital Emergency GPS",
+    "ta": "🚨 24/7 Hospital Emergency GPS"
+  },
+  "Assura Nursing — home": {
+    "zh": "Assura Nursing — home",
+    "bm": "Assura Nursing — home",
+    "ta": "Assura Nursing — home"
+  },
+  "Back to Home": {
+    "zh": "Back to Home",
+    "bm": "Back to Home",
+    "ta": "Back to Home"
+  },
+  "Active Coordination (就近协调·迅速回复)": {
+    "zh": "Active Coordination (就近协调·迅速回复)",
+    "bm": "Active Coordination (就近协调·迅速回复)",
+    "ta": "Active Coordination (就近协调·迅速回复)"
+  },
+  "🩺 Monitoring & Kits": {
+    "zh": "🩺 Monitoring & Kits",
+    "bm": "🩺 Monitoring & Kits",
+    "ta": "🩺 Monitoring & Kits"
+  },
+  "企业愿景": {
+    "zh": "企业愿景",
+    "bm": "企业愿景",
+    "ta": "企业愿景"
+  },
+  "Set Security PIN / Password (设定您的安全密码)": {
+    "zh": "Set Security PIN / Password (设定您的安全密码)",
+    "bm": "Set Security PIN / Password (设定您的安全密码)",
+    "ta": "Set Security PIN / Password (设定您的安全密码)"
+  },
+  "Use my details · 填入资料": {
+    "zh": "Use my details · 填入资料",
+    "bm": "Use my details · 填入资料",
+    "ta": "Use my details · 填入资料"
+  },
+  "24/7 Emergency Line:": {
+    "zh": "24/7 Emergency Line:",
+    "bm": "24/7 Emergency Line:",
+    "ta": "24/7 Emergency Line:"
+  },
+  "⏰ ON (Nightly):": {
+    "zh": "⏰ ON (Nightly):",
+    "bm": "⏰ ON (Nightly):",
+    "ta": "⏰ ON (Nightly):"
+  },
+  "Tanjung Bungah / Batu Ferringhi": {
+    "zh": "Tanjung Bungah / Batu Ferringhi",
+    "bm": "Tanjung Bungah / Batu Ferringhi",
+    "ta": "Tanjung Bungah / Batu Ferringhi"
+  },
+  "☎ 04-382 7333": {
+    "zh": "☎ 04-382 7333",
+    "bm": "☎ 04-382 7333",
+    "ta": "☎ 04-382 7333"
+  },
+  "☎ 04-222 7799": {
+    "zh": "☎ 04-222 7799",
+    "bm": "☎ 04-222 7799",
+    "ta": "☎ 04-222 7799"
+  },
+  "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"": {
+    "zh": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"",
+    "bm": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\"",
+    "ta": "\"Every family's home is unique. When patients return home after surgery or illness, they need professional, trained nurses who understand how to plan care around their specific living space—minimizing infection risks through strict hygiene and aseptic handling, while keeping patient safety and comfort at the center.\""
+  },
+  "👤 Patient & Family": {
+    "zh": "👤 Patient & Family",
+    "bm": "👤 Patient & Family",
+    "ta": "👤 Patient & Family"
+  },
+  "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.": {
+    "zh": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.",
+    "bm": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma.",
+    "ta": "Ensure tubing is free of loops, kinks, or tension that can cause urethral trauma."
+  },
+  "19:00 or 22:00 before sleep": {
+    "zh": "19:00 or 22:00 before sleep",
+    "bm": "19:00 or 22:00 before sleep",
+    "ta": "19:00 or 22:00 before sleep"
+  },
+  "Home Nursing & Nurse Dispatch": {
+    "zh": "Home Nursing & Nurse Dispatch",
+    "bm": "Home Nursing & Nurse Dispatch",
+    "ta": "Home Nursing & Nurse Dispatch"
+  },
+  "Call us · 拨打 012-206 4868": {
+    "zh": "Call us · 拨打 012-206 4868",
+    "bm": "Call us · 拨打 012-206 4868",
+    "ta": "Call us · 拨打 012-206 4868"
+  },
+  "supervisor@assuranursing.com": {
+    "zh": "supervisor@assuranursing.com",
+    "bm": "supervisor@assuranursing.com",
+    "ta": "supervisor@assuranursing.com"
+  },
+  "只需留下姓名、电话和问题，其余可不填。": {
+    "zh": "只需留下姓名、电话和问题，其余可不填。",
+    "bm": "只需留下姓名、电话和问题，其余可不填。",
+    "ta": "只需留下姓名、电话和问题，其余可不填。"
+  },
+  "ADL Assistance": {
+    "zh": "ADL Assistance",
+    "bm": "ADL Assistance",
+    "ta": "ADL Assistance"
+  },
+  "WhatsApp": {
+    "zh": "WhatsApp",
+    "bm": "WhatsApp",
+    "ta": "WhatsApp"
+  },
+  "🧠 Stroke & Post-Op Rehab": {
+    "zh": "🧠 Stroke & Post-Op Rehab",
+    "bm": "🧠 Stroke & Post-Op Rehab",
+    "ta": "🧠 Stroke & Post-Op Rehab"
+  },
+  "中文": {
+    "zh": "中文",
+    "bm": "中文",
+    "ta": "中文"
+  },
+  "Nibong Tebal / Jawi / Sungai Bakap": {
+    "zh": "Nibong Tebal / Jawi / Sungai Bakap",
+    "bm": "Nibong Tebal / Jawi / Sungai Bakap",
+    "ta": "Nibong Tebal / Jawi / Sungai Bakap"
+  },
+  "RM 120.00": {
+    "zh": "RM 120.00",
+    "bm": "RM 120.00",
+    "ta": "RM 120.00"
+  },
+  "Wound Dressing": {
+    "zh": "Wound Dressing",
+    "bm": "Wound Dressing",
+    "ta": "Wound Dressing"
+  },
+  "National Emergency Toll-Free": {
+    "zh": "National Emergency Toll-Free",
+    "bm": "National Emergency Toll-Free",
+    "ta": "National Emergency Toll-Free"
+  },
+  "恪守根本·降低感染风险：": {
+    "zh": "恪守根本·降低感染风险：",
+    "bm": "恪守根本·降低感染风险：",
+    "ta": "恪守根本·降低感染风险："
+  },
+  "Ripple Anti-Decubitus Mattress": {
+    "zh": "Ripple Anti-Decubitus Mattress",
+    "bm": "Ripple Anti-Decubitus Mattress",
+    "ta": "Ripple Anti-Decubitus Mattress"
+  },
+  "Open the file from notifications or your": {
+    "zh": "Open the file from notifications or your",
+    "bm": "Open the file from notifications or your",
+    "ta": "Open the file from notifications or your"
+  },
+  "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。": {
+    "zh": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。",
+    "bm": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。",
+    "ta": "：无需输入密码，直接打开 App 即可享受全套护理资讯与紧急呼叫。"
+  },
+  "⏰ OD (Once Daily):": {
+    "zh": "⏰ OD (Once Daily):",
+    "bm": "⏰ OD (Once Daily):",
+    "ta": "⏰ OD (Once Daily):"
+  },
+  "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.": {
+    "zh": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.",
+    "bm": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang.",
+    "ta": "Install the official mobile or desktop application for seamless offline support, direct alerts, and clinical access across Penang."
+  },
+  "☎ 04-222 5222": {
+    "zh": "☎ 04-222 5222",
+    "bm": "☎ 04-222 5222",
+    "ta": "☎ 04-222 5222"
+  },
+  "Receive shift alerts, patient reminders, and emergency updates even without internet.": {
+    "zh": "Receive shift alerts, patient reminders, and emergency updates even without internet.",
+    "bm": "Receive shift alerts, patient reminders, and emergency updates even without internet.",
+    "ta": "Receive shift alerts, patient reminders, and emergency updates even without internet."
+  },
+  "Not selected yet": {
+    "zh": "Not selected yet",
+    "bm": "Not selected yet",
+    "ta": "Not selected yet"
+  },
+  "💻 Windows .EXE (2.1 MB)": {
+    "zh": "💻 Windows .EXE (2.1 MB)",
+    "bm": "💻 Windows .EXE (2.1 MB)",
+    "ta": "💻 Windows .EXE (2.1 MB)"
+  },
+  "医护工号登录": {
+    "zh": "医护工号登录",
+    "bm": "医护工号登录",
+    "ta": "医护工号登录"
+  },
+  "Next ▶": {
+    "zh": "Next ▶",
+    "bm": "Next ▶",
+    "ta": "Next ▶"
+  },
+  "RM 250 – RM 450 / mo": {
+    "zh": "RM 250 – RM 450 / mo",
+    "bm": "RM 250 – RM 450 / mo",
+    "ta": "RM 250 – RM 450 / mo"
+  },
+  "Crucial:": {
+    "zh": "Crucial:",
+    "bm": "Crucial:",
+    "ta": "Crucial:"
+  },
+  "Our Vision": {
+    "zh": "Our Vision",
+    "bm": "Our Vision",
+    "ta": "Our Vision"
+  },
+  "资料只存于本手机，发送前我们不会看到。": {
+    "zh": "资料只存于本手机，发送前我们不会看到。",
+    "bm": "资料只存于本手机，发送前我们不会看到。",
+    "ta": "资料只存于本手机，发送前我们不会看到。"
+  },
+  "Staff ID Sign-in": {
+    "zh": "Staff ID Sign-in",
+    "bm": "Staff ID Sign-in",
+    "ta": "Staff ID Sign-in"
+  },
+  "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值": {
+    "zh": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值",
+    "bm": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值",
+    "ta": "Our Story, Standards & Values · 创办理念 · 专业标准 · 核心价值"
+  },
+  "Announcements & Nurse Recruitment": {
+    "zh": "Announcements & Nurse Recruitment",
+    "bm": "Announcements & Nurse Recruitment",
+    "ta": "Announcements & Nurse Recruitment"
+  },
+  "Need Professional Nurse Visit or Equipment in Penang?": {
+    "zh": "Need Professional Nurse Visit or Equipment in Penang?",
+    "bm": "Need Professional Nurse Visit or Equipment in Penang?",
+    "ta": "Need Professional Nurse Visit or Equipment in Penang?"
+  },
+  "St. John Ambulance (Penang)": {
+    "zh": "St. John Ambulance (Penang)",
+    "bm": "St. John Ambulance (Penang)",
+    "ta": "St. John Ambulance (Penang)"
+  },
+  "We travel": {
+    "zh": "We travel",
+    "bm": "We travel",
+    "ta": "We travel"
+  },
+  "Ambulance / Police / Bomba": {
+    "zh": "Ambulance / Police / Bomba",
+    "bm": "Ambulance / Police / Bomba",
+    "ta": "Ambulance / Police / Bomba"
+  },
+  "Tell us anything helpful about the patient": {
+    "zh": "Tell us anything helpful about the patient",
+    "bm": "Tell us anything helpful about the patient",
+    "ta": "Tell us anything helpful about the patient"
+  },
+  "Frequency": {
+    "zh": "Frequency",
+    "bm": "Frequency",
+    "ta": "Frequency"
+  },
+  "Launch Web App": {
+    "zh": "启动网页应用",
+    "bm": "Buka Aplikasi Web",
+    "ta": "வலை செயலியைத் திறக்கவும்"
+  },
+  "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.": {
+    "zh": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.",
+    "bm": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting.",
+    "ta": "While adapting to the home, our trained nurses maintain professional handling and aseptic non-touch technique (ANTT) for wound dressings and catheterizations—managing a clean procedural field to minimize infection risks even in a home setting."
+  },
   "临终关怀与家属支持": {
     "zh": "临终关怀与家属支持",
     "bm": "临终关怀与家属支持",
     "ta": "临终关怀与家属支持"
+  },
+  "Bukit Mertajam, Penang": {
+    "zh": "Bukit Mertajam, Penang",
+    "bm": "Bukit Mertajam, Penang",
+    "ta": "Bukit Mertajam, Penang"
+  },
+  "Jalan Bagan 1, 13400 Butterworth, Penang": {
+    "zh": "Jalan Bagan 1, 13400 Butterworth, Penang",
+    "bm": "Jalan Bagan 1, 13400 Butterworth, Penang",
+    "ta": "Jalan Bagan 1, 13400 Butterworth, Penang"
+  },
+  "How to Install Android APK:": {
+    "zh": "How to Install Android APK:",
+    "bm": "How to Install Android APK:",
+    "ta": "How to Install Android APK:"
+  },
+  "Step-by-Step Training": {
+    "zh": "Step-by-Step Training",
+    "bm": "Step-by-Step Training",
+    "ta": "Step-by-Step Training"
+  },
+  "Click to explore Medical Equipment": {
+    "zh": "Click to explore Medical Equipment",
+    "bm": "Click to explore Medical Equipment",
+    "ta": "Click to explore Medical Equipment"
+  },
+  "Bukit Mertajam & Central Seberang Perai": {
+    "zh": "Bukit Mertajam & Central Seberang Perai",
+    "bm": "Bukit Mertajam & Central Seberang Perai",
+    "ta": "Bukit Mertajam & Central Seberang Perai"
+  },
+  "💉 Medication & Injections": {
+    "zh": "💉 Medication & Injections",
+    "bm": "💉 Medication & Injections",
+    "ta": "💉 Medication & Injections"
+  },
+  "📌 First-Time User Memo (使用备忘):": {
+    "zh": "📌 First-Time User Memo (使用备忘):",
+    "bm": "📌 First-Time User Memo (使用备忘):",
+    "ta": "📌 First-Time User Memo (使用备忘):"
+  },
+  "应用。": {
+    "zh": "应用。",
+    "bm": "应用。",
+    "ta": "应用。"
+  },
+  "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价": {
+    "zh": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价",
+    "bm": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价",
+    "ta": "注册执业护士与专业医护护理人员 · 专属上门居家探访 · 探访前提供透明清晰报价"
+  },
+  "Hospital / Specialist Clinic Escort · RM 150": {
+    "zh": "Hospital / Specialist Clinic Escort · RM 150",
+    "bm": "Hospital / Specialist Clinic Escort · RM 150",
+    "ta": "Hospital / Specialist Clinic Escort · RM 150"
+  },
+  "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).": {
+    "zh": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).",
+    "bm": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles).",
+    "ta": "Apply barrier moisturizing cream over bony prominences (sacrum, hips, ankles)."
+  },
+  "to place Assura on your mobile home screen.": {
+    "zh": "to place Assura on your mobile home screen.",
+    "bm": "to place Assura on your mobile home screen.",
+    "ta": "to place Assura on your mobile home screen."
+  },
+  "Step 1: Check Responsiveness": {
+    "zh": "Step 1: Check Responsiveness",
+    "bm": "Step 1: Check Responsiveness",
+    "ta": "Step 1: Check Responsiveness"
+  },
+  "📌 Official User Guide Memo (使用要点备忘):": {
+    "zh": "📌 Official User Guide Memo (使用要点备忘):",
+    "bm": "📌 Official User Guide Memo (使用要点备忘):",
+    "ta": "📌 Official User Guide Memo (使用要点备忘):"
+  },
+  "RM 40 – RM 70 / mo": {
+    "zh": "RM 40 – RM 70 / mo",
+    "bm": "RM 40 – RM 70 / mo",
+    "ta": "RM 40 – RM 70 / mo"
+  },
+  "⚡ Instant Price Estimator": {
+    "zh": "⚡ Instant Price Estimator",
+    "bm": "⚡ Instant Price Estimator",
+    "ta": "⚡ Instant Price Estimator"
+  },
+  "Please choose a time.": {
+    "zh": "Please choose a time.",
+    "bm": "Please choose a time.",
+    "ta": "Please choose a time."
+  },
+  "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.": {
+    "zh": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.",
+    "bm": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.",
+    "ta": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited."
+  },
+  "Saved only on this phone. We never see it until you send the message.": {
+    "zh": "Saved only on this phone. We never see it until you send the message.",
+    "bm": "Saved only on this phone. We never see it until you send the message.",
+    "ta": "Saved only on this phone. We never see it until you send the message."
+  },
+  "预约上门": {
+    "zh": "预约上门",
+    "bm": "预约上门",
+    "ta": "预约上门"
+  },
+  "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.": {
+    "zh": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.",
+    "bm": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing.",
+    "ta": "You do not need to sign in or register to browse home nursing procedures, calculate transparent prices, or use emergency hospital GPS routing."
+  },
+  "☎ 04-643 3888": {
+    "zh": "☎ 04-643 3888",
+    "bm": "☎ 04-643 3888",
+    "ta": "☎ 04-643 3888"
+  },
+  "Oncology Specialist": {
+    "zh": "Oncology Specialist",
+    "bm": "Oncology Specialist",
+    "ta": "Oncology Specialist"
+  },
+  "Download Assura Nursing App · Android APK & Windows Desktop": {
+    "zh": "Download Assura Nursing App · Android APK & Windows Desktop",
+    "bm": "Download Assura Nursing App · Android APK & Windows Desktop",
+    "ta": "Download Assura Nursing App · Android APK & Windows Desktop"
+  },
+  "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.": {
+    "zh": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.",
+    "bm": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic.",
+    "ta": "We answer when we can, but we cannot promise immediate availability. If nobody answers, call 999 or go to the nearest clinic."
+  },
+  "Georgetown / Jelutong / Pulau Tikus": {
+    "zh": "Georgetown / Jelutong / Pulau Tikus",
+    "bm": "Georgetown / Jelutong / Pulau Tikus",
+    "ta": "Georgetown / Jelutong / Pulau Tikus"
+  },
+  "Media, Clinical Resources & Emergency Hub": {
+    "zh": "Media, Clinical Resources & Emergency Hub",
+    "bm": "Media, Clinical Resources & Emergency Hub",
+    "ta": "Media, Clinical Resources & Emergency Hub"
+  },
+  "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。": {
+    "zh": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。",
+    "bm": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。",
+    "ta": "点击后会打开 WhatsApp，预约资料已自动填好，按发送即可。"
+  },
+  "We founded": {
+    "zh": "We founded",
+    "bm": "We founded",
+    "ta": "We founded"
+  },
+  "Preferred date": {
+    "zh": "Preferred date",
+    "bm": "Preferred date",
+    "ta": "Preferred date"
+  },
+  "Times": {
+    "zh": "Times",
+    "bm": "Times",
+    "ta": "Times"
+  },
+  "Direct EXE Mirror": {
+    "zh": "直接下载 EXE 安装包",
+    "bm": "Muat Turun Terus EXE",
+    "ta": "நேரடி EXE பதிவிறக்கம்"
+  },
+  "Forget me · 清除": {
+    "zh": "Forget me · 清除",
+    "bm": "Forget me · 清除",
+    "ta": "Forget me · 清除"
+  },
+  "更换鼻胃管（喂食管）": {
+    "zh": "更换鼻胃管（喂食管）",
+    "bm": "更换鼻胃管（喂食管）",
+    "ta": "更换鼻胃管（喂食管）"
+  },
+  "Address": {
+    "zh": "Address",
+    "bm": "Address",
+    "ta": "Address"
+  },
+  ", tap Settings and allow.": {
+    "zh": ", tap Settings and allow.",
+    "bm": ", tap Settings and allow.",
+    "ta": ", tap Settings and allow."
+  },
+  "Book a visit": {
+    "zh": "Book a visit",
+    "bm": "Book a visit",
+    "ta": "Book a visit"
+  },
+  "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。": {
+    "zh": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。",
+    "bm": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。",
+    "ta": "我们会尽快回复，但无法保证随时到场。如无人接听，请拨 999 或前往就近诊所。"
+  },
+  "Basic Wound Dressing · Bukit Mertajam": {
+    "zh": "Basic Wound Dressing · Bukit Mertajam",
+    "bm": "Basic Wound Dressing · Bukit Mertajam",
+    "ta": "Basic Wound Dressing · Bukit Mertajam"
+  },
+  "♿ Transfer": {
+    "zh": "♿ Transfer",
+    "bm": "♿ Transfer",
+    "ta": "♿ Transfer"
+  },
+  "Assura Nursing App · 官方手机应用": {
+    "zh": "Assura Nursing App · 官方手机应用",
+    "bm": "Assura Nursing App · 官方手机应用",
+    "ta": "Assura Nursing App · 官方手机应用"
+  },
+  "选择护理项目": {
+    "zh": "选择护理项目",
+    "bm": "选择护理项目",
+    "ta": "选择护理项目"
+  },
+  "Please enter your name.": {
+    "zh": "Please enter your name.",
+    "bm": "Please enter your name.",
+    "ta": "Please enter your name."
+  },
+  "Works on Locked / No-SIM phones": {
+    "zh": "Works on Locked / No-SIM phones",
+    "bm": "Works on Locked / No-SIM phones",
+    "ta": "Works on Locked / No-SIM phones"
+  },
+  "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).": {
+    "zh": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).",
+    "bm": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral).",
+    "ta": "Enforce a strict 2-hourly turning schedule (Left lateral → Supine → Right lateral)."
+  },
+  "🏡 Home Clinical Care Specialist": {
+    "zh": "🏡 Home Clinical Care Specialist",
+    "bm": "🏡 Home Clinical Care Specialist",
+    "ta": "🏡 Home Clinical Care Specialist"
+  },
+  "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)": {
+    "zh": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)",
+    "bm": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)",
+    "ta": "Private Home Nursing & Healthcare Services · Registered with Lembaga Jururawat Malaysia (LJM)"
+  },
+  "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland": {
+    "zh": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland",
+    "bm": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland",
+    "ta": "© 2026 Assura Nursing · All Rights Reserved · Penang Island & Mainland"
+  },
+  "Patient (Wound Care)": {
+    "zh": "Patient (Wound Care)",
+    "bm": "Patient (Wound Care)",
+    "ta": "Patient (Wound Care)"
+  },
+  "SEPTEMBER 2026 · SERVICE EXPANSION": {
+    "zh": "SEPTEMBER 2026 · SERVICE EXPANSION",
+    "bm": "SEPTEMBER 2026 · SERVICE EXPANSION",
+    "ta": "SEPTEMBER 2026 · SERVICE EXPANSION"
+  },
+  "Rental:": {
+    "zh": "Rental:",
+    "bm": "Rental:",
+    "ta": "Rental:"
+  },
+  "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.": {
+    "zh": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.",
+    "bm": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field.",
+    "ta": "Wash hands thoroughly with antibacterial soap and prepare a clean sterile field."
+  },
+  "医护人员与性别偏好（男女护士/护理师均可指定）": {
+    "zh": "医护人员与性别偏好（男女护士/护理师均可指定）",
+    "bm": "医护人员与性别偏好（男女护士/护理师均可指定）",
+    "ta": "医护人员与性别偏好（男女护士/护理师均可指定）"
+  },
+  "Penang Adventist Hospital (PAH)": {
+    "zh": "Penang Adventist Hospital (PAH)",
+    "bm": "Penang Adventist Hospital (PAH)",
+    "ta": "Penang Adventist Hospital (PAH)"
+  },
+  "📍 Filled from your location — please add your house/unit number if it's missing.": {
+    "zh": "📍 Filled from your location — please add your house/unit number if it's missing.",
+    "bm": "📍 Filled from your location — please add your house/unit number if it's missing.",
+    "ta": "📍 Filled from your location — please add your house/unit number if it's missing."
+  },
+  "☎ 04-828 6999": {
+    "zh": "☎ 04-828 6999",
+    "bm": "☎ 04-828 6999",
+    "ta": "☎ 04-828 6999"
+  },
+  "Island Hospital Penang": {
+    "zh": "Island Hospital Penang",
+    "bm": "Island Hospital Penang",
+    "ta": "Island Hospital Penang"
+  },
+  "📢 Official Company Bulletins & Clinical Announcements": {
+    "zh": "📢 Official Company Bulletins & Clinical Announcements",
+    "bm": "📢 Official Company Bulletins & Clinical Announcements",
+    "ta": "📢 Official Company Bulletins & Clinical Announcements"
+  },
+  "Downloads": {
+    "zh": "Downloads",
+    "bm": "Downloads",
+    "ta": "Downloads"
+  },
+  "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：": {
+    "zh": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：",
+    "bm": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们：",
+    "ta": "我们是居家护理服务，并非救护车。如遇尿管阻塞、伤口渗血不止、喂食管脱落等紧急护理需求，请直接联系我们："
+  },
+  "⚡ Install": {
+    "zh": "⚡ Install",
+    "bm": "⚡ Install",
+    "ta": "⚡ Install"
+  },
+  "📁 Medical Vault (病历文件)": {
+    "zh": "📁 Medical Vault (病历文件)",
+    "bm": "📁 Medical Vault (病历文件)",
+    "ta": "📁 Medical Vault (病历文件)"
+  },
+  "Penang General Hospital (HPP)": {
+    "zh": "Penang General Hospital (HPP)",
+    "bm": "Penang General Hospital (HPP)",
+    "ta": "Penang General Hospital (HPP)"
+  },
+  "Enter your Staff PIN": {
+    "zh": "Enter your Staff PIN",
+    "bm": "Enter your Staff PIN",
+    "ta": "Enter your Staff PIN"
+  },
+  "Surgical, Bedsores & Diabetic Ulcers": {
+    "zh": "Surgical, Bedsores & Diabetic Ulcers",
+    "bm": "Surgical, Bedsores & Diabetic Ulcers",
+    "ta": "Surgical, Bedsores & Diabetic Ulcers"
+  },
+  "🎬 First-Time App User Guide & Memo": {
+    "zh": "🎬 First-Time App User Guide & Memo",
+    "bm": "🎬 First-Time App User Guide & Memo",
+    "ta": "🎬 First-Time App User Guide & Memo"
+  },
+  "IV Drip Infusion & Medication Administration · RM 180": {
+    "zh": "IV Drip Infusion & Medication Administration · RM 180",
+    "bm": "IV Drip Infusion & Medication Administration · RM 180",
+    "ta": "IV Drip Infusion & Medication Administration · RM 180"
+  },
+  "病人情况 / 备注（选填）": {
+    "zh": "病人情况 / 备注（选填）",
+    "bm": "病人情况 / 备注（选填）",
+    "ta": "病人情况 / 备注（选填）"
+  },
+  "🏥 Hospital Acute Care Background": {
+    "zh": "🏥 Hospital Acute Care Background",
+    "bm": "🏥 Hospital Acute Care Background",
+    "ta": "🏥 Hospital Acute Care Background"
+  },
+  "After this page is published, install it from your browser for faster bookings.": {
+    "zh": "After this page is published, install it from your browser for faster bookings.",
+    "bm": "After this page is published, install it from your browser for faster bookings.",
+    "ta": "After this page is published, install it from your browser for faster bookings."
+  },
+  "新会员注册": {
+    "zh": "新会员注册",
+    "bm": "新会员注册",
+    "ta": "新会员注册"
+  },
+  "同一个 App 所有人通用": {
+    "zh": "同一个 App 所有人通用",
+    "bm": "同一个 App 所有人通用",
+    "ta": "同一个 App 所有人通用"
+  },
+  "🩹 Wound Care & Dressing": {
+    "zh": "🩹 Wound Care & Dressing",
+    "bm": "🩹 Wound Care & Dressing",
+    "ta": "🩹 Wound Care & Dressing"
+  },
+  "Patient condition / notes": {
+    "zh": "Patient condition / notes",
+    "bm": "Patient condition / notes",
+    "ta": "Patient condition / notes"
+  },
+  "Call": {
+    "zh": "Call",
+    "bm": "Call",
+    "ta": "Call"
+  },
+  "📍 Google Maps": {
+    "zh": "📍 Google Maps",
+    "bm": "📍 Google Maps",
+    "ta": "📍 Google Maps"
+  },
+  "Please choose a date.": {
+    "zh": "Please choose a date.",
+    "bm": "Please choose a date.",
+    "ta": "Please choose a date."
+  },
+  "Click to view rates for Hospital Escort": {
+    "zh": "Click to view rates for Hospital Escort",
+    "bm": "Click to view rates for Hospital Escort",
+    "ta": "Click to view rates for Hospital Escort"
+  },
+  "from your Downloads folder.": {
+    "zh": "from your Downloads folder.",
+    "bm": "from your Downloads folder.",
+    "ta": "from your Downloads folder."
+  },
+  "Assura Hub · 公告与招聘中心": {
+    "zh": "Assura Hub · 公告与招聘中心",
+    "bm": "Assura Hub · 公告与招聘中心",
+    "ta": "Assura Hub · 公告与招聘中心"
+  },
+  "居家护理服务": {
+    "zh": "居家护理服务",
+    "bm": "居家护理服务",
+    "ta": "居家护理服务"
+  },
+  "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"": {
+    "zh": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"",
+    "bm": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\"",
+    "ta": "\"To deliver accessible, personalized clinical nursing and compassionate home care—expertly adapting each care plan to the family's unique home environment with trained professional handling that minimizes infection risks while upholding fundamental nursing safety and patient dignity.\""
+  },
+  "Step 2: Family Case Link": {
+    "zh": "Step 2: Family Case Link",
+    "bm": "Step 2: Family Case Link",
+    "ta": "Step 2: Family Case Link"
+  },
+  "Perform gentle peri-care twice daily with mild soap and clean warm water.": {
+    "zh": "Perform gentle peri-care twice daily with mild soap and clean warm water.",
+    "bm": "Perform gentle peri-care twice daily with mild soap and clean warm water.",
+    "ta": "Perform gentle peri-care twice daily with mild soap and clean warm water."
+  },
+  "患者家属关联病历 (Case Link)": {
+    "zh": "患者家属关联病历 (Case Link)",
+    "bm": "患者家属关联病历 (Case Link)",
+    "ta": "患者家属关联病历 (Case Link)"
+  },
+  "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).": {
+    "zh": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).",
+    "bm": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes).",
+    "ta": "Administer feeding formula slowly via gravity (200–250ml over 20–30 minutes)."
+  },
+  "LJM Registered (SRN)": {
+    "zh": "LJM Registered (SRN)",
+    "bm": "LJM Registered (SRN)",
+    "ta": "LJM Registered (SRN)"
+  },
+  "PATIENT MEMBER ACCOUNT · 个人病历管理": {
+    "zh": "PATIENT MEMBER ACCOUNT · 个人病历管理",
+    "bm": "PATIENT MEMBER ACCOUNT · 个人病历管理",
+    "ta": "PATIENT MEMBER ACCOUNT · 个人病历管理"
+  },
+  "Jalan Balik Pulau, 11000 Balik Pulau, Penang": {
+    "zh": "Jalan Balik Pulau, 11000 Balik Pulau, Penang",
+    "bm": "Jalan Balik Pulau, 11000 Balik Pulau, Penang",
+    "ta": "Jalan Balik Pulau, 11000 Balik Pulau, Penang"
+  },
+  "时间": {
+    "zh": "时间",
+    "bm": "时间",
+    "ta": "时间"
+  },
+  "⏰ QID (Four Times Daily):": {
+    "zh": "⏰ QID (Four Times Daily):",
+    "bm": "⏰ QID (Four Times Daily):",
+    "ta": "⏰ QID (Four Times Daily):"
+  },
+  "Our Mission": {
+    "zh": "Our Mission",
+    "bm": "Our Mission",
+    "ta": "Our Mission"
+  },
+  "Equipment description.": {
+    "zh": "Equipment description.",
+    "bm": "Equipment description.",
+    "ta": "Equipment description."
+  },
+  "uncompromising adherence to the core fundamentals of nursing care": {
+    "zh": "uncompromising adherence to the core fundamentals of nursing care",
+    "bm": "uncompromising adherence to the core fundamentals of nursing care",
+    "ta": "uncompromising adherence to the core fundamentals of nursing care"
+  },
+  "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.": {
+    "zh": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.",
+    "bm": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors.",
+    "ta": "Real-time digital charting of blood pressure, SpO2, blood glucose, temperature, and wound photos, providing transparent daily records for families and doctors."
+  },
+  "Welcome back": {
+    "zh": "Welcome back",
+    "bm": "Welcome back",
+    "ta": "Welcome back"
+  },
+  "Status": {
+    "zh": "Status",
+    "bm": "Status",
+    "ta": "Status"
+  },
+  "Step 1: Public Open Access (公众免密使用)": {
+    "zh": "Step 1: Public Open Access (公众免密使用)",
+    "bm": "Step 1: Public Open Access (公众免密使用)",
+    "ta": "Step 1: Public Open Access (公众免密使用)"
+  },
+  "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.": {
+    "zh": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.",
+    "bm": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers.",
+    "ta": "We believe nurses deserve respect, transparent earnings, and professional autonomy. Earn competitive case commissions with prompt bi-weekly direct payroll transfers."
+  },
+  "数智记录·清晰交接：": {
+    "zh": "数智记录·清晰交接：",
+    "bm": "数智记录·清晰交接：",
+    "ta": "数智记录·清晰交接："
+  },
+  "Nursing": {
+    "zh": "Nursing",
+    "bm": "Nursing",
+    "ta": "Nursing"
+  },
+  "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。": {
+    "zh": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。",
+    "bm": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。",
+    "ta": "24小时全天候上门时段（全槟24/7轮班护理），确切时间将由我们在 WhatsApp 确认。"
+  },
+  "4. Digital MEWS Vitals & Handover": {
+    "zh": "4. Digital MEWS Vitals & Handover",
+    "bm": "4. Digital MEWS Vitals & Handover",
+    "ta": "4. Digital MEWS Vitals & Handover"
+  },
+  "About our service · 了解服务": {
+    "zh": "About our service · 了解服务",
+    "bm": "About our service · 了解服务",
+    "ta": "About our service · 了解服务"
+  },
+  "💊 Medication Sheet (用药记录)": {
+    "zh": "💊 Medication Sheet (用药记录)",
+    "bm": "💊 Medication Sheet (用药记录)",
+    "ta": "💊 Medication Sheet (用药记录)"
+  },
+  "Staff Security PIN (员工授权密码)": {
+    "zh": "Staff Security PIN (员工授权密码)",
+    "bm": "Staff Security PIN (员工授权密码)",
+    "ta": "Staff Security PIN (员工授权密码)"
+  },
+  "Butterworth / Perai / Seberang Jaya": {
+    "zh": "Butterworth / Perai / Seberang Jaya",
+    "bm": "Butterworth / Perai / Seberang Jaya",
+    "ta": "Butterworth / Perai / Seberang Jaya"
+  },
+  "Public:": {
+    "zh": "Public:",
+    "bm": "Public:",
+    "ta": "Public:"
+  },
+  "Place supportive pillows between knees, under affected arm, and floating heels.": {
+    "zh": "Place supportive pillows between knees, under affected arm, and floating heels.",
+    "bm": "Place supportive pillows between knees, under affected arm, and floating heels.",
+    "ta": "Place supportive pillows between knees, under affected arm, and floating heels."
+  },
+  "Patient & Family Care Guides": {
+    "zh": "Patient & Family Care Guides",
+    "bm": "Patient & Family Care Guides",
+    "ta": "Patient & Family Care Guides"
+  },
+  "01X-XXXX XXX": {
+    "zh": "01X-XXXX XXX",
+    "bm": "01X-XXXX XXX",
+    "ta": "01X-XXXX XXX"
+  },
+  "Sterile Wound Dressing Pack (ANTT)": {
+    "zh": "Sterile Wound Dressing Pack (ANTT)",
+    "bm": "Sterile Wound Dressing Pack (ANTT)",
+    "ta": "Sterile Wound Dressing Pack (ANTT)"
+  },
+  "🔔 Test Offline Alert": {
+    "zh": "🔔 Test Offline Alert",
+    "bm": "🔔 Test Offline Alert",
+    "ta": "🔔 Test Offline Alert"
+  },
+  "1, Jalan Pangkor, 10050 George Town, Penang": {
+    "zh": "1, Jalan Pangkor, 10050 George Town, Penang",
+    "bm": "1, Jalan Pangkor, 10050 George Town, Penang",
+    "ta": "1, Jalan Pangkor, 10050 George Town, Penang"
+  },
+  "卧床护理 · 翻身防褥疮": {
+    "zh": "卧床护理 · 翻身防褥疮",
+    "bm": "卧床护理 · 翻身防褥疮",
+    "ta": "卧床护理 · 翻身防褥疮"
+  },
+  "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.": {
+    "zh": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.",
+    "bm": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims.",
+    "ta": "Upfront pricing with RM 0 Penang distance surcharge. Itemized digital statements provided for family insurance claims."
+  },
+  "选择上门时间": {
+    "zh": "选择上门时间",
+    "bm": "选择上门时间",
+    "ta": "选择上门时间"
+  },
+  "Penang Island & Mainland Fast Delivery": {
+    "zh": "Penang Island & Mainland Fast Delivery",
+    "bm": "Penang Island & Mainland Fast Delivery",
+    "ta": "Penang Island & Mainland Fast Delivery"
+  },
+  "Clinical Integrity (专业严谨)": {
+    "zh": "Clinical Integrity (专业严谨)",
+    "bm": "Clinical Integrity (专业严谨)",
+    "ta": "Clinical Integrity (专业严谨)"
+  },
+  "About Us & Founder Message · Assura Nursing": {
+    "zh": "About Us & Founder Message · Assura Nursing",
+    "bm": "About Us & Founder Message · Assura Nursing",
+    "ta": "About Us & Founder Message · Assura Nursing"
+  },
+  "伤口换药与护理": {
+    "zh": "伤口换药与护理",
+    "bm": "伤口换药与护理",
+    "ta": "伤口换药与护理"
+  },
+  "每日 24小时全天候": {
+    "zh": "每日 24小时全天候",
+    "bm": "每日 24小时全天候",
+    "ta": "每日 24小时全天候"
+  },
+  "Transparent Rates (透明合理收费)": {
+    "zh": "Transparent Rates (透明合理收费)",
+    "bm": "Transparent Rates (透明合理收费)",
+    "ta": "Transparent Rates (透明合理收费)"
+  },
+  "定位针能让护士准确找到您家门口。": {
+    "zh": "定位针能让护士准确找到您家门口。",
+    "bm": "定位针能让护士准确找到您家门口。",
+    "ta": "定位针能让护士准确找到您家门口。"
+  },
+  "Name": {
+    "zh": "Name",
+    "bm": "Name",
+    "ta": "Name"
+  },
+  "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.": {
+    "zh": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.",
+    "bm": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation.",
+    "ta": "No password or registration required for browsing nursing procedures, transparent price lists, emergency hospital GPS, and 1-tap WhatsApp consultation."
+  },
+  "📍 All Penang Areas Covered": {
+    "zh": "📍 All Penang Areas Covered",
+    "bm": "📍 All Penang Areas Covered",
+    "ta": "📍 All Penang Areas Covered"
+  },
+  "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.": {
+    "zh": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.",
+    "bm": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking.",
+    "ta": "Keep dressing clean, dry, and intact (CDI). Change immediately if soiled or leaking."
+  },
+  "ℹ️": {
+    "zh": "ℹ️",
+    "bm": "ℹ️",
+    "ta": "ℹ️"
+  },
+  "💬 Chat with Our Care Team (012-206 4868)": {
+    "zh": "💬 Chat with Our Care Team (012-206 4868)",
+    "bm": "💬 Chat with Our Care Team (012-206 4868)",
+    "ta": "💬 Chat with Our Care Team (012-206 4868)"
+  },
+  "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.": {
+    "zh": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.",
+    "bm": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care.",
+    "ta": "Strict adherence to MOH & LJM standards. Hospital-standard aseptic non-touch technique (ANTT) for all wound & catheter care."
+  },
+  "Medical Compressor Nebulizer": {
+    "zh": "Medical Compressor Nebulizer",
+    "bm": "Medical Compressor Nebulizer",
+    "ta": "Medical Compressor Nebulizer"
+  },
+  "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.": {
+    "zh": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.",
+    "bm": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance.",
+    "ta": "Passive and active range-of-motion (ROM) exercises, bed-to-chair transfers, mobility assistance, and fall prevention guidance."
+  },
+  "Phone": {
+    "zh": "Phone",
+    "bm": "Phone",
+    "ta": "Phone"
+  },
+  "308, Macalister Road / Peel Avenue, 10450 George Town": {
+    "zh": "308, Macalister Road / Peel Avenue, 10450 George Town",
+    "bm": "308, Macalister Road / Peel Avenue, 10450 George Town",
+    "ta": "308, Macalister Road / Peel Avenue, 10450 George Town"
+  },
+  "需要紧急护理？": {
+    "zh": "需要紧急护理？",
+    "bm": "需要紧急护理？",
+    "ta": "需要紧急护理？"
+  },
+  "Tap": {
+    "zh": "Tap",
+    "bm": "Tap",
+    "ta": "Tap"
+  },
+  "Scan to share": {
+    "zh": "Scan to share",
+    "bm": "Scan to share",
+    "ta": "Scan to share"
+  },
+  "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.": {
+    "zh": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.",
+    "bm": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails.",
+    "ta": "Electric backrest, knee elevation, and bed height adjustability with safety drop-down side rails."
+  },
+  "Admin (Director)": {
+    "zh": "Admin (Director)",
+    "bm": "Admin (Director)",
+    "ta": "Admin (Director)"
+  },
+  "Summary": {
+    "zh": "Summary",
+    "bm": "Summary",
+    "ta": "Summary"
+  },
+  "☎ 04-222 5333": {
+    "zh": "☎ 04-222 5333",
+    "bm": "☎ 04-222 5333",
+    "ta": "☎ 04-222 5333"
+  },
+  "Ryle's Tube Change": {
+    "zh": "Ryle's Tube Change",
+    "bm": "Ryle's Tube Change",
+    "ta": "Ryle's Tube Change"
+  },
+  "◀ Prev": {
+    "zh": "◀ Prev",
+    "bm": "◀ Prev",
+    "ta": "◀ Prev"
+  },
+  "465, Jalan Burma, 10350 George Town, Penang": {
+    "zh": "465, Jalan Burma, 10350 George Town, Penang",
+    "bm": "465, Jalan Burma, 10350 George Town, Penang",
+    "ta": "465, Jalan Burma, 10350 George Town, Penang"
+  },
+  "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.": {
+    "zh": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.",
+    "bm": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil.",
+    "ta": "Push down 2 inches (5 cm) at 100–120 beats per minute. Allow complete recoil."
+  },
+  "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)": {
+    "zh": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)",
+    "bm": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)",
+    "ta": "e.g. Tracheostomy suctioning, PICC line dressing, pediatric care, stoma bag care, special wound, or specific hospital requirements... (例如：气管切开吸痰、PICC换药、造口护理、小儿护理或特定需求)"
+  },
+  "AssuraNursing.apk": {
+    "zh": "AssuraNursing.apk",
+    "bm": "AssuraNursing.apk",
+    "ta": "AssuraNursing.apk"
+  },
+  "Empty drainage bag when 2/3 full, avoiding contact between tap and container.": {
+    "zh": "Empty drainage bag when 2/3 full, avoiding contact between tap and container.",
+    "bm": "Empty drainage bag when 2/3 full, avoiding contact between tap and container.",
+    "ta": "Empty drainage bag when 2/3 full, avoiding contact between tap and container."
+  },
+  "❤️ Adult Hands-Only CPR & 110 BPM Metronome": {
+    "zh": "❤️ Adult Hands-Only CPR & 110 BPM Metronome",
+    "bm": "❤️ Adult Hands-Only CPR & 110 BPM Metronome",
+    "ta": "❤️ Adult Hands-Only CPR & 110 BPM Metronome"
+  },
+  "Hospital Balik Pulau (HBP)": {
+    "zh": "Hospital Balik Pulau (HBP)",
+    "bm": "Hospital Balik Pulau (HBP)",
+    "ta": "Hospital Balik Pulau (HBP)"
+  },
+  "🧪 Tube & Catheter Management": {
+    "zh": "🧪 Tube & Catheter Management",
+    "bm": "🧪 Tube & Catheter Management",
+    "ta": "🧪 Tube & Catheter Management"
+  },
+  "术后护理与康复照顾": {
+    "zh": "术后护理与康复照顾",
+    "bm": "术后护理与康复照顾",
+    "ta": "术后护理与康复照顾"
+  },
+  "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.": {
+    "zh": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.",
+    "bm": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance.",
+    "ta": "If an adult collapses, becomes unresponsive, and is not breathing normally, every second counts. Initiate continuous chest compressions immediately while waiting for the ambulance."
+  },
+  "Upload Document": {
+    "zh": "Upload Document",
+    "bm": "Upload Document",
+    "ta": "Upload Document"
+  },
+  "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.": {
+    "zh": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.",
+    "bm": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover.",
+    "ta": "Qualified nurse accompaniment for hospital specialist check-ups, hemodialysis transport, outpatient appointments, and discharge handover."
+  },
+  "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.": {
+    "zh": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.",
+    "bm": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland.",
+    "ta": "Our registered nurses provide professional home visits, wound management, tube changes, and immediate equipment delivery across Penang Island & Mainland."
+  },
+  "24/7 Emergency / Line:": {
+    "zh": "24/7 Emergency / Line:",
+    "bm": "24/7 Emergency / Line:",
+    "ta": "24/7 Emergency / Line:"
+  },
+  "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.": {
+    "zh": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.",
+    "bm": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe.",
+    "ta": "Verify tube marking at nose and check gastric residual volume with a 50ml syringe."
+  },
+  "🏥 Hospital Escort & Transfer": {
+    "zh": "🏥 Hospital Escort & Transfer",
+    "bm": "🏥 Hospital Escort & Transfer",
+    "ta": "🏥 Hospital Escort & Transfer"
+  },
+  "← Previous": {
+    "zh": "← Previous",
+    "bm": "← Previous",
+    "ta": "← Previous"
+  },
+  "Create 4-8 digit PIN": {
+    "zh": "Create 4-8 digit PIN",
+    "bm": "Create 4-8 digit PIN",
+    "ta": "Create 4-8 digit PIN"
+  },
+  "Please choose a service and complete the required details.": {
+    "zh": "Please choose a service and complete the required details.",
+    "bm": "Please choose a service and complete the required details.",
+    "ta": "Please choose a service and complete the required details."
+  },
+  "Hospital Seberang Jaya (HSJ)": {
+    "zh": "Hospital Seberang Jaya (HSJ)",
+    "bm": "Hospital Seberang Jaya (HSJ)",
+    "ta": "Hospital Seberang Jaya (HSJ)"
+  },
+  "Assura Nursing · 官方统一应用使用备忘录": {
+    "zh": "Assura Nursing · 官方统一应用使用备忘录",
+    "bm": "Assura Nursing · 官方统一应用使用备忘录",
+    "ta": "Assura Nursing · 官方统一应用使用备忘录"
+  },
+  "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如": {
+    "zh": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如",
+    "bm": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如",
+    "ta": "：护士与主管请点击「🩺 Staff ID」标签，输入专属工号 (如"
+  },
+  "🛏️ Home Medical Equipment Rental & Reference Guide": {
+    "zh": "🛏️ Home Medical Equipment Rental & Reference Guide",
+    "bm": "🛏️ Home Medical Equipment Rental & Reference Guide",
+    "ta": "🛏️ Home Medical Equipment Rental & Reference Guide"
+  },
+  "Official Android App · 官方安卓应用": {
+    "zh": "Official Android App · 官方安卓应用",
+    "bm": "Official Android App · 官方安卓应用",
+    "ta": "Official Android App · 官方安卓应用"
+  },
+  "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.": {
+    "zh": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.",
+    "bm": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward.",
+    "ta": "Cleanse wound gently with sterile Normal Saline from the cleanest area outward."
+  },
+  "Click to view rates for Injections & Blood Tests": {
+    "zh": "Click to view rates for Injections & Blood Tests",
+    "bm": "Click to view rates for Injections & Blood Tests",
+    "ta": "Click to view rates for Injections & Blood Tests"
+  },
+  "🛡️ Registered Nurse (LJM)": {
+    "zh": "🛡️ Registered Nurse (LJM)",
+    "bm": "🛡️ Registered Nurse (LJM)",
+    "ta": "🛡️ Registered Nurse (LJM)"
+  },
+  "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.": {
+    "zh": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.",
+    "bm": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly.",
+    "ta": "After hospital discharge, families frequently feel lost dealing with wound changes, feeding tubes, catheters, or bed transfers in a home environment that wasn't built like a clinic. Working adult children are stressed about causing infections or doing procedures incorrectly."
+  },
+  "EN": {
+    "zh": "EN",
+    "bm": "EN",
+    "ta": "EN"
+  },
+  "Keep urine drainage bag": {
+    "zh": "Keep urine drainage bag",
+    "bm": "Keep urine drainage bag",
+    "ta": "Keep urine drainage bag"
+  },
+  "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.": {
+    "zh": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.",
+    "bm": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe.",
+    "ta": "Patient coughs persistently, vomits, experiences choking, or struggles to breathe."
+  },
+  "☎ 04-332 2800": {
+    "zh": "☎ 04-332 2800",
+    "bm": "☎ 04-332 2800",
+    "ta": "☎ 04-332 2800"
+  },
+  "⏰ BD (Twice Daily):": {
+    "zh": "⏰ BD (Twice Daily):",
+    "bm": "⏰ BD (Twice Daily):",
+    "ta": "⏰ BD (Twice Daily):"
+  },
+  "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.": {
+    "zh": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.",
+    "bm": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination.",
+    "ta": "Every patient is cared for under strict ethical standards, licensed clinical supervision, and transparent coordination."
+  },
+  "Official Announcements": {
+    "zh": "Official Announcements",
+    "bm": "Official Announcements",
+    "ta": "Official Announcements"
+  },
+  "1. Check & Call:": {
+    "zh": "1. Check & Call:",
+    "bm": "1. Check & Call:",
+    "ta": "1. Check & Call:"
+  },
+  "General Line:": {
+    "zh": "General Line:",
+    "bm": "General Line:",
+    "ta": "General Line:"
+  },
+  "24/7 Emergency (ETD):": {
+    "zh": "24/7 Emergency (ETD):",
+    "bm": "24/7 Emergency (ETD):",
+    "ta": "24/7 Emergency (ETD):"
+  },
+  "AUGUST 2026 · CLINICAL TECHNOLOGY": {
+    "zh": "AUGUST 2026 · CLINICAL TECHNOLOGY",
+    "bm": "AUGUST 2026 · CLINICAL TECHNOLOGY",
+    "ta": "AUGUST 2026 · CLINICAL TECHNOLOGY"
+  },
+  "大山脚及邻近地区": {
+    "zh": "大山脚及邻近地区",
+    "bm": "大山脚及邻近地区",
+    "ta": "大山脚及邻近地区"
+  },
+  ") 与 PIN 登录接单、记录生命体征与排班。": {
+    "zh": ") 与 PIN 登录接单、记录生命体征与排班。",
+    "bm": ") 与 PIN 登录接单、记录生命体征与排班。",
+    "ta": ") 与 PIN 登录接单、记录生命体征与排班。"
+  },
+  "Palliative Care": {
+    "zh": "Palliative Care",
+    "bm": "Palliative Care",
+    "ta": "Palliative Care"
+  },
+  "🚀 Open": {
+    "zh": "🚀 Open",
+    "bm": "🚀 Open",
+    "ta": "🚀 Open"
+  },
+  "If prompted with": {
+    "zh": "If prompted with",
+    "bm": "If prompted with",
+    "ta": "If prompted with"
+  },
+  "💬 Book via WhatsApp": {
+    "zh": "💬 Book via WhatsApp",
+    "bm": "💬 Book via WhatsApp",
+    "ta": "💬 Book via WhatsApp"
+  },
+  "The pin is what gets the nurse to your gate — an address alone often stops at the street.": {
+    "zh": "The pin is what gets the nurse to your gate — an address alone often stops at the street.",
+    "bm": "The pin is what gets the nurse to your gate — an address alone often stops at the street.",
+    "ta": "The pin is what gets the nurse to your gate — an address alone often stops at the street."
+  },
+  "at all times to prevent backflow.": {
+    "zh": "at all times to prevent backflow.",
+    "bm": "at all times to prevent backflow.",
+    "ta": "at all times to prevent backflow."
+  },
+  "Please enter a phone number.": {
+    "zh": "Please enter a phone number.",
+    "bm": "Please enter a phone number.",
+    "ta": "Please enter a phone number."
+  },
+  "Clinical Alert:": {
+    "zh": "Clinical Alert:",
+    "bm": "Clinical Alert:",
+    "ta": "Clinical Alert:"
+  },
+  "✓ Register Patient Account (注册账号)": {
+    "zh": "✓ Register Patient Account (注册账号)",
+    "bm": "✓ Register Patient Account (注册账号)",
+    "ta": "✓ Register Patient Account (注册账号)"
+  },
+  "：已有护理个案的家庭，在门户输入 Case Access Code (如": {
+    "zh": "：已有护理个案的家庭，在门户输入 Case Access Code (如",
+    "bm": "：已有护理个案的家庭，在门户输入 Case Access Code (如",
+    "ta": "：已有护理个案的家庭，在门户输入 Case Access Code (如"
+  },
+  "2. Position Hands:": {
+    "zh": "2. Position Hands:",
+    "bm": "2. Position Hands:",
+    "ta": "2. Position Hands:"
+  },
+  "🔄 Reset Demo Database": {
+    "zh": "🔄 Reset Demo Database",
+    "bm": "🔄 Reset Demo Database",
+    "ta": "🔄 Reset Demo Database"
+  },
+  "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.": {
+    "zh": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.",
+    "bm": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination.",
+    "ta": "Penang's 1st Digital Home Nursing Platform · Trained nurses and dedicated caregivers delivering personalized care plans with transparent fare rates and fast staff coordination."
+  },
+  "🛡️ PDPA Act 2010 Privacy & Data Protection": {
+    "zh": "🛡️ PDPA Act 2010 Privacy & Data Protection",
+    "bm": "🛡️ PDPA Act 2010 Privacy & Data Protection",
+    "ta": "🛡️ PDPA Act 2010 Privacy & Data Protection"
+  },
+  "e.g. No 8, Taman Kota Permai, Bukit Mertajam": {
+    "zh": "e.g. No 8, Taman Kota Permai, Bukit Mertajam",
+    "bm": "e.g. No 8, Taman Kota Permai, Bukit Mertajam",
+    "ta": "e.g. No 8, Taman Kota Permai, Bukit Mertajam"
+  },
+  "🛏️": {
+    "zh": "🛏️",
+    "bm": "🛏️",
+    "ta": "🛏️"
+  },
+  "e.g. 0123456789": {
+    "zh": "e.g. 0123456789",
+    "bm": "e.g. 0123456789",
+    "ta": "e.g. 0123456789"
+  },
+  "Foldable Wheelchair & Commode Chair": {
+    "zh": "Foldable Wheelchair & Commode Chair",
+    "bm": "Foldable Wheelchair & Commode Chair",
+    "ta": "Foldable Wheelchair & Commode Chair"
+  },
+  "已根据定位填写，请补上门牌号码。": {
+    "zh": "已根据定位填写，请补上门牌号码。",
+    "bm": "已根据定位填写，请补上门牌号码。",
+    "ta": "已根据定位填写，请补上门牌号码。"
+  },
+  "Assura Nursing App": {
+    "zh": "Assura Nursing App",
+    "bm": "Assura Nursing App",
+    "ta": "Assura Nursing App"
+  },
+  "Foley Urinary Catheter Hygiene": {
+    "zh": "Foley Urinary Catheter Hygiene",
+    "bm": "Foley Urinary Catheter Hygiene",
+    "ta": "Foley Urinary Catheter Hygiene"
+  },
+  "Preferred time": {
+    "zh": "Preferred time",
+    "bm": "Preferred time",
+    "ta": "Preferred time"
+  },
+  "：公众、患者、家属与注册护士均下载同一款": {
+    "zh": "：公众、患者、家属与注册护士均下载同一款",
+    "bm": "：公众、患者、家属与注册护士均下载同一款",
+    "ta": "：公众、患者、家属与注册护士均下载同一款"
+  },
+  "☎ 012-206 4868": {
+    "zh": "☎ 012-206 4868",
+    "bm": "☎ 012-206 4868",
+    "ta": "☎ 012-206 4868"
+  },
+  "Staff:": {
+    "zh": "Staff:",
+    "bm": "Staff:",
+    "ta": "Staff:"
+  },
+  "ASN-001": {
+    "zh": "ASN-001",
+    "bm": "ASN-001",
+    "ta": "ASN-001"
+  },
+  "RM 50 – RM 80 / mo": {
+    "zh": "RM 50 – RM 80 / mo",
+    "bm": "RM 50 – RM 80 / mo",
+    "ta": "RM 50 – RM 80 / mo"
+  },
+  "吴乃添": {
+    "zh": "吴乃添",
+    "bm": "吴乃添",
+    "ta": "吴乃添"
+  },
+  "LPPK Registered (MA)": {
+    "zh": "LPPK Registered (MA)",
+    "bm": "LPPK Registered (MA)",
+    "ta": "LPPK Registered (MA)"
+  },
+  "Simpang Ampat / Juru / Batu Kawan": {
+    "zh": "Simpang Ampat / Juru / Batu Kawan",
+    "bm": "Simpang Ampat / Juru / Batu Kawan",
+    "ta": "Simpang Ampat / Juru / Batu Kawan"
+  },
+  "🫁 Respiratory & Airway": {
+    "zh": "🫁 Respiratory & Airway",
+    "bm": "🫁 Respiratory & Airway",
+    "ta": "🫁 Respiratory & Airway"
+  },
+  "👤 Patients & Families (公众与家属)": {
+    "zh": "👤 Patients & Families (公众与家属)",
+    "bm": "👤 Patients & Families (公众与家属)",
+    "ta": "👤 Patients & Families (公众与家属)"
+  },
+  "Medication": {
+    "zh": "Medication",
+    "bm": "Medication",
+    "ta": "Medication"
+  },
+  "Media & Clinical Resources · 媒体中心与临床资源": {
+    "zh": "Media & Clinical Resources · 媒体中心与临床资源",
+    "bm": "Media & Clinical Resources · 媒体中心与临床资源",
+    "ta": "Media & Clinical Resources · 媒体中心与临床资源"
+  },
+  "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.": {
+    "zh": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.",
+    "bm": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household.",
+    "ta": "Every home has unique spatial layouts, bed heights, and lighting. Our nurses assess the home setup, ergonomics, and accessibility to design a safe, practical daily care routine that fits your household."
+  },
+  "Hands-Only CPR Protocol": {
+    "zh": "Hands-Only CPR Protocol",
+    "bm": "Hands-Only CPR Protocol",
+    "ta": "Hands-Only CPR Protocol"
+  },
+  "● Click steps to preview": {
+    "zh": "● Click steps to preview",
+    "bm": "● Click steps to preview",
+    "ta": "● Click steps to preview"
+  },
+  "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.": {
+    "zh": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.",
+    "bm": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance.",
+    "ta": "Never crush Enteric-Coated (EC), Sustained-Release (SR/XR/CR), or sublingual tablets without pharmacist clearance."
+  },
+  "Use my location · 定位": {
+    "zh": "Use my location · 定位",
+    "bm": "Use my location · 定位",
+    "ta": "Use my location · 定位"
+  },
+  "Hours": {
+    "zh": "Hours",
+    "bm": "Hours",
+    "ta": "Hours"
+  },
+  "🩹 Complex Wound Care": {
+    "zh": "🩹 Complex Wound Care",
+    "bm": "🩹 Complex Wound Care",
+    "ta": "🩹 Complex Wound Care"
+  },
+  "Aseptic Wound Care & Dressing": {
+    "zh": "Aseptic Wound Care & Dressing",
+    "bm": "Aseptic Wound Care & Dressing",
+    "ta": "Aseptic Wound Care & Dressing"
+  },
+  "Safe Ryle's / NG Tube Feeding": {
+    "zh": "Safe Ryle's / NG Tube Feeding",
+    "bm": "Safe Ryle's / NG Tube Feeding",
+    "ta": "Safe Ryle's / NG Tube Feeding"
+  },
+  "e.g. ASN-001 / admin@assuranursing.com": {
+    "zh": "e.g. ASN-001 / admin@assuranursing.com",
+    "bm": "e.g. ASN-001 / admin@assuranursing.com",
+    "ta": "e.g. ASN-001 / admin@assuranursing.com"
+  },
+  "below bladder level": {
+    "zh": "below bladder level",
+    "bm": "below bladder level",
+    "ta": "below bladder level"
+  },
+  "📱 Official Unified Client": {
+    "zh": "📱 Official Unified Client",
+    "bm": "📱 Official Unified Client",
+    "ta": "📱 Official Unified Client"
+  },
+  "公众与家属 (无需登录)": {
+    "zh": "公众与家属 (无需登录)",
+    "bm": "公众与家属 (无需登录)",
+    "ta": "公众与家属 (无需登录)"
+  },
+  "Inquire & Order via WhatsApp": {
+    "zh": "Inquire & Order via WhatsApp",
+    "bm": "Inquire & Order via WhatsApp",
+    "ta": "Inquire & Order via WhatsApp"
+  },
+  "Any (No preference / 均可)": {
+    "zh": "Any (No preference / 均可)",
+    "bm": "Any (No preference / 均可)",
+    "ta": "Any (No preference / 均可)"
+  },
+  "Purchase:": {
+    "zh": "Purchase:",
+    "bm": "Purchase:",
+    "ta": "Purchase:"
+  },
+  "🛏️ Medical Bed & Oxygen Rental": {
+    "zh": "🛏️ Medical Bed & Oxygen Rental",
+    "bm": "🛏️ Medical Bed & Oxygen Rental",
+    "ta": "🛏️ Medical Bed & Oxygen Rental"
+  },
+  "Purchase Reference": {
+    "zh": "Purchase Reference",
+    "bm": "Purchase Reference",
+    "ta": "Purchase Reference"
+  },
+  "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.": {
+    "zh": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.",
+    "bm": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone.",
+    "ta": "Tap shoulders, shout \"Are you OK?\". Dial 999 or 112 on speakerphone."
+  },
+  "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.": {
+    "zh": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.",
+    "bm": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly.",
+    "ta": "Apply primary prescribed dressing (hydrocolloid / foam) and secure edges firmly."
+  },
+  "for family comfort, and": {
+    "zh": "for family comfort, and",
+    "bm": "for family comfort, and",
+    "ta": "for family comfort, and"
+  },
+  "Clinic & Hospital Escort": {
+    "zh": "Clinic & Hospital Escort",
+    "bm": "Clinic & Hospital Escort",
+    "ta": "Clinic & Hospital Escort"
+  },
+  "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.": {
+    "zh": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.",
+    "bm": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports.",
+    "ta": "Encrypted medical file repository for hospital discharge summaries, doctor prescriptions, and laboratory reports."
+  },
+  "24/7 Emergency Hotline:": {
+    "zh": "24/7 Emergency Hotline:",
+    "bm": "24/7 Emergency Hotline:",
+    "ta": "24/7 Emergency Hotline:"
+  },
+  "Bed-Bound Patient Care": {
+    "zh": "Bed-Bound Patient Care",
+    "bm": "Bed-Bound Patient Care",
+    "ta": "Bed-Bound Patient Care"
+  },
+  "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):": {
+    "zh": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):",
+    "bm": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):",
+    "ta": "Select your nursing procedure and Penang location for transparent procedure rates across all Penang areas (No initial travel surcharge):"
+  },
+  "🍼 Ryle's Tube / NG Tube": {
+    "zh": "🍼 Ryle's Tube / NG Tube",
+    "bm": "🍼 Ryle's Tube / NG Tube",
+    "ta": "🍼 Ryle's Tube / NG Tube"
+  },
+  "☎ 999": {
+    "zh": "☎ 999",
+    "bm": "☎ 999",
+    "ta": "☎ 999"
+  },
+  "Sister Tan (Supervisor)": {
+    "zh": "Sister Tan (Supervisor)",
+    "bm": "Sister Tan (Supervisor)",
+    "ta": "Sister Tan (Supervisor)"
+  },
+  "07:00 or 12:00 (Morning / Midday)": {
+    "zh": "07:00 or 12:00 (Morning / Midday)",
+    "bm": "07:00 or 12:00 (Morning / Midday)",
+    "ta": "07:00 or 12:00 (Morning / Midday)"
+  },
+  "☎ 04-827 5684": {
+    "zh": "☎ 04-827 5684",
+    "bm": "☎ 04-827 5684",
+    "ta": "☎ 04-827 5684"
+  },
+  "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"": {
+    "zh": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"",
+    "bm": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\"",
+    "ta": "\"Why We Built Assura: Planning Care Around Your Home Without Compromising Clinical Fundamentals\""
+  },
+  "\"Install unknown apps\"": {
+    "zh": "\"Install unknown apps\"",
+    "bm": "\"Install unknown apps\"",
+    "ta": "\"Install unknown apps\""
+  },
+  "KPJ Penang Specialist Hospital": {
+    "zh": "KPJ Penang Specialist Hospital",
+    "bm": "KPJ Penang Specialist Hospital",
+    "ta": "KPJ Penang Specialist Hospital"
+  },
+  "Stop Feeding Immediately If:": {
+    "zh": "Stop Feeding Immediately If:",
+    "bm": "Stop Feeding Immediately If:",
+    "ta": "Stop Feeding Immediately If:"
+  },
+  "Open Clinical Portal": {
+    "zh": "Open Clinical Portal",
+    "bm": "Open Clinical Portal",
+    "ta": "Open Clinical Portal"
+  },
+  "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868": {
+    "zh": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868",
+    "bm": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868",
+    "ta": "Assura Nursing · Bukit Mertajam 大山脚 · 012-206 4868"
+  },
+  "Where should we come?": {
+    "zh": "Where should we come?",
+    "bm": "Where should we come?",
+    "ta": "Where should we come?"
+  },
+  ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。": {
+    "zh": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。",
+    "bm": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。",
+    "ta": ") 或手机号，即可实时查看护士每次上门记录的 MEWS 生命体征评分与给药打卡。"
+  },
+  "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.": {
+    "zh": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.",
+    "bm": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients.",
+    "ta": "Protect vulnerable pressure points and maintain limb function in bedridden or post-stroke patients."
+  },
+  "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:": {
+    "zh": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:",
+    "bm": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:",
+    "ta": "needs — a blocked catheter, a dressing that won't stop bleeding, a tube that has come out — reach us directly:"
+  },
+  "Pantai Hospital Penang": {
+    "zh": "Pantai Hospital Penang",
+    "bm": "Pantai Hospital Penang",
+    "ta": "Pantai Hospital Penang"
+  },
+  "地址": {
+    "zh": "地址",
+    "bm": "地址",
+    "ta": "地址"
+  },
+  "Patients/Family:": {
+    "zh": "Patients/Family:",
+    "bm": "Patients/Family:",
+    "ta": "Patients/Family:"
+  },
+  "● Interactive Walkthrough": {
+    "zh": "● Interactive Walkthrough",
+    "bm": "● Interactive Walkthrough",
+    "ta": "● Interactive Walkthrough"
+  },
+  "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.": {
+    "zh": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.",
+    "bm": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring.",
+    "ta": "Doctor-prescribed subcutaneous insulin administration, IM injections, IV drip setups, clinical blood sample collection, and vital signs monitoring."
+  },
+  "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。": {
+    "zh": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。",
+    "bm": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。",
+    "ta": "为槟城每一个家庭提供规范、专业且量身定制的到府医护服务，因地制宜规划家庭护理方案，严守医疗无菌规范与护理根本，让病患在家庭温暖中安全尊严地康复。"
+  },
+  "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"": {
+    "zh": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"",
+    "bm": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\"",
+    "ta": "\"To build a trusted digital and AI-era home healthcare service in Penang, recognized for real-time clinical tracking, transparent fare rates, and heartfelt family care.\""
+  },
+  "Private Specialist": {
+    "zh": "Private Specialist",
+    "bm": "Private Specialist",
+    "ta": "Private Specialist"
+  },
+  "ASSURA NURSING · PDPA 2010 CONFIDENTIAL": {
+    "zh": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL",
+    "bm": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL",
+    "ta": "ASSURA NURSING · PDPA 2010 CONFIDENTIAL"
+  },
+  "Download Assura Nursing (.exe)": {
+    "zh": "Download Assura Nursing (.exe)",
+    "bm": "Download Assura Nursing (.exe)",
+    "ta": "Download Assura Nursing (.exe)"
+  },
+  "Step 3: Staff Portal": {
+    "zh": "Step 3: Staff Portal",
+    "bm": "Step 3: Staff Portal",
+    "ta": "Step 3: Staff Portal"
+  },
+  "UNIFIED PORTAL ACCESS (统一服务登录)": {
+    "zh": "UNIFIED PORTAL ACCESS (统一服务登录)",
+    "bm": "UNIFIED PORTAL ACCESS (统一服务登录)",
+    "ta": "UNIFIED PORTAL ACCESS (统一服务登录)"
+  },
+  "Loh Guan Lye Specialists Centre": {
+    "zh": "Loh Guan Lye Specialists Centre",
+    "bm": "Loh Guan Lye Specialists Centre",
+    "ta": "Loh Guan Lye Specialists Centre"
+  },
+  "Civil Defence Force (APM Penang)": {
+    "zh": "Civil Defence Force (APM Penang)",
+    "bm": "Civil Defence Force (APM Penang)",
+    "ta": "Civil Defence Force (APM Penang)"
+  },
+  "只想咨询": {
+    "zh": "只想咨询",
+    "bm": "只想咨询",
+    "ta": "只想咨询"
+  },
+  "Digital Vital Signs & SpO2 Monitor": {
+    "zh": "Digital Vital Signs & SpO2 Monitor",
+    "bm": "Digital Vital Signs & SpO2 Monitor",
+    "ta": "Digital Vital Signs & SpO2 Monitor"
   },
   "Add your address": {
     "zh": "Add your address",
     "bm": "Add your address",
     "ta": "Add your address"
   },
-  "💉 Injections & Blood Tests": {
-    "zh": "💉 Injections & Blood Tests",
-    "bm": "💉 Injections & Blood Tests",
-    "ta": "💉 Injections & Blood Tests"
+  "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:": {
+    "zh": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:",
+    "bm": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:",
+    "ta": "For clinical staff, supervisors, and platform evaluators testing the live MEWS scoring workflow:"
+  },
+  "24/7 Emergency:": {
+    "zh": "24/7 Emergency:",
+    "bm": "24/7 Emergency:",
+    "ta": "24/7 Emergency:"
+  },
+  "Based in": {
+    "zh": "Based in",
+    "bm": "Based in",
+    "ta": "Based in"
+  },
+  "🩺 Monitoring": {
+    "zh": "🩺 Monitoring",
+    "bm": "🩺 Monitoring",
+    "ta": "🩺 Monitoring"
+  },
+  "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求": {
+    "zh": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求",
+    "bm": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求",
+    "ta": "SPECIFY YOUR REQUIRED SERVICE · 请输入您需要的特定护理服务或具体要求"
+  },
+  "Clinical Points & Safety Checklist:": {
+    "zh": "Clinical Points & Safety Checklist:",
+    "bm": "Clinical Points & Safety Checklist:",
+    "ta": "Clinical Points & Safety Checklist:"
+  },
+  "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)": {
+    "zh": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)",
+    "bm": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)",
+    "ta": "06:00 / 12:00 or 18:00 / 22:00 (12-hour intervals)"
   },
   "View Services & Rates": {
     "zh": "View Services & Rates",
     "bm": "View Services & Rates",
     "ta": "View Services & Rates"
   },
-  "Direct Mirrors:": {
-    "zh": "备用直接下载镜像：",
-    "bm": "Cermin Muat Turun Terus:",
-    "ta": "நேரடி பதிவிறக்க இணைப்புகள்:"
+  "Alerts & Live Case Status": {
+    "zh": "Alerts & Live Case Status",
+    "bm": "Alerts & Live Case Status",
+    "ta": "Alerts & Live Case Status"
+  },
+  "Install app · 安装应用": {
+    "zh": "Install app · 安装应用",
+    "bm": "Install app · 安装应用",
+    "ta": "Install app · 安装应用"
+  },
+  "居家护理预约 · 专业护士上门": {
+    "zh": "居家护理预约 · 专业护士上门",
+    "bm": "居家护理预约 · 专业护士上门",
+    "ta": "居家护理预约 · 专业护士上门"
+  },
+  "1. Home Environment Assessment & Planning": {
+    "zh": "1. Home Environment Assessment & Planning",
+    "bm": "1. Home Environment Assessment & Planning",
+    "ta": "1. Home Environment Assessment & Planning"
+  },
+  "📞 Call us · 012-206 4868": {
+    "zh": "📞 Call us · 012-206 4868",
+    "bm": "📞 Call us · 012-206 4868",
+    "ta": "📞 Call us · 012-206 4868"
+  },
+  "Compress to this audio-visual beat": {
+    "zh": "Compress to this audio-visual beat",
+    "bm": "Compress to this audio-visual beat",
+    "ta": "Compress to this audio-visual beat"
+  },
+  "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.": {
+    "zh": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.",
+    "bm": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain.",
+    "ta": "Dark concentrated tea-colored urine, blood clots, sudden cessation of urine output, or lower abdominal pain."
+  },
+  "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.": {
+    "zh": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.",
+    "bm": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores.",
+    "ta": "Alternating cylindrical air cells shift pressure points every 6–10 minutes to prevent and heal bedsores."
+  },
+  "🖨 Print Summary": {
+    "zh": "🖨 Print Summary",
+    "bm": "🖨 Print Summary",
+    "ta": "🖨 Print Summary"
+  },
+  "Interactive Walkthrough": {
+    "zh": "Interactive Walkthrough",
+    "bm": "Interactive Walkthrough",
+    "ta": "Interactive Walkthrough"
+  },
+  "📁 Medical Document Vault (医疗文件与报告)": {
+    "zh": "📁 Medical Document Vault (医疗文件与报告)",
+    "bm": "📁 Medical Document Vault (医疗文件与报告)",
+    "ta": "📁 Medical Document Vault (医疗文件与报告)"
+  },
+  "3. Push Hard & Fast:": {
+    "zh": "3. Push Hard & Fast:",
+    "bm": "3. Push Hard & Fast:",
+    "ta": "3. Push Hard & Fast:"
+  },
+  "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。": {
+    "zh": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。",
+    "bm": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。",
+    "ta": "致力于在槟城打造一个值得信赖的数智化居家照护服务，以透明收费、严谨医疗规范、智能健康记录与真诚关怀守护每个家庭。"
+  },
+  "Mount Miriam Cancer Hospital": {
+    "zh": "Mount Miriam Cancer Hospital",
+    "bm": "Mount Miriam Cancer Hospital",
+    "ta": "Mount Miriam Cancer Hospital"
+  },
+  "🔒 Sign In as Patient / Family (家属与患者登录)": {
+    "zh": "🔒 Sign In as Patient / Family (家属与患者登录)",
+    "bm": "🔒 Sign In as Patient / Family (家属与患者登录)",
+    "ta": "🔒 Sign In as Patient / Family (家属与患者登录)"
+  },
+  "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.": {
+    "zh": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.",
+    "bm": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily.",
+    "ta": "Perform gentle passive Range of Motion (ROM) on hemiplegic limbs twice daily."
+  },
+  "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。": {
+    "zh": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。",
+    "bm": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。",
+    "ta": "：直接打开 App 即可查询全槟城上门护理收费、器材指南与医院急诊 GPS 路线。"
+  },
+  "e.g. Tan Ah Kow / Jason Tan": {
+    "zh": "e.g. Tan Ah Kow / Jason Tan",
+    "bm": "e.g. Tan Ah Kow / Jason Tan",
+    "ta": "e.g. Tan Ah Kow / Jason Tan"
+  },
+  "v2.4 · 3.3 MB · Phones & Tablets · Direct Install": {
+    "zh": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install",
+    "bm": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install",
+    "ta": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install"
+  },
+  "06:00, 12:00, 18:00, 22:00 (6-hour intervals)": {
+    "zh": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)",
+    "bm": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)",
+    "ta": "06:00, 12:00, 18:00, 22:00 (6-hour intervals)"
+  },
+  "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.": {
+    "zh": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.",
+    "bm": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention.",
+    "ta": "Pair regular turning with a 3-function electric bed and alternating ripple mattress for 100% bedsore prevention."
+  },
+  "PIN": {
+    "zh": "PIN",
+    "bm": "PIN",
+    "ta": "PIN"
+  },
+  "LOCATION IN PENANG (ALL AREAS COVERED)": {
+    "zh": "LOCATION IN PENANG (ALL AREAS COVERED)",
+    "bm": "LOCATION IN PENANG (ALL AREAS COVERED)",
+    "ta": "LOCATION IN PENANG (ALL AREAS COVERED)"
+  },
+  "➕ New Register": {
+    "zh": "➕ New Register",
+    "bm": "➕ New Register",
+    "ta": "➕ New Register"
+  },
+  "优先安排女护士 / 女护理师": {
+    "zh": "优先安排女护士 / 女护理师",
+    "bm": "优先安排女护士 / 女护理师",
+    "ta": "优先安排女护士 / 女护理师"
+  },
+  "正在接受护理的家属": {
+    "zh": "正在接受护理的家属",
+    "bm": "正在接受护理的家属",
+    "ta": "正在接受护理的家属"
+  },
+  "RM 80 – RM 140 / mo": {
+    "zh": "RM 80 – RM 140 / mo",
+    "bm": "RM 80 – RM 140 / mo",
+    "ta": "RM 80 – RM 140 / mo"
+  },
+  "🩺 Supplies": {
+    "zh": "🩺 Supplies",
+    "bm": "🩺 Supplies",
+    "ta": "🩺 Supplies"
+  },
+  "Install": {
+    "zh": "Install",
+    "bm": "Install",
+    "ta": "Install"
+  },
+  "Got It (明白了)": {
+    "zh": "Got It (明白了)",
+    "bm": "Got It (明白了)",
+    "ta": "Got It (明白了)"
+  },
+  "Loading medications...": {
+    "zh": "Loading medications...",
+    "bm": "Loading medications...",
+    "ta": "Loading medications..."
+  },
+  "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.": {
+    "zh": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.",
+    "bm": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery.",
+    "ta": "Converts liquid respiratory medications into an inhalable fine aerosol mist for direct lung delivery."
+  },
+  "Your name": {
+    "zh": "Your name",
+    "bm": "Your name",
+    "ta": "Your name"
+  },
+  "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.": {
+    "zh": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.",
+    "bm": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders.",
+    "ta": "Delivers continuous 90–96% high-purity medical oxygen without heavy gas cylinders."
+  },
+  "Infection Red Flags:": {
+    "zh": "Infection Red Flags:",
+    "bm": "Infection Red Flags:",
+    "ta": "Infection Red Flags:"
+  },
+  "患者与家属": {
+    "zh": "患者与家属",
+    "bm": "患者与家属",
+    "ta": "患者与家属"
+  },
+  "ASN-002": {
+    "zh": "ASN-002",
+    "bm": "ASN-002",
+    "ta": "ASN-002"
+  },
+  "📖 User Guide & Memo (首次使用指南)": {
+    "zh": "📖 User Guide & Memo (首次使用指南)",
+    "bm": "📖 User Guide & Memo (首次使用指南)",
+    "ta": "📖 User Guide & Memo (首次使用指南)"
+  },
+  "☎ 04-548 6666": {
+    "zh": "☎ 04-548 6666",
+    "bm": "☎ 04-548 6666",
+    "ta": "☎ 04-548 6666"
+  },
+  "Our Standard of Care · 专业护理标准与服务价值": {
+    "zh": "Our Standard of Care · 专业护理标准与服务价值",
+    "bm": "Our Standard of Care · 专业护理标准与服务价值",
+    "ta": "Our Standard of Care · 专业护理标准与服务价值"
+  },
+  "🩺 Staff Sign In (医护人员工号登录)": {
+    "zh": "🩺 Staff Sign In (医护人员工号登录)",
+    "bm": "🩺 Staff Sign In (医护人员工号登录)",
+    "ta": "🩺 Staff Sign In (医护人员工号登录)"
+  },
+  "日常起居协助 · 进食移动": {
+    "zh": "日常起居协助 · 进食移动",
+    "bm": "日常起居协助 · 进食移动",
+    "ta": "日常起居协助 · 进食移动"
+  },
+  "All Equipment": {
+    "zh": "All Equipment",
+    "bm": "All Equipment",
+    "ta": "All Equipment"
+  },
+  "Electric Medical Suction Machine": {
+    "zh": "Electric Medical Suction Machine",
+    "bm": "Electric Medical Suction Machine",
+    "ta": "Electric Medical Suction Machine"
+  },
+  "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)": {
+    "zh": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)",
+    "bm": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)",
+    "ta": "📊 MEWS Vitals Sign Scoring Chart (生命体征评分表)"
+  },
+  "Book via WhatsApp · 预约": {
+    "zh": "Book via WhatsApp · 预约",
+    "bm": "Book via WhatsApp · 预约",
+    "ta": "Book via WhatsApp · 预约"
+  },
+  "🫁 Respiratory": {
+    "zh": "🫁 Respiratory",
+    "bm": "🫁 Respiratory",
+    "ta": "🫁 Respiratory"
+  },
+  "💉 Injections & Blood Tests": {
+    "zh": "💉 Injections & Blood Tests",
+    "bm": "💉 Injections & Blood Tests",
+    "ta": "💉 Injections & Blood Tests"
+  },
+  "📞 Call 999 · 紧急救护": {
+    "zh": "📞 Call 999 · 紧急救护",
+    "bm": "📞 Call 999 · 紧急救护",
+    "ta": "📞 Call 999 · 紧急救护"
+  },
+  "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing": {
+    "zh": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing",
+    "bm": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing",
+    "ta": "Announcements & Nurse Careers (\"The Hire Site\") · Assura Nursing"
+  },
+  "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah": {
+    "zh": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah",
+    "bm": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah",
+    "ta": "Georgetown · Bayan Lepas · Balik Pulau · Tanjung Bungah"
+  },
+  "We believe effective home care is a balance of two essential skills:": {
+    "zh": "We believe effective home care is a balance of two essential skills:",
+    "bm": "We believe effective home care is a balance of two essential skills:",
+    "ta": "We believe effective home care is a balance of two essential skills:"
+  },
+  "Ryle": {
+    "zh": "Ryle",
+    "bm": "Ryle",
+    "ta": "Ryle"
+  },
+  "📥 Download": {
+    "zh": "📥 Download",
+    "bm": "📥 Download",
+    "ta": "📥 Download"
+  },
+  "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas": {
+    "zh": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas",
+    "bm": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas",
+    "ta": "Seberang Jaya · Butterworth · Bukit Mertajam · Kepala Batas"
+  },
+  "nursing": {
+    "zh": "nursing",
+    "bm": "nursing",
+    "ta": "nursing"
+  },
+  "Visit": {
+    "zh": "Visit",
+    "bm": "Visit",
+    "ta": "Visit"
+  },
+  "更换尿管（导尿管）": {
+    "zh": "更换尿管（导尿管）",
+    "bm": "更换尿管（导尿管）",
+    "ta": "更换尿管（导尿管）"
+  },
+  "Mobile Phone Number (手机号码)": {
+    "zh": "Mobile Phone Number (手机号码)",
+    "bm": "Mobile Phone Number (手机号码)",
+    "ta": "Mobile Phone Number (手机号码)"
+  },
+  "Unified Care & Clinical Portal": {
+    "zh": "Unified Care & Clinical Portal",
+    "bm": "Unified Care & Clinical Portal",
+    "ta": "Unified Care & Clinical Portal"
+  },
+  "Role": {
+    "zh": "Role",
+    "bm": "Role",
+    "ta": "Role"
+  },
+  "Equipment Title": {
+    "zh": "Equipment Title",
+    "bm": "Equipment Title",
+    "ta": "Equipment Title"
+  },
+  "Assura Nursing · Unified Patient & Staff Clinical Portal": {
+    "zh": "Assura Nursing · Unified Patient & Staff Clinical Portal",
+    "bm": "Assura Nursing · Unified Patient & Staff Clinical Portal",
+    "ta": "Assura Nursing · Unified Patient & Staff Clinical Portal"
+  },
+  "📱 Interactive First Aid & CPR Simulator": {
+    "zh": "📱 Interactive First Aid & CPR Simulator",
+    "bm": "📱 Interactive First Aid & CPR Simulator",
+    "ta": "📱 Interactive First Aid & CPR Simulator"
+  },
+  "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.": {
+    "zh": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.",
+    "bm": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes.",
+    "ta": "Single-use gamma-sterilized basic & complex dressing sets with forceps, gauze swabs, and drapes."
+  },
+  "Mobile Phone Emergency": {
+    "zh": "Mobile Phone Emergency",
+    "bm": "Mobile Phone Emergency",
+    "ta": "Mobile Phone Emergency"
+  },
+  "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250": {
+    "zh": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250",
+    "bm": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250",
+    "ta": "Stroke Rehab & Mobility Exercise (1.5 hr) · RM 250"
+  },
+  "Patient NRIC / IC Number (身份证号 - 选填)": {
+    "zh": "Patient NRIC / IC Number (身份证号 - 选填)",
+    "bm": "Patient NRIC / IC Number (身份证号 - 选填)",
+    "ta": "Patient NRIC / IC Number (身份证号 - 选填)"
+  },
+  "24/7 Emergency Care:": {
+    "zh": "24/7 Emergency Care:",
+    "bm": "24/7 Emergency Care:",
+    "ta": "24/7 Emergency Care:"
+  },
+  "CAUTI Prevention & Drainage Maintenance": {
+    "zh": "CAUTI Prevention & Drainage Maintenance",
+    "bm": "CAUTI Prevention & Drainage Maintenance",
+    "ta": "CAUTI Prevention & Drainage Maintenance"
+  },
+  "Patient (Stroke Rehab)": {
+    "zh": "Patient (Stroke Rehab)",
+    "bm": "Patient (Stroke Rehab)",
+    "ta": "Patient (Stroke Rehab)"
+  },
+  "Click to expand": {
+    "zh": "Click to expand",
+    "bm": "Click to expand",
+    "ta": "Click to expand"
+  },
+  "How to Run Windows App (.exe):": {
+    "zh": "How to Run Windows App (.exe):",
+    "bm": "How to Run Windows App (.exe):",
+    "ta": "How to Run Windows App (.exe):"
+  },
+  "无偏好 · 安排最快到达人员": {
+    "zh": "无偏好 · 安排最快到达人员",
+    "bm": "无偏好 · 安排最快到达人员",
+    "ta": "无偏好 · 安排最快到达人员"
+  },
+  "👴 Elderly & Bedridden Care": {
+    "zh": "👴 Elderly & Bedridden Care",
+    "bm": "👴 Elderly & Bedridden Care",
+    "ta": "👴 Elderly & Bedridden Care"
+  },
+  "）即可同步查看主治护士记录的生命体征图表与用药打卡。": {
+    "zh": "）即可同步查看主治护士记录的生命体征图表与用药打卡。",
+    "bm": "）即可同步查看主治护士记录的生命体征图表与用药打卡。",
+    "ta": "）即可同步查看主治护士记录的生命体征图表与用药打卡。"
+  },
+  "Enter your 4-8 digit PIN": {
+    "zh": "Enter your 4-8 digit PIN",
+    "bm": "Enter your 4-8 digit PIN",
+    "ta": "Enter your 4-8 digit PIN"
+  },
+  "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.": {
+    "zh": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.",
+    "bm": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration.",
+    "ta": "Prevent fatal pulmonary aspiration pneumonia during enteral tube nutrition administration."
+  },
+  "🏥 Penang Mainland Hospitals (Seberang Perai)": {
+    "zh": "🏥 Penang Mainland Hospitals (Seberang Perai)",
+    "bm": "🏥 Penang Mainland Hospitals (Seberang Perai)",
+    "ta": "🏥 Penang Mainland Hospitals (Seberang Perai)"
+  },
+  "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam": {
+    "zh": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam",
+    "bm": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam",
+    "ta": "570, Jalan Perda Barat, Bandar Perda, 14000 Bukit Mertajam"
+  },
+  "↑ Back to the form · 返回表格": {
+    "zh": "↑ Back to the form · 返回表格",
+    "bm": "↑ Back to the form · 返回表格",
+    "ta": "↑ Back to the form · 返回表格"
+  },
+  "Patient / Family Representative Name (姓名)": {
+    "zh": "Patient / Family Representative Name (姓名)",
+    "bm": "Patient / Family Representative Name (姓名)",
+    "ta": "Patient / Family Representative Name (姓名)"
+  },
+  "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah": {
+    "zh": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah",
+    "bm": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah",
+    "ta": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah"
+  },
+  "⏱️": {
+    "zh": "⏱️",
+    "bm": "⏱️",
+    "ta": "⏱️"
+  },
+  "Staff ID Login.": {
+    "zh": "Staff ID Login.",
+    "bm": "Staff ID Login.",
+    "ta": "Staff ID Login."
+  },
+  "RM 15 – RM 45 / pack": {
+    "zh": "RM 15 – RM 45 / pack",
+    "bm": "RM 15 – RM 45 / pack",
+    "ta": "RM 15 – RM 45 / pack"
+  },
+  "Security PIN / Password (个人安全密码)": {
+    "zh": "Security PIN / Password (个人安全密码)",
+    "bm": "Security PIN / Password (个人安全密码)",
+    "ta": "Security PIN / Password (个人安全密码)"
+  },
+  "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.": {
+    "zh": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.",
+    "bm": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts.",
+    "ta": "Get instant access to home nurse bookings, transparent rates, emergency hospital routing, and live clinical vital charts."
+  },
+  "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.": {
+    "zh": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.",
+    "bm": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members.",
+    "ta": "Treating every patient with warmth, patience, and empathy—just as we would care for our own beloved family members."
+  },
+  "Click to view rates for Elderly & Bedridden Care": {
+    "zh": "Click to view rates for Elderly & Bedridden Care",
+    "bm": "Click to view rates for Elderly & Bedridden Care",
+    "ta": "Click to view rates for Elderly & Bedridden Care"
+  },
+  "110 BPM Standard Rhythm": {
+    "zh": "110 BPM Standard Rhythm",
+    "bm": "110 BPM Standard Rhythm",
+    "ta": "110 BPM Standard Rhythm"
+  },
+  "Male Nurse / Caregiver (男护士/男护理师)": {
+    "zh": "Male Nurse / Caregiver (男护士/男护理师)",
+    "bm": "Male Nurse / Caregiver (男护士/男护理师)",
+    "ta": "Male Nurse / Caregiver (男护士/男护理师)"
+  },
+  "Balik Pulau & South Island": {
+    "zh": "Balik Pulau & South Island",
+    "bm": "Balik Pulau & South Island",
+    "ta": "Balik Pulau & South Island"
+  },
+  "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).": {
+    "zh": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).",
+    "bm": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT).",
+    "ta": "Protect healing tissue and prevent bacterial infection using certified Aseptic Non-Touch Technique (ANTT)."
+  },
+  "📝 Online Form": {
+    "zh": "📝 Online Form",
+    "bm": "📝 Online Form",
+    "ta": "📝 Online Form"
+  },
+  "Loading MEWS Scoring Chart…": {
+    "zh": "Loading MEWS Scoring Chart…",
+    "bm": "Loading MEWS Scoring Chart…",
+    "ta": "Loading MEWS Scoring Chart…"
+  },
+  "☎ 04-228 8222": {
+    "zh": "☎ 04-228 8222",
+    "bm": "☎ 04-228 8222",
+    "ta": "☎ 04-228 8222"
+  },
+  "← Back to Home": {
+    "zh": "← Back to Home",
+    "bm": "← Back to Home",
+    "ta": "← Back to Home"
+  },
+  "量身定制·科学照护：": {
+    "zh": "量身定制·科学照护：",
+    "bm": "量身定制·科学照护：",
+    "ta": "量身定制·科学照护："
+  },
+  "Caregiver Tip:": {
+    "zh": "Caregiver Tip:",
+    "bm": "Caregiver Tip:",
+    "ta": "Caregiver Tip:"
+  },
+  "：在 App 内输入个案编号（如": {
+    "zh": "：在 App 内输入个案编号（如",
+    "bm": "：在 App 内输入个案编号（如",
+    "ta": "：在 App 内输入个案编号（如"
+  },
+  "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit": {
+    "zh": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit",
+    "bm": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit",
+    "ta": "Licensed Nurses & Trained Caregivers · Home visits only · Transparent quotation before every visit"
+  },
+  "Step-by-Step Practical Guidelines": {
+    "zh": "Step-by-Step Practical Guidelines",
+    "bm": "Step-by-Step Practical Guidelines",
+    "ta": "Step-by-Step Practical Guidelines"
+  },
+  "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.": {
+    "zh": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.",
+    "bm": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.",
+    "ta": "Official company announcements, Penang clinical updates, and \"The Hire Site\" for Registered Nurses, Staff Nurses, and Dedicated Caregivers."
+  },
+  "Estimated Total Before Consumables": {
+    "zh": "Estimated Total Before Consumables",
+    "bm": "Estimated Total Before Consumables",
+    "ta": "Estimated Total Before Consumables"
+  },
+  "电话": {
+    "zh": "电话",
+    "bm": "电话",
+    "ta": "电话"
+  },
+  "Post-Operative Care": {
+    "zh": "Post-Operative Care",
+    "bm": "Post-Operative Care",
+    "ta": "Post-Operative Care"
+  },
+  "Do Not Crush:": {
+    "zh": "Do Not Crush:",
+    "bm": "Do Not Crush:",
+    "ta": "Do Not Crush:"
+  },
+  "🚗 Waze": {
+    "zh": "🚗 Waze",
+    "bm": "🚗 Waze",
+    "ta": "🚗 Waze"
+  },
+  "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.": {
+    "zh": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.",
+    "bm": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat.",
+    "ta": "Flip-up armrests for seamless lateral sliding transfers from bed with waterproof padded commode seat."
+  },
+  "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。": {
+    "zh": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。",
+    "bm": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。",
+    "ta": "：在 App 内切换至「医护人员工号登录」，输入 Staff ID 即可接单、记录生命体征与交班。"
+  },
+  "扫码分享": {
+    "zh": "扫码分享",
+    "bm": "扫码分享",
+    "ta": "扫码分享"
+  },
+  "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.": {
+    "zh": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.",
+    "bm": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation.",
+    "ta": "Instant open access to procedures, transparent pricing calculators, emergency hospital GPS, and 1-tap WhatsApp nurse consultation."
+  },
+  "Serving Bukit Mertajam & nearby areas": {
+    "zh": "Serving Bukit Mertajam & nearby areas",
+    "bm": "Serving Bukit Mertajam & nearby areas",
+    "ta": "Serving Bukit Mertajam & nearby areas"
+  },
+  "RM 120 – RM 200 / mo": {
+    "zh": "RM 120 – RM 200 / mo",
+    "bm": "RM 120 – RM 200 / mo",
+    "ta": "RM 120 – RM 200 / mo"
+  },
+  "e.g. 0124567890 or ASN-8821": {
+    "zh": "e.g. 0124567890 or ASN-8821",
+    "bm": "e.g. 0124567890 or ASN-8821",
+    "ta": "e.g. 0124567890 or ASN-8821"
+  },
+  "🩺 View Services & Transparent Rates": {
+    "zh": "🩺 View Services & Transparent Rates",
+    "bm": "🩺 View Services & Transparent Rates",
+    "ta": "🩺 View Services & Transparent Rates"
+  },
+  "ASN-8821": {
+    "zh": "ASN-8821",
+    "bm": "ASN-8821",
+    "ta": "ASN-8821"
+  },
+  "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).": {
+    "zh": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).",
+    "bm": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI).",
+    "ta": "Maintain strict hygiene to prevent Catheter-Associated Urinary Tract Infections (CAUTI)."
+  },
+  "Staff & Gender Preference": {
+    "zh": "Staff & Gender Preference",
+    "bm": "Staff & Gender Preference",
+    "ta": "Staff & Gender Preference"
+  },
+  "☎ 04-327 8888": {
+    "zh": "☎ 04-327 8888",
+    "bm": "☎ 04-327 8888",
+    "ta": "☎ 04-327 8888"
+  },
+  "⚠️": {
+    "zh": "⚠️",
+    "bm": "⚠️",
+    "ta": "⚠️"
+  },
+  "Elderly Care & Stroke": {
+    "zh": "Elderly Care & Stroke",
+    "bm": "Elderly Care & Stroke",
+    "ta": "Elderly Care & Stroke"
+  },
+  "❓ Enquire / 咨询": {
+    "zh": "❓ Enquire / 咨询",
+    "bm": "❓ Enquire / 咨询",
+    "ta": "❓ Enquire / 咨询"
+  },
+  "♿ Transfer & Hygiene": {
+    "zh": "♿ Transfer & Hygiene",
+    "bm": "♿ Transfer & Hygiene",
+    "ta": "♿ Transfer & Hygiene"
+  },
+  "👀 Preview Sample Patient Chart (查看病历演示样本)": {
+    "zh": "👀 Preview Sample Patient Chart (查看病历演示样本)",
+    "bm": "👀 Preview Sample Patient Chart (查看病历演示样本)",
+    "ta": "👀 Preview Sample Patient Chart (查看病历演示样本)"
+  },
+  "Urinary Catheter Change": {
+    "zh": "Urinary Catheter Change",
+    "bm": "Urinary Catheter Change",
+    "ta": "Urinary Catheter Change"
+  },
+  "Choose date and time": {
+    "zh": "Choose date and time",
+    "bm": "Choose date and time",
+    "ta": "Choose date and time"
+  },
+  "Opens WhatsApp with your booking details filled in — just press send.": {
+    "zh": "Opens WhatsApp with your booking details filled in — just press send.",
+    "bm": "Opens WhatsApp with your booking details filled in — just press send.",
+    "ta": "Opens WhatsApp with your booking details filled in — just press send."
+  },
+  "JULY 2026 · HOSPITAL PARTNERSHIP": {
+    "zh": "JULY 2026 · HOSPITAL PARTNERSHIP",
+    "bm": "JULY 2026 · HOSPITAL PARTNERSHIP",
+    "ta": "JULY 2026 · HOSPITAL PARTNERSHIP"
+  },
+  "Our Standards · 服务宗旨与承诺": {
+    "zh": "Our Standards · 服务宗旨与承诺",
+    "bm": "Our Standards · 服务宗旨与承诺",
+    "ta": "Our Standards · 服务宗旨与承诺"
+  },
+  "企业使命": {
+    "zh": "企业使命",
+    "bm": "企业使命",
+    "ta": "企业使命"
+  },
+  "Clinical Services & Instant Pricing · Assura Nursing": {
+    "zh": "Clinical Services & Instant Pricing · Assura Nursing",
+    "bm": "Clinical Services & Instant Pricing · Assura Nursing",
+    "ta": "Clinical Services & Instant Pricing · Assura Nursing"
+  },
+  "Medication Safety & Standard Times": {
+    "zh": "Medication Safety & Standard Times",
+    "bm": "Medication Safety & Standard Times",
+    "ta": "Medication Safety & Standard Times"
+  },
+  "1. Public Open Mode (公众免密快速浏览)": {
+    "zh": "1. Public Open Mode (公众免密快速浏览)",
+    "bm": "1. Public Open Mode (公众免密快速浏览)",
+    "ta": "1. Public Open Mode (公众免密快速浏览)"
+  },
+  "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.": {
+    "zh": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.",
+    "bm": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway.",
+    "ta": "Rapidly aspirates thick oral, nasal, or tracheostomy secretions to maintain a clear airway."
+  },
+  "Adapting to the Home, Upholding the Fundamentals": {
+    "zh": "Adapting to the Home, Upholding the Fundamentals",
+    "bm": "Adapting to the Home, Upholding the Fundamentals",
+    "ta": "Adapting to the Home, Upholding the Fundamentals"
+  },
+  "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.": {
+    "zh": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.",
+    "bm": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support.",
+    "ta": "Active local nurse coordination across Penang Island & Mainland with fast WhatsApp booking confirmation and on-call support."
+  },
+  "Gov Hospital": {
+    "zh": "Gov Hospital",
+    "bm": "Gov Hospital",
+    "ta": "Gov Hospital"
+  },
+  "v2.4 · 2.1 MB · PC & Workstations · Standalone": {
+    "zh": "v2.4 · 2.1 MB · PC & Workstations · Standalone",
+    "bm": "v2.4 · 2.1 MB · PC & Workstations · Standalone",
+    "ta": "v2.4 · 2.1 MB · PC & Workstations · Standalone"
+  },
+  "folder.": {
+    "zh": "folder.",
+    "bm": "folder.",
+    "ta": "folder."
+  },
+  "Assura Nursing": {
+    "zh": "Assura Nursing",
+    "bm": "Assura Nursing",
+    "ta": "Assura Nursing"
+  },
+  "The Real Challenge We Solve (创办初心)": {
+    "zh": "The Real Challenge We Solve (创办初心)",
+    "bm": "The Real Challenge We Solve (创办初心)",
+    "ta": "The Real Challenge We Solve (创办初心)"
+  },
+  "BM": {
+    "zh": "BM",
+    "bm": "BM",
+    "ta": "BM"
   },
   "Apple iOS (iPhone / iPad) Detected:": {
     "zh": "已检测到 Apple iOS 设备（iPhone / iPad）：",
@@ -4223,51 +4273,6 @@ const STRING_MAP = {
     "zh": "所有安装包均为官方直链，无任何恶意插件，由 Cloudflare 全球安全托管。",
     "bm": "Semua muat turun adalah terus, bebas perisian hasad, dan dihoskan secara selamat di Cloudflare.",
     "ta": "அனைத்து பதிவிறக்கங்களும் நேரடியானவை, தீம்பொருள் இல்லாதவை மற்றும் Cloudflare இல் பாதுகாப்பாக வழங்கப்படுகின்றன."
-  },
-  "☎ 04-222 7799": {
-    "zh": "☎ 04-222 7799",
-    "bm": "☎ 04-222 7799",
-    "ta": "☎ 04-222 7799"
-  },
-  "Oncology Specialist": {
-    "zh": "Oncology Specialist",
-    "bm": "Oncology Specialist",
-    "ta": "Oncology Specialist"
-  },
-  "Penang Adventist Hospital (PAH)": {
-    "zh": "Penang Adventist Hospital (PAH)",
-    "bm": "Penang Adventist Hospital (PAH)",
-    "ta": "Penang Adventist Hospital (PAH)"
-  },
-  "☎ 04-222 7200": {
-    "zh": "☎ 04-222 7200",
-    "bm": "☎ 04-222 7200",
-    "ta": "☎ 04-222 7200"
-  },
-  "24/7 Direct Care / Line:": {
-    "zh": "24/7 Direct Care / Line:",
-    "bm": "24/7 Direct Care / Line:",
-    "ta": "24/7 Direct Care / Line:"
-  },
-  "465, Jalan Burma, 10350 George Town, Penang": {
-    "zh": "465, Jalan Burma, 10350 George Town, Penang",
-    "bm": "465, Jalan Burma, 10350 George Town, Penang",
-    "ta": "465, Jalan Burma, 10350 George Town, Penang"
-  },
-  "☎ 04-890 7000": {
-    "zh": "☎ 04-890 7000",
-    "bm": "☎ 04-890 7000",
-    "ta": "☎ 04-890 7000"
-  },
-  "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah": {
-    "zh": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah",
-    "bm": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah",
-    "ta": "23, Jalan Bulan, Fettes Park, 11200 Tanjung Bungah"
-  },
-  "Mount Miriam Cancer Hospital": {
-    "zh": "Mount Miriam Cancer Hospital",
-    "bm": "Mount Miriam Cancer Hospital",
-    "ta": "Mount Miriam Cancer Hospital"
   }
 };
 

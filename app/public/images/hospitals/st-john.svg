@@ -1,14 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
-  <rect width="160" height="160" rx="20" fill="#FFFFFF"/>
-  <rect x="4" y="4" width="152" height="152" rx="16" fill="none" stroke="#E2E8F0" stroke-width="2"/>
-  <!-- Maltese 8-point Cross -->
-  <g transform="translate(80, 50)">
-    <circle cx="0" cy="0" r="28" fill="#000000"/>
-    <path d="M 0 0 L -8 -22 L 0 -16 L 8 -22 Z M 0 0 L 22 -8 L 16 0 L 22 8 Z M 0 0 L 8 22 L 0 16 L -8 22 Z M 0 0 L -22 8 L -16 0 L -22 -8 Z" fill="#FFFFFF"/>
-    <circle cx="0" cy="0" r="3" fill="#EAB308"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <rect width="320" height="100" rx="12" fill="#FFFFFF"/>
+  <g transform="translate(48, 50)">
+    <circle cx="0" cy="0" r="26" fill="#000000"/>
+    <path d="M 0 0 L -7 -20 L 0 -14 L 7 -20 Z M 0 0 L 20 -7 L 14 0 L 20 7 Z M 0 0 L 7 20 L 0 14 L -7 20 Z M 0 0 L -20 7 L -14 0 L -20 -7 Z" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="2.5" fill="#EAB308"/>
   </g>
-  <text x="80" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="900" fill="#000000" text-anchor="middle">ST. JOHN AMBULANCE</text>
-  <text x="80" y="120" font-family="Arial, sans-serif" font-size="8" font-weight="800" fill="#CA8A04" text-anchor="middle">MALAYSIA · PENANG</text>
-  <text x="80" y="134" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#DC2626" text-anchor="middle">24/7 EMERGENCY DISPATCH</text>
-  <text x="80" y="148" font-family="Arial, sans-serif" font-size="6.5" font-weight="600" fill="#64748B" text-anchor="middle">EMERGENCY: 04-828 5999</text>
+  <text x="86" y="44" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#000000">ST. JOHN AMBULANCE</text>
+  <text x="86" y="64" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#CA8A04">MALAYSIA · PENANG</text>
+  <text x="86" y="80" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#DC2626">24/7 EMERGENCY DISPATCH: 04-828 5999</text>
 </svg>
