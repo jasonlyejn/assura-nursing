@@ -1426,9 +1426,9 @@ const STRING_MAP = {
     "ta": "Hospital Discharge & Sterile Wound Care"
   },
   "How to Run Windows App (.exe):": {
-    "zh": "How to Run Windows App (.exe):",
-    "bm": "How to Run Windows App (.exe):",
-    "ta": "How to Run Windows App (.exe):"
+    "zh": "Windows 客户端运行步骤 (.exe)：",
+    "bm": "Cara Menjalankan Aplikasi Windows (.exe):",
+    "ta": "விண்டோஸ் பயன்பாட்டை இயக்குவது எப்படி (.exe):"
   },
   "admin@assuranursing.com": {
     "zh": "admin@assuranursing.com",
@@ -1766,9 +1766,9 @@ const STRING_MAP = {
     "ta": "🛠️ Clinical Sandbox & Testing Accounts"
   },
   "How to Install Android APK:": {
-    "zh": "How to Install Android APK:",
-    "bm": "How to Install Android APK:",
-    "ta": "How to Install Android APK:"
+    "zh": "安卓 APK 安装步骤：",
+    "bm": "Cara Memasang APK Android:",
+    "ta": "ஆண்ட்ராய்டு APK நிறுவுவது எப்படி:"
   },
   "📁 Medical Vault": {
     "zh": "📁 Medical Vault",
@@ -2786,9 +2786,9 @@ const STRING_MAP = {
     "ta": "எங்களை பற்றி & நிறுவனர் செய்தி · அசுரா நர்சிங்"
   },
   "Pin to Taskbar or Desktop for 1-click clinical workstation access.": {
-    "zh": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
-    "bm": "Pin to Taskbar or Desktop for 1-click clinical workstation access.",
-    "ta": "Pin to Taskbar or Desktop for 1-click clinical workstation access."
+    "zh": "可固定到任务栏或桌面，一键启动临床工作站。",
+    "bm": "Sematkan pada Bar Tugas atau Desktop untuk akses pantas stesen kerja klinikal.",
+    "ta": "1-கிளிக் அணுகலுக்கு பணிப்பட்டி அல்லது டெஸ்க்டாப்பில் பொருத்தவும்."
   },
   "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.": {
     "zh": "All clinical charts, nurse recordings, and patient data are strictly protected under the Malaysian Personal Data Protection Act 2010. Unauthorized photography or secondary dissemination is prohibited.",
@@ -3931,9 +3931,9 @@ const STRING_MAP = {
     "ta": "After this page is published, install it from your browser for faster bookings."
   },
   "Standalone portable application — no complex installation needed.": {
-    "zh": "Standalone portable application — no complex installation needed.",
-    "bm": "Standalone portable application — no complex installation needed.",
-    "ta": "Standalone portable application — no complex installation needed."
+    "zh": "免安装绿色独立版客户端——无需繁琐安装流程。",
+    "bm": "Aplikasi mudah alih mandiri — tiada pemasangan rumit diperlukan.",
+    "ta": "தனியான போர்ட்டபிள் பயன்பாடு - சிக்கலான நிறுவல் தேவையில்லை."
   },
   "⏰ QID (Four Times Daily):": {
     "zh": "⏰ QID (Four Times Daily):",
@@ -4490,15 +4490,265 @@ const STRING_MAP = {
     "bm": "Pakar Penjagaan Geriatrik",
     "ta": "முதியோர் பராமரிப்பு நிபுணர்"
   },
-  "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.": {
-    "zh": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.",
-    "bm": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.",
-    "ta": "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides."
-  },
   "Clinical Resources, Emergency & Equipment Hub": {
-    "zh": "Clinical Resources, Emergency & Equipment Hub",
-    "bm": "Clinical Resources, Emergency & Equipment Hub",
-    "ta": "Clinical Resources, Emergency & Equipment Hub"
+    "zh": "临床资源、急诊与医疗设备中心",
+    "bm": "Pusat Sumber Klinikal, Kecemasan & Peralatan",
+    "ta": "மருத்துவ வளங்கள், அவசர சிகிச்சை & உபகரணங்கள் மையம்"
+  },
+  "Your unified Penang clinical & emergency hub: 24/7 hospital emergency GPS directory, private ambulance contacts, CPR metronome, medical equipment rental catalog, and patient & family home nursing guides.": {
+    "zh": "您的一站式槟城临床与急诊枢纽：24小时医院急诊导航、私人救护车热线、急救CPR节拍器、医疗设备租赁目录以及患者与家庭居家护理指引。",
+    "bm": "Hab klinikal & kecemasan bersepadu Pulau Pinang anda: direktori GPS kecemasan hospital 24 jam, kenalan ambulans swasta, metronom CPR, katalog sewa peralatan perubatan, serta panduan penjagaan pesakit & keluarga.",
+    "ta": "உங்கள் ஒருங்கிணைந்த பினாங்கு மருத்துவ & அவசர சிகிச்சை மையம்: 24 மணி நேர மருத்துவமனை அவசர GPS வழிகாட்டி, தனியார் ஆம்புலன்ஸ் தொடர்புகள், CPR வழிகாட்டி, மருத்துவ உபகரண வாடகை பட்டியல் மற்றும் வீட்டு நர்சிங் வழிகாட்டிகள்."
+  },
+  "Android Phone Permissions & Display Over Apps": {
+    "zh": "安卓手机权限与应用上层显示设置",
+    "bm": "Kebenaran Telefon Android & Papar Di Atas Aplikasi",
+    "ta": "ஆண்ட்ராய்டு தொலைபேசி அனுமதிகள் & ஆப்ஸ் மீது காட்சிப்படுத்துதல்"
+  },
+  "How standard permissions & floating emergency features connect to your Android device": {
+    "zh": "了解系统标准权限与紧急浮动功能如何与您的安卓手机无缝连接",
+    "bm": "Cara kebenaran standard & fungsi kecemasan terapung berhubung dengan peranti Android anda",
+    "ta": "நிலையான அனுமதிகள் & அவசர அம்சங்கள் உங்கள் ஆண்ட்ராய்டு சாதனத்துடன் எவ்வாறு இணைகின்றன"
+  },
+  "Native APK vs. Browser PWA (\"Installed from Browser\")": {
+    "zh": "原生安卓 APK 与 浏览器添加快捷方式的区别",
+    "bm": "APK Android Asal lwn PWA Pelayar (\"Dipasang daripada Pelayar\")",
+    "ta": "நேட்டிவ் APK vs உலாவி PWA (\"உலாவியில் இருந்து நிறுவப்பட்டது\")"
+  },
+  "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows \"No permissions requested\". Installing the direct Assura Nursing APK connects directly with your phone's native hardware permissions for reliable 24/7 care.": {
+    "zh": "如果您之前通过浏览器（“添加到主屏幕”）安装，安卓系统会将其识别为受限的网页快捷方式并显示“未请求权限”。直接下载并安装 Assura Nursing APK 原生安装包，即可自动启用手机系统权限，确保24小时紧急护理与通知稳定运行。",
+    "bm": "Jika anda memasang Assura melalui pelayar (\"Tambah ke Skrin Utama\"), Android menganggapnya sebagai WebAPK terhad dan memaparkan \"Tiada kebenaran diminta\". Memasang APK Assura Nursing asal menghubungkan terus dengan kebenaran perkakasan telefon anda untuk penjagaan 24/7 yang dipercayai.",
+    "ta": "நீங்கள் உலாவியில் (\"முகப்புத் திரையில் சேர்\") சேர்த்திருந்தால், ஆண்ட்ராய்டு அதை \"அனுமதிகள் எதுவும் கோரப்படவில்லை\" என்று காட்டும். நேரடி Assura Nursing APK-வை நிறுவுவது நம்பகமான 24/7 பராமரிப்பிற்காக உங்கள் தொலைபேசியின் அனுமதிகளுடன் நேரடியாக இணைகிறது."
+  },
+  "Location (GPS)": {
+    "zh": "定位权限 (GPS)",
+    "bm": "Lokasi (GPS)",
+    "ta": "இருப்பிடம் (GPS)"
+  },
+  "Calculates nearest nurse travel distance & 1-tap navigation to 24/7 emergency hospitals.": {
+    "zh": "计算就近护士路程距离，并支持一键导航至槟城24小时急诊医院。",
+    "bm": "Mengira jarak perjalanan jururawat terdekat & navigasi 1-ketik ke hospital kecemasan 24/7.",
+    "ta": "அருகிலுள்ள செவிலியர் பயண தூரத்தை கணக்கிடுகிறது & 24/7 அவசர மருத்துவமனைகளுக்கு 1-தட்டல் வழிகாட்டுகிறது."
+  },
+  "Notifications": {
+    "zh": "通知提醒",
+    "bm": "Pemberitahuan",
+    "ta": "அறிவிப்புகள்"
+  },
+  "Receives critical MEWS vital deterioration alerts, medication reminders & shift handovers.": {
+    "zh": "实时接收MEWS生命体征危急预警、用药提醒与护士交接班记录通知。",
+    "bm": "Menerima amaran kemerosotan tanda vital MEWS kritikal, peringatan ubat & serahan syif.",
+    "ta": "முக்கியமான MEWS எச்சரிக்கைகள், மருந்து நினைவூட்டல்கள் & ஷிப்ட் ஒப்படைப்புகளைப் பெறுகிறது."
+  },
+  "Camera & Media": {
+    "zh": "相机与媒体相册",
+    "bm": "Kamera & Media",
+    "ta": "கேமரா & மீடியா"
+  },
+  "Securely capture wound healing photos (ANTT) and upload laboratory test records.": {
+    "zh": "安全拍摄无菌伤口愈合进展照片 (ANTT) 并上传化验报告单据。",
+    "bm": "Merakam foto pemulihan luka secara selamat (ANTT) dan memuat naik rekod ujian makmal.",
+    "ta": "காயம் ஆறும் புகைப்படங்களை (ANTT) பாதுகாப்பாக எடுத்து ஆய்வக சோதனை பதிவேடுகளைப் பதிவேற்றலாம்."
+  },
+  "Phone & Emergency": {
+    "zh": "电话拨打与急救",
+    "bm": "Telefon & Kecemasan",
+    "ta": "தொலைபேசி & அவசர அழைப்பு"
+  },
+  "Direct 1-tap call to 24/7 clinical hotline and rapid emergency ambulance response.": {
+    "zh": "一键直拨24小时家庭护理热线与快速紧急救护车调度。",
+    "bm": "Panggilan terus 1-ketik ke talian klinikal 24/7 dan ambulans kecemasan pantas.",
+    "ta": "24/7 மருத்துவ அவசர உதவி மற்றும் ஆம்புலன்ஸுக்கு நேரடி 1-தட்டல் அழைப்பு."
+  },
+  "How to Enable \"Display on top of other apps\":": {
+    "zh": "如何开启“在其他应用上层显示”悬浮权限：",
+    "bm": "Cara Mengaktifkan \"Papar di atas aplikasi lain\":",
+    "ta": "\"பிற பயன்பாடுகளின் மேல் காண்பி\" என்பதை எவ்வாறு இயக்குவது:"
+  },
+  "To allow the floating Emergency CPR Metronome (110 BPM) and vital alert HUD to appear while using other apps or on lock screen:": {
+    "zh": "若要在使用其他应用或锁屏时，正常显示紧急CPR急救节拍器 (110 BPM) 与生命体征警报悬浮窗：",
+    "bm": "Untuk membolehkan Metronom CPR Kecemasan terapung (110 BPM) dan amaran tanda vital muncul semasa menggunakan aplikasi lain atau di skrin kunci:",
+    "ta": "பிற பயன்பாடுகளைப் பயன்படுத்தும் போது மிதக்கும் அவசர CPR வழிகாட்டி (110 BPM) மற்றும் முக்கிய எச்சரிக்கைகள் தோன்றுவதை அனுமதிக்க:"
+  },
+  "Open your phone's Settings → Apps (or Application Manager).": {
+    "zh": "打开手机“设置” → 点击“应用管理”",
+    "bm": "Buka Tetapan (Settings) telefon anda → Aplikasi (Apps).",
+    "ta": "உங்கள் தொலைபேசியின் அமைப்புகள் (Settings) → பயன்பாடுகள் (Apps) என்பதற்குச் செல்லவும்."
+  },
+  "Tap Special app access (or Special access / Three dots ⋮ in top right).": {
+    "zh": "点击“特殊应用权限”（或右上角三个点 ⋮）",
+    "bm": "Ketik Akses aplikasi khas (atau ikon tiga titik ⋮ di penjuru atas).",
+    "ta": "சிறப்பு பயன்பாட்டு அணுகல் (Special app access அல்லது மேல் வலதுபுறத்தில் உள்ள மூன்று புள்ளிகள் ⋮) என்பதைத் தட்டவும்."
+  },
+  "Select Display over other apps (or Appear on top).": {
+    "zh": "选择“在其他应用上层显示 (Display over other apps / Appear on top)”",
+    "bm": "Pilih Papar di atas aplikasi lain (atau Muncul di atas).",
+    "ta": "பிற பயன்பாடுகளின் மேல் காண்பி (Display over other apps) என்பதைத் தேர்ந்தெடுக்கவும்."
+  },
+  "Find Assura Nursing and toggle the switch to Allow (ON).": {
+    "zh": "找到“Assura Nursing”并将开关开启为“允许 (ON)”",
+    "bm": "Cari Assura Nursing dan hidupkan suis ke Benarkan (ON).",
+    "ta": "Assura Nursing என்பதைக் கண்டறிந்து சுவிட்சை அனுமதி (ON) என மாற்றவும்."
+  },
+  "Tap Download Android APK to save AssuraNursing.apk.": {
+    "zh": "点击“下载 Android APK”保存 AssuraNursing.apk 文件。",
+    "bm": "Ketik Muat Turun APK Android untuk menyimpan AssuraNursing.apk.",
+    "ta": "AssuraNursing.apk கோப்பை சேமிக்க Android APK பதிவிறக்கு என்பதைத் தட்டவும்."
+  },
+  "Open the file from notifications or your Downloads folder.": {
+    "zh": "从手机通知栏或“下载”文件夹中打开该文件。",
+    "bm": "Buka fail daripada pemberitahuan atau folder Muat Turun anda.",
+    "ta": "அறிவிப்புகள் அல்லது உங்கள் பதிவிறக்கங்கள் கோப்புறையிலிருந்து கோப்பைத் திறக்கவும்."
+  },
+  "If prompted with \"Install unknown apps\", tap Settings and allow.": {
+    "zh": "如果系统提示“安装未知应用”，请点击设置并选择允许。",
+    "bm": "Jika digesa dengan \"Pasang aplikasi tidak diketahui\", ketik Tetapan dan benarkan.",
+    "ta": "\"தெரியாத பயன்பாடுகளை நிறுவு\" என்று கேட்கப்பட்டால், அமைப்புகளைத் தட்டி அனுமதிக்கவும்."
+  },
+  "Tap Install to place Assura on your mobile home screen.": {
+    "zh": "点击“安装”即可将 Assura Nursing 添加到您的手机桌面。",
+    "bm": "Ketik Pasang untuk meletakkan Assura pada skrin utama telefon anda.",
+    "ta": "உங்கள் மொபைல் முகப்புத் திரையில் Assura பயன்பாட்டை வைக்க நிறுவு என்பதைத் தட்டவும்."
+  },
+  "Click Download Assura Nursing (.exe) to save AssuraNursing.exe.": {
+    "zh": "点击“下载 Windows 客户端 (.exe)”保存 AssuraNursing.exe。",
+    "bm": "Klik Muat Turun Assura Nursing (.exe) untuk menyimpan AssuraNursing.exe.",
+    "ta": "AssuraNursing.exe கோப்பை சேமிக்க பதிவிறக்கு என்பதைக் கிளிக் செய்யவும்."
+  },
+  "Open AssuraNursing.exe from your Downloads folder.": {
+    "zh": "从您的“下载”文件夹中双击打开 AssuraNursing.exe。",
+    "bm": "Buka AssuraNursing.exe daripada folder Muat Turun anda.",
+    "ta": "உங்கள் பதிவிறக்கங்கள் கோப்புறையிலிருந்து AssuraNursing.exe ஐத் திறக்கவும்."
+  },
+  "Select": {
+    "zh": "Select",
+    "bm": "Select",
+    "ta": "Select"
+  },
+  "🔝 How to Enable \"Display on top of other apps\":": {
+    "zh": "🔝 How to Enable \"Display on top of other apps\":",
+    "bm": "🔝 How to Enable \"Display on top of other apps\":",
+    "ta": "🔝 How to Enable \"Display on top of other apps\":"
+  },
+  "connects directly with your phone's native hardware permissions for reliable 24/7 care.": {
+    "zh": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
+    "bm": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
+    "ta": "connects directly with your phone's native hardware permissions for reliable 24/7 care."
+  },
+  ". Installing the direct": {
+    "zh": ". Installing the direct",
+    "bm": ". Installing the direct",
+    "ta": ". Installing the direct"
+  },
+  "\"No permissions requested\"": {
+    "zh": "\"No permissions requested\"",
+    "bm": "\"No permissions requested\"",
+    "ta": "\"No permissions requested\""
+  },
+  "Special app access": {
+    "zh": "Special app access",
+    "bm": "Special app access",
+    "ta": "Special app access"
+  },
+  "📞 Phone & Emergency": {
+    "zh": "📞 Phone & Emergency",
+    "bm": "📞 Phone & Emergency",
+    "ta": "📞 Phone & Emergency"
+  },
+  "📍 Location (GPS)": {
+    "zh": "📍 Location (GPS)",
+    "bm": "📍 Location (GPS)",
+    "ta": "📍 Location (GPS)"
+  },
+  "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows": {
+    "zh": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
+    "bm": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
+    "ta": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows"
+  },
+  "Apps": {
+    "zh": "Apps",
+    "bm": "Apps",
+    "ta": "Apps"
+  },
+  "Special access / Three dots ⋮ in top right": {
+    "zh": "Special access / Three dots ⋮ in top right",
+    "bm": "Special access / Three dots ⋮ in top right",
+    "ta": "Special access / Three dots ⋮ in top right"
+  },
+  "Appear on top": {
+    "zh": "Appear on top",
+    "bm": "Appear on top",
+    "ta": "Appear on top"
+  },
+  "Allow": {
+    "zh": "Allow",
+    "bm": "Allow",
+    "ta": "Allow"
+  },
+  "Assura Nursing APK": {
+    "zh": "Assura Nursing APK",
+    "bm": "Assura Nursing APK",
+    "ta": "Assura Nursing APK"
+  },
+  "(or": {
+    "zh": "(or",
+    "bm": "(or",
+    "ta": "(or"
+  },
+  "Application Manager": {
+    "zh": "Application Manager",
+    "bm": "Application Manager",
+    "ta": "Application Manager"
+  },
+  "Settings": {
+    "zh": "Settings",
+    "bm": "Settings",
+    "ta": "Settings"
+  },
+  "Find": {
+    "zh": "Find",
+    "bm": "Find",
+    "ta": "Find"
+  },
+  "🔔 Notifications": {
+    "zh": "🔔 Notifications",
+    "bm": "🔔 Notifications",
+    "ta": "🔔 Notifications"
+  },
+  "📷 Camera & Media": {
+    "zh": "📷 Camera & Media",
+    "bm": "📷 Camera & Media",
+    "ta": "📷 Camera & Media"
+  },
+  "and toggle the switch to": {
+    "zh": "and toggle the switch to",
+    "bm": "and toggle the switch to",
+    "ta": "and toggle the switch to"
+  },
+  "⚙️": {
+    "zh": "⚙️",
+    "bm": "⚙️",
+    "ta": "⚙️"
+  },
+  "📱 Native APK vs. Browser PWA (\"Installed from Browser\")": {
+    "zh": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
+    "bm": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
+    "ta": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")"
+  },
+  "Open your phone's": {
+    "zh": "Open your phone's",
+    "bm": "Open your phone's",
+    "ta": "Open your phone's"
+  },
+  "Display over other apps": {
+    "zh": "Display over other apps",
+    "bm": "Display over other apps",
+    "ta": "Display over other apps"
+  },
+  "(ON).": {
+    "zh": "(ON).",
+    "bm": "(ON).",
+    "ta": "(ON)."
   }
 };
 
