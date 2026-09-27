@@ -364,6 +364,92 @@ header.site-header {
   line-height: 1.55;
 }
 
+.news-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.news-card:hover {
+  border-color: #38BDF8;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px);
+}
+
+.news-expand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.btn-popup-announcement {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #FFF;
+  border: 1.5px solid #38BDF8;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.94rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-popup-announcement:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(56, 189, 248, 0.55);
+}
+
+.btn-pop-nav {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #E2E8F0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-pop-nav:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38BDF8;
+  color: #FFF;
+}
+
+.btn-pop-wa {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  color: #FFF;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.84rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 12px rgba(34, 197, 94, 0.35);
+  transition: all 0.2s;
+}
+
+.btn-pop-wa:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(34, 197, 94, 0.5);
+}
+
 /* Hiring Cards (The Hire Site) */
 .hire-hero-banner {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(10, 25, 48, 0.95) 100%);
@@ -1234,6 +1320,12 @@ footer.site-footer {
     <h1>Announcements &amp; Nurse Recruitment</h1>
     <p>Official company announcements, Penang clinical updates, and "The Hire Site" for Registered Nurses, Staff Nurses, and Dedicated Caregivers.</p>
     
+    <div style="margin: 0 auto 20px; text-align: center;">
+      <button type="button" class="btn-popup-announcement" onclick="openAnnouncementPopup(0)">
+        <span>📢</span> View Latest Announcement Pop-Up
+      </button>
+    </div>
+
     <!-- TABS -->
     <div class="hub-tabs-wrap">
       <button class="hub-tab-btn active" id="tabBtn-hiring" onclick="switchAnnounceTab('hiring')">
@@ -1355,7 +1447,7 @@ footer.site-footer {
 
       <div class="news-grid">
         <!-- Notice 1 -->
-        <div class="news-card">
+        <div class="news-card" onclick="openAnnouncementPopup(0)">
           <div class="news-icon-wrap" style="color:#38BDF8;">🌐</div>
           <div>
             <div class="news-date">SEPTEMBER 2026 · SERVICE EXPANSION</div>
@@ -1363,11 +1455,12 @@ footer.site-footer {
             <div class="news-desc">
               Assura Nursing has expanded its registered home nurse dispatch network across all districts: Georgetown, Bayan Lepas, Balik Pulau, Tanjung Bungah, Butterworth, Bukit Mertajam, Seberang Jaya, and Kepala Batas.
             </div>
+            <span class="news-expand-badge">🔍 Click for Pop-up</span>
           </div>
         </div>
 
         <!-- Notice 2 -->
-        <div class="news-card">
+        <div class="news-card" onclick="openAnnouncementPopup(1)">
           <div class="news-icon-wrap" style="color:#10B981;">📊</div>
           <div>
             <div class="news-date">AUGUST 2026 · CLINICAL TECHNOLOGY</div>
@@ -1375,11 +1468,12 @@ footer.site-footer {
             <div class="news-desc">
               Families can now access real-time clinical vital sign graphs, blood pressure trends, SpO2 levels, and Modified Early Warning Scores (MEWS) logged by attending nurses directly via the Assura Clinical Portal.
             </div>
+            <span class="news-expand-badge">🔍 Click for Pop-up</span>
           </div>
         </div>
 
         <!-- Notice 3 -->
-        <div class="news-card">
+        <div class="news-card" onclick="openAnnouncementPopup(2)">
           <div class="news-icon-wrap" style="color:#F59E0B;">🏥</div>
           <div>
             <div class="news-date">JULY 2026 · HOSPITAL PARTNERSHIP</div>
@@ -1387,11 +1481,12 @@ footer.site-footer {
             <div class="news-desc">
               Same-day clinical handover from Penang General Hospital, Island Hospital, Gleneagles, Loh Guan Lye, Pantai Hospital, and Bagan Specialist directly to home recovery with certified medical equipment setup.
             </div>
+            <span class="news-expand-badge">🔍 Click for Pop-up</span>
           </div>
         </div>
 
         <!-- Notice 4 -->
-        <div class="news-card">
+        <div class="news-card" onclick="openAnnouncementPopup(3)">
           <div class="news-icon-wrap" style="color:#C084FC;">🩹</div>
           <div>
             <div class="news-date">JUNE 2026 · EDUCATION &amp; TRAINING</div>
@@ -1399,6 +1494,19 @@ footer.site-footer {
             <div class="news-desc">
               All active staff nurses have completed advanced certifications in modern wound care dressing, negative pressure wound therapy (NPWT), and hospital-to-home infection control standards.
             </div>
+            <span class="news-expand-badge">🔍 Click for Pop-up</span>
+          </div>
+        </div>
+        <!-- Notice 5 -->
+        <div class="news-card" onclick="openGlobalAnnouncementPopup(4)">
+          <div class="news-icon-wrap" style="color:#FBBF24;">💼</div>
+          <div>
+            <div class="news-date">2026 CAREERS &amp; RECRUITMENT</div>
+            <div class="news-title">The Hire Site — Registered Nurses &amp; Caregivers Wanted</div>
+            <div class="news-desc">
+              Join Penang's leading home nursing network. Enjoy bi-weekly payroll, high commission payout, flexible shift booking, and full clinical insurance protection.
+            </div>
+            <span class="news-expand-badge">🔍 Click for Pop-up</span>
           </div>
         </div>
       </div>
@@ -1420,7 +1528,7 @@ footer.site-footer {
     <a href="announcements.html">Announcements</a>
     <a href="download.html">Download App</a>
     <a href="portal.html" style="color: #38BDF8; font-weight: 700;">Clinical Portal</a>
-    </div>
+  </div>
   <p style="font-weight: 700; color: #E2E8F0; margin-bottom: 6px;">
     © 2026 Assura Nursing Care. All Rights Reserved.
   </p>

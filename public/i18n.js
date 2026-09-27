@@ -1096,9 +1096,9 @@ const STRING_MAP = {
     "ta": "● Interactive Walkthrough"
   },
   "AUGUST 2026 · CLINICAL TECHNOLOGY": {
-    "zh": "AUGUST 2026 · CLINICAL TECHNOLOGY",
-    "bm": "AUGUST 2026 · CLINICAL TECHNOLOGY",
-    "ta": "AUGUST 2026 · CLINICAL TECHNOLOGY"
+    "zh": "2026年8月 · 临床数字科技",
+    "bm": "OGOS 2026 · TEKNOLOGI KLINIKAL",
+    "ta": "ஆகஸ்ட் 2026 · மருத்துவ தொழில்நுட்பம்"
   },
   "RM 80 – RM 140 / mo": {
     "zh": "RM 80 – RM 140 / mo",
@@ -1901,9 +1901,9 @@ const STRING_MAP = {
     "ta": "1. Home Environment Assessment & Planning"
   },
   "← Previous": {
-    "zh": "← Previous",
-    "bm": "← Previous",
-    "ta": "← Previous"
+    "zh": "← 上一条",
+    "bm": "← Sebelumnya",
+    "ta": "← முந்தையது"
   },
   "☎ 04-332 2800": {
     "zh": "☎ 04-332 2800",
@@ -2171,9 +2171,9 @@ const STRING_MAP = {
     "ta": "☎ 04-222 5222"
   },
   "JULY 2026 · HOSPITAL PARTNERSHIP": {
-    "zh": "JULY 2026 · HOSPITAL PARTNERSHIP",
-    "bm": "JULY 2026 · HOSPITAL PARTNERSHIP",
-    "ta": "JULY 2026 · HOSPITAL PARTNERSHIP"
+    "zh": "2026年7月 · 医院转诊衔接合作",
+    "bm": "JULAI 2026 · KERJASAMA HOSPITAL",
+    "ta": "ஜூலை 2026 · மருத்துவமனை கூட்டாண்மை"
   },
   "v2.4 · 3.3 MB · Phones & Tablets · Direct Install": {
     "zh": "v2.4 · 3.3 MB · Phones & Tablets · Direct Install",
@@ -2306,9 +2306,9 @@ const STRING_MAP = {
     "ta": "Empty drainage bag when 2/3 full, avoiding contact between tap and container."
   },
   "SEPTEMBER 2026 · SERVICE EXPANSION": {
-    "zh": "SEPTEMBER 2026 · SERVICE EXPANSION",
-    "bm": "SEPTEMBER 2026 · SERVICE EXPANSION",
-    "ta": "SEPTEMBER 2026 · SERVICE EXPANSION"
+    "zh": "2026年9月 · 服务网络扩展",
+    "bm": "SEPTEMBER 2026 · PERLUASAN PERKHIDMATAN",
+    "ta": "செப்டம்பர் 2026 · சேவை விரிவாக்கம்"
   },
   "🩺 Clinical Staff & Nurses": {
     "zh": "🩺 Clinical Staff & Nurses",
@@ -2981,9 +2981,9 @@ const STRING_MAP = {
     "ta": "Electric Medical Suction Machine"
   },
   "JUNE 2026 · EDUCATION & TRAINING": {
-    "zh": "JUNE 2026 · EDUCATION & TRAINING",
-    "bm": "JUNE 2026 · EDUCATION & TRAINING",
-    "ta": "JUNE 2026 · EDUCATION & TRAINING"
+    "zh": "2026年6月 · 专业教育与培训",
+    "bm": "JUN 2026 · PENDIDIKAN & LATIHAN",
+    "ta": "ஜூன் 2026 · கல்வி & பயிற்சி"
   },
   "We will respond promptly. For urgent medical emergencies, please proceed to the nearest emergency department or call 999.": {
     "zh": "We will respond promptly. For urgent medical emergencies, please proceed to the nearest emergency department or call 999.",
@@ -4620,135 +4620,225 @@ const STRING_MAP = {
     "bm": "Buka AssuraNursing.exe daripada folder Muat Turun anda.",
     "ta": "உங்கள் பதிவிறக்கங்கள் கோப்புறையிலிருந்து AssuraNursing.exe ஐத் திறக்கவும்."
   },
-  "Select": {
-    "zh": "Select",
-    "bm": "Select",
-    "ta": "Select"
+  "View Latest Announcement Pop-Up": {
+    "zh": "立即查看最新公告弹窗",
+    "bm": "Lihat Tetingkap Pengumuman Terkini",
+    "ta": "சமீபத்திய அறிவிப்பு பாப்-அப் காண்க"
   },
-  "🔝 How to Enable \"Display on top of other apps\":": {
-    "zh": "🔝 How to Enable \"Display on top of other apps\":",
-    "bm": "🔝 How to Enable \"Display on top of other apps\":",
-    "ta": "🔝 How to Enable \"Display on top of other apps\":"
+  "View Latest Announcement (Pop-Up Modal)": {
+    "zh": "弹窗查看最新官方公告",
+    "bm": "Lihat Pengumuman Terkini (Tetingkap Timbul)",
+    "ta": "சமீபத்திய அறிவிப்பை பாப்-அப் வடிவில் காண்க"
   },
-  "connects directly with your phone's native hardware permissions for reliable 24/7 care.": {
-    "zh": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
-    "bm": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
-    "ta": "connects directly with your phone's native hardware permissions for reliable 24/7 care."
+  "🔍 Click for Pop-up": {
+    "zh": "🔍 点击弹窗查看详情",
+    "bm": "🔍 Ketik untuk Pop-up",
+    "ta": "🔍 பாப்-அப் பார்க்க கிளிக் செய்க"
   },
-  ". Installing the direct": {
-    "zh": ". Installing the direct",
-    "bm": ". Installing the direct",
-    "ta": ". Installing the direct"
+  "Announcement Title": {
+    "zh": "公告标题",
+    "bm": "Tajuk Pengumuman",
+    "ta": "அறிவிப்பு தலைப்பு"
   },
-  "\"No permissions requested\"": {
-    "zh": "\"No permissions requested\"",
-    "bm": "\"No permissions requested\"",
-    "ta": "\"No permissions requested\""
+  "Announcement description details...": {
+    "zh": "公告详情内容...",
+    "bm": "Butiran huraian pengumuman...",
+    "ta": "அறிவிப்பு விவரங்கள்..."
   },
-  "Special app access": {
-    "zh": "Special app access",
-    "bm": "Special app access",
-    "ta": "Special app access"
+  "Next →": {
+    "zh": "下一条 →",
+    "bm": "Seterusnya →",
+    "ta": "அடுத்தது →"
   },
-  "📞 Phone & Emergency": {
-    "zh": "📞 Phone & Emergency",
-    "bm": "📞 Phone & Emergency",
-    "ta": "📞 Phone & Emergency"
+  "Confidential Medical Records (PDPA & MOH Standards) · Screenshots & Screen Recording Restricted for Patient Data Privacy": {
+    "zh": "机密医疗病历档案 (PDPA 与 MOH 规范) · 严禁截图与录屏以守护病患隐私",
+    "bm": "Rekod Perubatan Sulit (Standard PDPA & KKM) · Tangkapan Skrin & Rakaman Disekat Demi Privasi Pesakit",
+    "ta": "ரகசிய மருத்துவ பதிவேடுகள் (PDPA & MOH தரநிலைகள்) · நோயாளி தனியுரிமைக்காக ஸ்கிரீன்ஷாட்கள் & ரெக்கார்டிங் தடைசெய்யப்பட்டுள்ளது"
   },
-  "📍 Location (GPS)": {
-    "zh": "📍 Location (GPS)",
-    "bm": "📍 Location (GPS)",
-    "ta": "📍 Location (GPS)"
+  "Official Company Announcements & News": {
+    "zh": "官方公告与最新动态",
+    "bm": "Pengumuman Rasmi & Berita Terkini",
+    "ta": "அதிகாரப்பூர்வ நிறுவன அறிவிப்புகள் & செய்திகள்"
   },
-  "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows": {
-    "zh": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
-    "bm": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
-    "ta": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows"
+  "Assura Nursing has expanded its registered home nurse dispatch network across all districts: Georgetown, Bayan Lepas, Balik Pulau, Tanjung Bungah, Butterworth, Bukit Mertajam, Seberang Jaya, and Kepala Batas. Rapid home nursing response is active 24/7.": {
+    "zh": "Assura Nursing 已将注册护士上门派遣网络扩展至所有区域：乔治市、峇六拜、浮罗山背、丹绒武雅、北海、大山脚、诗布朗再也以及甲抛峇底。24小时全天候快速上门护理现已全面启动。",
+    "bm": "Assura Nursing telah memperluaskan rangkaian penghantaran jururawat rumah berdaftar ke semua daerah: Georgetown, Bayan Lepas, Balik Pulau, Tanjung Bungah, Butterworth, Bukit Mertajam, Seberang Jaya, dan Kepala Batas. Respons pantas kejururawatan rumah aktif 24/7.",
+    "ta": "Assura Nursing அனைத்து மாவட்டங்களிலும் தனது பதிவு செய்யப்பட்ட நர்ஸ் சேவையை விரிவுபடுத்தியுள்ளது: ஜார்ஜ்டவுன், பயான் லெபாஸ், பாலிக் புலாவ், தஞ்சோங் புங்கா, பட்டர்வொர்த், புக்கிட் மெர்தாஜாம் மற்றும் செபராங் ஜெயா. 24/7 விரைவு சேவை செயல்படுகிறது."
   },
-  "Apps": {
-    "zh": "Apps",
-    "bm": "Apps",
-    "ta": "Apps"
+  "2026 CAREERS & RECRUITMENT": {
+    "zh": "2026年度 · 医护团队招聘",
+    "bm": "KERJAYA & PENGAMBILAN 2026",
+    "ta": "2026 வேலைவாய்ப்பு & ஆட்சேர்ப்பு"
   },
-  "Special access / Three dots ⋮ in top right": {
-    "zh": "Special access / Three dots ⋮ in top right",
-    "bm": "Special access / Three dots ⋮ in top right",
-    "ta": "Special access / Three dots ⋮ in top right"
+  "The Hire Site — Registered Nurses & Caregivers Wanted": {
+    "zh": "医护招聘专区 — 诚聘注册护士与专业护理员",
+    "bm": "Tapak Pengambilan — Jururawat Berdaftar & Penjaga Diperlukan",
+    "ta": "பணியமர்த்தல் தளம் — பதிவு செய்த நர்ஸ்கள் & பராமரிப்பாளர்கள் தேவை"
   },
-  "Appear on top": {
-    "zh": "Appear on top",
-    "bm": "Appear on top",
-    "ta": "Appear on top"
+  "Join Penang's leading home nursing network. Enjoy bi-weekly payroll, high commission payout, flexible shift booking, and full clinical insurance protection.": {
+    "zh": "加入槟城首屈一指的上门家庭护理团队。享有双周准时发薪、高比例个案佣金、自主灵活排班以及全面临床医护保障。",
+    "bm": "Sertai rangkaian kejururawatan rumah terkemuka di Pulau Pinang. Nikmati pembayaran gaji dwimingguan, komisen kes tinggi, pemilihan syif fleksibel, dan perlindungan insurans klinikal penuh.",
+    "ta": "பினாங்கின் முன்னணி வீட்டு நர்சிங் அமைப்பில் சேருங்கள். இருவார ஊதியம், அதிக கமிஷன், நெகிழ்வான ஷிப்ட்கள் மற்றும் மருத்துவ காப்பீட்டுப் பாதுகாப்பைப் பெறுங்கள்."
   },
-  "Allow": {
-    "zh": "Allow",
-    "bm": "Allow",
-    "ta": "Allow"
+  "Explore Full Careers & Notices Hub →": {
+    "zh": "浏览完整招聘与官方公告中心 →",
+    "bm": "Lihat Hab Kerjaya & Pengumuman Penuh →",
+    "ta": "முழு வேலைவாய்ப்பு & அறிவிப்புகள் மையத்தைப் பார்க்கவும் →"
   },
-  "Assura Nursing APK": {
-    "zh": "Assura Nursing APK",
-    "bm": "Assura Nursing APK",
-    "ta": "Assura Nursing APK"
+  "Previous": {
+    "zh": "上一条",
+    "bm": "Sebelumnya",
+    "ta": "முந்தைய"
   },
-  "(or": {
-    "zh": "(or",
-    "bm": "(or",
-    "ta": "(or"
+  "Next": {
+    "zh": "下一条",
+    "bm": "Seterusnya",
+    "ta": "அடுத்தது"
   },
-  "Application Manager": {
-    "zh": "Application Manager",
-    "bm": "Application Manager",
-    "ta": "Application Manager"
+  "Announcement": {
+    "zh": "最新公告",
+    "bm": "Pengumuman",
+    "ta": "அறிவிப்பு"
   },
-  "Settings": {
-    "zh": "Settings",
-    "bm": "Settings",
-    "ta": "Settings"
+  "Latest Announcement": {
+    "zh": "最新官方公告",
+    "bm": "Pengumuman Terkini",
+    "ta": "சமீபத்திய அறிவிப்பு"
   },
-  "Find": {
-    "zh": "Find",
-    "bm": "Find",
-    "ta": "Find"
-  },
-  "🔔 Notifications": {
-    "zh": "🔔 Notifications",
-    "bm": "🔔 Notifications",
-    "ta": "🔔 Notifications"
-  },
-  "📷 Camera & Media": {
-    "zh": "📷 Camera & Media",
-    "bm": "📷 Camera & Media",
-    "ta": "📷 Camera & Media"
-  },
-  "and toggle the switch to": {
-    "zh": "and toggle the switch to",
-    "bm": "and toggle the switch to",
-    "ta": "and toggle the switch to"
+  "Chat on WhatsApp →": {
+    "zh": "WhatsApp 即时咨询 →",
+    "bm": "Sembang di WhatsApp →",
+    "ta": "வாட்ஸ்அப்பில் உரையாட →"
   },
   "⚙️": {
     "zh": "⚙️",
     "bm": "⚙️",
     "ta": "⚙️"
   },
-  "📱 Native APK vs. Browser PWA (\"Installed from Browser\")": {
-    "zh": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
-    "bm": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
-    "ta": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")"
+  "Find": {
+    "zh": "Find",
+    "bm": "Find",
+    "ta": "Find"
   },
-  "Open your phone's": {
-    "zh": "Open your phone's",
-    "bm": "Open your phone's",
-    "ta": "Open your phone's"
+  "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows": {
+    "zh": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
+    "bm": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows",
+    "ta": "If you added Assura via your browser (\"Add to Home Screen\"), Android treats it as a sandboxed WebAPK and shows"
+  },
+  "📍 Location (GPS)": {
+    "zh": "📍 Location (GPS)",
+    "bm": "📍 Location (GPS)",
+    "ta": "📍 Location (GPS)"
+  },
+  "🔝 How to Enable \"Display on top of other apps\":": {
+    "zh": "🔝 How to Enable \"Display on top of other apps\":",
+    "bm": "🔝 How to Enable \"Display on top of other apps\":",
+    "ta": "🔝 How to Enable \"Display on top of other apps\":"
   },
   "Display over other apps": {
     "zh": "Display over other apps",
     "bm": "Display over other apps",
     "ta": "Display over other apps"
   },
+  "Open your phone's": {
+    "zh": "Open your phone's",
+    "bm": "Open your phone's",
+    "ta": "Open your phone's"
+  },
+  "Special access / Three dots ⋮ in top right": {
+    "zh": "Special access / Three dots ⋮ in top right",
+    "bm": "Special access / Three dots ⋮ in top right",
+    "ta": "Special access / Three dots ⋮ in top right"
+  },
+  "Application Manager": {
+    "zh": "Application Manager",
+    "bm": "Application Manager",
+    "ta": "Application Manager"
+  },
+  "Assura Nursing APK": {
+    "zh": "Assura Nursing APK",
+    "bm": "Assura Nursing APK",
+    "ta": "Assura Nursing APK"
+  },
+  "📱 Native APK vs. Browser PWA (\"Installed from Browser\")": {
+    "zh": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
+    "bm": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")",
+    "ta": "📱 Native APK vs. Browser PWA (\"Installed from Browser\")"
+  },
   "(ON).": {
     "zh": "(ON).",
     "bm": "(ON).",
     "ta": "(ON)."
+  },
+  "Allow": {
+    "zh": "Allow",
+    "bm": "Allow",
+    "ta": "Allow"
+  },
+  "connects directly with your phone's native hardware permissions for reliable 24/7 care.": {
+    "zh": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
+    "bm": "connects directly with your phone's native hardware permissions for reliable 24/7 care.",
+    "ta": "connects directly with your phone's native hardware permissions for reliable 24/7 care."
+  },
+  "Select": {
+    "zh": "Select",
+    "bm": "Select",
+    "ta": "Select"
+  },
+  "Apps": {
+    "zh": "Apps",
+    "bm": "Apps",
+    "ta": "Apps"
+  },
+  "and toggle the switch to": {
+    "zh": "and toggle the switch to",
+    "bm": "and toggle the switch to",
+    "ta": "and toggle the switch to"
+  },
+  "\"No permissions requested\"": {
+    "zh": "\"No permissions requested\"",
+    "bm": "\"No permissions requested\"",
+    "ta": "\"No permissions requested\""
+  },
+  "📷 Camera & Media": {
+    "zh": "📷 Camera & Media",
+    "bm": "📷 Camera & Media",
+    "ta": "📷 Camera & Media"
+  },
+  "(or": {
+    "zh": "(or",
+    "bm": "(or",
+    "ta": "(or"
+  },
+  "📞 Phone & Emergency": {
+    "zh": "📞 Phone & Emergency",
+    "bm": "📞 Phone & Emergency",
+    "ta": "📞 Phone & Emergency"
+  },
+  "Settings": {
+    "zh": "Settings",
+    "bm": "Settings",
+    "ta": "Settings"
+  },
+  "Special app access": {
+    "zh": "Special app access",
+    "bm": "Special app access",
+    "ta": "Special app access"
+  },
+  "🔔 Notifications": {
+    "zh": "🔔 Notifications",
+    "bm": "🔔 Notifications",
+    "ta": "🔔 Notifications"
+  },
+  ". Installing the direct": {
+    "zh": ". Installing the direct",
+    "bm": ". Installing the direct",
+    "ta": ". Installing the direct"
+  },
+  "Appear on top": {
+    "zh": "Appear on top",
+    "bm": "Appear on top",
+    "ta": "Appear on top"
   }
 };
 

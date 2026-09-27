@@ -81,6 +81,30 @@
       padding: 30px;
     }
 
+    /* Patient Confidentiality & Screen Recording Shield */
+    .patient-privacy-shield {
+      background: rgba(2, 132, 199, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: #BAE6FD;
+    }
+    body.patient-privacy-blurred .dash-body,
+    body.patient-privacy-blurred #screen-vitals,
+    body.patient-privacy-blurred #screen-mar,
+    body.patient-privacy-blurred #screen-careplan,
+    body.patient-privacy-blurred .patient-records-area {
+      filter: blur(14px) grayscale(80%);
+      user-select: none;
+      pointer-events: none;
+      transition: filter 0.2s ease;
+    }
+
     header {
       background: rgba(4, 13, 26, 0.92);
       backdrop-filter: blur(16px);
@@ -1596,6 +1620,34 @@ footer.site-footer {
         return { error: 'Clinical service connecting... Please try again.' };
       }
     }
+
+    // Patient Privacy Shield & Android FLAG_SECURE management
+    function enforcePatientDataSecurity(isSecure) {
+      if (window.AssuraSecurity && typeof window.AssuraSecurity.setPatientDataSecure === 'function') {
+        window.AssuraSecurity.setPatientDataSecure(isSecure);
+      }
+    }
+
+    // Automatically secure on portal load
+    enforcePatientDataSecurity(true);
+
+    // Prevent background screen recording/capture on tab switch
+    window.addEventListener('blur', () => {
+      document.body.classList.add('patient-privacy-blurred');
+    });
+    window.addEventListener('focus', () => {
+      document.body.classList.remove('patient-privacy-blurred');
+    });
+
+    // Clear secure flag when user navigates back to public pages
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href');
+        if (href && !href.includes('portal.html') && !href.startsWith('#') && !href.startsWith('javascript:')) {
+          enforcePatientDataSecurity(false);
+        }
+      });
+    });
 
     window.addEventListener('DOMContentLoaded', async () => {
       try {
